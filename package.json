@@ -1,0 +1,20 @@
+{
+  "name": "teraoka",
+  "version": "1.0.0",
+  "description": "Nuxt.js based website for TEDxUTsukuba",
+  "author": "Haruki Kinoshita",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0",
+    "nuxt-buefy": "^0.3.2",
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/pwa": "^3.0.0-0"
+  },
+  "devDependencies": {}
+}
