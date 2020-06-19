@@ -1,12 +1,14 @@
 <template>
   <div class="column">
     <div class="card">
-      <header class="card-header">
-        <p class="card-header-title has-text-grey">
-          {{ title }}
-        </p>
-      </header>
+      <div class="card-image">
+        <figure class="image is-4by3">
+          <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+        </figure>
+      </div>
       <div class="card-content">
+        <p class="title is-4">{{ title }}</p>
+        <p class="subtitle">{{ speaker }}</p>
         <div class="content has-text-centered">
           <b-icon
             :icon="icon"
@@ -33,6 +35,10 @@ export default {
       type: String,
       required: true
     },
+    speaker: {
+      type: String,
+      required: true
+    },
     icon: {
       type: String,
       required: true
@@ -40,3 +46,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+p.title {
+  font-weight: 500;
+}
+</style>
