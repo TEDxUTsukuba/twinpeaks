@@ -1,31 +1,8 @@
 <template>
-  <div>
-    <nav
-      class="navbar header has-shadow is-primary"
-      role="navigation"
-      aria-label="main navigation"
-    >
-      <div class="navbar-brand">
-        <a
-          class="navbar-item"
-          href="/"
-        >
-          <img
-            src="~assets/buefy.png"
-            alt="Buefy"
-            height="28"
-          >
-        </a>
-
-        <div class="navbar-burger">
-          <span />
-          <span />
-          <span />
-        </div>
-      </div>
-    </nav>
-
-    <section class="main-content columns">
+  <section>
+    <Header />
+    <nuxt class="nuxt" />
+    <!-- <section class="main-content columns">
       <aside class="column is-2 section">
         <p class="menu-label is-hidden-touch">
           General
@@ -44,16 +21,20 @@
           </li>
         </ul>
       </aside>
-
-      <div class="container column is-10">
-        <nuxt />
+      <div class="column is-12">
       </div>
-    </section>
-  </div>
+    </section> -->
+    <Footer />
+  </section>
 </template>
 
 <script>
+import Header from '~/components/Header'
+import Footer from '~/components/Footer'
 export default {
+  components: {
+    Header, Footer
+  },
   data () {
     return {
       items: [
@@ -72,3 +53,16 @@ export default {
   }
 }
 </script>
+
+<style>
+  section {
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  }
+  .nuxt {
+    padding-top: 50px;
+  }
+  .is-1 {
+    font-size: 5rem !important;
+  }
+
+</style>

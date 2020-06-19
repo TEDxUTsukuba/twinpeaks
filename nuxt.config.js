@@ -5,7 +5,8 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: process.env.npm_package_name || '',
+    // title: process.env.npm_package_name || '',
+    title: "TEDxUTsukuba | A hub for UTsukuba",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -23,6 +24,7 @@ export default {
   ** Global CSS
   */
   css: [
+    { src: 'bulma/bulma.sass', lang: 'sass' }
   ],
   /*
   ** Plugins to load before mounting the App
@@ -40,10 +42,27 @@ export default {
   modules: [
     // Doc: https://buefy.github.io/#/documentation
     'nuxt-buefy',
+    'nuxt-fontawesome',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    'nuxt-webfontloader'
   ],
+  webfontloader: {
+    google: {
+      families: ['Noto+Sans+JP']
+    }
+  },
+  fontawesome: {
+   imports: [
+     {
+       set: '@fortawesome/free-brands-svg-icons',
+       icons: ['fab'],
+       set: '@fortawesome/free-solid-svg-icons',
+       icons: ['fas']
+     }
+    ]
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
