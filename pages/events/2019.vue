@@ -38,7 +38,7 @@
       </div>
     </section>
 
-    <section class="hero is-large" >
+    <section class="hero is-medium" >
       <div class="hero-body">
         <div class="container">
           <h1 class="title is-1 has-text-centered">
@@ -54,7 +54,7 @@
       </div>
     </section>
 
-    <section class="hero is-large">
+    <section class="hero is-medium is-black">
       <div class="hero-body">
         <div class="container">
           <h1 class="title is-1 has-text-centered">
@@ -64,49 +64,53 @@
             <div class="tile is-vertical is-8">
               <div class="tile">
                 <div class="tile is-parent">
-                  <article class="tile is-child notification">
-                    <p class="title is-2">
+                  <article class="tile is-child notification" style="background-color: red;">
+                    <p class="title is-3">
                       <font-awesome-layers class="fa-lg fa-pull-left" style="margin-right: 20px;">
-                        <font-awesome-icon :icon="['fas', 'quote-left']" style="color: red;" />
+                        <font-awesome-icon :icon="['fas', 'quote-left']" style="color: white;" />
                       </font-awesome-layers>
-                      A day full of discoveries for all of us to share.
+                      Great day full of discoveries. You will learn something unexpected.
                     </p>
-                    <p class="subtitle">20代 学生</p>
+                    <p class="subtitle"></p>
                   </article>
 
                 </div>
                 <div class="tile is-parent">
-                  <article class="tile is-child notification is-black">
-                    <p class="title is-2">
+                  <article class="tile is-child notification is-white">
+                    <p class="title is-3 has-text-black">
                       <font-awesome-layers class="fa-lg fa-pull-left" style="margin-right: 20px;">
                         <font-awesome-icon :icon="['fas', 'quote-left']" style="color: red;" />
                       </font-awesome-layers>
-                      A day full of discoveries for all of us to share.
+                      Fantastic! Speakers showcased mind-blowing ideas from unique viewpoints.
                     </p>
                   </article>
                 </div>
               </div>
               <div class="tile is-parent">
-                <article class="tile is-child notification">
-                  <p class="title is-2">
+                <article class="tile is-child notification is-white">
+                  <p class="title is-3 has-text-black">
                     <font-awesome-layers class="fa-lg fa-pull-left" style="margin-right: 20px;">
                       <font-awesome-icon :icon="['fas', 'quote-left']" style="color: red;" />
                     </font-awesome-layers>
-                    A day full of discoveries for all of us to share.
+                    Speakers, volunteers, partners... everyone was working together to make this happen.
                   </p>
                 </article>
               </div>
             </div>
             <div class="tile is-parent">
               <article class="tile is-child notification" style="background-color: red;">
-                <p class="title is-2 has-text-white">
+                <p class="title is-3 has-text-white">
                   <font-awesome-layers class="fa-lg fa-pull-left" style="margin-right: 20px;">
                     <font-awesome-icon :icon="['fas', 'quote-left']" />
                   </font-awesome-layers>
-                  A day full of discoveries for all of us to share.
+                  Workshop and after-party was well organised. Food was delicious. Good Job TEDxUTsukuba team!
                 </p>
               </article>
             </div>
+          </div>
+          <div class="has-text-centered">
+            <br>
+            <a class="button is-rounded is-large is-white has-text-weight-bold">Get involved</a>
           </div>
         </div>
       </div>

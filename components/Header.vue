@@ -1,5 +1,5 @@
 <template>
-  <b-navbar class="is-fixed-top" style="background-color: #ff0000;">
+  <b-navbar class="is-fixed-top" style="background-color: #000000;">
     <template slot="brand">
       <b-navbar-item tag="router-link" :to="{ path: '/' }">
         <img

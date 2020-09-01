@@ -1,12 +1,12 @@
 <template>
   <section class="section font-awesome" style="background-color: #F1F4F7;">
-    <div class="container">
+    <div class="wide" style="width: 80vw; margin: 0 auto;">
       <div class="columns is-centered">
         <div class="column is-6-desktop is-6-tablet is-12-mobile">
           <img
               src="~/assets/logo/u_white.svg"
               alt="TEDxUTsukukuba logo"
-              width="50%;"
+              width="40%;"
           >
         <br><br>
         <a href="">Media Relations</a>
