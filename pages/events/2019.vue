@@ -4,12 +4,10 @@
     <img id="top" src = "~/assets/banner/2019.jpg" />
     <section class="hero is-large is-black">
       <div class="hero-body">
-        <div class="container">
           <h1 class="title is-1 has-text-centered">
             Talks
           </h1>
           <TalkDetails year="2019" />
-        </div>
       </div>
       <!--
       <div　v-for = 'sp in speakers' :key = 'sp.id'>
@@ -20,7 +18,7 @@
 
     <section class="hero is-large is-white">
       <div class="hero-body">
-        <div class="container">
+        <div class="wide" style="width: 80vw; margin: 0 auto;">
           <h1 class="title is-1 has-text-centered">
             Workshop
           </h1>
@@ -30,7 +28,7 @@
 
     <section class="hero is-large">
       <div class="hero-body">
-        <div class="container">
+        <div class="wide" style="width: 80vw; margin: 0 auto;">
           <h1 class="title is-1 has-text-centered">
             Performance
           </h1>
@@ -40,7 +38,7 @@
 
     <section class="hero is-medium" >
       <div class="hero-body">
-        <div class="container">
+        <div class="wide" style="width: 80vw; margin: 0 auto;">
           <h1 class="title is-1 has-text-centered">
             Concept
           </h1>
@@ -56,7 +54,7 @@
 
     <section class="hero is-medium is-black">
       <div class="hero-body">
-        <div class="container">
+        <div class="wide" style="width: 80vw; margin: 0 auto;">
           <h1 class="title is-1 has-text-centered">
             Attendee's voice
           </h1>

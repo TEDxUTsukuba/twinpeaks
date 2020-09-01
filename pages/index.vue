@@ -12,16 +12,16 @@
           alt="Lightweight UI components for Vue.js based on Bulma"
       >
       <h1 class="title textoverflow">Social Capital</h1> -->
-      <section class="hero is-medium" style="background-color: red;">
+      <section class="hero is-medium" style="background-color: #E62B1E;">
         <div class="hero-body has-text-white">
           <div class="wide" style="width: 80vw; margin: 0 auto;">
             <div class="columns is-centered">
-              <div class="column is-5-desktop is-6-tablet is-full-mobile">
+              <div class="column is-5-desktop is-full-tablet is-full-mobile">
                 <h1 class="title has-text-white is-1">
                   Ideas<br>Worth<br>Spreading
                 </h1>
               </div>
-              <div class="column is-7-desktop is-6-tablet is-full-mobile">
+              <div class="column is-7-desktop is-full-tablet is-full-mobile">
                 <article class="is-size-3 has-text-weight-bold">
                   {{ $t('msg_intro') }}
                 </article>
@@ -149,24 +149,27 @@
     <section class="section">
       <div class="wide" style="width: 80vw; margin: 0 auto;">
         <div class="columns content is-centered has-text-left">
-          <nuxt-link to="/">
-            <div class="column reflection" style="margin: 20px; padding: 40px; min-height: 320px;">
+          <nuxt-link to="/" style="width: 33%;">
+            <div class="column reflection" style="margin: 20px; padding: 40px; min-height: 360px;">
               <div class="font-awesome">
-                <h1 class="title is-2">Interested in joining the TEDxUTsukuba partnership?</h1>
+                <h1 class="title is-2">Spotlight your businness like never before.</h1>
+                <h1 class="title is-4">Apply for a partner</h1>
               </div>
             </div>
           </nuxt-link>
-          <nuxt-link to="/">
-            <div class="column reflection" style="margin: 20px; padding: 40px; min-height: 320px;">
+          <nuxt-link to="/" style="width: 33%;">
+            <div class="column reflection" style="margin: 20px; padding: 40px; min-height: 360px;">
               <div class="font-awesome">
-                <h1 class="title is-2">Sign up for a volunteer, make a special event happen.</h1>
+                <h1 class="title is-2">Sign up for one-day volunteer and host a special event together.</h1>
+                <h1 class="title is-4">Apply for a volunteer</h1>
               </div>
             </div>
           </nuxt-link>
-          <nuxt-link to="/">
-            <div class="column reflection" style="margin: 20px; padding: 40px; min-height: 320px;">
+          <nuxt-link to="/" style="width: 33%;">
+            <div class="column reflection" style="margin: 20px; padding: 40px; min-height: 360px;">
               <div class="font-awesome">
-                <h1 class="title is-2">Be part of the event experience, become a volunteer.</h1>
+                <h1 class="title is-2">Share your insight that surprises the world. </h1>
+                <h1 class="title is-4">Apply for a speaker</h1>
               </div>
             </div>
           </nuxt-link>

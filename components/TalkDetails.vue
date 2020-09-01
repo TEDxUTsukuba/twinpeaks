@@ -1,12 +1,12 @@
 <template>
   <section>
-    <div class="container">
+    <div class="wide" style="width: 80vw; margin: 0 auto;">
       <div class="columns is-variable is-4 is-multiline is-centered">
         <div class="column is-one-quarter-widescreen is-half-desktop is-half-tablet" v-for="(talk, index) in talkList" :key="index">
           <div class="card">
             <div class="card-image">
-              <figure class="image is-3by2">
-                <img src="https://bulma.io/images/placeholders/480x320.png">
+              <figure class="image is-16by9">
+                <img src="https://bulma.io/images/placeholders/640x360.png">
               </figure>
             </div>
             <div class="card-content">
