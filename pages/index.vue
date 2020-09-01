@@ -3,6 +3,9 @@
       <section class="hero is-white">
         <img src="~/assets/wallpapers/tokyo.svg" style="height: 100vh;">
       </section>
+      <section class="hero">
+        {{ $t('message') }}
+    </section>
     <!-- <div class="columns is-mobile"> -->
       <!-- <img
           src="~/assets/wallpapers/speaker_ex1.jpg"
@@ -20,7 +23,7 @@
               </div>
               <div class="column is-7-desktop is-6-tablet is-full-mobile">
                 <article class="is-size-3 has-text-weight-bold">
-                  TEDxUTsukuba is an independently-organised TEDx community.
+                  {{ $t('msg_intro') }}
                 </article>
                 <hr>
                 <article class="is-size-4">

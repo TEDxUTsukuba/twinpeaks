@@ -36,6 +36,12 @@
     </template>
 
     <template slot="end">
+      <b-navbar-item>
+        <nuxt-link :to="switchLocalePath('ja')">日本語</nuxt-link>
+      </b-navbar-item>
+      <b-navbar-item>
+        <nuxt-link :to="switchLocalePath('en')">English</nuxt-link>
+      </b-navbar-item>
       <!-- <b-navbar-item tag="div">
         <div class="buttons">
           <a class="button is-white">
