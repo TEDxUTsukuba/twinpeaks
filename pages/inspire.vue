@@ -11,5 +11,33 @@
         Antério Vieira
       </a>
     </h3>
+    <div>
+      <youtube :video-id="videoId" ref="youtube" @playing="playing"></youtube>
+    </div>
   </section>
 </template>
+
+<style scoped>
+
+</style>
+
+
+<script>
+import Vue from 'vue';
+import VueYoutube from 'vue-youtube';
+
+Vue.use(VueYoutube);
+
+export default {
+  data() {
+    return {
+      videoId: 'lG0Ys-2d4MA'
+    }
+  },
+  computed: {
+    player() {
+      return this.$refs.youtube.player
+    }
+  }
+}
+</script>
