@@ -46,12 +46,28 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    'nuxt-webfontloader'
+    'nuxt-webfontloader',
+    'nuxt-i18n'
   ],
   webfontloader: {
     google: {
       families: ['Noto+Sans+JP']
     }
+  },
+  i18n: {
+    strategy: 'prefix_and_default',
+    locales: [
+      { code: 'ja', iso: 'ja_JP', file: 'ja.json' },
+      { code: 'en', iso: 'en-US', file: 'en.json' },
+    ],
+    defaultLocale: 'ja',
+    vueI18n: {
+      fallbackLocale: 'ja'
+    },
+    vueI18nLoader: true,
+    lazy: true,
+      // 言語ファイル(.json)のディレクトリを記載
+    langDir: 'locales/',
   },
   fontawesome: {
    imports: [
