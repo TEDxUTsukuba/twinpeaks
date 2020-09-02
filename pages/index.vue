@@ -17,16 +17,16 @@
           <div class="wide" style="width: 80vw; margin: 0 auto;">
             <div class="columns is-centered">
               <div class="column is-5-desktop is-full-tablet is-full-mobile">
-                <h1 class="title has-text-white is-1">
+                <h1 class="title is-1 has-text-white is-size-5-mobile">
                   Ideas<br>Worth<br>Spreading
                 </h1>
               </div>
               <div class="column is-7-desktop is-full-tablet is-full-mobile">
-                <article class="is-size-3 has-text-weight-bold">
+                <article class="is-size-4 has-text-weight-bold">
                   {{ $t('msg_intro') }}
                 </article>
                 <hr>
-                <article class="is-size-4">
+                <article class="is-size-5">
                   Managed by passionate volunteers both in and around the campus, TEDxUTsukuba has shed light on relevant topics - from liberal arts to science, local stories to global issues.
                 </article>
                 <br>
@@ -77,9 +77,7 @@
             <h1 class="title is-1 has-text-white has-text-centered">
               Our response to COVID-19
             </h1>
-            <h1 class="subtitle has-text-white has-text-centered">
-              新型コロナウイルスへの対応
-            </h1>
+
             <article>
               From the very beginning of the outbreak, TEDxUTsukuba has always been following the guidelines from university officials and local authorities.
             </article>
@@ -148,43 +146,53 @@
     <!-- <div class="text-divider"></div> -->
     <section class="section">
       <div class="wide" style="width: 80vw; margin: 0 auto;">
+        <h1 class="title has-text-centered">
+          Stay connected
+        </h1>
+        <p class="has-text-centered">
+          <a class="icon-circle" href="https://www.facebook.com/tedxutsukuba/">
+            <font-awesome-icon :icon="['fab', 'facebook-square']" />
+          </a>
+          <a class="icon-circle" href="https://www.instagram.com/tedxutsukuba/">
+            <font-awesome-icon :icon="['fab', 'instagram']" />
+          </a>
+          <a class="icon-circle" href="https://www.twitter.com/tedxutsukuba/">
+            <font-awesome-icon :icon="['fab', 'twitter']" />
+          </a>
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wide" style="width: 80vw; margin: 0 auto;">
         <div class="columns content is-centered has-text-left">
           <nuxt-link to="/" style="width: 33%;">
-            <div class="column reflection" style="margin: 20px; padding: 40px; min-height: 360px;">
+            <div class="column reflection" style="margin: 20px; padding: 40px; min-height: 320px;">
               <div class="font-awesome">
-                <h1 class="title is-2">Spotlight your businness like never before.</h1>
-                <h1 class="title is-4">Apply for a partner</h1>
+                <h1 class="title is-2 is-size-4-mobile">Spotlight your businness like never before.</h1>
+                <h1 class="title is-4 is-size-6-mobile">Apply for a partner</h1>
               </div>
             </div>
           </nuxt-link>
           <nuxt-link to="/" style="width: 33%;">
-            <div class="column reflection" style="margin: 20px; padding: 40px; min-height: 360px;">
+            <div class="column reflection" style="margin: 20px; padding: 40px; min-height: 320px;">
               <div class="font-awesome">
-                <h1 class="title is-2">Sign up for one-day volunteer and host a special event together.</h1>
-                <h1 class="title is-4">Apply for a volunteer</h1>
+                <h1 class="title is-2 is-size-4-mobile">Sign up for one-day volunteer and host a special event together.</h1>
+                <h1 class="title is-4 is-size-6-mobile">Apply for a volunteer</h1>
               </div>
             </div>
           </nuxt-link>
           <nuxt-link to="/" style="width: 33%;">
-            <div class="column reflection" style="margin: 20px; padding: 40px; min-height: 360px;">
+            <div class="column reflection" style="margin: 20px; padding: 40px; min-height: 320px;">
               <div class="font-awesome">
-                <h1 class="title is-2">Share your insight that surprises the world. </h1>
-                <h1 class="title is-4">Apply for a speaker</h1>
+                <h1 class="title is-2 is-size-4-mobile">Share your insight that surprises the world. </h1>
+                <h1 class="title is-4 is-size-6-mobile">Apply for a speaker</h1>
               </div>
             </div>
           </nuxt-link>
         </div>
-        <a class="icon-circle">
-          <font-awesome-icon :icon="['fab', 'facebook-square']" />
-        </a>
-        <a class="icon-circle">
-          <font-awesome-icon :icon="['fab', 'instagram']" />
-        </a>
-        <a class="icon-circle">
-          <font-awesome-icon :icon="['fab', 'twitter']" />
-        </a>
       </div>
     </section>
+
   </section>
 </template>
 
