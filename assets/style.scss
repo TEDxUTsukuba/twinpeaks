@@ -2,6 +2,8 @@ $primary: #E62B1E;
 $primary-invert: findColorInvert($primary);
 $tsukuba: #5B08B9;
 $tsukuba-invert: findColorInvert($tsukuba);
+$light: #F1F4F7;
+$dark: #5A5E70;
 
 iframe {
   @media screen and (max-width: 480px) {
@@ -51,6 +53,64 @@ iframe {
   .is-size-6 {
     font-size: 1rem !important;
   }
+}
+
+section#wrapper {
+  background-color: $light;
+}
+
+section.section {
+  margin: 6vh 8vw !important;
+  @media screen and (max-width: 768px) {
+    margin: 6vh 2vw !important;
+  }
+  @media screen and (min-width: 769px) and (max-width: 1216px){
+    margin: 6vh 4vw !important;
+  }
+}
+
+.bg-light {
+  background-color: $light;
+}
+.bg-dark {
+  background-color: $dark;
+}
+.bg-red {
+  background-color: $primary;
+}
+.card {
+  border-radius: 0px;
+  background-color: #F1F4F7;
+  box-shadow:  20px 20px 60px #cfcfd1,
+               -20px -20px 60px #ffffff;
+}
+
+.nmp-card-light {
+  padding: 3rem 3rem;
+  margin: 1rem;
+  color: black;
+  border-radius: 28px;
+  background: $light;
+  box-shadow:  20px 20px 60px #cfcfd1,
+               -20px -20px 60px #ffffff;
+}
+.nmp-card-dark {
+  padding: 3rem 3rem;
+  margin: 1rem;
+  color: white;
+  border-radius: 28px;
+  background: $dark;
+  box-shadow:  20px 20px 60px #3f424e,
+               -20px -20px 60px #757a92;
+}
+.nmp-card-red {
+  padding: 3rem 3rem;
+  margin: 1rem;
+  color: white;
+  border-radius: 28px;
+  background: $primary;
+  box-shadow:  20px 20px 60px #a11e15,
+               -20px -20px 60px #ff3123;
 }
 
 // @import '~bulma';
