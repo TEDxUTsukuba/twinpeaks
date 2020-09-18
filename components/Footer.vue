@@ -1,6 +1,6 @@
 <template>
-  <section class="section font-awesome" style="background-color: #F1F4F7;">
-    <div class="wide" style="width: 80vw; margin: 0 auto;">
+  <section class="section font-awesome">
+
       <div class="columns is-centered">
         <div class="column is-3-desktop is-3-tablet is-12-mobile">
           <img

@@ -1,13 +1,15 @@
 <template>
-  <section class="font-awesome">
+  <section id="wrapper" class="font-awesome">
     <h1 class="title textoverflow">TEDxUTsukuba 2020<br>CoPhilAction</h1>
     <img id="top" src = "~/assets/banner/2019.jpg" />
-    <section class="hero is-large is-black">
+    <section class="hero bg-light">
       <div class="hero-body">
+        <section class="section">
           <h1 class="title is-1 has-text-centered">
             Talks
           </h1>
           <TalkDetails year="2019" />
+        </section>
       </div>
       <!--
       <div　v-for = 'sp in speakers' :key = 'sp.id'>
@@ -18,7 +20,7 @@
 
     <section class="hero is-large is-white">
       <div class="hero-body">
-        <div class="wide" style="width: 80vw; margin: 0 auto;">
+
           <h1 class="title is-1 has-text-centered">
             Workshop
           </h1>
@@ -28,7 +30,7 @@
 
     <section class="hero is-large">
       <div class="hero-body">
-        <div class="wide" style="width: 80vw; margin: 0 auto;">
+
           <h1 class="title is-1 has-text-centered">
             Performance
           </h1>
@@ -36,34 +38,36 @@
       </div>
     </section>
 
-    <section class="hero is-medium" >
+    <section class="section">
       <div class="hero-body">
-        <div class="wide" style="width: 80vw; margin: 0 auto;">
+
           <h1 class="title is-1 has-text-centered">
             Concept
           </h1>
-          <h1 class="title is-2 has-text-centered">
-            CoPhilAction
-          </h1>
-          <article>
-            Se et enim senserit. Ubi anim occaecat quibusdam. Quo export praetermissum, o hic concursionibus ne nescius a arbitror si proident tempor legam quo esse iis quid an do quorum iudicem do offendit tamen quis iudicem veniam est non eram cillum a constias, nam velit voluptatibus. Occaecat ita quis, mentitum sunt proident vidisse.Ita vidisse ut admodum ab doctrina est anim iudicem te fore e admodum, eu anim mentitum admodum ut probant irure consequat commodo ut noster arbitror sed quid dolor, multos officia in despicationes, e probant ad occaecat. Nisi mentitum litteris ita illum nescius fidelissimae se sint ullamco et export malis an ubi magna sint labore incurreret, deserunt o deserunt, e magna si eram iis an irure firmissimum, nulla e officia. Ipsum sed quibusdam eu sint nam hic fugiat imitarentur, ullamco magna nam deserunt efflorescere, consequat a nisi. Mentitum sint nostrud o summis voluptate comprehenderit, proident sed cupidatat, ne aute appellat, nostrud se quorum, tamen ex ex quid doctrina, aliqua incurreret singulis ut o malis nulla ea pariatur.
-          </article>
+          <div class="nmp-card-light">
+            <h1 class="title is-2 has-text-centered">
+              CoPhilAction
+            </h1>
+            <article>
+              Se et enim senserit. Ubi anim occaecat quibusdam. Quo export praetermissum, o hic concursionibus ne nescius a arbitror si proident tempor legam quo esse iis quid an do quorum iudicem do offendit tamen quis iudicem veniam est non eram cillum a constias, nam velit voluptatibus. Occaecat ita quis, mentitum sunt proident vidisse.Ita vidisse ut admodum ab doctrina est anim iudicem te fore e admodum, eu anim mentitum admodum ut probant irure consequat commodo ut noster arbitror sed quid dolor, multos officia in despicationes, e probant ad occaecat. Nisi mentitum litteris ita illum nescius fidelissimae se sint ullamco et export malis an ubi magna sint labore incurreret, deserunt o deserunt, e magna si eram iis an irure firmissimum, nulla e officia. Ipsum sed quibusdam eu sint nam hic fugiat imitarentur, ullamco magna nam deserunt efflorescere, consequat a nisi. Mentitum sint nostrud o summis voluptate comprehenderit, proident sed cupidatat, ne aute appellat, nostrud se quorum, tamen ex ex quid doctrina, aliqua incurreret singulis ut o malis nulla ea pariatur.
+            </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="hero is-medium is-black">
-      <div class="hero-body">
-        <div class="wide" style="width: 80vw; margin: 0 auto;">
-          <h1 class="title is-1 has-text-centered">
+    <section class="hero bg-dark">
+      <section class="section">
+          <h1 class="title is-1 has-text-centered has-text-white">
             Attendee's voice
           </h1>
+          <br>
           <div class="tile is-ancestor">
             <div class="tile is-vertical is-8">
               <div class="tile">
                 <div class="tile is-parent">
-                  <article class="tile is-child notification" style="background-color: red;">
-                    <p class="title is-3">
+                  <article class="tile is-child nmp-card-dark">
+                    <p class="title is-4 has-text-white">
                       <font-awesome-layers class="fa-lg fa-pull-left" style="margin-right: 20px;">
                         <font-awesome-icon :icon="['fas', 'quote-left']" style="color: white;" />
                       </font-awesome-layers>
@@ -74,10 +78,10 @@
 
                 </div>
                 <div class="tile is-parent">
-                  <article class="tile is-child notification is-white">
-                    <p class="title is-3 has-text-black">
+                  <article class="tile is-child nmp-card-dark">
+                    <p class="title is-4 has-text-white">
                       <font-awesome-layers class="fa-lg fa-pull-left" style="margin-right: 20px;">
-                        <font-awesome-icon :icon="['fas', 'quote-left']" style="color: red;" />
+                        <font-awesome-icon :icon="['fas', 'quote-left']" style="color: white;" />
                       </font-awesome-layers>
                       Fantastic! Speakers showcased mind-blowing ideas from unique viewpoints.
                     </p>
@@ -85,10 +89,10 @@
                 </div>
               </div>
               <div class="tile is-parent">
-                <article class="tile is-child notification is-white">
-                  <p class="title is-3 has-text-black">
+                <article class="tile is-child nmp-card-dark">
+                  <p class="title is-4 has-text-white">
                     <font-awesome-layers class="fa-lg fa-pull-left" style="margin-right: 20px;">
-                      <font-awesome-icon :icon="['fas', 'quote-left']" style="color: red;" />
+                      <font-awesome-icon :icon="['fas', 'quote-left']" style="color: white;" />
                     </font-awesome-layers>
                     Speakers, volunteers, partners... everyone was working together to make this happen.
                   </p>
@@ -96,8 +100,8 @@
               </div>
             </div>
             <div class="tile is-parent">
-              <article class="tile is-child notification" style="background-color: red;">
-                <p class="title is-3 has-text-white">
+              <article class="tile is-child nmp-card-dark">
+                <p class="title is-4 has-text-white">
                   <font-awesome-layers class="fa-lg fa-pull-left" style="margin-right: 20px;">
                     <font-awesome-icon :icon="['fas', 'quote-left']" />
                   </font-awesome-layers>
@@ -110,8 +114,7 @@
             <br>
             <a class="button is-rounded is-large is-white has-text-weight-bold">Get involved</a>
           </div>
-        </div>
-      </div>
+      </section>
     </section>
 
     <section class="hero is-large">

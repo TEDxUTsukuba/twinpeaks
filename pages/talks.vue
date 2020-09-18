@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="wide" style="width: 80vw; margin: 0 auto;">
+
       <div id="thumbnails" v-for="(talk, index) in talkList" :key="index" style="display: inline-block; vertical-align: top;">
         <div class="card">
           <div class="card-image">

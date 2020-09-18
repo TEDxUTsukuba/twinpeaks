@@ -1,43 +1,42 @@
 <template>
-  <section style="width: 100vw;">
+  <section id="wrapper" style="width: 100vw;">
       <section class="hero is-white">
-        <img src="~/assets/wallpapers/tokyo.svg" style="height: 100vh;">
+        <!-- <img src="~/assets/wallpapers/tokyo.svg" style="height: 100vh;"> -->
       </section>
-      <section class="hero">
-        {{ $t('message') }}
-    </section>
     <!-- <div class="columns is-mobile"> -->
       <!-- <img
           src="~/assets/wallpapers/speaker_ex1.jpg"
           alt="Lightweight UI components for Vue.js based on Bulma"
       >
       <h1 class="title textoverflow">Social Capital</h1> -->
-      <section class="hero is-medium" style="background-color: #E62B1E;">
+      <section class="hero bg-red">
         <div class="hero-body has-text-white">
-          <div class="wide" style="width: 80vw; margin: 0 auto;">
-            <div class="columns is-centered">
-              <div class="column is-5-desktop is-full-tablet is-full-mobile">
+          <section class="section">
+            <div class="columns is-multiline is-centered">
+              <div class="column is-5-widescreen is-full-desktop is-full-tablet is-full-mobile">
                 <h1 class="title is-1 has-text-white is-size-5-mobile">
                   Ideas<br>Worth<br>Spreading
                 </h1>
               </div>
-              <div class="column is-7-desktop is-full-tablet is-full-mobile">
-                <article class="is-size-4 has-text-weight-bold">
-                  {{ $t('msg_intro') }}
-                </article>
-                <hr>
-                <article class="is-size-5">
-                  Managed by passionate volunteers both in and around the campus, TEDxUTsukuba has shed light on relevant topics - from liberal arts to science, local stories to global issues.
-                </article>
-                <br>
-                <nuxt-link to="/inspire"><button class="button is-large is-white is-rounded is-outlined">Discover</button></nuxt-link>
+              <div class="column is-7-widescreen is-full-desktop is-full-tablet is-full-mobile">
+                <div class="nmp-card-red">
+                  <article class="is-size-4 has-text-weight-bold">
+                    {{ $t('intro.headline') }}
+                  </article>
+                  <hr>
+                  <article class="is-size-5">
+                    {{ $t('intro.description') }}
+                  </article>
+                  <br>
+                  <nuxt-link to="/inspire"><button class="button is-large is-white is-rounded is-outlined">Discover</button></nuxt-link>
+                </div>
               </div>
             </div>
-          </div>
+          </section>
         </div>
       </section>
+
       <section class="section">
-        <div class="wide" style="width: 80vw; margin: 0 auto;">
           <h1 class="title is-1 has-text-centered">
             Featured Talks
           </h1>
@@ -67,13 +66,11 @@
               2017 / Science
             </card>
           </div>
-        </div>
       </section>
 
-    <section class="hero is-medium" style="background-color: #5B08B9;">
+    <section class="hero" style="background-color: #5B08B9;">
       <div class="hero-body has-text-white">
-        <div class="wide" style="width: 80vw; margin: 0 auto; max-width: 1280px;">
-
+        <section class="section">
             <h1 class="title is-1 has-text-white has-text-centered">
               Our response to COVID-19
             </h1>
@@ -116,38 +113,34 @@
               </b-collapse>
 
             </div>
-          </div>
+          </section>
       </div>
     </section>
+
     <section class="section">
-      <div class="wide" style="width: 80vw; margin: 0 auto;">
       <div class="columns">
         <div class="column is-6-desktop is-full-mobile">
           <Flip
-            title_ja = "パートナー企業募集"
-            title_en = "Apply for Partners"
-            description_en = "irure quorum esse amet multos noster irure legam veniam quorum esse quid tamen fugiat quorum eram tempor nisi ipsum multos veniam culpa export elit elit eram labore elit eram duis fugiat irure aute veniam summis quorum elit aliqua legam multos tempor fore irure ipsum summis nisi fugiat aute aliqua culpa minim quid dolore duis aute ipsum enim elit quorum labore"
-            description_ja = "日本国民は、正当に選挙された国会における代表者を通じて行動し、われらとわれらの子孫のために、諸国民との協和による成果と、わが国全土にわたつて自由のもたらす恵沢を確保し、政府の行為によつて再び戦争の惨禍が起ることのないやうにすることを決意し、ここに主権が国民に存することを宣言し、この憲法を確定する。そもそも国政は、国民の厳粛な信託によるものであつて、その権威は国民に由来し、その権力は国民の代表者がこれを行使し、その福利は国民がこれを享受する。これは人類普遍の原理であり、この憲法は、かかる原理に基くものである。われらは、これに反する一切の憲法、法令及び詔勅を排除する。"
+            :title = "$t('notice.left.title')"
+            :description = "$t('notice.left.description')"
+            :detail = "$t('notice.left.detail')"
             imageUrl = "imageUrl"
            />
         </div>
         <div class="column is-6-desktop is-full-mobile">
           <Flip
-            title_ja = "一緒に活動しませんか？"
-            title_en = "Be a part of us"
-            description_en = "irure quorum esse amet multos noster irure legam veniam quorum esse quid tamen fugiat quorum eram tempor nisi ipsum multos veniam culpa export elit elit eram labore elit eram duis fugiat irure aute veniam summis quorum elit aliqua legam multos tempor fore irure ipsum summis nisi fugiat aute aliqua culpa minim quid dolore duis aute ipsum enim elit quorum labore"
-            description_ja = "日本国民は、正当に選挙された国会における代表者を通じて行動し、われらとわれらの子孫のために、諸国民との協和による成果と、わが国全土にわたつて自由のもたらす恵沢を確保し、政府の行為によつて再び戦争の惨禍が起ることのないやうにすることを決意し、ここに主権が国民に存することを宣言し、この憲法を確定する。そもそも国政は、国民の厳粛な信託によるものであつて、その権威は国民に由来し、その権力は国民の代表者がこれを行使し、その福利は国民がこれを享受する。これは人類普遍の原理であり、この憲法は、かかる原理に基くものである。われらは、これに反する一切の憲法、法令及び詔勅を排除する。"
+            :title = "$t('notice.right.title')"
+            :description = "$t('notice.right.description')"
+            :detail = "$t('notice.right.detail')"
             imageUrl = "imageUrl"
            />
          </div>
        </div>
-     </div>
     </section>
     <!-- <div class="text-divider"></div> -->
     <section class="section">
-      <div class="wide" style="width: 80vw; margin: 0 auto;">
-        <h1 class="title has-text-centered">
-          Stay connected
+        <h1 class="title is-1 has-text-centered">
+          {{ $t('social.title')}}
         </h1>
         <p class="has-text-centered">
           <a class="icon-circle" href="https://www.facebook.com/tedxutsukuba/">
@@ -160,37 +153,35 @@
             <font-awesome-icon :icon="['fab', 'twitter']" />
           </a>
         </p>
-      </div>
     </section>
     <section class="section">
-      <div class="wide" style="width: 80vw; margin: 0 auto;">
+
         <div class="columns content is-centered has-text-left">
           <nuxt-link to="/" style="width: 33%;">
             <div class="column reflection" style="margin: 20px; padding: 40px; min-height: 320px;">
               <div class="font-awesome">
-                <h1 class="title is-2 is-size-4-mobile">Spotlight your businness like never before.</h1>
-                <h1 class="title is-4 is-size-6-mobile">Apply for a partner</h1>
+                <h1 class="title is-2 is-size-4-mobile">{{ $t('rcm.left.title') }}</h1>
+                <h1 class="title is-5 is-size-6-mobile">{{ $t('rcm.left.description') }}</h1>
               </div>
             </div>
           </nuxt-link>
           <nuxt-link to="/" style="width: 33%;">
             <div class="column reflection" style="margin: 20px; padding: 40px; min-height: 320px;">
               <div class="font-awesome">
-                <h1 class="title is-2 is-size-4-mobile">Sign up for one-day volunteer and host a special event together.</h1>
-                <h1 class="title is-4 is-size-6-mobile">Apply for a volunteer</h1>
+                <h1 class="title is-2 is-size-4-mobile">{{ $t('rcm.center.title') }}</h1>
+                <h1 class="title is-5 is-size-6-mobile">{{ $t('rcm.center.description') }}</h1>
               </div>
             </div>
           </nuxt-link>
           <nuxt-link to="/" style="width: 33%;">
             <div class="column reflection" style="margin: 20px; padding: 40px; min-height: 320px;">
               <div class="font-awesome">
-                <h1 class="title is-2 is-size-4-mobile">Share your insight that surprises the world. </h1>
-                <h1 class="title is-4 is-size-6-mobile">Apply for a speaker</h1>
+                <h1 class="title is-2 is-size-4-mobile">{{ $t('rcm.right.title') }}</h1>
+                <h1 class="title is-5 is-size-6-mobile">{{ $t('rcm.right.description') }}</h1>
               </div>
             </div>
           </nuxt-link>
         </div>
-      </div>
     </section>
 
   </section>

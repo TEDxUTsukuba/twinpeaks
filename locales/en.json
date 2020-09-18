@@ -1,4 +1,39 @@
 {
-  "message": "Language Setting: English",
-  "msg_intro": "TEDxUTsukuba is an independently-organised TEDx community at University of Tsukuba."
+  "top": {
+    "message": "Language Setting: English"
+  },
+  "intro": {
+    "headline": "TEDxUTsukuba is an independently-organised TEDx community at University of Tsukuba.",
+    "description": "Managed by passionate volunteers both in and around the campus, TEDxUTsukuba has shed light on relevant topics - from liberal arts to science, local stories to global issues."
+  },
+  "notice": {
+    "left": {
+      "title": "Apply now!",
+      "description": "Sign up for a one-day volunteer. ",
+      "detail": "We are looking for volunteers who are passionate about"
+    },
+    "right": {
+      "title": "Apply now!",
+      "description": "Sign up for a one-day volunteer. ",
+      "detail": "We are looking for volunteers who are passionate about"
+    }
+  },
+  "social": {
+    "title": "Stay connected",
+    "description": ""
+  },
+  "rcm": {
+    "left": {
+      "title": "Spotlight your businness like never before.",
+      "description": "Apply for a partner"
+    },
+    "center": {
+      "title": "Sign up for one-day volunteer and host a special event together.",
+      "description": "Apply for a volunteer"
+    },
+    "right": {
+      "title": "Share your insight that surprises the world. ",
+      "description": "Apply for a speaker"
+    }
+  }
 }
