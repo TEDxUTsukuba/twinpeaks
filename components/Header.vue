@@ -1,5 +1,5 @@
 <template>
-  <b-navbar class="is-fixed-top" style="background-color: #000000;">
+  <b-navbar class="is-fixed-top is-black" style="">
     <template slot="brand">
       <b-navbar-item tag="router-link" :to="{ path: '/' }">
         <img
@@ -11,17 +11,11 @@
     </template>
     <template slot="start">
       <b-navbar-dropdown label="Events" class="is-hoverable">
+        <b-navbar-item tag="router-link" :to="{ path: '/events/2020' }">
+          2020
+        </b-navbar-item>
         <b-navbar-item tag="router-link" :to="{ path: '/events/2019' }">
           2019
-        </b-navbar-item>
-        <b-navbar-item tag="router-link" :to="{ path: '/events/live2019' }">
-          Live 2019
-        </b-navbar-item>
-        <b-navbar-item tag="router-link" :to="{ path: '/events/2017' }">
-          2017
-        </b-navbar-item>
-        <b-navbar-item tag="router-link" :to="{ path: '/events/2016' }">
-          2016
         </b-navbar-item>
       </b-navbar-dropdown>
       <b-navbar-item href="/talks">

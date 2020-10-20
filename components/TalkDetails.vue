@@ -2,10 +2,10 @@
   <section>
       <div class="columns is-variable is-4 is-multiline is-centered">
         <div class="column is-one-quarter-widescreen is-half-desktop is-half-tablet" v-for="(talk, index) in talkList" :key="index">
-          <div class="card">
+          <div class="nmp-light">
             <div class="card-image">
               <figure class="image is-16by9">
-                <img src="https://bulma.io/images/placeholders/640x360.png">
+                <img class="nmp-card-image" src="https://bulma.io/images/placeholders/640x360.png">
               </figure>
             </div>
             <div class="card-content">

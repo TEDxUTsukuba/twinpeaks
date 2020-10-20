@@ -58,6 +58,9 @@ iframe {
 section#wrapper {
   background-color: $light;
 }
+section#wrapper-dark {
+  background-color: $dark;
+}
 
 section.section {
   margin: 6vh 8vw !important;
@@ -81,8 +84,8 @@ section.section {
 .card {
   border-radius: 0px;
   background-color: #F1F4F7;
-  box-shadow:  20px 20px 60px #cfcfd1,
-               -20px -20px 60px #ffffff;
+  box-shadow:  10px 10px 20px #cfcfd1,
+               -10px -10px 20px #ffffff;
 }
 
 .nmp-card-light {
@@ -91,8 +94,21 @@ section.section {
   color: black;
   border-radius: 28px;
   background: $light;
-  box-shadow:  20px 20px 60px #cfcfd1,
-               -20px -20px 60px #ffffff;
+  box-shadow:  10px 10px 20px #cfcfd1,
+               -10px -10px 20px #ffffff;
+}
+.nmp-light {
+  border-radius: 28px;
+  background: $light;
+  box-shadow:  8px 8px 16px #cfcfd1,
+               -8px -8px 16px #ffffff;
+}
+.nmp-button-light {
+  border-radius: 14px;
+  border: 0px;
+  background: $light;
+  box-shadow: inset 3px 3px 6px #cfd2d4,
+              inset -3px -3px 6px #ffffff;
 }
 .nmp-card-dark {
   padding: 3rem 3rem;
@@ -100,8 +116,14 @@ section.section {
   color: white;
   border-radius: 28px;
   background: $dark;
-  box-shadow:  20px 20px 60px #3f424e,
-               -20px -20px 60px #757a92;
+  box-shadow:  8px 8px 16px #3f424e,
+               -8px -8px 16px #757a92;
+}
+.nmp-dark {
+  border-radius: 28px;
+  background: $dark;
+  box-shadow:  8px 8px 16px #3f424e,
+               -8px -8px 16px #757a92;
 }
 .nmp-card-red {
   padding: 3rem 3rem;
@@ -109,8 +131,20 @@ section.section {
   color: white;
   border-radius: 28px;
   background: $primary;
-  box-shadow:  20px 20px 60px #a11e15,
-               -20px -20px 60px #ff3123;
+  box-shadow:  8px 8px 16px #a11e15,
+               -8px -8px 16px #ff3123;
+}
+.nmp-button-red {
+  border-radius: 14px;
+  background: $primary;
+  box-shadow: inset 5px 5px 10px #c6251a,
+              inset -5px -5px 10px #ff3123;
+}
+.nmp-card-image {
+  border-radius: 28px 28px 0 0;
+}
+.image-box {
+  border-radius: 28px;
 }
 
 // @import '~bulma';

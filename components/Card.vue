@@ -1,9 +1,9 @@
 <template>
   <div class="column is-4-tablet is-4-desktop">
-    <div class="card">
+    <div class="nmp-light">
       <div class="card-image">
-        <figure class="image is-16by9">
-          <img src="https://bulma.io/images/placeholders/640x360.png" alt="Placeholder image">
+        <figure class="image is-3by2">
+          <img class="nmp-card-image" :src="image_url" alt="Placeholder image">
         </figure>
       </div>
       <div class="card-content">
@@ -39,7 +39,7 @@ export default {
       type: String,
       required: true
     },
-    icon: {
+    image_url: {
       type: String,
       required: true
     }

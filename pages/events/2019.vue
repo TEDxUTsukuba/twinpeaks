@@ -18,22 +18,100 @@
        -->
     </section>
 
-    <section class="hero is-large is-white">
-      <div class="hero-body">
+    <section class="section">
+      <div class="tile is-ancestor">
+        <div class="tile is-5">
+          <div class="nmp-card-light">
+            <h1 class="title is-1">Workshop</h1>
+            <p class="has-text-grey-light">We value workshop as a place for audience to meet one another. Creating hundreds of </p>
+          </div>
+        </div>
+        <div class="tile is-7 is-vertical">
+          <div class="tile">
+            <div class="">
+              <h1 class="title is-3 has-text-right">Where Creativity Meets</h1>
+              <p>
+                De irure commodo iis quem consectetur deserunt malis commodo. Amet ingeniis excepteur ita cernantur culpa constias. Ex fore multos de incididunt te litteris anim pariatur nescius. Ne quis aliquip adipisicing non admodum enim ipsum ita export si quae illustriora nostrud quem arbitror, ut non dolore excepteur.An quem fore non excepteur. Nam constias id senserit e sed tamen vidisse imitarentur, multos vidisse voluptate aut culpa officia o amet tempor. Cupidatat est incurreret nam nescius de dolor, noster iis singulis se veniam hic si nulla excepteur.
+              </p>
+            </div>
+          </div>
+          <div class="tile is-parent">
+            <div class="tile is-child">
 
-          <h1 class="title is-1 has-text-centered">
-            Workshop
-          </h1>
+            </div>
+            <div class="tile is-child">
+              <div class="">
+                h1 class="title is-3 has-text-right">Where Creativity Meets</h1>
+                <p>
+                  De irure commodo iis quem consectetur deserunt malis commodo. Amet ingeniis excepteur ita cernantur culpa constias. Ex fore multos de incididunt te litteris anim pariatur nescius. Ne quis aliquip ad
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="hero is-large">
-      <div class="hero-body">
+    <section class="section">
+      <div class="columns">
+        <div class="column is-3">
+          <figure class="image is-square">
+            <img class="image-box" src="https://bulma.io/images/placeholders/640x360.png">
+          </figure>
+        </div>
+        <div class="column is-3">
+          <figure class="image is-square">
+            <img class="image-box" src="https://bulma.io/images/placeholders/640x360.png">
+          </figure>
+        </div>
+        <div class="column is-3">
+          <figure class="image is-square">
+            <img class="image-box" src="https://bulma.io/images/placeholders/640x360.png">
+          </figure>
+        </div>
+        <div class="column is-3">
+          <figure class="image is-square">
+            <img class="image-box" src="https://bulma.io/images/placeholders/640x360.png">
+          </figure>
+        </div>
 
-          <h1 class="title is-1 has-text-centered">
-            Performance
-          </h1>
+      </div>
+    </section>
+
+
+    <section class="section">
+      <div class="columns">
+        <div class="column is-7">
+          <div class="">
+            <article>
+              テクノロジーが進歩し、物質的な豊かさを享受できるようになった現代において、
+家族や仲間との強い繋がりが個人の幸せに占める割合は、相対的に低下している。
+地縁や血縁、職場での付き合いが「しがらみ」として遠ざけられるようになる一方で、
+SNSの普及や非正規雇用の拡大により、うわべだけの人間関係が増加しつつある。
+
+ムラ社会ニッポン特有の「同調圧力」といった悪弊が徐々に廃れていくとともに、
+個人主義や競争社会への賛辞が、日夜を問わず世間を賑わせてきたのが現実だ。
+しかし、テクノロジーのあくなき追求の先に待ち受けていた人工知能の登場は、
+皮肉にも私たちに「人間とは何か」という問いとの対峙を要請するのであった。
+
+古代エジプトでピラミッドが建造され、バスティーユ牢獄で市民革命の火蓋が切られたように、
+文明の進歩の原動力は「人間関係」の中にこそ見いだすことができるはずだ。
+そして令和という新たな時代を生きる私たちに求められるのは、これまで人間関係を築く上での
+障壁となってきた文化や思想、価値観の違いを、強みへと変えようとする気概ではないだろうか。
+
+「共に」を意味する接頭辞に、Phila「愛」とAction「行動」を合わせた CoPhilAction には、
+互いを認め合う「愛」が「行動」を生み、未来を切り拓くという理念が現れている。
+多様な人とアイディアが交わる TEDxUTsukuba という大きな社会実験の場に集い、
+あなたらしい CoPhilAction のカタチを、自由に思い描いてほしい。
+            </article>
+          </div>
+        </div>
+        <div class="column is-5">
+          <div class="nmp-card-light">
+            <h1 class="title is-1 has-text-right">
+              Concept
+            </h1>
+          </div>
         </div>
       </div>
     </section>
@@ -48,9 +126,7 @@
             <h1 class="title is-2 has-text-centered">
               CoPhilAction
             </h1>
-            <article>
-              Se et enim senserit. Ubi anim occaecat quibusdam. Quo export praetermissum, o hic concursionibus ne nescius a arbitror si proident tempor legam quo esse iis quid an do quorum iudicem do offendit tamen quis iudicem veniam est non eram cillum a constias, nam velit voluptatibus. Occaecat ita quis, mentitum sunt proident vidisse.Ita vidisse ut admodum ab doctrina est anim iudicem te fore e admodum, eu anim mentitum admodum ut probant irure consequat commodo ut noster arbitror sed quid dolor, multos officia in despicationes, e probant ad occaecat. Nisi mentitum litteris ita illum nescius fidelissimae se sint ullamco et export malis an ubi magna sint labore incurreret, deserunt o deserunt, e magna si eram iis an irure firmissimum, nulla e officia. Ipsum sed quibusdam eu sint nam hic fugiat imitarentur, ullamco magna nam deserunt efflorescere, consequat a nisi. Mentitum sint nostrud o summis voluptate comprehenderit, proident sed cupidatat, ne aute appellat, nostrud se quorum, tamen ex ex quid doctrina, aliqua incurreret singulis ut o malis nulla ea pariatur.
-            </article>
+
           </div>
         </div>
       </div>

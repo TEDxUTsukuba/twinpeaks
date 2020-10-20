@@ -3,16 +3,39 @@
     "message": "Language Setting: English"
   },
   "intro": {
-    "headline": "TEDxUTsukuba is an independently-organised TEDx community at University of Tsukuba.",
-    "description": "Managed by passionate volunteers both in and around the campus, TEDxUTsukuba has shed light on relevant topics - from liberal arts to science, local stories to global issues."
+    "headline": "TEDxUTsukuba is an independently-organised TEDx community at the University of Tsukuba.",
+    "description": "Managed by passionate volunteers both in and around the campus, TEDxUTsukuba has shed light on relevant topics - from liberal arts to science, local stories to global issues.",
+    "button": "Discover"
+  },
+  "covid19-info": {
+    "title": "Our response to COVID-19",
+    "description": "To protect our community, TEDxUTsukuba has always been following the guidelines from university officials and local authorities. ",
+    "event": {
+      "title": "Event",
+      "description": "We will be hosting a virtual event"
+    },
+    "link": {
+      "city": "City of Tsukuba",
+      "university": "University of Tsukuba"
+    }
   },
   "notice": {
-    "left": {
+    "left-top": {
       "title": "Apply now!",
       "description": "Sign up for a one-day volunteer. ",
       "detail": "We are looking for volunteers who are passionate about"
     },
-    "right": {
+    "left-bottom": {
+      "title": "Apply now!",
+      "description": "Sign up for a one-day volunteer. ",
+      "detail": "We are looking for volunteers who are passionate about"
+    },
+    "right-top": {
+      "title": "Apply now!",
+      "description": "Sign up for a one-day volunteer. ",
+      "detail": "We are looking for volunteers who are passionate aboutWe are looking for volunteers who are passionate aboutWe are looking for volunteers who are passionate aboutWe are looking for volunteers who are passionate about"
+    },
+    "right-bottom": {
       "title": "Apply now!",
       "description": "Sign up for a one-day volunteer. ",
       "detail": "We are looking for volunteers who are passionate about"

@@ -1,12 +1,12 @@
 <template>
   <div class="nmp-card-light">
-      <h1 class="title is-2">{{ title }}</h1>
+      <h1 class="title is-3">{{ title }}</h1>
       <p class="subtitle is-size-6">{{ description }}</p>
       <article>{{ detail }}</article>
       <br>
-      <p class="image is-16by9">
-        <img src="https://bulma.io/images/placeholders/640x360.png" alt="">
-      </p>
+      <!-- <p class="image is-16by9">
+        <img :src="imageUrl" alt="">
+      </p> -->
   </div>
 </template>
 
@@ -30,5 +30,8 @@ export default {
   }
   .p {
     color: gray;
+  }
+  .nmp-card-light {
+    height: 90%;
   }
 </style>
