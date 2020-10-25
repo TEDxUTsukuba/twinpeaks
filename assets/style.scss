@@ -55,6 +55,23 @@ iframe {
   }
 }
 
+h1.is-0 {
+  color: lightgray;
+  @media screen and (max-width: 768px) {
+    text-align: center;
+    font-size: 4rem !important;
+  }
+  @media screen and (min-width: 769px) and (max-width: 1215px) {
+    text-align: center;
+    font-size: 6rem !important;
+  }
+  @media screen and (min-width: 1216px) {
+    text-align: right;
+    font-size: 8rem !important;
+  }
+  margin-bottom: 5vh;
+}
+
 section#wrapper {
   background-color: $light;
 }

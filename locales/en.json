@@ -19,6 +19,14 @@
       "university": "University of Tsukuba"
     }
   },
+  "event": {
+    "title": "Watch our annual event on YouTube",
+    "button": "Discover",
+    "download": "Add to calendar"
+  },
+  "news": {
+    "title": "News"
+  },
   "notice": {
     "left-top": {
       "title": "Apply now!",
@@ -57,6 +65,11 @@
     "right": {
       "title": "Share your insight that surprises the world. ",
       "description": "Apply for a speaker"
+    }
+  },
+  "about": {
+    "section1": {
+      "title": "Social Capital"
     }
   }
 }

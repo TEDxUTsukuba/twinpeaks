@@ -19,6 +19,14 @@
       "university": "筑波大学"
     }
   },
+  "event": {
+    "title": "11月29日に、YouTube Liveに参加",
+    "button": "詳しく知る",
+    "download": "予定を追加"
+  },
+  "news": {
+    "title": "最新情報"
+  },
   "notice": {
     "left-top": {
       "title": "当日ボランティア募集",
@@ -42,7 +50,7 @@
     }
   },
   "social": {
-    "title": "最新情報",
+    "title": "公式SNS",
     "description": ""
   },
   "rcm": {
@@ -57,6 +65,11 @@
     "right": {
       "title": "次にステージに立つのはあなたです",
       "description": "スピーカーについて"
+    }
+  },
+  "about": {
+    "section1": {
+      "title": "Social Capital"
     }
   }
 }

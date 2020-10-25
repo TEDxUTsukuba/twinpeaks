@@ -53,28 +53,27 @@
     </section>
 
     <section class="section">
-      <div class="columns">
-        <div class="column is-3">
+      <div class="columns is-mobile is-multiline">
+        <div class="column is-3-tablet is-6-mobile">
           <figure class="image is-square">
-            <img class="image-box" src="https://bulma.io/images/placeholders/640x360.png">
+            <img class="image-box" src="https://bulma.io/images/placeholders/640x640.png">
           </figure>
         </div>
-        <div class="column is-3">
+        <div class="column is-3-tablet is-6-mobile">
           <figure class="image is-square">
-            <img class="image-box" src="https://bulma.io/images/placeholders/640x360.png">
+            <img class="image-box" src="https://bulma.io/images/placeholders/480x480.png">
           </figure>
         </div>
-        <div class="column is-3">
+        <div class="column is-3-tablet is-6-mobile">
           <figure class="image is-square">
-            <img class="image-box" src="https://bulma.io/images/placeholders/640x360.png">
+            <img class="image-box" src="https://bulma.io/images/placeholders/480x480.png">
           </figure>
         </div>
-        <div class="column is-3">
+        <div class="column is-3-tablet is-6-mobile">
           <figure class="image is-square">
-            <img class="image-box" src="https://bulma.io/images/placeholders/640x360.png">
+            <img class="image-box" src="https://bulma.io/images/placeholders/480x480.png">
           </figure>
         </div>
-
       </div>
     </section>
 

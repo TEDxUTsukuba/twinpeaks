@@ -19,6 +19,21 @@
           alt="Lightweight UI components for Vue.js based on Bulma"
       >
       <h1 class="title textoverflow">Social Capital</h1> -->
+      
+      <section class="hero is-black">
+        <div class="hero-body has-text-white">
+          <nuxt-link to="/events/2020"><img id="top" src = "~/assets/wallpapers/jijimuge.jpg" /></nuxt-link>
+          <section class="section has-text-centered">
+            <h1 class="title is-1 has-text-weight-light has-text-centered">
+              <span class="">{{ $t('event.title') }}</span>
+            </h1>
+            <nuxt-link to="/events/2020" class="button is-white is-rounded is-medium is-outlined">{{ $t('event.button') }}</nuxt-link>
+            <br><br>
+            <a class="has-text-white" href="webcal:~/assets/event.ics" download>{{ $t('event.download') }}</a>
+          </section>
+        </div>
+      </section>
+
       <section class="hero bg-red">
         <div class="hero-body has-text-white">
           <section class="section">
@@ -43,6 +58,30 @@
               </div>
             </div>
           </section>
+          <!-- <section class="section">
+            <div class="columns is-mobile is-multiline">
+              <div class="column is-3-tablet is-6-mobile">
+                <figure class="image is-square">
+                  <img class="image-box" src="https://bulma.io/images/placeholders/480x480.png">
+                </figure>
+              </div>
+              <div class="column is-3-tablet is-6-mobile">
+                <figure class="image is-square">
+                  <img class="image-box" src="https://bulma.io/images/placeholders/480x480.png">
+                </figure>
+              </div>
+              <div class="column is-3-tablet is-6-mobile">
+                <figure class="image is-square">
+                  <img class="image-box" src="https://bulma.io/images/placeholders/480x480.png">
+                </figure>
+              </div>
+              <div class="column is-3-tablet is-6-mobile">
+                <figure class="image is-square">
+                  <img class="image-box" src="https://bulma.io/images/placeholders/480x480.png">
+                </figure>
+              </div>
+            </div>
+          </section> -->
         </div>
       </section>
 
@@ -76,11 +115,107 @@
           <a class="button is-large nmp-button-light">Watch more talks</a>
       </section> -->
 
-    <section class="hero" style="background-color: #5B08B9;">
+    <section class="section">
+      <h1 class="title is-0">
+        <span class="">{{ $t('news.title') }}</span>
+      </h1>
+      <div class="columns">
+        <div class="column is-5-desktop">
+          <Flip
+            :title = "$t('notice.left-top.title')"
+            :description = "$t('notice.left-top.description')"
+            :detail = "$t('notice.left-top.detail')"
+            imageUrl = "/_nuxt/assets/speakers/2019/sp_2019_1.jpg"
+           />
+        </div>
+        <div class="column is-7-desktop">
+          <Flip
+            :title = "$t('notice.left-bottom.title')"
+            :description = "$t('notice.left-bottom.description')"
+            :detail = "$t('notice.left-bottom.detail')"
+            imageUrl = ""
+          />
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column is-7-desktop">
+          <Flip
+            :title = "$t('notice.right-top.title')"
+            :description = "$t('notice.right-top.description')"
+            :detail = "$t('notice.right-top.detail')"
+            imageUrl = ""
+          />
+        </div>
+        <div class="column is-5-desktop">
+          <Flip
+            :title = "$t('notice.right-bottom.title')"
+            :description = "$t('notice.right-bottom.description')"
+            :detail = "$t('notice.right-bottom.detail')"
+            imageUrl = ""
+          />
+        </div>
+      </div>
+    </section>
+    <!-- <div class="text-divider"></div> -->
+    <section class="section">
+        <h1 class="title is-0">
+          {{ $t('social.title')}}
+        </h1>
+        <p class="has-text-centered">
+          <div class="columns">
+            <div class="one-third nmp-button-light">
+              <a class="icon-circle" href="https://www.instagram.com/tedxutsukuba/">
+                <font-awesome-icon :icon="['fab', 'facebook-square']" />
+              </a>
+            </div>
+            <div class="one-third nmp-button-light">
+              <a class="icon-circle" href="https://www.instagram.com/tedxutsukuba/">
+                <font-awesome-icon :icon="['fab', 'instagram']" />
+              </a>
+            </div>
+            <div class="one-third nmp-button-light">
+              <a class="icon-circle" href="https://www.instagram.com/tedxutsukuba/">
+                <font-awesome-icon :icon="['fab', 'twitter']" />
+              </a>
+            </div>
+          </div>
+        </p>
+    </section>
+    <section class="section">
+        <div class="columns content is-centered has-text-left">
+          <nuxt-link to="/" style="width: 33%;">
+            <div class="column reflection" style="margin: 20px; padding: 40px; min-height: 320px;">
+              <div class="font-awesome">
+                <h1 class="title is-2 is-size-4-mobile">{{ $t('rcm.left.title') }}</h1>
+                <h1 class="title is-5 is-size-6-mobile">{{ $t('rcm.left.description') }}</h1>
+              </div>
+            </div>
+          </nuxt-link>
+          <nuxt-link to="/" style="width: 33%;">
+            <div class="column reflection" style="margin: 20px; padding: 40px; min-height: 320px;">
+              <div class="font-awesome">
+                <h1 class="title is-2 is-size-4-mobile">{{ $t('rcm.center.title') }}</h1>
+                <h1 class="title is-5 is-size-6-mobile">{{ $t('rcm.center.description') }}</h1>
+              </div>
+            </div>
+          </nuxt-link>
+          <nuxt-link to="/" style="width: 33%;">
+            <div class="column reflection" style="margin: 20px; padding: 40px; min-height: 320px;">
+              <div class="font-awesome">
+                <h1 class="title is-2 is-size-4-mobile">{{ $t('rcm.right.title') }}</h1>
+                <h1 class="title is-5 is-size-6-mobile">{{ $t('rcm.right.description') }}</h1>
+              </div>
+            </div>
+          </nuxt-link>
+        </div>
+    </section>
+
+
+    <section class="hero bg-dark">
       <div class="hero-body has-text-white">
         <section class="section">
             <h1 class="title is-1 has-text-white has-text-centered">
-              <span class="highlighter">{{ $t('covid19-info.title') }}</span>
+              <span class="">{{ $t('covid19-info.title') }}</span>
             </h1>
             <article>{{ $t('covid19-info.description')}}</article>
             <!-- <div>
@@ -112,102 +247,6 @@
             </div>
           </section>
       </div>
-    </section>
-
-    <section class="section">
-      <<h1 class="title is-1 is-0 has-text-centered">
-        <span class="highlighter">News</span>
-      </h1>
-      <div class="columns">
-        <div class="column is-one-third-desktop">
-          <Flip
-            :title = "$t('notice.left-top.title')"
-            :description = "$t('notice.left-top.description')"
-            :detail = "$t('notice.left-top.detail')"
-            imageUrl = "/_nuxt/assets/speakers/2019/sp_2019_1.jpg"
-           />
-        </div>
-        <div class="column is-two-thirds-desktop">
-          <Flip
-            :title = "$t('notice.left-bottom.title')"
-            :description = "$t('notice.left-bottom.description')"
-            :detail = "$t('notice.left-bottom.detail')"
-            imageUrl = ""
-          />
-        </div>
-      </div>
-      <div class="columns">
-        <div class="column is-two-thirds-desktop">
-          <Flip
-            :title = "$t('notice.right-top.title')"
-            :description = "$t('notice.right-top.description')"
-            :detail = "$t('notice.right-top.detail')"
-            imageUrl = ""
-          />
-        </div>
-        <div class="column is-one-third-desktop">
-          <Flip
-            :title = "$t('notice.right-bottom.title')"
-            :description = "$t('notice.right-bottom.description')"
-            :detail = "$t('notice.right-bottom.detail')"
-            imageUrl = ""
-          />
-        </div>
-      </div>
-    </section>
-    <!-- <div class="text-divider"></div> -->
-    <section class="section">
-        <h1 class="title is-1 has-text-centered">
-          {{ $t('social.title')}}
-        </h1>
-        <p class="has-text-centered">
-          <div class="columns">
-            <div class="one-third nmp-button-light">
-              <a class="icon-circle" href="https://www.instagram.com/tedxutsukuba/">
-                <font-awesome-icon :icon="['fab', 'facebook-square']" />
-              </a>
-            </div>
-            <div class="one-third nmp-button-light">
-              <a class="icon-circle" href="https://www.instagram.com/tedxutsukuba/">
-                <font-awesome-icon :icon="['fab', 'instagram']" />
-              </a>
-            </div>
-            <div class="one-third nmp-button-light">
-              <a class="icon-circle" href="https://www.instagram.com/tedxutsukuba/">
-                <font-awesome-icon :icon="['fab', 'twitter']" />
-              </a>
-            </div>
-          </div>
-        </p>
-    </section>
-    <section class="section">
-
-        <div class="columns content is-centered has-text-left">
-          <nuxt-link to="/" style="width: 33%;">
-            <div class="column reflection" style="margin: 20px; padding: 40px; min-height: 320px;">
-              <div class="font-awesome">
-                <h1 class="title is-2 is-size-4-mobile">{{ $t('rcm.left.title') }}</h1>
-                <h1 class="title is-5 is-size-6-mobile">{{ $t('rcm.left.description') }}</h1>
-              </div>
-            </div>
-          </nuxt-link>
-          <nuxt-link to="/" style="width: 33%;">
-            <div class="column reflection" style="margin: 20px; padding: 40px; min-height: 320px;">
-              <div class="font-awesome">
-                <h1 class="title is-2 is-size-4-mobile">{{ $t('rcm.center.title') }}</h1>
-                <h1 class="title is-5 is-size-6-mobile">{{ $t('rcm.center.description') }}</h1>
-              </div>
-            </div>
-          </nuxt-link>
-          <nuxt-link to="/" style="width: 33%;">
-            <div class="column reflection" style="margin: 20px; padding: 40px; min-height: 320px;">
-              <div class="font-awesome">
-                <h1 class="title is-2 is-size-4-mobile">{{ $t('rcm.right.title') }}</h1>
-                <h1 class="title is-5 is-size-6-mobile">{{ $t('rcm.right.description') }}</h1>
-              </div>
-            </div>
-          </nuxt-link>
-        </div>
     </section>
 
   </section>
@@ -277,22 +316,7 @@ export default {
   h1.thin {
     font-weight: 400 !important;
   }
-  h1.is-0 {
-    color: lightgray;
-    @media screen and (max-width: 768px) {
-      font-size: 4rem !important;
-    }
-    @media screen and (min-width: 769px) and (max-width: 1215px) {
-      font-size: 6rem !important;
-    }
-    @media screen and (min-width: 1216px) {
-      font-size: 8rem !important;
-    }
-    margin-bottom: 5vh;
-  }
-  .highlighter {
 
-  }
   .bounce_box {
     background-color: #fff;
     border-radius: 25px;
