@@ -1,21 +1,12 @@
 <template>
   <section id="wrapper" class="font-awesome">
-    <h1 class="title textoverflow">TEDxUTsukuba 2020<br>CoPhilAction</h1>
-    <img id="top" src = "~/assets/banner/2019.jpg" />
-    <section class="hero bg-light">
-      <div class="hero-body">
-        <section class="section">
-          <h1 class="title is-1 has-text-centered">
-            Talks
-          </h1>
-          <TalkDetails year="2019" />
-        </section>
+    <section class="hero is-medium is-black">
+      <div class="hero-body has-text-white has-text-left">
+        <div class="container has-text-centered">
+          <h1 class="title is-1">CoPhilAction</h1>
+          <h1 class="subtitle is-3">TEDxUTsukuba 2019</h1>
+        </div>
       </div>
-      <!--
-      <div　v-for = 'sp in speakers' :key = 'sp.id'>
-        <h1>{{ sp.title }}</h1>
-      </div>
-       -->
     </section>
 
     <section class="section">

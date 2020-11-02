@@ -20,20 +20,34 @@ iframe {
   }
 }
 
-
+h1.title.is-2 {
+  font-weight: bold;
+  color: $primary;
+  letter-spacing: 6px;
+  margin-right: -6px;
+}
 @media screen and (max-width: 768px) {
   h1.title.is-1 {
     font-size: 2.5rem !important;
+  }
+  h1.title.is-2 {
+    font-size: 1.5rem !important;
   }
 }
 @media screen and (min-width: 769px) and (max-width: 1080px) {
   h1.title.is-1 {
     font-size: 4rem !important;
   }
+  h1.title.is-2 {
+    font-size: 1.75rem !important;
+  }
 }
 @media screen and (min-width: 1081px) {
   h1.title.is-1 {
     font-size: 5rem !important;
+  }
+  h1.title.is-2 {
+    font-size: 2rem !important;
   }
   .is-size-1 {
     font-size: 3.5rem !important;
@@ -56,7 +70,7 @@ iframe {
 }
 
 h1.is-0 {
-  color: lightgray;
+  color: #bec1c3;
   @media screen and (max-width: 768px) {
     text-align: center;
     font-size: 4rem !important;
@@ -65,11 +79,16 @@ h1.is-0 {
     text-align: center;
     font-size: 6rem !important;
   }
-  @media screen and (min-width: 1216px) {
+  @media screen and (min-width: 1216px) and (max-width: 1408px) {
     text-align: right;
     font-size: 8rem !important;
   }
-  margin-bottom: 5vh;
+  @media screen and (min-width: 1409px) {
+    text-align: right;
+    font-size: 10rem !important;
+  }
+  margin-bottom: 5vh; 
+  padding-bottom: 5vh;
 }
 
 section#wrapper {
@@ -89,11 +108,25 @@ section.section {
   }
 }
 
+.card-content {
+  @media screen and (min-width: 768px) {
+    padding: 3rem 3rem 3rem 3rem;
+  }
+}
+.nmp-light.columns.is-gapless {
+  @media screen and (min-width: 1025px) {
+    padding: 20px;
+  }
+}
+
 .bg-light {
   background-color: $light;
 }
 .bg-dark {
   background-color: $dark;
+  .title, .subtitle {
+    color: #ffffff;
+  }
 }
 .bg-red {
   background-color: $primary;
@@ -115,7 +148,8 @@ section.section {
                -10px -10px 20px #ffffff;
 }
 .nmp-light {
-  border-radius: 28px;
+  border-radius: 50px;
+  margin-bottom: 4vh !important;
   background: $light;
   box-shadow:  8px 8px 16px #cfcfd1,
                -8px -8px 16px #ffffff;
@@ -138,6 +172,7 @@ section.section {
 }
 .nmp-dark {
   border-radius: 28px;
+  margin-bottom: 4vh !important;
   background: $dark;
   box-shadow:  8px 8px 16px #3f424e,
                -8px -8px 16px #757a92;
@@ -151,6 +186,15 @@ section.section {
   box-shadow:  8px 8px 16px #a11e15,
                -8px -8px 16px #ff3123;
 }
+.nmp-card-red-light {
+  padding: 3rem 3rem;
+  margin: 1rem;
+  color: white;
+  border-radius: 28px;
+  background: $primary;
+  box-shadow:  8px 8px 16px #ff3123,
+               -8px -8px 16px #ffffff;
+}
 .nmp-button-red {
   border-radius: 14px;
   background: $primary;
@@ -158,11 +202,44 @@ section.section {
               inset -5px -5px 10px #ff3123;
 }
 .nmp-card-image {
-  border-radius: 28px 28px 0 0;
+  @media screen and (max-width: 1024px) {
+    border-radius: 20px;
+    // border-radius: 28px 28px 0 0;
+  }
+  @media screen and (min-width: 1025px) {
+    border-radius: 20px;
+  }
 }
 .image-box {
+  border-radius: 40px;
+  padding: 20px;
+  box-shadow: inset 5px 5px 10px #cfd2d4,
+              inset -5px -5px 10px #ffffff;
+}
+.nmp-inset-dark {
+  padding: 3rem 3rem;
+  margin: 1rem;
   border-radius: 28px;
+  margin-bottom: 4vh !important;
+  background: $dark;
+  box-shadow: inset 8px 8px 16px #3f424e,
+              inset -8px -8px 16px #757a92;
+}
+.nmp-inset-light {
+  padding: 3rem 3rem;
+  margin: 1rem;
+  border-radius: 28px;
+  margin-bottom: 4vh !important;
+  background: $light;
+  box-shadow: inset 8px 8px 16px #cfd2d4,
+              inset -8px -8px 16px #ffffff;
 }
 
+.scrapboard {
+  .is-child {
+    padding: 1rem;
+    background-color: #ffffff;
+  }
+}
 // @import '~bulma';
 // @import '~buefy/src/scss/buefy';

@@ -20,9 +20,10 @@
     }
   },
   "event": {
-    "title": "11月29日に、YouTube Liveに参加",
+    "title": "#うちで観よう",
+    "title2": "11月29日(日) YouTube Live にてイベント開催",
     "button": "詳しく知る",
-    "download": "予定を追加"
+    "download": "カレンダーに追加"
   },
   "news": {
     "title": "最新情報"
@@ -70,6 +71,41 @@
   "about": {
     "section1": {
       "title": "Social Capital"
+    }
+  },
+  "2020": {
+    "speaker": {
+      "title": "登壇者",
+      "sp1": {
+        "name": "三上丈晴",
+        "position": "「ムー」第5代編集長",
+        "description": "国立環境研究所の地球環境研究センターで、副センター長を務める気候変動の専門家。どのようなコミュニケーションをすれば気候変動の問題が解決へと向かうのかを日々考え、発信している。ポケモンが大好き。"
+      },
+      "sp2": {
+        "name": "李昇姫",
+        "position": ""
+      },
+      "sp3": {
+        "name": "江守正多",
+        "position": ""
+      },
+      "sp4": {
+        "name": "善村カリーナ美和",
+        "position": ""
+      }
+    },
+    "concept": {
+      "title": "コンセプト",
+      "headline": "JIJIMUGE",
+      "description": "sasasasa",
+      "statement": ""
+    },
+    "participance": {
+      "title": "参加方法",
+      "description": ""
+    },
+    "about": {
+      "title": "開催概要"
     }
   }
 }

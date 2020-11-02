@@ -20,7 +20,8 @@
     }
   },
   "event": {
-    "title": "Watch our annual event on YouTube",
+    "title": "Don't mask your curiosity.",
+    "title2": "Watch YouTube Live on November 29",
     "button": "Discover",
     "download": "Add to calendar"
   },
@@ -70,6 +71,41 @@
   "about": {
     "section1": {
       "title": "Social Capital"
+    }
+  },
+  "2020": {
+    "speaker": {
+      "title": "Speakers",
+      "sp1": {
+        "name": "Takeharu Mikami",
+        "position": "",
+        "description": ""
+      },
+      "sp2": {
+        "name": "SeungHee Lee",
+        "position": ""
+      },
+      "sp3": {
+        "name": "Seita Emori",
+        "position": ""
+      },
+      "sp4": {
+        "name": "Carina Miwa Yoshimura",
+        "position": ""
+      }
+    },
+    "concept": {
+      "title": "Concept", 
+      "headline": "JIJIMUGE",
+      "description": "sasafsfas",
+      "statement": ""
+    },
+    "participance": {
+      "title": "",
+      "description": ""
+    },
+    "about": {
+      "title": "About"
     }
   }
 }

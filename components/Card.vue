@@ -1,29 +1,36 @@
 <template>
-  <div class="column is-4-tablet is-4-desktop">
-    <div class="nmp-light">
-      <div class="card-image">
-        <figure class="image is-3by2">
-          <img class="nmp-card-image" :src="image_url" alt="Placeholder image">
-        </figure>
+  <div class="column">
+    <div class="nmp-light columns is-gapless is-multiline">
+      <div class="card-image column is-12-tablet is-5-desktop is-4-widescreen is-3-fullhd">
+        <div class="image-box">
+          <figure class="image is-1by1">
+            <img class="nmp-card-image" :src="image_url" alt="Placeholder image">
+          </figure>
+        </div>
       </div>
-      <div class="card-content">
-        <p class="title is-4">{{ title }}</p>
-        <p class="subtitle">{{ speaker }}</p>
-        <!-- <div class="content has-text-centered">
-          <b-icon
-            :icon="icon"
-            size="is-large"
-            type="is-primary"
-          />
-        </div> -->
+      <div class="column">
+        <div class="card-content has-text-centered has-text-right-desktop">
+          <p class="title is-size-1 has-text-centered-mobile">{{ title }}</p>
+          <p class="subtitle">{{ subtitle }}</p>
+          <p class="has-text-left">
+            {{ description }}
+          </p>
+          <!-- <div class="content has-text-centered">
+            <b-icon
+              :icon="icon"
+              size="is-large"
+              type="is-primary"
+            />
+          </div> -->
+        </div>
       </div>
-      <footer class="card-footer">
+      <!-- <footer class="card-footer">
         <div class="card-footer-item">
           <span>
             <slot />
           </span>
         </div>
-      </footer>
+      </footer> -->
     </div>
   </div>
 </template>
@@ -35,9 +42,13 @@ export default {
       type: String,
       required: true
     },
-    speaker: {
+    subtitle: {
       type: String,
       required: true
+    },
+    description: {
+      type: String,
+      required: false
     },
     image_url: {
       type: String,
@@ -49,9 +60,12 @@ export default {
 
 <style scoped>
 p.title {
-  font-weight: 500;
+  font-weight: 300;
+  font-family: sans-serif;
+  letter-spacing: 20px;
+  margin-right: -20px;
 }
 p.subtitle {
-  color: #5B08B9;
+  color: #E62B1E;
 }
 </style>
