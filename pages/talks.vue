@@ -31,7 +31,7 @@
               <h1 class="title is-4">
                 {{ talk.title }}
               </h1>
-              <h1 class="subtitle is-6">
+              <h1 class="subtitle is-4">
                 {{ talk.speaker_name }}
               </h1>
               <b-collapse :open="false" position="is-bottom" aria-id="contentIdForA11y1">

@@ -12,10 +12,11 @@
         <div class="hero-body has-text-white has-text-centered">
           <nuxt-link to="/events/2020"><img id="top" width="100%" src = "~/assets/wallpapers/jijimuge.jpg" /></nuxt-link>
           <section class="section has-text-centered">
-            <h1 class="title has-text-centered">
-              <span class="is-1 has-text-weight-light">{{ $t('event.title') }}</span>
-              <br><br>
-              <span class="is-2 has-text-weight-normal">{{ $t('event.title2') }}</span>
+            <h1 class="title is-1 is-spaced">
+              <span class="has-text-weight-light">{{ $t('event.title') }}</span>
+            </h1>
+            <h1 class="subtitle is-3">
+              <span class="has-text-weight-normal">{{ $t('event.title2') }}</span>
             </h1>
             <br><br>
             <nuxt-link to="/events/2020" class="button is-white is-rounded is-medium is-outlined">{{ $t('event.button') }}</nuxt-link>

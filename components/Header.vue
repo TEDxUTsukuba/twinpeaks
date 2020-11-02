@@ -9,7 +9,7 @@
         <!-- https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-logo.png -->
       </b-navbar-item>
     </template>
-    <template slot="start">
+    <template slot="end">
       <b-navbar-dropdown label="Events" class="is-hoverable">
         <b-navbar-item tag="router-link" :to="{ path: '/events/2020' }">
           2020
@@ -27,14 +27,11 @@
       <b-navbar-item href="/about">
         About
       </b-navbar-item>
-    </template>
-
-    <template slot="end">
-      <b-navbar-item>
-        <nuxt-link :to="switchLocalePath('ja')">日本語</nuxt-link>
-      </b-navbar-item>
-      <b-navbar-item>
-        <nuxt-link :to="switchLocalePath('en')">English</nuxt-link>
+      <b-navbar-item tag="div">
+        <div class="buttons">
+          <nuxt-link class="button is-info has-text-white" v-if="$i18n.locale !== 'en'" :to="switchLocalePath('en')">English</nuxt-link>
+          <nuxt-link class="button is-danger has-text-white" v-if="$i18n.locale !== 'ja'" :to="switchLocalePath('ja')">日本語</nuxt-link>
+        </div>
       </b-navbar-item>
       <!-- <b-navbar-item tag="div">
         <div class="buttons">
@@ -50,5 +47,9 @@
   </b-navbar>
 </template>
 
-<style>
+<style lang="scss" scoped>
+  .navbar-item {
+    font-weight: bold;
+    font-size: 125%;
+  }
 </style>

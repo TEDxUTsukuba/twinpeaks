@@ -1,7 +1,7 @@
 <template>
-  <div class="column">
+  <div class="">
     <div class="nmp-light columns is-gapless is-multiline">
-      <div class="card-image column is-12-tablet is-5-desktop is-4-widescreen is-3-fullhd">
+      <div class="card-image column is-4-tablet is-4-desktop is-4-widescreen is-3-fullhd">
         <div class="image-box">
           <figure class="image is-1by1">
             <img class="nmp-card-image" :src="image_url" alt="Placeholder image">
@@ -9,10 +9,11 @@
         </div>
       </div>
       <div class="column">
-        <div class="card-content has-text-centered has-text-right-desktop">
-          <p class="title is-size-1 has-text-centered-mobile">{{ title }}</p>
-          <p class="subtitle">{{ subtitle }}</p>
-          <p class="has-text-left">
+        <div class="card-content has-text-centered has-text-right-tablet">
+          <h1 class="title is-1 ja has-text-centered-mobile" v-if="$i18n.locale == 'ja'">{{ title }}</h1>
+          <h1 class="title is-1 en has-text-centered-mobile" v-if="$i18n.locale == 'en'">{{ title }}</h1>
+          <h1 class="subtitle">{{ subtitle }}</h1>
+          <p class="has-text-left is-size-6" style="max-width: 960px; margin-left: auto;">
             {{ description }}
           </p>
           <!-- <div class="content has-text-centered">
@@ -58,14 +59,22 @@ export default {
 }
 </script>
 
-<style scoped>
-p.title {
+<style lang="scss" scoped>
+h1.title {
   font-weight: 300;
   font-family: sans-serif;
-  letter-spacing: 20px;
-  margin-right: -20px;
+  &.ja {
+    letter-spacing: 14px;
+    margin-right: -14px;
+    @media screen and (max-width: 1080px) {
+      letter-spacing: 0;
+      margin-right: 0;
+    }
+  }
 }
-p.subtitle {
+
+h1.subtitle {
   color: #E62B1E;
+  margin-bottom: 3vh;
 }
 </style>

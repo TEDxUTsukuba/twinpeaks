@@ -1,63 +1,62 @@
 <template>
   <section id="wrapper">
+    
     <section class="hero is-medium is-black">
       <div class="hero-body has-text-white has-text-left">
         <div class="container has-text-centered">
           <h1 class="title is-1">JIJIMUGE</h1>
-          <h1 class="subtitle is-3">TEDxUTsukuba 2020</h1>
+          <h1 class="subtitle is-4">TEDxUTsukuba 2020</h1>
         </div>
       </div>
     </section>
-    <section class="hero bg-light">
-      <div class="hero-body">
-        <section class="section">
+    <section class="" style="padding: 2rem;">
           <div class="tile is-ancestor">
             <div class="tile is-2 is-parent">
-              <article class="tile is-child box">
+              <article class="tile is-child notification">
                 <figure class="image">
                   <img src="~/assets/2020/date.png">
                 </figure>
               </article>
             </div>
             <div class="tile is-2 is-parent">
-              <article class="tile is-child box">
+              <article class="tile is-child notification">
                 <figure class="image">
                   <img src="~/assets/2020/youtube.png">
                 </figure>
               </article>
             </div>
             <div class="tile is-4 is-parent">
-              <article class="tile is-child box">
+              <article class="tile is-child notification">
                 <figure class="image">
                   <img src="~/assets/2020/independent.png">
                 </figure>
               </article>
             </div>
             <div class="tile is-4 is-parent">
-              <article class="tile is-child box">
+              <article class="tile is-child notification" style="margin: 0; padding: 0;">
                 <figure class="image">
                   <img src="~/assets/2020/environment.png">
                 </figure>
               </article>
             </div>
           </div>
-
+        
           <div class="tile is-ancestor">
             <div class="tile is-vertical is-9">
               <div class="tile">
                 <div class="tile is-parent is-vertical">
-                  <article class="tile is-child box">
+                  <article class="tile is-child notification">
                     <p class="title">Vertical tiles</p>
-                    <p class="subtitle">Top box</p>
+                    <p class="subtitle">Top notification</p>
                   </article>
-                  <article class="tile is-child box">
+                  <article class="tile is-child notification">
                     <p class="title">Vertical tiles</p>
-                    <p class="subtitle">Bottom box</p>
+                    <p class="subtitle">Bottom notification</p>
                   </article>
                 </div>
                 <div class="tile is-parent">
-                  <article class="tile is-child box">
-                    <p class="title">Middle box</p>
+                  <article class="tile is-child notification">
+                    <p class="title">Middle notification</p>
                     <p class="subtitle">With an image</p>
                     <figure class="image">
                       <img src="~/assets/wallpapers/jijimuge.jpg">
@@ -66,7 +65,7 @@
                 </div>
               </div>
               <div class="tile is-parent">
-                <article class="tile is-child box">
+                <article class="tile is-child notification">
                   <p class="title">Wide column</p>
                   <p class="subtitle">Aligned with the right column</p>
                   <div class="content">
@@ -76,7 +75,7 @@
               </div>
             </div>
             <div class="tile is-parent">
-              <article class="tile is-child box">
+              <article class="tile is-child notification">
                 <div class="content">
                   <p class="title">Tall column</p>
                   <p class="subtitle">With even more content</p>
@@ -91,7 +90,7 @@
 
           <div class="tile is-ancestor">
             <div class="tile is-parent">
-              <article class="tile is-child box">
+              <article class="tile is-child notification">
                 <p class="title">Side column</p>
                 <p class="subtitle">With some content</p>
                 <div class="content">
@@ -100,7 +99,7 @@
               </article>
             </div>
             <div class="tile is-parent is-8">
-              <article class="tile is-child box">
+              <article class="tile is-child notification">
                 <p class="title">Main column</p>
                 <p class="subtitle">With some content</p>
                 <div class="content">
@@ -109,8 +108,6 @@
               </article>
             </div>
           </div>
-        </section>
-      </div>
     </section>
     <section class="section">
       <h1 class="title is-0">
@@ -255,3 +252,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .notification {
+    background-color: white;
+  }
+</style>
