@@ -1,10 +1,10 @@
 <template>
-  <section id="wrapper" class="font-awesome">
-    <section class="hero is-medium is-black">
+  <section id="wrapper-dark" class="font-awesome">
+    <section class="hero is-medium is-black bg-cophilaction">
       <div class="hero-body has-text-white has-text-left">
         <div class="container has-text-centered">
           <h1 class="title is-1">CoPhilAction</h1>
-          <h1 class="subtitle is-3">TEDxUTsukuba 2019</h1>
+          <h1 class="subtitle is-4">TEDxUTsukuba 2019</h1>
         </div>
       </div>
     </section>

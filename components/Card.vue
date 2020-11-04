@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <div class="nmp-light columns is-gapless is-multiline">
+    <div class="nmp-dark columns is-gapless is-multiline">
       <div class="card-image column is-4-tablet is-4-desktop is-4-widescreen is-3-fullhd">
         <div class="image-box">
           <figure class="image is-1by1">
@@ -12,10 +12,16 @@
         <div class="card-content has-text-centered has-text-right-tablet">
           <h1 class="title is-1 ja has-text-centered-mobile" v-if="$i18n.locale == 'ja'">{{ title }}</h1>
           <h1 class="title is-1 en has-text-centered-mobile" v-if="$i18n.locale == 'en'">{{ title }}</h1>
-          <h1 class="subtitle">{{ subtitle }}</h1>
-          <p class="has-text-left is-size-6" style="max-width: 960px; margin-left: auto;">
+          <h1 class="subtitle is-size-4">{{ subtitle }}</h1>
+          <p class="has-text-left is-size-6" style="max-width: 850px; margin-left: auto;">
             {{ description }}
           </p>
+          <div class="detail">
+            <a :href="getShareUrl(title)" class="is-size-4 tw icon" target="_blank"><font-awesome-icon :icon="['fab', 'twitter']" /></a>
+            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.tedxutsukuba.com%2F&amp;src=sdkpreparse" class="is-size-4 fb fb-xfbml-parse-ignore"><font-awesome-icon :icon="['fab', 'facebook-square']" /></a>
+
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
           <!-- <div class="content has-text-centered">
             <b-icon
               :icon="icon"
@@ -38,6 +44,11 @@
 
 <script>
 export default {
+  methods: {
+    getShareUrl(value) {
+      return `http://twitter.com/share?url=https://tedxutsukuba.com&related=tedxutsukuba&hashtags=jijimuge,${value}`
+    }
+  },
   props: {
     title: {
       type: String,

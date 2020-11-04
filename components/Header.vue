@@ -1,5 +1,5 @@
 <template>
-  <b-navbar class="is-fixed-top is-black" style="">
+  <b-navbar class="is-fixed-top is-spaced is-black">
     <template slot="brand">
       <b-navbar-item tag="router-link" :to="{ path: '/' }">
         <img
@@ -12,10 +12,10 @@
     <template slot="end">
       <b-navbar-dropdown label="Events" class="is-hoverable">
         <b-navbar-item tag="router-link" :to="{ path: '/events/2020' }">
-          2020
+          2020 JIJIMUGE
         </b-navbar-item>
         <b-navbar-item tag="router-link" :to="{ path: '/events/2019' }">
-          2019
+          2019 CoPhilAction
         </b-navbar-item>
       </b-navbar-dropdown>
       <b-navbar-item href="/talks">
@@ -29,8 +29,8 @@
       </b-navbar-item>
       <b-navbar-item tag="div">
         <div class="buttons">
-          <nuxt-link class="button is-info has-text-white" v-if="$i18n.locale !== 'en'" :to="switchLocalePath('en')">English</nuxt-link>
-          <nuxt-link class="button is-danger has-text-white" v-if="$i18n.locale !== 'ja'" :to="switchLocalePath('ja')">日本語</nuxt-link>
+          <nuxt-link class="button is-info" v-if="$i18n.locale !== 'en'" :to="switchLocalePath('en')">English</nuxt-link>
+          <nuxt-link class="button is-danger" v-if="$i18n.locale !== 'ja'" :to="switchLocalePath('ja')">日本語</nuxt-link>
         </div>
       </b-navbar-item>
       <!-- <b-navbar-item tag="div">
@@ -48,7 +48,7 @@
 </template>
 
 <style lang="scss" scoped>
-  .navbar-item {
+  .navbar-item, .navbar-link {
     font-weight: bold;
     font-size: 125%;
   }

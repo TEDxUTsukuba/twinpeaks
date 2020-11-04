@@ -13,7 +13,7 @@
           </div>
           <div class="column is-8-desktop is-7-tablet has-text-right has-text-centered-mobile">
             <h1 class="title is-3 is-size-5-mobile">Spread Globally, Connect Locally.</h1>
-            <span class="is-size-7-mobile">
+            <span class="is-size-7-mobile has-text-grey-light">
               <p>茨城県つくば市天王台1-1-1</p>
               <p>1-1-1 Tennodai, Tsukuba, Ibaraki, Japan</p>
               <p>&copy; TEDxUTsukuba 2020</p>
@@ -21,18 +21,18 @@
           </div>
         </div>
         <div class="columns is-centered">
-          <div class="column is-8-desktop is-8-tablet has-text-left has-text-centered-mobile">
+          <div class="url column is-8-desktop is-8-tablet has-text-left has-text-centered-mobile">
             <a href="">Media Relations</a>
             <a href="">Privacy Policy</a>
             <a href="">Code of Conduct</a>
             <a href="">About TEDx program <font-awesome-icon :icon="['fas', 'external-link-alt']" /></a>
           </div>
-          <div class="column is-4-desktop is-5-tablet has-text-right has-text-centered-mobile">
-            <font-awesome-icon class="sns-icon" :icon="['fab', 'facebook-square']" />
-            <font-awesome-icon class="sns-icon" :icon="['fab', 'instagram']" />
-            <font-awesome-icon class="sns-icon" :icon="['fab', 'twitter']" />
-            <font-awesome-icon class="sns-icon" :icon="['fab', 'flickr']" />
-            <font-awesome-icon class="sns-icon" :icon="['fas', 'sticky-note']" />
+          <div class="sns column is-4-desktop is-5-tablet has-text-right has-text-centered-mobile">
+            <a href="https://www.facebook.com/tedxtsukuba"><font-awesome-icon class="sns-icon" :icon="['fab', 'facebook-square']" /></a>
+            <a href="https://www.instagram.com/tedxutsukuba"><font-awesome-icon class="sns-icon" :icon="['fab', 'instagram']" /></a>
+            <a href="https://www.twitter.com/tedxutsukuba"><font-awesome-icon class="sns-icon" :icon="['fab', 'twitter']" /></a>
+            <a href="https://www.flic.kr/ps/3eCWpZ"><font-awesome-icon class="sns-icon" :icon="['fab', 'flickr']" /></a>
+            <a href="https://www.note.com/tedxutsukuba"><font-awesome-icon class="sns-icon" :icon="['fas', 'sticky-note']" /></a>
           </div>
         </div>
       </section>
@@ -45,9 +45,11 @@
     font-size: 24px;
     margin: 5px;
   }
-  a {
-    color: #bec1c3;
-    margin-right: 15px;
+  .url {
+    a {
+      color: #bec1c3;
+      margin-right: 15px;
+    }
   }
   a:visited {
     color: #bec1c3;

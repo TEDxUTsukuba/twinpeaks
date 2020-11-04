@@ -1,7 +1,7 @@
 <template>
-  <section id="wrapper">
+  <section id="wrapper-dark">
     
-    <section class="hero is-medium is-black">
+    <section class="hero is-medium is-dark bg-jijimuge">
       <div class="hero-body has-text-white has-text-left">
         <div class="container has-text-centered">
           <h1 class="title is-1">JIJIMUGE</h1>
@@ -9,7 +9,7 @@
         </div>
       </div>
     </section>
-    <section class="" style="padding: 2rem;">
+    <section class="section">
           <div class="tile is-ancestor">
             <div class="tile is-2 is-parent">
               <article class="tile is-child notification">
@@ -55,11 +55,9 @@
                   </article>
                 </div>
                 <div class="tile is-parent">
-                  <article class="tile is-child notification">
-                    <p class="title">Middle notification</p>
-                    <p class="subtitle">With an image</p>
+                  <article class="tile is-child notification" style="margin: 0; padding: 0;">
                     <figure class="image">
-                      <img src="~/assets/wallpapers/jijimuge.jpg">
+                      <img src="~/assets/wallpapers/jijimuge.png">
                     </figure>
                   </article>
                 </div>
@@ -80,8 +78,6 @@
                   <p class="title">Tall column</p>
                   <p class="subtitle">With even more content</p>
                   <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut quam.</p>
-                    <p>Suspendisse varius ligula in molestie lacinia. Maecenas varius eget ligula a sagittis. Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin felis neque sit amet erat. Maecenas imperdiet felis nisi, fringilla luctus felis hendrerit sit amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget varius ligula, at volutpat tortor.</p>
                   </div>
                 </div>
               </article>
@@ -102,12 +98,16 @@
               <article class="tile is-child notification">
                 <p class="title">Main column</p>
                 <p class="subtitle">With some content</p>
+                <p class="subtitle">With some content</p>
                 <div class="content">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
                 </div>
               </article>
             </div>
           </div>
+      <div class="section has-text-centered">
+        <button class="button is-gradient is-rounded is-large">{{ $t('2020.participance.applynowbutton') }}</button>
+      </div>
     </section>
     <section class="section">
       <h1 class="title is-0">
@@ -142,45 +142,55 @@
       >
       </Card>
     </section>
-    <section class="section">
-      <h1 class="title is-0">
-        <span class="">{{ $t('2020.concept.title') }}</span>
-      </h1>
-      <h1 class="title is-1 has-text-centered">JIJIMUGE</h1>
-      <article class="has-text-centered">
-        {{ $t('2020.concept.statement') }}
-      </article>
-    <!-- <div class="columns is-multiline">
-      <div class="column is-5-desktop is-12-tablet">
-        <figure class="image is-3by2">
-          <img class="nmp-card-image" src="~/assets/banner/2019.jpg" alt="Placeholder image">
-        </figure>
-      </div>
-      <div class="column is-7-desktop is-12-tablet">
-        <section class="nmp-card-light">
+    <section class="hero has-text-centered">
+      <section class="section">
+        <h1 class="title is-0">
+          <span class="">{{ $t('2020.concept.title') }}</span>
+        </h1>
+      </section>
           <b-carousel
-            :arrow="arrow"
-            :repeat="arrowBoth"
-            :arrow-hover="arrowHover"
-            :animated="animated"
-            :interval="interval"
-            :icon-pack="iconPack"
-            :icon-prev="iconPrev"
-            :icon-next="iconNext"
-            :icon-size="iconSize">
+          :autoplay="true"
+          :arrow="arrow"
+          :repeat="arrowBoth"
+          :arrow-hover="arrowHover"
+          :interval="interval"
+          :icon-pack="iconPack"
+          :icon-prev="iconPrev"
+          :icon-next="iconNext"
+          :icon-size="iconSize"
+          >
             <b-carousel-item v-for="(carousel, i) in carousels" :key="i">
-              <div class="hero is-medium" style="display: flex; justify-content: center; align-items: center;">
-                <div class="has-text-centered" style="width: 100%; height: 20vh; ">
-                  <h1 class="title is-2">{{carousel.title}}</h1>
-                  <p class="has-text-dark">{{carousel.description}}</p>
+              <section :class="`hero is-large is-${carousel.color}`" style="">
+                <div class="hero-body has-text-centered">
+                  <div class="container">
+                    <h1 class="title is-1 has-text-centered has-text-white">{{carousel.maintitle}}</h1>
+                    <h1 class="title">{{carousel.title}}</h1>
+                    <p class="description">{{carousel.description}}</p>
+                  </div>
                 </div>
-              </div>
+              </section>
             </b-carousel-item>
           </b-carousel>
-        </section>
-      </div>
-      </div> -->
+        </div>
     </section>
+    <section class="section has-text-centered">
+
+      <b-collapse :open="false" position="is-bottom" aria-id="contentIdForA11y1">
+        <a class="button is-medium is-gradient is-rounded" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1" style="margin: 3rem auto;">
+            <b-icon :icon="!props.open ? 'menu-down' : 'menu-up'"></b-icon>
+            {{ !props.open ? 'Read statement' : 'Close' }}
+        </a>
+        <br><br>
+        <div class="column has-text-left">
+          <article>
+            {{ $t('2020.concept.statement1') }}<br>
+            {{ $t('2020.concept.statement2') }}<br>
+            {{ $t('2020.concept.statement3') }}
+          </article>
+        </div>
+      </b-collapse>
+    </section>
+
     <section class="hero bg-red">
       <div class="hero-body">
         <section class="section">
@@ -224,28 +234,29 @@ export default {
       src_sp2: Image_sp2,
       src_sp3: Image_sp3,
       src_sp4: Image_sp4,
-      animated: 'fade',
-      interval: '5000',
+      animated: 'true',
+      interval: '8000',
       iconSize: 'is-large',
       carousels: [
         { 
-          title: 'JIJIMUGEとは？',
-          description: '',
+          maintitle: 'JIJIMUGE',
+          color: 'black' 
         },
         { 
-          title: '本来は仏教用語', 
-          description: '華厳経の「事事無碍法界」という単語から取り出した言葉。真理にたどり着くための、世界の見方について説いた教え。',
-          color: 'success' 
+          title: 'Slide 2', 
+          title: '今、世の中にある様々な境界線が溶けつつあります。',
+          description: 'グローバル化の進展により、ヒト・モノ・情報は自由に行き来し、国境は溶け始めています。',
+          color: 'black'
         },
         { 
           title: 'Slide 3', 
           description: '',
-          color: 'warning' 
+          color: 'black' 
         },
         { 
           title: 'Slide 4', 
           description: '',
-          color: 'danger' 
+          color: 'black' 
         }
       ]
     }

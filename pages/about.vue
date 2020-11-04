@@ -1,11 +1,13 @@
 <template>
-  <section id="wrapper">
-    <section class="section">
-    <h1 class="title is-0">
-      {{ $t('about.section1.title')}}
-    </h1>
+  <section id="wrapper-dark">
+    <section class="hero is-fullheight is-black">
+      <div class="hero-body">
+        <h1 class="title is-0">
+          {{ $t('about.section1.title')}}
+        </h1>
+      </div>
     <article>
-      aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      
     </article>
     </section>
   </section>

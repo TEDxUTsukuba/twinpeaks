@@ -1,22 +1,29 @@
 <template>
-  <section id="wrapper">
+  <section id="wrapper-dark">
+    <section class="hero is-medium is-black">
+      <div class="hero-body has-text-white has-text-left">
+        <div class="container has-text-centered">
+          <h1 class="title is-1">Talks</h1>
+        </div>
+      </div>
+    </section>
     <section class="section">
       <div class="columns is-multiline">
         <div
           id="thumbnails"
-          class="column is-one-third-desktop is-half-tablet"
+          class="column is-one-third-fullhd is-half-widescreen is-half-desktop is-half-tablet"
           v-for="(talk, index) in talkList" :key="index"
           style="display: inline-block; vertical-align: top;"
         >
-          <div class="nmp-light">
+          <div class="nmp-dark">
             <header class="card-header">
               <p class="card-header-title">
-                <span class="tag is-white">
+                <!-- <span class="tag is-white">
                   {{ talk.category_1 }}
                 </span>
                 <span class="tag is-white">
                   {{ talk.category_2 }}
-                </span>
+                </span> -->
               </p>
             </header>
             <div class="card-image">
@@ -34,15 +41,20 @@
               <h1 class="subtitle is-4">
                 {{ talk.speaker_name }}
               </h1>
-              <b-collapse :open="false" position="is-bottom" aria-id="contentIdForA11y1">
-                <span slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1">
-                  <b-icon :icon="!props.open ? 'menu-down' : 'menu-up'"></b-icon>
-                    {{ !props.open ? 'Read more' : 'Read less' }}
-                </span>
-                <p class="is-size-7">
-                  {{ talk.description_ja }}
-                </p>
-              </b-collapse>
+              <span class="has-text-right">
+                <b-collapse :open="false" position="is-bottom" aria-id="contentIdForA11y1">
+                  <a class="button is-gradient is-rounded is-outlined" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1">
+                    <b-icon :icon="!props.open ? 'menu-down' : 'menu-up'"></b-icon>
+                      {{ !props.open ? 'Read more' : 'Read less' }}
+                  </a>
+                  <p class="is-size-7 has-text-left">
+                    {{ talk.description_ja }}<br>
+                    <!-- <a class="has-text-white is-size-4 fb" href="https://www.instagram.com/tedxutsukuba/">
+                      <font-awesome-icon :icon="['fab', 'facebook-square']" />
+                    </a> -->
+                  </p>
+                </b-collapse>
+              </span>
             </div>
           </div>
         </div>
@@ -110,3 +122,4 @@ export default {
   }
 }
 </script> -->
+
