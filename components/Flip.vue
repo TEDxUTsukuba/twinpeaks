@@ -1,5 +1,5 @@
 <template>
-  <div class="nmp-card-light">
+  <div class="nmp-card-dark">
       <h1 class="title is-3">{{ title }}</h1>
       <p class="subtitle is-size-6">{{ description }}</p>
       <article>{{ detail }}</article>
