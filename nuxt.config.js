@@ -44,7 +44,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://teraoka.netlify.app/_nuxt/img/bba6327.png'
+        content: 'https://teraoka.netlify.app/_nuxt/img/eaae22f.png'
       },
       { 
         hid: 'og:site_name', 

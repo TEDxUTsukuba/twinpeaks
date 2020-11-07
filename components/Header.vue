@@ -19,7 +19,7 @@
         </b-navbar-item>
       </b-navbar-dropdown> -->
       <b-navbar-item href="/events/2020">
-        TEDxUTSukuba 2020
+        TEDxUTsukuba 2020
       </b-navbar-item>
       <b-navbar-item href="/talks">
         Talks

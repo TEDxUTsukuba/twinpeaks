@@ -1,0 +1,118 @@
+{
+  "partners2020": {
+    "1": {
+      "id": 1,
+      "name": "筑波ハム",
+      "caregory": "食品提供",
+      "url": "https://www.tsukubaham.co.jp/"
+    },
+    "2": {
+      "id": 2,
+      "name": "秋庭農園",
+      "category": "食品提供",
+      "url": "https://www.akiba-noen.com/"
+    },
+    "3": {
+      "id": 3,
+      "name": "ヨシムラミート",
+      "category": "食品提供",
+      "url": "http://www.yoshimura-meat.com"
+    },
+    "4": {
+      "id": 4,
+      "name": "マンマカフェ",
+      "category": "食品提供",
+      "url": "https://f-s-m.ocnk.net"
+    },
+    "5": {
+      "id": 5,
+      "name": "ジミーファーム",
+      "category": "食品提供",
+      "url": "http://www.jimmyfarm-tukuba.net"
+    },
+    "6": {
+      "id": 6,
+      "name": "T-PIRC",
+      "category": "食品提供",
+      "url": "https://www.t-pirc.tsukuba.ac.jp/"
+    },
+    "7": {
+      "id": 7,
+      "name": "青木酒造",
+      "category": "商品",
+      "url": "https://aokishuzou.co.jp/"
+    },
+    "8": {
+      "id": 8,
+      "name": "フィンラガン",
+      "category": "食品提供",
+      "url": "https://www.facebook.com/barefootender/"
+    },
+    "9": {
+      "id": 9,
+      "name": "茶の木村園",
+      "category": "食品提供",
+      "url": "https://www.kimuraen.gr.jp/"
+    },
+    "10": {
+      "id": 10,
+      "name": "つくば科学株式会社",
+      "category": "金銭協賛",
+      "url": "http://www.tsukuba-kagaku.co.jp"
+    },
+    "11": {
+      "id": 11,
+      "name": "On or About",
+      "category": "ume",
+      "url": "http://onorabout.com"
+    },
+    "12": {
+      "id": 12,
+      "name": "Apple Pie Order",
+      "category": "take",
+      "url": "http://onorabout.com"
+    },
+    "13": {
+      "id": 13,
+      "name": "Ambii",
+      "category": "take",
+      "url": "https://www.ambii.com"
+    },
+    "14": {
+      "id": 14,
+      "name": "Onikle",
+      "category": "take",
+      "url": "https://onikle.com/company/aboutus_jp"
+    },
+    "15": {
+      "id": 15,
+      "name": "Airmeet",
+      "category": "技術提供",
+      "url": "http://www.airmeet.com/"
+    },
+    "16": {
+      "id": 16,
+      "name": "TWENTY",
+      "category": "技術提供",
+      "url": "http://twentyinc.co.jp/"
+    },
+    "17": {
+      "id": 17,
+      "name": "Comment Screen",
+      "category": "技術提供",
+      "url": "https://commentscreen.com"
+    },
+    "18": {
+      "id": 18,
+      "name": "朝日印刷",
+      "category": "技術提供",
+      "url": "http://www.ap-inc.co.jp/"
+    },
+    "19": {
+      "id": 19,
+      "name": "up Tsukuba",
+      "category": "venue",
+      "url": "https://up-tsukuba.com"
+    }
+  }
+}

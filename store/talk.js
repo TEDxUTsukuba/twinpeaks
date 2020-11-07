@@ -9,6 +9,6 @@ export const getters = {
     return Object.values(state.talkList).filter(a => a.year === year)
   },
   showAllTalks: state => (year) => {
-    return Object.values(state.talkList)
+    return Object.values(state.talkList).reverse()
   }
 }

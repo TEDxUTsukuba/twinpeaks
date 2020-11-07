@@ -16,10 +16,10 @@
           <p class="has-text-left is-size-6" style="max-width: 850px; margin-left: auto;">
             {{ description }}
           </p>
-          <div class="detail">
+          <div class="section" style="">
+            <span>Share this speaker</span><br>
             <a :href="getShareUrl(title)" class="is-size-4 tw icon" target="_blank"><font-awesome-icon :icon="['fab', 'twitter']" /></a>
-            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.tedxutsukuba.com%2F&amp;src=sdkpreparse" class="is-size-4 fb fb-xfbml-parse-ignore"><font-awesome-icon :icon="['fab', 'facebook-square']" /></a>
-
+            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.tedxutsukuba.com%2F&amp;src=sdkpreparse" class="is-size-4 fb fb-xfbml-parse-ignore"><font-awesome-icon :icon="['fab', 'facebook-f']" /></a>
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           </div>
           <!-- <div class="content has-text-centered">

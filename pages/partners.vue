@@ -28,15 +28,19 @@
           </template>
         </b-carousel>
       </div>
-      <section class="section">
-        <div class="columns is-multiline is-mobile is-variable is-7-tablet">
-          <div class="column is-3-desktop is-4-tablet is-6-mobile" v-for="partner in partners" :key="partner.title">
+      <section class="section has-text-centered">
+        <div class="columns is-multiline is-mobile is-variable is-8-tablet">
+          <div class="column is-2-fullhd is-3-desktop is-4-tablet is-6-mobile" v-for="(partner, index) in partnerList" :key="index">
             <figure class="image is-1by1">
-              <img :src="partner.src">
+              <img :src="getJsonImgUrl(partner.id)">
             </figure>
-            <h1 class="is-size-5 has-text-centered">
-              {{ partner.title }} 様
-            </h1>
+            <div class="card-content">
+              <h1 class="is-size-5 has-text-centered">
+                {{ partner.name }} 様
+              </h1>
+              <p><span class="tag">{{ partner.category }}</span></p>
+              <a :href="partner.url" class="button is-white is-rounded is-outlined">Website</a>
+            </div>
           </div>
         </div>
       </section>
@@ -80,6 +84,10 @@ export default {
       // return `https://picsum.photos/id/10${value}/1230/500`
       return this.images[value]
     },
+    getJsonImgUrl(value) {
+      // return require(`~/assets/partners/2020/carousel_${value}.jpg`)
+      return require("~/assets/480x480.png")
+    },
     switchGallery(value) {
       this.gallery = value
       if (value) {
@@ -88,6 +96,15 @@ export default {
           return document.documentElement.classList.remove('is-clipped')
       }
     }
+  },
+  computed: {
+    partnerList() {
+      return this.$store.getters[
+        'partner/showAllPartners'
+      ](this.year)
+    }
   }
+}
+</script>
 }
 </script>å
