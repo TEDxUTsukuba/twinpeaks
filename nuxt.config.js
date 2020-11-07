@@ -10,9 +10,9 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
-      { hid: 'twitter:card', name: 'twitter:card', content: summary_large_image },
-      { hid: 'twitter:site', name: 'twitter:site', content: tedxutsukuba },
+      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
+      { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
+      { hid: 'twitter:site', name: 'twitter:site', content: 'tedxutsukuba' },
       {
         hid: 'og:title',
           property: 'og:title',
