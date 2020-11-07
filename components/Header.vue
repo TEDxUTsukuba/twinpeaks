@@ -10,14 +10,17 @@
       </b-navbar-item>
     </template>
     <template slot="end">
-      <b-navbar-dropdown label="Events" class="is-hoverable">
+      <!-- <b-navbar-dropdown label="Events" class="is-hoverable">
         <b-navbar-item tag="router-link" :to="{ path: '/events/2020' }">
           2020 JIJIMUGE
         </b-navbar-item>
         <b-navbar-item tag="router-link" :to="{ path: '/events/2019' }">
           2019 CoPhilAction
         </b-navbar-item>
-      </b-navbar-dropdown>
+      </b-navbar-dropdown> -->
+      <b-navbar-item href="/events/2020">
+        TEDxUTSukuba 2020
+      </b-navbar-item>
       <b-navbar-item href="/talks">
         Talks
       </b-navbar-item>

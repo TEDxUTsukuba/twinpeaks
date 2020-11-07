@@ -1,5 +1,5 @@
 <template>
-  <section id="wrapper-dark">
+  <section id="wrapper-dark" class="font-awesome">
     
     <section class="hero is-medium is-dark bg-jijimuge">
       <div class="hero-body has-text-white has-text-left">
@@ -106,7 +106,7 @@
             </div>
           </div>
       <div class="section has-text-centered">
-        <button class="button is-gradient is-rounded is-large">{{ $t('2020.participance.applynowbutton') }}</button>
+        <a href="https://tiget.net/events/109783" class="button is-gradient is-rounded is-large">{{ $t('2020.participance.applynowbutton') }}</a>
       </div>
     </section>
     <section class="section">
@@ -147,34 +147,30 @@
         <h1 class="title is-0">
           <span class="">{{ $t('2020.concept.title') }}</span>
         </h1>
-      </section>
-          <b-carousel
-          :autoplay="true"
-          :arrow="arrow"
-          :repeat="arrowBoth"
-          :arrow-hover="arrowHover"
-          :interval="interval"
-          :icon-pack="iconPack"
-          :icon-prev="iconPrev"
-          :icon-next="iconNext"
-          :icon-size="iconSize"
-          >
-            <b-carousel-item v-for="(carousel, i) in carousels" :key="i">
-              <section :class="`hero is-large is-${carousel.color}`" style="">
-                <div class="hero-body has-text-centered">
-                  <div class="container">
-                    <h1 class="title is-1 has-text-centered has-text-white">{{carousel.maintitle}}</h1>
-                    <h1 class="title">{{carousel.title}}</h1>
-                    <p class="description">{{carousel.description}}</p>
-                  </div>
-                </div>
-              </section>
-            </b-carousel-item>
-          </b-carousel>
-        </div>
-    </section>
-    <section class="section has-text-centered">
 
+        <b-carousel
+        :autoplay="true"
+        :arrow="arrow"
+        :repeat="arrowBoth"
+        :arrow-hover="arrowHover"
+        :interval="interval"
+        :icon-pack="iconPack"
+        :icon-prev="iconPrev"
+        :icon-next="iconNext"
+        :icon-size="iconSize"
+        :pause-info-type="pauseInfoType"
+        @click="switchGallery(true)">
+        <b-carousel-item v-for="(item, i) in 4" :key="i">
+          <a class="image ">
+            <img :src="getImgUrl(i)">
+          </a>
+        </b-carousel-item>
+        <span v-if="gallery" @click="switchGallery(false)" class="modal-close is-large"/>
+      </b-carousel>
+      </section>
+    </section>
+
+    <!-- <section class="section has-text-centered">
       <b-collapse :open="false" position="is-bottom" aria-id="contentIdForA11y1">
         <a class="button is-medium is-gradient is-rounded" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1" style="margin: 3rem auto;">
             <b-icon :icon="!props.open ? 'menu-down' : 'menu-up'"></b-icon>
@@ -189,7 +185,7 @@
           </article>
         </div>
       </b-collapse>
-    </section>
+    </section> -->
 
     <section class="hero bg-red">
       <div class="hero-body">
@@ -200,14 +196,26 @@
           <div class="columns">
             <div class="column is-5">
               <div class="nmp-card-red">
-                <h1 class="title is-2 has-text-white">トーク</h1>
-                <p>YouTube Live にて公開いたします。参加は無料です。</p>
+                <p><font-awesome-icon :icon="['far', 'clock']" style="color: white;" /> {{ $t('2020.participance.free.time') }}</p>
+                <h1 class="title is-2 has-text-white">{{ $t('2020.participance.free.title') }}</h1>
+                <p>{{ $t('2020.participance.free.intro') }}</p>
+                <ul>
+                  <li><font-awesome-icon :icon="['fas', 'check-square']" style="color: white;" /> {{ $t('2020.participance.free.reservation') }}</li>
+                </ul>
+                <br>
+                <a class="button is-white is-outlined is-rounded" href="https://www.youtube.com/watch?v=ujhrcXJCBUw&feature=youtu.be">{{ $t('2020.participance.free.youtube') }}</a>
               </div>
             </div>
             <div class="column is-7">
               <div class="nmp-card-red">
-                <h1 class="title is-2 has-text-white">交流会</h1>
-                <p>スピーカーさんと直接お話しできる交流会を企画しています。先着n名限定です。</p>
+                <p><font-awesome-icon :icon="['far', 'clock']" style="color: white;" /> {{ $t('2020.participance.premium.time') }}</p>
+                <h1 class="title is-2 has-text-white">{{ $t('2020.participance.premium.title') }}</h1>
+                <p>{{ $t('2020.participance.premium.intro') }}</p>
+                <ul>
+                  <li><font-awesome-icon :icon="['fas', 'check-square']" style="color: white;" /> {{ $t('2020.participance.premium.reservation') }}</li>
+                </ul>
+                <br>
+                <a class="button is-large is-white is-outlined is-rounded" href="https://tiget.net/events/109783">{{ $t('2020.participance.premium.tiget') }}</a>
               </div>
             </div>
           </div>
@@ -235,8 +243,15 @@ export default {
       src_sp3: Image_sp3,
       src_sp4: Image_sp4,
       animated: 'true',
-      interval: '8000',
+      interval: '5000',
       iconSize: 'is-large',
+      pauseInfoType: 'is-dark',
+      images: [
+        require('~/assets/2020/concept/statement_1.png'),
+        require('~/assets/2020/concept/statement_2.png'),
+        require('~/assets/2020/concept/statement_3.png'),
+        require('~/assets/2020/concept/statement_4.png')
+      ],
       carousels: [
         { 
           maintitle: 'JIJIMUGE',
@@ -260,6 +275,19 @@ export default {
         }
       ]
     }
+  },
+  methods: {
+    getImgUrl(value) {
+      return this.images[value]
+    },
+    switchGallery(value) {
+      this.gallery = value
+      if (value) {
+          return document.documentElement.classList.add('is-clipped')
+      } else {
+          return document.documentElement.classList.remove('is-clipped')
+      }
+    }
   }
 }
 </script>
@@ -267,5 +295,11 @@ export default {
 <style scoped>
   .notification {
     background-color: white;
+  }
+  .is-active .al img {
+    filter: grayscale(0%);
+  }
+  .al img {
+      filter: grayscale(100%);
   }
 </style>

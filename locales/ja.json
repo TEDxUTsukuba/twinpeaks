@@ -107,9 +107,23 @@
       "statement3": "今、世の中にある様々な境界線が溶けつつあります。"
     },
     "participance": {
-      "applynowbutton": "今すぐ申し込む",
+      "applynowbutton": "今すぐ有料セッションに申し込む",
       "title": "参加方法",
-      "description": ""
+      "description": "",
+      "free": {
+        "title": "無料セッション",
+        "time": "13:00 - 15:10",
+        "youtube": "YouTube Live",
+        "intro": "YouTube Live にてリアルタイムに配信します。参加は無料です。",
+        "reservation": "申し込みは不要です。"
+      },
+      "premium": {
+        "title": "有料セッション",
+        "time": "15:15 - 16:30",
+        "tiget": "今すぐ申し込む",
+        "intro": "TEDxUTsukuba の醍醐味は「つながり」を得られること。●スピーカーと直接対談できるセッション ●ご協賛企業による豪華な食事の提供 ●他の参加者の方との交流 の場をご用意しています。",
+        "reservation": "人数に限りがございますので、お早めにお申し込みください。"
+      }
     },
     "about": {
       "title": "開催概要"

@@ -10,9 +10,10 @@
       <div class="container">
         <b-carousel 
           :autoplay="false" indicator-custom 
-          :indicator-inside="false" 
+          :indicator-inside="true" 
           :overlay="gallery" 
           :icon-size="iconSize"
+          :pause-info-type="pauseInfoType"
           @click="switchGallery(true)">
           <b-carousel-item v-for="(item, i) in 5" :key="i">
             <a class="image ">
@@ -49,6 +50,7 @@ export default {
     return {
       iconSize: 'is-large',
       gallery: false,
+      pauseInfoType: 'is-dark',
       images: [
         require('~/assets/partners/2020/carousel_0.jpg'),
         require('~/assets/partners/2020/carousel_1.jpg'),

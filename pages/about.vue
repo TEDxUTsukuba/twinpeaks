@@ -7,7 +7,7 @@
         </h1>
       </div>
     <article>
-      
+      <img src="~/assets/banner/sns_banner.png">
     </article>
     </section>
   </section>

@@ -107,9 +107,23 @@
       "statement3": "今、世の中にある様々な境界線が溶けつつあります。"
     },
     "participance": {
-      "applynowbutton": "Apply Now",
+      "applynowbutton": "Apply for the interaction session",
       "title": "How to join",
-      "description": ""
+      "description": "",
+      "free": {
+        "title": "Talk Session",
+        "time": "13:00 - 15:10",
+        "youtube": "YouTube Live",
+        "intro": "Watch our livestream for free",
+        "reservation": "No reservation"
+      },
+      "premium": {
+        "title": "Interactive Session",
+        "time": "15:15 - 16:30",
+        "tiget": "Sign Up",
+        "intro": "Enjoy conversations with speakers, get foods of our partners!",
+        "reservation": "Sign up is required."
+      }
     },
     "about": {
       "title": "About"
