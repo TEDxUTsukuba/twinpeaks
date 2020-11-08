@@ -11,6 +11,7 @@
       <div style="background: black;">
           <div class="top-photoframe">
             <nuxt-link to="/events/2020"><img src = "~/assets/wallpapers/jijimuge.png" /></nuxt-link>
+            <Movie v-if="isEventDate" :vId='videoId1' :aPlay='autoplay'></Movie>
           </div>
           <section class="section has-text-centered">
             <h1 class="title is-1 is-spaced">
@@ -119,6 +120,7 @@
             :title = "$t('notice.left-top.title')"
             :description = "$t('notice.left-top.description')"
             :detail = "$t('notice.left-top.detail')"
+            :link = "$t('notice.left-top.link')"
             imageUrl = "/_nuxt/assets/speakers/2019/sp_2019_1.jpg"
            />
         </div>
@@ -127,6 +129,7 @@
             :title = "$t('notice.left-bottom.title')"
             :description = "$t('notice.left-bottom.description')"
             :detail = "$t('notice.left-bottom.detail')"
+            :link = "$t('notice.left-bottom.link')"
             imageUrl = ""
           />
         </div>
@@ -137,11 +140,13 @@
             :title = "$t('notice.right-top.title')"
             :description = "$t('notice.right-top.description')"
             :detail = "$t('notice.right-top.detail')"
+            :link = "$t('notice.right-top.link')"
             imageUrl = ""
           />
         </div>
         <div class="column is-5-desktop">
           <Flip
+            :link = "$t('notice.left-top.link')"
             :title = "$t('notice.right-bottom.title')"
             :description = "$t('notice.right-bottom.description')"
             :detail = "$t('notice.right-bottom.detail')"
@@ -158,14 +163,31 @@
 </template>
 
 <script>
-import Card from '~/components/Card'
-import Flip from '~/components/Flip'
+import Card from '~/components/Card';
+import Flip from '~/components/Flip';
+import Movie from '~/components/Movie';
 
 export default {
   name: 'HomePage',
 
   components: {
-    Card, Flip
+    Card, Flip, Movie
+  },
+  data() {
+    return {
+      videoId1: 'ujhrcXJCBUw',
+      todayDate: Date.now(),
+      eventDate: Date(2020, 11, 29, 0, 0, 0)
+    }
+  },
+  methods: {
+    compareDate () {
+      if (todayDate < eventDate) {
+        this.isEventDate = 'true'
+      } else {
+        this.isEventDate = 'false'
+      }
+    }
   }
 }
 </script>

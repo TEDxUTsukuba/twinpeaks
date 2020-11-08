@@ -247,10 +247,10 @@ export default {
       iconSize: 'is-large',
       pauseInfoType: 'is-dark',
       images: [
-        require('~/assets/2020/concept/statement_1.png'),
-        require('~/assets/2020/concept/statement_2.png'),
-        require('~/assets/2020/concept/statement_3.png'),
-        require('~/assets/2020/concept/statement_4.png')
+        require('~/assets/2020/concept/statement_1_small.png'),
+        require('~/assets/2020/concept/statement_2_small.png'),
+        require('~/assets/2020/concept/statement_3_small.png'),
+        require('~/assets/2020/concept/statement_4_small.png')
       ],
       carousels: [
         { 

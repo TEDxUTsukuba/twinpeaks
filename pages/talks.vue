@@ -27,12 +27,13 @@
               </p>
             </header>
             <div class="card-image">
-              <youtube
+              <Movie :vId='talk.youtube_id' :aPlay='autoplay'></Movie>
+              <!-- <youtube
                 :video-id="talk.youtube_id"
                 ref="youtube"
                 @playing="playing"
               >
-              </youtube>
+              </youtube> -->
             </div>
             <div class="card-content">
               <h1 class="title is-4">
@@ -83,11 +84,20 @@
 
 <script>
 import Vue from 'vue';
-import VueYoutube from 'vue-youtube';
+// import VueYoutube from 'vue-youtube';
+import Movie from '~/components/Movie';
 
-Vue.use(VueYoutube);
+// Vue.use(VueYoutube);
 
 export default {
+  components: {
+    Movie
+  },
+  data() {
+    return {
+      videoId1: 'Ot4n4txl4Ko'
+    }
+  },
   props: {
     year: {
       type: String,

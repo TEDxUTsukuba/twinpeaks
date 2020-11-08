@@ -4,6 +4,8 @@
       <p class="subtitle is-size-6">{{ description }}</p>
       <article>{{ detail }}</article>
       <br>
+      <a :href="link" class="button is-gradient is-rounded">{{ $t('notice.discover') }}</a>
+      
       <!-- <p class="image is-16by9">
         <img :src="imageUrl" alt="">
       </p> -->
@@ -13,7 +15,7 @@
 <script>
 export default {
   name: 'Flip',
-  props: ['title', 'description', 'detail', 'imageUrl'],
+  props: ['title', 'description', 'detail', 'link', 'imageUrl'],
 }
 </script>
 

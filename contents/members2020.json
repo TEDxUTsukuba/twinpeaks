@@ -1,0 +1,28 @@
+{
+  "members2020": {
+    "1": {
+      "jp": {
+        "name": "メレシオ コリン",
+        "position": "代表",
+        "description": ""
+      },
+      "en": {
+        "name": "Coleen Melecio",
+        "position": "代表",
+        "description": "Rebecca is the Creative Director for TEDxLondon and has led TEDxEastEnd’s creative vision for four years. With a background in architecture she now heads up the design team at Sculptivate, working on large scale installations and unique brand activations."
+      }
+    },
+    "2": {
+      "jp": {
+        "name": "青山翔龍",
+        "position": "蝶ネクタイでMCやる人",
+        "description": ""
+      },
+      "en": {
+        "name": "Shoryu Aoyama",
+        "position": "",
+        "description": "Philly"
+      }
+    }
+  }
+}
