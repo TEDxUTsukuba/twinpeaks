@@ -157,7 +157,7 @@ section#wrapper-dark {
   // background-color: $dark;
   height: 100%;
   background-attachment: fixed !important;
-  background-color: #000000;
+  background-color: hsl(0, 0%, 4%);
   // background-image: linear-gradient(to bottom, #111111 0%, #181818 74%);
   font-feature-settings: "palt";
   .notification {
@@ -214,6 +214,13 @@ section.section {
 }
 .bg-cophilaction {
   background-image: linear-gradient( 135deg, #81FFEF 10%, #F067B4 100%);
+}
+
+br.mobile-br {
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+  display: none;
 }
 
 .card {
@@ -420,7 +427,7 @@ section.section {
       margin: 0;
     }
     @media screen and (max-width: 768px) {
-      padding: 15vw;
+      padding: 5vh 15vw 0 15vw;
     }
     @media screen and (min-width: 769px) and (max-width: 1216px){
       padding: 5vh 30vw 0 30vw;

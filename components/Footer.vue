@@ -31,7 +31,7 @@
             <b-collapse :open="false" position="is-bottom" aria-id="contentIdForA11y1">
               <a class="button is-gradient is-medium is-rounded" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1" style="margin: 3rem auto;">
                   <b-icon :icon="!props.open ? 'menu-down' : 'menu-up'"></b-icon>
-                  {{ !props.open ? 'Read more' : 'Read less' }}
+                  {{ !props.open ? $t('button.readmore') : $t('button.readless') }}
               </a>
               <br><br>
               <div class="column has-text-left">
@@ -64,7 +64,7 @@
       <section class="section">
         <div class="columns is-centered">
           <div class="column is-4-desktop is-5-tablet">
-            <nuxt-link to="/">
+            <nuxt-link :to="localePath('/')">
               <figure class="image">
                 <img
                   src="~/assets/logo/u_black.svg"

@@ -24,6 +24,7 @@
     "nuxt-fontawesome": "^0.4.0",
     "nuxt-i18n": "^6.15.4",
     "nuxt-webfontloader": "^1.1.0",
+    "vue-instagram": "^3.0.0",
     "vue-youtube": "^1.4.0"
   },
   "devDependencies": {

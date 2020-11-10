@@ -28,8 +28,9 @@
     }
   },
   "event": {
-    "title": "Don't mask your curiosity.",
-    "title2": "Watch YouTube Live on November 29",
+    "title1": "Don't mask your curiosity.",
+    "title2": "",
+    "subtitle": "Join us for our annual event on November 29",
     "download": "Add to calendar"
   },
   "news": {
@@ -46,7 +47,7 @@
       "title": "TEDxUTsukuba 2020 JIJIMUGE",
       "description": "Our annual event is coming on November.",
       "detail": "We are thrilled to announce our annual event is taken places virtually. Talk session is free and open for the public. Stay tuned!",
-      "link": "~/events/2020"
+      "link": "https://tedxutsukuba.com/events/2020"
     },
     "right-top": {
       "title": "Our talk earned 10,000 views",

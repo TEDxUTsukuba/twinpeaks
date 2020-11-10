@@ -10,18 +10,18 @@
       
       <div style="background: black;">
           <div class="top-photoframe">
-            <nuxt-link to="/events/2020"><img src = "~/assets/wallpapers/jijimuge.jpg" /></nuxt-link>
+            <nuxt-link :to="localePath('/events/2020')"><img src = "~/assets/wallpapers/jijimuge.jpg" /></nuxt-link>
             <Movie v-if="isEventDate" :vId='videoId1' :aPlay='autoplay'></Movie>
           </div>
           <section class="section has-text-centered">
             <h1 class="title is-1 is-spaced">
-              <span class="has-text-weight-light has-text-white">{{ $t('event.title') }}</span>
+              <span class="has-text-weight-light has-text-white">{{ $t('event.title1') }}<br class="mobile-br">{{ $t('event.title2') }}</span>
             </h1>
             <h1 class="subtitle is-3">
-              <span class="has-text-weight-normal has-text-white">{{ $t('event.title2') }}</span>
+              <span class="has-text-weight-normal has-text-white">{{ $t('event.subtitle') }}</span>
             </h1>
             <br><br>
-            <nuxt-link to="/events/2020" class="button is-gradient is-rounded is-medium">{{ $t('button.discover') }}</nuxt-link>
+            <nuxt-link :to="localePath('/events/2020')" class="button is-gradient is-rounded is-medium">{{ $t('button.discover') }}</nuxt-link>
             <br><br>
             <a class="has-text-white" href="webcal:~/assets/event.ics" download>{{ $t('event.download') }}</a>
           </section>
@@ -47,7 +47,7 @@
                   </article>
                   <br><br>
                   <div class="has-text-right">
-                    <nuxt-link to="/about"><button class="button is-medium is-white is-rounded is-outlined">{{ $t('intro.button') }}</button></nuxt-link>
+                    <nuxt-link :to="localePath('/about')"><button class="button is-medium is-white is-rounded is-outlined">{{ $t('intro.button') }}</button></nuxt-link>
                   </div>
                 </div>
               </div>

@@ -50,10 +50,10 @@
       </div>
     </section>
     <section class="section">
-      <div class="columns is-mobile is-multiline">
+      <div class="columns is-mobile is-multiline is-vcentered">
         <div
           id="thumbnails"
-          class="column is-3-fullhd is-3-widescreen is-3-desktop is-4-tablet"
+          class="column is-3-fullhd is-4-widescreen is-4-desktop is-6-tablet is-6-mobile"
           v-for="(member, index) in memberList" :key="index"
           style="display: inline-block; vertical-align: top;"
         >
@@ -74,24 +74,32 @@
               </figure>
             </div>
             <div class="card-content">
-              <h1 class="title is-4">
-                <span v-if="$i18n.locale == 'en'">{{ member.en.name }}</span>
-                <span v-if="$i18n.locale == 'ja'">{{ member.ja.name }}</span>
-              </h1>
-              <h1 class="subtitle is-5">
-                <span v-if="$i18n.locale == 'en'">{{ member.en.role }}</span>
-                <span v-if="$i18n.locale == 'ja'">{{ member.ja.role }}</span>
-              </h1>
+              <span v-if="$i18n.locale == 'en'">
+                <h1 class="title is-4">
+                  {{ member.en.name }}
+                </h1>
+                <h1 class="subtitle is-5">
+                  {{ member.en.role }}
+                </h1>
+              </span>
+              <span v-if="$i18n.locale == 'ja'">
+                <h1 class="title is-4">
+                  {{ member.ja.name }}
+                </h1>
+                <h1 class="subtitle is-5">
+                  {{ member.ja.role }}
+                </h1>
+              </span>
               
               <p class="midashi">{{ $t('about.team.from') }}</p>
               <span class="nakami" v-if="$i18n.locale == 'en'">{{ member.en.from }}</span>
-              <span v-if="$i18n.locale == 'ja'" class="nakami">{{ member.ja.from }}</span>
+              <span class="nakami" v-if="$i18n.locale == 'ja'">{{ member.ja.from }}</span>
 
               <p class="midashi">{{ $t('about.team.keywords') }}</p>
-              <span class="nakami">{{ member.keyword1 }}, {{ member.keyword2 }}, {{ member.keyword1 }}</span>
+              <span class="nakami">{{ member.keyword1 }}, {{ member.keyword2 }}, {{ member.keyword3 }}</span>
               
               <p class="midashi">{{ $t('about.team.favouritetedtalk') }}</p>
-              <a class="nakami" :href="member.favouritetedtalklink">{{ member.favouritetedtalk }} <font-awesome-icon :icon="['fas', 'external-link-alt']" style="color: white;" /></a>
+              <a class="nakami" :href="getTedLinkUrl(member.favouritetedtalklink)">{{ member.favouritetedtalk }}<font-awesome-icon :icon="['fas', 'external-link-alt']" style="color: white;" /></a>
 
               <!-- <span class="has-text-right">
                 <b-collapse :open="false" position="is-bottom" aria-id="contentIdForA11y1">
@@ -188,10 +196,18 @@
       <div class="hero-body has-text-white has-text-left">
         <div class="container has-text-centered">
           <p>お問い合わせはお気軽に</p>
-          <div class="nmp-card-dark" style="font-size: 2rem;">
+          <div class="nmp-card-dark has-text-weight-bold" style="font-size: 2rem;">
             <font-awesome-icon :icon="['fas', 'envelope']" style="color: white;" /> tedxutsukuba&#64;gmail.com<br>
             <font-awesome-icon :icon="['fab', 'twitter']" style="color: white;" /> @tedxutsukuba
           </div>
+          <vue-instagram token="accessTokenHere" :count="5" :tags="['hashtag1', 'hashtag2']" mediaType="image">
+            <template slot="feeds" slot-scope="props">
+              <li class="fancy-list"> {{ props.feed.link }} </li>
+            </template>
+            <template slot="error" slot-scope="props">
+              <div class="fancy-alert"> {{ props.error.error_message }} </div>
+            </template>
+          </vue-instagram>
         </div>
       </div>
     </section>
@@ -201,9 +217,10 @@
 
 <script>
 import Modal from '~/components/Modal.vue'
+import VueInstagram from 'vue-instagram'
 export default {
   components: {
-    Modal
+    Modal, VueInstagram
   },
   data() {
     return {
@@ -227,6 +244,13 @@ export default {
     getJsonImgUrl(value) {
       // return require(`~/assets/partners/2020/carousel_${value}.jpg`)
       return require(`~/assets/partners/2020/logo/${value}.jpg`)
+    },
+    getTedLinkUrl(value) {
+      if (this.$i18n.locale == 'ja') {
+        return value + '?language=ja'
+      } else {
+        return value + '?language=en'
+      }
     }
   },
   computed: {

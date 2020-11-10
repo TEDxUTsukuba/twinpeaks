@@ -1,7 +1,7 @@
 <template>
   <b-navbar class="is-fixed-top is-spaced is-black">
     <template slot="brand">
-      <b-navbar-item tag="router-link" :to="{ path: '/' }">
+      <b-navbar-item tag="router-link" :to="localePath('/')">
         <img
           src="~/assets/buefy.png"
           alt="Lightweight UI components for Vue.js based on Bulma"
@@ -18,16 +18,16 @@
           2019 CoPhilAction
         </b-navbar-item>
       </b-navbar-dropdown> -->
-      <b-navbar-item href="/events/2020">
+      <b-navbar-item tag="nuxt-link" :to="localePath('/events/2020')">
         TEDxUTsukuba 2020
       </b-navbar-item>
-      <b-navbar-item href="/talks">
+      <b-navbar-item tag="nuxt-link" :to="localePath('/talks')">
         Talks
       </b-navbar-item>
-      <b-navbar-item href="/partners">
+      <b-navbar-item tag="nuxt-link" :to="localePath('/partners')">
         Partners
       </b-navbar-item>
-      <b-navbar-item href="/about">
+      <b-navbar-item tag="nuxt-link" :to="localePath('/about')">
         About
       </b-navbar-item>
       <b-navbar-item tag="div">

@@ -40,29 +40,29 @@
       "ja": {
         "name": "メレシオ コリン",
         "role": "代表",
-        "from": "somewhere"
+        "from": "ブラカン, フィリピン"
       },
       "en": {
         "name": "Coleen Melecio",
         "role": "Head of TEDxUTsukuba",
-        "from": "somewhere"
+        "from": "Bulacan, Philippines"
       },
-      "keyword1": "father",
-      "keyword2": "husband",
-      "keyword3": "citizen",
-      "favouritetedtalk": "",
-      "favouritetedtalklink": "",
+      "keyword1": "",
+      "keyword2": "",
+      "keyword3": "",
+      "favouritetedtalk": "人を惹きつける話し方",
+      "favouritetedtalklink": "https://www.ted.com/talks/julian_treasure_how_to_speak_so_that_people_want_to_listen?",
       "imageUrl": "na"
     },
     "4": {
       "ja": {
         "name": "川合 福太郎",
-        "role": "Enja クリエイター",
+        "role": "演者チーム",
         "from": "埼玉県"
       },
       "en": {
         "name": "Fukutaro Kawai",
-        "role": "Enja creator",
+        "role": "Enja Team",
         "from": "Saitama, Japan"
       },
       "keyword1": "Puncrock",
@@ -70,6 +70,60 @@
       "keyword3": "Big Family",
       "favouritetedtalk": "天才になる呪い",
       "favouritetedtalklink": "https://youtu.be/qvOi1C8qCDM",
+      "imageUrl": "na"
+    },
+    "5": {
+      "ja": {
+        "name": "青山 翔龍",
+        "role": "パートナーチーム",
+        "from": "アメリカ フィラデルフィア"
+      },
+      "en": {
+        "name": "Fukutaro Kawai",
+        "role": "Partner Team",
+        "from": "Philadelphia, United States"
+      },
+      "keyword1": "Philadelphian ",
+      "keyword2": "Friendly",
+      "keyword3": "Ambitious",
+      "favouritetedtalk": "アメリカで黒人の息子を育てる方法",
+      "favouritetedtalklink": "https://www.ted.com/talks/clint_smith_how_to_raise_a_black_son_in_america?language=ja",
+      "imageUrl": "na"
+    },
+    "6": {
+      "ja": {
+        "name": "高橋 星花",
+        "role": "演者チーム / 広報チーム",
+        "from": "東京都"
+      },
+      "en": {
+        "name": "Seika Takahashi",
+        "role": "Enja Team / PR Team",
+        "from": "Tokyo, Japan"
+      },
+      "keyword1": "Twitterer",
+      "keyword2": "Fashion",
+      "keyword3": "",
+      "favouritetedtalk": "",
+      "favouritetedtalklink": "",
+      "imageUrl": "na"
+    },
+    "7": {
+      "ja": {
+        "name": "北岡 直紀",
+        "role": "広報チーム",
+        "from": "愛知県"
+      },
+      "en": {
+        "name": "Naoki Kitaoka",
+        "role": "PR Team",
+        "from": "Aichi, Japan"
+      },
+      "keyword1": "Designer",
+      "keyword2": "Self-improvement",
+      "keyword3": "Mysterious",
+      "favouritetedtalk": "",
+      "favouritetedtalklink": "",
       "imageUrl": "na"
     },
     "50": {
