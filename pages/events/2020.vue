@@ -9,7 +9,7 @@
         </div>
       </div>
     </section>
-    <section class="section">
+    <!-- <section class="section">
           <div class="tile is-ancestor">
             <div class="tile is-2 is-parent">
               <article class="tile is-child notification">
@@ -108,7 +108,7 @@
       <div class="section has-text-centered">
         <a href="https://tiget.net/events/109783" class="button is-gradient is-rounded is-large">{{ $t('2020.participance.applynowbutton') }}</a>
       </div>
-    </section>
+    </section> -->
     <section class="section">
       <h1 class="title is-0">
         <span class="">{{ $t('2020.speaker.title') }}</span>
