@@ -1,4 +1,11 @@
 {
+  "button": {
+    "discover": "Discover",
+    "readmore": "Read more",
+    "readless": "Read less",
+    "visitwebsite": "Visit website",
+    "close": "Close"
+  },
   "top": {
     "message": "Language Setting: English"
   },
@@ -23,14 +30,12 @@
   "event": {
     "title": "Don't mask your curiosity.",
     "title2": "Watch YouTube Live on November 29",
-    "button": "Discover",
     "download": "Add to calendar"
   },
   "news": {
     "title": "News"
   },
   "notice": {
-    "discover": "Discover",
     "left-top": {
       "title": "Website renewal completed.",
       "description": "With all-new design, in English and Japanese.",
@@ -74,12 +79,36 @@
     }
   },
   "about": {
-    "section1": {
-      "title": "Social Capital"
+    "title": "About",
+    "subtitle": "Introducing TEDxUTsukuba, a part of the global TEDx community.",
+    "description": {
+      "1": "About TEDx, x = independently organized event. In the spirit of ideas worth spreading, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark deep discussion and connection. These local, self-organized events are branded TEDx, where x = independently organized TED event. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized. (Subject to certain rules and regulations.)",
+      "2": "About TED. TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 30 years ago, TED has grown to support its mission with multiple initiatives. The two annual TED Conferences invite the world's leading thinkers and doers to speak for 18 minutes or less. Many of these talks are then made available, free, at TED.com. TED speakers have included Bill Gates, Jane Goodall, Elizabeth Gilbert, Sir Richard Branson, Nandan Nilekani, Philippe Starck, Ngozi Okonjo-Iweala, Sal Khan and Daniel Kahneman.",
+      "3": "The annual TED Conference takes place each spring in Vancouver, British Columbia. TED's media initiatives include TED.com, where new TED Talks are posted daily; TED Translators, which provides subtitles and interactive transcripts as well as translations from volunteers worldwide; the educational initiative TED-Ed. TED has established The Audacious Project that takes a collaborative approach to funding ideas with the potential to create change at thrilling scale; TEDx, which supports individuals or groups in hosting local, self- organized TED-style events around the world, and the TED Fellows program, helping world-changing innovators from around the globe to amplify the impact of their remarkable projects and activities.",
+      "4": "SPREAD GLOBALLY, CONNECT LOCALLY."
     },
     "team": {
-      "title": "Team"
+      "title": "Team",
+      "subtitle": "Managed by passionate volunteers, we have been delivering mind-blowing event experience for a decade.",
+      "from": "From",
+      "favouritetedtalk": "My favourite TED talk",
+      "keywords": "3 words that describe myself"
+    },
+    "join": {
+      "title": "Interested in joining us?",
+      "subtitle": "Step forward to where the magic happens. Contact us!"
+    },
+    "location": {
+      "address": "1-1-1 Tennodai, Tsukuba, Ibaraki, Japan, 305-8577"
     }
+  },
+  "partners": {
+    "title": "Partners",
+    "subtitle": "Our event is made possible by the continuous support of our partners. We are working together under the shared values and vision. "
+  },
+  "talks": {
+    "title": "Talks",
+    "subtitle": "We have shed light on relevant topics - from liberal arts to science, local stories to global issues."
   },
   "2020": {
     "speaker": {
@@ -122,7 +151,8 @@
         "title": "Talk Session",
         "time": "13:00 - 15:10",
         "youtube": "YouTube Live",
-        "intro": "Watch our livestream for free",
+        "intro": "Watch our livestream",
+        "charge": "Free of charge",
         "reservation": "No reservation"
       },
       "premium": {
@@ -130,7 +160,9 @@
         "time": "15:15 - 16:30",
         "tiget": "Sign Up",
         "intro": "Enjoy conversations with speakers, get foods of our partners!",
-        "reservation": "Sign up is required."
+        "charge": "Pre-registered: ¥1,500 No-registered: ¥2,000",
+        "reservation": "Sign up is required.",
+        "airmeet": "Powered by our partner"
       }
     }
   }

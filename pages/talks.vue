@@ -3,7 +3,8 @@
     <section class="hero is-medium is-black">
       <div class="hero-body has-text-white has-text-left">
         <div class="container has-text-centered">
-          <h1 class="title is-1">Talks</h1>
+          <h1 class="title is-1 is-spaced">{{ $t('talks.title') }}</h1>
+          <h1 class="subtitle has-text-grey-light">{{ $t('talks.subtitle') }}</h1>
         </div>
       </div>
     </section>
@@ -39,7 +40,7 @@
               <h1 class="title is-4">
                 {{ talk.title }}
               </h1>
-              <h1 class="subtitle is-4">
+              <h1 class="subtitle is-5">
                 {{ talk.speaker_name }}
               </h1>
               <span class="has-text-right">

@@ -53,7 +53,7 @@ p{
   align-items: center;
   text-align: center;
   margin: 0 auto;
-  padding: 2vh 2vw;
+  padding: 0;
 }
 
 iframe {

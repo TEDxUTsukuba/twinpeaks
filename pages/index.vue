@@ -21,7 +21,7 @@
               <span class="has-text-weight-normal has-text-white">{{ $t('event.title2') }}</span>
             </h1>
             <br><br>
-            <nuxt-link to="/events/2020" class="button is-gradient is-rounded is-medium">{{ $t('event.button') }}</nuxt-link>
+            <nuxt-link to="/events/2020" class="button is-gradient is-rounded is-medium">{{ $t('button.discover') }}</nuxt-link>
             <br><br>
             <a class="has-text-white" href="webcal:~/assets/event.ics" download>{{ $t('event.download') }}</a>
           </section>

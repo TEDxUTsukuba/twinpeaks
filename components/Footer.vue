@@ -64,18 +64,20 @@
       <section class="section">
         <div class="columns is-centered">
           <div class="column is-4-desktop is-5-tablet">
-            <figure class="image">
-              <img
-                src="~/assets/logo/u_black.svg"
-                alt="TEDxUTsukukuba logo"
-              >
-            </figure>
+            <nuxt-link to="/">
+              <figure class="image">
+                <img
+                  src="~/assets/logo/u_black.svg"
+                  alt="TEDxUTsukukuba logo"
+                >
+              </figure>
+            </nuxt-link>
           </div>
           <div class="column is-8-desktop is-7-tablet has-text-right has-text-centered-mobile">
             <h1 class="title is-3 is-size-5-mobile">Spread Globally, Connect Locally.</h1>
             <span class="is-size-7-mobile has-text-grey-light">
-              <p>茨城県つくば市天王台1-1-1</p>
-              <p>1-1-1 Tennodai, Tsukuba, Ibaraki, Japan</p>
+              <p>{{ $t('about.location.address') }}</p>
+              <p>tedxutsukuba&#64;gmail.com</p>
               <p>&copy; TEDxUTsukuba 2020</p>
             </span>
           </div>

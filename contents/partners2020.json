@@ -3,7 +3,7 @@
     "1": {
       "id": 1,
       "name": "筑波ハム",
-      "caregory": "食品提供",
+      "category": "食品提供",
       "url": "https://www.tsukubaham.co.jp/"
     },
     "2": {
@@ -39,7 +39,7 @@
     "7": {
       "id": 7,
       "name": "青木酒造",
-      "category": "商品",
+      "category": "食品提供",
       "url": "https://aokishuzou.co.jp/"
     },
     "8": {

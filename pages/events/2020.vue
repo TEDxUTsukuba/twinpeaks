@@ -198,24 +198,35 @@
               <div class="nmp-card-red">
                 <p><font-awesome-icon :icon="['far', 'clock']" style="color: white;" /> {{ $t('2020.participance.free.time') }}</p>
                 <h1 class="title is-2 has-text-white">{{ $t('2020.participance.free.title') }}</h1>
-                <p>{{ $t('2020.participance.free.intro') }}</p>
+                <p class="has-text-grey-lighter">{{ $t('2020.participance.free.intro') }}</p>
+                <br>
                 <ul>
+                  <li><font-awesome-icon :icon="['fas', 'check-square']" style="color: white;" /> {{ $t('2020.participance.free.charge') }}</li>
                   <li><font-awesome-icon :icon="['fas', 'check-square']" style="color: white;" /> {{ $t('2020.participance.free.reservation') }}</li>
                 </ul>
-                <br>
-                <a class="button is-white is-outlined is-rounded" href="https://www.youtube.com/watch?v=ujhrcXJCBUw&feature=youtu.be">{{ $t('2020.participance.free.youtube') }}</a>
               </div>
             </div>
             <div class="column is-7">
               <div class="nmp-card-red">
                 <p><font-awesome-icon :icon="['far', 'clock']" style="color: white;" /> {{ $t('2020.participance.premium.time') }}</p>
                 <h1 class="title is-2 has-text-white">{{ $t('2020.participance.premium.title') }}</h1>
-                <p>{{ $t('2020.participance.premium.intro') }}</p>
+                <p class="has-text-grey-lighter">{{ $t('2020.participance.premium.intro') }}</p>
+                <br>
                 <ul>
+                  <li><font-awesome-icon :icon="['fas', 'check-square']" style="color: white;" /> {{ $t('2020.participance.premium.charge') }}</li>
                   <li><font-awesome-icon :icon="['fas', 'check-square']" style="color: white;" /> {{ $t('2020.participance.premium.reservation') }}</li>
                 </ul>
                 <br>
-                <a class="button is-large is-white is-outlined is-rounded" href="https://tiget.net/events/109783">{{ $t('2020.participance.premium.tiget') }}</a>
+                <div class="columns is-multiline is-vcentered">
+                  <div class="column is-12-tablet is-half-desktop has-text-right-mobile">
+                    <p class="is-size-7" v-if="$i18n.locale == 'en'">{{ $t('2020.participance.premium.airmeet') }}</p>
+                      <img src="~/assets/partners/2020/logo/AM_Full_Logo/PNG/AM_Logo_Light_WM.png" width="200px">
+                    <p class="is-size-7" v-if="$i18n.locale == 'ja'">{{ $t('2020.participance.premium.airmeet') }}</p>
+                  </div>
+                  <div class="column is-12-tablet is-half-desktop has-text-right">
+                    <a class="button is-large is-white is-outlined is-rounded" href="https://tiget.net/events/109783">{{ $t('2020.participance.premium.tiget') }}</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -246,11 +257,17 @@ export default {
       interval: '5000',
       iconSize: 'is-large',
       pauseInfoType: 'is-dark',
-      images: [
+      statementImages: [
         require('~/assets/2020/concept/statement_1_small.png'),
         require('~/assets/2020/concept/statement_2_small.png'),
         require('~/assets/2020/concept/statement_3_small.png'),
         require('~/assets/2020/concept/statement_4_small.png')
+      ],
+      statementMobileImages: [
+        require('~/assets/2020/concept/statement_1_square.png'),
+        require('~/assets/2020/concept/statement_2_square.png'),
+        require('~/assets/2020/concept/statement_3_square.png'),
+        require('~/assets/2020/concept/statement_4_square.png')
       ],
       carousels: [
         { 
@@ -278,7 +295,11 @@ export default {
   },
   methods: {
     getImgUrl(value) {
-      return this.images[value]
+      if (window.innerWidth <= 1080) {
+        return this.statementMobileImages[value]
+      } else {
+        return this.statementImages[value]
+      }
     },
     switchGallery(value) {
       this.gallery = value

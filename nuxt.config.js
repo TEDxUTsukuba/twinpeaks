@@ -6,7 +6,7 @@ export default {
   */
   head: {
     // title: process.env.npm_package_name || '',
-    title: "TEDxUTsukuba | A hub for Tsukuba",
+    title: "TEDxUTsukuba | A hub for Tsukuba's ideas",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -19,7 +19,12 @@ export default {
       { 
         hid: 'twitter:site', 
         name: 'twitter:site', 
-        content: 'tedxutsukuba' 
+        content: '@tedxutsukuba' 
+      },
+      { 
+        hid: 'twitter:creator', 
+        name: 'twitter:creator', 
+        content: '@tedxutsukuba' 
       },
       {
         hid: 'og:title',
@@ -39,7 +44,12 @@ export default {
       {
         hid: 'og:description',
         property: 'og:description',
-        content: '価値あるアイディアを、つくばから。Ideas worth spreading. '
+        content: '価値あるアイディアを、つくばから。"Ideas worth spreading" というTEDの理念のもとに、筑波大学の学生を中心として独自に運営されているコミュニティです。'
+      },
+      {
+        hid: 'og:author',
+        property: 'og:author',
+        content: 'Haruki Kinoshita and TEDxUTsukuba website team'
       },
       {
         hid: 'og:image',
@@ -59,7 +69,7 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#000' },
   /*
   ** Global CSS
   */
