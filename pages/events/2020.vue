@@ -57,7 +57,7 @@
                 <div class="tile is-parent">
                   <article class="tile is-child notification" style="margin: 0; padding: 0;">
                     <figure class="image">
-                      <img src="~/assets/wallpapers/jijimuge.png">
+                      <img src="~/assets/wallpapers/jijimuge.jpg">
                     </figure>
                   </article>
                 </div>

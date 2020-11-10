@@ -10,7 +10,7 @@
       
       <div style="background: black;">
           <div class="top-photoframe">
-            <nuxt-link to="/events/2020"><img src = "~/assets/wallpapers/jijimuge.png" /></nuxt-link>
+            <nuxt-link to="/events/2020"><img src = "~/assets/wallpapers/jijimuge.jpg" /></nuxt-link>
             <Movie v-if="isEventDate" :vId='videoId1' :aPlay='autoplay'></Movie>
           </div>
           <section class="section has-text-centered">

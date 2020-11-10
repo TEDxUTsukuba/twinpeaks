@@ -1,7 +1,7 @@
 <template>
   <section>
     <h1 class="title textoverflow">TEDxUTsukuba 2020<br>CoPhilAction</h1>
-    <img id="top" src = "~/assets/banner/2019.jpg" />
+    <!-- <img id="top" src = "~/assets/banner/2019.jpg" /> -->
     <section class="hero">
       <div class="container">
         <h1 class="title is-1 has-text-centered">
