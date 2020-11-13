@@ -107,6 +107,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     'nuxt-webfontloader',
+    'nuxt-svg-loader',
     'nuxt-i18n'
   ],
   // webfontloader: {
