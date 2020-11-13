@@ -50,7 +50,7 @@
                   <li>スピーカーとのセッション等、マスクを外す必要のある場面ではアクリル板による仕切りを設置します。</li>
                 </ul>
                 <br>
-                <p>今後もTEDxUTsukubaは、感染拡大の抑止と関係者の安全確保を最優先に、政府や自治体の方針も踏まえながら、追加の対応を検討・実施していきます。筑波大学および茨城県・つくば市の感染対策も合わせてご確認ください。</p>
+                <p>今後もTEDxUTsukubaは、感染拡大の抑止と関係者の安全確保を最優先に、政府や自治体の方針も踏まえながら、追加の対応を検討・実施してまいります。筑波大学および茨城県・つくば市の感染対策も合わせてご確認ください。</p>
                 <a class="button is-medium is-white is-rounded is-outlined" href="http://www.tsukuba.ac.jp/about/antidisaster/covid-19-list.html">{{ $t('covid19-info.link.university') }}</a>
                 <a class="button is-medium is-white is-rounded is-outlined" href="https://www.city.tsukuba.lg.jp/shisei/1010123/index.html">{{ $t('covid19-info.link.city') }}</a>
                 <a class="button is-medium is-white is-rounded is-outlined" href="https://www.pref.ibaraki.jp/shokorodo/chusho/shogyo/2020korona/guideline.html">{{ $t('covid19-info.link.prefecture') }}</a>
@@ -63,7 +63,7 @@
     <div>
       <section class="section">
         <div class="columns is-centered">
-          <div class="column is-4-desktop is-5-tablet">
+          <div class="column is-3-desktop is-5-tablet">
             <nuxt-link :to="localePath('/')">
               <figure class="image">
                 <img
@@ -73,7 +73,7 @@
               </figure>
             </nuxt-link>
           </div>
-          <div class="column is-8-desktop is-7-tablet has-text-right has-text-centered-mobile">
+          <div class="column is-9-desktop is-7-tablet has-text-right has-text-centered-mobile">
             <h1 class="title is-3 is-size-5-mobile">Spread Globally, Connect Locally.</h1>
             <span class="is-size-7-mobile has-text-grey-light">
               <p>{{ $t('about.location.address') }}</p>
@@ -84,10 +84,13 @@
         </div>
         <div class="columns is-centered">
           <div class="url column is-8-desktop is-8-tablet has-text-left has-text-centered-mobile">
-            <a href="">Media Relations</a>
-            <a href="">Privacy Policy</a>
-            <a href="">Code of Conduct</a>
-            <a href="">About TEDx program <font-awesome-icon :icon="['fas', 'external-link-alt']" /></a>
+            <p class="is-size-7 has-text-grey-light">
+              This independent TEDx event is operated under license from TED.
+            </p>
+            <!-- <a href="">Media Relations</a> -->
+            <!-- <a href="">Privacy Policy</a> -->
+            <!-- <a href="">Code of Conduct</a> -->
+            <a href="https://www.ted.com/about/programs-initiatives/tedx-program">About TEDx program <font-awesome-icon :icon="['fas', 'external-link-alt']" /></a>
           </div>
           <div class="sns column is-4-desktop is-5-tablet has-text-right has-text-centered-mobile">
             <a href="https://www.facebook.com/tedxtsukuba"><font-awesome-icon class="sns-icon" :icon="['fab', 'facebook-square']" /></a>

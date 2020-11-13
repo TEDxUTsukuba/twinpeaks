@@ -146,10 +146,10 @@
         </div>
         <div class="column is-5-desktop">
           <Flip
-            :link = "$t('notice.left-top.link')"
             :title = "$t('notice.right-bottom.title')"
             :description = "$t('notice.right-bottom.description')"
             :detail = "$t('notice.right-bottom.detail')"
+            :link = "$t('notice.right-bottom.link')"
             imageUrl = ""
           />
         </div>

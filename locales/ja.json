@@ -56,7 +56,7 @@
       "link": "https://www.youtube.com/watch?v=qvOi1C8qCDM"
     },
     "right-bottom": {
-      "title": "JIJIMUGE 有料セッションの申し込みを受け付けています。",
+      "title": "JIJIMUGE 交流会の申し込みを受け付けています。",
       "description": "登壇者の方々とお話しできる貴重な機会です。",
       "detail": "'JIJIMUGE'トークセッションの後に、特別なセッションをご用意しています。またパートナー企業の素敵な食品を郵送にてお届けします。",
       "link": "~/events/2020"
@@ -98,8 +98,8 @@
     },
     "join": {
       "title": "一緒に活動しませんか？",
-      "subtitle": "期待を超える面白さ、保証します。まずはご連絡ください。"
-
+      "subtitle": "期待を超える面白さ、保証します。",
+      "contactus": "お気軽にご連絡ください"
     },
     "location": {
       "address": "〒305-8577 茨城県つくば市天王台1-1-1"
@@ -147,11 +147,11 @@
       "statement3": "今、世の中にある様々な境界線が溶けつつあります。"
     },
     "participance": {
-      "applynowbutton": "今すぐ有料セッションに申し込む",
+      "applynowbutton": "今すぐ交流会に申し込む",
       "title": "参加方法",
       "description": "",
       "free": {
-        "title": "無料セッション",
+        "title": "トークセッション",
         "time": "13:00 - 15:10",
         "youtube": "YouTube Live",
         "intro": "YouTube Live にてリアルタイムに配信します。",
@@ -159,7 +159,7 @@
         "reservation": "申し込みは不要です。"
       },
       "premium": {
-        "title": "有料セッション",
+        "title": "交流会",
         "time": "15:15 - 16:30",
         "tiget": "今すぐ申し込む",
         "intro": "TEDxUTsukuba の醍醐味は「つながり」を得られること。●スピーカーと直接対談できるセッション ●ご協賛企業による豪華な食事の提供 ●他の参加者の方との交流 の場をご用意しています。",
@@ -167,9 +167,6 @@
         "reservation": "人数に限りがございますので、お早めにお申し込みください。",
         "airmeet": "による技術協賛を頂いています。"
       }
-    },
-    "about": {
-      "title": "開催概要"
     }
   }
 }

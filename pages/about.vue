@@ -11,10 +11,10 @@
     <section class="section has-text-grey-lighter">
       <div class="columns">
         <div class="column is-two-thirds-fullhd is-half-desktop">
-          <div class="nmp-card-red">
+          <div class="nmp-card-dark">
             <p>{{ $t('about.description.1')}}</p>
           </div>
-          <div class="nmp-card-red">
+          <div class="nmp-card-dark">
             <p>{{ $t('about.description.2')}}</p>
           </div>
         </div>
@@ -31,16 +31,19 @@
           </figure>
         </div>
         <div class="column">
-          <div class="nmp-card-light">
+          <div class="nmp-card-dark">
             <p>{{ $t('about.description.3')}}</p>
-          </div>
-          <div class="nmp-card">
-            <p class="has-text-weight-bold">{{ $t('about.description.4')}}</p>
           </div>
         </div>
       </div>
     </section>
-
+    <section class="hero is-medium bg-red">
+      <div class="hero-body">
+        <section class="section has-text-right">
+          <h1 class="title is-2">{{ $t('about.description.4')}}</h1>
+        </section>
+      </div>
+    </section>
     <section class="hero is-medium is-black">
       <div class="hero-body has-text-white has-text-left">
         <div class="container has-text-centered">
@@ -53,7 +56,7 @@
       <div class="columns is-mobile is-multiline is-vcentered">
         <div
           id="thumbnails"
-          class="column is-3-fullhd is-4-widescreen is-4-desktop is-6-tablet is-6-mobile"
+          class="column is-3-fullhd is-4-widescreen is-4-desktop is-6-tablet is-12-mobile"
           v-for="(member, index) in memberList" :key="index"
           style="display: inline-block; vertical-align: top;"
         >
@@ -68,11 +71,11 @@
                 </span> -->
               </p>
             </header>
-            <div class="card-image" v-if="member.imageUrl.length">
-              <figure class="image is-3by2">
+            <!-- <div class="card-image" v-if="member.imageUrl.length">
+              <figure class="image is-3-desktop is-6-tablet is-6-mobileby2">
                 <img src="https://bulma.io/images/placeholders/480x320.png" alt="Placeholder image">
               </figure>
-            </div>
+            </div> -->
             <div class="card-content">
               <span v-if="$i18n.locale == 'en'">
                 <h1 class="title is-4">
@@ -90,16 +93,19 @@
                   {{ member.ja.role }}
                 </h1>
               </span>
-              
-              <p class="midashi">{{ $t('about.team.from') }}</p>
-              <span class="nakami" v-if="$i18n.locale == 'en'">{{ member.en.from }}</span>
-              <span class="nakami" v-if="$i18n.locale == 'ja'">{{ member.ja.from }}</span>
 
-              <p class="midashi">{{ $t('about.team.keywords') }}</p>
-              <span class="nakami">{{ member.keyword1 }}, {{ member.keyword2 }}, {{ member.keyword3 }}</span>
+            </div>
+            <div class="card-content">
               
-              <p class="midashi">{{ $t('about.team.favouritetedtalk') }}</p>
-              <a class="nakami" :href="getTedLinkUrl(member.favouritetedtalklink)">{{ member.favouritetedtalk }}<font-awesome-icon :icon="['fas', 'external-link-alt']" style="color: white;" /></a>
+              <p class="midashi is-size-7 has-text-weight-bold">{{ $t('about.team.from') }}</p>
+              <p class="is-size-7 has-text-weight-bold" v-if="$i18n.locale == 'en'">{{ member.en.from }}</p>
+              <p class="is-size-7 has-text-weight-bold" v-if="$i18n.locale == 'ja'">{{ member.ja.from }}</p>
+
+              <p class="midashi is-size-7 has-text-weight-bold">{{ $t('about.team.keywords') }}</p>
+              <p class="is-size-7 has-text-weight-bold">{{ member.keyword1 }}, {{ member.keyword2 }}, {{ member.keyword3 }}</p>
+              
+              <p class="midashi is-size-7 has-text-weight-bold">{{ $t('about.team.favouritetedtalk') }}</p>
+              <a class="is-size-7 has-text-weight-bold" :href="getTedLinkUrl(member.favouritetedtalklink)">{{ member.favouritetedtalk }} <font-awesome-icon v-if="member.favouritetedtalk" :icon="['fas', 'external-link-alt']" style="color: white;" /></a>
 
               <!-- <span class="has-text-right">
                 <b-collapse :open="false" position="is-bottom" aria-id="contentIdForA11y1">
@@ -128,87 +134,56 @@
       </div>
     </section>
     <section class="section has-text-white">
+      <div class="columns is-mobile is-multiline">
+        <div v-for="(job, index) in jobs" :key="job.id" class="column is-3-desktop is-6-tablet is-6-mobile">
+          <div :class="`notification has-background-${job.color}`">
+            <p class="has-text-weight-bold">{{ job.name }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
       <div class="columns is-multiline">
-        <div class="column is-3">
-          <div class="nmp-card has-background-info">
-            <p class="has-text-weight-bold">Curation</p>
-          </div>
+        <div class="column is-half-tablet is-one-quarter-desktop">
+          <figure class="image is-16by9">
+            <img src="~/assets/others/venue_team_2018.jpg">
+          </figure>
         </div>
-        <div class="column is-3">
-          <div class="nmp-card-red">
-            <p class="has-text-weight-bold">Website</p>
-          </div>
+        <div class="column is-half-tablet is-one-quarter-desktop">
+          <figure class="image is-16by9">
+            <img src="~/assets/others/IMG_9801.jpg">
+          </figure>
         </div>
-        <div class="column is-3">
-          <div class="nmp-card-red">
-            <p class="has-text-weight-bold">Graphic Design</p>
-          </div>
+        <div class="column is-half-tablet is-one-quarter-desktop">
+          <figure class="image is-16by9">
+            <img src="~/assets/others/IMG_9800.jpg">
+          </figure>
         </div>
-        <div class="column is-3">
-          <div class="nmp-card-red">
-            <p class="has-text-weight-bold">Photography</p>
-          </div>
-        </div>
-      
-        <div class="column is-3">
-          <div class="nmp-card has-background-info">
-            <p class="has-text-weight-bold">Talk Design</p>
-          </div>
-        </div>
-        <div class="column is-3">
-          <div class="nmp-card has-background-info">
-            <p class="has-text-weight-bold">Performance Production</p>
-          </div>
-        </div>
-        <div class="column is-3">
-          <div class="nmp-card has-background-info">
-            <p class="has-text-weight-bold">Workshop</p>
-          </div>
-        </div>
-        <div class="column is-3">
-          <div class="nmp-card has-background-success">
-            <p class="has-text-weight-bold">Partnering</p>
-          </div>
-        </div>
-        <div class="column is-3">
-          <div class="nmp-card has-background-warning">
-            <p class="has-text-weight-bold">Promotion</p>
-          </div>
-        </div>
-        <div class="column is-3">
-          <div class="nmp-card has-background-warning">
-            <p class="has-text-weight-bold">Customer Services</p>
-          </div>
-        </div>
-        <div class="column is-3">
-          <div class="nmp-card has-background-link">
-            <p class="has-text-weight-bold">Venue Setup</p>
-          </div>
-        </div>
-        <div class="column is-3">
-          <div class="nmp-card has-background-link">
-            <p class="has-text-weight-bold">HR Management</p>
-          </div>
+        <div class="column is-half-tablet is-one-quarter-desktop">
+          <figure class="image is-16by9">
+            <img src="~/assets/others/tech_team_2018.jpg">
+          </figure>
         </div>
       </div>
     </section>
     <section class="hero is-medium is-black">
       <div class="hero-body has-text-white has-text-left">
         <div class="container has-text-centered">
-          <p>お問い合わせはお気軽に</p>
-          <div class="nmp-card-dark has-text-weight-bold" style="font-size: 2rem;">
+          <p>{{ $t('about.join.contactus')}}</p>
+          <div class="nmp-card-dark has-text-weight-bold" style="font-size: 1rem;">
             <font-awesome-icon :icon="['fas', 'envelope']" style="color: white;" /> tedxutsukuba&#64;gmail.com<br>
             <font-awesome-icon :icon="['fab', 'twitter']" style="color: white;" /> @tedxutsukuba
           </div>
-          <vue-instagram token="accessTokenHere" :count="5" :tags="['hashtag1', 'hashtag2']" mediaType="image">
-            <template slot="feeds" slot-scope="props">
-              <li class="fancy-list"> {{ props.feed.link }} </li>
-            </template>
-            <template slot="error" slot-scope="props">
-              <div class="fancy-alert"> {{ props.error.error_message }} </div>
-            </template>
-          </vue-instagram>
         </div>
+
+        <vue-instagram token="accessTokenHere" :count="5" :tags="['hashtag1', 'hashtag2']" mediaType="image">
+          <template slot="feeds" slot-scope="props">
+            <li class="fancy-list"> {{ props.feed.link }} </li>
+          </template>
+          <template slot="error" slot-scope="props">
+            <div class="fancy-alert"> {{ props.error.error_message }} </div>
+          </template>
+        </vue-instagram>
       </div>
     </section>
   </section>
@@ -218,6 +193,7 @@
 <script>
 import Modal from '~/components/Modal.vue'
 import VueInstagram from 'vue-instagram'
+import jobs from '~/contents/jobs.json'
 export default {
   components: {
     Modal, VueInstagram
@@ -225,7 +201,8 @@ export default {
   data() {
     return {
       showContent: false,
-      postItem: ""
+      postItem: "",
+      jobs: jobs
     }
   },
   methods: {
@@ -267,13 +244,9 @@ export default {
   .nmp-dark {
     border-radius: 18px !important;
   }
-  .midashi {
+  p.midashi {
     margin-top: 0.5rem;
     color: #E62B1E;
-    font-weight: bold;
-  }
-  .nakami {
-    color: lightgray;
     font-weight: bold;
   }
 </style>

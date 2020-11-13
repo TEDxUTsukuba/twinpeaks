@@ -438,18 +438,24 @@ br.mobile-br {
     padding-right: 10px;
   }
 
-  .is-gradient {
-    border: none;
-    background-color: #990000 !important; 
-    background-image: linear-gradient(147deg, #c32bac 0%, #ff0000 74%) !important;
-    color: white;
-    font-weight: bold;
-    &:hover {
+  .button {
+    &.is-gradient {
+      border: none;
+      background-color: #990000 !important; 
+      background-image: linear-gradient(147deg, #c32bac 0%, #ff0000 74%) !important;
       color: white;
-      background-color: #990000 !important;
-      background-image: linear-gradient(147deg, #ff0000 0%, #c32bac 74%) !important;
+      font-weight: bold;
+      &:hover {
+        color: white;
+        background-color: #990000 !important;
+        background-image: linear-gradient(147deg, #ff0000 0%, #c32bac 74%) !important;
+      }
+    }
+    &.is-white {
+      font-weight: bold !important;
     }
   }
+
   a {
     color: $light;
     &:hover {

@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Curation",
+    "color": "info"
+  },
+  {
+    "id": 2,
+    "name": "Talk Production",
+    "color": "info"
+  },
+  {
+    "id": 3,
+    "name": "Translation",
+    "color": "info"
+  },
+  {
+    "id": 4,
+    "name": "Partnering",
+    "color": "success"
+  },
+  {
+    "id": 5,
+    "name": "Graphic Design",
+    "color": "danger"
+  },
+  {
+    "id": 6,
+    "name": "Promotion",
+    "color": "danger"
+  },
+  {
+    "id": 7,
+    "name": "Venue Setup",
+    "color": "link"
+  },
+  {
+    "id": 8,
+    "name": "Tech Handline",
+    "color": "link"
+  }
+]

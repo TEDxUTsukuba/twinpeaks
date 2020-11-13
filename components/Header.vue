@@ -18,17 +18,20 @@
           2019 CoPhilAction
         </b-navbar-item>
       </b-navbar-dropdown> -->
-      <b-navbar-item tag="nuxt-link" :to="localePath('/events/2020')">
+      <b-navbar-item class="normal-category" tag="nuxt-link" :to="localePath('/events/2020')">
         TEDxUTsukuba 2020
       </b-navbar-item>
-      <b-navbar-item tag="nuxt-link" :to="localePath('/talks')">
-        Talks
+      <b-navbar-item class="normal-category" tag="nuxt-link" :to="localePath('/talks')">
+        <span v-if="$i18n.locale !== 'en'">トーク</span>
+        <span v-if="$i18n.locale == 'en'">Talks</span>
       </b-navbar-item>
-      <b-navbar-item tag="nuxt-link" :to="localePath('/partners')">
-        Partners
+      <b-navbar-item class="normal-category" tag="nuxt-link" :to="localePath('/partners')">
+        <span v-if="$i18n.locale !== 'en'">パートナー</span>
+        <span v-if="$i18n.locale == 'en'">Partners</span>
       </b-navbar-item>
-      <b-navbar-item tag="nuxt-link" :to="localePath('/about')">
-        About
+      <b-navbar-item class="normal-category" tag="nuxt-link" :to="localePath('/about')">
+        <span v-if="$i18n.locale !== 'en'">私たちについて</span>
+        <span v-if="$i18n.locale == 'en'">About us</span>
       </b-navbar-item>
       <b-navbar-item tag="div">
         <div class="buttons">
@@ -54,5 +57,8 @@
   .navbar-item, .navbar-link {
     font-weight: bold;
     font-size: 125%;
+  }
+  .normal-category:hover {
+    background-color: red !important;
   }
 </style>

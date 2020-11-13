@@ -41,10 +41,11 @@
               </p>
               <br>
               <!-- <p class="is-size-7">{{ partner.category }}</p> -->
-                <button class="button is-black is-outlined is-rounded"
+                <!-- <button class="button is-black is-outlined is-rounded"
                   @click="openModal(partner)">
                   {{ $t('button.discover') }}
-                </button>
+                </button> -->
+                <a :href="partner.url" class="button is-black is-outlined is-rounded">{{ $t('button.visitwebsite') }}</a>
                 <modal :val="postItem" v-show="showContent" @close="closeModal" />
             </div>
           </div>
