@@ -13,12 +13,12 @@
             <nuxt-link :to="localePath('/events/2020')"><img src = "~/assets/wallpapers/jijimuge.jpg" /></nuxt-link>
             <Movie v-if="isEventDate" :vId='videoId1' :aPlay='autoplay'></Movie>
           </div>
-          <section class="section has-text-centered">
+          <section class="section has-text-centered has-text-weight-light has-text-white">
             <h1 class="title is-1 is-spaced">
-              <span class="has-text-weight-light has-text-white">{{ $t('event.title1') }}<br class="mobile-br">{{ $t('event.title2') }}</span>
+              {{ $t('event.title1') }}<br class="mobile-br">{{ $t('event.title2') }}
             </h1>
-            <h1 class="subtitle is-3">
-              <span class="has-text-weight-normal has-text-white">{{ $t('event.subtitle') }}</span>
+            <h1 class="subtitle is-3 has-text-weight-normal has-text-white">
+              {{ $t('event.subtitle') }}
             </h1>
             <br><br>
             <nuxt-link :to="localePath('/events/2020')" class="button is-gradient is-rounded is-medium">{{ $t('button.discover') }}</nuxt-link>
