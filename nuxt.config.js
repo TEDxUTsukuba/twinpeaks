@@ -74,7 +74,13 @@ export default {
   ** Global CSS
   */
   css: [
-    { src: '~/assets/style.scss', lang: 'scss' }
+    {
+      src: '@mdi/font/css/materialdesignicons.min.css'
+    },
+    {
+      src: '~/assets/style.scss',
+      lang: 'scss'
+    }
   ],
   /*
   ** Plugins to load before mounting the App
@@ -92,7 +98,13 @@ export default {
   */
   modules: [
     // Doc: https://buefy.github.io/#/documentation
-    'nuxt-buefy',
+    [
+      'nuxt-buefy',
+      {
+        css: false,
+        materialDesignIcons: false
+      }
+    ],
     'nuxt-fontawesome',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
