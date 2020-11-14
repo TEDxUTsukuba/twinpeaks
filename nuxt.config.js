@@ -74,7 +74,10 @@ export default {
   ** Global CSS
   */
   css: [
-    { src: '~/assets/style.scss', lang: 'scss' }
+    {
+      src: '~/assets/style.scss',
+      lang: 'scss'
+    }
   ],
   /*
   ** Plugins to load before mounting the App
@@ -92,19 +95,26 @@ export default {
   */
   modules: [
     // Doc: https://buefy.github.io/#/documentation
-    'nuxt-buefy',
-    'nuxt-fontawesome',
+    [
+      'nuxt-buefy',
+      {
+        css: true,
+        materialDesignIcons: false
+      }
+    ],
+    // 'nuxt-fontawesome',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     'nuxt-webfontloader',
+    'nuxt-svg-loader',
     'nuxt-i18n'
   ],
-  webfontloader: {
-    google: {
-      families: ['Noto+Sans+JP']
-    }
-  },
+  // webfontloader: {
+  //   google: {
+  //     families: ['Noto+Sans+JP']
+  //   }
+  // },
   i18n: {
     strategy: 'prefix_and_default',
     locales: [
@@ -121,20 +131,21 @@ export default {
     langDir: 'locales/',
   },
   fontawesome: {
-   imports: [
-     {
-       set: '@fortawesome/free-brands-svg-icons',
-       icons: ['fab']
-     },
-     {
-       set: '@fortawesome/free-solid-svg-icons',
-       icons: ['fas']
-     },
-     {
-       set: '@fortawesome/free-regular-svg-icons',
-       icons: ['far']
-     },
-    ]
+    component: 'fa'
+  //  imports: [
+  //    {
+  //      set: '@fortawesome/free-brands-svg-icons',
+  //      icons: ['fab']
+  //    },
+  //    {
+  //      set: '@fortawesome/free-solid-svg-icons',
+  //      icons: ['fas']
+  //    },
+  //    {
+  //      set: '@fortawesome/free-regular-svg-icons',
+  //      icons: ['far']
+  //    },
+  //   ]
   },
   /*
   ** Axios module configuration

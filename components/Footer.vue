@@ -7,16 +7,19 @@
             <span class="">{{ $t('social.title') }}</span>
           </h1>
           <a class="icon-circle fb" href="https://www.facebook.com/tedxutsukuba/">
-            <font-awesome-icon :icon="['fab', 'facebook-square']" />
+            <!-- <font-awesome-icon :icon="['fab', 'facebook-square']" /> -->
+            <iconFB style="width: 5vw;" />
           </a>
           <a class="icon-circle ig" href="https://www.instagram.com/tedxutsukuba/">
-            <font-awesome-icon :icon="['fab', 'instagram']" />
+            <!-- <font-awesome-icon :icon="['fab', 'instagram']" /> -->
+            <iconIG style="width: 5vw;" />
           </a>
           <a class="icon-circle tw" href="https://www.twitter.com/tedxutsukuba/">
-            <font-awesome-icon :icon="['fab', 'twitter']" />
+            <!-- <font-awesome-icon :icon="['fab', 'twitter']" /> -->
+            <iconTW style="width: 5vw;" />
           </a>
         </section>
-
+        
         <section class="section has-text-centered">
           <h1 class="title is-2">
             <span class="">{{ $t('covid19-info.title') }}</span>
@@ -66,10 +69,7 @@
           <div class="column is-3-desktop is-5-tablet">
             <nuxt-link :to="localePath('/')">
               <figure class="image">
-                <img
-                  src="~/assets/logo/u_black.svg"
-                  alt="TEDxUTsukukuba logo"
-                >
+                <logo />
               </figure>
             </nuxt-link>
           </div>
@@ -93,17 +93,43 @@
             <a href="https://www.ted.com/about/programs-initiatives/tedx-program">About TEDx program <font-awesome-icon :icon="['fas', 'external-link-alt']" /></a>
           </div>
           <div class="sns column is-4-desktop is-5-tablet has-text-right has-text-centered-mobile">
-            <a href="https://www.facebook.com/tedxtsukuba"><font-awesome-icon class="sns-icon" :icon="['fab', 'facebook-square']" /></a>
-            <a href="https://www.instagram.com/tedxutsukuba"><font-awesome-icon class="sns-icon" :icon="['fab', 'instagram']" /></a>
-            <a href="https://www.twitter.com/tedxutsukuba"><font-awesome-icon class="sns-icon" :icon="['fab', 'twitter']" /></a>
-            <a href="https://www.flic.kr/ps/3eCWpZ"><font-awesome-icon class="sns-icon" :icon="['fab', 'flickr']" /></a>
-            <a href="https://www.note.com/tedxutsukuba"><font-awesome-icon class="sns-icon" :icon="['fas', 'sticky-note']" /></a>
+            <a href="https://www.facebook.com/tedxtsukuba">
+              <iconFB style="width: 1vw;" />
+            </a>
+            <a href="https://www.instagram.com/tedxutsukuba">
+              <iconIG style="width: 1vw;" />
+            </a>
+            <a href="https://www.twitter.com/tedxutsukuba">
+              <iconTW style="width: 1vw;" />
+            </a>
+            <a href="https://www.flic.kr/ps/3eCWpZ">
+              <iconFL style="width: 1vw;" />
+            </a>
+            <a href="https://www.note.com/tedxutsukuba">
+              <iconNT style="width: 1vw;" />
+            </a>
           </div>
         </div>
       </section>
     </div>
   </section>
 </template>
+
+<script>
+import logo from '@/assets/logo/u_black.svg'
+import iconIG from '@/assets/svg/instagram.svg'
+import iconFB from '@/assets/svg/facebook.svg'
+import iconTW from '@/assets/svg/twitter.svg'
+import iconFL from '@/assets/svg/flickr.svg'
+import iconNT from '@/assets/svg/note.svg'
+
+export default {
+  components: {
+    logo, iconIG, iconFB, iconTW, iconFL, iconNT
+  }  
+}
+</script>
+
 
 <style lang="scss" scoped>
   .sns-icon {
@@ -115,9 +141,6 @@
       color: #bec1c3;
       margin-right: 15px;
     }
-  }
-  a:visited {
-    color: #bec1c3;
   }
   figure.image {
     @media screen and (max-width: 768px) {
