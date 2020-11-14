@@ -192,11 +192,11 @@
 
 <script>
 import Modal from '~/components/Modal.vue'
-import VueInstagram from 'vue-instagram'
+// import VueInstagram from 'vue-instagram'
 import jobs from '~/contents/jobs.json'
 export default {
   components: {
-    Modal, VueInstagram
+    Modal
   },
   data() {
     return {

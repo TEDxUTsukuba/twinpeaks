@@ -82,6 +82,7 @@ h1.title {
     }
   }
 }
+
 h1.subtitle {
   color: #E62B1E;
   margin-bottom: 3vh;

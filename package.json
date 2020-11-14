@@ -16,6 +16,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.13.1",
     "@fortawesome/vue-fontawesome": "^0.1.9",
+    "@mdi/font": "^5.8.55",
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/pwa": "^3.0.0-0",
     "bulma": "^0.8.2",
@@ -23,6 +24,7 @@
     "nuxt-buefy": "^0.3.2",
     "nuxt-fontawesome": "^0.4.0",
     "nuxt-i18n": "^6.15.4",
+    "nuxt-svg-loader": "^1.2.0",
     "nuxt-webfontloader": "^1.1.0",
     "vue-instagram": "^3.0.0",
     "vue-youtube": "^1.4.0"
