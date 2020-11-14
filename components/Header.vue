@@ -57,8 +57,12 @@
   .navbar-item, .navbar-link {
     font-weight: bold;
     font-size: 125%;
+    color: lightgray !important;
   }
   .normal-category:hover {
     background-color: red !important;
+  }
+  a:visited {
+    color: white;
   }
 </style>
