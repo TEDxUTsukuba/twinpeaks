@@ -53,6 +53,9 @@
               </div>
             </div>
           </section>
+          <section class="section">
+            <Movie id="teaser" :vId='videoId3' :aPlay='autoplay' :classname="large"></Movie>
+          </section>
           <!-- <section class="section">
             <div class="columns is-mobile is-multiline">
               <div class="column is-3-tablet is-6-mobile">
@@ -156,9 +159,6 @@
       </div>
     </section>
     <!-- <div class="text-divider"></div> -->
-
-    
-
   </section>
 </template>
 
@@ -179,6 +179,8 @@ export default {
   data() {
     return {
       videoId1: 'ujhrcXJCBUw',
+      videoId2: 'q_Es52kl6FQ',
+      videoId3: 'ZbIEuwjpxp0',
       todayDate: Date.now(),
       eventDate: Date(2020, 11, 29, 0, 0, 0)
     }
