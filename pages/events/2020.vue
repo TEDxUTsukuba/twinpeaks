@@ -146,7 +146,7 @@
 </template>
 
 <script>
-const Card = () => import('~/components/Card')
+import Card from '~/components/Card'
 import Image_sp1 from '~/assets/speakers/2020/speaker-01.png'
 import Image_sp2 from '~/assets/speakers/2020/speaker-02.png'
 import Image_sp3 from '~/assets/speakers/2020/speaker-03.png'
