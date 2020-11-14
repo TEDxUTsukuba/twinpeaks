@@ -45,7 +45,7 @@
                   @click="openModal(partner)">
                   {{ $t('button.discover') }}
                 </button> -->
-                <a :href="partner.url" class="button is-black is-outlined is-rounded">{{ $t('button.visitwebsite') }}</a>
+                <a :href="partner.url" class="button is-small is-black is-outlined is-rounded">{{ $t('button.visitwebsite') }}</a>
                 <modal :val="postItem" v-show="showContent" @close="closeModal" />
             </div>
           </div>
