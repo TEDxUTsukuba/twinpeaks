@@ -14,6 +14,7 @@
     <div>
       <youtube :video-id="videoId" ref="youtube" @playing="playing"></youtube>
     </div>
+    <img src="~/assets/banner/sns_banner/png">
   </section>
 </template>
 
