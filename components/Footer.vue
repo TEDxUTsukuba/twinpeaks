@@ -94,19 +94,19 @@
           </div>
           <div class="sns column is-4-desktop is-5-tablet has-text-right has-text-centered-mobile">
             <a href="https://www.facebook.com/tedxtsukuba">
-              <iconFB style="width: 1vw;" />
+              <iconFB class="icon" />
             </a>
             <a href="https://www.instagram.com/tedxutsukuba">
-              <iconIG style="width: 1vw;" />
+              <iconIG class="icon" />
             </a>
             <a href="https://www.twitter.com/tedxutsukuba">
-              <iconTW style="width: 1vw;" />
+              <iconTW class="icon" />
             </a>
             <a href="https://www.flic.kr/ps/3eCWpZ">
-              <iconFL style="width: 1vw;" />
+              <iconFL class="icon" />
             </a>
             <a href="https://www.note.com/tedxutsukuba">
-              <iconNT style="width: 1vw;" />
+              <iconNT class="icon" />
             </a>
           </div>
         </div>
@@ -145,6 +145,12 @@ export default {
   figure.image {
     @media screen and (max-width: 768px) {
       padding: 0 20vw;
+    }
+  }
+  .sns {
+    margin-right: 0;
+    .icon {
+      width: 3rem;
     }
   }
 </style>
