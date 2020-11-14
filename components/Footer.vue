@@ -90,7 +90,7 @@
             <!-- <a href="">Media Relations</a> -->
             <!-- <a href="">Privacy Policy</a> -->
             <!-- <a href="">Code of Conduct</a> -->
-            <a href="https://www.ted.com/about/programs-initiatives/tedx-program">About TEDx program <font-awesome-icon :icon="['fas', 'external-link-alt']" /></a>
+            <a href="https://www.ted.com/about/programs-initiatives/tedx-program">About TEDx program <externalLink style="width: 0.75rem;"/></a>
           </div>
           <div class="sns column is-4-desktop is-5-tablet has-text-right has-text-centered-mobile">
             <a href="https://www.facebook.com/tedxtsukuba">
@@ -122,10 +122,11 @@ import iconFB from '@/assets/svg/facebook.svg'
 import iconTW from '@/assets/svg/twitter.svg'
 import iconFL from '@/assets/svg/flickr.svg'
 import iconNT from '@/assets/svg/note.svg'
+import externalLink from '@/assets/svg/external-link-alt-solid.svg'
 
 export default {
   components: {
-    logo, iconIG, iconFB, iconTW, iconFL, iconNT
+    logo, iconIG, iconFB, iconTW, iconFL, iconNT, externalLink
   }  
 }
 </script>

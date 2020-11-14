@@ -105,7 +105,7 @@
               <p class="is-size-7 has-text-weight-bold">{{ member.keyword1 }}, {{ member.keyword2 }}, {{ member.keyword3 }}</p>
               
               <p class="midashi is-size-7 has-text-weight-bold">{{ $t('about.team.favouritetedtalk') }}</p>
-              <a class="is-size-7 has-text-weight-bold" :href="getTedLinkUrl(member.favouritetedtalklink)">{{ member.favouritetedtalk }} <font-awesome-icon v-if="member.favouritetedtalk" :icon="['fas', 'external-link-alt']" style="color: white;" /></a>
+              <a class="is-size-7 has-text-weight-bold" :href="getTedLinkUrl(member.favouritetedtalklink)">{{ member.favouritetedtalk }} <externalLink v-if="member.favouritetedtalk" style="width: 0.75rem;" /></a>
 
               <!-- <span class="has-text-right">
                 <b-collapse :open="false" position="is-bottom" aria-id="contentIdForA11y1">
@@ -194,9 +194,11 @@
 import Modal from '~/components/Modal.vue'
 // import VueInstagram from 'vue-instagram'
 import jobs from '~/contents/jobs.json'
+import externalLink from '@/assets/svg/external-link-alt-solid.svg'
+
 export default {
   components: {
-    Modal
+    Modal, externalLink
   },
   data() {
     return {
