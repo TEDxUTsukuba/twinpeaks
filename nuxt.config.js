@@ -54,7 +54,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://teraoka.netlify.app/_nuxt/img/eaae22f.png'
+        content: 'https://www.tedxutsukuba.com/_nuxt/img/eaae22f.png'
       },
       { 
         hid: 'og:site_name', 
