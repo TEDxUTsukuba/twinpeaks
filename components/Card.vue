@@ -16,10 +16,10 @@
             {{ description }}
           </p>
           <div class="section" style="padding: 0;">
-            <span>{{ $t('2020.speaker.share') }}</span><br>
-            <a :href="getShareUrl(title)" class="is-size-4 tw icon" target="_blank"><font-awesome-icon :icon="['fab', 'twitter']" /></a>
-            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.tedxutsukuba.com%2F&amp;src=sdkpreparse" class="is-size-4 fb fb-xfbml-parse-ignore"><font-awesome-icon :icon="['fab', 'facebook']" /></a>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <!-- <span>{{ $t('2020.speaker.share') }}</span><br> -->
+            <!-- <a :href="getShareUrl(title)" class="is-size-4 tw icon" target="_blank"><font-awesome-icon :icon="['fab', 'twitter']" /></a> -->
+            <!-- <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.tedxutsukuba.com%2F&amp;src=sdkpreparse" class="is-size-4 fb fb-xfbml-parse-ignore"><font-awesome-icon :icon="['fab', 'facebook']" /></a> -->
+            <!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
           </div>
           <!-- <div class="content has-text-centered">
             <b-icon
