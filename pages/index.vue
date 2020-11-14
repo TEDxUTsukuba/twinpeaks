@@ -163,12 +163,12 @@
 </template>
 
 <script>
-// import Card from '~/components/Card';
-// import Flip from '~/components/Flip';
-// import Movie from '~/components/Movie';
-const Card = () => import('~/components/Card')
-const Flip = () => import('~/components/Flip')
-const Movie = () => import('~/components/Movie')
+import Card from '~/components/Card'
+import Flip from '~/components/Flip'
+import Movie from '~/components/Movie'
+// const Card = () => import('~/components/Card')
+// const Flip = () => import('~/components/Flip')
+// const Movie = () => import('~/components/Movie')
 
 export default {
   name: 'HomePage',
