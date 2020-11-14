@@ -166,6 +166,9 @@
         "charge": "Pre-registered: ¥1,500 No-registered: ¥2,000",
         "reservation": "Sign up is required.",
         "airmeet": "Powered by our partner"
+      },
+      "pass": {
+        "inputpassword": "Password is jijimuge"
       }
     }
   }
