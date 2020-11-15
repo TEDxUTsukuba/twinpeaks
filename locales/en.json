@@ -116,6 +116,7 @@
   "2020": {
     "speaker": {
       "title": "Speakers",
+      "description": "We invite four speakers with brilliant ideas. ", 
       "share": "Share this speaker",
       "sp1": {
         "name": "Takeharu Mikami",
@@ -140,8 +141,8 @@
     },
     "concept": {
       "title": "Concept", 
+      "description": "Our event concept is 'JIJIMUGE', which is derived from a Buddhism term.",
       "headline": "JIJIMUGE",
-      "description": "sasafsfas",
       "statement1": "今、世の中にある様々な境界線が溶けつつあります。",
       "statement2": "今、世の中にある様々な境界線が溶けつつあります。",
       "statement3": "今、世の中にある様々な境界線が溶けつつあります。"
@@ -149,7 +150,7 @@
     "participance": {
       "applynowbutton": "Apply for the interaction session",
       "title": "How to join",
-      "description": "",
+      "description": "Stay home and join our virtual event online. ",
       "free": {
         "title": "Talk Session",
         "time": "13:00 - 15:10",
