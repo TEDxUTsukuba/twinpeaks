@@ -14,6 +14,9 @@
       <h1 class="title is-0">
         <span class="">{{ $t('2020.speaker.title') }}</span>
       </h1>
+      <h1 class="subtitle has-text-white has-text-right">
+        {{ $t('2020.speaker.description') }}
+      </h1>
       <Card
         :title = "$t('2020.speaker.sp1.name')"
         :subtitle = "$t('2020.speaker.sp1.position')"
@@ -48,7 +51,10 @@
         <h1 class="title is-0">
           <span class="">{{ $t('2020.concept.title') }}</span>
         </h1>
-
+        <h1 class="subtitle has-text-white has-text-right">
+          {{ $t('2020.concept.description') }}
+        </h1>
+        <br><br>
         <b-carousel
         :autoplay="true"
         :arrow="arrow"
@@ -93,6 +99,9 @@
         <section class="section">
           <h1 class="title is-0">
             <span class="">{{ $t('2020.participance.title') }}</span>
+          </h1>
+          <h1 class="subtitle has-text-white has-text-right">
+            {{ $t('2020.participance.description') }}
           </h1>
           <div class="columns">
             <div class="column is-5">

@@ -116,6 +116,7 @@
   "2020": {
     "speaker": {
       "title": "登壇者",
+      "description": "4名のスピーカーの皆さまによる価値あるアイディアをお届けいたします。",
       "share": "シェアする",
       "sp1": {
         "name": "三上丈晴",
@@ -140,8 +141,8 @@
     },
     "concept": {
       "title": "コンセプト",
+      "description": "イベントのコンセプトは、仏教用語に由来する 'JIJIMUGE' です。",
       "headline": "JIJIMUGE",
-      "description": "sasasasa",
       "statement1": "今、世の中にある様々な境界線が溶けつつあります。",
       "statement2": "今、世の中にある様々な境界線が溶けつつあります。",
       "statement3": "今、世の中にある様々な境界線が溶けつつあります。"
@@ -149,7 +150,7 @@
     "participance": {
       "applynowbutton": "今すぐ交流会に申し込む",
       "title": "参加方法",
-      "description": "",
+      "description": "すべてのセッションをオンラインで開催いたします。",
       "free": {
         "title": "トークセッション",
         "time": "13:00 - 15:10",
