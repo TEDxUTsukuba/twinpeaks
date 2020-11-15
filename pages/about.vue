@@ -8,6 +8,9 @@
         </div>
       </div>
     </section>
+    <section class="section">
+      <Movie id="teaser" :vId='videoId' :aPlay='autoplay' :classname="large"></Movie>
+    </section>
     <section class="section has-text-grey-lighter">
       <div class="columns">
         <div class="column is-two-thirds-fullhd is-half-desktop">
@@ -19,15 +22,15 @@
           </div>
         </div>
         <div class="column">
-          <div class="is-square side-cut">
-            <img src="~/assets/sample1.jpg">
-          </div>
+          <figure>
+            <img src="~/assets/sample2.jpg" alt="Audience attending our annual event">
+          </figure>
         </div>
       </div>
       <div class="columns reverse-row-order">
         <div class="column is-one-third-fullhd is-half-desktop">
-          <figure class="is-square">
-            <img src="">
+          <figure>
+            <img src="~/assets/sample1.jpg" alt="A speaker standing on the stage">
           </figure>
         </div>
         <div class="column">
@@ -193,18 +196,20 @@
 <script>
 import Modal from '~/components/Modal.vue'
 // import VueInstagram from 'vue-instagram'
+import Movie from '~/components/Movie.vue'
 import jobs from '~/contents/jobs.json'
 import externalLink from '@/assets/svg/external-link-alt-solid.svg'
 
 export default {
   components: {
-    Modal, externalLink
+    Modal, externalLink, Movie
   },
   data() {
     return {
       showContent: false,
       postItem: "",
-      jobs: jobs
+      jobs: jobs,
+      videoId: '7PQWXvgYZ4Y'
     }
   },
   methods: {
