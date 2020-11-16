@@ -56,7 +56,7 @@
       </div>
     </section>
     <section class="section">
-      <div class="columns is-mobile is-multiline is-vcentered">
+      <div class="columns is-mobile is-multiline">
         <div
           id="thumbnails"
           class="column is-3-fullhd is-4-widescreen is-4-desktop is-6-tablet is-12-mobile"
@@ -74,11 +74,11 @@
                 </span> -->
               </p>
             </header>
-            <!-- <div class="card-image" v-if="member.imageUrl.length">
+            <div class="card-image" v-if="member.imageName.length">
               <figure class="image is-3-desktop is-6-tablet is-6-mobileby2">
-                <img src="https://bulma.io/images/placeholders/480x320.png" alt="Placeholder image">
+                <img :src="getJsonImgUrl(member.imageName)" alt="Placeholder image">
               </figure>
-            </div> -->
+            </div>
             <div class="card-content">
               <span v-if="$i18n.locale == 'en'">
                 <h1 class="title is-4">
@@ -227,7 +227,7 @@ export default {
     },
     getJsonImgUrl(value) {
       // return require(`~/assets/partners/2020/carousel_${value}.jpg`)
-      return require(`~/assets/partners/2020/logo/${value}.jpg`)
+      return require(`~/assets/team/${value}.jpg`)
     },
     getTedLinkUrl(value) {
       if (this.$i18n.locale == 'ja') {
