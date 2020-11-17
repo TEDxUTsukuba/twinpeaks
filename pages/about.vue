@@ -74,9 +74,9 @@
                 </span> -->
               </p>
             </header>
-            <div class="card-image" v-if="member.imageName.length">
+            <div class="card-image" v-if="member.imageFileName.length">
               <figure class="image is-3-desktop is-6-tablet is-6-mobileby2">
-                <img :src="getJsonImgUrl(member.imageName)" alt="Placeholder image">
+                <img :src="getJsonImgUrl(member.imageFileName)" alt="Placeholder image">
               </figure>
             </div>
             <div class="card-content">

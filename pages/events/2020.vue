@@ -109,7 +109,7 @@
                 <div class="header" style="margin-bottom: 1rem;">
                   <span class="tag is-white is-medium"><font-awesome-icon :icon="['far', 'clock']" /> {{ $t('2020.participance.free.time') }}</span>
                 </div>
-                <div class="has-text-grey-lighter">
+                <div class="">
                   <h1 class="title is-2 has-text-white">{{ $t('2020.participance.free.title') }}</h1>
                   <p>{{ $t('2020.participance.free.intro') }}</p>
                   <br>
@@ -125,7 +125,7 @@
                 <div class="header" style="margin-bottom: 1rem;">
                   <span class="tag is-white is-medium"><font-awesome-icon :icon="['far', 'clock']" /> {{ $t('2020.participance.premium.time') }}</span>
                 </div>
-                <div class="has-text-grey-lighter">
+                <div class="">
                   <h1 class="title is-2 has-text-white">{{ $t('2020.participance.premium.title') }}</h1>
                   <p>{{ $t('2020.participance.premium.intro') }}</p>
                   <br>
@@ -137,7 +137,7 @@
                   <div class="columns is-multiline is-vcentered">
                     <div class="column is-12-tablet is-half-desktop has-text-right-mobile">
                       <p class="is-size-7" v-if="$i18n.locale == 'en'">{{ $t('2020.participance.premium.airmeet') }}</p>
-                        <img src="~/assets/partners/2020/logo/AM_Full_Logo/PNG/AM_Logo_Light_WM.png" width="200px">
+                      <img src="~/assets/partners/2020/logo/AM_Full_Logo/PNG/AM_Logo_Dark_WM.png" width="200px" style="background-color: white; padding: 15px;"> 
                       <p class="is-size-7" v-if="$i18n.locale == 'ja'">{{ $t('2020.participance.premium.airmeet') }}</p>
                     </div>
                     <div class="column is-12-tablet is-half-desktop has-text-right">
