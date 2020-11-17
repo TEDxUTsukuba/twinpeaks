@@ -33,7 +33,7 @@
           <div class="content has-text-white">
             <b-collapse :open="false" position="is-bottom" aria-id="contentIdForA11y1">
               <a class="button is-gradient is-medium is-rounded" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1" style="margin: 3rem auto;">
-                  <b-icon :icon="!props.open ? 'menu-down' : 'menu-up'"></b-icon>
+                  <!-- <b-icon :icon="!props.open ? 'menu-down' : 'menu-up'"></b-icon> -->
                   {{ !props.open ? $t('button.readmore') : $t('button.readless') }}
               </a>
               <br><br>
