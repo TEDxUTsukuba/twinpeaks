@@ -126,7 +126,7 @@ export default {
         {
           hid: 'og:image',
           property: 'og:image',
-          content: 'https://www.tedxutsukuba.com/20201122.jpg'
+          content: 'https://tedxutsukuba.com/20201122.jpg'
         },
         { 
           hid: 'og:site_name', 

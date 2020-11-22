@@ -47,7 +47,7 @@
       "title": "オンラインでイベントを開催します。",
       "description": "TEDxUTsukuba 2020 'JIJIMUGE' を11月29日(日)に開催します。",
       "detail": "新型コロナウイルスの影響により、今年はオンラインにてイベントを開催いたします。トークは無料でご視聴いただけます。皆さまの参加を心よりお待ちしています。",
-      "link": "/events/2020"
+      "link": "https://www.tedxutsukuba.com/events/2020"
     },
     "right-top": {
       "title": "「天才になる呪い」が再生回数1万回を突破しました。",
@@ -59,7 +59,7 @@
       "title": "JIJIMUGE 交流会の申し込みを受け付けています。",
       "description": "登壇者の方々とお話しできる貴重な機会です。",
       "detail": "'JIJIMUGE'トークセッションの後に、特別なセッションをご用意しています。またパートナー企業の素敵な食品を郵送にてお届けします。",
-      "link": "~/events/2020"
+      "link": "https://www.tedxutsukuba.com/events/2020"
     }
   },
   "social": {
