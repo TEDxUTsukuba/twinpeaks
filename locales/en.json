@@ -38,16 +38,16 @@
   },
   "notice": {
     "left-top": {
-      "title": "Our website has been updated",
-      "description": "We updated the design and are now offering English as well as Japanese.",
-      "detail": "We are happy to announce November 29th event TedxTsukuba 2020 'JIJIMUGE' and are glad to present you our partners for 2020",
-      "link": ""
+      "title": "To everyone who participated in TEDxUTsukuba before 2018",
+      "description": "Notice on unauthorized access to Peatix",
+      "detail": "",
+      "link": "/notice/2020/11/22"
     },
     "left-bottom": {
       "title": "Annual event is coming on November!",
       "description": "TEDxUTsukuba 2020 'JIJIMUGE' event will be held online",
       "detail": "As a special measure to prevent Covid-19 spreading we will hold an olline talk free for everyone, we are eager to see you there!",
-      "link": "~/events/2020"
+      "link": "/events/2020"
     },
     "right-top": {
       "title": "Our talk earned 10,000 views",
