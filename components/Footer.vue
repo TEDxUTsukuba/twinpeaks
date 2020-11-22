@@ -149,6 +149,9 @@ export default {
     }
   }
   .sns {
+    a {
+      color: white;
+    }
     margin-right: 0;
     .icon {
       width: 3rem;
