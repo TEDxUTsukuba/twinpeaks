@@ -208,7 +208,62 @@ export default {
           description: '',
           color: 'black' 
         }
-      ]
+      ],
+      meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      // { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
+      { 
+        hid: 'twitter:card', 
+        name: 'twitter:card', 
+        content: 'summary_large_image' 
+      },
+      { 
+        hid: 'twitter:site', 
+        name: 'twitter:site', 
+        content: '@tedxutsukuba' 
+      },
+      { 
+        hid: 'twitter:creator', 
+        name: 'twitter:creator', 
+        content: '@tedxutsukuba' 
+      },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: 'TEDxUTsukuba 2020 JIJIMUGE'
+      },
+      {
+        hid: 'og:type',
+        property: 'og:type',
+        content: 'website'
+      },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://tedxutsukuba.com/events/2020'
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: '11月29日(日) オンライン開催。'
+      },
+      {
+        hid: 'og:author',
+        property: 'og:author',
+        content: 'Haruki Kinoshita and TEDxUTsukuba website team'
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'https://www.tedxutsukuba.com/sns_banner.png'
+      },
+      { 
+        hid: 'og:site_name', 
+        name: 'og:site_name', 
+        content: 'TEDxUTsukuba Official Website' 
+      }
+    ]
     }
   },
   methods: {
