@@ -47,7 +47,7 @@
       "title": "Annual event is coming on November!",
       "description": "TEDxUTsukuba 2020 'JIJIMUGE' event will be held online",
       "detail": "As a special measure to prevent Covid-19 spreading we will hold an olline talk free for everyone, we are eager to see you there!",
-      "link": "/events/2020"
+      "link": "https://www.tedxutsukuba.com/events/2020"
     },
     "right-top": {
       "title": "Our talk earned 10,000 views",
@@ -59,7 +59,7 @@
       "title": "Sign up for 'JIJIMUGE' interaction session",
       "description": "Experience more than just a talk event",
       "detail": "You'll get a special opportunity to talk with our speakers in person, and we will deliver our partner's food.",
-      "link": "~/events/2020"
+      "link": "https://www.tedxutsukuba.com/events/2020"
     }
   },
   "social": {
