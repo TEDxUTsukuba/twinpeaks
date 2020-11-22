@@ -268,10 +268,12 @@ export default {
   },
   methods: {
     getImgUrl(value) {
-      if (window.innerWidth <= 1080) {
-        return this.statementMobileImages[value]
-      } else {
-        return this.statementImages[value]
+      if (process.client) {
+        if (window.innerWidth <= 1080) {
+          return this.statementMobileImages[value]
+        } else {
+          return this.statementImages[value]
+        }
       }
     },
     switchGallery(value) {
