@@ -38,16 +38,16 @@
   },
   "notice": {
     "left-top": {
-      "title": "ウェブサイトを更新しました。",
-      "description": "デザインを一新し、日本語と英語の2言語に対応しました。",
-      "detail": "11月29日開催のイベント TEDxUTsukuba 2020 'JIJIMUGE'、および2020年度のパートナー情報を公開しました。",
-      "link": ""
+      "title": "2018年以前のTEDxUTsukubaにご参加くださった皆さまへ",
+      "description": "Peatixへの不正アクセス事象に関するご確認をお願いいたします。",
+      "detail": "",
+      "link": "/notice/2020/11/22"
     },
     "left-bottom": {
       "title": "オンラインでイベントを開催します。",
       "description": "TEDxUTsukuba 2020 'JIJIMUGE' を11月29日(日)に開催します。",
       "detail": "新型コロナウイルスの影響により、今年はオンラインにてイベントを開催いたします。トークは無料でご視聴いただけます。皆さまの参加を心よりお待ちしています。",
-      "link": "~/events/2020"
+      "link": "/events/2020"
     },
     "right-top": {
       "title": "「天才になる呪い」が再生回数1万回を突破しました。",
