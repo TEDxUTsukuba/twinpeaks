@@ -122,8 +122,8 @@
       "keyword1": "Dreamer",
       "keyword2": "Active",
       "keyword3": "Unicorn lover",
-      "favouritetedtalk": " ",
-      "favouritetedtalklink": "",
+      "favouritetedtalk": "How to Be Happy Every Day: It Will Change the World",
+      "favouritetedtalklink": "https://youtu.be/78nsxRxbf4w",
       "imageFileName": "chiho"
     },
     "8": {
@@ -145,6 +145,61 @@
       "imageFileName": "masato"
     },
     "9": {
+        "ja": {
+            "name": "池ヶ谷 一輝",
+            "role": "広報チーム / Techチーム",
+            "from": "愛知県"
+        },
+        "en": {
+            "name": "Kazuki Ikegaya",
+            "role": "PR Team / Tech Team",
+            "from": "Aichi, Japan"
+        },
+        "keyword1": "",
+        "keyword2": "",
+        "keyword3": "",
+        "favouritetedtalk": "",
+        "favouritetedtalklink": "",
+        "imageFileName": "kazuki"
+    },
+    "10": {
+        "ja": {
+            "name": "木下 周平",
+            "role": "",
+            "from": "秋田県"
+        },
+        "en": {
+            "name": "Shuhei Kinoshita",
+            "role": "",
+            "from": "Akita, Japan"
+        },
+        "keyword1": "Frendly",
+        "keyword2": "Sweets",
+        "keyword3": "Cafe",
+        "favouritetedtalk": "",
+        "favouritetedtalklink": "",
+        "imageFileName": "shuhei"
+    },
+    "11": {
+        "ja": {
+            "name": "小林 沙綺",
+            "role": "",
+            "from": "北海道"
+        },
+        "en": {
+            "name": "Saaya Kobayashi",
+            "role": "",
+            "from": "Hokkaido, Japan"
+        },
+        "keyword1": "",
+        "keyword2": "",
+        "keyword3": "",
+        "favouritetedtalk": "",
+        "favouritetedtalklink": "",
+        "imageFileName": "saya"
+    },
+    
+    "12": {
       "ja": {
         "name": "高橋 星花",
         "role": "演者チーム / 広報チーム",
@@ -162,7 +217,7 @@
       "favouritetedtalklink": "",
       "imageFileName": ""
     },
-    "10": {
+    "13": {
       "ja": {
         "name": "高橋 奏",
         "role": "パートナーチーム",
