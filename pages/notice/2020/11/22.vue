@@ -6,7 +6,7 @@
           {{ $t('notice.left-top.title') }}
         </h1>
         <h1 class="subtitle">
-          {{ $t('notice.left-top.subtitle') }}
+          {{ $t('notice.left-top.description') }}
         </h1>
       </div>
     </section>
