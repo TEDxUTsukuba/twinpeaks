@@ -77,3 +77,64 @@
     </section>
   </section>
 </template>
+
+<script>
+export default {
+  head() {
+    return {
+      meta: [
+        { 
+        hid: 'twitter:card', 
+        name: 'twitter:card', 
+        content: 'summary_large_image' 
+        },
+        { 
+          hid: 'twitter:site', 
+          name: 'twitter:site', 
+          content: '@tedxutsukuba' 
+        },
+        { 
+          hid: 'twitter:creator', 
+          name: 'twitter:creator', 
+          content: '@tedxutsukuba' 
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: '2018年以前のTEDxUTsukubaにご参加くださった皆さまへ'
+        },
+        {
+          hid: 'og:type',
+          property: 'og:type',
+          content: 'website'
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: 'https://tedxutsukuba.com/notice/2020/11/22'
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: 'Peatixの不正アクセス事象に関するご確認のお願い'
+        },
+        {
+          hid: 'og:author',
+          property: 'og:author',
+          content: 'Haruki Kinoshita and TEDxUTsukuba website team'
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: 'https://www.tedxutsukuba.com/_nuxt/img/eaae22f.png'
+        },
+        { 
+          hid: 'og:site_name', 
+          name: 'og:site_name', 
+          content: 'Notice' 
+        }
+      ]
+    }
+  }
+}
+</script>
