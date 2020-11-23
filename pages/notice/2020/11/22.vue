@@ -51,8 +51,6 @@
           <br><br>
           <a href="https://peatix.com/event/1721625?utm_source=curated&utm_medium=ptxtop&utm_campaign=curated-events">Peatixへの不正アクセス事象に関するお詫びとお知らせ</a>
           <br><br>
-          We apologize for any inconvenience caused by this incident. It is officially advised to change the passwords of other services that have the same passwords as Peatix. 
-          <br><br>
           The following events held by our organization used Peatix: 
           <br>
           <div class="content">
@@ -61,6 +59,8 @@
               <li>2016　TEDxUTsukuba「joyn’」</li>
             </ul>
           </div>
+          We apologize for any inconvenience caused by this incident. It is officially advised to change the passwords of other services that have the same passwords as Peatix. 
+          <br><br>
           For further information please contact the following:
           <br><br>
           <span class="has-text-weight-bold">Peatix Japan</span>
