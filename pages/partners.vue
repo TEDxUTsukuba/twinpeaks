@@ -29,31 +29,10 @@
         </b-carousel>
       </div> -->
       <section class="section has-text-centered">
-        <div class="columns is-multiline is-mobile is-8-tablet">
-          <div class="column is-2-fullhd is-3-desktop is-4-tablet is-6-mobile" v-for="(partner, index) in partnerList" :key="index">
-            <div class="has-background-white has-text-dark" style="padding: 10px;">
-              <figure class="image is-1by1">
-                <img :src="getJsonImgUrl(partner.id)" :alt="partner.name">
-              </figure>
-              <br>
-              <p>
-                {{ partner.name }} 様
-              </p>
-              <br>
-              <!-- <p class="is-size-7">{{ partner.category }}</p> -->
-                <!-- <button class="button is-black is-outlined is-rounded"
-                  @click="openModal(partner)">
-                  {{ $t('button.discover') }}
-                </button> -->
-                <a :href="partner.url" class="button is-small is-black is-outlined is-rounded">{{ $t('button.visitwebsite') }}</a>
-                <modal :val="postItem" v-show="showContent" @close="closeModal" />
-            </div>
-          </div>
-
-
-        
-
-        </div>
+        <PartnerList category="take" width_fullhd="4" width_desktop="4" width_tablet="4" width_mobile="12" />
+        <!-- <PartnerList category="take" /> -->
+        <PartnerList category="ume" width_fullhd="3" width_desktop="3" width_tablet="6" width_mobile="12" />
+        <PartnerList category="sakura" width_fullhd="2" width_desktop="2" width_tablet="4" width_mobile="12" />
       </section>
     </section>
   </section>
@@ -61,9 +40,10 @@
 
 <script>
 import Modal from '~/components/Modal.vue'
+import PartnerList from '~/components/PartnerList.vue'
 export default {
   components: {
-    Modal
+    Modal, PartnerList
   },
   data() {
     return {
@@ -73,8 +53,8 @@ export default {
       gallery: false,
       pauseInfoType: 'is-dark',
       images: [
-        require('~/assets/partners/2020/carousel_3.jpg'),
-        require('~/assets/partners/2020/carousel_4.jpg')
+        // require('~/assets/partners/2020/carousel_3.jpg'),
+        // require('~/assets/partners/2020/carousel_4.jpg')
       ]
     }
   },
@@ -86,15 +66,6 @@ export default {
     closeModal () {
       this.showContent = false
     },
-    getImgUrl(value) {
-      // value += 50
-      // return `https://picsum.photos/id/10${value}/1230/500`
-      return this.images[value]
-    },
-    getJsonImgUrl(value) {
-      // return require(`~/assets/partners/2020/carousel_${value}.jpg`)
-      return require(`~/assets/partners/2020/logo/${value}.jpg`)
-    },
     switchGallery(value) {
       this.gallery = value
       if (value) {
@@ -104,13 +75,13 @@ export default {
       }
     }
   },
-  computed: {
-    partnerList() {
-      return this.$store.getters[
-        'partner/showAllPartners'
-      ](this.year)
-    }
-  }
+  // computed: {
+  //   partnerList() {
+  //     return this.$store.getters[
+  //       'partner/findPartnersByCategory'
+  //     ](this.category)
+  //   }
+  // }
 }
 </script>
 
