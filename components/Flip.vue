@@ -4,7 +4,7 @@
       <p class="subtitle is-size-6 has-text-primary">{{ description }}</p>
       <article>{{ detail }}</article>
       <br>
-      <a v-if="link" :href="localePath(link)" class="button is-gradient is-rounded">{{ $t('button.discover') }}</a>
+      <a v-if="link" :href="link" class="button is-gradient is-rounded">{{ $t('button.discover') }}</a>
       
       <!-- <p class="image is-16by9">
         <img :src="imageUrl" alt="">
