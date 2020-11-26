@@ -24,6 +24,10 @@
             <nuxt-link :to="localePath('/events/2020')" class="button is-gradient is-rounded is-medium">{{ $t('button.discover') }}</nuxt-link>
             <br><br>
             <a class="has-text-white" href="webcal:~/assets/event.ics" download>{{ $t('event.download') }}</a>
+            <br><br>
+            <b-message :title="$t('notice.right-bottom.title')" type="is-warning" v-model="isAlertActive" aria-close-label="Close message">
+            {{ $t('notice.right-bottom.detail') }} <a href="https://tiget.net/events/109783">{{ $t('2020.participance.premium.tiget') }}</a>
+          </b-message>
           </section>
       </div>
 
@@ -182,7 +186,8 @@ export default {
       videoId2: 'q_Es52kl6FQ',
       videoId3: 'ZbIEuwjpxp0',
       todayDate: Date.now(),
-      eventDate: Date(2020, 11, 29, 0, 0, 0)
+      eventDate: Date(2020, 11, 29, 0, 0, 0),
+      isAlertActive: true
     }
   },
   methods: {
