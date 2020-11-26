@@ -247,7 +247,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .nmp-dark {
     border-radius: 18px !important;
   }
@@ -255,5 +255,8 @@ export default {
     margin-top: 0.5rem;
     color: #E62B1E;
     font-weight: bold;
+  }
+  a {
+    color: white;
   }
 </style>
