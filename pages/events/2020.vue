@@ -118,6 +118,9 @@
                     <li><font-awesome-icon :icon="['fas', 'check-square']" style="color: white;" /> {{ $t('2020.participance.free.reservation') }}</li>
                   </ul>
                 </div>
+                <div class="has-text-right">
+                  <a class="button is-white is-outlined is-rounded" href="https://www.youtube.com/watch?v=yJpcvqCC0ww">Watch Live</a>
+                </div>
               </div>
             </div>
             <div class="column is-7">
