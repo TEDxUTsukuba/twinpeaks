@@ -107,11 +107,21 @@ export default {
     ],
     // 'nuxt-fontawesome',
     // Doc: https://axios.nuxtjs.org/usage
+    'nuxt-i18n',
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     'nuxt-webfontloader',
     'nuxt-svg-loader',
-    'nuxt-i18n'
+    [
+      '@nuxtjs/sitemap',
+      { 
+        path: '/sitemap.xml',
+        hostname: 'https://www.tedxutsukuba.com',
+        exclude: [
+          '/explore', '/inspire', '/talks_old'
+        ]
+      }
+    ]
   ],
   // webfontloader: {
   //   google: {
