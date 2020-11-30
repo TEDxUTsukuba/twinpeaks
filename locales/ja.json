@@ -7,7 +7,7 @@
     "close": "閉じる"
   },
   "top": {
-    "message": "Language Setting: 日本語"
+    "message": "言語設定: 日本語"
   },
   "intro": {
     "headline": "価値あるアイディアを、つくばから。",
@@ -30,7 +30,7 @@
   "event": {
     "title1": "ようこそ、",
     "title2": "事事無碍の世界へ。",
-    "subtitle": "11月29日(日) にオンラインでトークイベントを開催します。",
+    "subtitle": "TEDxUTsukuba 'JIJIMUGE' にご参加いただきありがとうございました。",
     "download": "カレンダーに追加"
   },
   "news": {
@@ -44,10 +44,10 @@
       "link": "/notice/2020/11/22"
     },
     "left-bottom": {
-      "title": "オンラインでイベントを開催します。",
-      "description": "TEDxUTsukuba 2020 'JIJIMUGE' を11月29日(日)に開催します。",
-      "detail": "新型コロナウイルスの影響により、今年はオンラインにてイベントを開催いたします。トークは無料でご視聴いただけます。皆さまの参加を心よりお待ちしています。",
-      "link": "https://www.tedxutsukuba.com/events/2020"
+      "title": "オンラインイベントにご参加いただきありがとうございました。",
+      "description": "TEDxUTsukuba 'JIJIMUGE' は盛況のうちに終了いたしました",
+      "detail": "YouTubeにてイベントのアーカイブを公開しています",
+      "link": ""
     },
     "right-top": {
       "title": "「天才になる呪い」が再生回数1万回を突破しました。",
@@ -56,10 +56,10 @@
       "link": "https://www.youtube.com/watch?v=qvOi1C8qCDM"
     },
     "right-bottom": {
-      "title": "JIJIMUGE 交流会の申し込みを受け付けています。",
-      "description": "TEDxUTsukuba イチオシ企画！ パートナー提供食品のプレゼントも！",
-      "detail": "'JIJIMUGE'トークセッションの後に、特別なセッションをご用意しています。またパートナー企業の素敵な食品を郵送にてお届けします。",
-      "link": "https://www.tedxutsukuba.com/events/2020"
+      "title": "新しいメンバーを募集しています。",
+      "description": "誰でもクリエイティブになれる場所、それがTEDxUTsukuba",
+      "detail": "自分の手でイベントを企画・運営してみませんか。まずはお気軽にご連絡ください。",
+      "link": "https://www.tedxutsukuba.com/about"
     }
   },
   "social": {

@@ -30,7 +30,7 @@
   "event": {
     "title1": "Don't mask your curiosity.",
     "title2": "",
-    "subtitle": "Join us for our annual event on November 29",
+    "subtitle": "Thank you for joining our annual event on November 29",
     "download": "Add to calendar"
   },
   "news": {
@@ -44,10 +44,10 @@
       "link": "/notice/2020/11/22"
     },
     "left-bottom": {
-      "title": "Annual event is coming on November!",
-      "description": "TEDxUTsukuba 2020 'JIJIMUGE' event will be held online",
-      "detail": "As a special measure to prevent Covid-19 spreading we will hold an olline talk free for everyone, we are eager to see you there!",
-      "link": "https://www.tedxutsukuba.com/events/2020"
+      "title": "Thank you for joining our annual event!",
+      "description": "TEDxUTsukuba 2020 'JIJIMUGE' was a great success.",
+      "detail": "Watch the archive on YouTube.",
+      "link": ""
     },
     "right-top": {
       "title": "Our talk earned 10,000 views",
@@ -56,10 +56,10 @@
       "link": "https://www.youtube.com/watch?v=qvOi1C8qCDM"
     },
     "right-bottom": {
-      "title": "Sign up for 'JIJIMUGE' interaction session",
-      "description": "Experience more than just a talk event",
-      "detail": "You'll get a special opportunity to talk with our speakers in person, and we will deliver our partner's food.",
-      "link": "https://www.tedxutsukuba.com/events/2020"
+      "title": "Join our team!",
+      "description": "This is where the magic happens. ",
+      "detail": "Contact us for more information!",
+      "link": "https://www.tedxutsukuba.com/about"
     }
   },
   "social": {
