@@ -1,6 +1,6 @@
 <template>
   <section class="hero is-black font-awesome has-text-white">
-    <div class="hero-body bg-dark">
+    <div class="hero-body">
       
         <section class="section has-text-centered">
         <h1 class="title is-2 has-text-centered">
