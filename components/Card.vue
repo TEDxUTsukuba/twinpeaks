@@ -96,7 +96,7 @@ h1.subtitle {
 div.speaker-name-overlap {
   position: absolute; 
   background-color: white; 
-  top: calc(height - 20px);
+  // top: calc(height - 20px);
   right: 0;
   padding: 20px;
 }
