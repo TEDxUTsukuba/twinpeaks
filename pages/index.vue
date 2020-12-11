@@ -8,36 +8,34 @@
       >
       <h1 class="title textoverflow">Social Capital</h1> -->
       
-      <div style="background: black;">
-          <div class="top-photoframe">
-            <nuxt-link :to="localePath('/events/2020')"><img src = "~/assets/wallpapers/jijimuge.jpg" /></nuxt-link>
-          </div>
-          <section class="section has-text-centered has-text-weight-light has-text-white">
-            <h1 class="title is-1 is-spaced">
-              {{ $t('event.title1') }}<br class="mobile-br">{{ $t('event.title2') }}
-            </h1>
-            <h1 class="subtitle is-3 has-text-weight-normal has-text-white">
-              {{ $t('event.subtitle') }}
-            </h1>
-            <br><br>
-            <nuxt-link :to="localePath('/events/2020')" class="button is-gradient is-rounded is-medium">{{ $t('button.discover') }}</nuxt-link>
-            <br><br>
-            <a class="has-text-white" href="webcal:~/assets/event.ics" download>{{ $t('event.download') }}</a>
-            <br><br>
-            <!-- <b-message :title="$t('notice.right-bottom.title')" type="is-warning" v-model="isAlertActive" aria-close-label="Close message">
-              {{ $t('notice.right-bottom.detail') }} <a href="https://tiget.net/events/109783">{{ $t('2020.participance.premium.tiget') }}</a>
-            </b-message> -->
-          </section>
+      <div class="top-photoframe">
+        <nuxt-link :to="localePath('/events/2020')"><img src = "~/assets/wallpapers/jijimuge.jpg" /></nuxt-link>
       </div>
+      <section class="section has-text-centered has-text-weight-light has-text-white">
+        <h1 class="title is-1 is-spaced">
+          {{ $t('event.title1') }}<br class="mobile-br">{{ $t('event.title2') }}
+        </h1>
+        <h1 class="subtitle is-3 has-text-weight-normal has-text-white">
+          {{ $t('event.subtitle') }}
+        </h1>
+        <br><br>
+        <nuxt-link :to="localePath('/events/2020')" class="button is-gradient is-rounded is-medium">{{ $t('button.discover') }}</nuxt-link>
+        <br><br>
+        <a class="has-text-white" href="webcal:~/assets/event.ics" download>{{ $t('event.download') }}</a>
+        <br><br>
+        <!-- <b-message :title="$t('notice.right-bottom.title')" type="is-warning" v-model="isAlertActive" aria-close-label="Close message">
+          {{ $t('notice.right-bottom.detail') }} <a href="https://tiget.net/events/109783">{{ $t('2020.participance.premium.tiget') }}</a>
+        </b-message> -->
+      </section>
 
-      <section class="hero" style="background-color: black;">
+      <section class="hero">
         <div class="hero-body has-text-centered">
          <Movie id="teaser" :vId='videoId1' :aPlay='autoplay'></Movie>
         </div>
       </section>
 
       <section class="hero bg-red">
-        <div class="hero-body has-text-white">
+        <div class="hero-body">
           <section class="section">
             <div class="columns is-multiline is-centered">
               <div class="column is-5-widescreen is-full-desktop is-full-tablet is-full-mobile">

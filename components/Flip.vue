@@ -20,15 +20,6 @@ export default {
 </script>
 
 <style scoped>
-  .container {
-    margin: 0 2vw;
-  }
-  .title {
-    font-weight: bold;
-  }
-  .subtitle {
-    font-weight: bold;
-  }
   .p {
     color: gray;
   }

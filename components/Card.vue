@@ -1,18 +1,22 @@
 <template>
-    <div class="nmp-dark columns is-gapless is-multiline">
-      <div class="card-image column is-4-tablet is-4-desktop is-4-widescreen is-3-fullhd">
+    <div class="columns is-multiline is-variable is-8-desktop is-vcentered">
+      <div class="card-image column is-12-tablet is-4-desktop is-4-widescreen is-4-fullhd">
         <div class="image-box">
-          <figure class="image is-1by1">
+          <figure class="image is-1by1" ref="imageref">
             <img class="nmp-card-image" :src="image_url" alt="Placeholder image">
           </figure>
+          <!-- <div class="speaker-name-overlap">
+            <h1 class="title is-2 ja has-text-centered-mobile" v-if="$i18n.locale == 'ja'">{{ title }}</h1>
+            <h1 class="title is-2 en has-text-centered-mobile" v-if="$i18n.locale == 'en'">{{ title }}</h1>
+          </div> -->
         </div>
       </div>
       <div class="column">
-        <div class="card-content has-text-centered has-text-right-tablet">
-          <h1 class="title is-1 ja has-text-centered-mobile" v-if="$i18n.locale == 'ja'">{{ title }}</h1>
-          <h1 class="title is-1 en has-text-centered-mobile" v-if="$i18n.locale == 'en'">{{ title }}</h1>
+        <h1 class="title is-1 ja has-text-centered-mobile" v-if="$i18n.locale == 'ja'">{{ title }}</h1>
+        <h1 class="title is-1 en has-text-centered-mobile" v-if="$i18n.locale == 'en'">{{ title }}</h1>
+        <div class="nmp-card-dark card-content has-text-centered has-text-right-tablet">
           <!-- <h1 class="subtitle is-size-4 has-text-primary">{{ subtitle }}</h1> -->
-          <p class="has-text-left is-size-6" style="max-width: 850px; margin-left: auto; text-align: justify;">
+          <p class="has-text-left is-size-6" style="text-align: justify;">
             {{ description }}
           </p>
           <div class="section" style="padding: 0;">
@@ -65,17 +69,18 @@ export default {
       type: String,
       required: true
     }
-  }
+  },
 }
 </script>
 
 <style lang="scss" scoped>
 h1.title {
+  color: white !important;
   font-weight: 300;
   font-family: sans-serif;
   &.ja {
-    letter-spacing: 14px;
-    margin-right: -14px;
+    // letter-spacing: 14px;
+    // margin-right: -14px;
     @media screen and (max-width: 1080px) {
       letter-spacing: 0;
       margin-right: 0;
@@ -86,5 +91,13 @@ h1.title {
 h1.subtitle {
   color: #E62B1E;
   margin-bottom: 3vh;
+}
+
+div.speaker-name-overlap {
+  position: absolute; 
+  background-color: white; 
+  top: calc(height - 20px);
+  right: 0;
+  padding: 20px;
 }
 </style>

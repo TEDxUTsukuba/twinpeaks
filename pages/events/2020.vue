@@ -1,15 +1,20 @@
 <template>
-  <section id="wrapper-dark" class="font-awesome">
-    
-    <section class="hero is-medium is-dark bg-jijimuge">
-      <div class="hero-body has-text-white has-text-left">
+  <section id="wrapper-dark" class="font-awesome">   
+    <section class="hero is-medium bg-jijimuge">
+      <div class="hero-body has-text-left">
         <div class="container has-text-centered">
           <h1 class="title is-1">JIJIMUGE</h1>
           <h1 class="subtitle is-4">TEDxUTsukuba 2020</h1>
         </div>
       </div>
     </section>
- 
+
+    <section class="hero">
+      <div class="hero-body has-text-centered">
+        <Movie id="teaser" :vId='videoId1' :aPlay='autoplay'></Movie>
+      </div>
+    </section>
+
     <section class="section">
       <h1 class="title is-0">
         <span class="">{{ $t('2020.speaker.title') }}</span>
@@ -118,9 +123,6 @@
                     <li><font-awesome-icon :icon="['fas', 'check-square']" style="color: white;" /> {{ $t('2020.participance.free.reservation') }}</li>
                   </ul>
                 </div>
-                <div class="has-text-right">
-                  <a class="button is-white is-outlined is-rounded" href="https://www.youtube.com/watch?v=yJpcvqCC0ww">Watch Live</a>
-                </div>
               </div>
             </div>
             <div class="column is-7">
@@ -143,9 +145,6 @@
                       <img src="~/assets/partners/2020/logo/AM_Full_Logo/PNG/AM_Logo_Dark_WM.png" width="200px" style="background-color: white; padding: 15px;"> 
                       <p class="is-size-7" v-if="$i18n.locale == 'ja'">{{ $t('2020.participance.premium.airmeet') }}</p>
                     </div>
-                    <div class="column is-12-tablet is-half-desktop has-text-right">
-                      <a class="button is-large is-white is-outlined is-rounded" href="https://tiget.net/events/109783">{{ $t('2020.participance.premium.tiget') }}</a>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -159,6 +158,7 @@
 
 <script>
 import Card from '~/components/Card'
+import Movie from '~/components/Movie'
 import Image_sp1 from '~/assets/speakers/2020/speaker-01.png'
 import Image_sp2 from '~/assets/speakers/2020/speaker-02.png'
 import Image_sp3 from '~/assets/speakers/2020/speaker-03.png'
@@ -166,10 +166,11 @@ import Image_sp4 from '~/assets/speakers/2020/speaker-04.png'
 
 export default {
   components: {
-    Card
+    Card, Movie
   },
   data(){
     return {
+      videoId1: 'yJpcvqCC0ww',
       src_sp1: Image_sp1,
       src_sp2: Image_sp2,
       src_sp3: Image_sp3,
@@ -259,7 +260,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://www.tedxutsukuba.com/sns_banner.png'
+        content: 'https://www.tedxutsukuba.com/sns_banner_2020.png'
       },
       { 
         hid: 'og:site_name', 
@@ -292,9 +293,9 @@ export default {
 </script>
 
 <style scoped>
-  .notification {
-    background-color: white;
-  }
+.bg-jijimuge {
+  background-image: linear-gradient( 135deg, #F1CA74 10%, #A64DB6 100%);
+}
   .is-active .al img {
     filter: grayscale(0%);
   }

@@ -6,6 +6,7 @@ $light: #F1F4F7;
 // $dark: #5A5E70;
 // $dark: #131313;
 // $dark: #1c1c1c;
+$black: #000000;
 $dark: #222222;
 $dark1: #0c0c0c;
 $dark2: #1c1c1c;
@@ -167,7 +168,7 @@ section#wrapper {
   // background-color: $light;
   background-attachment: fixed !important;
   // background-color: #e7eff9;
-  background-color: #f1f4f7;
+  background-color: $light;
   // background-image: linear-gradient(to top, $light 0%, #d1dbe4 74%);
   font-feature-settings: "palt";
 }
@@ -175,7 +176,7 @@ section#wrapper-dark {
   // background-color: $dark;
   height: 100%;
   background-attachment: fixed !important;
-  background-color: hsl(0, 0%, 4%);
+  background-color: $black;
   // background-image: linear-gradient(to bottom, #111111 0%, #181818 74%);
   font-feature-settings: "palt";
   .notification {
@@ -209,29 +210,8 @@ section.section {
   }
 }
 
-.bg-light {
-  background-color: $light;
-}
-.bg-dark {
-  background-color: $dark;
-  // background: rgb(21,28,28);
-  // background: linear-gradient(0deg, rgba(21,28,28,1) 0%, rgba(75,75,75,1) 100%);
-  h1,h2,h3,ul {
-    color: #ffffff;
-  }
-  p,article,li {
-    color: #bcc5cd;
-  }
-}
 .bg-red {
   background-color: $primary;
-}
-
-.bg-jijimuge {
-  background-image: linear-gradient( 135deg, #F1CA74 10%, #A64DB6 100%);
-}
-.bg-cophilaction {
-  background-image: linear-gradient( 135deg, #81FFEF 10%, #F067B4 100%);
 }
 
 br.mobile-br {
@@ -243,7 +223,7 @@ br.mobile-br {
 
 .card {
   border-radius: 0px;
-  background-color: #F1F4F7;
+  background-color: $light;
   // box-shadow:  10px 10px 20px #cfcfd1,
   //              -10px -10px 20px #ffffff;
 }
@@ -259,7 +239,7 @@ br.mobile-br {
 }
 .nmp-card-light {
   @extend .nmp-card;
-  color: black;
+  color: $dark;
   background: white;
   // box-shadow:  10px 10px 20px #cfcfd1,
   //             -10px -10px 20px #ffffff;
@@ -284,16 +264,16 @@ br.mobile-br {
     color: white;
   }
 }
-.card-image {
-  // @extend .nmp-card;
-  @media screen and (max-width: 1024px) {
-  border-radius: 20px;
-  // border-radius: 28px 28px 0 0;
-  }
-  @media screen and (min-width: 1025px) {
-    border-radius: 20px;
-  }
-}
+// .card-image {
+//   // @extend .nmp-card;
+//   @media screen and (max-width: 1024px) {
+//   border-radius: 20px;
+//   // border-radius: 28px 28px 0 0;
+//   }
+//   @media screen and (min-width: 1025px) {
+//     border-radius: 20px;
+//   }
+// }
 
 .nmp {
   border-radius: 50px;
@@ -304,10 +284,12 @@ br.mobile-br {
   }
 }
 .nmp-card-image {
+  border: 15px solid $red;
   @media screen and (max-width: 1024px) {
-    border-radius: 10px;
+    // border-radius: 10px;
   }
-  border-radius: 32px;
+  // border-radius: 32px;
+  border-radius: 50%;
 }
 
 .nmp-light {

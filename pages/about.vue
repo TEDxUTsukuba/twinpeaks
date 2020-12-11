@@ -1,7 +1,7 @@
 <template>
   <section id="wrapper-dark" class="font-awesome">
-    <section class="hero is-medium is-black">
-      <div class="hero-body has-text-white has-text-left">
+    <section class="hero is-medium">
+      <div class="hero-body has-text-left">
         <div class="container has-text-centered">
           <h1 class="title is-1 is-spaced">{{ $t('about.title')}}</h1>
           <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.subtitle')}}</h1>
@@ -136,7 +136,7 @@
         </div>
       </div>
     </section>
-    <section class="section has-text-white">
+    <section class="section">
       <div class="columns is-mobile is-multiline">
         <div v-for="(job, index) in jobs" :key="job.id" class="column is-3-desktop is-6-tablet is-6-mobile">
           <div :class="`notification has-background-${job.color}`">
