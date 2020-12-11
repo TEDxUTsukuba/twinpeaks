@@ -172,5 +172,130 @@
         "inputpassword": "Password is jijimuge"
       }
     }
+  },
+    "2020": {
+    "speaker": {
+      "title": "Speakers",
+      "description": "We invite four speakers with brilliant ideas. ", 
+      "share": "Share this speaker",
+      "sp1": {
+        "name": "Takeharu Mikami",
+        "position": "n/a",
+        "description": "The fifth editor-in-chief of Mu, a magazine that challenges the mysteries and wonders of the world, including UFOs and supernatural phenomena. He uses a surprisingly authentic approach to the truth, showing us a world that we don’t usually get to see. His trademark sunglasses give off a mysterious vibe"
+      },
+      "sp2": {
+        "name": "SeungHee Lee",
+        "position": "n/a", 
+        "description": "Associate Professor at the University of Tsukuba in pursuit of compassionate design. Disseminating “Kansei” to the world through interdisciplinary research that focuses on human sensitivity. Surprising interests include martial arts and competitive dancing."
+      },
+      "sp3": {
+        "name": "Seita Emori",
+        "position": "n/a", 
+        "description": "Climate change expert and deputy director of the Center for Global Environmental Research at the National Institute for Environmental Studies. Thinking daily about how to communicate with others to help solve the problem of climate change. He loves Pokémon!"
+      },
+      "sp4": {
+        "name": "Carina Miwa Yoshimura",
+        "position": "n/a",
+        "description": "Japanese-Paraguayan 'Sansei', came to Japan to study at University of Tsukuba. While in school, she was able to communicate the charm of Paraguay, mainly in Tsukuba, and at the same time, worked hard to support Nikkei communities across the country. 'By keep learning new idea, my world expand.'"
+      }
+    },
+    "concept": {
+      "title": "Concept", 
+      "description": "Our event concept is 'JIJIMUGE', which is derived from a Buddhism term.",
+      "headline": "JIJIMUGE",
+      "statement1": "今、世の中にある様々な境界線が溶けつつあります。",
+      "statement2": "今、世の中にある様々な境界線が溶けつつあります。",
+      "statement3": "今、世の中にある様々な境界線が溶けつつあります。"
+    },
+    "participance": {
+      "applynowbutton": "Apply for the interaction session",
+      "title": "How to join",
+      "description": "Stay home and join our virtual event online. ",
+      "free": {
+        "title": "Talk Session",
+        "time": "13:00 - 15:10",
+        "youtube": "YouTube Live",
+        "intro": "Watch our livestream",
+        "charge": "Free of charge",
+        "reservation": "No reservation"
+      },
+      "premium": {
+        "title": "Interaction Session",
+        "time": "15:15 - 16:30",
+        "tiget": "Sign Up",
+        "intro": "Enjoy conversations with speakers, get foods of our partners!",
+        "charge": "Price: ¥2,000",
+        "reservation": "Sign up is required.",
+        "airmeet": "Powered by our partner"
+      },
+      "pass": {
+        "inputpassword": "Password is jijimuge"
+      }
+    }
+  },
+  "2019": {
+    "speaker": {
+      "title": "登壇者",
+      "description": "5名のスピーカーの皆さまによる価値あるアイディアをお届けいたします。",
+      "share": "シェアする",
+      "sp1": {
+        "name": "松島壮志",
+        "position": "裸足のバーテンダー",
+        "description": "UFOや超常現象など、様々な世界の謎と不思議に挑戦する雑誌『ムー』の5代目編集長。普段私たちが覗くことのない世界を発信し、驚くほど本格的に真相に迫る。トレードマークのサングラスからはミステリアスな雰囲気が漂っている。"
+      },
+      "sp2": {
+        "name": "山田玲司",
+        "position": "本質翻訳家",
+        "description": "人間に思いやりを与えるデザインを追究する筑波大学の准教授。人間の「感性」をキーワードとした分野横断的な研究を通して、“Kansei”を世界に発信している。意外な趣味は格闘技や競技ダンス。"
+      },
+      "sp3": {
+        "name": "Leonid Dimaano",
+        "position": "n/a",
+        "description": "国立環境研究所の地球環境研究センターで、副センター長を務める気候変動の専門家。どのようなコミュニケーションをすれば気候変動の問題が解決へと向かうのかを日々考え、発信している。ポケモンが大好き。"
+      },
+      "sp4": {
+        "name": "Annet Nakkazi",
+        "position": "n/a",
+        "description": "パラグアイで生まれ育った日系3世で、大学院への進学を機に来日。在学中はつくばを中心にパラグアイの魅力を伝える一方で、全国各地の日系人コミュニティの支援活動にも力を尽くした。『知ることで世界は広がる』"
+      },
+      "sp5": {
+        "name": "Carol Inugai Dixon",
+        "position": "Professor of Pegadogy",
+        "description": "Carol Inugai Dixon is currently a guest professor at the University of Tsukuba and President of the Japan Association of Research into International Baccalaureate Education (JARIBE). Carol began working in the field of education almost fifty years ago as a teacher of biology in the British school system. Moving into international school education in Japan and the area of applied linguistics she later became a leader at Yokohama International School (YIS) for whole school change was based on the significance of successful language development for students’ social and emotional well-being. She was also the co ordinator and a teacher of Theory of Knowledge (TOK) and has recently co authored a book concerning the subject. In 2016 Carol was invited to work at the International Baccalaureate Curriculum and Assessment Center in Wales to develop policies, principles and practices that would cohere language learning access all the programme curriculums. Carol moved to The Hague when the center relocated, returning to Japan in 2014. Her current research interests concern the connection between social emotional well-being and the development of ethical values, TOK and systems thinking approaches to teaching and learning, and synergies between Japanese national and western derived international educational systems."
+      }
+    },
+    "concept": {
+      "title": "Concept",
+      "description": "Our event concept is 'JIJIMUGE', which is derived from a Buddhism term.",
+      "headline": "JIJIMUGE",
+      "statement1": "今、世の中にある様々な境界線が溶けつつあります。",
+      "statement2": "今、世の中にある様々な境界線が溶けつつあります。",
+      "statement3": "今、世の中にある様々な境界線が溶けつつあります。"
+    },
+    "participance": {
+      "applynowbutton": "Apply for the interaction session",
+      "title": "How to join",
+      "description": "Stay home and join our virtual event online. ",
+      "free": {
+        "title": "Talk Session",
+        "time": "13:00 - 15:10",
+        "youtube": "YouTube Live",
+        "intro": "Watch our livestream",
+        "charge": "Free of charge",
+        "reservation": "No reservation"
+      },
+      "premium": {
+        "title": "Interaction Session",
+        "time": "15:15 - 16:30",
+        "tiget": "Sign Up",
+        "intro": "Enjoy conversations with speakers, get foods of our partners!",
+        "charge": "Price: ¥2,000",
+        "reservation": "Sign up is required.",
+        "airmeet": "Powered by our partner"
+      },
+      "pass": {
+        "inputpassword": "Password is jijimuge"
+      }
+    }
   }
 }
