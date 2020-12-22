@@ -19,7 +19,7 @@
       <h1 class="title is-0">
         <span class="">{{ $t('2020.speaker.title') }}</span>
       </h1>
-      <h1 class="subtitle has-text-white has-text-right">
+      <h1 class="subtitle has-text-white has-text-right has-text-centered-mobile">
         {{ $t('2020.speaker.description') }}
       </h1>
       <Card
@@ -56,7 +56,7 @@
         <h1 class="title is-0">
           <span class="">{{ $t('2020.concept.title') }}</span>
         </h1>
-        <h1 class="subtitle has-text-white has-text-right">
+        <h1 class="subtitle has-text-white has-text-right has-text-centered-mobile">
           {{ $t('2020.concept.description') }}
         </h1>
         <br><br>
@@ -105,7 +105,7 @@
           <h1 class="title is-0">
             <span class="">{{ $t('2020.participance.title') }}</span>
           </h1>
-          <h1 class="subtitle has-text-white has-text-right">
+          <h1 class="subtitle has-text-white has-text-right has-text-centered-mobile">
             {{ $t('2020.participance.description') }}
           </h1>
           <div class="columns">
@@ -153,6 +153,29 @@
         </section>
       </div>
     </section>
+    <section class="hero">
+      <section class="section">
+        <h1 class="title is-0">
+          <span class="">{{ $t('2020.highlight.title') }}</span>
+        </h1>
+      </section>
+      <div class="columns is-multiline is-mobile is-gapless">
+        <div v-for="(item, i) in 15" :key="i" class="column is-4-mobile is-one-fifth-tablet">
+            <figure :class="`image is-1by1 colorfilter-base-${i%2}`" :hover="isImageModalActive">
+                <img :src="getHighlightImgUrl(i)" alt="TEDxUTsukuba JIJIMUGE" style="object-fit: cover;" class="colorfilter-image">
+            </figure>
+          <b-modal v-model="isImageModalActive">
+            <p>sa</p>
+            <p class="image is-4by3">
+              <img :src="getHighlightImgUrl(i)" alt="TEDxUTsukuba JIJIMUGE">
+            </p>
+          </b-modal>
+        </div>
+      </div>
+      <section class="section has-text-centered">
+        <a class="button is-large is-rounded is-gradient" href="https://flic.kr/s/aHsmSNKeT6">{{ $t('2020.highlight.detail') }}</a>
+      </section>
+    </section>
   </section>
 </template>
 
@@ -170,6 +193,7 @@ export default {
   },
   data(){
     return {
+      isImageModalActive: false,
       videoId1: 'yJpcvqCC0ww',
       src_sp1: Image_sp1,
       src_sp2: Image_sp2,
@@ -271,6 +295,9 @@ export default {
     }
   },
   methods: {
+    getHighlightImgUrl(value) {
+      return require(`~/assets/2020/highlight/highlight-2020-${value}.jpg`)
+    },
     getImgUrl(value) {
       if (process.client) {
         if (window.innerWidth <= 1080) {
