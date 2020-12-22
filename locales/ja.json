@@ -60,7 +60,8 @@
       "description": "誰でもクリエイティブになれる場所、それがTEDxUTsukuba",
       "detail": "自分の手でイベントを企画・運営してみませんか。まずはお気軽にご連絡ください。",
       "link": "https://www.tedxutsukuba.com/about"
-    }
+    },
+    "last-modified": "最終更新: "
   },
   "social": {
     "title": "公式SNS",
@@ -111,9 +112,14 @@
   },
   "talks": {
     "title": "トーク",
-    "subtitle": "イベントを通して、教養から科学、地域の話題から世界規模の問題に至るまで、様々なトピックスに焦点を当ててきました。"
+    "subtitle": "イベントを通して、教養から科学、地域の話題から世界規模の問題に至るまで、様々なトピックスに焦点を当ててきました。",
+    "notice": "TEDxUTsukuba 2020 'JIJIMUGE' にて皆さまにお届けしたトークは、TEDへの申請が受理された後に、YouTubeにて公開される予定です。"
   },
   "2020": {
+    "highlight": {
+      "title": "ハイライト",
+      "detail": "Flickrでさらに写真を見る"
+    },
     "speaker": {
       "title": "登壇者",
       "description": "4名のスピーカーの皆さまによる価値あるアイディアをお届けいたします。",
@@ -214,7 +220,7 @@
     },
     "participance": {
       "applynowbutton": "今すぐ交流会に申し込む",
-      "title": "参加方法",
+      "title": "プログラム",
       "description": "すべてのセッションをオンラインで開催いたします。",
       "free": {
         "title": "トークセッション",
