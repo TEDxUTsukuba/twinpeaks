@@ -285,7 +285,7 @@ br.mobile-br {
 }
 .nmp-card-image {
   border: 15px solid $red;
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 768) {
     // border-radius: 10px;
   }
   // border-radius: 32px;
@@ -345,7 +345,23 @@ br.mobile-br {
   //             inset -5px -5px 10px #ffffff;
   @media screen and (max-width: 768px) {
     border-radius: 18px;
+    width: 70vw;
+    margin: 0 auto;
   }
+}
+
+.colorfilter-base-0 {
+  background-color: $red;
+}
+.colorfilter-base-1 {
+  background-color: $tsukuba;
+}
+.colorfilter-base-2 {
+  background-color: black;
+}
+.colorfilter-image {
+    opacity: 1;
+    display: block;
 }
 // .side-cut {
 //   position: relative;
@@ -404,6 +420,13 @@ br.mobile-br {
   }
   font-size: 5rem;
   margin: 2rem;
+}
+
+.notice {
+  background-color: $primary;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
 }
 
 .fb {

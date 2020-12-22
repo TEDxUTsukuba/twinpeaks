@@ -5,6 +5,8 @@
         <div class="container has-text-centered">
           <h1 class="title is-1 is-spaced">{{ $t('talks.title') }}</h1>
           <h1 class="subtitle has-text-grey-light">{{ $t('talks.subtitle') }}</h1>
+          <br>
+          <span class="notice">{{ $t('talks.notice') }}</span>
         </div>
       </div>
     </section>
