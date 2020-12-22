@@ -1,9 +1,9 @@
 <template>
     <div class="columns is-multiline is-variable is-8-desktop is-vcentered">
-      <div class="card-image column is-12-tablet is-4-desktop is-4-widescreen is-4-fullhd">
+      <div class="card-image column is-12-mobile is-5-tablet is-4-desktop is-4-widescreen is-4-fullhd">
         <div class="image-box">
           <figure class="image is-1by1" ref="imageref">
-            <img class="nmp-card-image" :src="image_url" alt="Placeholder image">
+            <img class="nmp-card-image" :src="image_url" :alt="title">
           </figure>
           <!-- <div class="speaker-name-overlap">
             <h1 class="title is-2 ja has-text-centered-mobile" v-if="$i18n.locale == 'ja'">{{ title }}</h1>
@@ -96,7 +96,7 @@ h1.subtitle {
 div.speaker-name-overlap {
   position: absolute; 
   background-color: white; 
-  top: calc(height - 20px);
+  // top: calc(height - 20px);
   right: 0;
   padding: 20px;
 }
