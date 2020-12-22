@@ -60,7 +60,8 @@
       "description": "This is where the magic happens. ",
       "detail": "Contact us for more information!",
       "link": "https://www.tedxutsukuba.com/about"
-    }
+    },
+    "last-modified": "Last Modified: "
   },
   "social": {
     "title": "Be A Part of Us",
@@ -111,7 +112,8 @@
   },
   "talks": {
     "title": "Talks",
-    "subtitle": "We have shed light on relevant topics - from liberal arts to science, local stories to global issues."
+    "subtitle": "We have shed light on relevant topics - from liberal arts to science, local stories to global issues.",
+    "notice": "Our talks at TEDxUTsukuba 2020 'JIJIMUGE' are currently being reviewed by TED and will be availbale on YouTube soon."
   },
   "2020": {
     "speaker": {
@@ -174,6 +176,10 @@
     }
   },
     "2020": {
+      "highlight": {
+        "title": "Highlights",
+        "detail": "See more pictures on Flickr"
+      },
     "speaker": {
       "title": "Speakers",
       "description": "We invite four speakers with brilliant ideas. ", 
@@ -209,7 +215,7 @@
     },
     "participance": {
       "applynowbutton": "Apply for the interaction session",
-      "title": "How to join",
+      "title": "Programme",
       "description": "Stay home and join our virtual event online. ",
       "free": {
         "title": "Talk Session",
