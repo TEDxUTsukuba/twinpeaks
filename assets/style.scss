@@ -1,4 +1,5 @@
-$primary: #E62B1E;
+$primary: #FF2B06;
+// #E62B1E;
 $primary-invert: findColorInvert($primary);
 $tsukuba: #5B08B9;
 $tsukuba-invert: findColorInvert($tsukuba);
@@ -6,8 +7,8 @@ $light: #F1F4F7;
 // $dark: #5A5E70;
 // $dark: #131313;
 // $dark: #1c1c1c;
-$black: #000000;
-$dark: #222222;
+$black: hsl(0, 0%, 4%);
+$dark: hsl(0, 0%, 21%);
 $dark1: #0c0c0c;
 $dark2: #1c1c1c;
 // $dark1: #3f424e;
@@ -18,6 +19,7 @@ $dark2: #1c1c1c;
 $red: #c6251a;
 $red1: $primary;
 $red2: #ff3123;
+$light: hsl(0, 0%, 90%);
 
 .has-text-primary {
   color: $primary !important;
@@ -43,21 +45,35 @@ $red2: #ff3123;
 }
 iframe {
   @media screen and (max-width: 480px) {
-    height: 200px !important;
+    height: 180px !important;
   }
   @media screen and (min-width: 481px) and (max-width: 768px) {
-    height: 280px !important;
+    height: 270px !important;
   }
   @media screen and (min-width: 769px) and (max-width: 1080px) {
-    height: 200px !important;
+    height: 180px !important;
   }
   @media screen and (min-width: 1081px) and (max-width: 1408px) {
-    height: 280px !important;
+    height: 270px !important;
   }
   @media screen and (min-width: 1409px) {
-    height: 320px !important;
+    height: 360px !important;
   }
 }
+
+section.section + section.section {
+  padding-top: 0 !important;
+}
+
+div#notice > div.column {
+  @media screen and (max-width: 768px) {
+    padding: 0;
+  }
+}
+
+// div.column + div.column {
+//   padding-top: 0;
+// }
 
 // h1.title.is-2 {
 //   font-weight: bold;
@@ -67,10 +83,19 @@ iframe {
 // }
 @media screen and (max-width: 768px) {
   h1.title.is-1 {
-    font-size: 3.5rem !important;
+    font-size: 3rem !important;
   }
   h1.title.is-2 {
-    font-size: 1.5rem !important;
+    font-size: 2rem !important;
+  }
+  h1.title.is-3 {
+    font-size: 1.25rem !important;
+  }
+  h1.title.is-4 {
+    font-size: 1rem !important;
+  }
+  .is-size-6, p, article, li {
+    font-size: 0.75rem !important;
   }
 }
 @media screen and (min-width: 769px) and (max-width: 1080px) {
@@ -78,7 +103,7 @@ iframe {
     font-size: 3rem !important;
   }
   h1.title.is-2 {
-    font-size: 1.75rem !important;
+    font-size: 2rem !important;
   }
 }
 @media screen and (min-width: 1081px) and (max-width: 1408px) {
@@ -86,7 +111,7 @@ iframe {
     font-size: 3.5rem !important;
   }
   h1.title.is-2 {
-    font-size: 2rem !important;
+    font-size: 2.5rem !important;
   }
   .is-size-1 {
     font-size: 3.5rem !important;
@@ -111,11 +136,11 @@ iframe {
   }
 }
 @media screen and (min-width: 1409px) {
-    h1.title.is-1 {
+  h1.title.is-1 {
     font-size: 4.5rem !important;
   }
   h1.title.is-2 {
-    font-size: 2rem !important;
+    font-size: 3.5rem !important;
   }
   .is-size-1 {
     font-size: 3.5rem !important;
@@ -173,7 +198,6 @@ section#wrapper {
   font-feature-settings: "palt";
 }
 section#wrapper-dark {
-  // background-color: $dark;
   height: 100%;
   background-attachment: fixed !important;
   background-color: $black;
@@ -184,17 +208,25 @@ section#wrapper-dark {
     color: white;
   }
   h1 {
-    color: white;
+    color: $light;
   }
+}
+
+section#wrapper-black {
+  background-color: #000 !important;
+}
+
+.hero-body {
+  margin: 0; padding: 0;
 }
 
 
 section.section {
   margin: 0vh 8vw !important;
-  @media screen and (max-width: 768px) {
-    margin: 0vh 1vw !important;
+  @media screen and (max-width: 540px) {
+    margin: 0vh 0vw !important;
   }
-  @media screen and (min-width: 769px) and (max-width: 1216px){
+  @media screen and (min-width: 541px) and (max-width: 1216px){
     margin: 0vh 4vw !important;
   }
 }
@@ -215,7 +247,7 @@ section.section {
 }
 
 br.mobile-br {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 540px) {
     display: block;
   }
   display: none;
@@ -229,9 +261,9 @@ br.mobile-br {
 }
 
 .nmp-card {
-  padding: 3rem 3rem;
-  margin: 1rem;
-  border-radius: 28px;
+  padding: 2rem 2rem;
+  margin: 0rem;
+  border-radius: 18px;
   @media screen and (max-width: 1024px) {
     padding: 1.5rem 1.5rem;
     margin: 0.5rem 0rem;
@@ -247,7 +279,7 @@ br.mobile-br {
 .nmp-card-dark {
   @extend .nmp-card;
   color: white;
-  background: $dark;
+  background: $dark2;
   // box-shadow:  8px 8px 16px $dark1,
   //             -8px -8px 16px $dark2;
   h1 {
@@ -257,9 +289,10 @@ br.mobile-br {
 .nmp-card-red {
   @extend .nmp-card;
   color: white;
-  background: $red2;
+  background: $primary;
+  // border: 1px solid white;
   // box-shadow:  8px 8px 16px #a11e15,
-  //             -8px -8px 16px #ff3123;
+  //              -8px -8px 16px #ff3123;
   h1 {
     color: white;
   }
@@ -276,15 +309,15 @@ br.mobile-br {
 // }
 
 .nmp {
-  border-radius: 50px;
+  border-radius: 18px;
   margin-bottom: 4vh !important;
   @media screen and (max-width: 1024px) {
-    border-radius: 28px;
+    border-radius: 18px;
     padding: 10px;
   }
 }
 .nmp-card-image {
-  border: 15px solid $red;
+  border: 5px solid $red;
   @media screen and (max-width: 768) {
     // border-radius: 10px;
   }
@@ -301,13 +334,14 @@ br.mobile-br {
 .nmp-dark {
   @extend .nmp;
   color: white;
-  background: $dark;
+  background: $dark2;
   // box-shadow:  8px 8px 16px $dark1,
   //              -8px -8px 16px $dark2;
   h1 {
     color: white;
   }
 }
+
 .nmp-red {
   @extend .nmp;
   color: white;
@@ -341,11 +375,12 @@ br.mobile-br {
 .image-box {
   border-radius: 40px;
   padding: 8px;
+  max-width: 320px;
   // box-shadow: inset 5px 5px 10px #cfd2d4,
   //             inset -5px -5px 10px #ffffff;
   @media screen and (max-width: 768px) {
     border-radius: 18px;
-    width: 70vw;
+    width: 50vw;
     margin: 0 auto;
   }
 }
