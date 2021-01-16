@@ -10,7 +10,8 @@
     "message": "Language Setting: English"
   },
   "intro": {
-    "headline": "TEDxUTsukuba is an independently-organised TEDx community at the University of Tsukuba.",
+    "headline1": "An independently-organized TEDx community",
+    "headline2": "at the University of Tsukuba.",
     "description": "Managed by passionate volunteers both in and around the campus, TEDxUTsukuba has shed light on relevant topics - from liberal arts to science, local stories to global issues.",
     "button": "Discover"
   },
@@ -28,9 +29,11 @@
     }
   },
   "event": {
-    "title1": "Don't mask your curiosity.",
-    "title2": "",
-    "subtitle": "Thank you for joining our annual event on November 29",
+    "title1": "Don't mask ",
+    "title2": "your curiosity.",
+    "title3": "",
+    "subtitle1": "Explore insightful ideas",
+    "subtitle2": "from our speakers this year. ",
     "download": "Add to calendar"
   },
   "news": {
@@ -286,7 +289,7 @@
         "title": "Talk Session",
         "time": "13:00 - 15:10",
         "youtube": "YouTube Live",
-        "intro": "Watch our livestream",
+        "intro": "Join us on YouTube Live for our talk session & performance session. ",
         "charge": "Free of charge",
         "reservation": "No reservation"
       },
