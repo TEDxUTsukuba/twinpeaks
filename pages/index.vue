@@ -25,12 +25,6 @@
         </b-message> -->
       </section>
 
-      <section class="hero">
-        <div class="hero-body has-text-centered">
-         <Movie id="teaser" :vId='videoId1' :aPlay='autoplay'></Movie>
-        </div>
-      </section>
-
       <section class="hero bg-red">
         <div class="hero-body">
           <section class="section">
