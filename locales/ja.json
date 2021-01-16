@@ -10,7 +10,8 @@
     "message": "言語設定: 日本語"
   },
   "intro": {
-    "headline": "価値あるアイディアを、つくばから。",
+    "headline1": "価値あるアイディアを、",
+    "headline2": "つくばから。",
     "description": "TEDxUTsukubaは、TEDよりライセンスを受け、筑波大学の学生や卒業生などによって独自に運営されています。教養から科学、地域の話題から世界規模の問題に至るまで、様々なトピックスに焦点を当ててきました。",
     "button": "詳しく知る"
   },
@@ -29,8 +30,10 @@
   },
   "event": {
     "title1": "ようこそ、",
-    "title2": "事事無碍の世界へ。",
-    "subtitle": "TEDxUTsukuba 'JIJIMUGE' にご参加いただきありがとうございました。",
+    "title2": "事事無碍の",
+    "title3": "世界へ。",
+    "subtitle1": "4名の登壇者による",
+    "subtitle2": "洞察的なアイディアを学ぼう",
     "download": "カレンダーに追加"
   },
   "news": {
@@ -45,8 +48,8 @@
     },
     "left-bottom": {
       "title": "オンラインイベントにご参加いただきありがとうございました。",
-      "description": "TEDxUTsukuba 'JIJIMUGE' は盛況のうちに終了いたしました",
-      "detail": "YouTubeにてイベントのアーカイブを公開しています",
+      "description": "TEDxUTsukuba 'JIJIMUGE' は盛況のうちに終了いたしました。",
+      "detail": "YouTubeにてイベントのアーカイブを公開しています。",
       "link": ""
     },
     "right-top": {
@@ -161,7 +164,7 @@
         "title": "トークセッション",
         "time": "13:00 - 15:10",
         "youtube": "YouTube Live",
-        "intro": "YouTube Live にてリアルタイムに配信します。",
+        "intro": "4名の登壇者によるトークと2団体によるパフォーマンスは、YouTube Live にてリアルタイムに配信します。",
         "charge": "参加は無料です。",
         "reservation": "申し込みは不要です。"
       },
