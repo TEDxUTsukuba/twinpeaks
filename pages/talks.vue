@@ -1,12 +1,11 @@
 <template>
   <section id="wrapper-dark">
-    <section class="hero is-medium is-black">
-      <div class="hero-body has-text-white has-text-left">
-        <div class="container has-text-centered">
+    <section class="hero is-large">
+      <div class="hero-body has-text-centered">
+        <div class="container">
           <h1 class="title is-1 is-spaced">{{ $t('talks.title') }}</h1>
           <h1 class="subtitle has-text-grey-light">{{ $t('talks.subtitle') }}</h1>
           <br>
-          <span class="notice">{{ $t('talks.notice') }}</span>
         </div>
       </div>
     </section>
@@ -30,7 +29,7 @@
               </p>
             </header>
             <div class="card-image">
-              <Movie :vId='talk.youtube_id' :aPlay='autoplay'></Movie>
+              <Movie :vId='talk.youtube_id'></Movie>
               <!-- <youtube
                 :video-id="talk.youtube_id"
                 ref="youtube"
@@ -48,7 +47,7 @@
               <span class="has-text-right">
                 <b-collapse :open="false" position="is-bottom" aria-id="contentIdForA11y1">
                   <a class="button is-gradient is-rounded is-outlined" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1">
-                    <b-icon :icon="!props.open ? 'menu-down' : 'menu-up'"></b-icon>
+                    <!-- <b-icon :icon="!props.open ? 'menu-down' : 'menu-up'"></b-icon> -->
                       {{ !props.open ? 'Read more' : 'Read less' }}
                   </a>
                   <p class="is-size-7 has-text-left">

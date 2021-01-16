@@ -9,17 +9,17 @@
       <h1 class="title textoverflow">Social Capital</h1> -->
       
       <div class="top-photoframe">
-        <nuxt-link :to="localePath('/events/2020')"><img src = "~/assets/wallpapers/jijimuge.jpg" /></nuxt-link>
+        <nuxt-link :to="localePath('/events/2020')"><img src = "~/assets/wallpapers/jijimuge-transparent.png" /></nuxt-link>
       </div>
       <section class="section has-text-centered has-text-weight-light has-text-white">
         <h1 class="title is-1 is-spaced">
-          {{ $t('event.title1') }}<br class="mobile-br">{{ $t('event.title2') }}
+          {{ $t('event.title1') }}<br class="mobile-br">{{ $t('event.title2') }}<br class="mobile-br">{{ $t('event.title3') }}
         </h1>
-        <h1 class="subtitle is-3 has-text-weight-normal has-text-white">
-          {{ $t('event.subtitle') }}
+        <h1 class="subtitle is-5 has-text-weight-normal has-text-white">
+          {{ $t('event.subtitle1') }}<br class="mobile-br">{{ $t('event.subtitle2') }}
         </h1>
-        <br><br>
-        <nuxt-link :to="localePath('/events/2020')" class="button is-gradient is-rounded is-medium">{{ $t('button.discover') }}</nuxt-link>
+        <br>
+        <nuxt-link :to="localePath('/events/2020')" class="button is-gradient is-rounded">{{ $t('button.discover') }}</nuxt-link>
         <!-- <b-message :title="$t('notice.right-bottom.title')" type="is-warning" v-model="isAlertActive" aria-close-label="Close message">
           {{ $t('notice.right-bottom.detail') }} <a href="https://tiget.net/events/109783">{{ $t('2020.participance.premium.tiget') }}</a>
         </b-message> -->
@@ -29,31 +29,39 @@
         <div class="hero-body">
           <section class="section">
             <div class="columns is-multiline is-centered">
-              <div class="column is-5-widescreen is-full-desktop is-full-tablet is-full-mobile">
-                <h1 class="title is-1 has-text-white is-size-5-mobile">
-                  Ideas<br>Worth<br>Spreading
-                </h1>
+              <div class="column is-5-widescreen is-4-desktop is-full-tablet is-full-mobile">
+                <img src="~/assets/logo/motto.png" style="width: 100%; max-width: 480px;">
               </div>
-              <div class="column is-7-widescreen is-full-desktop is-full-tablet is-full-mobile">
-                <div class="nmp-card-red">
-                  <article class="is-size-5 has-text-weight-bold">
-                    {{ $t('intro.headline') }}
-                  </article>
+              <div class="column is-7-widescreen is-8-desktop is-full-tablet is-full-mobile">
+                <!-- <div class="nmp-card-red"> -->
+                  <h1 v-if="$i18n.locale == 'ja'" class="title is-2 is-size-4-mobile has-text-weight-light">
+                    {{ $t('intro.headline1') }}
+                    <br>
+                    {{ $t('intro.headline2') }}
+                  </h1>
+                  <h1 v-if="$i18n.locale == 'en'" class="title is-2 is-size-4-mobile has-text-weight-light">
+                    {{ $t('intro.headline1') }}
+                    <br>
+                    {{ $t('intro.headline2') }}
+                  </h1>
                   <hr>
-                  <article class="is-size-6">
+                  <br>
+                  <article class="is-size-6 has-text-light">
                     {{ $t('intro.description') }}
                   </article>
-                  <br><br>
+                  <br>
                   <div class="has-text-right">
-                    <nuxt-link :to="localePath('/about')"><button class="button is-medium is-white is-rounded is-outlined">{{ $t('intro.button') }}</button></nuxt-link>
+                    <nuxt-link :to="localePath('/about')"><button class="button is-white is-rounded is-outlined">{{ $t('intro.button') }}</button></nuxt-link>
                   </div>
-                </div>
+                <!-- </div> -->
               </div>
             </div>
           </section>
-          <section class="section">
-            <Movie id="teaser" :vId='videoId3' :aPlay='autoplay' :classname="large"></Movie>
-          </section>
+        </div>
+      </section>
+      <section id="wrapper-black">
+        <Movie id="teaser" :vId='videoId3' :classname="large"></Movie>
+      </section>
           <!-- <section class="section">
             <div class="columns is-mobile is-multiline">
               <div class="column is-3-tablet is-6-mobile">
@@ -78,8 +86,6 @@
               </div>
             </div>
           </section> -->
-        </div>
-      </section>
 
       <!-- <section class="section">
           <h1 class="title is-1 is-0 has-text-centered">
@@ -112,11 +118,13 @@
       </section> -->
 
     <section class="section">
-      <h1 class="title is-0">
+      <br>
+      <h1 class="title is-2 has-text-centered">
         <span class="">{{ $t('news.title') }}</span>
       </h1>
-      <div class="columns">
-        <div class="column is-5-desktop">
+      <br>
+      <div class="columns is-multiline" id="notice">
+        <div class="column is-5-tablet">
           <Flip
             :title = "$t('notice.left-top.title')"
             :description = "$t('notice.left-top.description')"
@@ -125,7 +133,7 @@
             imageUrl = "/_nuxt/assets/speakers/2019/sp_2019_1.jpg"
            />
         </div>
-        <div class="column is-7-desktop">
+        <div class="column is-7-tablet">
           <Flip
             :title = "$t('notice.left-bottom.title')"
             :description = "$t('notice.left-bottom.description')"
@@ -134,9 +142,7 @@
             imageUrl = ""
           />
         </div>
-      </div>
-      <div class="columns">
-        <div class="column is-7-desktop">
+        <div class="column is-7-tablet">
           <Flip
             :title = "$t('notice.right-top.title')"
             :description = "$t('notice.right-top.description')"
@@ -145,7 +151,7 @@
             imageUrl = ""
           />
         </div>
-        <div class="column is-5-desktop">
+        <div class="column is-5-tablet">
           <Flip
             :title = "$t('notice.right-bottom.title')"
             :description = "$t('notice.right-bottom.description')"
@@ -184,15 +190,6 @@ export default {
       eventDate: Date(2020, 11, 29, 0, 0, 0),
       isAlertActive: true
     }
-  },
-  methods: {
-    compareDate () {
-      if (todayDate < eventDate) {
-        this.isEventDate = 'true'
-      } else {
-        this.isEventDate = 'false'
-      }
-    }
   }
 }
 </script>
@@ -218,7 +215,7 @@ export default {
     top: 130vh;
   }
   h1.thin {
-    font-weight: 400 !important;
+    font-weight: 100 !important;
   }
 
   .bounce_box {
