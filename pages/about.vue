@@ -1,6 +1,6 @@
 <template>
   <section id="wrapper-dark" class="font-awesome">
-    <section class="hero is-medium">
+    <section class="hero is-large">
       <div class="hero-body has-text-left">
         <div class="container has-text-centered">
           <h1 class="title is-1 is-spaced">{{ $t('about.title')}}</h1>

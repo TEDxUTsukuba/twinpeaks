@@ -1,6 +1,6 @@
 <template>
   <section id="wrapper-dark">
-    <section class="hero is-medium">
+    <section class="hero is-large">
       <div class="hero-body has-text-white has-text-left">
         <div class="container has-text-centered">
           <h1 class="title is-1 is-spaced">{{ $t('partners.title') }}</h1>
