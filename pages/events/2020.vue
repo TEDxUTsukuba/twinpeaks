@@ -1,15 +1,16 @@
 <template>
   <section id="wrapper-dark" class="font-awesome">   
-    <section class="hero is-medium bg-jijimuge">
-      <div class="hero-body has-text-left">
-        <div class="container has-text-centered">
+    <section class="hero is-large">
+    <!-- <section class="hero is-medium bg-jijimuge"> -->
+      <div class="hero-body has-text-centered">
+        <div class="container">
           <h1 class="title is-1">JIJIMUGE</h1>
-          <h1 class="subtitle is-4">TEDxUTsukuba 2020</h1>
+          <h1 class="subtitle is-4">2020.11.29</h1>
         </div>
       </div>
     </section>
 
-    <section class="hero">
+    <section class="hero is-black">
       <div class="hero-body has-text-centered">
         <Movie id="teaser" :vId='videoId1' :aPlay='autoplay'></Movie>
       </div>
@@ -84,7 +85,7 @@
 
     <!-- <section class="section has-text-centered">
       <b-collapse :open="false" position="is-bottom" aria-id="contentIdForA11y1">
-        <a class="button is-medium is-gradient is-rounded" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1" style="margin: 3rem auto;">
+        <a class="button is-gradient is-rounded" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1" style="margin: 3rem auto;">
             <b-icon :icon="!props.open ? 'menu-down' : 'menu-up'"></b-icon>
             {{ !props.open ? 'Read statement' : 'Close' }}
         </a>
@@ -108,14 +109,15 @@
           <h1 class="subtitle has-text-white has-text-right has-text-centered-mobile">
             {{ $t('2020.participance.description') }}
           </h1>
+          <br><br>
           <div class="columns">
             <div class="column is-5">
-              <div class="nmp-card-red">
+              <div class="nmp-card-light">
                 <div class="header" style="margin-bottom: 1rem;">
-                  <span class="tag is-white is-medium"><font-awesome-icon :icon="['far', 'clock']" /> {{ $t('2020.participance.free.time') }}</span>
+                  <span class="tag is-medium"><font-awesome-icon :icon="['far', 'clock']" /> {{ $t('2020.participance.free.time') }}</span>
                 </div>
                 <div class="">
-                  <h1 class="title is-2 has-text-white">{{ $t('2020.participance.free.title') }}</h1>
+                  <h1 class="title is-3 has-text-dark">{{ $t('2020.participance.free.title') }}</h1>
                   <p>{{ $t('2020.participance.free.intro') }}</p>
                   <br>
                   <ul>
@@ -126,23 +128,23 @@
               </div>
             </div>
             <div class="column is-7">
-              <div class="nmp-card-red">
+              <div class="nmp-card-light">
                 <div class="header" style="margin-bottom: 1rem;">
-                  <span class="tag is-white is-medium"><font-awesome-icon :icon="['far', 'clock']" /> {{ $t('2020.participance.premium.time') }}</span>
+                  <span class="tag is-medium"><font-awesome-icon :icon="['far', 'clock']" /> {{ $t('2020.participance.premium.time') }}</span>
                 </div>
                 <div class="">
-                  <h1 class="title is-2 has-text-white">{{ $t('2020.participance.premium.title') }}</h1>
+                  <h1 class="title is-3 has-text-dark">{{ $t('2020.participance.premium.title') }}</h1>
                   <p>{{ $t('2020.participance.premium.intro') }}</p>
                   <br>
                   <ul>
                     <li><font-awesome-icon :icon="['fas', 'check-square']" style="color: white;" /> {{ $t('2020.participance.premium.charge') }}</li>
                     <li><font-awesome-icon :icon="['fas', 'check-square']" style="color: white;" /> {{ $t('2020.participance.premium.reservation') }}</li>
                   </ul>
-                  <br>
+                  <hr>
                   <div class="columns is-multiline is-vcentered">
-                    <div class="column is-12-tablet is-half-desktop has-text-right-mobile">
+                    <div class="column has-text-right">
                       <p class="is-size-7" v-if="$i18n.locale == 'en'">{{ $t('2020.participance.premium.airmeet') }}</p>
-                      <img src="~/assets/partners/2020/logo/AM_Full_Logo/PNG/AM_Logo_Dark_WM.png" width="200px" style="background-color: white; padding: 15px;"> 
+                      <img src="~/assets/partners/2020/logo/AM_Full_Logo/PNG/AM_Logo_Dark_WM.png" width="150px" style="background-color: white; padding: 15px;"> 
                       <p class="is-size-7" v-if="$i18n.locale == 'ja'">{{ $t('2020.participance.premium.airmeet') }}</p>
                     </div>
                   </div>
@@ -173,7 +175,7 @@
         </div>
       </div>
       <section class="section has-text-centered">
-        <a class="button is-large is-rounded is-gradient" href="https://flic.kr/s/aHsmSNKeT6">{{ $t('2020.highlight.detail') }}</a>
+        <a class="button is-rounded is-gradient" href="https://flic.kr/s/aHsmSNKeT6">{{ $t('2020.highlight.detail') }}</a>
       </section>
     </section>
   </section>
