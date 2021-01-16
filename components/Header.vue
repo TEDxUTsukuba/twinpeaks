@@ -3,7 +3,7 @@
     <template slot="brand">
       <b-navbar-item tag="router-link" :to="localePath('/')">
         <img
-          src="~/assets/buefy.png"
+          src="~/assets/logo.png"
           alt="Lightweight UI components for Vue.js based on Bulma"
         >
         <!-- https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-logo.png -->

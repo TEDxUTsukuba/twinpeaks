@@ -1,6 +1,6 @@
 <template>
   <section id="wrapper-dark">
-    <section class="hero is-medium">
+    <section class="hero is-large">
       <div class="hero-body has-text-centered">
         <h1 class="title is-3 is-spaced">
           {{ $t('notice.left-top.title') }}
