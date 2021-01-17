@@ -158,18 +158,36 @@
     },
     "id14": {
       "title": "1+14=3",
-      "youtube_id": "wyQPeP-KKEs"
+      "description_ja": "オカルト雑誌として表現されることも多い月刊「ムー」の編集長、三上丈晴さん。ミステリアスな雰囲気のある人で、サングラス越しに不思議なオーラが漂っているのがお分かりいただけるだろう。 月刊ムーはUFO、異星人、都市伝説など多岐にわたり、普段見ることの無い世界などのテーマを扱う。 そんな三上さんは「世の中はムー的な世界に近づいている」と言う。多様な学問と豊富な知識から繰り出される新時代トーク。",
+      "description_en": "",      
+      "speaker_name_ja": "三上丈晴",
+      "speaker_name_en": "Takeharu Mikami",
+      "youtube_id": "wyQPeP-KKEs",
+      
+      "year": "2020",
+      "eventname": "2020"
     },
     "id14": {
       "title": "How Design Shapes Us",
-      "youtube_id": ""
+      "description_ja": "Professor SeungHee Lee from The University of Tsukuba will convey her feelings, ideas, and sensitivity; in short, her “Kansei”. The act of conveying her “Kansei” is represented by the word “Omoiyari” -considerate caring for others- , the principle of commuting to her design.",
+      "description_en": "Professor SeungHee Lee from The University of Tsukuba will convey her feelings, ideas, and sensitivity; in short, her “Kansei”. The act of conveying her “Kansei” is represented by the word “Omoiyari” -considerate caring for others- , the principle of commuting to her design."
+      "youtube_id": "",
+      "year": "2020",
+      "eventname": "2020"
     },
     "id15": {
       "title": "3.5%の綱引き",
-      "youtube_id": "zTsK24H7SjM"
+      "description_ja": "地球温暖化の地球シミュレーター研究の第一人者として活躍する一方、どういったコミュニケーションが気候変動を食い止める原動力になるのかを考え、行動し続けてきた環境学者の江守正多さん。 みなさん一度はやったことがある競技をヒントに社会変革の新しいイメージを私たちに与えてくれる。",
+      "description_en": "地球温暖化の地球シミュレーター研究の第一人者として活躍する一方、どういったコミュニケーションが気候変動を食い止める原動力になるのかを考え、行動し続けてきた環境学者の江守正多さん。 みなさん一度はやったことがある競技をヒントに社会変革の新しいイメージを私たちに与えてくれる。",
+      "speaker_name_ja": "江守正多",
+      "speaker_name_en": 'Seita Emori",
+      "youtube_id": "zTsK24H7SjM",
+      "year": "2020",
+      "eventname": "2020"
     },
     "id16": {
       "title": "マルチラベルな私たち",
+      
       "description_ja": "",
       "youtube_id": "_RmCJnzWfOg"
     }
