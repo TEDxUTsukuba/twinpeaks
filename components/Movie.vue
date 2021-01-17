@@ -1,9 +1,10 @@
 <template>
     <div class="youtube-frame">
-        <youtube ref="youtube" @playing="playing"
-        resize=true
-        :video-id="vId"
-        :player-vars="aPlay"
+        <youtube 
+          ref="youtube"
+          @playing="playing"
+          :video-id="vId"
+          :player-vars="aPlay"
         >
         </youtube>
     </div>

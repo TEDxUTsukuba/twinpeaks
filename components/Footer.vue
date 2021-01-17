@@ -1,9 +1,9 @@
 <template>
-  <section id="wrapper-dark" class="hero has-background-black-bis font-awesome has-text-white">
+  <section id="wrapper" class="hero font-awesome">
     <div class="hero-body">    
         <section class="section has-text-centered">
         <h1 class="title is-3 has-text-centered">
-            <span class="has-text-light">{{ $t('social.title') }}</span>
+            <span class="has-text-dark">{{ $t('social.title') }}</span>
           </h1>
           <a class="icon-circle fb" href="https://www.facebook.com/tedxutsukuba/">
             <!-- <font-awesome-icon :icon="['fab', 'facebook-square']" /> -->
@@ -21,7 +21,7 @@
         
         <section class="section has-text-centered">
           <h1 class="title is-3">
-            <span class="has-text-light">{{ $t('covid19-info.title') }}</span>
+            <span class="has-text-dark">{{ $t('covid19-info.title') }}</span>
           </h1>
           <p class="is-size-7">{{ $t('covid19-info.description')}}</p>
           
@@ -29,7 +29,7 @@
             <img src="http://www.tsukuba.ac.jp/en/application/themes/tsukuba/images/logo_footer.png">
           </div> -->
 
-          <div class="content has-text-white">
+          <div class="content">
             <b-collapse :open="false" position="is-bottom" aria-id="contentIdForA11y1">
               <a class="button is-gradient is-rounded" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1" style="margin: 3rem auto;">
                   <!-- <b-icon :icon="!props.open ? 'menu-down' : 'menu-up'"></b-icon> -->
@@ -52,10 +52,10 @@
                   <li>スピーカーとのセッション等、マスクを外す必要のある場面ではアクリル板による仕切りを設置します。</li>
                 </ul>
                 <br>
-                <p>今後もTEDxUTsukubaは、感染拡大の抑止と関係者の安全確保を最優先に、政府や自治体の方針も踏まえながら、追加の対応を検討・実施してまいります。筑波大学および茨城県・つくば市の感染対策も合わせてご確認ください。</p>
-                <a class="button is-small is-white is-rounded is-outlined" href="http://www.tsukuba.ac.jp/about/antidisaster/covid-19-list.html">{{ $t('covid19-info.link.university') }}</a>
-                <a class="button is-small is-white is-rounded is-outlined" href="https://www.city.tsukuba.lg.jp/shisei/1010123/index.html">{{ $t('covid19-info.link.city') }}</a>
-                <a class="button is-small is-white is-rounded is-outlined" href="https://www.pref.ibaraki.jp/shokorodo/chusho/shogyo/2020korona/guideline.html">{{ $t('covid19-info.link.prefecture') }}</a>
+                <p class="is-size-7">今後もTEDxUTsukubaは、感染拡大の抑止と関係者の安全確保を最優先に、政府や自治体の方針も踏まえながら、追加の対応を検討・実施してまいります。筑波大学および茨城県・つくば市の感染対策も合わせてご確認ください。</p>
+                <a class="button is-small is-rounded is-outlined" href="http://www.tsukuba.ac.jp/about/antidisaster/covid-19-list.html">{{ $t('covid19-info.link.university') }}</a>
+                <a class="button is-small is-rounded is-outlined" href="https://www.city.tsukuba.lg.jp/shisei/1010123/index.html">{{ $t('covid19-info.link.city') }}</a>
+                <a class="button is-small is-rounded is-outlined" href="https://www.pref.ibaraki.jp/shokorodo/chusho/shogyo/2020korona/guideline.html">{{ $t('covid19-info.link.prefecture') }}</a>
               </div>
             </b-collapse>
 

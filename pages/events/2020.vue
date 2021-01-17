@@ -1,13 +1,25 @@
 <template>
-  <section id="wrapper-dark" class="font-awesome">   
-    <section class="hero is-large">
-    <!-- <section class="hero is-medium bg-jijimuge"> -->
-      <div class="hero-body has-text-centered">
-        <div class="container">
+  <section id="wrapper-dark" class="font-awesome"> 
+    <!-- <section class="hero is-fullheight top-container bg-jijimuge"> -->
+    <section class="hero is-fullheight top-container">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="subtitle is-4">TEDxUTsukuba 2020</h1>
           <h1 class="title is-1">JIJIMUGE</h1>
-          <h1 class="subtitle is-4">2020.11.29</h1>
         </div>
       </div>
+        <!-- <div class="columns"> 
+          <div class="column is-7 is-centered has-text-centered"> 
+            <nuxt-link :to="localePath('/events/2020')"><img src = "~/assets/wallpapers/jijimuge-transparent.png" style="width: 180px; margin-top: 10vh;"></nuxt-link>
+            <h1 class="subtitle">TEDxUTsukuba 2020</h1>
+            <h1 class="title is-1">JIJIMUGE</h1>
+            <p>2020.11.29</p>
+            <p>Virtual Hosting Event</p>
+          </div>  
+          <div class="column is-5 has-text-centered-mobile">
+                        
+          </div>
+        </div> -->
     </section>
 
     <section class="hero is-black">
@@ -195,6 +207,8 @@ export default {
   },
   data(){
     return {
+      width: window.innerWidth,
+      height: window.innerHeight,
       isImageModalActive: false,
       videoId1: 'yJpcvqCC0ww',
       src_sp1: Image_sp1,
@@ -297,6 +311,11 @@ export default {
     }
   },
   methods: {
+    getAspectRatio() {
+      if (this.innerWidth > this.innerHeight) {
+        console.log("yes");
+      }
+    },
     getHighlightImgUrl(value) {
       return require(`~/assets/2020/highlight/highlight-2020-${value}.jpg`)
     },
@@ -323,7 +342,15 @@ export default {
 
 <style scoped>
 .bg-jijimuge {
-  background-image: linear-gradient( 135deg, #F1CA74 10%, #A64DB6 100%);
+    /* background-image: linear-gradient( 135deg, #F1CA74 10%, #A64DB6 100%); */
+    background: url("~@/assets/wallpapers/stage-bg4.png");
+    /* background-size: 100%; */
+    background-repeat: no-repeat;
+    background-position: center;
+      @media screen and (max-width: 780px) {
+        background: none;
+        display: nonte;
+  }
 }
   .is-active .al img {
     filter: grayscale(0%);
