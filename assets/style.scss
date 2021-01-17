@@ -128,7 +128,7 @@ div#notice > div.column {
   .is-size-5 {
     font-size: 1.5rem !important;
   }
-  .is-size-6, p, article, li {
+  .is-size-6, p, article {
     font-size: 1.25rem !important;
   }
   .is-size-7 {
@@ -157,7 +157,7 @@ div#notice > div.column {
   .is-size-5 {
     font-size: 1.5rem !important;
   }
-  .is-size-6, p, article, li {
+  .is-size-6, p, article {
     font-size: 1.25rem !important;
   }
   .is-size-7 {
@@ -167,7 +167,7 @@ div#notice > div.column {
 
 h1.is-0 {
   color: #bcc5cd;
-  opacity: 0.5;
+  // opacity: 0.5;
   @media screen and (max-width: 768px) {
     text-align: center;
     font-size: 3rem !important;
@@ -210,6 +210,10 @@ section#wrapper-dark {
   h1 {
     color: $light;
   }
+}
+section#wrapper-red {
+  @extend section#wrapper-dark;
+  background-color: $primary;
 }
 
 section#wrapper-black {
@@ -447,7 +451,7 @@ br.mobile-br {
 .icon-circle {
   /* color: #0a265c */
   /* color: #002366; */
-  color: white;
+  color: $primary;
   border-radius: 100px;
   @media screen and (max-width: 768px) {
     font-size: 3rem;
@@ -465,20 +469,24 @@ br.mobile-br {
 }
 
 .fb {
-  &.hover {
+  &:hover {
     color: #4267b2;
   }
 }
 .ig {
-  &.hover {
+  &:hover {
     color: #dd2a7b;
   }
 }
 .tw {
-  &.hover {
+  &:hover {
     color: #1da1f2;
   }
 }
+
+  .top-container {
+    padding-top: 6vh !important;
+  }
 
   .top-photoframe {
     a {
