@@ -60,7 +60,7 @@
       </section>
 
       <section class="hero">
-        <div class="columns is-multiline is-vcentered is-variable is-8">
+        <div class="columns is-multiline is-vcentered">
           <div class="column is-8-widescreen is-8-desktop is-full-tablet is-full-mobile">
             <Movie id="teaser" :vId='videoId3' classname="large" style="margin-left: 0;"></Movie>
           </div>
