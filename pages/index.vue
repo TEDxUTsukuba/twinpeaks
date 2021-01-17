@@ -28,39 +28,46 @@
       <section class="hero bg-red">
         <div class="hero-body">
           <section class="section">
-            <div class="columns is-multiline is-centered">
-              <div class="column is-5-widescreen is-4-desktop is-full-tablet is-full-mobile">
-                <img src="~/assets/logo/motto.png" style="width: 100%; max-width: 480px;">
-              </div>
-              <div class="column is-7-widescreen is-8-desktop is-full-tablet is-full-mobile">
-                <!-- <div class="nmp-card-red"> -->
-                  <h1 v-if="$i18n.locale == 'ja'" class="title is-2 is-size-4-mobile has-text-weight-light">
-                    {{ $t('intro.headline1') }}
+            <div class="columns is-multiline is-centered is-variable is-8">
+                <div class="column is-5-widescreen is-4-desktop is-full-tablet is-full-mobile">
+                  <img src="~/assets/logo/motto.png" style="width: 100%; max-width: 480px;">
+                </div>
+                <div class="column is-7-widescreen is-8-desktop is-full-tablet is-full-mobile">
+                  <!-- <div class="nmp-card-red"> -->
+                    <h1 v-if="$i18n.locale == 'ja'" class="title is-2 is-size-4-mobile has-text-weight-light">
+                      {{ $t('intro.headline1') }}
+                      <br>
+                      {{ $t('intro.headline2') }}
+                    </h1>
+                    <h1 v-if="$i18n.locale == 'en'" class="title is-2 is-size-4-mobile has-text-weight-light">
+                      {{ $t('intro.headline1') }}
+                      <br>
+                      {{ $t('intro.headline2') }}
+                    </h1>
+                    <hr>
                     <br>
-                    {{ $t('intro.headline2') }}
-                  </h1>
-                  <h1 v-if="$i18n.locale == 'en'" class="title is-2 is-size-4-mobile has-text-weight-light">
-                    {{ $t('intro.headline1') }}
+                    <article class="is-size-6 has-text-light">
+                      {{ $t('intro.description') }}
+                    </article>
                     <br>
-                    {{ $t('intro.headline2') }}
-                  </h1>
-                  <hr>
-                  <br>
-                  <article class="is-size-6 has-text-light">
-                    {{ $t('intro.description') }}
-                  </article>
-                  <br>
-                  <div class="has-text-right">
-                    <nuxt-link :to="localePath('/about')"><button class="button is-white is-rounded is-outlined">{{ $t('intro.button') }}</button></nuxt-link>
-                  </div>
-                <!-- </div> -->
-              </div>
-            </div>
-          </section>
+                    <div class="has-text-right">
+                      <nuxt-link :to="localePath('/about')"><button class="button is-white is-rounded is-outlined">{{ $t('intro.button') }}</button></nuxt-link>
+                    </div>
+                </div>
+             </div>
+            </section>
         </div>
       </section>
-      <section id="wrapper-black">
-        <Movie id="teaser" :vId='videoId3' :classname="large"></Movie>
+
+      <section class="hero">
+        <div class="columns is-multiline is-vcentered is-variable is-8">
+          <div class="column is-8-widescreen is-8-desktop is-full-tablet is-full-mobile">
+            <Movie id="teaser" :vId='videoId3' classname="large" style="margin-left: 0;"></Movie>
+          </div>
+          <div class="column is-4-widescreen is-4-desktop is-full-tablet is-full-mobile has-text-centered">
+            <img src="~/assets/logo/motto2.png" style="width: 100%; max-width: 280px;">
+          </div>
+        </div>
       </section>
           <!-- <section class="section">
             <div class="columns is-mobile is-multiline">

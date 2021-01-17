@@ -2,7 +2,7 @@
   <div class="nmp-card-dark">
       <h1 class="title is-size-6-mobile is-size-5">{{ title }}</h1>
       <p class="subtitle is-size-6 has-text-primary">{{ description }}</p>
-      <article>{{ detail }}</article>
+      <article class="is-size-7">{{ detail }}</article>
       <br>
       <a v-if="link" :href="link" class="button is-gradient is-rounded is-small">{{ $t('button.discover') }}</a>
       
