@@ -207,8 +207,8 @@ export default {
   },
   data(){
     return {
-      width: window.innerWidth,
-      height: window.innerHeight,
+      // width: window.innerWidth,
+      // height: window.innerHeight,
       isImageModalActive: false,
       videoId1: 'yJpcvqCC0ww',
       src_sp1: Image_sp1,
