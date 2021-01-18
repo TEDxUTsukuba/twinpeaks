@@ -1,4 +1,23 @@
 {
+  "header": {
+    "events": {
+      "parent": "イベント",
+      "child1": "2020 JIJIMUGE",
+      "child2": "2019 CoPhilAction",
+      "child3": "TEDxUTsukubaLive 2019"
+    },
+    "talks": {
+      "item": "Talks"
+    },
+    "partners": {
+      "item": "Partners"
+    },
+    "aboutus": {
+      "parent": "About Us",
+      "child1": "TED / TEDx",
+      "child2": "TEDxUTsukuba"
+    }
+  },
   "button": {
     "discover": "Discover",
     "readmore": "Read more",
@@ -32,7 +51,7 @@
     "title1": "Don't mask ",
     "title2": "your curiosity.",
     "title3": "",
-    "subtitle1": "Explore insightful ideas",
+    "subtitle1": "Explore insightful ideas ",
     "subtitle2": "from our speakers this year. ",
     "download": "Add to calendar"
   },
@@ -50,7 +69,7 @@
       "title": "Thank you for joining our annual event!",
       "description": "TEDxUTsukuba 2020 'JIJIMUGE' was a great success.",
       "detail": "Watch the archive on YouTube.",
-      "link": ""
+      "link": "/events/2020"
     },
     "right-top": {
       "title": "Our talk earned 10,000 views",
@@ -85,28 +104,43 @@
     }
   },
   "about": {
-    "title": "About",
-    "subtitle": "Introducing TEDxUTsukuba, a part of the global TEDx community.",
-    "description": {
-      "1": "About TEDx, x = independently organized event. In the spirit of ideas worth spreading, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark deep discussion and connection. These local, self-organized events are branded TEDx, where x = independently organized TED event. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized. (Subject to certain rules and regulations.)",
-      "2": "About TED. TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 30 years ago, TED has grown to support its mission with multiple initiatives. The two annual TED Conferences invite the world's leading thinkers and doers to speak for 18 minutes or less. Many of these talks are then made available, free, at TED.com. TED speakers have included Bill Gates, Jane Goodall, Elizabeth Gilbert, Sir Richard Branson, Nandan Nilekani, Philippe Starck, Ngozi Okonjo-Iweala, Sal Khan and Daniel Kahneman.",
-      "3": "The annual TED Conference takes place each spring in Vancouver, British Columbia. TED's media initiatives include TED.com, where new TED Talks are posted daily; TED Translators, which provides subtitles and interactive transcripts as well as translations from volunteers worldwide; the educational initiative TED-Ed. TED has established The Audacious Project that takes a collaborative approach to funding ideas with the potential to create change at thrilling scale; TEDx, which supports individuals or groups in hosting local, self- organized TED-style events around the world, and the TED Fellows program, helping world-changing innovators from around the globe to amplify the impact of their remarkable projects and activities.",
-      "4": "SPREAD GLOBALLY, CONNECT LOCALLY."
+    "utsukuba": {
+      "title": "About TEDxUTsukuba",
+      "subtitle": "Introducing TEDxUTsukuba.",
+      "description": {
+        "1": "About TEDx, x = independently organized event. In the spirit of ideas worth spreading, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark deep discussion and connection. These local, self-organized events are branded TEDx, where x = independently organized TED event. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized. (Subject to certain rules and regulations.)",
+        "2": "About TED. TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 30 years ago, TED has grown to support its mission with multiple initiatives. The two annual TED Conferences invite the world's leading thinkers and doers to speak for 18 minutes or less. Many of these talks are then made available, free, at TED.com. TED speakers have included Bill Gates, Jane Goodall, Elizabeth Gilbert, Sir Richard Branson, Nandan Nilekani, Philippe Starck, Ngozi Okonjo-Iweala, Sal Khan and Daniel Kahneman.",
+        "3": "The annual TED Conference takes place each spring in Vancouver, British Columbia. TED's media initiatives include TED.com, where new TED Talks are posted daily; TED Translators, which provides subtitles and interactive transcripts as well as translations from volunteers worldwide; the educational initiative TED-Ed. TED has established The Audacious Project that takes a collaborative approach to funding ideas with the potential to create change at thrilling scale; TEDx, which supports individuals or groups in hosting local, self- organized TED-style events around the world, and the TED Fellows program, helping world-changing innovators from around the globe to amplify the impact of their remarkable projects and activities.",
+        "4": "pread Globally, Connect Locally."
+      },
+      "team": {
+        "title": "Team",
+        "subtitle": "Managed by passionate volunteers, TEDxUTsukuba have been delivering mind-blowing event experience for a decade.",
+        "from": "From",
+        "favouritetedtalk": "My favourite TED talk",
+        "keywords": "3 words that describe myself"
+      },
+      "join": {
+        "title": "Interested in joining us?",
+        "subtitle": "Step forward to where the magic happens. Contact us!",
+        "contactus": "Contact us"
+      },
+      "location": {
+        "address": "1-1-1 Tennodai, Tsukuba, Ibaraki, Japan, 305-8577"
+      }
+    }, 
+    "tedandtedx": {
+      "title": "TED | TEDx",
+      "subtitle": "Inrtoducing TED and TEDx community around the world.",
+      "watch": "Watch",
+      "listen": "Listen"
     },
-    "team": {
-      "title": "Team",
-      "subtitle": "Managed by passionate volunteers, TEDxUTsukuba have been delivering mind-blowing event experience for a decade.",
-      "from": "From",
-      "favouritetedtalk": "My favourite TED talk",
-      "keywords": "3 words that describe myself"
+    "ted": {
+      "title": "TED",
+      "subtitle": ""
     },
-    "join": {
-      "title": "Interested in joining us?",
-      "subtitle": "Step forward to where the magic happens. Contact us!",
-      "contactus": "Contact us"
-    },
-    "location": {
-      "address": "1-1-1 Tennodai, Tsukuba, Ibaraki, Japan, 305-8577"
+    "tedx": {
+      "title": "TEDx"
     }
   },
   "partners": {

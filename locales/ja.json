@@ -1,4 +1,23 @@
 {
+  "header": {
+    "events": {
+      "parent": "イベント",
+      "child1": "2020 JIJIMUGE",
+      "child2": "2019 CoPhilAction",
+      "child3": "TEDxUTsukubaLive 2019"
+    },
+    "talks": {
+      "item": "トーク"
+    },
+    "partners": {
+      "item": "パートナー"
+    },
+    "aboutus": {
+      "parent": "私たちについて",
+      "child1": "TED / TEDx",
+      "child2": "TEDxUTsukuba"
+    }
+  },
   "button": {
     "discover": "詳しく知る",
     "readmore": "続きを読む",
@@ -50,7 +69,7 @@
       "title": "オンラインイベントにご参加いただきありがとうございました。",
       "description": "TEDxUTsukuba 'JIJIMUGE' は盛況のうちに終了いたしました。",
       "detail": "YouTubeにてイベントのアーカイブを公開しています。",
-      "link": ""
+      "link": "/events/2020"
     },
     "right-top": {
       "title": "「天才になる呪い」が再生回数1万回を突破しました。",
@@ -85,28 +104,43 @@
     }
   },
   "about": {
-    "title": "私たちについて",
-    "subtitle": "TEDxUTsukubaおよび世界に広がるTEDxコミュニティをご紹介いたします。",
-    "description": {
-      "1": "TEDとはideas worth spreading (価値あるアイデアを広める）の理念のもと、さまざまなスピーカーを呼びトークイベントを開催する団体です。そのトーク内容は科学、技術、経済、歴史、最新の社会問題など多岐に渡ります。",
-      "2": "TEDxは、TEDからライセンスを受けて活動している、地域や大学に根付いたコミュニティです。 TEDxUTsukubaもこのうちの一つで、ここつくばの地で日々活動しています。",
-      "3": "TEDxUTsukubaは2016年に設立されたTEDxコミュニティ。筑波大学の学生を中心とした非営利団体です。今年のテーマは「事事無碍 JIJIMUGE」。 複雑な世界を複雑なまま捉える精神を表します。 このテーマのように、 「個性」豊かなメンバーそれぞれの良さを活かし、 今日も私たちは、価値あるアイディアを発信していきます。 通称「陸の孤島」つくばを、世界と繋げる。",
-      "4": "SPREAD GLOBALLY, CONNECT LOCALLY."
+    "utsukuba": {
+      "title": "TEDxUTsukuba",
+      "subtitle": "TEDxUTsukubaをご紹介します。",
+      "description": {
+        "1": "TEDとはideas worth spreading (価値あるアイデアを広める）の理念のもと、さまざまなスピーカーを呼びトークイベントを開催する団体です。そのトーク内容は科学、技術、経済、歴史、最新の社会問題など多岐に渡ります。",
+        "2": "TEDxは、TEDからライセンスを受けて活動している、地域や大学に根付いたコミュニティです。 TEDxUTsukubaもこのうちの一つで、ここつくばの地で日々活動しています。",
+        "3": "TEDxUTsukubaは2016年に設立されたTEDxコミュニティ。筑波大学の学生を中心とした非営利団体です。今年のテーマは「事事無碍 JIJIMUGE」。 複雑な世界を複雑なまま捉える精神を表します。 このテーマのように、 「個性」豊かなメンバーそれぞれの良さを活かし、 今日も私たちは、価値あるアイディアを発信していきます。 通称「陸の孤島」つくばを、世界と繋げる。",
+        "4": "Spread Globally, Connect Locally."
+      },
+      "team": {
+        "title": "メンバー紹介",
+        "subtitle": "イベントの企画と運営を支えている、個性溢れるメンバーをご紹介いたします。",
+        "from": "出身",
+        "favouritetedtalk": "お気に入りのTEDトーク",
+        "keywords": "自分を表す3つのキーワード"
+      },
+      "join": {
+        "title": "一緒に活動しませんか？",
+        "subtitle": "期待を超える面白さ、保証します。",
+        "contactus": "お気軽にご連絡ください"
+      },
+      "location": {
+        "address": "〒305-8577 茨城県つくば市天王台1-1-1"
+      }
     },
-    "team": {
-      "title": "メンバー紹介",
-      "subtitle": "イベントの企画と運営を支えている、個性溢れるメンバーをご紹介いたします。",
-      "from": "出身",
-      "favouritetedtalk": "お気に入りのTEDトーク",
-      "keywords": "自分を表す3つのキーワード"
+    "tedandtedx": {
+      "title": "TED | TEDx",
+      "subtitle": "TEDおよび世界に広がるTEDxコミュニティをご紹介いたします。",
+      "watch": "観る",
+      "listen": "聴く"
     },
-    "join": {
-      "title": "一緒に活動しませんか？",
-      "subtitle": "期待を超える面白さ、保証します。",
-      "contactus": "お気軽にご連絡ください"
+    "ted":{
+      "title": "TED",
+      "subtitle": "TED"
     },
-    "location": {
-      "address": "〒305-8577 茨城県つくば市天王台1-1-1"
+    "tedx": {
+      "title": "TEDx"
     }
   },
   "partners": {
