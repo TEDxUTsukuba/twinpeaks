@@ -104,6 +104,9 @@
     }
   },
   "about": {
+    "location": {
+      "address": "1-1-1 Tennodai, Tsukuba, Ibaraki, Japan, 305-8577"
+    },
     "utsukuba": {
       "title": "About TEDxUTsukuba",
       "subtitle": "Introducing TEDxUTsukuba.",
@@ -124,23 +127,29 @@
         "title": "Interested in joining us?",
         "subtitle": "Step forward to where the magic happens. Contact us!",
         "contactus": "Contact us"
-      },
-      "location": {
-        "address": "1-1-1 Tennodai, Tsukuba, Ibaraki, Japan, 305-8577"
       }
     }, 
     "tedandtedx": {
-      "title": "TED | TEDx",
-      "subtitle": "Inrtoducing TED and TEDx community around the world.",
-      "watch": "Watch",
-      "listen": "Listen"
+      "title": "TED / TEDx",
+      "subtitle": "Inrtoducing TED and TEDx community around the world."
     },
     "ted": {
       "title": "TED",
-      "subtitle": ""
+      "subtitle": "",
+      "watch": "Watch",
+      "watchmoreted": "Explore more TED Talks",
+      "talktitle": "Designing for Simplicity",
+      "event": "TED2007",
+      "speaker": "John Maeda", 
+      "listen": "Listen",
+      "listenmore": "Explore more Podcasts"
     },
     "tedx": {
-      "title": "TEDx"
+      "title": "TEDx",
+      "talktitle": "The best kindergarten you've ever seen",
+      "event": "TEDxKyoto",
+      "speaker": "Takaharu Tezuka",
+      "watchmoretedx": "Explore more TEDx Talks"
     }
   },
   "partners": {
