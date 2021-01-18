@@ -229,7 +229,7 @@ section#wrapper-black {
 
 
 section.section {
-  margin: 0vh 20vw !important;
+  margin: 0vh 16vw !important;
   @media screen and (max-width: 639px) {
     margin: 0vh 0vw !important;
   }
@@ -542,6 +542,16 @@ br.mobile-br {
     &:hover {
       color: $red;
     }
+  }
+
+  article {
+    line-height: 185%;   
+  }
+
+  span.em {
+    font-weight: bold;
+    color: white;
+    border-bottom: 2px solid $primary;
   }
 
 // @import '~bulma';

@@ -39,7 +39,7 @@ export default {
       {
         hid: 'og:url',
         property: 'og:url',
-        content: 'https://tedxutsukuba.com'
+        content: 'https://www.tedxutsukuba.com'
       },
       {
         hid: 'og:description',

@@ -104,6 +104,9 @@
     }
   },
   "about": {
+    "location": {
+      "address": "〒305-8577 茨城県つくば市天王台1-1-1"
+    },
     "utsukuba": {
       "title": "TEDxUTsukuba",
       "subtitle": "TEDxUTsukubaをご紹介します。",
@@ -124,23 +127,29 @@
         "title": "一緒に活動しませんか？",
         "subtitle": "期待を超える面白さ、保証します。",
         "contactus": "お気軽にご連絡ください"
-      },
-      "location": {
-        "address": "〒305-8577 茨城県つくば市天王台1-1-1"
       }
     },
     "tedandtedx": {
-      "title": "TED | TEDx",
-      "subtitle": "TEDおよび世界に広がるTEDxコミュニティをご紹介いたします。",
-      "watch": "観る",
-      "listen": "聴く"
+      "title": "TED / TEDx",
+      "subtitle": "TEDおよび世界に広がるTEDxコミュニティをご紹介いたします。"
     },
     "ted":{
       "title": "TED",
-      "subtitle": "TED"
+      "subtitle": "TED",
+      "watch": "観る",
+      "watchmoreted": "他のTEDトークを探す",
+      "talktitle": "Designing for Simplicity",
+      "event": "TED2007",
+      "speaker": "ジョン・マエダ",
+      "listen": "聴く",
+      "listenmore": "他のPodcastを探す"
     },
     "tedx": {
-      "title": "TEDx"
+      "title": "TEDx",
+      "talktitle": "他に例を見ない最高の幼稚園",
+      "event": "TEDxKyoto",
+      "speaker": "手塚貴春",
+      "watchmoretedx": "他のTEDxトークを探す"
     }
   },
   "partners": {

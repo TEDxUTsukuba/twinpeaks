@@ -27,17 +27,17 @@
       <b-navbar-item class="normal-category" tag="nuxt-link" :to="localePath('/partners')">
         {{ $t('header.partners.item') }}
       </b-navbar-item>
-      <b-navbar-item class="normal-category" tag="nuxt-link" :to="localePath('/about/utsukuba')">
+      <!-- <b-navbar-item class="normal-category" tag="nuxt-link" :to="localePath('/about/utsukuba')">
         {{ $t('header.aboutus.child2') }}
-      </b-navbar-item>
-      <!-- <b-navbar-dropdown :label="$t('header.aboutus.parent')" class="is-hoverable">
-        <b-navbar-item tag="router-link" :to="{ path: '/about/tedx' }">
+      </b-navbar-item> -->
+      <b-navbar-dropdown :label="$t('header.aboutus.parent')" class="is-hoverable">
+        <b-navbar-item tag="router-link" :to="{ path: '/about/ted-and-tedx' }">
           {{ $t('header.aboutus.child1') }}
         </b-navbar-item>
         <b-navbar-item tag="router-link" :to="{ path: '/about/utsukuba' }">
           {{ $t('header.aboutus.child2') }}
         </b-navbar-item>
-      </b-navbar-dropdown> -->
+      </b-navbar-dropdown>
       <b-navbar-item tag="div">
         <div class="buttons">
           <nuxt-link class="button is-info" v-if="$i18n.locale !== 'en'" :to="switchLocalePath('en')">English</nuxt-link>
