@@ -3,22 +3,22 @@
     <section class="hero is-large">
       <div class="hero-body has-text-left">
         <div class="container has-text-centered">
-          <h1 class="title is-1 is-spaced">{{ $t('about.title')}}</h1>
-          <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.subtitle')}}</h1>
+          <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.title')}}</h1>
+          <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.utsukuba.subtitle')}}</h1>
         </div>
       </div>
     </section>
     <section class="section">
-      <Movie id="teaser" :vId='videoId' :aPlay='autoplay' :classname="large"></Movie>
+      <Movie id="teaser" :vId='videoId' :aPlay='autoplay'></Movie>
     </section>
     <section class="section has-text-grey-lighter">
       <div class="columns">
         <div class="column is-two-thirds-fullhd is-half-desktop">
           <div class="nmp-card-dark">
-            <p>{{ $t('about.description.1')}}</p>
+            <p>{{ $t('about.utsukuba.description.1')}}</p>
           </div>
           <div class="nmp-card-dark">
-            <p>{{ $t('about.description.2')}}</p>
+            <p>{{ $t('about.utsukuba.description.2')}}</p>
           </div>
         </div>
         <div class="column">
@@ -35,7 +35,7 @@
         </div>
         <div class="column">
           <div class="nmp-card-dark">
-            <p>{{ $t('about.description.3')}}</p>
+            <p>{{ $t('about.utsukuba.description.3')}}</p>
           </div>
         </div>
       </div>
@@ -43,15 +43,15 @@
     <section class="hero is-medium bg-red">
       <div class="hero-body">
         <section class="section has-text-right">
-          <h1 class="title is-2">{{ $t('about.description.4')}}</h1>
+          <h1 class="title is-2">{{ $t('about.utsukuba.description.4')}}</h1>
         </section>
       </div>
     </section>
     <section class="hero is-medium is-black">
       <div class="hero-body has-text-white has-text-left">
         <div class="container has-text-centered">
-          <h1 class="title is-1 is-spaced">{{ $t('about.team.title')}}</h1>
-          <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.team.subtitle')}}</h1>
+          <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.team.title')}}</h1>
+          <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.utsukuba.team.subtitle')}}</h1>
         </div>
       </div>
     </section>
@@ -100,14 +100,14 @@
             </div>
             <div class="card-content">
               
-              <p class="midashi is-size-7 has-text-weight-bold">{{ $t('about.team.from') }}</p>
+              <p class="midashi is-size-7 has-text-weight-bold">{{ $t('about.utsukuba.team.from') }}</p>
               <p class="is-size-7 has-text-weight-bold" v-if="$i18n.locale == 'en'">{{ member.en.from }}</p>
               <p class="is-size-7 has-text-weight-bold" v-if="$i18n.locale == 'ja'">{{ member.ja.from }}</p>
 
-              <p class="midashi is-size-7 has-text-weight-bold">{{ $t('about.team.keywords') }}</p>
+              <p class="midashi is-size-7 has-text-weight-bold">{{ $t('about.utsukuba.team.keywords') }}</p>
               <p class="is-size-7 has-text-weight-bold">{{ member.keyword1 }}, {{ member.keyword2 }}, {{ member.keyword3 }}</p>
               
-              <p class="midashi is-size-7 has-text-weight-bold">{{ $t('about.team.favouritetedtalk') }}</p>
+              <p class="midashi is-size-7 has-text-weight-bold">{{ $t('about.utsukuba.team.favouritetedtalk') }}</p>
               <a class="is-size-7 has-text-weight-bold" :href="getTedLinkUrl(member.favouritetedtalklink)">{{ member.favouritetedtalk }} <externalLink v-if="member.favouritetedtalk" style="width: 0.75rem;" /></a>
 
               <!-- <span class="has-text-right">
@@ -131,8 +131,8 @@
     <section class="hero is-medium is-black">
       <div class="hero-body has-text-white has-text-left">
         <div class="container has-text-centered">
-          <h1 class="title is-1 is-spaced">{{ $t('about.join.title')}}</h1>
-          <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.join.subtitle')}}</h1>
+          <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.join.title')}}</h1>
+          <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.utsukuba.join.subtitle')}}</h1>
         </div>
       </div>
     </section>
@@ -172,7 +172,7 @@
     <section class="hero is-medium is-black">
       <div class="hero-body has-text-white has-text-left">
         <div class="container has-text-centered">
-          <p>{{ $t('about.join.contactus')}}</p>
+          <p>{{ $t('about.utsukuba.join.contactus')}}</p>
           <div class="nmp-card-dark has-text-weight-bold" style="font-size: 1rem;">
             <font-awesome-icon :icon="['fas', 'envelope']" style="color: white;" /> tedxutsukuba&#64;gmail.com<br>
             <font-awesome-icon :icon="['fab', 'twitter']" style="color: white;" /> @tedxutsukuba
