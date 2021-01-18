@@ -60,11 +60,11 @@
       </section>
 
       <section class="hero">
-        <div class="columns is-multiline is-vcentered">
-          <div class="column is-8-widescreen is-8-desktop is-full-tablet is-full-mobile">
+        <div class="columns is-vcentered">
+          <div class="column is-8-widescreen is-8-desktop">
             <Movie id="teaser" :vId='videoId3' classname="large" style="margin-left: 0;"></Movie>
           </div>
-          <div class="column is-4-widescreen is-4-desktop is-full-tablet is-full-mobile has-text-centered">
+          <div class="column is-4-widescreen is-4-desktop has-text-centered">
             <img src="~/assets/logo/motto2.png" style="width: 100%; max-width: 280px;">
           </div>
         </div>
