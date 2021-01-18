@@ -140,7 +140,7 @@ div#notice > div.column {
     font-size: 4.5rem !important;
   }
   h1.title.is-2 {
-    font-size: 3.5rem !important;
+    font-size: 3rem !important;
   }
   .is-size-1 {
     font-size: 3.5rem !important;
@@ -210,6 +210,9 @@ section#wrapper-dark {
   h1 {
     color: $light;
   }
+  p, article {
+    color: $light;
+  }
 }
 section#wrapper-red {
   @extend section#wrapper-dark;
@@ -226,14 +229,26 @@ section#wrapper-black {
 
 
 section.section {
-  margin: 0vh 8vw !important;
+  margin: 0vh 20vw !important;
+  @media screen and (max-width: 639px) {
+    margin: 0vh 0vw !important;
+  }
+  @media screen and (min-width: 640px) and (max-width: 1216px){
+    margin: 0vh 4vw !important;
+  }
+}
+
+section.section-narrow {
+  margin: 0vh 20vw !important;
+  padding: 3rem 1.5rem;
   @media screen and (max-width: 540px) {
     margin: 0vh 0vw !important;
   }
   @media screen and (min-width: 541px) and (max-width: 1216px){
-    margin: 0vh 4vw !important;
+    margin: 0vh 12vw !important;
   }
 }
+
 
 .card-content {
   @media screen and (min-width: 768px) {
@@ -523,7 +538,7 @@ br.mobile-br {
   }
 
   a {
-    color: yellow;
+    color: $tsukuba;
     &:hover {
       color: $red;
     }
