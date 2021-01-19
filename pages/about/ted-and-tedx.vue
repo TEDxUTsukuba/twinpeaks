@@ -1,8 +1,8 @@
 <template>
   <section id="wrapper-dark" class="font-awesome">
     <section class="hero is-large has-background-primary">
-      <div class="hero-body has-text-left">
-        <div class="container has-text-centered-mobile has-text-left">
+      <div class="hero-body">
+        <div class="container has-text-centered-touch has-text-left">
           <h1 class="title is-1 is-spaced">{{ $t('about.tedandtedx.title')}}</h1>
           <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.tedandtedx.subtitle')}}</h1>
         </div>

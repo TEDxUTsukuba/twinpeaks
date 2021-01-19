@@ -222,6 +222,6 @@ export default {
   }
   #intro, #notice {
     opacity: 0;
-    transition: all 1s;
+    transition: all 0.5s;
   }
 </style>
