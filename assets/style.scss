@@ -36,6 +36,9 @@ $red2: #ff3123;
 $itf: #39b0b7;
 $light: hsl(0, 0%, 90%);
 
+$card-footer-border-top: 0px !important;
+
+
 .has-text-primary {
   color: $primary !important;
 }
@@ -536,7 +539,7 @@ br.mobile-br {
     @media screen and (min-width: 769px) and (max-width: 1216px){
       padding: 5vh 30vw 0 30vw;
     }
-    padding: 5vh 40vw 0 40vw;
+    padding: 10vh 35vw 0 35vw;
   }
   .icon {
     padding-right: 10px;
@@ -575,6 +578,11 @@ br.mobile-br {
     font-weight: bold;
     color: white;
     border-bottom: 2px solid $primary;
+  }
+
+  span.is-red {
+    background-color: $primary;
+    color: white;
   }
 
 // @import '~bulma';
