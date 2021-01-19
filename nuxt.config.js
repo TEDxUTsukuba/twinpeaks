@@ -83,7 +83,10 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-
+    {
+      src: '~/plugins/vue-scrollmagic.js',
+      ssr: false
+    }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -98,6 +101,11 @@ export default {
     [
       '@nuxtjs/google-analytics', { id: 'UA-104320074-1' }
     ],
+    // {
+    //   src: '~/plugins/webfontloader.js', 
+    //   ssr: false,
+    //   mode: 'client'
+    // },
     [
       'nuxt-buefy',
       {
@@ -107,10 +115,18 @@ export default {
     ],
     // 'nuxt-fontawesome',
     // Doc: https://axios.nuxtjs.org/usage
+    'nuxt-user-agent',
     'nuxt-i18n',
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    'nuxt-webfontloader',
+    [
+      'nuxt-webfontloader',
+      {
+        google: {
+          families: ['Noto+Sans+CJK+JP&display=swap:400,700'],
+        }
+      }
+    ],
     'nuxt-svg-loader',
     [
       '@nuxtjs/sitemap',
