@@ -2,7 +2,7 @@
   <section id="wrapper-dark" class="font-awesome">   
     <section class="hero is-medium bg-cophilaction">
       <div class="hero-body has-text-left">
-        <div class="container has-text-centered">
+        <div class="container has-text-centered-mobile has-text-left">
           <h1 class="title is-1">CoPhilAction</h1>
           <h1 class="subtitle is-4">TEDxUTsukuba 2019</h1>
         </div>

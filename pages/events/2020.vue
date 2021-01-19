@@ -1,13 +1,11 @@
 <template>
   <section id="wrapper-dark" class="font-awesome"> 
-    <!-- <section class="hero is-fullheight top-container bg-jijimuge"> -->
-    <section class="hero is-fullheight top-container">
-      <div class="hero-body">
-        <div class="container has-text-centered">
-          <h1 class="subtitle is-4">TEDxUTsukuba 2020</h1>
-          <h1 class="title is-1">JIJIMUGE</h1>
-        </div>
+    <section class="section">
+      <div class="container has-text-centered-mobile has-text-left">
+        <h1 class="subtitle is-4">TEDxUTsukuba 2020</h1>
+        <h1 class="title is-1">JIJIMUGE</h1>
       </div>
+    </section>
         <!-- <div class="columns"> 
           <div class="column is-7 is-centered has-text-centered"> 
             <nuxt-link :to="localePath('/events/2020')"><img src = "~/assets/wallpapers/jijimuge-transparent.png" style="width: 180px; margin-top: 10vh;"></nuxt-link>
@@ -19,44 +17,38 @@
           <div class="column is-5 has-text-centered-mobile">
                         
           </div>
-        </div> -->
-    </section>
+        </div>
+      -->
 
-    <section class="hero is-black">
-      <div class="hero-body has-text-centered">
-        <Movie id="teaser" :vId='videoId1' :aPlay='autoplay'></Movie>
-      </div>
-    </section>
-
-    <section class="section">
+    <section class="section" id="card-0">
       <h1 class="title is-0">
         <span class="">{{ $t('2020.speaker.title') }}</span>
       </h1>
       <h1 class="subtitle has-text-white has-text-right has-text-centered-mobile">
         {{ $t('2020.speaker.description') }}
       </h1>
-      <Card
+      <Card id="card-1"
         :title = "$t('2020.speaker.sp1.name')"
         :subtitle = "$t('2020.speaker.sp1.position')"
         :description = "$t('2020.speaker.sp1.description')"
         :image_url = "src_sp1"
       >
       </Card>
-      <Card
+      <Card id="card-2"
         :title = "$t('2020.speaker.sp2.name')"
         :subtitle = "$t('2020.speaker.sp2.position')"
         :description = "$t('2020.speaker.sp2.description')"
         :image_url = "src_sp2"
       >
       </Card>
-      <Card
+      <Card id="card-3"
         :title = "$t('2020.speaker.sp3.name')"
         :subtitle = "$t('2020.speaker.sp3.position')"
         :description = "$t('2020.speaker.sp3.description')"
         :image_url = "src_sp3"
       >
       </Card>
-      <Card
+      <Card id="card-4"
         :title = "$t('2020.speaker.sp4.name')"
         :subtitle = "$t('2020.speaker.sp4.position')"
         :description = "$t('2020.speaker.sp4.description')"
@@ -64,7 +56,14 @@
       >
       </Card>
     </section>
-    <section class="hero has-text-centered">
+
+    <section class="hero is-black is-large">
+      <div class="hero-body has-text-centered">
+        <Movie id="teaser" :vId='videoId1' :aPlay='autoplay'></Movie>
+      </div>
+    </section>
+
+    <section class="hero bg-red">
       <section class="section">
         <h1 class="title is-0">
           <span class="">{{ $t('2020.concept.title') }}</span>
@@ -112,7 +111,7 @@
       </b-collapse>
     </section> -->
 
-    <section class="hero bg-red">
+    <section class="hero">
       <div class="hero-body">
         <section class="section">
           <h1 class="title is-0">
@@ -167,13 +166,14 @@
         </section>
       </div>
     </section>
+
     <section class="hero">
-      <section class="section">
+      <section id="highlight-title" class="section">
         <h1 class="title is-0">
           <span class="">{{ $t('2020.highlight.title') }}</span>
         </h1>
       </section>
-      <div class="columns is-multiline is-mobile is-gapless">
+      <div id="highlight" class="columns is-multiline is-mobile is-gapless">
         <div v-for="(item, i) in 15" :key="i" class="column is-4-mobile is-one-fifth-tablet">
             <figure :class="`image is-1by1 colorfilter-base-${i%2}`" :hover="isImageModalActive">
                 <img :src="getHighlightImgUrl(i)" alt="TEDxUTsukuba JIJIMUGE" style="object-fit: cover;" class="colorfilter-image">
@@ -216,7 +216,7 @@ export default {
       src_sp3: Image_sp3,
       src_sp4: Image_sp4,
       animated: 'true',
-      interval: '5000',
+      interval: 5000,
       iconSize: 'is-large',
       pauseInfoType: 'is-dark',
       statementImages: [
@@ -336,6 +336,73 @@ export default {
           return document.documentElement.classList.remove('is-clipped')
       }
     }
+  },
+  mounted() {
+    const scene1 = this.$scrollmagic
+      .scene({
+        triggerElement: '#card-0',
+        triggerHook: 0.5,
+        offset: 0,
+        reverse: false
+      })
+      .setTween('#card-1', {
+        css: {
+          opacity: 1
+        }
+      })
+    const scene2 = this.$scrollmagic
+      .scene({
+        triggerElement: '#card-1',
+        triggerHook: 0.5,
+        offset: 0,
+        reverse: false
+      })
+      .setTween('#card-2', {
+        css: {
+          opacity: 1
+        }
+      })
+    const scene3 = this.$scrollmagic
+      .scene({
+        triggerElement: '#card-2',
+        triggerHook: 0.5,
+        offset: 0,
+        reverse: false
+      })
+      .setTween('#card-3', {
+        css: {
+          opacity: 1
+        }
+      })
+    const scene4 = this.$scrollmagic
+      .scene({
+        triggerElement: '#card-3',
+        triggerHook: 0.5,
+        offset: 0,
+        reverse: false
+      })
+      .setTween('#card-4', {
+        css: {
+          opacity: 1
+        }
+      })
+    const scene5 = this.$scrollmagic
+      .scene({
+        triggerElement: '#highlight-title',
+        triggerHook: 0.5,
+        offset: 0,
+        reverse: false
+      })
+      .setTween('#highlight', {
+        css: {
+          opacity: 1
+        }
+      })
+    this.$scrollmagic.addScene(scene1)
+    this.$scrollmagic.addScene(scene2)
+    this.$scrollmagic.addScene(scene3)
+    this.$scrollmagic.addScene(scene4)
+    this.$scrollmagic.addScene(scene5)
   }
 }
 </script>
@@ -356,6 +423,15 @@ export default {
     filter: grayscale(0%);
   }
   .al img {
-      filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+
+  #card-1, #card-2, #card-3, #card-4 {
+    opacity: 0;
+    transition: all 0.25s;
+  }
+  #highlight {
+    opacity: 0;
+    transition: all 0.5s;
   }
 </style>

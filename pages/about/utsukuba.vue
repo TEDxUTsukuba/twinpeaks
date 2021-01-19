@@ -2,7 +2,7 @@
   <section id="wrapper-dark" class="font-awesome">
     <section class="hero is-large">
       <div class="hero-body has-text-left">
-        <div class="container has-text-centered">
+        <div class="container has-text-centered-mobile has-text-left">
           <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.title')}}</h1>
           <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.utsukuba.subtitle')}}</h1>
         </div>
@@ -140,7 +140,8 @@
       <div class="columns is-mobile is-multiline">
         <div v-for="(job, index) in jobs" :key="job.id" class="column is-3-desktop is-6-tablet is-6-mobile">
           <div :class="`notification has-background-${job.color}`">
-            <p class="has-text-weight-bold">{{ job.name }}</p>
+            <p class="has-text-weight-bold" v-if="$i18n.locale == 'en'">{{ job.name_en }}</p>
+            <p class="has-text-weight-bold" v-if="$i18n.locale == 'ja'">{{ job.name_ja }}</p>
           </div>
         </div>
       </div>
@@ -172,22 +173,27 @@
     <section class="hero is-medium is-black">
       <div class="hero-body has-text-white has-text-left">
         <div class="container has-text-centered">
-          <p>{{ $t('about.utsukuba.join.contactus')}}</p>
+          <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.contactus.title')}}</h1>
+          <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.utsukuba.contactus.subtitle')}}</h1>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+        <div class="container has-text-centered">
           <div class="nmp-card-dark has-text-weight-bold" style="font-size: 1rem;">
             <font-awesome-icon :icon="['fas', 'envelope']" style="color: white;" /> tedxutsukuba&#64;gmail.com<br>
             <font-awesome-icon :icon="['fab', 'twitter']" style="color: white;" /> @tedxutsukuba
           </div>
         </div>
 
-        <vue-instagram token="accessTokenHere" :count="5" :tags="['hashtag1', 'hashtag2']" mediaType="image">
+        <!-- <vue-instagram token="accessTokenHere" :count="5" :tags="['hashtag1', 'hashtag2']" mediaType="image">
           <template slot="feeds" slot-scope="props">
             <li class="fancy-list"> {{ props.feed.link }} </li>
           </template>
           <template slot="error" slot-scope="props">
             <div class="fancy-alert"> {{ props.error.error_message }} </div>
           </template>
-        </vue-instagram>
-      </div>
+        </vue-instagram> -->
     </section>
   </section>
 </template>

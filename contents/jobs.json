@@ -1,42 +1,50 @@
 [
   {
     "id": 1,
-    "name": "Curation",
-    "color": "info"
+    "name_en": "Curation",
+    "name_ja": "スピーカー選定",
+    "color": "tsukuba"
   },
   {
     "id": 2,
-    "name": "Talk Production",
-    "color": "info"
+    "name_en": "Talk Production",
+    "name_ja": "トーク制作",
+    "color": "grey"
   },
   {
     "id": 3,
-    "name": "Translation",
-    "color": "info"
+    "name_en": "Translation",
+    "name_ja": "翻訳",
+    "color": "itf"
   },
   {
     "id": 4,
-    "name": "Partnering",
-    "color": "success"
+    "name_en": "Partnering",
+    "name_ja": "渉外",
+    "color": "tsukuba"
   },
   {
     "id": 5,
-    "name": "Graphic Design",
-    "color": "danger"
+    "name_en": "Graphic Design",
+    "name_ja": "グラフィックデザイン",
+    "color": "grey"
   },
   {
     "id": 6,
-    "name": "Promotion",
-    "color": "danger"
+    "name_en": "Promotion",
+    "name_ja": "広報",
+    "color": "itf"
   },
   {
     "id": 7,
-    "name": "Venue Setup",
-    "color": "link"
+    "name_en": "Venue Setup",
+    "name_ja": "会場設営",
+    "color": "tsukuba"
   },
   {
     "id": 8,
-    "name": "Tech Handline",
-    "color": "link"
+    "name_en": "Tech Handling",
+    "name_ja": "機材運用",
+    "color": "itf"
   }
 ]

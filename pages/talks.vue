@@ -1,15 +1,10 @@
 <template>
   <section id="wrapper-dark">
-    <section class="hero is-large">
-      <div class="hero-body has-text-centered">
-        <div class="container">
-          <h1 class="title is-1 is-spaced">{{ $t('talks.title') }}</h1>
-          <h1 class="subtitle has-text-grey-light">{{ $t('talks.subtitle') }}</h1>
-          <br>
-        </div>
-      </div>
-    </section>
     <section class="section">
+      <div class="nmp-card has-text-centered-mobile has-text-left">
+        <h1 class="title is-1 is-spaced">{{ $t('talks.title') }}</h1>
+        <h1 class="subtitle has-text-grey-light">{{ $t('talks.subtitle') }}</h1>
+      </div>
       <div class="columns is-multiline">
         <div
           id="thumbnails"
@@ -46,7 +41,7 @@
               </h1>
               <span class="has-text-right">
                 <b-collapse :open="false" position="is-bottom" aria-id="contentIdForA11y1">
-                  <a class="button is-gradient is-rounded is-outlined" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1">
+                  <a class="button is-gradient is-rounded is-outlined is-small" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1">
                     <!-- <b-icon :icon="!props.open ? 'menu-down' : 'menu-up'"></b-icon> -->
                       {{ !props.open ? 'Read more' : 'Read less' }}
                   </a>

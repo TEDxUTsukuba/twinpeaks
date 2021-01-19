@@ -1,8 +1,8 @@
 <template>
   <section id="wrapper-dark" class="font-awesome">
-    <section class="hero is-fullheight">
+    <section class="hero is-large has-background-primary">
       <div class="hero-body has-text-left">
-        <div class="container has-text-centered">
+        <div class="container has-text-centered-mobile has-text-left">
           <h1 class="title is-1 is-spaced">{{ $t('about.tedandtedx.title')}}</h1>
           <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.tedandtedx.subtitle')}}</h1>
         </div>
@@ -10,7 +10,7 @@
     </section>
     
     <section class="hero" id="ted">
-      <section class="section">
+      <section class="section" id="ted-without-background">
         <h1 class="title is-0">{{ $t('about.ted.title')}}</h1>
         <article v-if="$i18n.locale == 'en'">
           <span class="em">TED</span> is a nonprofit organization devoted to <span class="em">Ideas Worth Spreading</span>. Started as a four-day conference in California 30 years ago, TED has grown to support its mission with multiple initiatives. The two annual TED Conferences invite <span class="em">the world’s leading thinkers and doers</span> to speak for <span class="em">18 minutes or less</span>. Many of these talks are then made available, free, at TED.com. TED speakers have included Bill Gates, Jane Goodall, Elizabeth Gilbert, Sir Richard Branson, Nandan Nilekani, Philippe Starck, Ngozi Okonjo-Iweala, Sal Khan, Daniel Kahneman and John Maeda, who earned his Ph.D. at the University of Tsukuba. 
@@ -28,7 +28,7 @@
       </section>
     </section>
 
-    <section class="hero is-light">
+    <section class="hero is-light" id="ted-stats">
       <section class="section">
         <div class="columns is-mobile is-multiline">
           <div class="column has-text-centered is-12-mobile is-4-tablet">
@@ -54,7 +54,7 @@
     </section>
 
     <section class="hero" id="tedx">
-      <section class="section">
+      <section class="section" id="tedx-without-background">
         <h1 class="title is-0">{{ $t('about.tedx.title')}}</h1>
         <article v-if="$i18n.locale == 'en'">
           In the spirit of <span class="em">ideas worth spreading</span>, TEDx is a program of <span class="em">local, self-organized events</span> that bring people together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark <span class="em">deep discussion</span> and <span class="em">connection</span>. These local, self-organized events are branded TEDx, where <span class="em">x = independently organized TED event</span>. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized. (Subject to certain rules and regulations.)
@@ -102,7 +102,7 @@
         <h1 class="title is-0">{{ $t('about.ted.watch')}}</h1>
       </section>
       <div class="hero-body has-text-centered">
-        <div style="position:relative;height:0;padding-bottom:45vw;">
+        <div id="ted-embedded-top" style="position:relative;">
           <iframe class="video" src="https://embed.ted.com/talks/john_maeda_designing_for_simplicity" width="854" height="480" style="position: relative;" frameborder="0" scrolling="no" allowfullscreen></iframe>
           <br><br>
           <p class="">{{ $t('about.ted.event')}}</p>
@@ -111,7 +111,7 @@
           <a class="button is-rounded is-gradient" href="https://www.ted.com/talks">{{ $t('about.ted.watchmoreted')}}</a>
         </div>
         <br>
-        <div style="position:relative;height:0;padding-bottom:45vw;">
+        <div id="ted-embed-bottom" style="position:relative;">
           <iframe class="video" src="https://embed.ted.com/talks/takaharu_tezuka_the_best_kindergarten_you_ve_ever_seen" width="854" height="480" style="position: relative;" frameborder="0" scrolling="no" allowfullscreen></iframe>
           <br><br>
           <p class="">{{ $t('about.tedx.event')}}</p>
@@ -153,6 +153,34 @@ export default {
       videoId3: '-FOCpMAww28',
       videoId4: 'xHsXfmHaBUo',
     }
+  },
+  mounted(){
+    const scene1 = this.$scrollmagic
+      .scene({
+        triggerElement: '#wrapper-dark',
+        triggerHook: 0.5,
+        offset: 0,
+        reverse: false
+      })
+      .setTween('#ted-without-background', {
+        css: {
+          opacity: 1
+        }
+      })
+    const scene2 = this.$scrollmagic
+      .scene({
+        triggerElement: '#ted-stats',
+        triggerHook: 0.5,
+        offset: 0,
+        reverse: false
+      })
+      .setTween('#tedx-without-background', {
+        css: {
+          opacity: 1
+        }
+      })
+    this.$scrollmagic.addScene(scene1)
+    this.$scrollmagic.addScene(scene2)
   }
 }
 </script>
@@ -177,9 +205,14 @@ export default {
     background-repeat: no-repeat;
     background-size: cover;
   }
+  #ted-without-background, #tedx-without-background {
+    opacity: 0;
+    transition: all 0.5s;
+  }
   #tedx {
     background: url("~@/assets/wallpapers/x.png");
     background-repeat: no-repeat;
     background-size: cover;
   }
+
 </style>
