@@ -7,15 +7,15 @@
           </h1>
           <a class="icon-circle fb" href="https://www.facebook.com/tedxutsukuba/">
             <!-- <font-awesome-icon :icon="['fab', 'facebook-square']" /> -->
-            <iconFB style="width: 5vw;" />
+            <iconFB alt="Facebook" style="width: 5vw;" />
           </a>
           <a class="icon-circle ig" href="https://www.instagram.com/tedxutsukuba/">
             <!-- <font-awesome-icon :icon="['fab', 'instagram']" /> -->
-            <iconIG style="width: 5vw;" />
+            <iconIG alt="Instagram" style="width: 5vw;" />
           </a>
           <a class="icon-circle tw" href="https://www.twitter.com/tedxutsukuba/">
             <!-- <font-awesome-icon :icon="['fab', 'twitter']" /> -->
-            <iconTW style="width: 5vw;" />
+            <iconTW alt="Twitter" style="width: 5vw;" />
           </a>
         </section>
         
@@ -95,19 +95,19 @@
               </div>
               <div class="sns column is-4-desktop is-5-tablet has-text-right has-text-centered-mobile">
                 <a href="https://www.facebook.com/tedxtsukuba">
-                  <iconFB class="icon" />
+                  <iconFB alt="Facebook" class="icon" />
                 </a>
                 <a href="https://www.instagram.com/tedxutsukuba">
-                  <iconIG class="icon" />
+                  <iconIG alt="Instagram" class="icon" />
                 </a>
                 <a href="https://www.twitter.com/tedxutsukuba">
-                  <iconTW class="icon" />
+                  <iconTW alt="Twitter" class="icon" />
                 </a>
                 <a href="https://www.flic.kr/ps/3eCWpZ">
-                  <iconFL class="icon" />
+                  <iconFL alt="Flickr" class="icon" />
                 </a>
                 <a href="https://www.note.com/tedxutsukuba">
-                  <iconNT class="icon" />
+                  <iconNT alt="note" class="icon" />
                 </a>
               </div>
             </div>

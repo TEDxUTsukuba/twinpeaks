@@ -6,11 +6,15 @@
           alt="Lightweight UI components for Vue.js based on Bulma"
       >
       <h1 class="title textoverflow">Social Capital</h1> -->
-      
+    <section class="bg-jijimuge">  
       <div id="top-photoframe" class="top-photoframe">
-        <nuxt-link :to="localePath('/events/2020')"><img src = "~/assets/wallpapers/jijimuge-transparent.png" /></nuxt-link>
+        <nuxt-link :to="localePath('/events/2020')">
+        <figure class="is-square">
+          <img src = "~/assets/wallpapers/jijimuge-transparent-circle.png" />
+        </figure>
+        </nuxt-link>
       </div>
-      <section id="top-title" class="section has-text-centered has-text-weight-light has-text-white">
+      <section id="top-title" class="section has-text-centered has-text-weight-light has-text-light">
         <h1 class="title is-1 is-spaced">
           {{ $t('event.title1') }}<br class="mobile-br">{{ $t('event.title2') }}<br class="mobile-br">{{ $t('event.title3') }}
         </h1>
@@ -21,7 +25,7 @@
         <nuxt-link :to="localePath('/events/2020')" class="button is-gradient is-rounded">{{ $t('button.discover') }}</nuxt-link>
         
       </section>
-  {{ deviceType}}
+    </section>
       <section class="hero bg-red">
         <div class="hero-body">
           <section id="intro" class="section">
@@ -169,7 +173,7 @@ export default {
     const scene3 = this.$scrollmagic
       .scene({
         triggerElement: '#notice-title',
-        triggerHook: 0.5,
+        triggerHook: 1,
         offset: 0,
         reverse: false
       })
@@ -223,5 +227,10 @@ export default {
   #intro, #notice {
     opacity: 0;
     transition: all 0.5s;
+  }
+  .bg-jijimuge {
+    background: url("~@/assets/wallpapers/gradient.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 </style>
