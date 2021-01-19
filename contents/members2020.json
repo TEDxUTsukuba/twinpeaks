@@ -16,7 +16,8 @@
       "keyword3": "Destroyer",
       "favouritetedtalk": "優れたリーダーはどうやって行動を促すか",
       "favouritetedtalklink": "https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action",
-      "imageFileName": "gochi"
+      "imageFileName": "gochi",
+      "tedAccount": "https://www.ted.com/profiles/5535892/about"
     },
     "2": {
       "ja": {
@@ -34,7 +35,8 @@
       "keyword3": "IB Educator",
       "favouritetedtalk": "How Dolly Parton led me to an epiphany",
       "favouritetedtalklink": "https://www.ted.com/talks/jad_abumrad_how_dolly_parton_led_me_to_an_epiphany",
-      "imageFileName": "craig"
+      "imageFileName": "craig",
+      "tedAccount": "https://www.ted.com/profiles/1319954/about"
     },
     "3": {
       "ja": {
@@ -52,7 +54,8 @@
       "keyword3": "",
       "favouritetedtalk": "人を惹きつける話し方",
       "favouritetedtalklink": "https://www.ted.com/talks/julian_treasure_how_to_speak_so_that_people_want_to_listen",
-      "imageFileName": "coleen"
+      "imageFileName": "coleen",
+      "tedAccount": "https://www.ted.com/profiles/20593123/about"
     },
     "4": {
       "ja": {
@@ -269,7 +272,8 @@
       "keyword3": "Decision Maker?",
       "favouritetedtalk": "How flags unite (and divide) us",
       "favouritetedtalklink": "https://www.ted.com/talks/michael_green_how_flags_unite_and_divide_us",
-      "imageFileName": ""
+      "imageFileName": "",
+      "tedAccount": "https://www.ted.com/profiles/5284655/about"
     }
   }
 }

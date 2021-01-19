@@ -64,7 +64,7 @@
           style="display: inline-block; vertical-align: top;"
         >
           <div class="nmp-dark">
-            <header class="card-header">
+            <header class="card-header" v-if="member.imageFileName">
               <p class="card-header-title">
                 <!-- <span class="tag is-white">
                   {{ talk.category_1 }}
@@ -80,36 +80,39 @@
               </figure>
             </div>
             <div class="card-content">
-              <span v-if="$i18n.locale == 'en'">
-                <h1 class="title is-4">
-                  {{ member.en.name }}
-                </h1>
-                <h1 class="subtitle is-5">
-                  {{ member.en.role }}
-                </h1>
-              </span>
-              <span v-if="$i18n.locale == 'ja'">
-                <h1 class="title is-4">
-                  {{ member.ja.name }}
-                </h1>
-                <h1 class="subtitle is-5">
-                  {{ member.ja.role }}
-                </h1>
-              </span>
-
-            </div>
-            <div class="card-content">
+              <div class="media">
+                <span v-if="$i18n.locale == 'en'">
+                  <h1 class="title is-4">
+                    {{ member.en.name }}
+                  </h1>
+                  <h1 class="subtitle is-6">
+                    {{ member.en.role }}
+                  </h1>
+                </span>
+                <span v-if="$i18n.locale == 'ja'">
+                  <h1 class="title is-4">
+                    {{ member.ja.name }}
+                  </h1>
+                  <h1 class="subtitle is-6">
+                    {{ member.ja.role }}
+                  </h1>
+                </span>
+              </div>
               
               <p class="midashi is-size-7 has-text-weight-bold">{{ $t('about.utsukuba.team.from') }}</p>
               <p class="is-size-7 has-text-weight-bold" v-if="$i18n.locale == 'en'">{{ member.en.from }}</p>
               <p class="is-size-7 has-text-weight-bold" v-if="$i18n.locale == 'ja'">{{ member.ja.from }}</p>
 
-              <p class="midashi is-size-7 has-text-weight-bold">{{ $t('about.utsukuba.team.keywords') }}</p>
-              <p class="is-size-7 has-text-weight-bold">{{ member.keyword1 }}, {{ member.keyword2 }}, {{ member.keyword3 }}</p>
+              <p class="midashi is-size-7 has-text-weight-bold" v-if="member.keyword1">{{ $t('about.utsukuba.team.keywords') }}</p>
+              <p class="is-size-7 has-text-weight-bold">{{ member.keyword1 }}<span v-if="member.keyword2">, </span>{{ member.keyword2 }}<span v-if="member.keyword3">, </span>{{ member.keyword3 }}</p>
               
-              <p class="midashi is-size-7 has-text-weight-bold">{{ $t('about.utsukuba.team.favouritetedtalk') }}</p>
+              <p class="midashi is-size-7 has-text-weight-bold" v-if="member.favouritetedtalk">{{ $t('about.utsukuba.team.favouritetedtalk') }}</p>
               <a class="is-size-7 has-text-weight-bold" :href="getTedLinkUrl(member.favouritetedtalklink)">{{ member.favouritetedtalk }} <externalLink v-if="member.favouritetedtalk" style="width: 0.75rem;" /></a>
-
+              
+              <p class="card-item has-text-right">
+                <a v-if="member.tedAccount" :href="member.tedAccount"><span class="tag is-dark has-text-primary has-text-weight-bold">TED</span></a>
+              </p>
+              
               <!-- <span class="has-text-right">
                 <b-collapse :open="false" position="is-bottom" aria-id="contentIdForA11y1">
                   <a class="button is-gradient is-rounded is-outlined" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1">
@@ -261,6 +264,9 @@ export default {
     margin-top: 0.5rem;
     color: #E62B1E;
     font-weight: bold;
+  }
+  h1.subtitle + p.midashi {
+    margin-top: 0;
   }
   a {
     color: white;
