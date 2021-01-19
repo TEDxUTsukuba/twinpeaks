@@ -23,6 +23,7 @@
     "readmore": "続きを読む",
     "readless": "閉じる",
     "visitwebsite": "ウェブサイト",
+    "archive": "アーカイブを見る",
     "close": "閉じる"
   },
   "top": {
@@ -52,13 +53,17 @@
     "title2": "事事無碍の",
     "title3": "世界へ。",
     "subtitle1": "4名の登壇者による",
-    "subtitle2": "洞察的なアイディアを学ぼう",
+    "subtitle2": "洞察的なアイディアを学ぼう。",
     "download": "カレンダーに追加"
   },
   "news": {
     "title": "最新情報"
   },
   "notice": {
+    "archive": {
+      "title": "アーカイブ",
+      "subtitle": ""
+    },
     "left-top": {
       "title": "2018年以前のTEDxUTsukubaにご参加くださった皆さまへ",
       "description": "Peatixへの不正アクセス事象に関するご確認をお願いいたします。",
@@ -67,14 +72,14 @@
     },
     "left-bottom": {
       "title": "オンラインイベントにご参加いただきありがとうございました。",
-      "description": "TEDxUTsukuba 'JIJIMUGE' は盛況のうちに終了いたしました。",
+      "description": "TEDxUTsukuba \"JIJIMUGE\" は盛況のうちに終了いたしました。",
       "detail": "YouTubeにてイベントのアーカイブを公開しています。",
       "link": "/events/2020"
     },
     "right-top": {
       "title": "「天才になる呪い」が再生回数1万回を突破しました。",
       "description": "山田玲司さんのトークのYouTubeの再生回数が1万回を超えました。",
-      "detail": "TEDxUTsukuba 2019 'CoPhilAction' にご登壇いただいた山田玲司さんのトークが、YouTubeにて再生回数1万回を突破しました。この機会に是非ご視聴ください。",
+      "detail": "TEDxUTsukuba 2019 \"CoPhilAction\" にご登壇いただいた山田玲司さんのトークが、YouTubeにて再生回数1万回を突破しました。この機会に是非ご視聴ください。",
       "link": "https://www.youtube.com/watch?v=qvOi1C8qCDM"
     },
     "right-bottom": {
@@ -109,7 +114,7 @@
     },
     "utsukuba": {
       "title": "TEDxUTsukuba",
-      "subtitle": "TEDxUTsukubaをご紹介します。",
+      "subtitle": "",
       "description": {
         "1": "TEDとはideas worth spreading (価値あるアイデアを広める）の理念のもと、さまざまなスピーカーを呼びトークイベントを開催する団体です。そのトーク内容は科学、技術、経済、歴史、最新の社会問題など多岐に渡ります。",
         "2": "TEDxは、TEDからライセンスを受けて活動している、地域や大学に根付いたコミュニティです。 TEDxUTsukubaもこのうちの一つで、ここつくばの地で日々活動しています。",
@@ -125,8 +130,12 @@
       },
       "join": {
         "title": "一緒に活動しませんか？",
-        "subtitle": "期待を超える面白さ、保証します。",
-        "contactus": "お気軽にご連絡ください"
+        "subtitle": "期待を超える面白さ、保証します。"
+      },
+      "contactus": {
+        "title": "お気軽にお問い合わせください！",
+        "subtitle": "メールまたはTwitterのダイレクトメッセージにて承ります。",
+        "description": "メールまたはTwitterのダイレクトメッセージにて承ります。"
       }
     },
     "tedandtedx": {
@@ -159,7 +168,7 @@
   "talks": {
     "title": "トーク",
     "subtitle": "イベントを通して、教養から科学、地域の話題から世界規模の問題に至るまで、様々なトピックスに焦点を当ててきました。",
-    "notice": "TEDxUTsukuba 2020 'JIJIMUGE' にて皆さまにお届けしたトークは、TEDへの申請が受理された後に、YouTubeにて公開される予定です。"
+    "notice": "TEDxUTsukuba 2020 \"JIJIMUGE\" にて皆さまにお届けしたトークは、TEDへの申請が受理された後に、YouTubeにて公開される予定です。"
   },
   "2020": {
     "highlight": {
@@ -177,23 +186,23 @@
       },
       "sp2": {
         "name": "李昇姫",
-        "position": "",
+        "position": "感性デザイン研究者",
         "description": "人間に思いやりを与えるデザインを追究する筑波大学の准教授。人間の「感性」をキーワードとした分野横断的な研究を通して、“Kansei”を世界に発信している。意外な趣味は格闘技や競技ダンス。"
       },
       "sp3": {
         "name": "江守正多",
-        "position": "",
+        "position": "環境学者",
         "description": "国立環境研究所の地球環境研究センターで、副センター長を務める気候変動の専門家。どのようなコミュニケーションをすれば気候変動の問題が解決へと向かうのかを日々考え、発信している。ポケモンが大好き。"
       },
       "sp4": {
         "name": "善村カリーナ美和",
-        "position": "",
+        "position": "「マルチラベリスト」",
         "description": "パラグアイで生まれ育った日系3世で、大学院への進学を機に来日。在学中はつくばを中心にパラグアイの魅力を伝える一方で、全国各地の日系人コミュニティの支援活動にも力を尽くした。『知ることで世界は広がる』"
       }
     },
     "concept": {
       "title": "コンセプト",
-      "description": "イベントのコンセプトは、仏教用語に由来する 'JIJIMUGE' です。",
+      "description": "イベントのコンセプトは、仏教用語に由来する\"JIJIMUGE\" です。",
       "headline": "JIJIMUGE",
       "statement1": "今、世の中にある様々な境界線が溶けつつあります。",
       "statement2": "今、世の中にある様々な境界線が溶けつつあります。",
@@ -258,7 +267,7 @@
     },
     "concept": {
       "title": "コンセプト",
-      "description": "イベントのコンセプトは、仏教用語に由来する 'JIJIMUGE' です。",
+      "description": "イベントのコンセプトは、仏教用語に由来する\"JIJIMUGE\" です。",
       "headline": "JIJIMUGE",
       "statement1": "今、世の中にある様々な境界線が溶けつつあります。",
       "statement2": "今、世の中にある様々な境界線が溶けつつあります。",

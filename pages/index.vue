@@ -1,6 +1,5 @@
 <template>
   <section id="wrapper-dark" style="width: 100vw;">
-      
     <!-- <div class="columns is-mobile"> -->
       <!-- <img
           src="~/assets/wallpapers/speaker_ex1.jpg"
@@ -8,10 +7,10 @@
       >
       <h1 class="title textoverflow">Social Capital</h1> -->
       
-      <div class="top-photoframe">
+      <div id="top-photoframe" class="top-photoframe">
         <nuxt-link :to="localePath('/events/2020')"><img src = "~/assets/wallpapers/jijimuge-transparent.png" /></nuxt-link>
-      </div> -->
-      <section class="section has-text-centered has-text-weight-light has-text-white">
+      </div>
+      <section id="top-title" class="section has-text-centered has-text-weight-light has-text-white">
         <h1 class="title is-1 is-spaced">
           {{ $t('event.title1') }}<br class="mobile-br">{{ $t('event.title2') }}<br class="mobile-br">{{ $t('event.title3') }}
         </h1>
@@ -22,10 +21,10 @@
         <nuxt-link :to="localePath('/events/2020')" class="button is-gradient is-rounded">{{ $t('button.discover') }}</nuxt-link>
         
       </section>
-
+  {{ deviceType}}
       <section class="hero bg-red">
         <div class="hero-body">
-          <section class="section">
+          <section id="intro" class="section">
             <div class="columns is-multiline is-centered is-variable is-8">
                 <div class="column is-5-widescreen is-4-desktop is-full-tablet is-full-mobile">
                   <img src="~/assets/logo/motto.png" style="width: 100%; max-width: 480px;">
@@ -60,8 +59,7 @@
         <Movie id="teaser" :vId='videoId3' classname="large" style=""></Movie>
       </section>
 
-    <!-- <section class="section">
-      <br>
+    <section id="notice-title" class="section">
       <h1 class="title is-2 has-text-centered">
         <span class="">{{ $t('news.title') }}</span>
       </h1>
@@ -105,8 +103,11 @@
         </div>
       </div>
       <p class="has-text-grey-light has-text-right">{{ $t('notice.last-modified')}}<time datetime="2020-12-22">2020/12/22</time></p>
-    </section> -->
-    <!-- <div class="text-divider"></div> -->
+      <div class="has-text-centered">
+        <nuxt-link to="/notice" class="button is-gradient is-rounded">{{ $t('button.archive') }}</nuxt-link>
+      </div>
+    </section>
+    <div class="text-divider"></div>
   </section>
 </template>
 
@@ -133,6 +134,53 @@ export default {
       eventDate: Date(2020, 11, 29, 0, 0, 0),
       isAlertActive: true
     }
+  },
+  // asyncData(context) {
+  //   const isAndroid = context.$ua.isFromAndroidOs()
+  //   console.log('isAndroid', isAndroid)
+  //   return { isAndroid }
+  // },
+  mounted() {
+    // const scene1 = this.$scrollmagic
+    //   .scene({
+    //     triggerElement: '#top-photoframe',
+    //     triggerHook: 1,
+    //     offset: 10,
+    //     duration: 300,
+    //     reverse: false
+    //   })
+    //   .setTween('#top-caption', {
+    //     css: {
+    //       opacity: 1
+    //     }
+    //   })
+    const scene2 = this.$scrollmagic
+      .scene({
+        triggerElement: '#top-title',
+        triggerHook: 0.5,
+        offset: 100,
+        reverse: false
+      })
+      .setTween('#intro', {
+        css: {
+          opacity: 1
+        }
+      })
+    const scene3 = this.$scrollmagic
+      .scene({
+        triggerElement: '#notice-title',
+        triggerHook: 0.5,
+        offset: 0,
+        reverse: false
+      })
+      .setTween('#notice', {
+        css: {
+          opacity: 1
+        }
+      })
+      // this.$scrollmagic.addScene(scene1)
+      this.$scrollmagic.addScene(scene2)
+      this.$scrollmagic.addScene(scene3)
   }
 }
 </script>
@@ -171,5 +219,9 @@ export default {
     margin: 0 auto;
     width: 80%;
     height: 2px;
+  }
+  #intro, #notice {
+    opacity: 0;
+    transition: all 1s;
   }
 </style>

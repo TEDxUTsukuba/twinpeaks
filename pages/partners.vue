@@ -1,12 +1,12 @@
 <template>
   <section id="wrapper-dark">
-    <section class="hero is-large">
+    <!-- <section class="hero is-large">
       <div class="hero-body has-text-white has-text-left">
         <div class="container has-text-centered">
-          <h1 class="title is-1 is-spaced">{{ $t('partners.title') }}</h1>
-          <h1 class="subtitle has-text-grey-light">{{ $t('partners.subtitle') }}</h1>
+          
         </div>
       </div>
+    </section> -->
       <!-- <div class="top-photoframe">
         <b-carousel 
           :autoplay="false" indicator-custom
@@ -28,14 +28,26 @@
           </template>
         </b-carousel>
       </div> -->
-      <section class="section has-text-centered">
-        <PartnerList category="take" width_fullhd="4" width_desktop="4" width_tablet="4" width_mobile="12" />
+      <section class="section has-text-centered-mobile has-text-left">
+        <div class="nmp-card">
+          <h1 class="title is-1 is-spaced">{{ $t('partners.title') }}</h1>
+          <h1 class="subtitle has-text-grey-light">{{ $t('partners.subtitle') }}</h1>
+        </div>
+        <PartnerList category="take" width_fullhd="4" width_desktop="4" width_tablet="6" width_mobile="12" />
         <!-- <PartnerList category="take" /> -->
-        <PartnerList category="ume" width_fullhd="3" width_desktop="3" width_tablet="6" width_mobile="12" />
-        <PartnerList category="sakura" width_fullhd="2" width_desktop="2" width_tablet="4" width_mobile="12" />
+        <PartnerList category="ume" width_fullhd="3" width_desktop="3" width_tablet="4" width_mobile="6" />
+        <PartnerList category="sakura" width_fullhd="2" width_desktop="2" width_tablet="3" width_mobile="6" />
       </section>
+      <section class="hero is-medium is-black">
+      <div class="hero-body has-text-white">
+        <div class="container has-text-centered">
+          <h1 class="title is-1 is-spaced">パートナー募集中</h1>
+          <h1 class="subtitle is-5 has-text-grey-light">理念に賛同し、イベントを一緒に作り上げていただけるパートナーを募集しています。</h1>
+          <div class="nmp-card-dark">下記連絡先までお問い合わせください。<br>tedxutsukuba&#64;gmail.com</div>
+        </div>
+      </div>
     </section>
-  </section>
+    </section>
 </template>
 
 <script>

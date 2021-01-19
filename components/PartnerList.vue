@@ -2,12 +2,18 @@
 <section>
   <div class="columns is-multiline is-mobile is-8-tablet">
     <div :class="`column is-${width_fullhd}-fullhd is-${width_desktop}-desktop is-${width_tablet}-tablet is-${width_mobile}-mobile`" v-for="(partner, index) in partnerList" :key="index"> 
-      <div class="has-text-white" style="padding: 1rem;">
+      <div class="has-text-white" style="padding: 0.5rem;">
         <figure class="image is-1by1">
           <img :src="getJsonImgUrl(partner.id)" :alt="partner.name">
         </figure>
         <br>
-        <p class="has-text-weight-bold">
+        <p class="has-text-weight-bold is-size-5" v-if="category == 'take'">
+          {{ partner.name }} <span v-if="$i18n.locale == 'ja'">様</span>
+        </p>
+        <p class="has-text-weight-bold is-size-6" v-if="category == 'ume'">
+          {{ partner.name }} <span v-if="$i18n.locale == 'ja'">様</span>
+        </p>
+        <p class="has-text-weight-bold is-size-7" v-else>
           {{ partner.name }} <span v-if="$i18n.locale == 'ja'">様</span>
         </p>
         <br>
@@ -16,7 +22,7 @@
             @click="openModal(partner)">
             {{ $t('button.discover') }}
           </button> -->
-          <a :href="partner.url" class="button is-white is-outlined is-rounded">{{ $t('button.visitwebsite') }}</a>
+          <a :href="partner.url" class="button is-white is-outlined is-rounded is-small">{{ $t('button.visitwebsite') }}</a>
           <!-- <modal :val="postItem" v-show="showContent" @close="closeModal" /> -->
           <br><br>
       </div>

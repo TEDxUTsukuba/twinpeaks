@@ -91,7 +91,7 @@
                 <!-- <a href="">Media Relations</a> -->
                 <!-- <a href="">Privacy Policy</a> -->
                 <!-- <a href="">Code of Conduct</a> -->
-                <a href="https://www.ted.com/about/programs-initiatives/tedx-program">About TEDx program <externalLink style="width: 0.75rem;"/></a>
+                <a class="is-size-7" href="https://www.ted.com/about/programs-initiatives/tedx-program">About TEDx program <externalLink style="width: 0.75rem;"/></a>
               </div>
               <div class="sns column is-4-desktop is-5-tablet has-text-right has-text-centered-mobile">
                 <a href="https://www.facebook.com/tedxtsukuba">
