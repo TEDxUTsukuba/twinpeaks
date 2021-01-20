@@ -98,6 +98,15 @@ div#notice > div.column {
   }
 }
 
+.bg-jijimuge {
+  background: url("~@/assets/wallpapers/gradient.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  // @media screen and (max-width: 480px) {
+  //   background-size: cover;
+  // }
+}
+
 // div.column + div.column {
 //   padding-top: 0;
 // }
@@ -495,11 +504,11 @@ br.mobile-br {
   color: $primary;
   border-radius: 100px;
   @media screen and (max-width: 768px) {
-    font-size: 3rem;
+    // font-size: 5rem;
     margin: 0.5rem;
   }
-  font-size: 5rem;
-  margin: 2rem;
+  // font-size: 5rem;
+  margin: 1rem;
 }
 
 .notice {
@@ -534,10 +543,10 @@ br.mobile-br {
       margin: 0;
     }
     @media screen and (max-width: 768px) {
-      padding: 5vh 15vw 0 15vw;
+      padding: 6vh 15vw 0 15vw;
     }
     @media screen and (min-width: 769px) and (max-width: 1216px){
-      padding: 5vh 30vw 0 30vw;
+      padding: 6vh 30vw 0 30vw;
     }
     padding: 10vh 35vw 0 35vw;
   }

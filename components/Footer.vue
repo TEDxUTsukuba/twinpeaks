@@ -7,15 +7,15 @@
           </h1>
           <a class="icon-circle fb" href="https://www.facebook.com/tedxutsukuba/">
             <!-- <font-awesome-icon :icon="['fab', 'facebook-square']" /> -->
-            <iconFB alt="Facebook" style="width: 5vw;" />
+            <iconFB alt="Facebook" style="width: 3rem;" />
           </a>
           <a class="icon-circle ig" href="https://www.instagram.com/tedxutsukuba/">
             <!-- <font-awesome-icon :icon="['fab', 'instagram']" /> -->
-            <iconIG alt="Instagram" style="width: 5vw;" />
+            <iconIG alt="Instagram" style="width: 3rem;" />
           </a>
           <a class="icon-circle tw" href="https://www.twitter.com/tedxutsukuba/">
             <!-- <font-awesome-icon :icon="['fab', 'twitter']" /> -->
-            <iconTW alt="Twitter" style="width: 5vw;" />
+            <iconTW alt="Twitter" style="width: 3rem;" />
           </a>
         </section>
         
