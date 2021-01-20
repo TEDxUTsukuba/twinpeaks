@@ -1,10 +1,11 @@
 <template>
   <section id="wrapper-dark">
     <section class="section">
-      <div class="nmp-card has-text-centered">
+      <div class="nmp-card">
         <h1 class="title is-1 is-spaced">{{ $t('notice.archive.title') }}</h1>
         <h1 class="subtitle has-text-grey-light">{{ $t('notice.archive.subtitle') }}</h1>
       </div>
+      <hr>
       <Flip
         :title = "$t('notice.left-top.title')"
         :description = "$t('notice.left-top.description')"

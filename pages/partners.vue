@@ -33,6 +33,7 @@
           <h1 class="title is-1 is-spaced">{{ $t('partners.title') }}</h1>
           <h1 class="subtitle has-text-grey-light">{{ $t('partners.subtitle') }}</h1>
         </div>
+        <hr>
         <PartnerList category="take" width_fullhd="4" width_desktop="4" width_tablet="6" width_mobile="12" />
         <!-- <PartnerList category="take" /> -->
         <PartnerList category="ume" width_fullhd="3" width_desktop="3" width_tablet="4" width_mobile="6" />

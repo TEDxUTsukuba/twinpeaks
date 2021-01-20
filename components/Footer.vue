@@ -7,15 +7,15 @@
           </h1>
           <a class="icon-circle fb" href="https://www.facebook.com/tedxutsukuba/">
             <!-- <font-awesome-icon :icon="['fab', 'facebook-square']" /> -->
-            <iconFB alt="Facebook" style="width: 5vw;" />
+            <iconFB alt="Facebook" style="width: 3rem;" />
           </a>
           <a class="icon-circle ig" href="https://www.instagram.com/tedxutsukuba/">
             <!-- <font-awesome-icon :icon="['fab', 'instagram']" /> -->
-            <iconIG alt="Instagram" style="width: 5vw;" />
+            <iconIG alt="Instagram" style="width: 3rem;" />
           </a>
           <a class="icon-circle tw" href="https://www.twitter.com/tedxutsukuba/">
             <!-- <font-awesome-icon :icon="['fab', 'twitter']" /> -->
-            <iconTW alt="Twitter" style="width: 5vw;" />
+            <iconTW alt="Twitter" style="width: 3rem;" />
           </a>
         </section>
         
@@ -23,7 +23,7 @@
           <h1 class="title is-3">
             <span class="has-text-dark">{{ $t('covid19-info.title') }}</span>
           </h1>
-          <p class="is-size-7">{{ $t('covid19-info.description')}}</p>
+          <p class="is-size-7">{{ $t('covid19-info.description1')}}</p>
           
           <!-- <div>
             <img src="http://www.tsukuba.ac.jp/en/application/themes/tsukuba/images/logo_footer.png">
@@ -37,22 +37,23 @@
               </a>
               <br><br>
               <div class="column has-text-left">
-                <h1 class="title is-4">団体の活動形態</h1>
+                <h1 class="title is-4">{{ $t('covid19-info.org.title') }}</h1>
                 <ul>
-                  <li>3密を避けた会議やリモートワークを実施しています。</li>
-                  <li>日毎に団体メンバーの体温を管理し、体調の優れない者の活動は自粛しています。</li>
-                  <li>活動前の機材の消毒や手足の消毒、マスクの着用を行っています。</li>
-                  <li>スピーカー・パフォーマー・パートナーの皆さまとは上記に留意しコンタクトを取っています。</li>
+                  <li>{{ $t('covid19-info.org.s1') }}</li>
+                  <li>{{ $t('covid19-info.org.s2') }}</li>
+                  <li>{{ $t('covid19-info.org.s3') }}</li>
+                  <li>{{ $t('covid19-info.org.s4') }}</li>
+                  <li>{{ $t('covid19-info.org.s5') }}</li>
                 </ul>
-                <h1 class="title is-4">イベントの開催形態</h1>
+                <h1 class="title is-4">{{ $t('covid19-info.event.title') }}</h1>
                 <ul>
-                  <li>例年の対面式のイベントから、オンラインの配信に変更しました。</li>
-                  <li>撮影および配信会場では、換気を徹底し十分な空間を確保します。</li>
-                  <li>一度に同じ場所に多くの関係者が集まらないよう、時間を分けて作業を行います。</li>
-                  <li>スピーカーとのセッション等、マスクを外す必要のある場面ではアクリル板による仕切りを設置します。</li>
+                  <li>{{ $t('covid19-info.event.s1') }}</li>
+                  <li>{{ $t('covid19-info.event.s2') }}</li>
+                  <li>{{ $t('covid19-info.event.s3') }}</li>
+                  <li>{{ $t('covid19-info.event.s4') }}</li>
                 </ul>
                 <br>
-                <p class="is-size-7">今後もTEDxUTsukubaは、感染拡大の抑止と関係者の安全確保を最優先に、政府や自治体の方針も踏まえながら、追加の対応を検討・実施してまいります。筑波大学および茨城県・つくば市の感染対策も合わせてご確認ください。</p>
+                <p class="is-size-7">{{ $t('covid19-info.description2') }}</p>
                 <a class="button is-small is-rounded is-outlined" href="http://www.tsukuba.ac.jp/about/antidisaster/covid-19-list.html">{{ $t('covid19-info.link.university') }}</a>
                 <a class="button is-small is-rounded is-outlined" href="https://www.city.tsukuba.lg.jp/shisei/1010123/index.html">{{ $t('covid19-info.link.city') }}</a>
                 <a class="button is-small is-rounded is-outlined" href="https://www.pref.ibaraki.jp/shokorodo/chusho/shogyo/2020korona/guideline.html">{{ $t('covid19-info.link.prefecture') }}</a>
@@ -67,32 +68,35 @@
         <div class="hero-body">
           <section class="section">
             <div class="columns is-centered">
-              <div class="column is-3-desktop is-5-tablet">
+              <div class="column is-6-desktop is-5-tablet">
                 <nuxt-link :to="localePath('/')">
-                  <figure class="image">
+                  <figure class="image" style="width: 100%; max-width: 420px;">
                     <logo />
                   </figure>
                 </nuxt-link>
+                <p class="is-size-7 has-text-grey has-text-weight-bold" style="padding-top: 2rem;">
+                  This independent TEDx event is operated under license from TED.
+                </p>
+                <a class="is-size-7 has-text-grey has-text-weight-bold url" href="https://www.ted.com/about/programs-initiatives/tedx-program">About TEDx program <externalLink style="width: 0.75rem;"/></a>
               </div>
-              <div class="column is-9-desktop is-7-tablet has-text-right has-text-centered-mobile">
+
+              <div class="column is-6-desktop is-7-tablet has-text-right has-text-centered-mobile">
                 <h1 class="title is-3 is-size-5-mobile has-text-light">Spread Globally, Connect Locally.</h1>
-                <span class="is-size-7-mobile has-text-grey-light">
-                  <p>{{ $t('about.location.address') }}</p>
-                  <p>tedxutsukuba&#64;gmail.com</p>
-                  <p>&copy; TEDxUTsukuba 2020</p>
+                <span class="has-text-grey-light">
+                  <p class="is-size-7">{{ $t('about.location.address') }}</p>
+                  <p class="is-size-7">tedxutsukuba&#64;gmail.com</p>
+                  <p class="is-size-7">&copy; TEDxUTsukuba 2020</p>
                 </span>
               </div>
             </div>
+
             <div class="columns is-centered">
-              <div class="url column is-8-desktop is-8-tablet has-text-left has-text-centered-mobile">
-                <p class="is-size-7 has-text-grey-light">
-                  This independent TEDx event is operated under license from TED.
-                </p>
-                <!-- <a href="">Media Relations</a> -->
-                <!-- <a href="">Privacy Policy</a> -->
-                <!-- <a href="">Code of Conduct</a> -->
-                <a class="is-size-7" href="https://www.ted.com/about/programs-initiatives/tedx-program">About TEDx program <externalLink style="width: 0.75rem;"/></a>
+              <div class="column is-8-desktop is-8-tablet has-text-left has-text-centered-mobile">  
+                <nuxt-link to="/notice" class="has-text-grey url is-size-7-mobile">{{ $t('notice.archive.title') }}</nuxt-link> |
+                <nuxt-link to="/code-of-conduct" class="has-text-grey url is-size-7-mobile">{{ $t('codeofconduct.title') }}</nuxt-link> |
+                <nuxt-link to="/explore" class="has-text-grey url is-size-7-mobile">{{ $t('2020.participance.pass.title') }}</nuxt-link>
               </div>
+
               <div class="sns column is-4-desktop is-5-tablet has-text-right has-text-centered-mobile">
                 <a href="https://www.facebook.com/tedxtsukuba">
                   <iconFB alt="Facebook" class="icon" />
@@ -141,7 +145,7 @@ export default {
     margin: 5px;
   }
   .url {
-    a {
+    a, nuxt-link {
       color: #bec1c3;
       margin-right: 15px;
     }
