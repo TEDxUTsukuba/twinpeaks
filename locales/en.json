@@ -23,7 +23,7 @@
     "readmore": "Read more",
     "readless": "Read less",
     "visitwebsite": "Website",
-    "archive": "Archive",
+    "archive": "Archive of Past Updates",
     "close": "Close"
   },
   "top": {
@@ -37,16 +37,31 @@
   },
   "covid19-info": {
     "title": "Our Response to COVID-19",
-    "description": "To protect the health and safety of our community, TEDxUTsukuba has been following the guidelines from university officials and local authorities. ",
+    "description1": "To protect the health and safety of our community, TEDxUTsukuba has been following the guidelines from university officials as well as local authorities. ",
+    "description2": "We continue to prioritize preventing the spread of virus and ensuring the safety of all those involved, and implement additional measures based on the directions of the government and local authorities. Please also check the infection control measures of the University of Tsukuba, Ibaraki Prefecture and Tsukuba City.",
     "event": {
-      "title": "Event",
-      "description": "We will be hosting a virtual event"
+      "title": "Event arrangement",
+      "s1": "Transforming our on-site events to virtual hostings. ",
+      "s2": "Ensuring ventilation and physical distancing while recording an streaming.",
+      "s3": "Adjusting schedule to avoid gathering in one place. ",
+      "s4": "Using partitions in the circumstances where we take off face coverings. "
+    },
+    "org": {
+      "title": "Working environment",
+      "s1": "Promoting regular teleworking.",
+      "s2": "Avoiding close contact when meeting in person. Ensuring adequate ventilation and air conditioning.",
+      "s3": "Encouraging all the members to measure their temperature every day. If they don't feel well, they are advised to stay at home and refrain from involving any activities.",
+      "s4": "Wearing face coverings and using hand sanitizers. Equipments are wiped well before use. ",
+      "s5": "Contacting with our speakers, performers and partners with all these in mind. "
     },
     "link": {
       "city": "City of Tsukuba",
       "prefecture": "Ibaraki Prefecture",
       "university": "University of Tsukuba"
     }
+  },
+  "codeofconduct": {
+    "title": "Code of Conduct"
   },
   "event": {
     "title1": "Don't mask ",
@@ -91,7 +106,7 @@
     "last-modified": "Last Modified: "
   },
   "social": {
-    "title": "Be A Part of Us",
+    "title": "Be a Part of Us",
     "description": ""
   },
   "rcm": {
@@ -230,7 +245,8 @@
         "airmeet": "Powered by our partner"
       },
       "pass": {
-        "inputpassword": "Password is jijimuge"
+        "title": "Limited Access to members",
+        "inputpassword": "Type password to enter: "
       }
     }
   },
@@ -293,9 +309,6 @@
         "charge": "Price: ¥2,000",
         "reservation": "Sign up is required.",
         "airmeet": "Powered by our partner"
-      },
-      "pass": {
-        "inputpassword": "Password is jijimuge"
       }
     }
   }

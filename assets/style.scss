@@ -43,7 +43,7 @@ $card-footer-border-top: 0px !important;
   color: $primary !important;
 }
 .has-background-primary, .bg-red {
-  background-color: $primary !important;
+  background-color: $red !important;
 }
 .has-background-tsukuba {
   background-color: $tsukuba !important;
@@ -54,37 +54,37 @@ $card-footer-border-top: 0px !important;
 
 #teaser > iframe {
   @media screen and (max-width: 768px) {
-    width: 480px !important;
-    height: 270px !important;
+    width: 480px;
+    height: 270px;
   }
   @media screen and (min-width: 769px) and (max-width: 1080px) {
-    width: 640px !important;
-    height: 360px !important;
+    width: 640px;
+    height: 360px;
   }
   @media screen and (min-width: 1081px) and (max-width: 1408px) {
     width: 960px;
-    height: 540px !important;
+    height: 540px;
   }
   @media screen and (min-width: 1409px) {
-    width: 1280px !important;
-    height: 720px !important;
+    width: 1280px;
+    height: 720px;
   }
 }
 iframe {
   @media screen and (max-width: 480px) {
-    height: 180px !important;
+    height: 180px;
   }
   @media screen and (min-width: 481px) and (max-width: 768px) {
-    height: 270px !important;
+    height: 270px;
   }
   @media screen and (min-width: 769px) and (max-width: 1080px) {
-    height: 180px !important;
+    height: 180px;
   }
   @media screen and (min-width: 1081px) and (max-width: 1408px) {
-    height: 270px !important;
+    height: 270px;
   }
   @media screen and (min-width: 1409px) {
-    height: 300px !important;
+    height: 300px;
   }
 }
 
@@ -96,6 +96,22 @@ div#notice > div.column {
   @media screen and (max-width: 768px) {
     padding: 0;
   }
+}
+
+section.is-large {
+  @media screen and (max-width: 768px) {
+    min-height: 20vh;
+  }
+}
+
+
+.bg-jijimuge {
+  background: url("~@/assets/wallpapers/gradient.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  // @media screen and (max-width: 480px) {
+  //   background-size: cover;
+  // }
 }
 
 // div.column + div.column {
@@ -193,8 +209,18 @@ div#notice > div.column {
 }
 
 h1.is-0 {
+  &.has-text-white {
+    color: $light;
+    background: linear-gradient(135deg, #E0EAFC, #CFDEF3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   color: #bcc5cd;
-  // opacity: 0.5;
+  background: linear-gradient(135deg, #3494e6, #ec6ead);
+  // background: linear-gradient(45deg, #74ebd5, #acb6e5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
   @media screen and (max-width: 768px) {
     text-align: center;
     font-size: 3rem !important;
@@ -259,6 +285,7 @@ section.section {
   margin: 0vh 16vw !important;
   @media screen and (max-width: 639px) {
     margin: 0vh 0vw !important;
+    padding: 1.5rem !important;
   }
   @media screen and (min-width: 640px) and (max-width: 1216px){
     margin: 0vh 4vw !important;
@@ -495,11 +522,11 @@ br.mobile-br {
   color: $primary;
   border-radius: 100px;
   @media screen and (max-width: 768px) {
-    font-size: 3rem;
+    // font-size: 5rem;
     margin: 0.5rem;
   }
-  font-size: 5rem;
-  margin: 2rem;
+  // font-size: 5rem;
+  margin: 1rem;
 }
 
 .notice {
@@ -534,12 +561,12 @@ br.mobile-br {
       margin: 0;
     }
     @media screen and (max-width: 768px) {
-      padding: 5vh 15vw 0 15vw;
+      padding: 6vh 15vw 0 15vw;
     }
     @media screen and (min-width: 769px) and (max-width: 1216px){
-      padding: 5vh 30vw 0 30vw;
+      padding: 6vh 35vw 0 35vw;
     }
-    padding: 10vh 35vw 0 35vw;
+    padding: 10vh 40vw 0 40vw;
   }
   .icon {
     padding-right: 10px;

@@ -1,14 +1,11 @@
 <template>
   <section id="wrapper-dark" class="font-awesome">
-    <section class="hero is-large">
-      <div class="hero-body">
-        <div class="container has-text-centered-touch has-text-left">
-          <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.title')}}</h1>
-          <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.utsukuba.subtitle')}}</h1>
-        </div>
-      </div>
-    </section>
     <section class="section">
+      <div class="nmp-card">
+        <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.title')}}</h1>
+        <h1 class="subtitle is-5">{{ $t('about.utsukuba.subtitle')}}</h1>
+      </div>
+      <hr>
       <Movie id="teaser" :vId='videoId' :aPlay='autoplay'></Movie>
     </section>
     <section class="section has-text-grey-lighter">
