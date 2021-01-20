@@ -192,6 +192,9 @@ export default {
     extend (config, ctx) {
     }
   },
+  generate: {
+    fallback: true  // 404を表示
+  },
   server: {
     port: 3000, // デフォルト: 3000
     host: '0.0.0.0' // デフォルト: localhost
