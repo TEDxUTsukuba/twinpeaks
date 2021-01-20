@@ -1,17 +1,15 @@
 <template>
   <section id="wrapper-dark" class="font-awesome">
-    <section class="hero is-large has-background-primary">
-      <div class="hero-body">
-        <div class="container has-text-centered-touch has-text-left">
-          <h1 class="title is-1 is-spaced">{{ $t('about.tedandtedx.title')}}</h1>
-          <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.tedandtedx.subtitle')}}</h1>
-        </div>
+    <section class="section">
+      <div class="nmp-card">
+        <h1 class="title is-1 is-spaced">{{ $t('about.tedandtedx.title')}}</h1>
+        <h1 class="subtitle is-5">{{ $t('about.tedandtedx.subtitle')}}</h1>
       </div>
+      <hr>
     </section>
-    
     <section class="hero" id="ted">
       <section class="section" id="ted-without-background">
-        <h1 class="title is-0">{{ $t('about.ted.title')}}</h1>
+        <h1 class="title is-0 has-text-white">{{ $t('about.ted.title')}}</h1>
         <article v-if="$i18n.locale == 'en'">
           <span class="em">TED</span> is a nonprofit organization devoted to <span class="em">Ideas Worth Spreading</span>. Started as a four-day conference in California 30 years ago, TED has grown to support its mission with multiple initiatives. The two annual TED Conferences invite <span class="em">the world’s leading thinkers and doers</span> to speak for <span class="em">18 minutes or less</span>. Many of these talks are then made available, free, at TED.com. TED speakers have included Bill Gates, Jane Goodall, Elizabeth Gilbert, Sir Richard Branson, Nandan Nilekani, Philippe Starck, Ngozi Okonjo-Iweala, Sal Khan, Daniel Kahneman and John Maeda, who earned his Ph.D. at the University of Tsukuba. 
         </article>
@@ -55,7 +53,7 @@
 
     <section class="hero" id="tedx">
       <section class="section" id="tedx-without-background">
-        <h1 class="title is-0">{{ $t('about.tedx.title')}}</h1>
+        <h1 class="title is-0 has-text-white">{{ $t('about.tedx.title')}}</h1>
         <article v-if="$i18n.locale == 'en'">
           In the spirit of <span class="em">ideas worth spreading</span>, TEDx is a program of <span class="em">local, self-organized events</span> that bring people together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark <span class="em">deep discussion</span> and <span class="em">connection</span>. These local, self-organized events are branded TEDx, where <span class="em">x = independently organized TED event</span>. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized. (Subject to certain rules and regulations.)
         </article>
@@ -99,7 +97,7 @@
 
     <section class="hero is-black has-text-centered">
       <section class="section">
-        <h1 class="title is-0">{{ $t('about.ted.watch')}}</h1>
+        <h1 class="title is-0 has-text-white">{{ $t('about.ted.watch')}}</h1>
       </section>
       <div class="hero-body has-text-centered">
         <div id="ted-embedded-top" style="position:relative;">
@@ -123,16 +121,13 @@
       </div>
     </section>
     <section class="section has-text-centered">
-      <h1 class="title is-0">{{ $t('about.ted.listen')}}</h1>
-      <div class="columns">
-        <div class="column is-2">
-          <img src="~/assets/others/TED_Talks_Podcast_Thumbnail_Audio_600px.png">
-        </div>
-        <div class="column is-5 has-text-centered">
+      <h1 class="title is-0 has-text-white">{{ $t('about.ted.listen')}}</h1>
+      <div class="columns is-multiline">
+        <div class="column is-6-fullhd is-12 has-text-centered">
           <iframe class="podcast" src="https://open.spotify.com/embed-podcast/show/1VXcH8QHkjRcTCEd88U3ti" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         </div>
-        <div class="column is-5 has-text-centered">
-          <iframe class="podcast" allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" style="overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/jp/station/ted-talks/ra.1461369887"></iframe>
+        <div class="column is-6-fullhd is-12 has-text-centered">
+          <iframe class="podcast apple" src="https://embed.podcasts.apple.com/us/podcast/ted-talks-daily/id160904630?itsct=podcast_box&amp;itscg=30200&amp;theme=dark" height="450px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *;" style="width: 100%; max-width: 660px; overflow: hidden; border-radius: 10px; background: transparent;"></iframe>
         </div>
       </div>
       <a class="button is-rounded is-gradient" href="https://www.ted.com/podcasts">{{ $t('about.ted.listenmore')}}</a>
@@ -189,8 +184,10 @@ export default {
 <style lang="scss" scoped>
   iframe.podcast {
     width: 100%;
-    max-width: 640px;
-    height: 250px !important;
+    max-width: 660px;
+    &.apple {
+      min-height: 450px !important;
+    }
   }
   iframe.video {
     @media screen and (min-width: 769px) {

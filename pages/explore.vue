@@ -1,7 +1,7 @@
 <template>
   <section id="wrapper-dark">
     <section id="app" class="section has-text-white">
-      <h1 class="title has-text-left">オーディエンス限定コンテンツ</h1>
+      <h1 class="title has-text-left">{{ $t('2020.participance.pass.title') }}</h1>
       <input class="input" v-model="pass" placeholder="Type password" style="width: 320px">
       <!-- {{ pass }} -->
       <!-- <button v-on:click="toggle_switch()">Toggle Button</button> -->
@@ -9,7 +9,7 @@
         <p>{{ $t('2020.participance.pass.inputpassword') }}</p>
       </div>
       <div v-else>
-        <p>限定コンテンツ</p>
+        <p>ログイン</p>
         <Movie id="teaser" :vId='videoId1' :aPlay='autoplay' :classname="large"></Movie>
       </div>
     </section>
