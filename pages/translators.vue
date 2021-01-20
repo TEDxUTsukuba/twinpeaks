@@ -1,8 +1,8 @@
 <template>
   <section id="wrapper-dark">
-    <section class="hero is-large">
-      <div class="hero-body has-text-centered">
-        <h1 class="title is-3 is-spaced">
+    <section class="section">
+      <div class="nmp-card">
+        <h1 class="title is-1 is-spaced">
           TED translators について
         </h1>
         <h1 class="subtitle">
@@ -12,7 +12,7 @@
     </section>
     <section class="hero">
       <div class="hero-body has-text-centered">
-        <Movie id="teaser" :vId='videoId' :aPlay='autoplay'></Movie>
+        <Movie id="teaser" :vId='videoId'></Movie>
       </div>
     </section>
     <section class="section has-text-white">
