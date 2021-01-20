@@ -1,5 +1,5 @@
 <template>
-  <section class="section has-text-centered" style="padding: 20vh 0;">
+  <section class="section has-text-centered" style="padding: 30vh 0;">
     <h1 class="title is-1">Oops!</h1>
     <h1 class="subtitle">the page you're looking for doesn't exist or unavailable. </h1>
   </section>
