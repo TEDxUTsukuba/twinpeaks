@@ -5,6 +5,7 @@
         <h1 class="title is-1 is-spaced">{{ $t('talks.title') }}</h1>
         <h1 class="subtitle has-text-grey-light">{{ $t('talks.subtitle') }}</h1>
       </div>
+      <hr>
       <div class="columns is-multiline">
         <div
           id="thumbnails"

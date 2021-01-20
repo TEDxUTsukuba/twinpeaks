@@ -1,11 +1,13 @@
 <template>
   <section id="wrapper-dark" class="font-awesome"> 
     <section class="section">
-      <div class="container has-text-centered-mobile has-text-left">
+      <div class="nmp-card has-text-centered-mobile has-text-left">
         <h1 class="subtitle is-4">TEDxUTsukuba 2020</h1>
         <h1 class="title is-1">JIJIMUGE</h1>
       </div>
+      <hr>
     </section>
+    
         <!-- <div class="columns"> 
           <div class="column is-7 is-centered has-text-centered"> 
             <nuxt-link :to="localePath('/events/2020')"><img src = "~/assets/wallpapers/jijimuge-transparent.png" style="width: 180px; margin-top: 10vh;"></nuxt-link>
@@ -63,7 +65,7 @@
       </div>
     </section>
 
-    <section class="hero bg-red">
+    <section class="hero has-background-primary">
       <section class="section">
         <h1 class="title is-0">
           <span class="">{{ $t('2020.concept.title') }}</span>

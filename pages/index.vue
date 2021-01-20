@@ -6,11 +6,15 @@
           alt="Lightweight UI components for Vue.js based on Bulma"
       >
       <h1 class="title textoverflow">Social Capital</h1> -->
-      
+    <div class="bg-jijimuge">  
       <div id="top-photoframe" class="top-photoframe">
-        <nuxt-link :to="localePath('/events/2020')"><img src = "~/assets/wallpapers/jijimuge-transparent.png" /></nuxt-link>
+        <nuxt-link :to="localePath('/events/2020')">
+        <figure class="is-square">
+          <img src = "~/assets/wallpapers/jijimuge-transparent-circle.png" width="100%" />
+        </figure>
+        </nuxt-link>
       </div>
-      <section id="top-title" class="section has-text-centered has-text-weight-light has-text-white">
+      <section id="top-title" class="section has-text-centered has-text-weight-light has-text-light">
         <h1 class="title is-1 is-spaced">
           {{ $t('event.title1') }}<br class="mobile-br">{{ $t('event.title2') }}<br class="mobile-br">{{ $t('event.title3') }}
         </h1>
@@ -21,13 +25,16 @@
         <nuxt-link :to="localePath('/events/2020')" class="button is-gradient is-rounded">{{ $t('button.discover') }}</nuxt-link>
         
       </section>
-  {{ deviceType}}
-      <section class="hero bg-red">
+    </div>
+      <section id="intro" class="hero bg-red">
+        <div class="has-text-left" style="margin: 1vh 0 0vh 0;">
+         
+        </div>
         <div class="hero-body">
-          <section id="intro" class="section">
+          <section class="section">
             <div class="columns is-multiline is-centered is-variable is-8">
                 <div class="column is-5-widescreen is-4-desktop is-full-tablet is-full-mobile">
-                  <img src="~/assets/logo/motto.png" style="width: 100%; max-width: 480px;">
+                  <img src="~/assets/logo/motto.png" class="motto">
                 </div>
                 <div class="column is-7-widescreen is-8-desktop is-full-tablet is-full-mobile">
                     <h1 v-if="$i18n.locale == 'ja'" class="title is-2 is-size-4-mobile has-text-weight-light">
@@ -40,8 +47,7 @@
                       <br>
                       {{ $t('intro.headline2') }}
                     </h1>
-                    <hr>
-                    <br>
+                     <img id="rocket" src="~/assets/svg/rocket.png" width="100%" style="z-index: 0;">
                     <article class="is-size-6 has-text-light">
                       {{ $t('intro.description') }}
                     </article>
@@ -51,9 +57,10 @@
                     </div>
                 </div>
              </div>
-            </section>
+          </section>
         </div>
       </section>
+        
 
       <section class="hero">
         <Movie id="teaser" :vId='videoId3' classname="large" style=""></Movie>
@@ -154,11 +161,12 @@ export default {
     //       opacity: 1
     //     }
     //   })
+
     const scene2 = this.$scrollmagic
       .scene({
         triggerElement: '#top-title',
-        triggerHook: 0.5,
-        offset: 100,
+        triggerHook: 1,
+        offset: 0,
         reverse: false
       })
       .setTween('#intro', {
@@ -166,10 +174,23 @@ export default {
           opacity: 1
         }
       })
+    // const scene4 = this.$scrollmagic
+    //   .scene({
+    //     triggerElement: '#intro',
+    //     triggerHook: 1,
+    //     offset: 0,
+    //     reverse: false
+    //   })
+    //   .setTween('#rocket', {
+    //     css: {
+    //       opacity: 1
+    //     }
+    //   })
+
     const scene3 = this.$scrollmagic
       .scene({
         triggerElement: '#notice-title',
-        triggerHook: 0.5,
+        triggerHook: 1,
         offset: 0,
         reverse: false
       })
@@ -181,6 +202,7 @@ export default {
       // this.$scrollmagic.addScene(scene1)
       this.$scrollmagic.addScene(scene2)
       this.$scrollmagic.addScene(scene3)
+      // this.$scrollmagic.addScene(scene4)
   }
 }
 </script>
@@ -220,8 +242,27 @@ export default {
     width: 80%;
     height: 2px;
   }
+  #rocket {
+    opacity: 1;
+    // animation: SlideIn 3s;
+  }
   #intro, #notice {
     opacity: 0;
     transition: all 0.5s;
   }
+  @keyframes SlideIn {
+    0% {
+      opacity: 0;
+      // transform: translate3d(-1920px,0,0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0,0,0);
+    }
+  }
+  .motto {
+    width: 100%; max-width: 480px;
+    // transform: translate3d(0,0,100px);
+  }
+
 </style>
