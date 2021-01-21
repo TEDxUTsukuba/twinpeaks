@@ -5,15 +5,15 @@
         <h1 class="title is-3 has-text-centered">
             <span class="has-text-dark">{{ $t('social.title') }}</span>
           </h1>
-          <a class="icon-circle fb" href="https://www.facebook.com/tedxutsukuba/">
+          <a class="icon-circle fb" href="https://www.facebook.com/tedxutsukuba/" target="_blank" rel="noopener noreferrer">
             <!-- <font-awesome-icon :icon="['fab', 'facebook-square']" /> -->
             <iconFB alt="Facebook" style="width: 3rem;" />
           </a>
-          <a class="icon-circle ig" href="https://www.instagram.com/tedxutsukuba/">
+          <a class="icon-circle ig" href="https://www.instagram.com/tedxutsukuba/" target="_blank" rel="noopener noreferrer">
             <!-- <font-awesome-icon :icon="['fab', 'instagram']" /> -->
             <iconIG alt="Instagram" style="width: 3rem;" />
           </a>
-          <a class="icon-circle tw" href="https://www.twitter.com/tedxutsukuba/">
+          <a class="icon-circle tw" href="https://www.twitter.com/tedxutsukuba/" target="_blank" rel="noopener noreferrer">
             <!-- <font-awesome-icon :icon="['fab', 'twitter']" /> -->
             <iconTW alt="Twitter" style="width: 3rem;" />
           </a>
@@ -67,21 +67,21 @@
       <section class="hero has-background-black">
         <div class="hero-body">
           <section class="section">
-            <div class="columns is-centered">
-              <div class="column is-6-desktop is-5-tablet">
+            <div class="columns is-centered is-vcentered">
+              <div class="column is-4-desktop is-6-tablet has-text-centered-mobile">
                 <nuxt-link :to="localePath('/')">
-                  <figure class="image" style="width: 100%; max-width: 420px;">
+                  <figure class="image" style="width: 100%; max-width: 75%;">
                     <logo />
                   </figure>
                 </nuxt-link>
-                <p class="is-size-7 has-text-grey has-text-weight-bold" style="padding-top: 2rem;">
+                <p class="is-size-7 has-text-grey" style="padding-top: 2rem;">
                   This independent TEDx event is operated under license from TED.
                 </p>
-                <a class="is-size-7 has-text-grey has-text-weight-bold url" href="https://www.ted.com/about/programs-initiatives/tedx-program">About TEDx program <externalLink style="width: 0.75rem;"/></a>
+                <a class="is-size-7 has-text-grey url" href="https://www.ted.com/about/programs-initiatives/tedx-program">About TEDx program <externalLink style="width: 0.75rem;"/></a>
               </div>
 
-              <div class="column is-6-desktop is-7-tablet has-text-right has-text-centered-mobile">
-                <h1 class="title is-3 is-size-5-mobile has-text-light">Spread Globally, Connect Locally.</h1>
+              <div class="column is-8-desktop is-6-tablet has-text-right has-text-centered-mobile">
+                <h1 class="title is-size-5 is-size-5-mobile has-text-light">Spread Globally, Connect Locally.</h1>
                 <span class="has-text-grey-light">
                   <p class="is-size-7">{{ $t('about.location.address') }}</p>
                   <p class="is-size-7">tedxutsukuba&#64;gmail.com</p>
@@ -98,19 +98,19 @@
               </div>
 
               <div class="sns column is-4-desktop is-5-tablet has-text-right has-text-centered-mobile">
-                <a href="https://www.facebook.com/tedxtsukuba">
+                <a href="https://www.facebook.com/tedxtsukuba" target="_blank" rel="noopener noreferrer">
                   <iconFB alt="Facebook" class="icon" />
                 </a>
-                <a href="https://www.instagram.com/tedxutsukuba">
+                <a href="https://www.instagram.com/tedxutsukuba" target="_blank" rel="noopener noreferrer">
                   <iconIG alt="Instagram" class="icon" />
                 </a>
-                <a href="https://www.twitter.com/tedxutsukuba">
+                <a href="https://www.twitter.com/tedxutsukuba" target="_blank" rel="noopener noreferrer">
                   <iconTW alt="Twitter" class="icon" />
                 </a>
-                <a href="https://www.flic.kr/ps/3eCWpZ">
+                <a href="https://www.flic.kr/ps/3eCWpZ" target="_blank" rel="noopener noreferrer">
                   <iconFL alt="Flickr" class="icon" />
                 </a>
-                <a href="https://www.note.com/tedxutsukuba">
+                <a href="https://www.note.com/tedxutsukuba" target="_blank" rel="noopener noreferrer">
                   <iconNT alt="note" class="icon" />
                 </a>
               </div>
@@ -152,7 +152,8 @@ export default {
   }
   figure.image {
     @media screen and (max-width: 768px) {
-      padding: 0 20vw;
+      margin: 0 auto;  
+      padding: 0 10vw;
     }
   }
   .sns {
