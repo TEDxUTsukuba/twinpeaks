@@ -3,7 +3,7 @@
     <img src="404.png" />
     <p class="has-text-weight-light is-size-4">The page you're looking for doesn't exist or unavailable. </p>
     <hr>
-    <p>Need a little break? Watch <a href="https://youtu.be/ToJD5r2SmwI" target="_blank" rel="noopener noreferrer">this</a>.</p>
+    <p>Need a little break? Watch <a href="https://youtu.be/8S0FDjFBj8o" target="_blank" rel="noopener noreferrer">this</a>.</p>
 
   </section>
 </template>
@@ -23,17 +23,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-@keyframes fadeIn {
-    0% {
-        opacity:0;
-    }
-    100% {
-        opacity:1;
-    }
-}
-#all {
-  animation: 2s fadeIn;
-}
-</style>

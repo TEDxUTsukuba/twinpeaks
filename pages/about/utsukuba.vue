@@ -107,7 +107,7 @@
               <a class="is-size-7 has-text-weight-bold" :href="getTedLinkUrl(member.favouritetedtalklink)">{{ member.favouritetedtalk }} <externalLink v-if="member.favouritetedtalk" style="width: 0.75rem;" /></a>
               
               <p class="card-item has-text-right">
-                <a v-if="member.tedAccount" :href="member.tedAccount"><span class="tag is-dark has-text-primary has-text-weight-bold">TED</span></a>
+                <a v-if="member.tedAccount" :href="member.tedAccount" target="_blank" rel="noopener noreferrer"><span class="tag is-dark has-text-primary has-text-weight-bold">TED</span></a>
               </p>
               
               <!-- <span class="has-text-right">
