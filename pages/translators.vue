@@ -24,6 +24,12 @@
         <li><a href="https://www.ted.com/people/translators">Translate - TED.com (English)</a></li>
         <li><a href="https://translations.ted.com/TED_Translators_%E3%81%B8%E3%81%AE%E7%99%BB%E9%8C%B2">TED Translators への登録 - TED Translators Wiki (日本語)</a></li>
       </ul>
+    <hr>
+      <article>
+        また、上記のプロジェクトとは別に、本ウェブサイトの翻訳に関しても、皆さまのご協力を必要としています。まだ翻訳されていない文章を新たに翻訳する、あるいは、修正が必要と思われる箇所を指摘するという形で、より良いウェブサイトの制作にお力添えいただけますと幸いです。
+      </article>
+      <br>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGADXgQymefKwe_HPvna2hufR9IBRYjPhUDC1gRnehCNU35Q/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">Translation Feedback Form</a>
     </section>
   </section>
 </template>

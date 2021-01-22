@@ -15,7 +15,7 @@
         </nuxt-link>
       </div>
       <section id="top-title" class="section has-text-centered has-text-weight-light has-text-light">
-        <h1 class="title is-1 is-spaced">
+        <h1 class="title is-1 is-spaced" style="letter-spacing: -2px;">
           {{ $t('event.title1') }}<br class="mobile-br">{{ $t('event.title2') }}<br class="mobile-br">{{ $t('event.title3') }}
         </h1>
         <h1 class="subtitle is-5 has-text-weight-normal has-text-white">
