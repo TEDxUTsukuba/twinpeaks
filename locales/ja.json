@@ -24,7 +24,9 @@
     "readless": "閉じる",
     "visitwebsite": "ウェブサイト",
     "archive": "アーカイブを見る",
-    "close": "閉じる"
+    "close": "閉じる",
+    "partialtranslation": "このページの翻訳はまだ完了していません",
+    "helpustranslate": "Help us translate"
   },
   "top": {
     "message": "言語設定: 日本語"
