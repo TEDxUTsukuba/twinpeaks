@@ -24,7 +24,9 @@
     "readless": "Read less",
     "visitwebsite": "Website",
     "archive": "Archive of Past Updates",
-    "close": "Close"
+    "close": "Close",
+    "partialtranslation": "This page is not fully translated into English. ",
+    "helpustranslate": "Help us translate"
   },
   "top": {
     "message": "Language Setting: English"
