@@ -4,6 +4,9 @@
       <div class="nmp-card has-text-centered-mobile has-text-left">
         <h1 class="title is-1 is-spaced">{{ $t('talks.title') }}</h1>
         <h1 class="subtitle has-text-grey-light">{{ $t('talks.subtitle') }}</h1>
+        <br>
+        <span class="tag has-text-weight-bold">{{ $t('button.partialtranslation') }}</span>
+        <a class="text" href="https://docs.google.com/forms/d/e/1FAIpQLSeGADXgQymefKwe_HPvna2hufR9IBRYjPhUDC1gRnehCNU35Q/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer"><small>{{ $t('button.helpustranslate') }}</small></a>
       </div>
       <hr>
       <div class="columns is-multiline">
@@ -37,23 +40,22 @@
               <h1 class="title is-4">
                 {{ talk.title }}
               </h1>
-              <h1 class="subtitle is-5">
+              <h1 class="subtitle is-5" v-if="$i18n.locale == 'ja'">
                 {{ talk.speaker_name }}
               </h1>
-              <span class="has-text-right">
-                <b-collapse :open="false" position="is-bottom" aria-id="contentIdForA11y1">
-                  <a class="button is-gradient is-rounded is-outlined is-small" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1">
+              <h1 class="subtitle is-5" v-if="$i18n.locale == 'en'">
+                {{ talk.speaker_name_alt }}
+              </h1>
+              
+                <b-collapse animation="fade" :open="false" position="" aria-id="contentIdForA11y1">
+                  <span class="" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1">
                     <!-- <b-icon :icon="!props.open ? 'menu-down' : 'menu-up'"></b-icon> -->
-                      {{ !props.open ? 'Read more' : 'Read less' }}
-                  </a>
-                  <p class="is-size-7 has-text-left">
-                    {{ talk.description_ja }}<br>
-                    <!-- <a class="has-text-white is-size-4 fb" href="https://www.instagram.com/tedxutsukuba/">
-                      <font-awesome-icon :icon="['fab', 'facebook-square']" />
-                    </a> -->
-                  </p>
+                    <p class="is-size-7 has-text-grey-light" v-if="!props.open">{{ talk.description_ja | substrBefore }}…</p>
+                    <p class="is-size-7 has-text-grey-light" v-if="props.open">{{ talk.description_ja }}</p>
+                    <br>
+                    <button class="button is-gradient is-rounded is-outlined is-small">{{ !props.open ? $t('button.readmore') : $t('button.readless') }}</button>
+                  </span>
                 </b-collapse>
-              </span>
             </div>
           </div>
         </div>
@@ -94,6 +96,14 @@ export default {
   data() {
     return {
       videoId1: 'Ot4n4txl4Ko'
+    }
+  },
+  filters: {
+    substrBefore(text) {
+     return text.length > 50 ? text.slice(0, 50) : text;
+    },
+    substrAfter(text) {
+     return text.length > 50 ? text.substr(50) : text;
     }
   },
   props: {

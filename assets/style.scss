@@ -220,6 +220,7 @@ h1.is-0 {
   // background: linear-gradient(45deg, #74ebd5, #acb6e5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  letter-spacing: -5px;
 
   @media screen and (max-width: 768px) {
     text-align: center;
@@ -590,8 +591,9 @@ br.mobile-br {
     }
   }
 
-  a {
-    color: $tsukuba;
+  a.text {
+    color: orange;
+    text-decoration: underline;
     &:hover {
       color: $red;
     }
