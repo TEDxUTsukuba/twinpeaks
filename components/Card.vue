@@ -13,7 +13,7 @@
       </div>
       <div class="column has-text-centered-mobile">
         <h1 class="title is-2 ja">{{ title }}</h1>
-          <h1 class="subtitle is-size-5 has-text-primary">{{ subtitle }}</h1>
+          <h1 class="subtitle is-size-6 has-text-primary">{{ subtitle }}</h1>
           <p class="has-text-left has-text-light" style="text-align: justify;">
             {{ description }}
           </p>
