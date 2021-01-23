@@ -1,20 +1,20 @@
 <template>
-  <section id="wrapper-dark" style="width: 100vw;">
+  <section id="wrapper-dark" style="margin: 0; padding: 0;">
     <!-- <div class="columns is-mobile"> -->
       <!-- <img
           src="~/assets/wallpapers/speaker_ex1.jpg"
           alt="Lightweight UI components for Vue.js based on Bulma"
       >
       <h1 class="title textoverflow">Social Capital</h1> -->
-    <div class="bg-jijimuge">  
-      <div id="top-photoframe" class="top-photoframe">
+    <div class="bg-jijimuge" style="padding-top: 25vh; ">  
+      <!-- <div id="top-photoframe" class="top-photoframe">
         <nuxt-link :to="localePath('/events/2020')">
         <figure class="is-square">
-          <img src = "~/assets/wallpapers/jijimuge-transparent-circle.png" width="100%" />
+          <img src = "~/assets/wallpapers/jijimuge-transparent-circle.png" />
         </figure>
         </nuxt-link>
-      </div>
-      <section id="top-title" class="section has-text-centered has-text-weight-light has-text-light">
+      </div> -->
+      <section id="top-title" class="section has-text-centered has-text-weight-light has-text-light" style="padding-bottom: 20vh;">
         <h1 class="title is-1 is-spaced" style="letter-spacing: -2px;">
           {{ $t('event.title1') }}<br class="mobile-br">{{ $t('event.title2') }}<br class="mobile-br">{{ $t('event.title3') }}
         </h1>
@@ -62,7 +62,7 @@
       </section>
         
 
-      <section class="hero">
+      <section class="section">
         <Movie id="teaser" :vId='videoId3' classname="large" style=""></Movie>
       </section>
 
@@ -71,7 +71,7 @@
         <span class="">{{ $t('news.title') }}</span>
       </h1>
       <br>
-      <div class="columns is-multiline" id="notice">
+      <div class="columns is-multiline reverse-row-order" id="notice">
         <div class="column is-5-tablet">
           <Flip
             :title = "$t('notice.left-top.title')"

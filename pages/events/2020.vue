@@ -67,8 +67,8 @@
 
     <section class="hero has-background-primary">
       <section class="section">
-        <h1 class="title is-0">
-          <span class="">{{ $t('2020.concept.title') }}</span>
+        <h1 class="title is-0 has-text-white">
+          <span class="\">{{ $t('2020.concept.title') }}</span>
         </h1>
         <h1 class="subtitle has-text-white has-text-right has-text-centered-mobile">
           {{ $t('2020.concept.description') }}
