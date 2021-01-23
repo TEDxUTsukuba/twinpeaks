@@ -15,7 +15,7 @@
         </nuxt-link>
       </div> -->
       <section id="top-title" class="section has-text-centered has-text-weight-light has-text-light" style="padding-bottom: 20vh;">
-        <h1 class="title is-1 is-spaced" style="letter-spacing: -2px;">
+        <h1 class="title is-1 is-spaced" style="letter-spacing: -1px;">
           {{ $t('event.title1') }}<br class="mobile-br">{{ $t('event.title2') }}<br class="mobile-br">{{ $t('event.title3') }}
         </h1>
         <h1 class="subtitle is-5 has-text-weight-normal has-text-white">
@@ -32,10 +32,11 @@
         </div>
         <div class="hero-body">
           <section class="section">
-            <div class="columns is-multiline is-centered is-variable is-8">
-                <div class="column is-5-widescreen is-4-desktop is-full-tablet is-full-mobile">
-                  <img src="~/assets/logo/motto.png" class="motto">
+            <div class="columns is-mobile is-multiline is-centered is-variable is-0">
+                <div class="column is-5-widescreen is-4-desktop is-6-tablet is-6-mobile">
+                  <img src="~/assets/logo/motto.png" class="motto" style="padding-right: 50px;">
                 </div>
+                <div class="column is-0-fullhd is-0-widescreen is-0-desktop is-6-tablet is-6-mobile"></div>
                 <div class="column is-7-widescreen is-8-desktop is-full-tablet is-full-mobile">
                     <h1 v-if="$i18n.locale == 'ja'" class="title is-2 is-size-4-mobile has-text-weight-light">
                       {{ $t('intro.headline1') }}
@@ -62,7 +63,7 @@
       </section>
         
 
-      <section class="section">
+      <section class="hero">
         <Movie id="teaser" :vId='videoId3' classname="large" style=""></Movie>
       </section>
 

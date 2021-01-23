@@ -6,6 +6,8 @@
         <h1 class="subtitle is-5">{{ $t('about.utsukuba.subtitle')}}</h1>
       </div>
       <hr>
+    </section>
+    <section class="hero">
       <Movie id="teaser" :vId='videoId' :aPlay='autoplay'></Movie>
     </section>
     <section class="section has-text-grey-lighter">
