@@ -66,7 +66,7 @@
     <article class="media is-size-7 font-awesome">
       <figure class="media-left">
         <p class="image is-64x64">
-          <img src="https://bulma.io/images/placeholders/128x128.png">
+          <img src="https://bulma.io/images/placeholders/64x64.png">
         </p>
       </figure>
       <div class="media-content">
@@ -102,8 +102,8 @@
 
           <article class="media is-size-7">
             <figure class="media-left">
-              <p class="image is-48x48">
-                <img src="https://bulma.io/images/placeholders/96x96.png">
+              <p class="image is-32x32">
+                <img src="https://bulma.io/images/placeholders/32x32.png">
               </p>
             </figure>
             <div class="media-content">
@@ -130,8 +130,8 @@
 
           <article class="media is-size-7">
             <figure class="media-left">
-              <p class="image is-48x48">
-                <img src="https://bulma.io/images/placeholders/96x96.png">
+              <p class="image is-32x32">
+                <img src="https://bulma.io/images/placeholders/32x32.png">
               </p>
             </figure>
             <div class="media-content">
@@ -157,7 +157,7 @@
     <article class="media is-size-7 font-awesome">
       <figure class="media-left">
         <p class="image is-64x64">
-          <img src="https://bulma.io/images/placeholders/128x128.png">
+          <img src="https://bulma.io/images/placeholders/64x64.png">
         </p>
       </figure>
       <div class="media-content">
