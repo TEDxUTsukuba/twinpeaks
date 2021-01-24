@@ -1,51 +1,47 @@
 <template>
   <section id="wrapper-dark" class="font-awesome">
-    <section class="section">
+    <section class="section" id="trigger">
       <div class="nmp-card">
         <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.title')}}</h1>
         <h1 class="subtitle is-5">{{ $t('about.utsukuba.subtitle')}}</h1>
       </div>
       <hr>
     </section>
+    <section class="section" id="tedxutsukuba">
+      <h1 class="title">TEDxUTsukuba</h1>
+      <article v-html="$t('about.utsukuba.description.3')"></article>
+    </section>
+    <div class="columns" id="gallery">
+      <div class="column is-one-third">
+        <figure>
+          <img src="~/assets/sample2.jpg" alt="Audience attending our annual event">
+        </figure>
+      </div>
+      <div class="column is-one-third">
+        <figure>
+          <img src="~/assets/sample3.jpg" alt="TEDxUTsukuba attendees and staffs">
+        </figure>
+      </div>
+      <div class="column is-one-third">
+        <figure>
+          <img src="~/assets/sample1.jpg" alt="A speaker standing on the stage">
+        </figure>
+      </div>
+    </div>
+    <section class="section" id="socialcapital">
+      <h1 class="title">Social Capital</h1>
+      <article v-html="$t('about.utsukuba.description.5')"></article>
+    </section>
     <section class="hero">
       <Movie id="teaser" :vId='videoId' :aPlay='autoplay'></Movie>
     </section>
-    <section class="section has-text-grey-lighter">
-      <div class="columns">
-        <div class="column is-two-thirds-fullhd is-half-desktop">
-          <div class="nmp-card-dark">
-            <p>{{ $t('about.utsukuba.description.1')}}</p>
-          </div>
-          <div class="nmp-card-dark">
-            <p>{{ $t('about.utsukuba.description.2')}}</p>
-          </div>
-        </div>
-        <div class="column">
-          <figure>
-            <img src="~/assets/sample2.jpg" alt="Audience attending our annual event">
-          </figure>
-        </div>
-      </div>
-      <div class="columns reverse-row-order">
-        <div class="column is-one-third-fullhd is-half-desktop">
-          <figure>
-            <img src="~/assets/sample1.jpg" alt="A speaker standing on the stage">
-          </figure>
-        </div>
-        <div class="column">
-          <div class="nmp-card-dark">
-            <p>{{ $t('about.utsukuba.description.3')}}</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="hero is-medium bg-red">
+    <!-- <section class="hero is-medium bg-red">
       <div class="hero-body">
         <section class="section has-text-right">
           <h1 class="title is-2">{{ $t('about.utsukuba.description.4')}}</h1>
         </section>
       </div>
-    </section>
+    </section> -->
     <section class="hero is-medium is-black">
       <div class="hero-body has-text-white has-text-left">
         <div class="container has-text-centered">
@@ -251,6 +247,47 @@ export default {
         'member/showAllMembers'
       ](this.year)
     }
+  },
+  mounted(){
+    const scene1 = this.$scrollmagic
+      .scene({
+        triggerElement: '#trigger',
+        triggerHook: 0.5,
+        offset: 0,
+        reverse: false
+      })
+      .setTween('#tedxutsukuba', {
+        css: {
+          opacity: 1
+        }
+      })
+    const scene2 = this.$scrollmagic
+      .scene({
+        triggerElement: '#tedxutsukuba',
+        triggerHook: 0.5,
+        offset: 0,
+        reverse: false
+      })
+      .setTween('#gallery', {
+        css: {
+          opacity: 1
+        }
+      })
+    const scene3 = this.$scrollmagic
+      .scene({
+        triggerElement: '#gallery',
+        triggerHook: 0.5,
+        offset: 0,
+        reverse: false
+      })
+      .setTween('#socialcapital', {
+        css: {
+          opacity: 1
+        }
+      })
+    this.$scrollmagic.addScene(scene1)
+    this.$scrollmagic.addScene(scene2)
+    this.$scrollmagic.addScene(scene3)
   }
 }
 </script>
@@ -269,5 +306,13 @@ export default {
   }
   a {
     color: white;
+  }
+  #tedxutsukuba, #socialcapital {
+    opacity: 0;
+    transition: all 0.5s;
+  }
+  #gallery {
+    opacity: 0;
+    transition: all 1s;
   }
 </style>

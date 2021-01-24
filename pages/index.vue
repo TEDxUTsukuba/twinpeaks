@@ -1,11 +1,5 @@
 <template>
   <section id="wrapper-dark" style="margin: 0; padding: 0;">
-    <!-- <div class="columns is-mobile"> -->
-      <!-- <img
-          src="~/assets/wallpapers/speaker_ex1.jpg"
-          alt="Lightweight UI components for Vue.js based on Bulma"
-      >
-      <h1 class="title textoverflow">Social Capital</h1> -->
     <div class="bg-jijimuge" style="padding-top: 25vh; ">  
       <!-- <div id="top-photoframe" class="top-photoframe">
         <nuxt-link :to="localePath('/events/2020')">
@@ -122,7 +116,6 @@
 <script>
 import Card from '~/components/Card'
 import Flip from '~/components/Flip'
-import Movie from '~/components/Movie'
 // const Card = () => import('~/components/Card')
 // const Flip = () => import('~/components/Flip')
 // const Movie = () => import('~/components/Movie')
@@ -131,7 +124,7 @@ export default {
   name: 'HomePage',
 
   components: {
-    Card, Flip, Movie
+    Card, Flip
   },
   data() {
     return {
