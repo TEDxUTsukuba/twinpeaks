@@ -119,14 +119,14 @@ export default {
     'nuxt-i18n',
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    [
-      'nuxt-webfontloader',
-      {
-        google: {
-          families: ['Noto+Sans+CJK+JP&display=swap:400,700'],
-        }
-      }
-    ],
+    // [
+    //   'nuxt-webfontloader',
+    //   {
+    //     google: {
+    //       families: ['Noto+Sans+CJK+JP&display=swap:400,700'],
+    //     }
+    //   }
+    // ],
     'nuxt-svg-loader',
     [
       '@nuxtjs/sitemap',
