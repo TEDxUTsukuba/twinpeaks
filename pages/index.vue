@@ -104,7 +104,7 @@
           />
         </div>
       </div>
-      <p class="has-text-grey-light has-text-right">{{ $t('notice.last-modified')}}<time datetime="2020-12-22">2020/12/22</time></p>
+      <p class="has-text-grey-light has-text-right">{{ $t('notice.last-modified')}}<time datetime="2020-12-22">2020/1/26</time></p>
       <div class="has-text-centered">
         <nuxt-link to="/notice" class="button is-gradient is-rounded">{{ $t('button.archive') }}</nuxt-link>
       </div>
