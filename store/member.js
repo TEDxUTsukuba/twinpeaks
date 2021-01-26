@@ -1,7 +1,7 @@
-import { members2020 } from '~/contents/members2020.json'
+import { members2021 } from '~/contents/members2021.json'
 
 export const state = () => ({
-  memberList: members2020
+  memberList: members2021
 })
 
 export const getters = {
