@@ -167,7 +167,7 @@ export default {
         path: '/sitemap.xml',
         hostname: 'https://www.tedxutsukuba.com',
         exclude: [
-          '/explore', '/inspire', '/talks_old'
+          '/explore', '/inspire', '/talks_old', '/loading', '/2019'
         ]
       }
     ]
