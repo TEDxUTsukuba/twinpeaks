@@ -73,7 +73,17 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#000' },
+  loading: {
+    name: 'circle',
+    color: 'red',
+    background: 'white'
+  },
+
+  loadingIndicator: {
+    name: 'circle',
+    color: 'red',
+    background: 'white'
+  },
   /*
   ** Global CSS
   */
@@ -101,7 +111,6 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    // Doc: https://buefy.github.io/#/documentation
     [
       '@nuxtjs/google-analytics', { id: 'UA-104320074-1' }
     ],
@@ -118,7 +127,6 @@ export default {
       }
     ],
     // 'nuxt-fontawesome',
-    // Doc: https://axios.nuxtjs.org/usage
     'nuxt-user-agent',
     [ 
       'nuxt-i18n', {
