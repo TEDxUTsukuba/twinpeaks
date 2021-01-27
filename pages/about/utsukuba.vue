@@ -216,6 +216,9 @@ export default {
       videoId: '7PQWXvgYZ4Y'
     }
   },
+  head: {
+    title: 'About TEDxUTsukuba'
+  },
   methods: {
     openModal (partner) {
       this.showContent = true

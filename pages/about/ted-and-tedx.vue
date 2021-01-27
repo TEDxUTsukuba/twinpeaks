@@ -149,6 +149,9 @@ export default {
       videoId4: 'xHsXfmHaBUo',
     }
   },
+  head: {
+    title: 'About TED and TEDx'
+  },
   mounted(){
     const scene1 = this.$scrollmagic
       .scene({

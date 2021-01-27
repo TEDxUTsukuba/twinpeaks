@@ -10,7 +10,11 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
+      { 
+        hid: 'description', 
+        name: 'description', 
+        content: 'TEDxUTsukuba is an independently organised TEDx community managed by passionate students and alumni at the University of Tsukuba. Join us for conversations on local stories to global issues.'
+      },
       {
         hid: 'og:title',
         property: 'og:title',
@@ -69,7 +73,17 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#000' },
+  loading: {
+    name: 'circle',
+    color: 'red',
+    background: 'white'
+  },
+
+  loadingIndicator: {
+    name: 'circle',
+    color: 'red',
+    background: 'white'
+  },
   /*
   ** Global CSS
   */
@@ -97,7 +111,6 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    // Doc: https://buefy.github.io/#/documentation
     [
       '@nuxtjs/google-analytics', { id: 'UA-104320074-1' }
     ],
@@ -114,9 +127,29 @@ export default {
       }
     ],
     // 'nuxt-fontawesome',
-    // Doc: https://axios.nuxtjs.org/usage
     'nuxt-user-agent',
-    'nuxt-i18n',
+    [ 
+      'nuxt-i18n', {
+        strategy: 'prefix_and_default',
+        locales: [
+          { code: 'ja', iso: 'ja_JP', file: 'ja.json' },
+          { code: 'en', iso: 'en-US', file: 'en.json' },
+        ],
+        defaultLocale: 'ja',
+        vueI18n: {
+          fallbackLocale: 'ja'
+        },
+        detectBrowserLanguage: {
+          useCookie: true,
+          cookieKey: 'i18n_redirected',
+          onlyOnRoot: true,  // recommended
+        },
+        vueI18nLoader: true,
+        lazy: true,
+        // 言語ファイル(.json)のディレクトリを記載
+        langDir: 'locales/',
+      }
+    ],
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // [
@@ -144,21 +177,7 @@ export default {
   //     families: ['Noto+Sans+JP']
   //   }
   // },
-  i18n: {
-    strategy: 'prefix_and_default',
-    locales: [
-      { code: 'ja', iso: 'ja_JP', file: 'ja.json' },
-      { code: 'en', iso: 'en-US', file: 'en.json' },
-    ],
-    defaultLocale: 'ja',
-    vueI18n: {
-      fallbackLocale: 'ja'
-    },
-    vueI18nLoader: true,
-    lazy: true,
-      // 言語ファイル(.json)のディレクトリを記載
-    langDir: 'locales/',
-  },
+
   fontawesome: {
     component: 'fa'
   //  imports: [
