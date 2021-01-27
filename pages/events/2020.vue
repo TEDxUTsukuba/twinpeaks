@@ -255,10 +255,18 @@ export default {
           color: 'black' 
         }
       ],
-      meta: [
+    }
+  },
+  head: {
+    title: '2020 JIJIMUGE',
+    meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
+      { 
+        hid: 'description', 
+        name: 'description', 
+        content: "2020年11月29日(日) オンライン開催。TEDxUTsukuba's annual conference is going virtual this year. " 
+      },
       { 
         hid: 'twitter:card', 
         name: 'twitter:card', 
@@ -292,7 +300,7 @@ export default {
       {
         hid: 'og:description',
         property: 'og:description',
-        content: '2020年11月29日(日) オンライン開催。'
+        content: "2020年11月29日(日) オンライン開催。TEDxUTsukuba's annual conference is going virtual this year. "
       },
       {
         hid: 'og:author',
@@ -310,7 +318,6 @@ export default {
         content: 'TEDxUTsukuba Official Website' 
       }
     ]
-    }
   },
   methods: {
     getAspectRatio() {
