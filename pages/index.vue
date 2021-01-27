@@ -133,7 +133,18 @@ export default {
       videoId3: 'ZbIEuwjpxp0',
       todayDate: Date.now(),
       eventDate: Date(2020, 11, 29, 0, 0, 0),
-      isAlertActive: true
+      isAlertActive: true,
+    }
+  },
+  head() {
+    return {
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'TEDxUTsukuba is an independently organised TEDx community managed by passionate students and alumni at the University of Tsukuba. Join us for conversations on local stories to global issues. '
+        },
+      ]
     }
   },
   // asyncData(context) {

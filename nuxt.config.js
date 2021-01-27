@@ -10,26 +10,16 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      // { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
-      { 
-        hid: 'twitter:card', 
-        name: 'twitter:card', 
-        content: 'summary_large_image' 
-      },
-      { 
-        hid: 'twitter:site', 
-        name: 'twitter:site', 
-        content: '@tedxutsukuba' 
-      },
-      { 
-        hid: 'twitter:creator', 
-        name: 'twitter:creator', 
-        content: '@tedxutsukuba' 
-      },
+      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
       {
         hid: 'og:title',
         property: 'og:title',
         content: 'TEDxUTsukuba'
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: '価値あるアイディアを、つくばから。"Ideas worth spreading" というTEDの理念のもとに、筑波大学の学生を中心として独自に運営されているコミュニティです。'
       },
       {
         hid: 'og:type',
@@ -40,11 +30,6 @@ export default {
         hid: 'og:url',
         property: 'og:url',
         content: 'https://www.tedxutsukuba.com'
-      },
-      {
-        hid: 'og:description',
-        property: 'og:description',
-        content: '価値あるアイディアを、つくばから。"Ideas worth spreading" というTEDの理念のもとに、筑波大学の学生を中心として独自に運営されているコミュニティです。'
       },
       {
         hid: 'og:author',
@@ -60,7 +45,22 @@ export default {
         hid: 'og:site_name', 
         name: 'og:site_name', 
         content: 'TEDxUTsukuba Official Website' 
-      }
+      },
+      {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary_large_image'
+      },
+      {
+        hid: 'twitter:site',
+        name: 'twitter:site',
+        content: '@tedxutsukuba'
+      },
+      {
+        hid: 'twitter:creator',
+        name: 'twitter:creator',
+        content: '@tedxutsukuba'
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
