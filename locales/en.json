@@ -13,7 +13,7 @@
       "item": "Partners"
     },
     "aboutus": {
-      "parent": "About",
+      "parent": "Aboutyar",
       "child1": "TED / TEDx",
       "child2": "TEDxUTsukuba"
     }
