@@ -98,6 +98,9 @@ export default {
       videoId1: 'Ot4n4txl4Ko'
     }
   },
+    head: {
+    title: 'Talks'
+  },
   filters: {
     substrBefore(text) {
      return text.length > 50 ? text.slice(0, 50) : text;

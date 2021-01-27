@@ -71,6 +71,9 @@ export default {
       ]
     }
   },
+  head: {
+    title: 'Partners'
+  },
   methods: {
     openModal (partner) {
       this.showContent = true
