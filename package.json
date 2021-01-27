@@ -1,7 +1,7 @@
 {
   "name": "teraoka",
   "version": "1.0.0",
-  "description": "Nuxt.js based website for TEDxUTsukuba",
+  "description": "TEDxUTsukuba Official Website",
   "author": "Haruki Kinoshita",
   "private": true,
   "scripts": {

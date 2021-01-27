@@ -20,3 +20,9 @@ $ yarn generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+
+## Deploy
+
+[Netlify](https://app.netlify.com/sites/tedxutsukuba/overview)
+Build Command: `yarn generate`

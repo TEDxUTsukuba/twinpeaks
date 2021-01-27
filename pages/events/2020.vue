@@ -258,7 +258,7 @@ export default {
       meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      // { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
+      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
       { 
         hid: 'twitter:card', 
         name: 'twitter:card', 
@@ -292,7 +292,7 @@ export default {
       {
         hid: 'og:description',
         property: 'og:description',
-        content: '11月29日(日) オンライン開催。'
+        content: '2020年11月29日(日) オンライン開催。'
       },
       {
         hid: 'og:author',
