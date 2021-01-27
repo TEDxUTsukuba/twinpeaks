@@ -120,7 +120,28 @@ export default {
     // 'nuxt-fontawesome',
     // Doc: https://axios.nuxtjs.org/usage
     'nuxt-user-agent',
-    'nuxt-i18n',
+    [ 
+      'nuxt-i18n', {
+        strategy: 'prefix_and_default',
+        locales: [
+          { code: 'ja', iso: 'ja_JP', file: 'ja.json' },
+          { code: 'en', iso: 'en-US', file: 'en.json' },
+        ],
+        defaultLocale: 'ja',
+        vueI18n: {
+          fallbackLocale: 'ja'
+        },
+        detectBrowserLanguage: {
+          useCookie: true,
+          cookieKey: 'i18n_redirected',
+          onlyOnRoot: true,  // recommended
+        },
+        vueI18nLoader: true,
+        lazy: true,
+        // 言語ファイル(.json)のディレクトリを記載
+        langDir: 'locales/',
+      }
+    ],
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // [
@@ -148,21 +169,7 @@ export default {
   //     families: ['Noto+Sans+JP']
   //   }
   // },
-  i18n: {
-    strategy: 'prefix_and_default',
-    locales: [
-      { code: 'ja', iso: 'ja_JP', file: 'ja.json' },
-      { code: 'en', iso: 'en-US', file: 'en.json' },
-    ],
-    defaultLocale: 'ja',
-    vueI18n: {
-      fallbackLocale: 'ja'
-    },
-    vueI18nLoader: true,
-    lazy: true,
-      // 言語ファイル(.json)のディレクトリを記載
-    langDir: 'locales/',
-  },
+
   fontawesome: {
     component: 'fa'
   //  imports: [
