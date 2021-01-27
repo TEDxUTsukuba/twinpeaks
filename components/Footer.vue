@@ -92,9 +92,9 @@
 
             <div class="columns is-centered">
               <div class="column is-8-desktop is-8-tablet has-text-left has-text-centered-mobile">  
-                <nuxt-link to="/notice" class="has-text-grey url is-size-7-mobile">{{ $t('notice.archive.title') }}</nuxt-link> |
-                <nuxt-link to="/code-of-conduct" class="has-text-grey url is-size-7-mobile">{{ $t('codeofconduct.title') }}</nuxt-link> |
-                <nuxt-link to="/explore" class="has-text-grey url is-size-7-mobile">{{ $t('2020.participance.pass.title') }}</nuxt-link>
+                <nuxt-link :to="localePath('/notice')" class="has-text-grey url is-size-7-mobile">{{ $t('notice.archive.title') }}</nuxt-link> |
+                <nuxt-link :to="localePath('/code-of-conduct')" class="has-text-grey url is-size-7-mobile">{{ $t('codeofconduct.title') }}</nuxt-link> |
+                <nuxt-link :to="localePath('/explore')" class="has-text-grey url is-size-7-mobile">{{ $t('2020.participance.pass.title') }}</nuxt-link>
               </div>
 
               <div class="sns column is-4-desktop is-5-tablet has-text-right has-text-centered-mobile">
