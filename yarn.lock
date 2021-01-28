@@ -1865,7 +1865,7 @@ axios-retry@^3.1.8:
   dependencies:
     is-retry-allowed "^1.1.0"
 
-axios@^0.19.0, axios@^0.19.2:
+axios@^0.19.2:
   version "0.19.2"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.19.2.tgz#3ea36c5d8818d0d5f8a8a97a6d36b86cdc00cb27"
   integrity sha512-fjgm5MvRHLhx+osE2xoekY70AhARk3a6hkN+3Io1jc00jtquGvxYlKlsFUhmUET0V5te6CcZI7lcv2Ym61mjHA==
@@ -8434,14 +8434,6 @@ vue-i18n@^8.18.1:
   version "8.21.0"
   resolved "https://registry.yarnpkg.com/vue-i18n/-/vue-i18n-8.21.0.tgz#526450525fdbb9c877685b5ba6cb9573b73d3940"
   integrity sha512-pKBq6Kg5hNacFHMFgPbpYsFlDIMRu4Ew/tpvTWns14CZoCxt7B3tmSNdrLruGMMivnJu1rhhRqsQqT6YwHkuQQ==
-
-vue-instagram@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/vue-instagram/-/vue-instagram-3.0.0.tgz#dcb2c43159879b6127be82cc1f6363d11dd4d50f"
-  integrity sha512-wXEqHR3yGfHwwNrCdD62aJeAumHU+FNKHGSAgmkq9eSWEfrR4SxGqWCb/p5wbtcEZMOhSKpi1YBu2l2mrnoIJg==
-  dependencies:
-    axios "^0.19.0"
-    lodash "^4.17.15"
 
 vue-loader@^15.9.1:
   version "15.9.2"
