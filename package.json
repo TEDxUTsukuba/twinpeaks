@@ -28,7 +28,6 @@
     "nuxt-svg-loader": "^1.2.0",
     "nuxt-user-agent": "^1.2.2",
     "nuxt-webfontloader": "^1.1.0",
-    "vue-instagram": "^3.0.0",
     "vue-scrollmagic": "^1.2.0",
     "vue-youtube": "^1.4.0",
     "webfontloader": "^1.6.28"
