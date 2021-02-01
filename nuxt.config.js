@@ -140,7 +140,7 @@ export default {
           fallbackLocale: 'ja'
         },
         detectBrowserLanguage: {
-          useCookie: true,
+          useCookie: false,
           cookieKey: 'i18n_redirected',
           onlyOnRoot: true,  // recommended
         },

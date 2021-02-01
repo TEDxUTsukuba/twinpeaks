@@ -35,7 +35,6 @@
         </div>
         <hr>
         <PartnerList category="take" width_fullhd="4" width_desktop="4" width_tablet="6" width_mobile="12" />
-        <!-- <PartnerList category="take" /> -->
         <PartnerList category="ume" width_fullhd="3" width_desktop="3" width_tablet="4" width_mobile="6" />
         <PartnerList category="sakura" width_fullhd="2" width_desktop="2" width_tablet="3" width_mobile="6" />
       </section>
@@ -52,11 +51,12 @@
 </template>
 
 <script>
-import Modal from '~/components/Modal.vue'
+// import Modal from '~/components/Modal.vue'
 import PartnerList from '~/components/PartnerList.vue'
 export default {
   components: {
-    Modal, PartnerList
+    // Modal, 
+    PartnerList
   },
   data() {
     return {
