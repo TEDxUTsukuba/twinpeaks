@@ -315,7 +315,7 @@
       },
       "talk1": {
         "title": "Talk Session",
-        "description": ""
+        "description": "トークセッションは松島壮志さんのトークから始まりました。Leonid DimaanoさんとAnnet Nakkaziさんのトークは、オーディエンスの皆さんにどんな気づきを与えてくれたのでしょう。"
       },
       "workshop": {
         "title": "Workshop",
@@ -323,7 +323,7 @@
       },
       "talk2": {
         "title": "Talk Session",
-        "description": ""
+        "description": "質問や感想をスクリーンに送信できる\"Comment Screen\"を活用し、トークの合間にはインタラクティブなセッションを設けました。"
       },
       "perf2": {
         "title": "Performance",
@@ -337,8 +337,8 @@
     "venue": {
       "title": "Venue",
       "headline": "University of Tsukuba, 5C Building",
-      "description": "",
-      "access": ""
+      "access": "Ttake a bus bound for Tsukuba University Central or Tsukuba University Circulation (Clockwise) from Bus Stop No. 6 at Tsukuba Center Bus Terminal, and get off at Tsukuba University West Bus Stop, then walk 5 minutes from the bus stop.",
+      "description": "Built as the first school building, 5C building has been the landmark of campus and the epicenter of creativity. From the pedestrian corridor, you can see a spectacular view of plaster statues. "
     }
   }
 }
