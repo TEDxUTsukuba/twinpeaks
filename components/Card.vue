@@ -1,5 +1,5 @@
 <template>
-    <div class="columns is-multiline is-variable is-centered is-vcentered">
+    <div class="columns is-multiline is-variable is-centered is-vcentered font-awesome">
       <div class="card-image column is-12-mobile is-3-tablet is-4-desktop is-3-widescreen is-3-fullhd">
         <div class="image-box">
           <figure class="image is-1by1" ref="imageref">
@@ -17,28 +17,27 @@
           <p class="has-text-left has-text-light" style="text-align: justify;">
             {{ description }}
           </p>
-          <div class="section" style="padding: 0;">
-            <!-- <span>{{ $t('2020.speaker.share') }}</span><br> -->
-            <!-- <a :href="getShareUrl(title)" class="is-size-4 tw icon" target="_blank"><font-awesome-icon :icon="['fab', 'twitter']" /></a> -->
-            <!-- <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.tedxutsukuba.com%2F&amp;src=sdkpreparse" class="is-size-4 fb fb-xfbml-parse-ignore"><font-awesome-icon :icon="['fab', 'facebook']" /></a> -->
-            <!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+          <br>
+          <a class="button is-gradient is-rounded" :href="youtubeId">
+            {{ $t('about.ted.watch') }}
+          </a>
+          <!-- <div class="section" style="padding: 0;">
+            <span>{{ $t('2020.speaker.share') }}</span><br>
+            <a :href="getShareUrl(title)" class="is-size-4 tw icon" target="_blank">
+              <font-awesome-icon :icon="['fab', 'twitter']" />
+            </a>
+            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.tedxutsukuba.com%2F&amp;src=sdkpreparse" class="is-size-4 fb fb-xfbml-parse-ignore"><font-awesome-icon :icon="['fab', 'facebook']" /></a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           </div>
-          <!-- <div class="content has-text-centered">
+          <div class="content has-text-centered">
             <b-icon
               :icon="icon"
               size="is-large"
               type="is-primary"
             />
-          </div> -->
-        </div>
-      <!-- <footer class="card-footer">
-      <footer class="card-footer">
-        <div class="card-footer-item">
-          <span>
-            <slot />
-          </span>
-        </div>
-      </footer> -->
+          </div>
+        </div> -->
+      </div>
     </div>
 </template>
 
@@ -65,6 +64,10 @@ export default {
     image_url: {
       type: String,
       required: true
+    },
+    youtubeId: {
+      type: String,
+      required: false
     }
   },
 }
