@@ -95,7 +95,7 @@
             <img :src="getImgUrl(i)">
           </a>
         </b-carousel-item>
-        <span v-if="gallery" @click="switchGallery(false)" class="modal-close is-large"/>
+        <span @click="switchGallery(false)" class="modal-close is-large"/>
       </b-carousel>
       </section>
     </section>
@@ -195,6 +195,28 @@
       <section class="section has-text-centered">
         <a class="button is-rounded is-gradient" href="https://flic.kr/s/aHsmSNKeT6">{{ $t('2020.highlight.detail') }}</a>
       </section>
+    </section>
+    <section class="hero bg-venue">
+      <div class="hero-body">
+        <section class="section">
+          <h1 class="title is-0 has-text-white">
+            <span class="\">{{ $t('2020.venue.title') }}</span>
+          </h1>
+          <h1 class="title is-3 has-text-white">
+            {{ $t('2020.venue.headline') }}
+          </h1>
+          <p class="has-text-white">
+            {{ $t('2020.venue.description') }}
+          </p>
+          <hr>
+          <p class="is-size-7 has-text-white">
+            {{ $t('2020.venue.access') }}
+          </p>
+        </section>
+      </div>
+    </section>
+    <section class="hero">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1322.7611665020916!2d140.09744825360198!3d36.10978103487121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x794e4bd21ab2280e!2z562R5rOi5aSn5a2mIOOCqOODs-ODkeODr-ODvOOCueOCv-OCuOOCqg!5e0!3m2!1sja!2sjp!4v1612814392563!5m2!1sja!2sjp" width="1920" height="360" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </section>
   </section>
 </template>
@@ -423,8 +445,21 @@ export default {
 }
 </script>
 
-<style scoped>
-.bg-jijimuge {
+<style lang="scss" scoped>
+  h1.is-0 {
+    color: #bcc5cd;
+    background: linear-gradient(135deg, #3494e6, #ec6ead);
+    /* background: linear-gradient(45deg, #74ebd5, #acb6e5); */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    &.has-text-white {
+      color: white;
+      background: linear-gradient(135deg, #E0EAFC, #CFDEF3) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  .bg-jijimuge {
     /* background-image: linear-gradient( 135deg, #F1CA74 10%, #A64DB6 100%); */
     background: url("~@/assets/wallpapers/stage-bg4.png");
     /* background-size: 100%; */
@@ -450,4 +485,26 @@ export default {
     opacity: 0;
     transition: all 0.5s;
   }
+  .bg-venue{
+  background: url("~@/assets/2020/venue/IMG_9824.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center center;
+  padding: 30px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+.bg-venue:before{
+  content: "";
+  display: block;
+  position: absolute;
+  background: inherit;
+  filter: brightness(60%) contrast(60%) blur(5px);
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  z-index: -1;
+}
 </style>
