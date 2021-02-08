@@ -215,8 +215,8 @@
         </section>
       </div>
     </section>
-    <section class="hero">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1322.7611665020916!2d140.09744825360198!3d36.10978103487121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x794e4bd21ab2280e!2z562R5rOi5aSn5a2mIOOCqOODs-ODkeODr-ODvOOCueOCv-OCuOOCqg!5e0!3m2!1sja!2sjp!4v1612814392563!5m2!1sja!2sjp" width="1920" height="360" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <section class="hero is-white">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1322.7611665020916!2d140.09744825360198!3d36.10978103487121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x794e4bd21ab2280e!2z562R5rOi5aSn5a2mIOOCqOODs-ODkeODr-ODvOOCueOCv-OCuOOCqg!5e0!3m2!1sja!2sjp!4v1612814392563!5m2!1sja!2sjp" width="100%" height="360" frameborder="0" style="margin: 0 auto; border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </section>
   </section>
 </template>
@@ -500,7 +500,7 @@ export default {
   display: block;
   position: absolute;
   background: inherit;
-  filter: brightness(60%) contrast(60%) blur(5px);
+  filter: brightness(75%) contrast(50%) blur(10px);
   top: -5px;
   right: -5px;
   bottom: -5px;
