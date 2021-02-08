@@ -119,6 +119,24 @@
         "desc": "Tとsの間隔などが微妙に調節(カーニング)されているので、aiファイルで自作したりせず、こちらのファイルを使ってください。",
         "url": "https://drive.google.com/drive/folders/1-_VgOM4rQgmskmY7kHfOMR5OqcHGRtzk?usp=sharing",
         "filetype": "data"
+    },
+    "ut-logo": {
+        "title": "筑波大学広報関連ガイド",
+        "desc": "令和元年12月に改訂されて、ロゴなどを使用する際は申請が必要になったらしい。URLは学内アクセス専用。",
+        "url": "https://ksp.sec.tsukuba.ac.jp/wp/?page_id=135945#utlogo",
+        "filetype": "url"
+    },
+    "ut-logo-doc": {
+        "title": "筑波大学校章・ブランドスローガン視覚表現マニュアル",
+        "desc": "",
+        "url": "https://drive.google.com/file/d/1W_v7irfRa76PXJvh_NbcsEBHbN_nKvMC/view?usp=sharing",
+        "filetype": "pdf"
+    },
+    "for-speaker": {
+      "title": "TEDx Speaker Guide",
+      "desc": "Illustrated guide for TEDx speaker candidates.",
+      "url": "https://storage.ted.com/tedx/manuals/IllustratedTEDxSpeakerGuide.pdf",
+      "filetype": "pdf"
     }
   },
   "tools": {

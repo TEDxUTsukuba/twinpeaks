@@ -11,23 +11,25 @@
       <h1 class="title">TEDxUTsukuba</h1>
       <article v-html="$t('about.utsukuba.description.3')"></article>
     </section>
-    <div class="columns" id="gallery">
-      <div class="column is-one-third">
-        <figure>
-          <img src="~/assets/sample2.jpg" alt="Audience attending our annual event" style="width: 100%; height: 75%; object-fit: cover;">
-        </figure>
+    <section class="section">
+      <div class="columns" id="gallery">
+        <div class="column is-one-third">
+          <figure class="is-4by3">
+            <img src="~/assets/sample2.jpg" alt="Audience attending our annual event" style="width: 100%; object-fit: cover;">
+          </figure>
+        </div>
+        <div class="column is-one-third">
+          <figure class="is-4by3">
+            <img src="~/assets/sample3.jpg" alt="TEDxUTsukuba attendees and staffs" style="width: 100%; object-fit: cover;">
+          </figure>
+        </div>
+        <div class="column is-one-third">
+          <figure class="is-4by3">
+            <img src="~/assets/sample1.jpg" alt="A speaker standing on the stage" style="width: 100%; object-fit: cover;">
+          </figure>
+        </div>
       </div>
-      <div class="column is-one-third">
-        <figure>
-          <img src="~/assets/sample3.jpg" alt="TEDxUTsukuba attendees and staffs" style="width: 100%; height: 75%; object-fit: cover;">
-        </figure>
-      </div>
-      <div class="column is-one-third">
-        <figure>
-          <img src="~/assets/sample1.jpg" alt="A speaker standing on the stage" style="width: 100%; height: 75%; object-fit: cover;">
-        </figure>
-      </div>
-    </div>
+    </section>
     <section class="section" id="socialcapital">
       <h1 class="title">Social Capital</h1>
       <article v-html="$t('about.utsukuba.description.5')"></article>

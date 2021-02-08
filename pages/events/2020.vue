@@ -34,6 +34,7 @@
         :subtitle = "$t('2020.speaker.sp1.position')"
         :description = "$t('2020.speaker.sp1.description')"
         :image_url = "src_sp1"
+        :youtubeId = "getYouTubeUrl($t('2020.speaker.sp1.youtubeId'))"
       >
       </Card>
       <Card id="card-2"
@@ -41,6 +42,7 @@
         :subtitle = "$t('2020.speaker.sp2.position')"
         :description = "$t('2020.speaker.sp2.description')"
         :image_url = "src_sp2"
+        :youtubeId = "getYouTubeUrl($t('2020.speaker.sp2.youtubeId'))"
       >
       </Card>
       <Card id="card-3"
@@ -48,6 +50,7 @@
         :subtitle = "$t('2020.speaker.sp3.position')"
         :description = "$t('2020.speaker.sp3.description')"
         :image_url = "src_sp3"
+        :youtubeId = "getYouTubeUrl($t('2020.speaker.sp3.youtubeId'))"
       >
       </Card>
       <Card id="card-4"
@@ -55,6 +58,7 @@
         :subtitle = "$t('2020.speaker.sp4.position')"
         :description = "$t('2020.speaker.sp4.description')"
         :image_url = "src_sp4"
+        :youtubeId = "getYouTubeUrl($t('2020.speaker.sp4.youtubeId'))"
       >
       </Card>
     </section>
@@ -320,6 +324,9 @@ export default {
     ]
   },
   methods: {
+    getYouTubeUrl(value) {
+      return `https://youtu.be/${value}`
+    },
     getAspectRatio() {
       if (this.innerWidth > this.innerHeight) {
         console.log("yes");
