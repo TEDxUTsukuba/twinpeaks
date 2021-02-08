@@ -152,31 +152,31 @@ section.is-large {
 }
 @media screen and (min-width: 1081px) and (max-width: 1408px) {
   h1.title.is-1 {
-    font-size: 3.5rem !important;
-  }
-  h1.title.is-2 {
-    font-size: 2.5rem !important;
-  }
-  .is-size-1 {
-    font-size: 3.5rem !important;
-  }
-  .is-size-2 {
     font-size: 3rem !important;
   }
-  .is-size-3 {
-    font-size: 2.5rem !important;
-  }
-  .is-size-4 {
+  h1.title.is-2 {
     font-size: 2rem !important;
   }
-  .is-size-5 {
+  .is-size-1 {
+    font-size: 3rem !important;
+  }
+  .is-size-2 {
+    font-size: 2.5rem !important;
+  }
+  .is-size-3 {
+    font-size: 2rem !important;
+  }
+  .is-size-4 {
     font-size: 1.5rem !important;
   }
-  .is-size-6, p, article {
+  .is-size-5 {
     font-size: 1.25rem !important;
   }
-  .is-size-7 {
+  .is-size-6, p, article {
     font-size: 1rem !important;
+  }
+  .is-size-7 {
+    font-size: 0.85rem !important;
   }
 }
 @media screen and (min-width: 1409px) {
@@ -563,7 +563,7 @@ br.mobile-br {
     padding-top: 10vh;
   }
   .icon {
-    padding-right: 10px;
+    padding-left: 10px;
   }
 
   .button {

@@ -483,10 +483,10 @@ img#top {
   position: absolute;
   background: inherit;
   filter: brightness(75%) contrast(50%) blur(10px);
-  top: -5px;
-  right: -5px;
-  bottom: -5px;
-  left: -5px;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  left: -10px;
   z-index: -1;
 }
 </style>

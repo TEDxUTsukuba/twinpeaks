@@ -50,8 +50,10 @@
                 <b-collapse animation="fade" :open="false" position="" aria-id="contentIdForA11y1">
                   <span class="" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1">
                     <!-- <b-icon :icon="!props.open ? 'menu-down' : 'menu-up'"></b-icon> -->
-                    <p class="is-size-7 has-text-grey-light" v-if="!props.open">{{ talk.description_ja | substrBefore }}…</p>
-                    <p class="is-size-7 has-text-grey-light" v-if="props.open">{{ talk.description_ja }}</p>
+                    <p class="is-size-7 has-text-grey-light" v-if="!props.open && $i18n.locale == 'ja'">{{ talk.description_ja | substrBefore(100) }}…</p>
+                    <p class="is-size-7 has-text-grey-light" v-if="!props.open && $i18n.locale == 'en'">{{ talk.description_en | substrBefore(200) }}…</p>
+                    <p class="is-size-7 has-text-grey-light" v-if="props.open && $i18n.locale == 'ja'">{{ talk.description_ja }}</p>
+                    <p class="is-size-7 has-text-grey-light" v-if="props.open && $i18n.locale == 'en'">{{ talk.description_en }}</p>
                     <br>
                     <button class="button is-gradient is-rounded is-outlined is-small">{{ !props.open ? $t('button.readmore') : $t('button.readless') }}</button>
                   </span>
@@ -102,8 +104,8 @@ export default {
     title: 'Talks'
   },
   filters: {
-    substrBefore(text) {
-     return text.length > 50 ? text.slice(0, 50) : text;
+    substrBefore(text, value) {
+     return text.length > value ? text.slice(0, value) : text;
     },
     substrAfter(text) {
      return text.length > 50 ? text.substr(50) : text;

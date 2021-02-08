@@ -92,9 +92,9 @@
 
             <div class="columns is-centered">
               <div class="column is-8-desktop is-8-tablet has-text-left has-text-centered-mobile">  
-                <nuxt-link :to="localePath('/notice')" class="has-text-grey url is-size-7-mobile">{{ $t('notice.archive.title') }}</nuxt-link> |
-                <nuxt-link :to="localePath('/code-of-conduct')" class="has-text-grey url is-size-7-mobile">{{ $t('codeofconduct.title') }}</nuxt-link> |
-                <nuxt-link :to="localePath('/explore')" class="has-text-grey url is-size-7-mobile">{{ $t('2020.participance.pass.title') }}</nuxt-link>
+                <nuxt-link :to="localePath('/notice')" class="has-text-grey url is-size-7">{{ $t('notice.archive.title') }}</nuxt-link> |
+                <nuxt-link :to="localePath('/code-of-conduct')" class="has-text-grey url is-size-7">{{ $t('codeofconduct.title') }}</nuxt-link> |
+                <nuxt-link :to="localePath('/explore')" class="has-text-grey url is-size-7">{{ $t('2020.participance.pass.title') }}</nuxt-link>
               </div>
 
               <div class="sns column is-4-desktop is-5-tablet has-text-right has-text-centered-mobile">
@@ -110,7 +110,7 @@
                 <a href="https://www.flic.kr/ps/3eCWpZ" target="_blank" rel="noopener noreferrer">
                   <iconFL alt="Flickr" class="icon" />
                 </a>
-                <a href="https://www.note.com/tedxutsukuba" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.note.com/tedxutsukuba" target="_blank" rel="noopener noreferrer"> 
                   <iconNT alt="note" class="icon" />
                 </a>
               </div>
