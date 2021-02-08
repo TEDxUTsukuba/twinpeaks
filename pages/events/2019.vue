@@ -1,36 +1,11 @@
 <template>
   <section id="wrapper-dark" class="font-awesome">   
-    <section class="hero is-medium bg-cophilaction">
-      <div class="hero-body has-text-left">
-        <div class="container has-text-centered-mobile has-text-left">
-          <h1 class="title is-1">CoPhilAction</h1>
-          <h1 class="subtitle is-4">TEDxUTsukuba 2019</h1>
-        </div>
+    <section class="section">
+      <div class="nmp-card has-text-centered-mobile has-text-left">
+        <h1 class="subtitle is-4">TEDxUTsukuba 2019</h1>
+        <h1 class="title is-1">JIJIMUGE</h1>
       </div>
-    </section>
-
-    <section class="hero">
-      <div class="container">
-        <b-carousel 
-          :autoplay="false" indicator-custom
-          :indicator-inside="false" 
-          :overlay="gallery" 
-          :icon-size="iconSize"
-          :pause-info-type="pauseInfoType"
-          @click="switchGallery(true)">
-          <b-carousel-item v-for="(item, i) in 3" :key="i">
-            <a class="image">
-              <img :src="getImgUrl(i)">
-            </a>
-          </b-carousel-item>
-          <span v-if="gallery" @click="switchGallery(false)" class="modal-close is-large"/>
-          <template slot="indicators" slot-scope="props">
-            <figure class="al image" :draggable="false">
-              <img :draggable="false" :src="getImgUrl(props.i)" :title="props.i">
-            </figure>
-          </template>
-        </b-carousel>
-      </div>
+      <hr>
     </section>
 
     <section class="section">
@@ -40,32 +15,36 @@
       <h1 class="subtitle has-text-white has-text-right">
         {{ $t('2019.speaker.description') }}
       </h1>
-      <Card
+      <Card id="card-1"
         :title = "$t('2019.speaker.sp1.name')"
         :subtitle = "$t('2019.speaker.sp1.position')"
         :description = "$t('2019.speaker.sp1.description')"
         :image_url = "src_sp1"
+        :youtubeId = "getYouTubeUrl($t('2019.speaker.sp1.youtubeId'))"
       >
       </Card>
-      <Card
+      <Card id="card-2"
         :title = "$t('2019.speaker.sp2.name')"
         :subtitle = "$t('2019.speaker.sp2.position')"
         :description = "$t('2019.speaker.sp2.description')"
         :image_url = "src_sp2"
+        :youtubeId = "getYouTubeUrl($t('2019.speaker.sp2.youtubeId'))"
       >
       </Card>
-      <Card
+      <Card id="card-3"
         :title = "$t('2019.speaker.sp3.name')"
         :subtitle = "$t('2019.speaker.sp3.position')"
         :description = "$t('2019.speaker.sp3.description')"
         :image_url = "src_sp3"
+        :youtubeId = "getYouTubeUrl($t('2019.speaker.sp3.youtubeId'))"
       >
       </Card>
-      <Card
+      <Card id="card-4"
         :title = "$t('2019.speaker.sp4.name')"
         :subtitle = "$t('2019.speaker.sp4.position')"
         :description = "$t('2019.speaker.sp4.description')"
         :image_url = "src_sp4"
+        :youtubeId = "getYouTubeUrl($t('2019.speaker.sp4.youtubeId'))"
       >
       </Card>
       <Card
@@ -73,6 +52,7 @@
         :subtitle = "$t('2019.speaker.sp5.position')"
         :description = "$t('2019.speaker.sp5.description')"
         :image_url = "src_sp5"
+        :youtubeId = "getYouTubeUrl($t('2019.speaker.sp5.youtubeId'))"
       >
       </Card>
     </section>
@@ -82,12 +62,13 @@
           <span class="">{{ $t('2019.concept.title') }}</span>
         </h1>
         <h1 class="subtitle has-text-white has-text-right">
-          {{ $t('2019.concept.description') }}
+          <!-- {{ $t('2019.concept.description') }} -->
         </h1>
         <figure class="image">
-          <img src="~/assets/2019/concept/cophilaction_silver.png" alt="CoPhilAction">
+          <img src="~/assets/2019/concept/cophilaction_silver.png" alt="CoPhilAction" style="width: 80%; max-width: 960px; margin: 5vh auto;">
         </figure>
         <div class="nmp-card-dark">
+          <article>
           テクノロジーが進歩し、物質的な豊かさを享受できるようになった現代において、家族や仲間との強い繋がりが個人の幸せに占める割合は、相対的に低下している。
           <br>
           地縁や血縁、職場での付き合いが「しがらみ」として遠ざけられるようになる一方で、SNSの普及や非正規雇用の拡大により、うわべだけの人間関係が増加しつつある。
@@ -103,79 +84,148 @@
           「共に」を意味する接頭辞に、Phila「愛」とAction「行動」を合わせた CoPhilAction には、互いを認め合う「愛」が「行動」を生み、未来を切り拓くという理念が現れている。
           <br>
           多様な人とアイディアが交わる TEDxUTsukuba という大きな社会実験の場に集い、あなたらしい CoPhilAction のカタチを、自由に思い描いてほしい。
+          </article>
         </div>
       </section>
     </section>
 
-    <!-- <section class="section has-text-centered">
-      <b-collapse :open="false" position="is-bottom" aria-id="contentIdForA11y1">
-        <a class="button is-medium is-gradient is-rounded" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1" style="margin: 3rem auto;">
-            <b-icon :icon="!props.open ? 'menu-down' : 'menu-up'"></b-icon>
-            {{ !props.open ? 'Read statement' : 'Close' }}
-        </a>
-        <br><br>
-        <div class="column has-text-left">
-          <article>
-            {{ $t('2019.concept.statement1') }}<br>
-            {{ $t('2019.concept.statement2') }}<br>
-            {{ $t('2019.concept.statement3') }}
-          </article>
-        </div>
-      </b-collapse>
-    </section> -->
 
-    <section class="hero bg-red">
+    <section class="hero">
       <div class="hero-body">
         <section class="section">
           <h1 class="title is-0">
-            <span class="">{{ $t('2019.participance.title') }}</span>
+            <span class="">{{ $t('2019.program.title') }}</span>
           </h1>
-          <h1 class="subtitle has-text-white has-text-right">
-            {{ $t('2019.participance.description') }}
+          <h1 class="subtitle has-text-white has-text-right has-text-centered-mobile">
+            <!-- {{ $t('2019.participance.description') }} -->
           </h1>
-          <div class="columns">
-            <div class="column is-5">
-              <div class="nmp-card-red">
-                <div class="header" style="margin-bottom: 1rem;">
-                  <span class="tag is-white is-medium"><font-awesome-icon :icon="['far', 'clock']" /> {{ $t('2019.participance.free.time') }}</span>
+          <div class="columns is-multiline reverse-row-order">
+            <div class="column is-7">
+              <div class="nmp-card-dark">
+                <div class="header" style="margin-bottom: 0.5rem;">
+                  <span class="tag is-dark"><font-awesome-icon :icon="['far', 'clock']" />12:40 - 13:30</span>
                 </div>
                 <div class="">
-                  <h1 class="title is-2 has-text-white">{{ $t('2019.participance.free.title') }}</h1>
-                  <p>{{ $t('2019.participance.free.intro') }}</p>
-                  <br>
-                  <ul>
-                    <li><font-awesome-icon :icon="['fas', 'check-square']" style="color: white;" /> {{ $t('2019.participance.free.charge') }}</li>
-                    <li><font-awesome-icon :icon="['fas', 'check-square']" style="color: white;" /> {{ $t('2019.participance.free.reservation') }}</li>
-                  </ul>
+                  <h1 class="title is-3">{{ $t('2019.program.welcome.title') }}</h1>
+                  <p>{{ $t('2019.program.welcome.description') }}</p>
                 </div>
               </div>
+            </div>
+            <div class="column is-5 has-text-centered">
+              <a data-flickr-embed="true" href="https://www.flickr.com/photos/146703506@N03/49072672506/in/album-72157711800937367/" title="_DSC8851"><img src="https://live.staticflickr.com/65535/49072672506_37b567aeb9_z.jpg" width="500" height="333" alt="_DSC8851"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
             </div>
             <div class="column is-7">
-              <div class="nmp-card-red">
-                <div class="header" style="margin-bottom: 1rem;">
-                  <span class="tag is-white is-medium"><font-awesome-icon :icon="['far', 'clock']" /> {{ $t('2019.participance.premium.time') }}</span>
+              <div class="nmp-card-dark">
+                <div class="header" style="margin-bottom: 0.5rem;">
+                  <span class="tag is-dark"><font-awesome-icon :icon="['far', 'clock']" />13:30 - 13:50</span>
                 </div>
                 <div class="">
-                  <h1 class="title is-2 has-text-white">{{ $t('2019.participance.premium.title') }}</h1>
-                  <p>{{ $t('2019.participance.premium.intro') }}</p>
-                  <br>
-                  <ul>
-                    <li><font-awesome-icon :icon="['fas', 'check-square']" style="color: white;" /> {{ $t('2019.participance.premium.charge') }}</li>
-                    <li><font-awesome-icon :icon="['fas', 'check-square']" style="color: white;" /> {{ $t('2019.participance.premium.reservation') }}</li>
-                  </ul>
-                  <br>
-                  <div class="columns is-multiline is-vcentered">
-                    <div class="column is-12-tablet is-half-desktop has-text-right-mobile">
-                      <p class="is-size-7" v-if="$i18n.locale == 'en'">{{ $t('2019.participance.premium.airmeet') }}</p>
-                      <p class="is-size-7" v-if="$i18n.locale == 'ja'">{{ $t('2019.participance.premium.airmeet') }}</p>
-                    </div>
-                  </div>
+                  <h1 class="title is-3">{{ $t('2019.program.perf1.title') }}</h1>
+                  <p>{{ $t('2019.program.perf1.description') }}</p>
                 </div>
               </div>
             </div>
+            <div class="column is-5 has-text-centered">
+              <a data-flickr-embed="true" href="https://www.flickr.com/photos/146703506@N03/49072891237/in/album-72157711800937367/" title="_DSC9016"><img src="https://live.staticflickr.com/65535/49072891237_b33eaa1a72_z.jpg" width="500" height="333" alt="_DSC9016"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+            </div>
+            <div class="column is-7">
+              <div class="nmp-card-dark">
+                <div class="header" style="margin-bottom: 0.5rem;">
+                  <span class="tag is-dark"><font-awesome-icon :icon="['far', 'clock']" />14:00 - 15:10</span>
+                </div>
+                <div class="">
+                  <h1 class="title is-3">{{ $t('2019.program.talk1.title') }}</h1>
+                  <p>{{ $t('2019.program.talk1.description') }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="column is-5 has-text-centered">
+              <a data-flickr-embed="true" href="https://www.flickr.com/photos/146703506@N03/49074551742/in/album-72157711800937367/" title="_DSC9217"><img src="https://live.staticflickr.com/65535/49074551742_c8fc9f4ae3_z.jpg" width="500" height="333" alt="_DSC9217"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+            </div>
+            <div class="column is-7">
+              <div class="nmp-card-dark">
+                <div class="header" style="margin-bottom: 0.5rem;">
+                  <span class="tag is-dark"><font-awesome-icon :icon="['far', 'clock']" />15:30 - 16:00</span>
+                </div>
+                <div class="">
+                  <h1 class="title is-3">{{ $t('2019.program.workshop.title') }}</h1>
+                  <p>{{ $t('2019.program.workshop.description') }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="column is-5 has-text-centered">
+              <a data-flickr-embed="true" href="https://www.flickr.com/photos/146703506@N03/49073714868/in/album-72157711800937367/" title="P1120186"><img src="https://live.staticflickr.com/65535/49073714868_a2c16e06ca_z.jpg" width="500" height="333" alt="P1120186"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+            </div>
+            <div class="column is-7">
+              <div class="nmp-card-dark">
+                <div class="header" style="margin-bottom: 0.5rem;">
+                  <span class="tag is-dark"><font-awesome-icon :icon="['far', 'clock']" />16:30 - 17:10</span>
+                </div>
+                <div class="">
+                  <h1 class="title is-3">{{ $t('2019.program.talk2.title') }}</h1>
+                  <p>{{ $t('2019.program.talk2.description') }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="column is-5 has-text-centered">
+              <a data-flickr-embed="true" href="https://www.flickr.com/photos/146703506@N03/49072130933/in/album-72157711800937367/" title="_DSC9206"><img src="https://live.staticflickr.com/65535/49072130933_8661453b05.jpg" width="500" height="333" alt="_DSC9206"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+            </div>
+            <div class="column is-7">
+              <div class="nmp-card-dark">
+                <div class="header" style="margin-bottom: 0.5rem;">
+                  <span class="tag is-dark"><font-awesome-icon :icon="['far', 'clock']" />17:30 - 17:50</span>
+                </div>
+                <div class="">
+                  <h1 class="title is-3">{{ $t('2019.program.perf2.title') }}</h1>
+                  <p>{{ $t('2019.program.perf2.description') }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="column is-5 has-text-centered">
+              <a data-flickr-embed="true" href="https://www.flickr.com/photos/146703506@N03/49073747613/in/album-72157711800937367/" title="P1120614"><img src="https://live.staticflickr.com/65535/49073747613_3e12a9d6e9_z.jpg" width="500" height="333" alt="P1120614"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+            </div>
+            <div class="column is-7">
+              <div class="nmp-card-dark">
+                <div class="header" style="margin-bottom: 0.5rem;">
+                  <span class="tag is-dark"><font-awesome-icon :icon="['far', 'clock']" />18:10 - 20:00</span>
+                </div>
+                <div class="">
+                  <h1 class="title is-3">{{ $t('2019.program.afterparty.title') }}</h1>
+                  <p>{{ $t('2019.program.afterparty.description') }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="column is-5 has-text-centered">
+              <a data-flickr-embed="true" href="https://www.flickr.com/photos/146703506@N03/49073776248/in/album-72157711800937367/" title="_DSC0139"><img src="https://live.staticflickr.com/65535/49073776248_ea72761d3d_z.jpg" width="500" height="333" alt="_DSC0139"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+            </div>
+            <div class="column is-7 has-text-centered">
+              <a data-flickr-embed="true" href="https://www.flickr.com/photos/146703506@N03/49072659536/in/album-72157711800937367/" title="_DSC0036"><img src="https://live.staticflickr.com/65535/49072659536_03391f6f95_b.jpg" width="1024" height="683" alt="_DSC0036"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+            </div>
           </div>
+       </section>
+      </div>
+    </section>
+    <section class="hero bg-venue">
+      <div class="hero-body">
+        <section class="section">
+          <h1 class="title is-0 has-text-white">
+            <span class="\">{{ $t('2019.venue.title') }}</span>
+          </h1>
+          <h1 class="title is-3 has-text-white">
+            {{ $t('2019.venue.headline') }}
+          </h1>
+          <p class="has-text-white">
+            {{ $t('2019.venue.description') }}
+          </p>
+          <hr>
+          <p class="is-size-7 has-text-white">
+            {{ $t('2019.venue.access') }}
+          </p>
         </section>
       </div>
+    </section>
+    <section class="hero">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1957.0340758696698!2d140.10173302442405!3d36.103447991333944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f8.1!3m3!1m2!1s0x0%3A0x1e70d22a5b012e11!2z562R5rOi5aSn5a2mIDVD5qOf77yI5L2T6Iq45qOf77yJ!5e0!3m2!1sja!2sjp!4v1612811039423!5m2!1sja!2sjp" width="100%" height="360" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>      </div>
     </section>
   </section>
 </template>
@@ -183,11 +233,11 @@
 <script>
 import Card from '~/components/Card'
 import Movie from '~/components/Movie'
-import Image_sp1 from '~/assets/speakers/2020/speaker-01.png'
-import Image_sp2 from '~/assets/speakers/2020/speaker-02.png'
-import Image_sp3 from '~/assets/speakers/2020/speaker-03.png'
-import Image_sp4 from '~/assets/speakers/2020/speaker-04.png'
-import Image_sp5 from '~/assets/speakers/2020/speaker-04.png'
+import Image_sp1 from '~/assets/speakers/2019/sp_2019_1.jpg'
+import Image_sp2 from '~/assets/speakers/2019/sp_2019_2.jpg'
+import Image_sp3 from '~/assets/speakers/2019/sp_2019_3-1.jpg'
+import Image_sp4 from '~/assets/speakers/2019/sp_2019_3-2.jpg'
+import Image_sp5 from '~/assets/speakers/2019/sp_2019_4.jpg'
 
 export default {
   components: {
@@ -200,26 +250,6 @@ export default {
       src_sp3: Image_sp3,
       src_sp4: Image_sp4,
       src_sp5: Image_sp5,
-      animated: 'true',
-      interval: '5000',
-      iconSize: 'is-large',
-      pauseInfoType: 'is-dark',
-      showContent: false,
-      postItem: "",
-      iconSize: 'is-large',
-      gallery: false,
-      statementImages: [
-        require('~/assets/2020/concept/statement_1_small.png'),
-        require('~/assets/2020/concept/statement_2_small.png'),
-        require('~/assets/2020/concept/statement_3_small.png'),
-        require('~/assets/2020/concept/statement_4_small.png')
-      ],
-      statementMobileImages: [
-        require('~/assets/2020/concept/statement_1_square.png'),
-        require('~/assets/2020/concept/statement_2_square.png'),
-        require('~/assets/2020/concept/statement_3_square.png'),
-        require('~/assets/2020/concept/statement_4_square.png')
-      ],
       speakers: [
             { id:1, title: "私は靴を履かないバーテンダー", name: "松島壮志", url: '/_nuxt/assets/speakers/2019/sp_2019_1.jpg' },
             { id:2, title: "私は靴を履かないバーテンダー", name: "山田玲司", url: '/_nuxt/assets/speakers/2019/sp_2019_2.jpg' },
@@ -286,6 +316,9 @@ export default {
     }
   },
   methods: {
+    getYouTubeUrl(value) {
+      return `https://youtu.be/${value}`
+    },
     getImgUrl(value) {
       if (process.client) {
         if (window.innerWidth <= 1080) {
@@ -308,9 +341,20 @@ export default {
 </script>
 
 
-<style scoped>
-.bg-cophilaction {
-  background-image: linear-gradient( 135deg, #81FFEF 10%, #F067B4 100%);
+<style lang="scss" scoped>
+h1.is-0 {
+  color: #bcc5cd;
+  background-color: #eec0c6;
+background-image: linear-gradient(135deg, #b267eb, #fc6f62);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  &.has-text-white {
+    color: white;
+    background: linear-gradient(135deg, white, white) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent;
+  }
 }
 .itemContainer{
     display: flex;
@@ -329,8 +373,27 @@ img#top {
   position: absolute;
   top: 25vh;
 }
-.is-red {
-  background-color: red;
-  color: white;
+
+.bg-venue{
+  background: url("~@/assets/2019/venue/venue001.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center center;
+  padding: 30px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+.bg-venue:before{
+  content: "";
+  display: block;
+  position: absolute;
+  background: inherit;
+  filter: brightness(60%) contrast(60%) blur(5px);
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  z-index: -1;
 }
 </style>
