@@ -124,9 +124,10 @@ section.is-large {
 //   letter-spacing: 6px;
 //   margin-right: -6px;
 // }
+
 @media screen and (max-width: 768px) {
   h1.title.is-1 {
-    font-size: 3rem !important;
+    font-size: 2.5rem !important;
   }
   h1.title.is-2 {
     font-size: 2rem !important;
@@ -209,18 +210,6 @@ section.is-large {
 }
 
 h1.is-0 {
-  &.has-text-white {
-    color: $light;
-    background: linear-gradient(135deg, #E0EAFC, #CFDEF3);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  color: #bcc5cd;
-  background: linear-gradient(135deg, #3494e6, #ec6ead);
-  // background: linear-gradient(45deg, #74ebd5, #acb6e5);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
   @media screen and (max-width: 768px) {
     text-align: center;
     font-size: 3.5rem !important;
@@ -265,8 +254,8 @@ section#wrapper-dark {
   h1 {
     color: $light;
   }
-  article {
-    color: $light;
+  p, article {
+    color: lightgray;
   }
 }
 section#wrapper-red {
