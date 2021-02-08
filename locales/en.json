@@ -1,7 +1,7 @@
 {
   "header": {
     "events": {
-      "parent": "イベント",
+      "parent": "Events",
       "child1": "2020 JIJIMUGE",
       "child2": "2019 CoPhilAction",
       "child3": "TEDxUTsukubaLive 2019"
@@ -258,8 +258,8 @@
     "venue": {
       "title": "Broadcasting Site",
       "headline": "University of Tsukuba, Empowerment Studio",
-      "description": "",
-      "access": ""
+      "description": "Due to the ongoing pandemic crisis, we delivered our annual conference in a virtual setting. Talks were pre-recorded and broadcasted alongside the interactive session at the Empowerment Studio, the world class facility for virtual reality research & development, constructed in 2015. ",
+      "access": "From bus stop 6 at the Tsukuba Center, take the bus bound for \"Tsukuba Daigaku Chuo\" or \"the University Loop-line On-campus Bus\" [Tsukuba Daigaku Junkan Bus] (clockwise) to \"Dai-San Area Mae\"."
     }
   },
   "2019": {
@@ -337,8 +337,8 @@
     "venue": {
       "title": "Venue",
       "headline": "University of Tsukuba, 5C Building",
-      "access": "Ttake a bus bound for Tsukuba University Central or Tsukuba University Circulation (Clockwise) from Bus Stop No. 6 at Tsukuba Center Bus Terminal, and get off at Tsukuba University West Bus Stop, then walk 5 minutes from the bus stop.",
-      "description": "Built as the first school building, 5C building has been the landmark of campus and the epicenter of creativity. From the pedestrian corridor, you can see a spectacular view of plaster statues. "
+      "access": "Take a bus bound for Tsukuba University Central or Tsukuba University Circulation (Clockwise) from Bus Stop No. 6 at Tsukuba Center Bus Terminal, and get off at Tsukuba University Nishi Bus Stop, then walk 5 minutes from the bus stop.",
+      "description": "Built as the first school building, 5C Building has been the landmark of campus and the epicenter of creativity. From the pedestrian corridor, you can see a spectacular view of plaster statues. "
     }
   }
 }
