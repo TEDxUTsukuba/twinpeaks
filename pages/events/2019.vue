@@ -8,7 +8,7 @@
       <hr>
     </section>
 
-    <section class="section">
+    <section class="section" id="card-0">
       <h1 class="title is-0">
         <span class="">{{ $t('2019.speaker.title') }}</span>
       </h1>
@@ -47,7 +47,7 @@
         :youtubeId = "getYouTubeUrl($t('2019.speaker.sp4.youtubeId'))"
       >
       </Card>
-      <Card
+      <Card id="card-5"
         :title = "$t('2019.speaker.sp5.name')"
         :subtitle = "$t('2019.speaker.sp5.position')"
         :description = "$t('2019.speaker.sp5.description')"
@@ -56,9 +56,9 @@
       >
       </Card>
     </section>
-    <section class="hero has-text-centered">
+    <section class="hero">
       <section class="section">
-        <h1 class="title is-0">
+        <h1 class="title is-0" id="concept-title">
           <span class="">{{ $t('2019.concept.title') }}</span>
         </h1>
         <h1 class="subtitle has-text-white has-text-right">
@@ -67,22 +67,18 @@
         <figure class="image">
           <img src="~/assets/2019/concept/cophilaction_silver.png" alt="CoPhilAction" style="width: 80%; max-width: 960px; margin: 5vh auto;">
         </figure>
-        <div class="nmp-card-dark">
+        <div class="nmp-card-dark" id="concept">
           <article>
           テクノロジーが進歩し、物質的な豊かさを享受できるようになった現代において、家族や仲間との強い繋がりが個人の幸せに占める割合は、相対的に低下している。
-          <br>
           地縁や血縁、職場での付き合いが「しがらみ」として遠ざけられるようになる一方で、SNSの普及や非正規雇用の拡大により、うわべだけの人間関係が増加しつつある。
           <br><br>
           ムラ社会ニッポン特有の「同調圧力」といった悪弊が徐々に廃れていくとともに、個人主義や競争社会への賛辞が、日夜を問わず世間を賑わせてきたのが現実だ。
-          <br>
           しかし、テクノロジーのあくなき追求の先に待ち受けていた人工知能の登場は、皮肉にも私たちに「人間とは何か」という問いとの対峙を要請するのであった。
           <br><br>
           古代エジプトでピラミッドが建造され、バスティーユ牢獄で市民革命の火蓋が切られたように、文明の進歩の原動力は「人間関係」の中にこそ見いだすことができるはずだ。
-          <br>
           そして令和という新たな時代を生きる私たちに求められるのは、これまで人間関係を築く上での障壁となってきた文化や思想、価値観の違いを、強みへと変えようとする気概ではないだろうか。
           <br><br>
           「共に」を意味する接頭辞に、Phila「愛」とAction「行動」を合わせた CoPhilAction には、互いを認め合う「愛」が「行動」を生み、未来を切り拓くという理念が現れている。
-          <br>
           多様な人とアイディアが交わる TEDxUTsukuba という大きな社会実験の場に集い、あなたらしい CoPhilAction のカタチを、自由に思い描いてほしい。
           </article>
         </div>
@@ -90,16 +86,16 @@
     </section>
 
 
-    <section class="hero">
+    <section class="hero" id="program">
       <div class="hero-body">
         <section class="section">
-          <h1 class="title is-0">
+          <h1 class="title is-0" id="program-title">
             <span class="">{{ $t('2019.program.title') }}</span>
           </h1>
           <h1 class="subtitle has-text-white has-text-right has-text-centered-mobile">
             <!-- {{ $t('2019.participance.description') }} -->
           </h1>
-          <div class="columns is-multiline reverse-row-order">
+          <div class="columns is-multiline reverse-row-order" id="program">
             <div class="column is-7">
               <div class="nmp-card-dark">
                 <div class="header" style="margin-bottom: 0.5rem;">
@@ -112,7 +108,7 @@
               </div>
             </div>
             <div class="column is-5 has-text-centered">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/146703506@N03/49072672506/in/album-72157711800937367/" title="_DSC8851"><img src="https://live.staticflickr.com/65535/49072672506_37b567aeb9_z.jpg" width="500" height="333" alt="_DSC8851"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+              <a data-flickr-embed="false" href="https://www.flickr.com/photos/146703506@N03/49072672506/in/album-72157711800937367/" title="_DSC8851"><img src="https://live.staticflickr.com/65535/49072672506_37b567aeb9_z.jpg" width="500" height="333" alt="_DSC8851"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
             </div>
             <div class="column is-7">
               <div class="nmp-card-dark">
@@ -126,7 +122,7 @@
               </div>
             </div>
             <div class="column is-5 has-text-centered">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/146703506@N03/49072891237/in/album-72157711800937367/" title="_DSC9016"><img src="https://live.staticflickr.com/65535/49072891237_b33eaa1a72_z.jpg" width="500" height="333" alt="_DSC9016"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+              <a data-flickr-embed="false" href="https://www.flickr.com/photos/146703506@N03/49072891237/in/album-72157711800937367/" title="_DSC9016"><img src="https://live.staticflickr.com/65535/49072891237_b33eaa1a72_z.jpg" width="500" height="333" alt="_DSC9016"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
             </div>
             <div class="column is-7">
               <div class="nmp-card-dark">
@@ -140,7 +136,7 @@
               </div>
             </div>
             <div class="column is-5 has-text-centered">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/146703506@N03/49074551742/in/album-72157711800937367/" title="_DSC9217"><img src="https://live.staticflickr.com/65535/49074551742_c8fc9f4ae3_z.jpg" width="500" height="333" alt="_DSC9217"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+              <a data-flickr-embed="false" href="https://www.flickr.com/photos/146703506@N03/49074551742/in/album-72157711800937367/" title="_DSC9217"><img src="https://live.staticflickr.com/65535/49074551742_c8fc9f4ae3_z.jpg" width="500" height="333" alt="_DSC9217"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
             </div>
             <div class="column is-7">
               <div class="nmp-card-dark">
@@ -154,7 +150,7 @@
               </div>
             </div>
             <div class="column is-5 has-text-centered">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/146703506@N03/49073714868/in/album-72157711800937367/" title="P1120186"><img src="https://live.staticflickr.com/65535/49073714868_a2c16e06ca_z.jpg" width="500" height="333" alt="P1120186"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+              <a data-flickr-embed="false" href="https://www.flickr.com/photos/146703506@N03/49073714868/in/album-72157711800937367/" title="P1120186"><img src="https://live.staticflickr.com/65535/49073714868_a2c16e06ca_z.jpg" width="500" height="333" alt="P1120186"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
             </div>
             <div class="column is-7">
               <div class="nmp-card-dark">
@@ -168,7 +164,7 @@
               </div>
             </div>
             <div class="column is-5 has-text-centered">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/146703506@N03/49072130933/in/album-72157711800937367/" title="_DSC9206"><img src="https://live.staticflickr.com/65535/49072130933_8661453b05.jpg" width="500" height="333" alt="_DSC9206"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+              <a data-flickr-embed="false" href="https://www.flickr.com/photos/146703506@N03/49072130933/in/album-72157711800937367/" title="_DSC9206"><img src="https://live.staticflickr.com/65535/49072130933_8661453b05.jpg" width="500" height="333" alt="_DSC9206"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
             </div>
             <div class="column is-7">
               <div class="nmp-card-dark">
@@ -182,7 +178,7 @@
               </div>
             </div>
             <div class="column is-5 has-text-centered">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/146703506@N03/49073747613/in/album-72157711800937367/" title="P1120614"><img src="https://live.staticflickr.com/65535/49073747613_3e12a9d6e9_z.jpg" width="500" height="333" alt="P1120614"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+              <a data-flickr-embed="false" href="https://www.flickr.com/photos/146703506@N03/49073747613/in/album-72157711800937367/" title="P1120614"><img src="https://live.staticflickr.com/65535/49073747613_3e12a9d6e9_z.jpg" width="500" height="333" alt="P1120614"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
             </div>
             <div class="column is-7">
               <div class="nmp-card-dark">
@@ -196,7 +192,7 @@
               </div>
             </div>
             <div class="column is-5 has-text-centered">
-              <a data-flickr-embed="true" href="https://www.flickr.com/photos/146703506@N03/49073776248/in/album-72157711800937367/" title="_DSC0139"><img src="https://live.staticflickr.com/65535/49073776248_ea72761d3d_z.jpg" width="500" height="333" alt="_DSC0139"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+              <a data-flickr-embed="false" href="https://www.flickr.com/photos/146703506@N03/49073776248/in/album-72157711800937367/" title="_DSC0139"><img src="https://live.staticflickr.com/65535/49073776248_ea72761d3d_z.jpg" width="500" height="333" alt="_DSC0139"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
             </div>
             <div class="column is-7 has-text-centered">
               <a data-flickr-embed="true" href="https://www.flickr.com/photos/146703506@N03/49072659536/in/album-72157711800937367/" title="_DSC0036"><img src="https://live.staticflickr.com/65535/49072659536_03391f6f95_b.jpg" width="1024" height="683" alt="_DSC0036"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
@@ -224,8 +220,8 @@
         </section>
       </div>
     </section>
-    <section class="hero">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1957.0340758696698!2d140.10173302442405!3d36.103447991333944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f8.1!3m3!1m2!1s0x0%3A0x1e70d22a5b012e11!2z562R5rOi5aSn5a2mIDVD5qOf77yI5L2T6Iq45qOf77yJ!5e0!3m2!1sja!2sjp!4v1612811039423!5m2!1sja!2sjp" width="100%" height="360" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>      </div>
+    <section class="hero is-white">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1957.0340758696698!2d140.10173302442405!3d36.103447991333944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f8.1!3m3!1m2!1s0x0%3A0x1e70d22a5b012e11!2z562R5rOi5aSn5a2mIDVD5qOf77yI5L2T6Iq45qOf77yJ!5e0!3m2!1sja!2sjp!4v1612811039423!5m2!1sja!2sjp" width="100%" height="360" frameborder="0" style="margin: 0 auto; border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>      </div>
     </section>
   </section>
 </template>
@@ -336,6 +332,99 @@ export default {
           return document.documentElement.classList.remove('is-clipped')
       }
     }
+  },
+  mounted() {
+  const scene1 = this.$scrollmagic
+    .scene({
+      triggerElement: '#card-0',
+      triggerHook: 0.5,
+      offset: 0,
+      reverse: false
+    })
+    .setTween('#card-1', {
+      css: {
+        opacity: 1
+      }
+    })
+  const scene2 = this.$scrollmagic
+    .scene({
+      triggerElement: '#card-1',
+      triggerHook: 0.5,
+      offset: 0,
+      reverse: false
+    })
+    .setTween('#card-2', {
+      css: {
+        opacity: 1
+      }
+    })
+  const scene3 = this.$scrollmagic
+    .scene({
+      triggerElement: '#card-2',
+      triggerHook: 0.5,
+      offset: 0,
+      reverse: false
+    })
+    .setTween('#card-3', {
+      css: {
+        opacity: 1
+      }
+    })
+  const scene4 = this.$scrollmagic
+    .scene({
+      triggerElement: '#card-3',
+      triggerHook: 0.5,
+      offset: 0,
+      reverse: false
+    })
+    .setTween('#card-4', {
+      css: {
+        opacity: 1
+      }
+    })
+  const scene5 = this.$scrollmagic
+    .scene({
+      triggerElement: '#concept-title',
+      triggerHook: 0.5,
+      offset: 0,
+      reverse: false
+    })
+    .setTween('#concept', {
+      css: {
+        opacity: 1
+      }
+    })
+  const scene6 = this.$scrollmagic
+    .scene({
+      triggerElement: '#card-4',
+      triggerHook: 0.5,
+      offset: 0,
+      reverse: false
+    })
+    .setTween('#card-5', {
+      css: {
+        opacity: 1
+      }
+    })
+    const scene7 = this.$scrollmagic
+    .scene({
+      triggerElement: '#program-title',
+      triggerHook: 0.5,
+      offset: 0,
+      reverse: false
+    })
+    .setTween('#program', {
+      css: {
+        opacity: 1
+      }
+    })
+    this.$scrollmagic.addScene(scene1)
+    this.$scrollmagic.addScene(scene2)
+    this.$scrollmagic.addScene(scene3)
+    this.$scrollmagic.addScene(scene4)
+    this.$scrollmagic.addScene(scene5)
+    this.$scrollmagic.addScene(scene6)
+    this.$scrollmagic.addScene(scene7)
   }
 }
 </script>
@@ -356,6 +445,10 @@ background-image: linear-gradient(135deg, #b267eb, #fc6f62);
     -webkit-text-fill-color: transparent;
   }
 }
+  #card-1, #card-2, #card-3, #card-4, #card-5, #concept, #program {
+    opacity: 0;
+    transition: all 0.25s;
+  }
 .itemContainer{
     display: flex;
 }
@@ -389,7 +482,7 @@ img#top {
   display: block;
   position: absolute;
   background: inherit;
-  filter: brightness(60%) contrast(60%) blur(5px);
+  filter: brightness(75%) contrast(50%) blur(10px);
   top: -5px;
   right: -5px;
   bottom: -5px;

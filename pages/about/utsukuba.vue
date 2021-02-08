@@ -72,8 +72,8 @@
               </p>
             </header>
             <div class="card-image" v-if="member.imageFileName.length">
-              <figure class="image is-3-desktop is-6-tablet is-6-mobileby2">
-                <img :src="getJsonImgUrl(member.imageFileName)" alt="Placeholder image">
+              <figure class="image is-3-desktop is-6-tablet is-6-mobileby2" style="overflow: hidden;">
+                <img class="portrait" :src="getJsonImgUrl(member.imageFileName)" alt="Placeholder image">
               </figure>
             </div>
             <div class="card-content">
@@ -96,14 +96,14 @@
                 </span>
               </div>
               
-              <p class="midashi is-size-7 has-text-weight-bold">{{ $t('about.utsukuba.team.from') }}</p>
+              <p class="midashi is-size-7 has-text-weight-bold has-text-primary">{{ $t('about.utsukuba.team.from') }}</p>
               <p class="is-size-7 has-text-weight-bold" v-if="$i18n.locale == 'en'">{{ member.en.from }}</p>
               <p class="is-size-7 has-text-weight-bold" v-if="$i18n.locale == 'ja'">{{ member.ja.from }}</p>
 
-              <p class="midashi is-size-7 has-text-weight-bold" v-if="member.keyword1">{{ $t('about.utsukuba.team.keywords') }}</p>
+              <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.keyword1">{{ $t('about.utsukuba.team.keywords') }}</p>
               <p class="is-size-7 has-text-weight-bold">{{ member.keyword1 }}<span v-if="member.keyword2">, </span>{{ member.keyword2 }}<span v-if="member.keyword3">, </span>{{ member.keyword3 }}</p>
               
-              <p class="midashi is-size-7 has-text-weight-bold" v-if="member.favouritetedtalk">{{ $t('about.utsukuba.team.favouritetedtalk') }}</p>
+              <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.favouritetedtalk">{{ $t('about.utsukuba.team.favouritetedtalk') }}</p>
               <a class="is-size-7 has-text-weight-bold" :href="getTedLinkUrl(member.favouritetedtalklink)">{{ member.favouritetedtalk }} <externalLink v-if="member.favouritetedtalk" style="width: 0.75rem;" /></a>
               
               <p class="card-item has-text-right">
@@ -319,5 +319,12 @@ export default {
   #gallery {
     opacity: 0;
     transition: all 1s;
+  }
+  .portrait {
+    &:hover {
+      transform: translate(0, 30px) scale(1.3);
+    }
+    transition: 0.2s linear;
+    // 親要素に overflow: hidden;
   }
 </style>

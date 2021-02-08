@@ -48,7 +48,7 @@
                     </article>
                     <br>
                     <div class="has-text-right">
-                      <nuxt-link :to="localePath('/about')"><button class="button is-white is-rounded is-outlined">{{ $t('intro.button') }}</button></nuxt-link>
+                      <nuxt-link :to="localePath('/about/utsukuba')"><button class="button is-white is-rounded is-outlined">{{ $t('intro.button') }}</button></nuxt-link>
                     </div>
                 </div>
              </div>
