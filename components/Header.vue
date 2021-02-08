@@ -10,17 +10,17 @@
       </b-navbar-item>
     </template>
     <template slot="end">
-      <!-- <b-navbar-dropdown label="Events" class="is-hoverable">
+      <b-navbar-dropdown :label="$t('header.events.parent')" class="is-hoverable">
         <b-navbar-item tag="router-link" :to="{ path: '/events/2020' }">
-          2020 JIJIMUGE
+          {{ $t('header.events.child1') }}
         </b-navbar-item>
         <b-navbar-item tag="router-link" :to="{ path: '/events/2019' }">
-          2019 CoPhilAction
+          {{ $t('header.events.child2') }}
         </b-navbar-item>
-      </b-navbar-dropdown> -->
-      <b-navbar-item class="normal-category" tag="nuxt-link" :to="localePath('/events/2020')">
+      </b-navbar-dropdown>
+      <!-- <b-navbar-item class="normal-category" tag="nuxt-link" :to="localePath('/events/2020')">
         {{ $t('header.events.child1') }}
-      </b-navbar-item>
+      </b-navbar-item> -->
       <b-navbar-item class="normal-category" tag="nuxt-link" :to="localePath('/talks')">
         {{ $t('header.talks.item') }}
       </b-navbar-item>
