@@ -13,7 +13,7 @@
         <span class="">{{ $t('2019.speaker.title') }}</span>
       </h1>
       <h1 class="subtitle has-text-white has-text-right">
-        {{ $t('2019.speaker.description') }}
+        <!-- {{ $t('2019.speaker.description') }} -->
       </h1>
       <Card id="card-1"
         :title = "$t('2019.speaker.sp1.name')"
