@@ -3,7 +3,7 @@
       <div class="card-image column is-12-mobile is-3-tablet is-4-desktop is-3-widescreen is-3-fullhd">
         <div class="image-box">
           <figure class="image is-1by1" ref="imageref">
-            <img class="nmp-card-image" :src="image_url" :alt="title">
+            <img class="nmp-card-image" :src="image_url" :alt="title" style="object-fit: cover;">
           </figure>
           <!-- <div class="speaker-name-overlap">
             <h1 class="title is-2 ja has-text-centered-mobile" v-if="$i18n.locale == 'ja'">{{ title }}</h1>
@@ -12,9 +12,9 @@
         </div>
       </div>
       <div class="column has-text-centered-mobile">
-        <h1 class="title is-2 ja">{{ title }}</h1>
+        <h1 class="title is-1 ja">{{ title }}</h1>
           <h1 class="subtitle is-size-6 has-text-primary">{{ subtitle }}</h1>
-          <p class="has-text-left has-text-light" style="text-align: justify;">
+          <p class="has-text-left" style="text-align: justify;">
             {{ description }}
           </p>
           <br>
