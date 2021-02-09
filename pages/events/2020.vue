@@ -500,7 +500,7 @@ export default {
   display: block;
   position: absolute;
   background: inherit;
-  filter: brightness(75%) contrast(50%) blur(10px);
+  filter: brightness(75%) contrast(50%) blur(5px);
   top: -10px;
   right: -10px;
   bottom: -10px;
