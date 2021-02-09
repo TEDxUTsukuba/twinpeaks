@@ -3,7 +3,7 @@
     <section class="section">
       <div class="nmp-card has-text-centered-mobile has-text-left">
         <h1 class="subtitle is-4">TEDxUTsukuba 2019</h1>
-        <h1 class="title is-1">JIJIMUGE</h1>
+        <h1 class="title is-1">CoPhilaction</h1>
       </div>
       <hr>
     </section>
@@ -482,7 +482,7 @@ img#top {
   display: block;
   position: absolute;
   background: inherit;
-  filter: brightness(75%) contrast(50%) blur(10px);
+  filter: brightness(75%) contrast(50%) blur(5px);
   top: -10px;
   right: -10px;
   bottom: -10px;
