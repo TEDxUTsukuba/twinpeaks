@@ -31,7 +31,7 @@
 
           <div class="content">
             <b-collapse :open="false" position="is-bottom" aria-id="contentIdForA11y1">
-              <a class="button is-gradient is-rounded" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1" style="margin: 3rem auto;">
+              <a class="button is-gradient is-rounded" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1" style="margin: 3rem auto 0 auto;">
                   <!-- <b-icon :icon="!props.open ? 'menu-down' : 'menu-up'"></b-icon> -->
                   {{ !props.open ? $t('button.readmore') : $t('button.readless') }}
               </a>
@@ -59,11 +59,9 @@
                 <a class="button is-small is-rounded is-outlined" href="https://www.pref.ibaraki.jp/shokorodo/chusho/shogyo/2020korona/guideline.html">{{ $t('covid19-info.link.prefecture') }}</a>
               </div>
             </b-collapse>
-
           </div>
       </section>
-    </div>
-    <div>
+
       <section class="hero has-background-black">
         <div class="hero-body">
           <section class="section">
@@ -119,6 +117,26 @@
         </div>
       </section>
     </div>
+
+    <div class="wrap">
+      <ul class="slideshow">
+        <li class="slideshow-content" v-for="(partner, index) in partnerList" :key="index">
+          <figure class="">
+            <img :src="getJsonImgUrl(partner.id)" :alt="partner.name">
+          </figure>
+        </li>
+      </ul>
+      <ul class="slideshow">
+        <li class="slideshow-content" v-for="(partner, index) in partnerList" :key="index">
+          <figure class="">
+            <img :src="getJsonImgUrl(partner.id)" :alt="partner.name">
+          </figure>
+        </li>
+      </ul>
+    </div>
+    <nuxt-link class="has-text-right" to="/partners"><small>{{ $t('partners.seeAll') }}</small></nuxt-link>
+
+
   </section>
 </template>
 
@@ -134,6 +152,19 @@ import externalLink from '@/assets/svg/external-link-alt-solid.svg'
 export default {
   components: {
     logo, iconIG, iconFB, iconTW, iconFL, iconNT, externalLink
+  },
+  methods: {
+    getJsonImgUrl(value) {
+      // return require(`~/assets/partners/2020/carousel_${value}.jpg`)
+      return require(`~/assets/partners/2020/logo/${value}.jpg`)
+    }
+  },
+  computed: {
+    partnerList(){
+      return this.$store.getters [
+        'partner/findPartnersByExceptionCategory'
+      ]("sakura")
+    }  
   }  
 }
 </script>
