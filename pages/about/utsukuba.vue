@@ -257,7 +257,7 @@ export default {
     const scene1 = this.$scrollmagic
       .scene({
         triggerElement: '#trigger',
-        triggerHook: 0.5,
+        triggerHook: 0.75,
         offset: 0,
         reverse: false
       })
@@ -269,7 +269,7 @@ export default {
     const scene2 = this.$scrollmagic
       .scene({
         triggerElement: '#tedxutsukuba',
-        triggerHook: 0.5,
+        triggerHook: 0.75,
         offset: 0,
         reverse: false
       })
@@ -281,7 +281,7 @@ export default {
     const scene3 = this.$scrollmagic
       .scene({
         triggerElement: '#gallery',
-        triggerHook: 0.5,
+        triggerHook: 0.75,
         offset: 0,
         reverse: false
       })

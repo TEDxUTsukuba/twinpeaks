@@ -196,9 +196,9 @@
         <a class="button is-rounded is-gradient" href="https://flic.kr/s/aHsmSNKeT6">{{ $t('2020.highlight.detail') }}</a>
       </section>
     </section>
-    <section class="hero bg-venue">
+    <section class="hero bg-venue" id="venue-title">
       <div class="hero-body">
-        <section class="section">
+        <section class="section" id="venue">
           <h1 class="title is-0 has-text-white">
             <span class="\">{{ $t('2020.venue.title') }}</span>
           </h1>
@@ -379,7 +379,7 @@ export default {
     const scene1 = this.$scrollmagic
       .scene({
         triggerElement: '#card-0',
-        triggerHook: 0.5,
+        triggerHook: 0.75,
         offset: 0,
         reverse: false
       })
@@ -391,7 +391,7 @@ export default {
     const scene2 = this.$scrollmagic
       .scene({
         triggerElement: '#card-1',
-        triggerHook: 0.5,
+        triggerHook: 0.75,
         offset: 0,
         reverse: false
       })
@@ -403,7 +403,7 @@ export default {
     const scene3 = this.$scrollmagic
       .scene({
         triggerElement: '#card-2',
-        triggerHook: 0.5,
+        triggerHook: 0.75,
         offset: 0,
         reverse: false
       })
@@ -415,7 +415,7 @@ export default {
     const scene4 = this.$scrollmagic
       .scene({
         triggerElement: '#card-3',
-        triggerHook: 0.5,
+        triggerHook: 0.75,
         offset: 0,
         reverse: false
       })
@@ -427,11 +427,23 @@ export default {
     const scene5 = this.$scrollmagic
       .scene({
         triggerElement: '#highlight-title',
-        triggerHook: 0.5,
+        triggerHook: 0.75,
         offset: 0,
         reverse: false
       })
       .setTween('#highlight', {
+        css: {
+          opacity: 1
+        }
+      })
+    const scene6 = this.$scrollmagic
+      .scene({
+        triggerElement: '#venue-title',
+        triggerHook: 0.75,
+        offset: 0,
+        reverse: false
+      })
+      .setTween('#venue', {
         css: {
           opacity: 1
         }
@@ -441,6 +453,7 @@ export default {
     this.$scrollmagic.addScene(scene3)
     this.$scrollmagic.addScene(scene4)
     this.$scrollmagic.addScene(scene5)
+    this.$scrollmagic.addScene(scene6)
   }
 }
 </script>
@@ -477,11 +490,7 @@ export default {
     filter: grayscale(100%);
   }
 
-  #card-1, #card-2, #card-3, #card-4 {
-    opacity: 0;
-    transition: all 0.25s;
-  }
-  #highlight {
+  #card-1, #card-2, #card-3, #card-4, #highlight, #venue {
     opacity: 0;
     transition: all 0.5s;
   }
