@@ -20,12 +20,12 @@
         
       </section>
     </div>
-      <section id="intro" class="hero bg-red">
+      <section class="hero bg-red">
         <div class="has-text-left" style="margin: 1vh 0 0vh 0;">
          
         </div>
         <div class="hero-body">
-          <section class="section">
+          <section class="section" id="intro">
             <div class="columns is-mobile is-multiline is-centered is-variable is-0">
                 <div class="column is-5-widescreen is-4-desktop is-6-tablet is-6-mobile">
                   <img src="~/assets/logo/motto.png" class="motto" style="padding-right: 50px;">

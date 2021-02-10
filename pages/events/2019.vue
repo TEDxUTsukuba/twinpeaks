@@ -201,9 +201,9 @@
        </section>
       </div>
     </section>
-    <section class="hero bg-venue">
+    <section class="hero bg-venue" id="venue-title">
       <div class="hero-body">
-        <section class="section">
+        <section class="section" id="venue">
           <h1 class="title is-0 has-text-white">
             <span class="\">{{ $t('2019.venue.title') }}</span>
           </h1>
@@ -337,7 +337,7 @@ export default {
   const scene1 = this.$scrollmagic
     .scene({
       triggerElement: '#card-0',
-      triggerHook: 0.5,
+      triggerHook: 0.75,
       offset: 0,
       reverse: false
     })
@@ -349,7 +349,7 @@ export default {
   const scene2 = this.$scrollmagic
     .scene({
       triggerElement: '#card-1',
-      triggerHook: 0.5,
+      triggerHook: 0.75,
       offset: 0,
       reverse: false
     })
@@ -361,7 +361,7 @@ export default {
   const scene3 = this.$scrollmagic
     .scene({
       triggerElement: '#card-2',
-      triggerHook: 0.5,
+      triggerHook: 0.75,
       offset: 0,
       reverse: false
     })
@@ -373,7 +373,7 @@ export default {
   const scene4 = this.$scrollmagic
     .scene({
       triggerElement: '#card-3',
-      triggerHook: 0.5,
+      triggerHook: 0.75,
       offset: 0,
       reverse: false
     })
@@ -385,7 +385,7 @@ export default {
   const scene5 = this.$scrollmagic
     .scene({
       triggerElement: '#concept-title',
-      triggerHook: 0.5,
+      triggerHook: 0.75,
       offset: 0,
       reverse: false
     })
@@ -397,7 +397,7 @@ export default {
   const scene6 = this.$scrollmagic
     .scene({
       triggerElement: '#card-4',
-      triggerHook: 0.5,
+      triggerHook: 0.75,
       offset: 0,
       reverse: false
     })
@@ -409,11 +409,23 @@ export default {
     const scene7 = this.$scrollmagic
     .scene({
       triggerElement: '#program-title',
-      triggerHook: 0.5,
+      triggerHook: 0.75,
       offset: 0,
       reverse: false
     })
     .setTween('#program', {
+      css: {
+        opacity: 1
+      }
+    })
+    const scene8 = this.$scrollmagic
+    .scene({
+      triggerElement: '#venue-title',
+      triggerHook: 0.75,
+      offset: 0,
+      reverse: false
+    })
+    .setTween('#venue', {
       css: {
         opacity: 1
       }
@@ -425,6 +437,7 @@ export default {
     this.$scrollmagic.addScene(scene5)
     this.$scrollmagic.addScene(scene6)
     this.$scrollmagic.addScene(scene7)
+    this.$scrollmagic.addScene(scene8)
   }
 }
 </script>
@@ -445,9 +458,9 @@ background-image: linear-gradient(135deg, #b267eb, #fc6f62);
     -webkit-text-fill-color: transparent;
   }
 }
-  #card-1, #card-2, #card-3, #card-4, #card-5, #concept, #program {
+  #card-1, #card-2, #card-3, #card-4, #card-5, #concept, #program, #venue {
     opacity: 0;
-    transition: all 0.25s;
+    transition: all 0.5s;
   }
 .itemContainer{
     display: flex;
