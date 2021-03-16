@@ -119,23 +119,23 @@
     </div>
 
     <div class="wrap">
-      <ul class="slideshow">
-        <li class="slideshow-content" v-for="(partner, index) in partnerList" :key="index">
-          <figure class="">
-            <img :src="getJsonImgUrl(partner.id)" :alt="partner.name">
-          </figure>
-        </li>
-      </ul>
-      <ul class="slideshow">
-        <li class="slideshow-content" v-for="(partner, index) in partnerList" :key="index">
-          <figure class="">
-            <img :src="getJsonImgUrl(partner.id)" :alt="partner.name">
-          </figure>
-        </li>
-      </ul>
+      <nuxt-link to="./partners">
+        <ul class="slideshow">
+          <li class="slideshow-content" v-for="(partner, index) in partnerList" :key="index">
+            <figure class="">
+              <img :src="getJsonImgUrl(partner.id)" :alt="partner.name">
+            </figure>
+          </li>
+        </ul>
+        <ul class="slideshow">
+          <li class="slideshow-content" v-for="(partner, index) in partnerList" :key="index">
+            <figure class="">
+              <img :src="getJsonImgUrl(partner.id)" :alt="partner.name">
+            </figure>
+          </li>
+        </ul>
+      </nuxt-link>
     </div>
-    <nuxt-link class="has-text-right" to="/partners"><small>{{ $t('partners.seeAll') }}</small></nuxt-link>
-
 
   </section>
 </template>
