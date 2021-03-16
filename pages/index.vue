@@ -1,6 +1,7 @@
 <template>
   <section id="wrapper-dark" style="margin: 0; padding: 0;">
-    <div class="bg-jijimuge" style="padding-top: 25vh; ">  
+    <div class="" style="padding-top: 3.25rem;">  
+    <!-- <div class="bg-jijimuge" style="padding-top: 3.25rem;">   -->
       <!-- <div id="top-photoframe" class="top-photoframe">
         <nuxt-link :to="localePath('/events/2020')">
         <figure class="is-square">
@@ -8,7 +9,8 @@
         </figure>
         </nuxt-link>
       </div> -->
-      <section id="top-title" class="section has-text-centered has-text-weight-light has-text-light" style="padding-bottom: 20vh;">
+      <Carousel />
+      <!-- <section id="top-title" class="section has-text-centered has-text-weight-light has-text-light" style="padding-bottom: 20vh;">
         <h1 class="title is-1 is-spaced" style="letter-spacing: -1px;">
           {{ $t('event.title1') }}<br class="mobile-br">{{ $t('event.title2') }}<br class="mobile-br">{{ $t('event.title3') }}
         </h1>
@@ -17,8 +19,7 @@
         </h1>
         <br>
         <nuxt-link :to="localePath('/events/2020')" class="button is-gradient is-rounded">{{ $t('button.discover') }}</nuxt-link>
-        
-      </section>
+      </section> -->
     </div>
       <section class="hero bg-red">
         <div class="has-text-left" style="margin: 1vh 0 0vh 0;">
@@ -116,6 +117,7 @@
 <script>
 import Card from '~/components/Card'
 import Flip from '~/components/Flip'
+import Carousel from '~/components/Carousel'
 // const Card = () => import('~/components/Card')
 // const Flip = () => import('~/components/Flip')
 // const Movie = () => import('~/components/Movie')
@@ -124,7 +126,7 @@ export default {
   name: 'HomePage',
 
   components: {
-    Card, Flip
+    Card, Flip, Carousel
   },
   data() {
     return {
