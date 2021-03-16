@@ -43,7 +43,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://www.tedxutsukuba.com/u_logo_banner.png'
+        content: 'https://www.tedxutsukuba.com/sns_banner_recruitment.png'
       },
       { 
         hid: 'og:site_name', 
@@ -208,6 +208,11 @@ export default {
     /*
     ** You can extend webpack config here
     */
+    // Safari 無限リロード対策
+    filenames: {
+      app: ({ isDev }) => isDev ? '[name].[hash].js' : '[chunkhash].js',
+      chunk: ({ isDev }) => isDev ? '[name].[hash].js' : '[chunkhash].js'
+    },
     extend (config, ctx) {
     }
   },
