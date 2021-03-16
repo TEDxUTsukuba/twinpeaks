@@ -7,7 +7,7 @@
       indicator-mode="hover"
       :indicator-inside="false"
       :indicator-style="indicatorStyle"
-      interval=5000
+      :interval="interval"
       :overlay="gallery"
       :repeat="true"
       @click="switchGallery(true)">
@@ -28,6 +28,7 @@
         </figure>
       </template>
     </b-carousel>
+    {{ this.loading }}
   </div>
 </template>
 
@@ -36,6 +37,8 @@ export default {
   data() {
     return {
       gallery: false,
+      interval: 5000,
+      indicator: true,
       indicatorStyle: 'is-lines',
       items: [
         {
