@@ -28,7 +28,6 @@
         </figure>
       </template>
     </b-carousel>
-    {{ this.loading }}
   </div>
 </template>
 

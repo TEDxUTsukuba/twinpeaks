@@ -43,7 +43,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://www.tedxutsukuba.com/sns_banner_recruitment.png'
+        content: 'https://www.tedxutsukuba.com/sns_banner_recruitment.jpg'
       },
       { 
         hid: 'og:site_name', 
