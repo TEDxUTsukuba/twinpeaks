@@ -780,5 +780,25 @@ span.is-red {
   }
 }
 
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 // @import '~bulma';
 // @import '~buefy/src/scss/buefy';
