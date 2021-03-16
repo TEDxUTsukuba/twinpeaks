@@ -14,7 +14,7 @@
       <b-carousel-item v-for="(item, i) in items" :key="i">
         <nuxt-link :to="item.link">
           <figure class="image">
-            <img :src="item.image" :alt="item.title">
+            <img :src="item.image" :alt="item.title" style="width: 100%;">
           </figure>
         </nuxt-link>
         <!-- <div class="mt-2 has-text-centered">
@@ -24,7 +24,7 @@
       <template #indicators="props">
         <figure class="image">
           <source type="image/webp" :src="items[props.i].webpimage">
-          <img :src="items[props.i].image">
+          <img :src="items[props.i].image" style="width: 100%;">
         </figure>
       </template>
     </b-carousel>
@@ -42,7 +42,7 @@ export default {
       items: [
         {
           title: 'Staff Wanted',
-          image: 'https://www.tedxutsukuba.com/carousel/staffwanted.png',
+          image: 'https://www.tedxutsukuba.com/carousel/staffwanted.jpg',
           webpimage: 'https://www.tedxutsukuba.com/carousel/staffwanted.webp',
           link: './about/utsukuba'
         },
