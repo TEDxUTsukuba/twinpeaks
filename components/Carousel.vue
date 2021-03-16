@@ -4,16 +4,19 @@
       with-carousel-list
       :autoplay="true"
       :indicator="indicator"
-      :indicator-mode="hover"
+      indicator-mode="hover"
       :indicator-inside="false"
       :indicator-style="indicatorStyle"
+      interval=5000
       :overlay="gallery"
-      :repeat="repeat"
+      :repeat="true"
       @click="switchGallery(true)">
       <b-carousel-item v-for="(item, i) in items" :key="i">
-        <figure class="image">
-          <img :src="item.image">
-        </figure>
+        <nuxt-link :to="item.link">
+          <figure class="image">
+            <img :src="item.image" :alt="item.title">
+          </figure>
+        </nuxt-link>
         <!-- <div class="mt-2 has-text-centered">
           <h1 class="title has-text-white">{{ item.title }}</h1>
         </div> -->
@@ -36,24 +39,28 @@ export default {
       indicatorStyle: 'is-lines',
       items: [
         {
-          title: 'Slide 1',
-          image: 'https://www.tedxutsukuba.com/carouse/staffwanted.png',
-          webpimage: 'https://www.tedxutsukuba.com/carouse/staffwanted.webp'
+          title: 'Staff Wanted',
+          image: 'https://www.tedxutsukuba.com/carousel/staffwanted.png',
+          webpimage: 'https://www.tedxutsukuba.com/carousel/staffwanted.webp',
+          link: './about/utsukuba'
         },
         {
-          title: 'Slide 2',
+          title: '2020 JIJIMUGE',
           image: 'https://www.tedxutsukuba.com/carousel/2020jijimuge.png',
-          webpimage: 'https://www.tedxutsukuba.com/carousel/2020jijimuge.webp'
+          webpimage: 'https://www.tedxutsukuba.com/carousel/2020jijimuge.webp',
+          link: './events/2020'
         },
         {
-          title: 'Slide 3',
+          title: '2019 CoPhilAction',
           image: 'https://www.tedxutsukuba.com/carousel/2019cophilaction.png',
-          webpimage: 'https://www.tedxutsukuba.com/carousel/2019cophilaction.webp'
+          webpimage: 'https://www.tedxutsukuba.com/carousel/2019cophilaction.webp',
+          link: './events/2019'
         },
         {
-          title: 'Slide 4',
+          title: 'TEDxUTsukubaLive',
           image: 'https://www.tedxutsukuba.com/carousel/2019utsukubalive.png',
-          webpimage: 'https://www.tedxutsukuba.com/carousel/2019utsukubalive.webp'
+          webpimage: 'https://www.tedxutsukuba.com/carousel/2019utsukubalive.webp',
+          link: ''
         }
       ]
     }
@@ -69,11 +76,11 @@ export default {
   margin: auto;
 }
 .indicator-item figure img {
-  // border: 2px solid gray;
-  filter: grayscale(80%);
+  border: 2px solid gray;
+  // filter: grayscale(80%);
 }
 .indicator-item.is-active figure img {
-  // border: 2px solid white;
-  filter: grayscale(0);
+  border: 2px solid white;
+  // filter: grayscale(0);
 }
 </style>
