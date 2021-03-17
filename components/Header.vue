@@ -11,10 +11,10 @@
     </template>
     <template slot="end">
       <b-navbar-dropdown :label="$t('header.events.parent')" class="is-hoverable">
-        <b-navbar-item tag="router-link" :to="{ path: '/events/2020' }">
+        <b-navbar-item tag="router-link" :to="{ path: localePath('/events/2020') }">
           {{ $t('header.events.child1') }}
         </b-navbar-item>
-        <b-navbar-item tag="router-link" :to="{ path: '/events/2019' }">
+        <b-navbar-item tag="router-link" :to="{ path: localePath('/events/2019') }">
           {{ $t('header.events.child2') }}
         </b-navbar-item>
       </b-navbar-dropdown>
@@ -31,10 +31,10 @@
         {{ $t('header.aboutus.child2') }}
       </b-navbar-item> -->
       <b-navbar-dropdown :label="$t('header.aboutus.parent')" class="is-hoverable">
-        <b-navbar-item tag="router-link" :to="{ path: '/about/ted-and-tedx' }">
+        <b-navbar-item tag="router-link" :to="{ path: localePath('/about/ted-and-tedx') }">
           {{ $t('header.aboutus.child1') }}
         </b-navbar-item>
-        <b-navbar-item tag="router-link" :to="{ path: '/about/utsukuba' }">
+        <b-navbar-item tag="router-link" :to="{ path: localePath('/about/utsukuba') }">
           {{ $t('header.aboutus.child2') }}
         </b-navbar-item>
       </b-navbar-dropdown>
