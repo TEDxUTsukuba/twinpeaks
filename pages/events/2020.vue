@@ -81,13 +81,13 @@
         <b-carousel
         :autoplay="true"
         :arrow="arrow"
-        :repeat="arrowBoth"
-        :arrow-hover="arrowHover"
         :interval="interval"
         :icon-pack="iconPack"
         :icon-prev="iconPrev"
         :icon-next="iconNext"
         :icon-size="iconSize"
+        :indicator-inside="indicatorInside"
+        :indicator-style="indicatorStyle"
         :pause-info-type="pauseInfoType"
         @click="switchGallery(true)">
         <b-carousel-item v-for="(item, i) in 4" :key="i">
@@ -131,15 +131,15 @@
             <div class="column is-5">
               <div class="nmp-card-light">
                 <div class="header" style="margin-bottom: 1rem;">
-                  <span class="tag is-medium"><font-awesome-icon :icon="['far', 'clock']" /> {{ $t('2020.participance.free.time') }}</span>
+                  <span class="tag is-medium"><i class="mdi mdi-calendar-clock" /> {{ $t('2020.participance.free.time') }}</span>
                 </div>
                 <div class="">
                   <h1 class="title is-3 has-text-dark">{{ $t('2020.participance.free.title') }}</h1>
-                  <p>{{ $t('2020.participance.free.intro') }}</p>
+                  <p class="has-text-dark">{{ $t('2020.participance.free.intro') }}</p>
                   <br>
                   <ul>
-                    <li><font-awesome-icon :icon="['fas', 'check-square']" style="color: white;" /> {{ $t('2020.participance.free.charge') }}</li>
-                    <li><font-awesome-icon :icon="['fas', 'check-square']" style="color: white;" /> {{ $t('2020.participance.free.reservation') }}</li>
+                    <li><i class="mdi mdi-check-circle" /> {{ $t('2020.participance.free.charge') }}</li>
+                    <li><i class="mdi mdi-check-circle" /> {{ $t('2020.participance.free.reservation') }}</li>
                   </ul>
                 </div>
               </div>
@@ -147,22 +147,22 @@
             <div class="column is-7">
               <div class="nmp-card-light">
                 <div class="header" style="margin-bottom: 1rem;">
-                  <span class="tag is-medium"><font-awesome-icon :icon="['far', 'clock']" /> {{ $t('2020.participance.premium.time') }}</span>
+                  <span class="tag is-medium"><i class="mdi mdi-calendar-clock" /> {{ $t('2020.participance.premium.time') }}</span>
                 </div>
                 <div class="">
                   <h1 class="title is-3 has-text-dark">{{ $t('2020.participance.premium.title') }}</h1>
-                  <p>{{ $t('2020.participance.premium.intro') }}</p>
+                  <p class="has-text-dark">{{ $t('2020.participance.premium.intro') }}</p>
                   <br>
                   <ul>
-                    <li><font-awesome-icon :icon="['fas', 'check-square']" style="color: white;" /> {{ $t('2020.participance.premium.charge') }}</li>
-                    <li><font-awesome-icon :icon="['fas', 'check-square']" style="color: white;" /> {{ $t('2020.participance.premium.reservation') }}</li>
+                    <li><i class="mdi mdi-check-circle" /> {{ $t('2020.participance.premium.charge') }}</li>
+                    <li><i class="mdi mdi-check-circle" /> {{ $t('2020.participance.premium.reservation') }}</li>
                   </ul>
                   <hr>
                   <div class="columns is-multiline is-vcentered">
                     <div class="column has-text-right">
-                      <p class="is-size-7" v-if="$i18n.locale == 'en'">{{ $t('2020.participance.premium.airmeet') }}</p>
+                      <p class="is-size-7 has-text-dark" v-if="$i18n.locale == 'en'">{{ $t('2020.participance.premium.airmeet') }}</p>
                       <img src="~/assets/partners/2020/logo/AM_Full_Logo/PNG/AM_Logo_Dark_WM.png" width="150px" style="background-color: white; padding: 15px;"> 
-                      <p class="is-size-7" v-if="$i18n.locale == 'ja'">{{ $t('2020.participance.premium.airmeet') }}</p>
+                      <p class="is-size-7 has-text-dark" v-if="$i18n.locale == 'ja'">{{ $t('2020.participance.premium.airmeet') }}</p>
                     </div>
                   </div>
                 </div>
@@ -182,12 +182,12 @@
       <div id="highlight" class="columns is-multiline is-mobile is-gapless">
         <div v-for="(item, i) in 15" :key="i" class="column is-4-mobile is-one-fifth-tablet">
             <figure :class="`image is-1by1 colorfilter-base-${i%2}`" :hover="isImageModalActive">
-                <img :src="getHighlightImgUrl(i)" alt="TEDxUTsukuba JIJIMUGE" style="object-fit: cover;" class="colorfilter-image">
+                <img :src="getHighlightImgUrl(i)" alt="TEDxUTsukuba JIJIMUGE Concept" style="object-fit: cover;" class="colorfilter-image">
             </figure>
           <b-modal v-model="isImageModalActive">
             <p>sa</p>
             <p class="image is-4by3">
-              <img :src="getHighlightImgUrl(i)" alt="TEDxUTsukuba JIJIMUGE">
+              <img :src="getHighlightImgUrl(i)" alt="TEDxUTsukuba JIJIMUGE Concept">
             </p>
           </b-modal>
         </div>
@@ -245,7 +245,12 @@ export default {
       src_sp4: Image_sp4,
       animated: 'true',
       interval: 5000,
+      iconPack: 'mdi',
+      iconPrev: 'chevron-left',
+      iconNext: 'chevron-right',
       iconSize: 'is-large',
+      indicatorInside: false,
+      indicatorStyle: 'is-lines',
       pauseInfoType: 'is-dark',
       statementImages: [
         require('~/assets/2020/concept/statement_1_small.png'),

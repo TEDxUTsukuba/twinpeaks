@@ -107,7 +107,7 @@
             <p class="">{{ $t('about.ted.event')}}</p>
             <p class="title">{{ $t('about.ted.talktitle')}}</p>
             <p class="subtitle">{{ $t('about.ted.speaker')}}</p>
-            <a class="button is-rounded is-gradient" href="https://www.ted.com/talks">{{ $t('about.ted.watchmoreted')}}</a>
+            <a class="button is-rounded is-gradient" href="https://www.ted.com/talks">{{ $t('about.ted.watchmoreted')}}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
           </div>
           <br>
           <div id="ted-embed-bottom" class="column" style="position:relative;">
@@ -116,7 +116,7 @@
             <p class="">{{ $t('about.tedx.event')}}</p>
             <p class="title">{{ $t('about.tedx.talktitle')}}</p>
             <p class="subtitle">{{ $t('about.tedx.speaker')}}</p>
-            <a class="button is-rounded is-gradient" href="https://www.ted.com/watch/tedx-talks">{{ $t('about.tedx.watchmoretedx')}}</a>
+            <a class="button is-rounded is-gradient" href="https://www.ted.com/watch/tedx-talks">{{ $t('about.tedx.watchmoretedx')}}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
           </div>
         </div>
         <!-- <Movie id="teaser" :vId='videoId4' :aPlay='autoplay'></Movie> -->
@@ -132,7 +132,7 @@
           <iframe class="podcast apple" src="https://embed.podcasts.apple.com/us/podcast/ted-talks-daily/id160904630?itsct=podcast_box&amp;itscg=30200&amp;theme=dark" height="450px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *;" style="width: 100%; max-width: 660px; overflow: hidden; border-radius: 10px; background: transparent;"></iframe>
         </div>
       </div>
-      <a class="button is-rounded is-gradient" href="https://www.ted.com/podcasts">{{ $t('about.ted.listenmore')}}</a>
+      <a class="button is-rounded is-gradient" href="https://www.ted.com/podcasts">{{ $t('about.ted.listenmore')}}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
     </section>
   </section>
 </template>
