@@ -4,12 +4,16 @@
       with-carousel-list
       :autoplay="true"
       :indicator="indicator"
-      indicator-mode="hover"
       :indicator-inside="false"
       :indicator-style="indicatorStyle"
       :interval="interval"
       :overlay="gallery"
+      :icon-pack="iconPack"
+      :icon-prev="iconPrev"
+      :icon-next="iconNext"
+      :icon-size="iconSize"
       :repeat="true"
+      :pause-info-type="pauseInfoType"
       @click="switchGallery(true)">
       <b-carousel-item v-for="(item, i) in items" :key="i">
         <nuxt-link :to="item.link">
@@ -17,14 +21,10 @@
             <img :src="item.image" :alt="item.title" style="width: 100%;">
           </figure>
         </nuxt-link>
-        <!-- <div class="mt-2 has-text-centered">
-          <h1 class="title has-text-white">{{ item.title }}</h1>
-        </div> -->
       </b-carousel-item>
       <template #indicators="props">
         <figure class="image">
-          <source type="image/webp" :src="items[props.i].webpimage">
-          <img :src="items[props.i].image" style="width: 100%;">
+          <img :src="items[props.i].thumbnail" style="width: 100%;">
         </figure>
       </template>
     </b-carousel>
@@ -39,29 +39,34 @@ export default {
       interval: 5000,
       indicator: true,
       indicatorStyle: 'is-lines',
+      iconPack: 'mdi',
+      iconprev: 'chevron-left',
+      iconNext: 'chevron-right',
+      iconSize: 'is-medium',
+      pauseInfoType: 'is-dark',
       items: [
         {
           title: 'Staff Wanted',
           image: 'https://www.tedxutsukuba.com/carousel/staffwanted.jpg',
-          webpimage: 'https://www.tedxutsukuba.com/carousel/staffwanted.webp',
+          thumbnail: 'https://www.tedxutsukuba.com/carousel/thumbnail/staffwanted.jpg',
           link: './about/utsukuba'
         },
         {
           title: '2020 JIJIMUGE',
           image: 'https://www.tedxutsukuba.com/carousel/2020jijimuge.png',
-          webpimage: 'https://www.tedxutsukuba.com/carousel/2020jijimuge.webp',
+          thumbnail: 'https://www.tedxutsukuba.com/carousel/thumbnail/2020jijimuge.png',
           link: './events/2020'
         },
         {
           title: '2019 CoPhilAction',
           image: 'https://www.tedxutsukuba.com/carousel/2019cophilaction.png',
-          webpimage: 'https://www.tedxutsukuba.com/carousel/2019cophilaction.webp',
+          thumbnail: 'https://www.tedxutsukuba.com/carousel/thumbnail/2019cophilaction.jpg',
           link: './events/2019'
         },
         {
           title: 'TEDxUTsukubaLive',
           image: 'https://www.tedxutsukuba.com/carousel/2019utsukubalive.png',
-          webpimage: 'https://www.tedxutsukuba.com/carousel/2019utsukubalive.webp',
+          thumbnail: 'https://www.tedxutsukuba.com/carousel/thumbnail/2019utsukubalive.png',
           link: ''
         }
       ]
@@ -71,10 +76,10 @@ export default {
 </script>
 
 
-<style scoped lang="scss">
+<style lang="scss">
 #carousel-wrapper {
   width: 100%;
-  max-width: 1280px;
+  max-width: 960px;
   margin: auto;
 }
 .indicator-item figure img {
@@ -84,5 +89,10 @@ export default {
 .indicator-item.is-active figure img {
   border: 2px solid white;
   // filter: grayscale(0);
+}
+.carousel .carousel-indicator {
+  @media screen and (min-width: 961px) {
+    padding: 0.5rem 0 !important;
+  }
 }
 </style>

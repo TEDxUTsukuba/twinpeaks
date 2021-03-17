@@ -9,7 +9,7 @@
         </figure>
         </nuxt-link>
       </div> -->
-      <Carousel />
+      <Carousel id="top-carousel" />
       <!-- <section id="top-title" class="section has-text-centered has-text-weight-light has-text-light" style="padding-bottom: 20vh;">
         <h1 class="title is-1 is-spaced" style="letter-spacing: -1px;">
           {{ $t('event.title1') }}<br class="mobile-br">{{ $t('event.title2') }}<br class="mobile-br">{{ $t('event.title3') }}
@@ -155,19 +155,19 @@ export default {
   //   return { isAndroid }
   // },
   mounted() {
-    // const scene1 = this.$scrollmagic
-    //   .scene({
-    //     triggerElement: '#top-photoframe',
-    //     triggerHook: 1,
-    //     offset: 10,
-    //     duration: 300,
-    //     reverse: false
-    //   })
-    //   .setTween('#top-caption', {
-    //     css: {
-    //       opacity: 1
-    //     }
-    //   })
+    const scene1 = this.$scrollmagic
+      .scene({
+        triggerElement: '#wrapper-dark',
+        triggerHook: 1,
+        offset: 10,
+        duration: 300,
+        reverse: false
+      })
+      .setTween('#top-carousel', {
+        css: {
+          opacity: 1
+        }
+      })
 
     const scene2 = this.$scrollmagic
       .scene({
@@ -206,7 +206,7 @@ export default {
           opacity: 1
         }
       })
-      // this.$scrollmagic.addScene(scene1)
+      this.$scrollmagic.addScene(scene1)
       this.$scrollmagic.addScene(scene2)
       this.$scrollmagic.addScene(scene3)
       // this.$scrollmagic.addScene(scene4)
@@ -256,6 +256,18 @@ export default {
   #intro, #notice {
     opacity: 0;
     transition: all 0.5s;
+  }
+  #top-carousel {
+    opacity: 0;
+    transition: fadeIn 2s;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   @keyframes SlideIn {
     0% {
