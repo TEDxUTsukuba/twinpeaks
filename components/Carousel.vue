@@ -40,7 +40,7 @@ export default {
       indicator: true,
       indicatorStyle: 'is-lines',
       iconPack: 'mdi',
-      iconprev: 'chevron-left',
+      iconPrev: 'chevron-left',
       iconNext: 'chevron-right',
       iconSize: 'is-medium',
       pauseInfoType: 'is-dark',
