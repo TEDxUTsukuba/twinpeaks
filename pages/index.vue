@@ -1,6 +1,6 @@
 <template>
   <section id="wrapper-dark" style="margin: 0; padding: 0;">
-    <div style="margin-bottom: 3vh;">  
+    <div style="margin-bottom: 3rem;">  
     <!-- <div class="bg-jijimuge" style="padding-top: 3.25rem;">   -->
       <!-- <div id="top-photoframe" class="top-photoframe">
         <nuxt-link :to="localePath('/events/2020')">
