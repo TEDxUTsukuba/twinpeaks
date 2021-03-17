@@ -18,13 +18,13 @@
       <b-carousel-item v-for="(item, i) in items" :key="i">
         <nuxt-link :to="item.link">
           <figure class="image">
-            <img :src="item.image" :alt="item.title" style="width: 100%;">
+            <img :src="item.image" :alt="item.title">
           </figure>
         </nuxt-link>
       </b-carousel-item>
       <template #indicators="props">
         <figure class="image">
-          <img :src="items[props.i].thumbnail" style="width: 100%;">
+          <img :src="items[props.i].thumbnail">
         </figure>
       </template>
     </b-carousel>
