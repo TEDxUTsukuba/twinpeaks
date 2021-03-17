@@ -123,7 +123,7 @@ export default {
       'nuxt-buefy',
       {
         css: true,
-        materialDesignIcons: false
+        materialDesignIcons: true
       }
     ],
     // 'nuxt-fontawesome',
