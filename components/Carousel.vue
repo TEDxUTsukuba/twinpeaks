@@ -77,11 +77,7 @@ export default {
 
 
 <style lang="scss">
-#carousel-wrapper {
-  width: 100%;
-  max-width: 960px;
-  margin: auto;
-}
+
 .indicator-item figure img {
   border: 2px solid gray;
   // filter: grayscale(80%);
