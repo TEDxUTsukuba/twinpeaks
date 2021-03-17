@@ -1,6 +1,6 @@
 <template>
   <section id="wrapper-dark" style="margin: 0; padding: 0;">
-    <div class="" style="padding-top: 3.25rem;">  
+    <div style="margin-bottom: 3vh;">  
     <!-- <div class="bg-jijimuge" style="padding-top: 3.25rem;">   -->
       <!-- <div id="top-photoframe" class="top-photoframe">
         <nuxt-link :to="localePath('/events/2020')">
@@ -260,6 +260,8 @@ export default {
   #top-carousel {
     opacity: 0;
     transition: fadeIn 2s;
+    max-width: 960px !important;
+    margin: auto;
   }
   @keyframes fadeIn {
     0% {
@@ -283,5 +285,4 @@ export default {
     width: 100%; max-width: 480px;
     // transform: translate3d(0,0,100px);
   }
-
 </style>

@@ -31,7 +31,7 @@
 
           <div class="content">
             <b-collapse :open="false" position="is-bottom" aria-id="contentIdForA11y1">
-              <a class="button is-gradient is-rounded" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1" style="margin: 3rem auto 0 auto;">
+              <a class="button is-gradient is-rounded is-small" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1" style="margin: 3rem auto 0 auto;">
                   <b-icon :icon="!props.open ? 'chevron-down' : 'chevron-up'" class="is-size-4" style="margin-right: 1px;" /></b-icon> 
                   {{ !props.open ? $t('button.readmore') : $t('button.readless') }}
               </a>

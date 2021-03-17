@@ -32,12 +32,15 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
   section {
     font-family: 'Helvetica Neue', 'NotoSansCJKJP', sans-serif;
   }
   .nuxt {
-    padding-top: 50px;
+    padding-top: 3.25rem !important;
+    @media screen and (min-width: 1024px) {
+      padding-top: 5.25rem !important;
+    }
   }
   .is-1 {
     font-size: 5rem !important;

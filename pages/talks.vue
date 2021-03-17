@@ -1,6 +1,6 @@
 <template>
   <section id="wrapper-dark">
-    <section class="section">
+    <div class="container">
       <div class="nmp-card has-text-centered-mobile has-text-left">
         <h1 class="title is-1 is-spaced">{{ $t('talks.title') }}</h1>
         <h1 class="subtitle has-text-grey-light">{{ $t('talks.subtitle') }}</h1>
@@ -49,8 +49,8 @@
               
                 <b-collapse animation="fade" :open="false" position="" aria-id="contentIdForA11y1">
                   <span class="" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1">
-                    <p class="is-size-7 has-text-grey-light" v-if="!props.open && $i18n.locale == 'ja'">{{ talk.description_ja | substrBefore(100) }}…</p>
-                    <p class="is-size-7 has-text-grey-light" v-if="!props.open && $i18n.locale == 'en'">{{ talk.description_en | substrBefore(200) }}…</p>
+                    <p class="is-size-7 has-text-grey-light" v-if="!props.open && $i18n.locale == 'ja'">{{ talk.description_ja | substrBefore(75) }}…</p>
+                    <p class="is-size-7 has-text-grey-light" v-if="!props.open && $i18n.locale == 'en'">{{ talk.description_en | substrBefore(75) }}…</p>
                     <p class="is-size-7 has-text-grey-light" v-if="props.open && $i18n.locale == 'ja'">{{ talk.description_ja }}</p>
                     <p class="is-size-7 has-text-grey-light" v-if="props.open && $i18n.locale == 'en'">{{ talk.description_en }}</p>
                     <br>
@@ -61,7 +61,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
   </section>
 </template>
 
