@@ -62,6 +62,14 @@
         <Movie id="teaser" :vId='videoId3' classname="large" style=""></Movie>
       </section>
 
+    <section class="section">
+      <h1 class="title is-2 has-text-centered">
+        <span class="">Upcoming Events</span>
+      </h1>
+      <br>
+      <UpcomingEventInfo />
+    </section>
+
     <section id="notice-title" class="section">
       <h1 class="title is-2 has-text-centered">
         <span class="">{{ $t('news.title') }}</span>
@@ -105,7 +113,8 @@
           />
         </div>
       </div>
-      <p class="has-text-grey-light has-text-right">{{ $t('notice.last-modified')}}<time datetime="2020-12-22">2020/1/26</time></p>
+      <p class="has-text-grey-light has-text-right mb-6">{{ $t('notice.last-modified')}}<time datetime="2020-12-22">2020/1/26</time></p>
+      <br>
       <div class="has-text-centered">
         <nuxt-link :to="localePath('/notice')" class="button is-gradient is-rounded">{{ $t('button.archive') }}</nuxt-link>
       </div>
@@ -118,6 +127,7 @@
 import Card from '~/components/Card'
 import Flip from '~/components/Flip'
 import Carousel from '~/components/Carousel'
+import UpcomingEventInfo from '~/components/UpcomingEventInfo'
 // const Card = () => import('~/components/Card')
 // const Flip = () => import('~/components/Flip')
 // const Movie = () => import('~/components/Movie')
@@ -126,7 +136,7 @@ export default {
   name: 'HomePage',
 
   components: {
-    Card, Flip, Carousel
+    Card, Flip, Carousel, UpcomingEventInfo
   },
   data() {
     return {
@@ -260,7 +270,7 @@ export default {
   #top-carousel {
     opacity: 0;
     transition: fadeIn 2s;
-    max-width: 960px !important;
+    // max-width: 960px !important;
     margin: auto;
   }
   @keyframes fadeIn {

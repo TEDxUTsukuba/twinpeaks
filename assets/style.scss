@@ -328,7 +328,7 @@ section#wrapper-black {
 
 
 section.section {
-  margin: 0vh 20vw !important;
+  margin: 0vh 16vw !important;
 
   @media screen and (max-width: 639px) {
     margin: 0vh 0vw !important;
@@ -376,13 +376,6 @@ br.mobile-br {
   }
 
   display: none;
-}
-
-.card {
-  border-radius: 0px;
-  background-color: $light;
-  // box-shadow:  10px 10px 20px #cfcfd1,
-  //              -10px -10px 20px #ffffff;
 }
 
 .nmp-card {
@@ -489,7 +482,7 @@ br.mobile-br {
 .nmp-red {
   @extend .nmp;
   color: white;
-  background: $red2;
+  background: $red;
   box-shadow: 8px 8px 16px $dark1,
     -8px -8px 16px $dark2;
 
