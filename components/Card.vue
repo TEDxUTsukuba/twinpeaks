@@ -19,7 +19,8 @@
           </p>
           <br>
           <a class="button is-gradient is-rounded" :href="youtubeId">
-            {{ $t('about.ted.watch') }}
+            <i class="mdi mdi-youtube is-size-4" />
+            <span style="padding-left: 0.25rem;">{{ $t('about.ted.watch') }}</span>
           </a>
           <!-- <div class="section" style="padding: 0;">
             <span>{{ $t('2020.speaker.share') }}</span><br>

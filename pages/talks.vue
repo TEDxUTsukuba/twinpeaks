@@ -49,13 +49,12 @@
               
                 <b-collapse animation="fade" :open="false" position="" aria-id="contentIdForA11y1">
                   <span class="" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1">
-                    <!-- <b-icon :icon="!props.open ? 'menu-down' : 'menu-up'"></b-icon> -->
                     <p class="is-size-7 has-text-grey-light" v-if="!props.open && $i18n.locale == 'ja'">{{ talk.description_ja | substrBefore(100) }}…</p>
                     <p class="is-size-7 has-text-grey-light" v-if="!props.open && $i18n.locale == 'en'">{{ talk.description_en | substrBefore(200) }}…</p>
                     <p class="is-size-7 has-text-grey-light" v-if="props.open && $i18n.locale == 'ja'">{{ talk.description_ja }}</p>
                     <p class="is-size-7 has-text-grey-light" v-if="props.open && $i18n.locale == 'en'">{{ talk.description_en }}</p>
                     <br>
-                    <button class="button is-gradient is-rounded is-outlined is-small">{{ !props.open ? $t('button.readmore') : $t('button.readless') }}</button>
+                    <b-button class="button is-gradient is-rounded is-outlined is-small" :icon-left="!props.open ? 'chevron-down' : 'chevron-up'">{{ !props.open ? $t('button.readmore') : $t('button.readless') }}</b-button>
                   </span>
                 </b-collapse>
             </div>

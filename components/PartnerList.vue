@@ -22,7 +22,7 @@
             @click="openModal(partner)">
             {{ $t('button.discover') }}
           </button> -->
-          <a :href="partner.url" class="button is-white is-outlined is-rounded is-small">{{ $t('button.visitwebsite') }}</a>
+          <a :href="partner.url" class="button is-white is-outlined is-rounded is-small">{{ $t('button.visitwebsite') }}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
           <!-- <modal :val="postItem" v-show="showContent" @close="closeModal" /> -->
           <br><br>
       </div>

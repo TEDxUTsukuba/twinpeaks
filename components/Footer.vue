@@ -32,7 +32,7 @@
           <div class="content">
             <b-collapse :open="false" position="is-bottom" aria-id="contentIdForA11y1">
               <a class="button is-gradient is-rounded" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1" style="margin: 3rem auto 0 auto;">
-                  <!-- <b-icon :icon="!props.open ? 'menu-down' : 'menu-up'"></b-icon> -->
+                  <b-icon :icon="!props.open ? 'chevron-down' : 'chevron-up'" class="is-size-4" style="margin-right: 1px;" /></b-icon> 
                   {{ !props.open ? $t('button.readmore') : $t('button.readless') }}
               </a>
               <br><br>
@@ -53,10 +53,10 @@
                   <li>{{ $t('covid19-info.event.s4') }}</li>
                 </ul>
                 <br>
-                <p class="is-size-7">{{ $t('covid19-info.description2') }}</p>
-                <a class="button is-small is-rounded is-outlined" href="http://www.tsukuba.ac.jp/about/antidisaster/covid-19-list.html">{{ $t('covid19-info.link.university') }}</a>
-                <a class="button is-small is-rounded is-outlined" href="https://www.city.tsukuba.lg.jp/shisei/1010123/index.html">{{ $t('covid19-info.link.city') }}</a>
-                <a class="button is-small is-rounded is-outlined" href="https://www.pref.ibaraki.jp/shokorodo/chusho/shogyo/2020korona/guideline.html">{{ $t('covid19-info.link.prefecture') }}</a>
+                <p class="is-size-6">{{ $t('covid19-info.description2') }}</p>
+                <a class="button is-small is-rounded is-outlined" href="http://www.tsukuba.ac.jp/about/antidisaster/covid-19-list.html">{{ $t('covid19-info.link.university') }}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
+                <a class="button is-small is-rounded is-outlined" href="https://www.city.tsukuba.lg.jp/shisei/1010123/index.html">{{ $t('covid19-info.link.city') }}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
+                <a class="button is-small is-rounded is-outlined" href="https://www.pref.ibaraki.jp/shokorodo/chusho/shogyo/2020korona/guideline.html">{{ $t('covid19-info.link.prefecture') }}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
               </div>
             </b-collapse>
           </div>
@@ -89,7 +89,7 @@
             </div>
 
             <div class="columns is-centered">
-              <div class="column is-8-desktop is-8-tablet has-text-left has-text-centered-mobile">  
+              <div class="column is-8-desktop is-7-tablet has-text-left has-text-centered-mobile">  
                 <nuxt-link :to="localePath('/notice')" class="has-text-grey url is-size-7">{{ $t('notice.archive.title') }}</nuxt-link> |
                 <nuxt-link :to="localePath('/code-of-conduct')" class="has-text-grey url is-size-7">{{ $t('codeofconduct.title') }}</nuxt-link> |
                 <nuxt-link :to="localePath('/explore')" class="has-text-grey url is-size-7">{{ $t('2020.participance.pass.title') }}</nuxt-link>
