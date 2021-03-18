@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "tedxutsukuba-teraoka",
+  "private_key_id": "1edb92b1dd6638d52d1a89857129a92e2149adb5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCx1rZFoCZ3/5+6\nC7UrRaYLNly5Z6AshFQDKClDofaQuDOlQ36906ZiYgsNXXYnZx9EsLr3Drny1DRx\n2L5cbkMFYl/CKr3df3+/v5PCRNhbK1yLn2w8+jof4LuMQQZ7PF/UgSev4U9M5LOL\n747N56HAXR33cgWv3vxZNClLSGJy9/9OiTfWurjSAiqfFYg0rNC2K8P5836SFCP9\nrXs5I9gvoyDJ8/eINJOsaJJX7Ujtqh7845IZkOErn/TlhLuNuIl8c0OrN84VGz2Q\n2qA94L6BnDCkZRR25xYr4NtxAhy+LqfFI+4hBRrBb9adb6oTpFOHVFBUCkqQlPEi\njAiBGBkjAgMBAAECggEATCIP4SnJHjk0j6jAdBh6l7U7p/Hpe/VgpANW+wnE7Tq2\nfWsyQKDxy4+OjLe0w/SdScJhIDBRQdg/5Xc1M4vOrGjrdsvmgYM6VQP2hUYE267q\nDSoAY/B53rjOgaI63JpBqk9qhpyt3szP4rn5SEQAFsKmeA77yUlsfeHbRcvkvbOf\nQXghB7bvu3OphOpJRFmfJl977zVR8+S2nKx5LzKDMCKnt5I2bvbCpuwYOhZ0SMsQ\nI4gzDUWP1Q/YiY0cUs/GquON4Tm07iMy35XIf0bllOBe0kYTWQVT1jSAesMB2Aix\n/QRGaBahl3B5+Zd98eKbXKKdi2tbxmeslTqrLPl/rQKBgQDqJgvDn8zgquhp7riT\nvLGqk0KjxRMW2lbS/rjFvRn27VCVcRIIHRniMqmWBY1TRrJFJ3V8kx0l3t1Ojsrk\n4sRRP2VOpuD9JhPJskrEEZyJ6NtkuctE/LqC/NvnGMUJsW+/dEL648moilRMKVxG\nDewY2iWXjFAxiDwvJ3ze8ylhZwKBgQDCb2NW/YqLImJcWMCAQQHdU/G2suauaXfw\nSXX1Pp2XkGuE72nqsw2mGIErtA87cokzCuRBBrj1Nil7OgmOLxRhBMle6adlszjF\nKA7UnN4b2BmaXDgnrFo3emcFtxivZr6NKlSAuV2JunLj0npBO2FKC16rSz9hn9FJ\nhnSlMHlI5QKBgQCXX+thGDF62eMRgSzBDk+KKFP/zovNzXAuTlEkPWHI2pmrU4NF\nzZKLQxeSDprUSLM9tAnndLB2aEOI4xXWragfoq2bEJYJ8xD9548gfQZHvkwALYF1\nYzItNs3v9HqGDrlg/AfFbXhUxsFCz8aA38VQN8/vzt2VeC74iT3YYTnSZwKBgQCp\nhp8RuMx0FU23gLaO3J84j7lfd0qEZXbqrdJIOwkCnivw4yHxPZ635AOzzDG/vlR7\niZKMU8UuH8Q5Kdgs/UWCdb7xnz2SAZqM5ClSHVfW5SslmCRqCu86EeIDbKn8PNQF\nlxPIjFZPAJ6tntVzTMe93H31Ug14G/VJaw8G/GWzNQKBgQDILT9yEETrkFxnXMYG\nY43bMzSGQ2b8XmRt33ULHRBD9mpNCoy0c55QN6DFqTuwoPlz/JG7Ex1Pi9h8R92m\nS2r0t8ucZkhh9AqLy9ZQ60xCUSob61NeRpZPIaDuKQ1do+Ld9eWA1r3Q8wH8wlQ5\nwuMTaJYJPjvYnRvrqCi5D0+/pQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "my-sheets-api@tedxutsukuba-teraoka.iam.gserviceaccount.com",
+  "client_id": "104550686503091790404",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/my-sheets-api%40tedxutsukuba-teraoka.iam.gserviceaccount.com"
+}
