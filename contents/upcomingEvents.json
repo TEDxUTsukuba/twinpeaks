@@ -1,14 +1,41 @@
 [
   {
+    "id": 1,
+    "name": "Example",
+    "type": "virtual / hybrid / onsite",
+    "date": {
+      "from": "2013/01/23 12:34",
+      "to": "2013/01/23 20:34"
+    },
+    "description": {
+      "short_ja": "筑る！",
+      "short_en": "",
+      "long_ja": "",
+      "long_en": ""
+    },
+    "image": "https://drive.google.com/file/d/13sJyLw1JvApyORWjuZ1u91NpqcZsVRVg/view?usp=sharing",
+    "url": "https://www.tsukubaham.co.jp/",
+    "register": {
+      "isRegistrationNeeded": true,
+      "deadline": "",
+      "url": ""
+    }
+  },
+  {
     "id": 202003181442,
     "name": "TEDxUTsukubaSalon",
     "type": "virtual",
     "date": {
-      "day": "Thu, 06 Sep 2012 00:00:00 +0900",
-      "start": "",
-      "end": ""
+      "from": "2013/01/23 12:34",
+      "to": ""
     },
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute",
+    "description": {
+      "short_ja": "筑る！",
+      "short_en": "",
+      "long_ja": "",
+      "long_en": ""
+    },
+    "image": "https://drive.google.com/file/d/13sJyLw1JvApyORWjuZ1u91NpqcZsVRVg/view?usp=sharing",
     "url": "https://www.tsukubaham.co.jp/",
     "register": {
       "isRegistrationNeeded": true,
@@ -18,14 +45,13 @@
   },
   {
     "id": 202003181443,
-    "name": "新歓",
+    "name": "新歓第1回",
     "type": "onsite",
     "date": {
-      "day": "Thu, 06 Sep 2012 00:00:00 +0900",
-      "start": "",
-      "end": ""
+      "from": "2013/01/23 12:34",
+      "to": "2013/01/23 16:34"
     },
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute",
+    "description": "TEDxイベントを作る舞台裏をご紹介します！メンバーと気軽にお話ししましょう。",
     "url": "https://www.tsukubaham.co.jp/",
     "register": {
       "isRegistrationNeeded": true,
@@ -35,14 +61,29 @@
   },
   {
     "id": 202003181444,
-    "name": "新歓",
+    "name": "International Welcome",
     "type": "hybrid",
     "date": {
-      "day": "Thu, 06 Sep 2012 00:00:00 +0900",
-      "start": "",
-      "end": ""
+      "from": "2013/01/23 12:34",
+      "to": ""
     },
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute",
+    "description": "Looking for the opportunities to work together with Japanese & International members? TEDxUTsukuba is here for you.",
+    "url": "https://www.tsukubaham.co.jp/",
+    "register": {
+      "isRegistrationNeeded": false,
+      "deadline": "",
+      "url": ""
+    }
+  },
+  {
+    "id": 202003181444,
+    "name": "International Welcome",
+    "type": "hybrid",
+    "date": {
+      "from": "2020-12-17T03:24:00+09:00",
+      "to": "2020-12-17T03:24:00+09:00"
+    },
+    "description": "Looking for the opportunities to work together with Japanese & International members? TEDxUTsukuba is here for you.",
     "url": "https://www.tsukubaham.co.jp/",
     "register": {
       "isRegistrationNeeded": false,

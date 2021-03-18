@@ -187,7 +187,8 @@
   "talks": {
     "title": "トーク",
     "subtitle": "イベントを通して、教養から科学、地域の話題から世界規模の問題に至るまで、様々なトピックスに焦点を当ててきました。",
-    "notice": "TEDxUTsukuba 2020 \"JIJIMUGE\" にて皆さまにお届けしたトークは、TEDへの申請が受理された後に、YouTubeにて公開される予定です。"
+    "notice": "TEDxUTsukuba 2020 \"JIJIMUGE\" にて皆さまにお届けしたトークは、TEDへの申請が受理された後に、YouTubeにて公開される予定です。",
+    "seeAll": "すべてのトークを見る"
   },
   "2020": {
     "highlight": {
