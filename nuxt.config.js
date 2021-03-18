@@ -216,6 +216,12 @@ export default {
       chunk: ({ isDev }) => isDev ? '[name].[hash].js' : '[chunkhash].js'
     },
     extend (config, ctx) {
+      // Google Sheets API で最新情報を取得
+      config.node = {
+        fs: 'empty',
+        googleapis: 'empty',
+        child_process: 'empty'
+      }
     }
   },
   generate: {

@@ -38,6 +38,12 @@ export default {
     player() {
       return this.$refs.youtube.player
     }
+  },
+  async fetch ({ store }) {
+    await store.dispatch('upcomingevent/getSheetsData')
+    await store.dispatch('upcomingevent/addData')
+    await store.dispatch('upcomingevent/updateData')
+    await store.dispatch('upcomingevent/deleteData')
   }
 }
 </script>

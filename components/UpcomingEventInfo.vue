@@ -1,82 +1,57 @@
 <template>
-  <div class="tile is-ancestor">
-    <div class="tile is-8 is-6-tablet">
-      <div class="tile is-parent">
-        <div class="tile is-child card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="media">
-              <div class="media-content">
-                <p class="is-size-7">4/14 12:00 - 14:00</p>
-                <p class="title is-size-4">John Smith</p>
-              </div>
-            </div>
-            <div class="content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Phasellus nec iaculis mauris. <a>@bulmaio</a>
-            </div>
-            <p class=""><span class="tag is-light">Online</span></p> 
-          </div>
+  <div class="is-flex">
+    <ul class="slideshow">
+      <li class="slideshow-item" v-for="(event, index) in eventList" :key="index">
+        <div class="box">
+          <p class="is-size-7">{{ event.date.day }}</p>
+          <p class="title is-3">{{ event.name }}</p>
+          <p class="is-size-7">{{ event.description }}</p>
+          <a v-if="event.register.isRegistrationNeeded" :href="event.url.register" class="button is-white is-gradient is-rounded is-small">Register</a>
         </div>
-      </div>
-      <div class="tile is-parent">
-        <div class="tile is-child card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="media">
-              <div class="media-content">
-                <p class="is-size-7">4/14 12:00 - 14:00</p>
-                <p class="title is-size-4">Zoomでチャレンジ！TEDx流ワークショップ</p>
-              </div>
+      </li>
+    </ul>
+    <ul class="slideshow">
+      <li class="slideshow-item" v-for="(event, index) in eventList" :key="index">
+        <div class="box">
+          <p class="is-size-7">{{ event.date.day }} </p>
+          <p class="title is-3">{{ event.name }}</p>
+          <p class="is-size-7">{{ event.description }}</p>
+          <nav class="level">
+            <div class="level-item" v-if="event.register.isRegistrationNeeded === true">
+              <a :href="event.url.register" class="button is-white is-gradient is-rounded is-small">Register</a>
             </div>
-            <div class="content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Phasellus nec iaculis mauris. <a>@bulmaio</a>.                  
-            </div>
-            <p class=""><span class="tag is-light">Online</span></p>
-          </div>
-          <footer class="footer">
-          </footer>
+          </nav>
         </div>
-      </div>
-    </div>
-    <div class="tile is-vertical is-parent">
-      <div class="tile is-child notification">
-        <p class="is-size-7">4/14 12:00 - 14:00</p>
-        <p class="title">Three</p>
-        <p class="is-size-7">Lorem ipsum dolor sit amet, r fe</p>
-      </div>
-      <div class="tile is-child notification">
-        <p class="is-size-7">4/14 12:00 - 14:00</p>
-        <p class="title">Three</p>
-        <p class="is-size-7">Lorem ipsum dolor sit amet, pulvinar felis blandit. Ve</p>
-      </div>
-      <div class="tile is-child notification">
-        <p class="is-size-7">4/14 12:00 - 14:00</p>
-        <p class="title">Three</p>
-        <p class="is-size-7">Lorem ipsum dolor sit amear felis b</p>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
 export default {
-  
+  methods: {
+    getJsonImgUrl(value) {
+      // return require(`~/assets/partners/2020/carousel_${value}.jpg`)
+      return require(`~/assets/partners/2020/logo/1.jpg`)
+    }
+  },
+  computed: {
+    eventList(){
+      return this.$store.getters [
+        'upcomingeventfromjson/getAll'
+      ]
+    }  
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-  .card {
-    background-color: #c6251a;
-    color: white;
+  .slideshow-item {
+    /* 横スクロール用 */
+    display: inline-block;
+    margin: 5px;    
+    width: 25vw;
+    /* height: 400px; */
+    word-break: break-all
   }
 </style>
