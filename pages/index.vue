@@ -66,9 +66,8 @@
       <h1 class="title is-2 has-text-centered">
         <span class="">Upcoming Events</span>
       </h1>
-      <br>
-      <UpcomingEventInfo />
     </section>
+    <UpcomingEventInfo />
 
     <section id="notice-title" class="section">
       <h1 class="title is-2 has-text-centered">
@@ -270,7 +269,7 @@ export default {
   #top-carousel {
     opacity: 0;
     transition: fadeIn 2s;
-    // max-width: 960px !important;
+    max-width: 960px !important;
     margin: auto;
   }
   @keyframes fadeIn {
