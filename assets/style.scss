@@ -102,7 +102,7 @@ iframe {
 }
 
 section.section+section.section {
-  padding-top: 0 !important;
+  padding-top: 5vh !important;
 }
 
 div#notice>div.column {
@@ -733,23 +733,25 @@ span.is-red {
 
 .wrap {
   overflow: hidden;
+  -webkit-overflow-scrolling: touch;
   display: flex;
-  height: 10vw;
+  height: auto;
 
   @media screen and (max-width: 768px) {
-    height: 20vw;
+    height: auto;
   }
 }
 
 /* content4つをまとめたスライドブロック */
 .slideshow {
   display: flex;
-  -webkit-animation: loop-slide 40s infinite linear 1s both;
-  animation: loop-slide 40s infinite linear 1s both;
+  -webkit-animation: loop-slide 40s linear 1s both;
+  animation: loop-slide 40s linear 1s both;
+  animation-fill-mode: forwards;
 
   @media screen and (max-width: 768px) {
-    -webkit-animation: loop-slide 20s infinite linear 1s both;
-    animation: loop-slide 20s infinite linear 1s both;
+    -webkit-animation: loop-slide 40s linear infinite 1s both;
+    animation: loop-slide 40s linear infinite 1s both;
   }
 }
 
@@ -793,5 +795,5 @@ span.is-red {
   }
 }
 
-  // @import '~bulma';
-  // @import '~buefy/src/scss/buefy';
+// @import '~bulma';
+// @import '~buefy/src/scss/buefy';
