@@ -12,10 +12,8 @@ export const getters = {
     return Object.values(state.talkList).reverse()
   },
   getRandomTalks: state => (year) => {
-    var num = []
-    for (var i=0; i<4; i++){
-      num[i] = Math.floor(Math.random() * Object.keys(state.talkList).length);
-    }
-    return Object.values(state.talkList).filter(a => a.id === num[0] || a.id === num[1] || a.id === num[2] || a.id === num[3])
+    const itemNum = Object.keys(state.talkList).length;
+    const randNum = Math.floor(Math.random() * itemNum);
+    return Object.values(state.talkList).filter(a => a.id === randNum || a.id === ((randNum + 4) % itemNum) || a.id === ((randNum + 8) % itemNum) || a.id === ((randNum + 12) % itemNum))
   }
 }
