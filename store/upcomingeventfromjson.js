@@ -9,6 +9,9 @@ export const getters = {
     return state.data.filter(a => a.id === id)
   },
   getAll: (state) => {
-    return state.data
+    return state.data.filter(a => a.id !== 202003181442 || a.id !== 1)
+  },
+  getLatest: (state) => {
+    return state.data.filter(a => a.id === 202003181442)
   },
 }

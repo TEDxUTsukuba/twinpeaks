@@ -2,6 +2,8 @@
 if (process.server) {
   const { google } = require('googleapis')
 }
+// const { google } = require('googleapis')
+
 const privatekey = require('../tedxutsukuba-teraoka-1edb92b1dd66.json') // サービスアカウントのキーファイル（JSON形式）。Nuxt.jsアプリのルートディレクトリに置いている想定
 
 export const state = () => ({
@@ -98,6 +100,7 @@ export const actions = {
         }
       }
     })
+    commit('setSomething', response.data)
   },
   // データ追加用
   addDataToSheet({ state }, jwtClient) {
