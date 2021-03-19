@@ -206,7 +206,7 @@ export default {
   */
   build: {
     // HardSourceWebpackPlugin ビルド時間短縮
-    hardSource: true,
+    // hardSource: true,
     /*
     ** You can extend webpack config here
     */
