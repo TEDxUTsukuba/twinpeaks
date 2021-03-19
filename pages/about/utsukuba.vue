@@ -111,7 +111,7 @@
                   <span class="is-size-7 has-text-weight-normal has-text-light" v-if="$i18n.locale == 'ja'">{{ member.college_ja }}</span>
                 </p>
 
-                <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.keyword1">{{ $t('about.utsukuba.team.keywords') }}</p>
+                <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.keyword1" style="line-height: 1;">{{ $t('about.utsukuba.team.keywords') }}</p>
                 <p class="is-size-7 has-text-weight-normal has-text-light">{{ member.keyword1 }}<span v-if="member.keyword2">, </span>{{ member.keyword2 }}<span v-if="member.keyword3">, </span>{{ member.keyword3 }}</p>
                 
                 <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.tedtalk">{{ $t('about.utsukuba.team.favouritetedtalk') }}</p>
