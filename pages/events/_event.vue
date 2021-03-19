@@ -3,10 +3,10 @@
     <div v-for="(event, index) in eventData" :key="index">
       <div class="columns">
         <div class="column wallpaper-wrapper">
-          <img class="wallpaper" src="https://i.picsum.photos/id/1050/1230/500.jpg?hmac=e4pA3LUhJf21KhPvAyyNuP4rxXK3X0YoaWT04GH_aRM">
+          <img class="wallpaper" src="https://images.pexels.com/photos/3184302/pexels-photo-3184302.jpeg?cs=srgb&dl=pexels-fauxels-3184302.jpg&fm=jpg">
         </div>
-        <aside class="column container is-5">
-          <p class="is-uppercase">3 days to go</p>
+        <aside class="column container is-5" style="display: flex; justify-content: middle; align-items: center;">
+          <p class="is-uppercase">3 days to go</p><br>
           <h1 class="title is-3">{{ event.name }}</h1>
           {{ $route.params.id }}
         </aside>
@@ -34,15 +34,24 @@
         <aside class="container column is-5">
           <p class="is-size-5">{{ event.date.day.replace(regex, '/') }}</p>
           <p class=""><span v-if="event.date.from">{{ event.date.from }}</span><span v-if="event.date.to"> - {{ event.date.to }}</span></p>
-          <a href="">Add to Calendar</a>
+          <a href="" class="is-size-6">Add to Calendar</a>
           <hr>
           <p v-if="event.type === 'virtual'" class="is-size-5">
-            Virtual Event
+            Virtual Event<br>
+            <span class="is-size-6">Webcast</span><br>
+            <a :href="event.webcast.webcast_url" class="is-size-6">{{ event.webcast.name }}</a>
+          </p>
+          <p v-else-if="event.type === 'hybrid'" class="is-size-5">
+            Hybrid Event<br>
+            <span class="is-size-6">Webcast</span><br>
+            <a :href="event.webcast.webcast_url" class="is-size-6">Open in {{ event.webcast.name }}</a><br>
+            <span class="is-size-6">{{ event.location.name }}</span><br>
+            <a :href="event.location.googlemaps" class="is-size-6">Open in Google Maps</a>
           </p>
           <p v-else>
-            {{ event.location.name }}
+            <span class="is-size-6">{{ event.location.name }}</span><br>
+            <a :href="event.location.googlemaps" class="is-size-6">Open in Google Maps</a>
           </p>
-          <a :href="event.location.googlemaps" v-if="event.type !== 'virtual'">Open in Google Maps</a>
         </aside>
       </div>
     </div>
@@ -99,7 +108,7 @@ export default {
     }
   }
   .wallpaper {
-    filter: brightness(50%);
+    filter: contrast(75%);
     width: 100%;
     padding: 0;
     height: 25vh;
