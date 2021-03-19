@@ -83,13 +83,16 @@ export default {
   computed: {
   },
   async asyncData({ $axios }) {
-    const api_url = 'https://script.googleusercontent.com/macros/echo?user_content_key=m8yBv_e7D8GB8kxpVhJT-U_oAyGXB7vVvstpnRznGYjDntppdw33CjFjg4DrUo5vufdNWkqQBfVaruuzitG4vZMH8UCTNYFYm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnHtABZsLdz3HrzWV3XoW6E7FN53ubmn6Q9vLnesjgoy7SWFL9jZG44if4mn39WErlUHcG6vFq3AroXcexxZxpVH-TREc3TXom9z9Jw9Md8uu&lib=MUPcWAKUzMkGApY5JUER5gEPjB6H_eQBZ';
-    const res = await $axios.$get(api_url)
-    .catch(function(error) {
+    try {
+      const api_url = 'https://script.googleusercontent.com/macros/echo?user_content_key=m8yBv_e7D8GB8kxpVhJT-U_oAyGXB7vVvstpnRznGYjDntppdw33CjFjg4DrUo5vufdNWkqQBfVaruuzitG4vZMH8UCTNYFYm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnHtABZsLdz3HrzWV3XoW6E7FN53ubmn6Q9vLnesjgoy7SWFL9jZG44if4mn39WErlUHcG6vFq3AroXcexxZxpVH-TREc3TXom9z9Jw9Md8uu&lib=MUPcWAKUzMkGApY5JUER5gEPjB6H_eQBZ';
+      const res = await $axios.$get(api_url, {
+        crossDomain: true
+      })
+      return {
+        eventData: res[1]
+      }
+    }catch(error) {
       console.log('Error occurred while getting data')
-    });
-    return {
-      eventData: res[1]
     }
   }
 }
