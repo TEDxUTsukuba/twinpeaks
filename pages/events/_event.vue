@@ -15,7 +15,7 @@
       <div class="column is-7">
         <h1 class="is-size-4"><i class="mdi mdi-export-variant" /></h1>
       </div>
-      <div class="column is-5 has-text-centered" v-if="eventData.isSignupRequired = 'true'">
+      <div class="column is-5 has-text-centered" v-if="eventData.isSignupRequired == true">
         <a :href="eventData.signup_url" target="_blank" class="level-item button is-white is-gradient is-rounded is-fullwidth">Sign up</a>
         <!-- <span class="is-size-7 has-text-grey-light">Sign up before {{ new Date(eventData.signup_deadline).toLocaleDateString().replace(regex, '/') }}</span> -->
       </div>
@@ -55,7 +55,7 @@
           <a :href="eventData.googlemaps" target="_blank" class="is-size-6">Open in Google Maps</a>
         </p>
         <hr>
-        <p v-if="eventData.isFree == 'true'" class="is-size-5 mb-6">
+        <p v-if="eventData.isFree == true" class="is-size-5 mb-6">
           Free
         </p>
         <p v-else class="is-size-6 mb-6">
@@ -69,32 +69,54 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   components: {
   },
   data () {
     return {
-      eventData: [],
+      eventData: {},
+      // eventData: [],
+      // eventData: '',
       isModalActive: false,
       id: this.$route.params.event,
       regex: /-/g,
     }
   },
+  // methods: {
+  //   getData (apiUrl) {
+  //     // this.$jsonp(url, dataObj, timeout) で使える。 Vueコンポーネント内だとthisで呼び出せる。
+  //     this.$jsonp("https://script.google.com/macros/s/AKfycbzLxjNxZLZ5izrM5boDp0nM396uyzReduC7nr2axZepkPhXUJwS9sP3_rn3268EOP49bw/exec",{ callbackName: "callbackFunction" })
+  //     .then(json => {
+  //       // Success.
+  //       this.eventData = json
+  //     }).catch(err => {
+  //       // Failed.
+  //     })
+  //   }
+  // },
   computed: {
   },
-  async asyncData({ $axios }) {
-    try {
-      const api_url = 'https://script.google.com/macros/s/AKfycbzLxjNxZLZ5izrM5boDp0nM396uyzReduC7nr2axZepkPhXUJwS9sP3_rn3268EOP49bw/exec';
-      const res = await $axios.$get(api_url, {
-        crossDomain: true
-      })
-      return {
-        eventData: res[1]
-      }
-    }catch(error) {
-      console.log('Error occurred while getting data')
-    }
+  mounted() {
+    // console.log(this.$route.params.event)
+    const api_url = 'https://script.google.com/macros/s/AKfycbzLxjNxZLZ5izrM5boDp0nM396uyzReduC7nr2axZepkPhXUJwS9sP3_rn3268EOP49bw/exec' + '?id=' + this.$route.params.event;
+    axios.get(api_url, {
+      crossDomain: true
+    }).then(response => this.eventData = response.data[0]);
   }
+  // async asyncData({ $axios }) {
+  //   try {
+  //     const api_url = 'https://script.google.com/macros/s/AKfycbzLxjNxZLZ5izrM5boDp0nM396uyzReduC7nr2axZepkPhXUJwS9sP3_rn3268EOP49bw/exec?id=${}';
+  //     const res = await $axios.$get(api_url, {
+  //       crossDomain: true
+  //     })
+  //     return {
+  //       eventData: res[1]
+  //     }
+  //   }catch(error) {
+  //     console.log('Error occurred while getting data')
+  //   }
+  // }
 }
 </script>
 
