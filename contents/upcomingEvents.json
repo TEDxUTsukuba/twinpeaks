@@ -1,94 +1,62 @@
 [
   {
-    "id": 1,
-    "name": "Example",
-    "type": "virtual / hybrid / onsite",
-    "date": {
-      "from": "2013/01/23 12:34",
-      "to": "2013/01/23 20:34"
-    },
-    "description": {
-      "short_ja": "筑る！",
-      "short_en": "",
-      "long_ja": "",
-      "long_en": ""
-    },
-    "image": "https://drive.google.com/file/d/13sJyLw1JvApyORWjuZ1u91NpqcZsVRVg/view?usp=sharing",
-    "url": "https://www.tsukubaham.co.jp/",
-    "register": {
-      "isRegistrationNeeded": true,
-      "deadline": "",
-      "url": ""
-    }
-  },
-  {
     "id": 202003181442,
     "name": "TEDxUTsukubaSalon",
     "type": "virtual",
     "date": {
-      "from": "2013/01/23 12:34",
-      "to": ""
+      "day": "2020-03-27",
+      "from": "18:00",
+      "to": "21:00"
+    },
+    "location": {
+      "name": "Global Village Community Station",
+      "googlemaps": "https://goo.gl/maps/RnpMq6orD7W72y1Z9"
     },
     "description": {
-      "short_ja": "筑る！",
-      "short_en": "",
-      "long_ja": "",
+      "short_ja": "今回のテーマは「料理」筑波大屈指の料理人ゲストをお呼びして、地元の食材を活用した料理を作っていただきます！",
+      "short_en": "Theme is <strong>\"Cooking\"</strong> We will invite one of Tsukuba University's best chefs to cook a dish using local foods!",
+      "long_ja": "今回のテーマは<strong>「料理」</strong><br>筑波大屈指の料理人ゲストをお呼びして、地元の食材を活用した料理を作っていただきます！<br>料理ゲストは明日以降公開！乞うご期待〜",
       "long_en": ""
     },
-    "image": "https://drive.google.com/file/d/13sJyLw1JvApyORWjuZ1u91NpqcZsVRVg/view?usp=sharing",
-    "url": "https://www.tsukubaham.co.jp/",
-    "register": {
-      "isRegistrationNeeded": true,
-      "deadline": "",
-      "url": ""
+    "webcast": {
+      "name": "YouTube Premiere",
+      "webcast_url": "https://www.youtube.com/watch?v=cczMhgj27Co"
+    },
+    "external_url": "https://www.ted.com/tedx/events/43919",
+    "signup": {
+      "isSignupRequired": true,
+      "deadline": "2020-03-20",
+      "signup_url": "https://forms.gle/sDve6wy2wb7md1Jp6"
     }
   },
   {
     "id": 202003181443,
-    "name": "新歓第1回",
-    "type": "onsite",
-    "date": {
-      "from": "2013/01/23 12:34",
-      "to": "2013/01/23 16:34"
-    },
-    "description": "TEDxイベントを作る舞台裏をご紹介します！メンバーと気軽にお話ししましょう。",
-    "url": "https://www.tsukubaham.co.jp/",
-    "register": {
-      "isRegistrationNeeded": true,
-      "deadline": "",
-      "url": ""
-    }
-  },
-  {
-    "id": 202003181444,
     "name": "International Welcome",
     "type": "hybrid",
     "date": {
-      "from": "2013/01/23 12:34",
+      "day": "2020-04-12",
+      "from": "18:00",
       "to": ""
     },
-    "description": "Looking for the opportunities to work together with Japanese & International members? TEDxUTsukuba is here for you.",
-    "url": "https://www.tsukubaham.co.jp/",
-    "register": {
-      "isRegistrationNeeded": false,
-      "deadline": "",
-      "url": ""
-    }
-  },
-  {
-    "id": 202003181444,
-    "name": "International Welcome",
-    "type": "hybrid",
-    "date": {
-      "from": "2020-12-17T03:24:00+09:00",
-      "to": "2020-12-17T03:24:00+09:00"
+    "location": {
+      "name": "Global Village Community Station",
+      "googlemaps": "https://goo.gl/maps/tH1q3LFDJsrzHjzz7"
     },
-    "description": "Looking for the opportunities to work together with Japanese & International members? TEDxUTsukuba is here for you.",
-    "url": "https://www.tsukubaham.co.jp/",
-    "register": {
-      "isRegistrationNeeded": false,
-      "deadline": "",
-      "url": ""
+    "description": {
+      "short_ja": "",
+      "short_en": "Want to be a part of global TEDx community? TEDxUTsukuba is here for you!",
+      "long_ja": "",
+      "long_en": "Want to be a part of global TEDx community? TEDxUTsukuba is here for you! For those of you who are interested in joining us, we have a special meetup to introduce our annual activities. "
+    },
+    "webcast": {
+      "name": "YouTube Premiere",
+      "webcast_url": "https://www.youtube.com/watch?v=cczMhgj27Co"
+    },
+    "external_url": "",
+    "signup": {
+      "isSignupRequired": true,
+      "deadline": "2020-03-20",
+      "signup_url": "https://eventbrite.ca"
     }
   }
 ]
