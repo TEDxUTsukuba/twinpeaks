@@ -12,6 +12,6 @@ export const getters = {
     return state.data.filter(a => a.id !== 202003181442 || a.id !== 1)
   },
   getLatest: (state) => {
-    return state.data.filter(a => a.id === 202003181442)
+    return state.data.filter(a => a.id === value)
   },
 }
