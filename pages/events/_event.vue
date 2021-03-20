@@ -93,6 +93,53 @@ export default {
       },
     }
   },
+  head: {
+    title: 'Event detail | TEDxUTsukuba',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { 
+        hid: 'description', 
+        name: 'description', 
+        content: "TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. Our event is called TEDxUTsukuba, where x = independently organized TED event. " 
+      },
+      { 
+        hid: 'twitter:card', 
+        name: 'twitter:card', 
+        content: 'summary' 
+      },
+      { 
+        hid: 'twitter:site', 
+        name: 'twitter:site', 
+        content: '@tedxutsukuba' 
+      },
+      { 
+        hid: 'twitter:creator', 
+        name: 'twitter:creator', 
+        content: '@tedxutsukuba' 
+      },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: 'Event | TEDxUTsukuba'
+      },
+      {
+        hid: 'og:type',
+        property: 'og:type',
+        content: 'website'
+      },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://tedxutsukuba.com/events'
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'https://www.tedxutsukuba.com/u_logo_banner.jpg'
+      }
+    ]
+  },
   // methods: {
   //   getData (apiUrl) {
   //     // this.$jsonp(url, dataObj, timeout) で使える。 Vueコンポーネント内だとthisで呼び出せる。
