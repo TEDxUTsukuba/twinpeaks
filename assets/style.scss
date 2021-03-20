@@ -102,7 +102,7 @@ iframe {
 }
 
 section.section+section.section {
-  padding-top: 0 !important;
+  padding-top: 5vh !important;
 }
 
 div#notice>div.column {
@@ -328,7 +328,7 @@ section#wrapper-black {
 
 
 section.section {
-  margin: 0vh 20vw !important;
+  margin: 0vh 16vw !important;
 
   @media screen and (max-width: 639px) {
     margin: 0vh 0vw !important;
@@ -378,13 +378,6 @@ br.mobile-br {
   display: none;
 }
 
-.card {
-  border-radius: 0px;
-  background-color: $light;
-  // box-shadow:  10px 10px 20px #cfcfd1,
-  //              -10px -10px 20px #ffffff;
-}
-
 .nmp-card {
   padding: 2rem 2rem;
   margin: 0rem;
@@ -425,7 +418,7 @@ br.mobile-br {
 .nmp-card-red {
   @extend .nmp-card;
   color: white;
-  background: $primary;
+  background: $red;
 
   // border: 1px solid white;
   // box-shadow:  8px 8px 16px #a11e15,
@@ -489,7 +482,7 @@ br.mobile-br {
 .nmp-red {
   @extend .nmp;
   color: white;
-  background: $red2;
+  background: $red;
   box-shadow: 8px 8px 16px $dark1,
     -8px -8px 16px $dark2;
 
@@ -740,23 +733,25 @@ span.is-red {
 
 .wrap {
   overflow: hidden;
+  -webkit-overflow-scrolling: touch;
   display: flex;
-  height: 10vw;
+  height: auto;
 
   @media screen and (max-width: 768px) {
-    height: 20vw;
+    height: auto;
   }
 }
 
 /* content4つをまとめたスライドブロック */
 .slideshow {
   display: flex;
-  -webkit-animation: loop-slide 40s infinite linear 1s both;
-  animation: loop-slide 40s infinite linear 1s both;
+  -webkit-animation: loop-slide 40s linear 1s both;
+  animation: loop-slide 40s linear 1s both;
+  animation-fill-mode: forwards;
 
   @media screen and (max-width: 768px) {
-    -webkit-animation: loop-slide 20s infinite linear 1s both;
-    animation: loop-slide 20s infinite linear 1s both;
+    -webkit-animation: loop-slide 40s linear infinite 1s both;
+    animation: loop-slide 40s linear infinite 1s both;
   }
 }
 
@@ -800,5 +795,5 @@ span.is-red {
   }
 }
 
-  // @import '~bulma';
-  // @import '~buefy/src/scss/buefy';
+// @import '~bulma';
+// @import '~buefy/src/scss/buefy';

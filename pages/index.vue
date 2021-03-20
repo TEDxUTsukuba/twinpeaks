@@ -105,11 +105,25 @@
           />
         </div>
       </div>
-      <p class="has-text-grey-light has-text-right">{{ $t('notice.last-modified')}}<time datetime="2020-12-22">2020/1/26</time></p>
+      <p class="has-text-grey-light has-text-right mb-6">{{ $t('notice.last-modified')}}<time datetime="2020-12-22">2020/1/26</time></p>
+      <br>
       <div class="has-text-centered">
         <nuxt-link :to="localePath('/notice')" class="button is-gradient is-rounded">{{ $t('button.archive') }}</nuxt-link>
       </div>
     </section>
+
+
+    <section class="section">
+      <h1 class="title is-2 has-text-centered">
+        <span class="">TEDxUTsukuba This Week</span>
+      </h1>
+    </section>
+    <PopularTalks />
+    <br><br>
+    <div class="has-text-centered">
+      <nuxt-link :to="localePath('/talks')" class="button is-gradient is-rounded">{{ $t('talks.seeAll') }}</nuxt-link>
+    </div>
+    <br><br>
     <div class="text-divider"></div>
   </section>
 </template>
@@ -118,6 +132,7 @@
 import Card from '~/components/Card'
 import Flip from '~/components/Flip'
 import Carousel from '~/components/Carousel'
+import PopularTalks from '~/components/PopularTalks'
 // const Card = () => import('~/components/Card')
 // const Flip = () => import('~/components/Flip')
 // const Movie = () => import('~/components/Movie')
@@ -126,7 +141,7 @@ export default {
   name: 'HomePage',
 
   components: {
-    Card, Flip, Carousel
+    Card, Flip, Carousel, PopularTalks
   },
   data() {
     return {
@@ -285,4 +300,5 @@ export default {
     width: 100%; max-width: 480px;
     // transform: translate3d(0,0,100px);
   }
+  
 </style>

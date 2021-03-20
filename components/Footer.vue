@@ -119,7 +119,6 @@
     </div>
 
     <!-- <div class="wrap">
-      <nuxt-link to="./partners">
         <ul class="slideshow">
           <li class="slideshow-content" v-for="(partner, index) in partnerList" :key="index">
             <figure class="">
@@ -134,7 +133,6 @@
             </figure>
           </li>
         </ul>
-      </nuxt-link>
     </div> -->
 
   </section>

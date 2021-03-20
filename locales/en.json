@@ -2,9 +2,10 @@
   "header": {
     "events": {
       "parent": "Events",
-      "child1": "2020 JIJIMUGE",
-      "child2": "2019 CoPhilAction",
-      "child3": "TEDxUTsukubaLive 2019"
+      "listing": "Event Listing",
+      "2020": "2020 JIJIMUGE",
+      "2019": "2019 CoPhilAction",
+      "2019Live": "TEDxUTsukubaLive 2019"
     },
     "talks": {
       "item": "Talks"
@@ -142,6 +143,7 @@
         "title": "Team",
         "subtitle": "Managed by passionate volunteers, TEDxUTsukuba have been delivering mind-blowing event experience for a decade.",
         "from": "From",
+        "college": "College",
         "favouritetedtalk": "My favourite TED talk",
         "keywords": "3 words that describe myself"
       },
@@ -186,7 +188,8 @@
   "talks": {
     "title": "Talks",
     "subtitle": "We have shed light on relevant topics - from liberal arts to science, local stories to global issues.",
-    "notice": "Our talks at TEDxUTsukuba 2020 \"JIJIMUGE\" are currently being reviewed by TED and will be availbale on YouTube soon."
+    "notice": "Our talks at TEDxUTsukuba 2020 \"JIJIMUGE\" are currently being reviewed by TED and will be availbale on YouTube soon.",
+    "seeAll": "See All Talks"
   },
   "2020": {
     "highlight": {
@@ -341,5 +344,10 @@
       "access": "Take a bus bound for Tsukuba University Central or Tsukuba University Circulation (Clockwise) from Bus Stop No. 6 at Tsukuba Center Bus Terminal, and get off at Tsukuba University Nishi Bus Stop, then walk 5 minutes from the bus stop.",
       "description": "Built as the first school building, 5C Building has been the landmark of campus and the epicenter of creativity. From the pedestrian corridor, you can see a spectacular view of plaster statues. "
     }
+  },
+  "events": {
+    "title": "Upcoming Events",
+    "subtitle": "Filled with curiocity and excitement, you will discover new ideas, opportunities & so much more!",
+    "upcoming": "Upcoming Events"
   }
 }

@@ -206,7 +206,7 @@ export default {
   */
   build: {
     // HardSourceWebpackPlugin ビルド時間短縮
-    hardSource: true,
+    // hardSource: true,
     /*
     ** You can extend webpack config here
     */
@@ -216,6 +216,12 @@ export default {
       chunk: ({ isDev }) => isDev ? '[name].[hash].js' : '[chunkhash].js'
     },
     extend (config, ctx) {
+      // Google Sheets API で最新情報を取得
+      config.node = {
+        fs: 'empty',
+        googleapis: 'empty',
+        child_process: 'empty'
+      }
     }
   },
   generate: {

@@ -34,11 +34,11 @@
 </template>
 
 <script>
-    import Events from '~/components/Events.vue'
+    // import Events from '~/components/Events.vue'
 
     export default {
       components: {
-        Events
+        // Events
       },
       data(){
         return {
