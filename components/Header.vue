@@ -12,10 +12,13 @@
     <template slot="end">
       <b-navbar-dropdown :label="$t('header.events.parent')" class="is-hoverable">
         <b-navbar-item tag="router-link" :to="{ path: localePath('/events/2020') }">
-          {{ $t('header.events.child1') }}
+          {{ $t('header.events.2020') }}
         </b-navbar-item>
         <b-navbar-item tag="router-link" :to="{ path: localePath('/events/2019') }">
-          {{ $t('header.events.child2') }}
+          {{ $t('header.events.2019') }}
+        </b-navbar-item>
+        <b-navbar-item tag="router-link" :to="{ path: localePath('/events/') }">
+          {{ $t('header.events.listing') }}
         </b-navbar-item>
       </b-navbar-dropdown>
       <!-- <b-navbar-item class="normal-category" tag="nuxt-link" :to="localePath('/events/2020')">

@@ -15,17 +15,17 @@
       <div class="columns" id="gallery">
         <div class="column is-one-third">
           <figure class="is-4by3">
-            <img src="~/assets/sample2.jpg" alt="Audience attending our annual event" style="width: 100%; object-fit: cover;">
+            <img src="/sample/sample2.jpg" alt="Audience attending our annual event" style="width: 100%; object-fit: cover;">
           </figure>
         </div>
         <div class="column is-one-third">
           <figure class="is-4by3">
-            <img src="~/assets/sample3.jpg" alt="TEDxUTsukuba attendees and staffs" style="width: 100%; object-fit: cover;">
+            <img src="/sample/sample3.jpg" alt="TEDxUTsukuba attendees and staffs" style="width: 100%; object-fit: cover;">
           </figure>
         </div>
         <div class="column is-one-third">
           <figure class="is-4by3">
-            <img src="~/assets/sample1.jpg" alt="A speaker standing on the stage" style="width: 100%; object-fit: cover;">
+            <img src="/sample/sample1.jpg" alt="A speaker standing on the stage" style="width: 100%; object-fit: cover;">
           </figure>
         </div>
       </div>
@@ -57,7 +57,7 @@
         <div
           id="thumbnails"
           class="column is-3-fullhd is-4-widescreen is-4-desktop is-6-tablet is-12-mobile"
-          v-for="(member, index) in memberList" :key="index"
+          v-for="(member, index) in memberList" :key="member.tedtalk"
           style="display: inline-block; vertical-align: top;"
         >
           <div class="nmp-dark">
@@ -71,58 +71,60 @@
                 </span> -->
               </p>
             </header>
-            <div class="card-image" v-if="member.imageFileName.length">
+            <div class="card-image" v-if="member.imageFileName">
               <figure class="image is-3-desktop is-6-tablet is-6-mobileby2" style="overflow: hidden;">
-                <img class="portrait" :src="getJsonImgUrl(member.imageFileName)" alt="Placeholder image">
+                <img class="portrait" :src="getJsonImgUrl(member.imageFileName)" :alt="member.given_name_en + member.family_name_en">
               </figure>
             </div>
             <div class="card-content">
               <div class="media">
                 <span v-if="$i18n.locale == 'en'">
                   <h1 class="title is-4">
-                    {{ member.en.name }}
+                    {{ member.given_name_en }} {{ member.family_name_en}}
                   </h1>
                   <h1 class="subtitle is-6">
-                    {{ member.en.role }}
+                    {{ member.role_en }}
                   </h1>
                 </span>
                 <span v-if="$i18n.locale == 'ja'">
                   <h1 class="title is-4">
-                    {{ member.ja.name }}
+                    {{ member.family_name_ja }}{{ member.given_name_ja }}
                   </h1>
                   <h1 class="subtitle is-6">
-                    {{ member.ja.role }}
+                    {{ member.role_ja }}
                   </h1>
                 </span>
               </div>
-              
-              <p class="midashi is-size-7 has-text-weight-bold has-text-primary">{{ $t('about.utsukuba.team.from') }}</p>
-              <p class="is-size-7 has-text-weight-bold" v-if="$i18n.locale == 'en'">{{ member.en.from }}</p>
-              <p class="is-size-7 has-text-weight-bold" v-if="$i18n.locale == 'ja'">{{ member.ja.from }}</p>
+                <br>
 
-              <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.keyword1">{{ $t('about.utsukuba.team.keywords') }}</p>
-              <p class="is-size-7 has-text-weight-bold">{{ member.keyword1 }}<span v-if="member.keyword2">, </span>{{ member.keyword2 }}<span v-if="member.keyword3">, </span>{{ member.keyword3 }}</p>
+              <div class="content">
               
-              <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.favouritetedtalk">{{ $t('about.utsukuba.team.favouritetedtalk') }}</p>
-              <a class="is-size-7 has-text-weight-bold" :href="getTedLinkUrl(member.favouritetedtalklink)">{{ member.favouritetedtalk }} <externalLink v-if="member.favouritetedtalk" style="width: 0.75rem;" /></a>
-              
-              <p class="card-item has-text-right">
-                <a v-if="member.tedAccount" :href="member.tedAccount" target="_blank" rel="noopener noreferrer"><span class="tag is-dark has-text-primary has-text-weight-bold">TED</span></a>
-              </p>
-              
-              <!-- <span class="has-text-right">
-                <b-collapse :open="false" position="is-bottom" aria-id="contentIdForA11y1">
-                  <a class="button is-gradient is-rounded is-outlined" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1">
-                    <b-icon :icon="!props.open ? 'menu-down' : 'menu-up'"></b-icon>
-                      {{ !props.open ? 'Read more' : 'Read less' }}
-                  </a>
-                  <p class="is-size-7 has-text-left">
-                    <a class="has-text-white is-size-4 fb" href="https://www.instagram.com/tedxutsukuba/">
-                      <font-awesome-icon :icon="['fab', 'facebook-square']" />
-                    </a>
-                  </p>
-                </b-collapse>
-              </span> -->
+                <p class="midashi is-size-7 has-text-weight-bold has-text-primary">
+                  {{ $t('about.utsukuba.team.from') }}
+                  <span class="is-size-7 has-text-weight-normal has-text-light" v-if="$i18n.locale == 'en'">{{ member.home_state_en }}</span>
+                  <span class="is-size-7 has-text-weight-normal has-text-light" v-if="$i18n.locale == 'ja'">{{ member.home_state_ja }}</span>
+                </p>
+
+                <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.college_ja">
+                  {{ $t('about.utsukuba.team.college') }}
+                  <span class="is-size-7 has-text-weight-normal has-text-light" v-if="$i18n.locale == 'en'">{{ member.college_en }}</span>
+                  <span class="is-size-7 has-text-weight-normal has-text-light" v-if="$i18n.locale == 'ja'">{{ member.college_ja }}</span>
+                </p>
+
+                <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.keyword1" style="line-height: 1;">{{ $t('about.utsukuba.team.keywords') }}</p>
+                <p class="is-size-7 has-text-weight-normal has-text-light">{{ member.keyword1 }}<span v-if="member.keyword2">, </span>{{ member.keyword2 }}<span v-if="member.keyword3">, </span>{{ member.keyword3 }}</p>
+                
+                <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.tedtalk">{{ $t('about.utsukuba.team.favouritetedtalk') }}</p>
+                <a class="is-size-7 has-text-weight-normal has-text-light is-uppercase" v-if="member.tedtalk" :href="getTedLinkUrl(member.tedtalk)" target="_blank" rel="noopener noreferrer">{{ member.tedtalk.replace(regexTitle, '').replace(regexLang, '').replace(/_/g, ' ') }}<externalLink v-if="member.tedtalk" style="width: 0.75rem; margin-left: 0.75rem;" /></a>
+                
+                <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.tedtalk_alt">{{ $t('about.utsukuba.team.favouritetedtalk') }}</p>
+                <a class="is-size-7 has-text-weight-normal has-text-light" v-if="member.tedtalk_alt" :href="member.tedtalk_alt" target="_blank" rel="noopener noreferrer">YouTube<externalLink v-if="member.tedtalk_alt" style="width: 0.75rem; margin-left: 0.75rem;" /></a>
+                
+                <p class="card-item has-text-right">
+                  <a v-if="member.tedaccount" :href="member.tedaccount" target="_blank" rel="noopener noreferrer"><span class="tag is-dark has-text-primary has-text-weight-bold">TED</span></a>
+                </p>
+              </div>
+  
             </div>
           </div>
         </div>
@@ -200,6 +202,7 @@
 
 
 <script>
+import axios from 'axios';
 import Modal from '~/components/Modal.vue'
 // import VueInstagram from 'vue-instagram'
 import Movie from '~/components/Movie.vue'
@@ -212,10 +215,13 @@ export default {
   },
   data() {
     return {
+      memberList: {},
       showContent: false,
       postItem: "",
       jobs: jobs,
-      videoId: '7PQWXvgYZ4Y'
+      videoId: '7PQWXvgYZ4Y',
+      regexTitle: new RegExp(/https:\/\/www.ted.com.talks\//),
+      regexLang: new RegExp(/\?[\w\=]+/)
     }
   },
   head: {
@@ -247,13 +253,18 @@ export default {
     }
   },
   computed: {
-    memberList() {
-      return this.$store.getters[
-        'member/showAllMembers'
-      ](this.year)
-    }
+    // memberList() {
+    //   return this.$store.getters[
+    //     'member/showAllMembers'
+    //   ](this.year)
+    // }
   },
   mounted(){
+    const api_url = "https://script.google.com/macros/s/AKfycbxp6NqJLbjD4pdjqloabrjwRxN_hhXZ9nv1O3cRtdtkraiiZEfeKt9lUgubcCMbw0g17g/exec";
+    axios.get(api_url, {
+      crossDomain: true
+    }).then(response => this.memberList = response.data);
+
     const scene1 = this.$scrollmagic
       .scene({
         triggerElement: '#trigger',
@@ -303,6 +314,7 @@ export default {
   }
   p.midashi {
     margin-top: 0.5rem;
+    margin-bottom: 0;
     color: #E62B1E;
     font-weight: bold;
   }
@@ -311,6 +323,7 @@ export default {
   }
   a {
     color: white;
+    word-break: break-all;
   }
   #tedxutsukuba, #socialcapital {
     opacity: 0;

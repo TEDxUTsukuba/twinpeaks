@@ -2,9 +2,10 @@
   "header": {
     "events": {
       "parent": "イベント",
-      "child1": "2020 JIJIMUGE",
-      "child2": "2019 CoPhilAction",
-      "child3": "TEDxUTsukubaLive 2019"
+      "listing": "イベント一覧",
+      "2020": "2020 JIJIMUGE",
+      "2019": "2019 CoPhilAction",
+      "2019Live": "TEDxUTsukubaLive 2019"
     },
     "talks": {
       "item": "トーク"
@@ -143,6 +144,7 @@
         "title": "メンバー紹介",
         "subtitle": "イベントの企画と運営を支えている、個性溢れるメンバー(一部)をご紹介いたします。",
         "from": "出身",
+        "college": "所属",
         "favouritetedtalk": "お気に入りのTEDトーク",
         "keywords": "自分を表す3つのキーワード"
       },
@@ -187,7 +189,8 @@
   "talks": {
     "title": "トーク",
     "subtitle": "イベントを通して、教養から科学、地域の話題から世界規模の問題に至るまで、様々なトピックスに焦点を当ててきました。",
-    "notice": "TEDxUTsukuba 2020 \"JIJIMUGE\" にて皆さまにお届けしたトークは、TEDへの申請が受理された後に、YouTubeにて公開される予定です。"
+    "notice": "TEDxUTsukuba 2020 \"JIJIMUGE\" にて皆さまにお届けしたトークは、TEDへの申請が受理された後に、YouTubeにて公開される予定です。",
+    "seeAll": "すべてのトークを見る"
   },
   "2020": {
     "highlight": {
@@ -345,5 +348,10 @@
       "description": "筑波キャンパスの最初の校舎として完成した5C棟は、キャンパスのランドマークであり、創造性の発信地。「ペデ」と呼ばれる街路からは、ダビデ像をはじめとする巨大な石膏像が立ち並ぶ圧巻の光景を目にすることができます。",
       "access": "つくば駅A3出口より、つくばセンターバスターミナル6番乗り場から筑波大学中央行きまたは筑波大学循環(右回り)バスで「筑波大学西」下車、バス停より徒歩5分。"
     }
+  },
+  "events": {
+    "title": "イベント情報",
+    "subtitle": "TEDxUTsukubaが開催するイベントをご紹介いたします。",
+    "upcoming": "今後開催されるイベント"
   }
 }
