@@ -86,7 +86,7 @@ export default {
       {
         hid: 'og:url',
         property: 'og:url',
-        content: 'https://tedxutsukuba.com/events'
+        content: 'https://www.tedxutsukuba.com/events'
       },
       {
         hid: 'og:image',
