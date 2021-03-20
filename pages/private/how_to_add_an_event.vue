@@ -57,7 +57,7 @@
         シートの各セルを埋めるだけで、個別のイベントページがただちに公開されます！<br>
         下記URLにアクセスしてみてください。シートの内容が反映されていれば完了です！
       </p>
-      <p>www.tedxutsukuba.com/events/<span class="has-text-weight-bold">イベントのid</span></p>
+      <p>https://www.tedxutsukuba.com/events/<span class="has-text-weight-bold">イベントのid</span></p>
     </div>
     <div class="notification">
       <h1 class="is-size-5">It's your turn!</h1>
@@ -201,3 +201,56 @@
     </p>
   </section>
 </template>
+
+<script>
+export default {
+  head: {
+    title: 'イベントを追加する',
+    description: 'イベント一覧ページに個別のイベントページを追加するための簡単なステップを説明します。',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { 
+        hid: 'og:description', 
+        name: 'og:description', 
+        content: "イベント一覧ページに個別のイベントページを追加するための簡単なステップを説明します。" 
+      },
+      { 
+        hid: 'twitter:card', 
+        name: 'twitter:card', 
+        content: 'summary' 
+      },
+      { 
+        hid: 'twitter:site', 
+        name: 'twitter:site', 
+        content: '@tedxutsukuba' 
+      },
+      { 
+        hid: 'twitter:creator', 
+        name: 'twitter:creator', 
+        content: '@tedxutsukuba' 
+      },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: 'イベントを追加する'
+      },
+      {
+        hid: 'og:type',
+        property: 'og:type',
+        content: 'website'
+      },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://www.tedxutsukuba.com/private/how_to_add_an_event'
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'https://www.tedxutsukuba.com/twitter_summary.png'
+      }
+    ]
+  }
+}
+</script>
