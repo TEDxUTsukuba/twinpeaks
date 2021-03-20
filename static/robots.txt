@@ -1,0 +1,4 @@
+User-Agent:*
+Disallow: /private/, /about/utsukuba/index.html
+
+Sitemap:https://www.tedxutsukuba.com/sitemap.xml
