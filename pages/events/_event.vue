@@ -2,11 +2,11 @@
   <div :id="id">
     <div class="columns">
       <div class="column wallpaper-wrapper">
-        <img class="wallpaper" src="https://images.pexels.com/photos/3184302/pexels-photo-3184302.jpeg?cs=srgb&dl=pexels-fauxels-3184302.jpg&fm=jpg">
+        <img class="wallpaper" v-if="eventData.thumbnail" :src="`/sample/${eventData.thumbnail}.jpg`">
       </div>
       <aside class="column container is-5" style="display: flex; justify-content: middle; align-items: center;">
         <div>
-          <p class="is-uppercase">N days to go</p><br>
+          <p class="is-uppercase">{{ getDaysTogo(eventData.date) }}</p><br>
           <h1 class="title is-3">{{ eventData.name }}</h1>
         </div>
       </aside>
@@ -38,29 +38,30 @@
         <p class=""><span v-if="eventData.from">{{ eventData.from }}</span><span v-if="eventData.to"> - {{ eventData.to }}</span></p>
         <a href="" class="is-size-6">Add to Calendar</a>
         <hr>
-        <p v-if="eventData.type === 'virtual'" class="is-size-5">
-          Virtual Event<br>
-          <span class="is-size-6">Webcast</span><br>
-          <a :href="eventData.webcast_url" target="_blank" class="is-size-6">{{ eventData.webcast }}</a>
-        </p>
-        <p v-else-if="eventData.type === 'hybrid'" class="is-size-5">
-          Hybrid Event<br>
-          <span class="is-size-6">Webcast</span><br>
-          <a :href="eventData.webcast_url" target="_blank" class="is-size-6">Open in {{ eventData.webcast }}</a><br>
+        <div v-if="eventData.type === 'virtual'">
+          <p class="is-size-5">Virtual Event</p>
+          <p>{{ eventData.webcast }}</p>
+          <a :href="eventData.webcast_url" target="_blank" class="is-size-6">Join webcast</a>
+        </div>
+        <div v-else-if="eventData.type === 'hybrid'">
+          <p class="is-size-5">Hybrid Event</p>
+          <p>{{ eventData.webcast }}</p>
+          <a :href="eventData.webcast_url" target="_blank" class="is-size-6">Join webcast</a><br>
           <span class="is-size-6">{{ eventData.location }}</span><br>
           <a :href="eventData.googlemaps" target="_blank" class="is-size-6">Open in Google Maps</a>
-        </p>
-        <p v-else>
-          <span class="is-size-6">{{ eventData.location }}</span><br>
+        </div>
+        <div v-else>
+          <p class="is-size-5">Location</p>
+          <p>{{ eventData.location }}</p>
           <a :href="eventData.googlemaps" target="_blank" class="is-size-6">Open in Google Maps</a>
-        </p>
+        </div>
         <hr>
-        <p v-if="eventData.isFree == true" class="is-size-5 mb-6">
-          Free
-        </p>
-        <p v-else class="is-size-6 mb-6">
+        <p v-if="eventData.isFree === false" class="is-size-6 mb-6">
           Adult: JPY {{ eventData.fee_adult}}<br>
           Student: JPY {{ eventData.fee_student }}
+        </p>
+        <p v-else class="is-size-5 mb-6">
+          Free
         </p>
         <br><br>
       </aside>
@@ -140,7 +141,15 @@ export default {
       }
     ]
   },
-  // methods: {
+  methods: {
+    getDaysTogo(eventDate){
+      const diff = new Date(eventDate).getTime() - new Date().getTime();
+      if (diff < 8640000) {
+        return '開催終了 | Ended'
+      } else {
+        return (Math.floor(diff/(1000*60*60*24)) + 1).toString() + ' days to go'
+      }
+    }
   //   getData (apiUrl) {
   //     // this.$jsonp(url, dataObj, timeout) で使える。 Vueコンポーネント内だとthisで呼び出せる。
   //     this.$jsonp("https://script.google.com/macros/s/AKfycbzLxjNxZLZ5izrM5boDp0nM396uyzReduC7nr2axZepkPhXUJwS9sP3_rn3268EOP49bw/exec",{ callbackName: "callbackFunction" })
@@ -151,7 +160,7 @@ export default {
   //       // Failed.
   //     })
   //   }
-  // },
+  },
   computed: {
   },
   mounted() {
@@ -203,7 +212,7 @@ export default {
     filter: contrast(75%);
     width: 100%;
     padding: 0;
-    height: 25vh;
+    height: 30vh;
     object-fit: cover;
   }
 </style>

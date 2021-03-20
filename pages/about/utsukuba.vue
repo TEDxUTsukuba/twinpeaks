@@ -15,17 +15,17 @@
       <div class="columns" id="gallery">
         <div class="column is-one-third">
           <figure class="is-4by3">
-            <img src="~/assets/sample2.jpg" alt="Audience attending our annual event" style="width: 100%; object-fit: cover;">
+            <img src="~/assets/sample/sample2.jpg" alt="Audience attending our annual event" style="width: 100%; object-fit: cover;">
           </figure>
         </div>
         <div class="column is-one-third">
           <figure class="is-4by3">
-            <img src="~/assets/sample3.jpg" alt="TEDxUTsukuba attendees and staffs" style="width: 100%; object-fit: cover;">
+            <img src="~/assets/sample/sample3.jpg" alt="TEDxUTsukuba attendees and staffs" style="width: 100%; object-fit: cover;">
           </figure>
         </div>
         <div class="column is-one-third">
           <figure class="is-4by3">
-            <img src="~/assets/sample1.jpg" alt="A speaker standing on the stage" style="width: 100%; object-fit: cover;">
+            <img src="~/assets/sample/sample1.jpg" alt="A speaker standing on the stage" style="width: 100%; object-fit: cover;">
           </figure>
         </div>
       </div>

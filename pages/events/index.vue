@@ -6,22 +6,28 @@
         <h1 class="subtitle has-text-grey-light">{{ $t('events.subtitle') }}</h1>
       </div>
       
-      <div class="columns is-mobile is-multiline" id="#content">
-        <div v-for="(event, index) in eventList" :key="event.id" class="column is-4-fullhd is-4-widescreen is-6-desktop is-6-tablet is-12-mobile">
-          <div class="column nmp-card-dark">
-            <h1 class="title is-4">{{ event.name }}</h1>
-            <p class="subtitle is-size-6">
-              {{ new Date(event.date).toLocaleDateString().replace(/-/g, '/') }}
-              <span class="is-size-7" v-if="event.from">{{ event.from }}</span><span class="is-size-7" v-if="event.to"> - {{ event.to }}</span>
-            </p>
-            <p class="is-size-7" v-if="$i18n.locale == 'ja'" v-html='event.summary_ja'></p>
-            <p class="is-size-7" v-if="$i18n.locale == 'en'" v-html='event.summary_en'></p>
-            <p v-if="isUpcoming(event.date) < 0" style="margin-top: 10px;">
-              <span class="tag is-danger" v-if="$i18n.locale == 'en'">Ended)</span>
-              <span class="tag is-danger" v-if="$i18n.locale == 'ja'">開催終了</span>
-            </p>
-
-          </div>
+      <div v-for="(event, index) in eventList" :key="event.id" class="" id="#content">
+        <div :class="`nmp-card-${changeColor(event.date)}`" style="margin-bottom: 1rem;">
+          <a :href="`./events/${event.id}`">
+            <div class="columns">
+              <div class="column is-5">
+                <h1 class="title is-4">{{ event.name }}</h1>
+                <p class="subtitle is-size-6">
+                  {{ new Date(event.date).toLocaleDateString().replace(/-/g, '/') }}
+                  <span class="is-size-7" v-if="event.from">{{ event.from }}</span><span class="is-size-7" v-if="event.to"> - {{ event.to }}</span>
+                </p>
+              </div>
+              <div class="column">
+                <p class="is-size-7" v-if="$i18n.locale == 'ja'"><span v-html='event.summary_ja'></span></p>
+                <p class="is-size-7" v-if="$i18n.locale == 'en'"><span v-html='event.summary_en'></span></p>
+                <p class="is-size-7 has-text-right" v-if="isUpcoming(event.date) < 0" style="margin-top: 10px;">
+                  <!-- {{ $t('button.readmore') }} -->
+                  <span class="tag is-dark" v-if="$i18n.locale == 'en'">Ended</span>
+                  <span class="tag is-dark" v-if="$i18n.locale == 'ja'">開催終了</span>
+                </p>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </section>
@@ -45,7 +51,12 @@ export default {
       { 
         hid: 'description', 
         name: 'description', 
-        content: "TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. Our event is called TEDxUTsukuba, where x = independently organized TED event. " 
+        content: "Explore our upcoming events that bring people together to learn, talk, and collaborate." 
+      },
+      { 
+        hid: 'og:description', 
+        name: 'og:description', 
+        content: "Explore our upcoming events that bring people together to learn, talk, and collaborate." 
       },
       { 
         hid: 'twitter:card', 
@@ -80,7 +91,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://www.tedxutsukuba.com/u_logo_banner.jpg'
+        content: 'https://www.tedxutsukuba.com/twitter_summary.png'
       }
     ]
   },
@@ -90,6 +101,14 @@ export default {
       const diff = new Date(eventDate).getTime() - new Date().getTime()
       console.log(diff)
       return diff
+    },
+    changeColor(eventDate) {
+      const diff = new Date(eventDate).getTime() - new Date().getTime()
+      if (diff > 0) {
+        return 'red'
+      } else {
+        return 'dark'
+      }
     }
   },
   mounted(){
