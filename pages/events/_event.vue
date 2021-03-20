@@ -83,6 +83,58 @@ export default {
       regex: /-/g,
     }
   },
+  head: {
+    title: '2020 JIJIMUGE',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { 
+        hid: 'description', 
+        name: 'description', 
+        content: "Description comes here" 
+      },
+      { 
+        hid: 'twitter:card', 
+        name: 'twitter:card', 
+        content: 'summary' 
+      },
+      { 
+        hid: 'twitter:site', 
+        name: 'twitter:site', 
+        content: '@tedxutsukuba' 
+      },
+      { 
+        hid: 'twitter:creator', 
+        name: 'twitter:creator', 
+        content: '@tedxutsukuba' 
+      },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: 'TEDxUTsukuba 2020 JIJIMUGE'
+      },
+      {
+        hid: 'og:type',
+        property: 'og:type',
+        content: 'website'
+      },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://tedxutsukuba.com/events/'
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: "2020年11月29日(日) オンライン開催。TEDxUTsukuba's annual conference is going virtual this year. "
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'https://www.tedxutsukuba.com/u_logo_banner.png'
+      }
+    ]
+  },
   // methods: {
   //   getData (apiUrl) {
   //     // this.$jsonp(url, dataObj, timeout) で使える。 Vueコンポーネント内だとthisで呼び出せる。
