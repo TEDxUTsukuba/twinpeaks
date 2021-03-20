@@ -1,6 +1,6 @@
 <template>
   <section id="wrapper-dark">
-    <div class="container">
+    <section class="section">
       <div class="nmp-card has-text-centered-mobile has-text-left">
         <h1 class="title is-1 is-spaced">{{ $t('talks.title') }}</h1>
         <h1 class="subtitle has-text-grey-light">{{ $t('talks.subtitle') }}</h1>
@@ -61,7 +61,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </section>
 </template>
 
