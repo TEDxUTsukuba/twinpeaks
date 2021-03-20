@@ -15,9 +15,28 @@
       <div class="column is-7">
         <h1 class="is-size-4"><i class="mdi mdi-export-variant" /></h1>
       </div>
+      <!-- 申込必要の場合のみ描画 -->
       <div class="column is-5 has-text-centered" v-if="eventData.isSignupRequired == true">
-        <a :href="eventData.signup_url" target="_blank" class="level-item button is-white is-gradient is-rounded is-fullwidth">Sign up</a>
-        <!-- <span class="is-size-7 has-text-grey-light">Sign up before {{ new Date(eventData.signup_deadline).toLocaleDateString().replace(regex, '/') }}</span> -->
+        <!-- 申込開始日より前 -->
+        <b-tooltip v-if="eventData.signup_open !== undefined && isBefore(eventData.signup_open) > 0" :label="`Registration will be open in ${new Date(eventData.signup_open).toLocaleDateString()}`" position="is-top" type="is-primary" style="width: 100%;">
+          <a class="level-item button is-white is-gradient is-rounded is-fullwidth" disabled>Sign up</a>
+        </b-tooltip>
+        <!-- 申込終了日より前 -->
+        <b-tooltip v-else-if="isBefore(eventData.signup_close) > 0" :label="`Registration ends in ${new Date(eventData.signup_close)}`" position="is-top" type="is-primary" style="width: 100%;">
+          <a :href="eventData.signup_url" target="_blank" rel="noopener noreferrer" class="level-item button is-white is-gradient is-rounded is-fullwidth">Sign up</a>
+        </b-tooltip>
+        <!-- 申込終了日がなく、開催日より前 -->
+        <b-tooltip v-else-if="eventData.signup_close === undefined && isBefore(eventData.date) > 0" label="Sign up now!" position="is-top" type="is-primary" style="width: 100%;">
+          <a :href="eventData.signup_url" target="_blank" rel="noopener noreferrer" class="level-item button is-white is-gradient is-rounded is-fullwidth">Sign up</a>
+        </b-tooltip>
+        <!-- 申込終了日より後 -->
+        <b-tooltip v-else-if="isBefore(eventData.signup_close) < 0" :label="`Registration closed in ${new Date(eventData.signup_close).toLocaleDateString()}`" position="is-top" type="is-primary" style="width: 100%;">
+          <a class="button is-white is-gradient is-rounded is-fullwidth" disabled>Sign up</a>
+        </b-tooltip>
+        <!-- 申込終了日がなく、開催日より後 -->
+        <b-tooltip v-else label="Registration closed" position="is-top" type="is-primary" style="width: 100%;">
+          <a class="button is-white is-gradient is-rounded is-fullwidth" disabled>Sign up</a>
+        </b-tooltip>
       </div>
     </div>
     <hr style="margin: 0.5rem 0 1rem 0;">
@@ -28,10 +47,10 @@
           <hr>
           Share With Friends
           <br>
-          <a href="" target="_blank" class="is-size-4 has-text-dark"><i class="mdi mdi-twitter" /></a>
+          <a href="" target="_blank" rel="noopener noreferrer" class="is-size-4 has-text-dark"><i class="mdi mdi-twitter" /></a>
           <!-- <a href="https://twitter.com/intent/tweet?button_hashtag=TEDxUTsukuba&ref_src=twsrc%5Etfw" class="button is-rounded" data-show-count="false"><i class="mdi mdi-twitter" />Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
-          <a href="" target="_blank" class="is-size-4 has-text-dark"><i class="mdi mdi-facebook" /></a>
-          <a href="" target="_blank" class="is-size-4 has-text-dark"><i class="mdi mdi-link-variant" /></a>
+          <a href="" target="_blank" rel="noopener noreferrer" class="is-size-4 has-text-dark"><i class="mdi mdi-facebook" /></a>
+          <a href="" target="_blank" rel="noopener noreferrer" class="is-size-4 has-text-dark"><i class="mdi mdi-link-variant" /></a>
       </div>
       <aside class="container column is-5">
         <p class="is-size-5">{{ new Date(eventData.date).toLocaleDateString().replace(regex, '/') }}</p>
@@ -41,21 +60,21 @@
         <div v-if="eventData.type === 'virtual'">
           <p class="is-size-5">Virtual Event</p>
           <p>{{ eventData.webcast }}</p>
-          <a :href="eventData.webcast_url" target="_blank" class="is-size-6">Join webcast</a>
+          <a :href="eventData.webcast_url" target="_blank" rel="noopener noreferrer" class="is-size-6">Join webcast</a>
         </div>
         <div v-else-if="eventData.type === 'hybrid'">
           <p class="is-size-5">Hybrid Event</p>
           <p>{{ eventData.webcast }}</p>
-          <a :href="eventData.webcast_url" target="_blank" class="is-size-6">Join webcast</a><br>
+          <a :href="eventData.webcast_url" target="_blank" rel="noopener noreferrer" class="is-size-6">Join webcast</a><br>
           <span class="is-size-6" v-if="$i18n.locale == 'ja'">{{ eventData.location_ja }}</span><br>
           <span class="is-size-6" v-if="$i18n.locale == 'en'">{{ eventData.location_en }}</span><br>
-          <a :href="eventData.googlemaps" target="_blank" class="is-size-6">Open in Google Maps</a>
+          <a :href="eventData.googlemaps" target="_blank" rel="noopener noreferrer" class="is-size-6">Open in Google Maps</a>
         </div>
         <div v-else>
           <p class="is-size-5">Location</p>
           <p v-if="$i18n.locale == 'ja'">{{ eventData.location_ja }}</p>
           <p v-if="$i18n.locale == 'en'">{{ eventData.location_en }}</p>
-          <a :href="eventData.googlemaps" target="_blank" class="is-size-6">Open in Google Maps</a>
+          <a :href="eventData.googlemaps" target="_blank" rel="noopener noreferrer" class="is-size-6">Open in Google Maps</a>
         </div>
         <hr>
         <p v-if="eventData.isFree === false" class="is-size-6 mb-6">
@@ -156,6 +175,12 @@ export default {
       } else {
         return (Math.floor(diff/(1000*60*60*24)) + 1).toString() + ' days to go'
       }
+    },
+    isBefore(eventDate) {
+      // 現在の日付との差分を取得
+      const diff = new Date(eventDate).getTime() - new Date().getTime()
+      // console.log(diff)
+      return diff
     }
   //   getData (apiUrl) {
   //     // this.$jsonp(url, dataObj, timeout) で使える。 Vueコンポーネント内だとthisで呼び出せる。
