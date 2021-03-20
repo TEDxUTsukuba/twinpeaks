@@ -47,18 +47,20 @@
           <p class="is-size-5">Hybrid Event</p>
           <p>{{ eventData.webcast }}</p>
           <a :href="eventData.webcast_url" target="_blank" class="is-size-6">Join webcast</a><br>
-          <span class="is-size-6">{{ eventData.location }}</span><br>
+          <span class="is-size-6" v-if="$i18n.locale == 'ja'">{{ eventData.location_ja }}</span><br>
+          <span class="is-size-6" v-if="$i18n.locale == 'en'">{{ eventData.location_en }}</span><br>
           <a :href="eventData.googlemaps" target="_blank" class="is-size-6">Open in Google Maps</a>
         </div>
         <div v-else>
           <p class="is-size-5">Location</p>
-          <p>{{ eventData.location }}</p>
+          <p v-if="$i18n.locale == 'ja'">{{ eventData.location_ja }}</p>
+          <p v-if="$i18n.locale == 'en'">{{ eventData.location_en }}</p>
           <a :href="eventData.googlemaps" target="_blank" class="is-size-6">Open in Google Maps</a>
         </div>
         <hr>
         <p v-if="eventData.isFree === false" class="is-size-6 mb-6">
-          Adult: JPY {{ eventData.fee_adult}}<br>
-          Student: JPY {{ eventData.fee_student }}
+          Adult: JPY {{ eventData.fee_adult.toLocaleString() }}<br>
+          Student: JPY {{ eventData.fee_student.toLocaleString() }}
         </p>
         <p v-else class="is-size-5 mb-6">
           Free
@@ -141,6 +143,11 @@ export default {
       }
     ]
   },
+  filters: {
+    currencydecimal (value) {
+      return 
+    }
+  },
   methods: {
     getDaysTogo(eventDate){
       const diff = new Date(eventDate).getTime() - new Date().getTime();
@@ -209,7 +216,7 @@ export default {
     }
   }
   .wallpaper {
-    filter: contrast(75%);
+    filter: brightness(90%);
     width: 100%;
     padding: 0;
     height: 30vh;
