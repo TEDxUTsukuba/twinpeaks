@@ -10,10 +10,10 @@
             <h1 class="title is-4">
               {{ talk.title }}
             </h1>
-            <h1 class="subtitle is-5" v-if="$i18n.locale == 'ja'">
+            <h1 class="subtitle is-5 has-text-grey" v-if="$i18n.locale == 'ja'">
               {{ talk.speaker_name }}
             </h1>
-            <h1 class="subtitle is-5" v-if="$i18n.locale == 'en'">
+            <h1 class="subtitle is-5 has-text-grey" v-if="$i18n.locale == 'en'">
               {{ talk.speaker_name_alt }}
             </h1>
           </div>
@@ -30,10 +30,10 @@
             <h1 class="title is-4">
               {{ talk.title }}
             </h1>
-            <h1 class="subtitle is-5" v-if="$i18n.locale == 'ja'">
+            <h1 class="subtitle is-5 has-text-grey" v-if="$i18n.locale == 'ja'">
               {{ talk.speaker_name }}
             </h1>
-            <h1 class="subtitle is-5" v-if="$i18n.locale == 'en'">
+            <h1 class="subtitle is-5 has-text-grey" v-if="$i18n.locale == 'en'">
               {{ talk.speaker_name_alt }}
             </h1>
           </div>
