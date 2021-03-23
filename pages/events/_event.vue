@@ -5,39 +5,37 @@
         <img class="wallpaper" v-if="eventData.thumbnail" :src="`/sample/${eventData.thumbnail}.jpg`">
       </div>
       <aside class="column container is-5" style="display: flex; justify-content: middle; align-items: center;">
-        <div>
-          <p class="is-uppercase">{{ getDaysTogo(eventData.date) }}</p><br>
+        <div class="is-block">
+          <p class="is-uppercase is-menlo has-text-primary">{{ getDaysTogo(eventData.date) }}</p><br>
           <h1 class="title is-3">{{ eventData.name }}</h1>
+          <br>
+          <div v-if="eventData.isSignupRequired == true">
+            <!-- 申込開始日より前 -->
+            <b-tooltip v-if="eventData.signup_open !== undefined && isBefore(eventData.signup_open) > 0" :label="`Registration will be open in ${new Date(eventData.signup_open).toLocaleDateString()}`" position="is-top" type="is-primary" style="width: 100%;">
+              <a class="level-item button is-white is-gradient is-rounded is-fullwidth" disabled>Sign up</a>
+            </b-tooltip>
+            <!-- 申込終了日より前 -->
+            <b-tooltip v-else-if="isBefore(eventData.signup_close) > 0" :label="`Registration ends in ${new Date(eventData.signup_close)}`" position="is-top" type="is-primary" style="width: 100%;">
+              <a :href="eventData.signup_url" target="_blank" rel="noopener noreferrer" class="level-item button is-white is-gradient is-rounded is-fullwidth">Sign up</a>
+            </b-tooltip>
+            <!-- 申込終了日がなく、開催日より前 -->
+            <b-tooltip v-else-if="eventData.signup_close === undefined && isBefore(eventData.date) > 0" label="Sign up now!" position="is-top" type="is-primary" style="width: 100%;">
+              <a :href="eventData.signup_url" target="_blank" rel="noopener noreferrer" class="level-item button is-white is-gradient is-rounded is-fullwidth">Sign up</a>
+            </b-tooltip>
+            <!-- 申込終了日より後 -->
+            <b-tooltip v-else-if="isBefore(eventData.signup_close) < 0" :label="`Registration closed in ${new Date(eventData.signup_close).toLocaleDateString()}`" position="is-top" type="is-primary" style="width: 100%;">
+              <a class="button is-white is-gradient is-rounded is-fullwidth" disabled>Sign up</a>
+            </b-tooltip>
+            <!-- 申込終了日がなく、開催日より後 -->
+            <b-tooltip v-else label="Registration closed" position="is-top" type="is-primary" style="width: 100%;">
+              <a class="button is-white is-gradient is-rounded is-fullwidth" disabled>Sign up</a>
+            </b-tooltip>
+          </div>
+          <div v-else>
+            <p>No Sign Up Required</p>
+          </div>
         </div>
       </aside>
-    </div>
-    <div class="columns">
-      <div class="column is-7">
-        <!-- <h1 class="is-size-4"><i class="mdi mdi-export-variant" /></h1> -->
-      </div>
-      <!-- 申込必要の場合のみ描画 -->
-      <div class="column is-5 has-text-centered" v-if="eventData.isSignupRequired == true">
-        <!-- 申込開始日より前 -->
-        <b-tooltip v-if="eventData.signup_open !== undefined && isBefore(eventData.signup_open) > 0" :label="`Registration will be open in ${new Date(eventData.signup_open).toLocaleDateString()}`" position="is-top" type="is-primary" style="width: 100%;">
-          <a class="level-item button is-white is-gradient is-rounded is-fullwidth" disabled>Sign up</a>
-        </b-tooltip>
-        <!-- 申込終了日より前 -->
-        <b-tooltip v-else-if="isBefore(eventData.signup_close) > 0" :label="`Registration ends in ${new Date(eventData.signup_close)}`" position="is-top" type="is-primary" style="width: 100%;">
-          <a :href="eventData.signup_url" target="_blank" rel="noopener noreferrer" class="level-item button is-white is-gradient is-rounded is-fullwidth">Sign up</a>
-        </b-tooltip>
-        <!-- 申込終了日がなく、開催日より前 -->
-        <b-tooltip v-else-if="eventData.signup_close === undefined && isBefore(eventData.date) > 0" label="Sign up now!" position="is-top" type="is-primary" style="width: 100%;">
-          <a :href="eventData.signup_url" target="_blank" rel="noopener noreferrer" class="level-item button is-white is-gradient is-rounded is-fullwidth">Sign up</a>
-        </b-tooltip>
-        <!-- 申込終了日より後 -->
-        <b-tooltip v-else-if="isBefore(eventData.signup_close) < 0" :label="`Registration closed in ${new Date(eventData.signup_close).toLocaleDateString()}`" position="is-top" type="is-primary" style="width: 100%;">
-          <a class="button is-white is-gradient is-rounded is-fullwidth" disabled>Sign up</a>
-        </b-tooltip>
-        <!-- 申込終了日がなく、開催日より後 -->
-        <b-tooltip v-else label="Registration closed" position="is-top" type="is-primary" style="width: 100%;">
-          <a class="button is-white is-gradient is-rounded is-fullwidth" disabled>Sign up</a>
-        </b-tooltip>
-      </div>
     </div>
     <hr style="margin: 0.5rem 0 1rem 0;">
     <div class="columns is-variable is-5">
@@ -47,10 +45,9 @@
           <br>
           <p v-if="$i18n.locale == 'ja'" v-html='eventData.description_en'></p>
           <p v-if="$i18n.locale == 'en'" v-html='eventData.description_ja'></p>
-          <div v-if="eventData.external_url"><hr><a :href="eventData.external_url">{{ eventData.external_url }}</a></div>
+          <div v-if="eventData.external_url"><hr><a :href="eventData.external_url" class="is-size-6">{{ eventData.external_url }}</a></div>
           <hr>
-          Share With Friends
-          <br>
+          <p>Share With Friends</p>
           <a v-if="$i18n.locale == 'ja'" :href="`https://twitter.com/intent/tweet?text=${eventData.name}に参加しよう！&url=https://tedxutsukuba.com/events/${eventData.id}`" target="_blank" rel="noopener noreferrer" class="is-size-4 has-text-dark" data-show-count="false"><i class="mdi mdi-twitter" /></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           <a v-if="$i18n.locale == 'en'" :href="`https://twitter.com/intent/tweet?text=Join ${eventData.name}&url=https://tedxutsukuba.com/events/${eventData.id}`" target="_blank" rel="noopener noreferrer" class="is-size-4 has-text-dark" data-show-count="false"><i class="mdi mdi-twitter" /></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           <!-- <a href="https://twitter.com/intent/tweet?button_hashtag=TEDxUTsukuba&ref_src=twsrc%5Etfw" class="button is-rounded" data-show-count="false"><i class="mdi mdi-twitter" />Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
@@ -272,5 +269,8 @@ export default {
     padding: 0;
     height: 30vh;
     object-fit: cover;
+  }
+  .is-menlo {
+    font-family: "Menlo", "Courier", monospace;
   }
 </style>

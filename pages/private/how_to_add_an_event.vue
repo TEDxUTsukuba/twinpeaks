@@ -12,6 +12,8 @@
       </p>
     </div>
     <hr>
+    <img src="/sample/Screenshot_2021-03-23 Event TEDxUTsukuba.png" style="box-shadow: 0px 10px 20px rgba(0,0,0,0.4);" alt="Event Info Image">
+    <hr>
     <h1 class="title has-text-centered">
       Basic Usage
     </h1>
