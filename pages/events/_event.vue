@@ -13,7 +13,7 @@
     </div>
     <div class="columns">
       <div class="column is-7">
-        <h1 class="is-size-4"><i class="mdi mdi-export-variant" /></h1>
+        <!-- <h1 class="is-size-4"><i class="mdi mdi-export-variant" /></h1> -->
       </div>
       <!-- 申込必要の場合のみ描画 -->
       <div class="column is-5 has-text-centered" v-if="eventData.isSignupRequired == true">
@@ -44,18 +44,41 @@
       <div class="container column is-7">
           <p v-if="$i18n.locale == 'ja'" v-html='eventData.description_ja'></p>
           <p v-if="$i18n.locale == 'en'" v-html='eventData.description_en'></p>
+          <div v-if="eventData.external_url"><hr><a :href="eventData.external_url">{{ eventData.external_url }}</a></div>
           <hr>
           Share With Friends
           <br>
-          <a href="" target="_blank" rel="noopener noreferrer" class="is-size-4 has-text-dark"><i class="mdi mdi-twitter" /></a>
+          <a v-if="$i18n.locale == 'ja'" :href="`https://twitter.com/intent/tweet?text=${eventData.name}に参加しよう！&url=https://tedxutsukuba.com/events/${eventData.id}`" target="_blank" rel="noopener noreferrer" class="is-size-4 has-text-dark" data-show-count="false"><i class="mdi mdi-twitter" /></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <a v-if="$i18n.locale == 'en'" :href="`https://twitter.com/intent/tweet?text=Join ${eventData.name}&url=https://tedxutsukuba.com/events/${eventData.id}`" target="_blank" rel="noopener noreferrer" class="is-size-4 has-text-dark" data-show-count="false"><i class="mdi mdi-twitter" /></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           <!-- <a href="https://twitter.com/intent/tweet?button_hashtag=TEDxUTsukuba&ref_src=twsrc%5Etfw" class="button is-rounded" data-show-count="false"><i class="mdi mdi-twitter" />Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
-          <a href="" target="_blank" rel="noopener noreferrer" class="is-size-4 has-text-dark"><i class="mdi mdi-facebook" /></a>
-          <a href="" target="_blank" rel="noopener noreferrer" class="is-size-4 has-text-dark"><i class="mdi mdi-link-variant" /></a>
+          <!-- <a href="" target="_blank" rel="noopener noreferrer" class="is-size-4 has-text-dark"><i class="mdi mdi-facebook" /></a> -->
+          <!-- <a href="" target="_blank" rel="noopener noreferrer" class="is-size-4 has-text-dark"><i class="mdi mdi-link-variant" /></a> -->
       </div>
       <aside class="container column is-5">
         <p class="is-size-5">{{ new Date(eventData.date).toLocaleDateString().replace(regex, '/') }}</p>
         <p class=""><span v-if="eventData.from">{{ eventData.from }}</span><span v-if="eventData.to"> - {{ eventData.to }}</span></p>
-        <a href="" class="is-size-6">Add to Calendar</a>
+        <!-- <a href="" class="is-size-6">Add to Calendar</a>
+        <no-ssr>
+          <add-to-calendar
+            :title="eventData.name" 
+            :location="eventData.location || eventData.webcast_url" 
+            start=""
+            to=""
+            :details="eventData.summary_ja + '<br>' + eventData.summary_en + '<br><br>www.tedxutsukuba.com/events'" 
+            inline-template>
+            <div>
+              <google-calendar id="google-calendar">
+                <i class="mdi mdi-google" />
+              </google-calendar>  
+              <microsoft-calendar id="microsoft-calendar">
+                <i class="mdi mdi-microsoft-outlook" />
+              </microsoft-calendar>
+              <office365-calendar id="office365-calendar">
+                <i class="mdi mdi-microsoft-office" />
+              </office365-calendar>
+            </div>
+          </add-to-calendar>
+        </no-ssr> -->
         <hr>
         <div v-if="eventData.type === 'virtual'">
           <p class="is-size-5">Virtual Event</p>
@@ -202,14 +225,14 @@ export default {
       crossDomain: true
     }).then(response => this.eventData = response.data[0]);
   }
-  // async asyncData({ $axios }) {
+  // async asyncData({ $axios, params }) {
   //   try {
-  //     const api_url = 'https://script.google.com/macros/s/AKfycbzLxjNxZLZ5izrM5boDp0nM396uyzReduC7nr2axZepkPhXUJwS9sP3_rn3268EOP49bw/exec?id=${}';
+  //     const api_url = `https://script.google.com/macros/s/AKfycbzLxjNxZLZ5izrM5boDp0nM396uyzReduC7nr2axZepkPhXUJwS9sP3_rn3268EOP49bw/exec?id=${params.event}`;
   //     const res = await $axios.$get(api_url, {
   //       crossDomain: true
   //     })
   //     return {
-  //       eventData: res[1]
+  //       eventData: res
   //     }
   //   }catch(error) {
   //     console.log('Error occurred while getting data')
