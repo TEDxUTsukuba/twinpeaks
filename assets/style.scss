@@ -12,6 +12,11 @@
   }
 }
 
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 $primary: #FF2B06;
 // #E62B1E;
 $primary-invert: findColorInvert($primary);
