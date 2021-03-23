@@ -53,6 +53,7 @@
           <!-- <a href="https://twitter.com/intent/tweet?button_hashtag=TEDxUTsukuba&ref_src=twsrc%5Etfw" class="button is-rounded" data-show-count="false"><i class="mdi mdi-twitter" />Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
           <!-- <a href="" target="_blank" rel="noopener noreferrer" class="is-size-4 has-text-dark"><i class="mdi mdi-facebook" /></a> -->
           <!-- <a href="" target="_blank" rel="noopener noreferrer" class="is-size-4 has-text-dark"><i class="mdi mdi-link-variant" /></a> -->
+          <br><br>
       </div>
       <aside class="container column is-5">
         <p class="is-size-5">{{ new Date(eventData.date).toLocaleDateString().replace(regex, '/') }}</p>

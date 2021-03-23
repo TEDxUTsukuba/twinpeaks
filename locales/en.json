@@ -348,6 +348,8 @@
   "events": {
     "title": "Our Events",
     "subtitle": "Filled with curiocity and excitement, you will discover new ideas, opportunities & so much more!",
-    "upcoming": "Upcoming Events"
+    "upcoming": "Upcoming Events",
+    "main": "Annual Main Event",
+    "other": "Events"
   }
 }
