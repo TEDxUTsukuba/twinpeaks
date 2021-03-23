@@ -40,7 +40,7 @@
                     </h1>
                     <h1 v-if="$i18n.locale == 'en'" class="title is-2 is-size-4-mobile has-text-weight-light">
                       {{ $t('intro.headline1') }}
-                      <br>
+                      <br class="mobile-br">
                       {{ $t('intro.headline2') }}
                     </h1>
                      <img id="rocket" src="~/assets/svg/rocket.png" width="100%" style="z-index: 0;">
@@ -173,7 +173,7 @@ export default {
     const scene1 = this.$scrollmagic
       .scene({
         triggerElement: '#wrapper-dark',
-        triggerHook: 1,
+        triggerHook: 0.5,
         offset: 10,
         duration: 300,
         reverse: false
@@ -187,7 +187,7 @@ export default {
     const scene2 = this.$scrollmagic
       .scene({
         triggerElement: '#top-title',
-        triggerHook: 1,
+        triggerHook: 0.5,
         offset: 0,
         reverse: false
       })

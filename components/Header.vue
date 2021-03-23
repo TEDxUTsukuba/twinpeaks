@@ -11,7 +11,7 @@
     </template>
     <template slot="start">
       <b-navbar-item>
-        <span class="is-size-7 has-text-grey" style="font-stretch: condensed; font-family: DIN Condensed, Open Sans Condensed, Bahnschrift Condensed, sans-serif;">{{ isCelebration() }}</span>
+        <span class="is-size-7 has-text-grey">{{ isCelebration() }}</span>
       </b-navbar-item>
     </template>
     <template slot="end">
@@ -135,7 +135,7 @@ export default {
       console.log(month, date)
       const data = this.celebrationdays.find(item => item.month === month && item.date === date)
       if (data === undefined) {
-        return ""
+        return "A hub for Tsukuba's ideas"
       } else if (this.$i18n.locale !== 'en') {
         return "Celebrating " + data.title_en
       } else {
@@ -150,7 +150,7 @@ export default {
 <style lang="scss" scoped>
   .navbar-item, .navbar-link {
     font-weight: bold;
-    font-size: 125%;
+    // font-size: 125%;
     // color: lightgray !important;
   }
   .normal-category:hover {
