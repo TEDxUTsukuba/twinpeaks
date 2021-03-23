@@ -44,6 +44,9 @@
       <div class="container column is-7">
           <p v-if="$i18n.locale == 'ja'" v-html='eventData.description_ja'></p>
           <p v-if="$i18n.locale == 'en'" v-html='eventData.description_en'></p>
+          <br>
+          <p v-if="$i18n.locale == 'ja'" v-html='eventData.description_en'></p>
+          <p v-if="$i18n.locale == 'en'" v-html='eventData.description_ja'></p>
           <div v-if="eventData.external_url"><hr><a :href="eventData.external_url">{{ eventData.external_url }}</a></div>
           <hr>
           Share With Friends
@@ -264,7 +267,7 @@ export default {
     }
   }
   .wallpaper {
-    filter: brightness(90%);
+    filter: brightness(95%);
     width: 100%;
     padding: 0;
     height: 30vh;
