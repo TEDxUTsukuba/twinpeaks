@@ -74,9 +74,8 @@ export default {
   ** Customize the progress-bar color
   */
   loading: {
-    name: 'circle',
     color: 'red',
-    background: 'white'
+    height: '5px'
   },
 
   loadingIndicator: {
@@ -99,6 +98,10 @@ export default {
   plugins: [
     {
       src: '~/plugins/vue-scrollmagic.js',
+      ssr: false
+    },
+    {
+      src: '~/plugins/vue-add-to-calendar.js',
       ssr: false
     }
   ],
@@ -167,7 +170,7 @@ export default {
         path: '/sitemap.xml',
         hostname: 'https://www.tedxutsukuba.com',
         exclude: [
-          '/explore', '/inspire', '/talks_old', '/loading', '/2019'
+          '/explore', '/inspire', '/talks_old', '/loading', '/2019', '/events/how_to_add_an_event'
         ]
       }
     ]
@@ -221,7 +224,8 @@ export default {
         fs: 'empty',
         googleapis: 'empty',
         child_process: 'empty'
-      }
+      },
+      config.resolve.alias['vue'] = 'vue/dist/vue.common'
     }
   },
   generate: {

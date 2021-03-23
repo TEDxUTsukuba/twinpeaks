@@ -1,0 +1,10 @@
+User-Agent: *
+Allow: /
+
+User-agent: twitterbot
+Allow: /private/, /about/utsukuba/index.html
+
+user-agent: Googlebot-Image
+Disallow: /about/utsukuba/index.html
+
+Sitemap:https://www.tedxutsukuba.com/sitemap.xml

@@ -217,6 +217,7 @@ export default {
     return {
       memberList: {},
       showContent: false,
+      autoPlay: false,
       postItem: "",
       jobs: jobs,
       videoId: '7PQWXvgYZ4Y',
