@@ -99,6 +99,10 @@ export default {
     {
       src: '~/plugins/vue-scrollmagic.js',
       ssr: false
+    },
+    {
+      src: '~/plugins/vue-add-to-calendar.js',
+      ssr: false
     }
   ],
   /*
@@ -220,7 +224,8 @@ export default {
         fs: 'empty',
         googleapis: 'empty',
         child_process: 'empty'
-      }
+      },
+      config.resolve.alias['vue'] = 'vue/dist/vue.common'
     }
   },
   generate: {
