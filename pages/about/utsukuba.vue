@@ -135,6 +135,7 @@
         <div class="container has-text-centered">
           <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.join.title')}}</h1>
           <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.utsukuba.join.subtitle')}}</h1>
+          <nuxt-link to="/events" class="button is-rounded is-gradient">新歓イベントを探す</nuxt-link>
         </div>
       </div>
     </section>

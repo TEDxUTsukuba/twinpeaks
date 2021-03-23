@@ -79,11 +79,15 @@ export default {
 <style lang="scss">
 
 .indicator-item figure img {
-  border: 2px solid gray;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 5px solid #333333;
+  // border: 2px solid gray;
   // filter: grayscale(80%);
 }
 .indicator-item.is-active figure img {
-  border: 2px solid white;
+  border-top: 5px solid red;
+  // border: 2px solid white;
   // filter: grayscale(0);
 }
 .carousel .carousel-indicator {
