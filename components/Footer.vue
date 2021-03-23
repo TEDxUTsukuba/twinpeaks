@@ -1,65 +1,64 @@
 <template>
   <section id="wrapper" class="hero font-awesome">
-    <div class="hero-body">    
-        <section class="section has-text-centered">
-        <h1 class="title is-3 has-text-centered">
-            <span class="has-text-dark">{{ $t('social.title') }}</span>
-          </h1>
-          <a class="icon-circle fb" href="https://www.facebook.com/tedxutsukuba/" target="_blank" rel="noopener noreferrer">
-            <!-- <font-awesome-icon :icon="['fab', 'facebook-square']" /> -->
-            <iconFB alt="Facebook" style="width: 3rem;" />
-          </a>
-          <a class="icon-circle ig" href="https://www.instagram.com/tedxutsukuba/" target="_blank" rel="noopener noreferrer">
-            <!-- <font-awesome-icon :icon="['fab', 'instagram']" /> -->
-            <iconIG alt="Instagram" style="width: 3rem;" />
-          </a>
-          <a class="icon-circle tw" href="https://www.twitter.com/tedxutsukuba/" target="_blank" rel="noopener noreferrer">
-            <!-- <font-awesome-icon :icon="['fab', 'twitter']" /> -->
-            <iconTW alt="Twitter" style="width: 3rem;" />
-          </a>
-        </section>
+      <section class="section has-text-centered">
+        <h1 class="heading is-size-5 has-text-centered">
+          <span class="has-text-dark">{{ $t('social.title') }}</span>
+        </h1>
+        <a class="icon-circle fb" href="https://www.facebook.com/tedxutsukuba/" target="_blank" rel="noopener noreferrer">
+          <!-- <font-awesome-icon :icon="['fab', 'facebook-square']" /> -->
+          <iconFB alt="Facebook" style="width: 2rem;" />
+        </a>
+        <a class="icon-circle ig" href="https://www.instagram.com/tedxutsukuba/" target="_blank" rel="noopener noreferrer">
+          <!-- <font-awesome-icon :icon="['fab', 'instagram']" /> -->
+          <iconIG alt="Instagram" style="width: 2rem;" />
+        </a>
+        <a class="icon-circle tw" href="https://www.twitter.com/tedxutsukuba/" target="_blank" rel="noopener noreferrer">
+          <!-- <font-awesome-icon :icon="['fab', 'twitter']" /> -->
+          <iconTW alt="Twitter" style="width: 2rem;" />
+        </a>
+      </section>
         
-        <section class="section has-text-centered">
-          <h1 class="title is-3">
-            <span class="has-text-dark">{{ $t('covid19-info.title') }}</span>
-          </h1>
-          <p class="is-size-7">{{ $t('covid19-info.description1')}}</p>
-          
-          <!-- <div>
-            <img src="http://www.tsukuba.ac.jp/en/application/themes/tsukuba/images/logo_footer.png">
-          </div> -->
+      <section class="section has-text-centered">
+        <h1 class="heading is-size-5">
+          <span class="has-text-dark">{{ $t('covid19-info.title') }}</span>
+        </h1>
+        <p class="is-size-7">{{ $t('covid19-info.description1')}}</p>
+        
+        <!-- <div>
+          <img src="http://www.tsukuba.ac.jp/en/application/themes/tsukuba/images/logo_footer.png">
+        </div> -->
 
-          <div class="content">
-            <b-collapse :open="false" position="is-bottom" aria-id="contentIdForA11y1">
-              <a class="button is-gradient is-rounded is-small" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1" style="margin: 3rem auto 0 auto;">
-                  <b-icon :icon="!props.open ? 'chevron-down' : 'chevron-up'" class="is-size-4" style="margin-right: 1px;" /></b-icon> 
-                  {{ !props.open ? $t('button.readmore') : $t('button.readless') }}
-              </a>
-              <br><br>
-              <div class="column has-text-left">
-                <h1 class="title is-4">{{ $t('covid19-info.org.title') }}</h1>
-                <ul>
-                  <li>{{ $t('covid19-info.org.s1') }}</li>
-                  <li>{{ $t('covid19-info.org.s2') }}</li>
-                  <li>{{ $t('covid19-info.org.s3') }}</li>
-                  <li>{{ $t('covid19-info.org.s4') }}</li>
-                  <li>{{ $t('covid19-info.org.s5') }}</li>
-                </ul>
-                <h1 class="title is-4">{{ $t('covid19-info.event.title') }}</h1>
-                <ul>
-                  <li>{{ $t('covid19-info.event.s1') }}</li>
-                  <li>{{ $t('covid19-info.event.s2') }}</li>
-                  <li>{{ $t('covid19-info.event.s3') }}</li>
-                  <li>{{ $t('covid19-info.event.s4') }}</li>
-                </ul>
-                <br>
-                <p class="is-size-6">{{ $t('covid19-info.description2') }}</p>
-                <a class="button is-small is-rounded is-outlined" href="http://www.tsukuba.ac.jp/about/antidisaster/covid-19-list.html">{{ $t('covid19-info.link.university') }}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
-                <a class="button is-small is-rounded is-outlined" href="https://www.city.tsukuba.lg.jp/shisei/1010123/index.html">{{ $t('covid19-info.link.city') }}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
-                <a class="button is-small is-rounded is-outlined" href="https://www.pref.ibaraki.jp/shokorodo/chusho/shogyo/2020korona/guideline.html">{{ $t('covid19-info.link.prefecture') }}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
-              </div>
-            </b-collapse>
-          </div>
+        <div class="content">
+          <b-collapse :open="false" position="is-bottom" aria-id="contentIdForA11y1">
+            <a class="button is-dark is-rounded" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1" style="margin: 2rem auto 0 auto;">
+                <b-icon :icon="!props.open ? 'chevron-down' : 'chevron-up'" class="is-size-4" style="margin-right: 1px;" /></b-icon> 
+                {{ !props.open ? $t('button.readmore') : $t('button.readless') }}
+            </a>
+            <br>
+            <div class="column has-text-left">
+              <h1 class="title is-4">{{ $t('covid19-info.org.title') }}</h1>
+              <ul>
+                <li>{{ $t('covid19-info.org.s1') }}</li>
+                <li>{{ $t('covid19-info.org.s2') }}</li>
+                <li>{{ $t('covid19-info.org.s3') }}</li>
+                <li>{{ $t('covid19-info.org.s4') }}</li>
+                <li>{{ $t('covid19-info.org.s5') }}</li>
+              </ul>
+              <h1 class="title is-4">{{ $t('covid19-info.event.title') }}</h1>
+              <ul>
+                <li>{{ $t('covid19-info.event.s1') }}</li>
+                <li>{{ $t('covid19-info.event.s2') }}</li>
+                <li>{{ $t('covid19-info.event.s3') }}</li>
+                <li>{{ $t('covid19-info.event.s4') }}</li>
+              </ul>
+              <br>
+              <p class="is-size-6">{{ $t('covid19-info.description2') }}</p>
+              <a class="button is-small is-rounded is-outlined" href="http://www.tsukuba.ac.jp/about/antidisaster/covid-19-list.html">{{ $t('covid19-info.link.university') }}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
+              <a class="button is-small is-rounded is-outlined" href="https://www.city.tsukuba.lg.jp/shisei/1010123/index.html">{{ $t('covid19-info.link.city') }}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
+              <a class="button is-small is-rounded is-outlined" href="https://www.pref.ibaraki.jp/shokorodo/chusho/shogyo/2020korona/guideline.html">{{ $t('covid19-info.link.prefecture') }}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
+            </div>
+          </b-collapse>
+        </div>
       </section>
 
       <section class="hero has-background-black">
@@ -116,7 +115,6 @@
           </section>
         </div>
       </section>
-    </div>
 
     <!-- <div class="wrap">
         <ul class="slideshow">
@@ -193,6 +191,9 @@ export default {
     .icon {
       width: 3rem;
     }
+  }
+  .section + .section {
+    padding-top: 0 !important;
   }
 </style>
 
