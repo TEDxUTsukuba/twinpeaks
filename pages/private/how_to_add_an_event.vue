@@ -17,10 +17,10 @@
     </h1>
     <div class="notification">
       <h1 class="is-size-5">Open Google Sheets</h1>
-      <p>
-        下記のいずれかのGoogleアカウントで下記のGoogleスプレッドシートにアクセスしてください。
-      </p>
       <a class="has-text-link" href="https://docs.google.com/spreadsheets/d/15Qy3GIbFdEIJk3A-X8Zb0EIz9pixsLY9piTXzCVlhdc/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Website Event Info GAS</a>
+      <p>
+        下記のいずれかのGoogleアカウントで、このGoogleスプレッドシートにアクセスしてください。
+      </p>
       <ul>
         <li>tedxtsukuba&#64;gmail.com</li>
         <li>tedxutsukuba&#64;gmail.com</li>
@@ -48,7 +48,7 @@
     <div class="notification">
       <h1 class="is-size-5">Add new row</h1>
       <p>
-        イベントを追加するときは、<strong>開催年月日が降順</strong>になるように、新しく行を挿入するようにしてください。
+        イベントを追加するときは、<strong>開催年月日が降順（上が新しく下が古い）</strong>になるように、新しく行を挿入するようにしてください。ページ下部にある凡例を参考に、シートの各セルを埋めてください。
       </p>
     </div>
     <div class="notification">
@@ -61,7 +61,7 @@
     </div>
     <div class="notification">
       <h1 class="is-size-5">It's your turn!</h1>
-      サンプルを見る
+      <p>サンプルを見る</p>
       <a href="https://www.tedxutsukuba.com/events/20190930" target="_blank" rel="noopener noreferrer" class="has-text-link">https://www.tedxutsukuba.com/events/20190930</a>
     </div>
     <h1 class="title has-text-centered">
@@ -70,7 +70,7 @@
     <div class="notification">
       <h1 class="is-size-5">説明文のリッチテキスト化</h1>
       <p>
-        説明文* ではHTMLタグを使い、文章の一部を太字にしたり、改行を入れたりすることができます。適宜利用して、読みやすくしましょう。<br>* summary_ja, summary_en, description_ja, description_en<br><br>
+        説明文* ではHTMLタグを使い、文章の一部を太字にしたり、改行を入れたりすることができます。適宜利用して、読みやすくしましょう。<br>* description_ja, description_en<br><br>
       </p>
       <div class="table-container">
         <table class="table is-size-7">
@@ -165,36 +165,36 @@
           <tr><th>項目 (*必須)</th><th>内容</th><th>説明</th></tr>
         </thead>
         <tbody>
-          <tr><td>id*</td><td>ID</td><td><span class="tag is-family-code">YYYYMMDD</span> <span class="tag is-family-code">YYYY</span> のいずれか</td></tr>
+          <tr><td>id*</td><td>ID</td><td><span class="tag is-family-code">YYYYMMDD</span></td></tr>
           <tr><td>name*</td><td>イベント名</td><td></td></tr>
           <tr><td>type*</td><td>開催形態</td><td><span class="tag is-family-code">virtual</span> <span class="tag is-family-code">hybrid</span> <span class="tag is-family-code">onsite</span> のいずれか</td></tr>
           <tr><td>date*</td><td>開催年月日</td><td><span class="tag is-family-code">YYYY/MM/DD</span></td></tr>
           <tr><td>from</td><td>開始時刻</td><td><span class="tag is-family-code">HH:MM</span> 24時間表示・日本標準時(UTC+9)</td></tr>
           <tr><td>to</td><td>開始時刻</td><td><span class="tag is-family-code">HH:MM</span> 24時間表示・日本標準時(UTC+9)</td></tr>
           <tr><td>summary_ja</td><td>短めの紹介文(日本語)</td><td>イベント一覧ページで表示される。HTMLタグが使える。</td></tr>
-          <tr><td>summary_en</td><td>短めの紹介文(英語)</td><td>ブラウザの言語設定が英語の場合、イベント一覧ページで表示される。HTMLタグが使える。</td></tr>
-          <tr><td>description_ja</td><td>長めの紹介文(英語)</td><td>個別のイベントページで表示される。HTMLタグが使える。</td></tr>
-          <tr><td>description_en</td><td>長めの紹介文(英語)</td><td>ブラウザの言語設定が英語の場合、個別のイベントページで表示される。HTMLタグが使える。</td></tr>
+          <tr><td>summary_en</td><td>短めの紹介文(英語)</td><td>イベント一覧ページで表示される。HTMLタグが使える。</td></tr>
+          <tr><td>description_ja</td><td>長めの紹介文(日本語)</td><td>個別のイベントページで表示される。HTMLタグが使える。</td></tr>
+          <tr><td>description_en</td><td>長めの紹介文(英語)</td><td>個別のイベントページで表示される。HTMLタグが使える。</td></tr>
           <tr><td>thumbnail</td><td>サムネイル画像</td><td>上記説明参照</td></tr>
           <tr><td>location_ja</td><td>開催場所(日本語)</td><td></td></tr>
           <tr><td>location_en</td><td>開催場所(英語)</td><td></td></tr>
-          <tr><td>googlemaps</td><td>Googleマップのリンク</td><td>Googleマップで位置情報を選択し共有ボタンを押して取得したリンクを貼り付ける。</td></tr>
-          <tr><td>webcast</td><td>ウェブキャストのリンク</td><td>映像配信サイトの名前</td></tr>
-          <tr><td>webcast_url</td><td>ウェブキャストのリンク</td><td>映像配信サイトのURL</td></tr>
+          <tr><td>googlemaps</td><td>Googleマップのリンク</td><td>Googleマップで位置情報を選択し、共有ボタンを押して取得したリンクを貼り付ける。</td></tr>
+          <tr><td>webcast</td><td>映像配信サイトの名前</td><td></td></tr>
+          <tr><td>webcast_url</td><td>映像配信サイトのURL</td><td></td></tr>
           <tr><td>external_url</td><td>外部サイトのリンク</td><td>イベントに関連するウェブサイトのリンクがあれば (TED.comのページなど)</td></tr>
           <tr><td>isSignupRequired</td><td>参加申込の有無</td><td><span class="tag is-family-code">true</span> <span class="tag is-family-code">false</span> のいずれか</td></tr>
           <tr><td>signup_open</td><td>参加申込の開始日</td><td><span class="tag is-family-code">YYYY/MM/DD</span></td></tr>
           <tr><td>signup_close</td><td>参加申込の終了日</td><td><span class="tag is-family-code">YYYY/MM/DD</span></td></tr>
           <tr><td>signup_url</td><td>参加申込のリンク</td><td></td></tr>
           <tr><td>isFree</td><td>無料かどうか</td><td><span class="tag is-family-code">true</span> <span class="tag is-family-code">false</span> のいずれか</td></tr>
-          <tr><td>fee_student</td><td>チケット価格(学生)</td><td>数値</td></tr>
           <tr><td>fee_adult</td><td>チケット価格(一般)</td><td>数値</td></tr>
+          <tr><td>fee_student</td><td>チケット価格(学生)</td><td>数値</td></tr>
         </tbody>
       </table>
     </div>
     <p class="">
       <ul>
-        <li>最終更新: 2021/03/21</li>
+        <li>最終更新: 2021/03/23</li>
         <li>執筆者: 木下晴貴</li>
         <li>連絡先: harukikinoshita&#64;outlook.com</li>
       </ul>
