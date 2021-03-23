@@ -13,12 +13,12 @@ export default {
       { 
         hid: 'description', 
         name: 'description', 
-        content: 'TEDxUTsukuba is an independently organised TEDx community managed by passionate students and alumni at the University of Tsukuba. Join us for conversations on local stories to global issues.'
+        content: 'TEDxUTsukuba is an independently organised TEDx community managed by passionate students and alumni at the University of Tsukuba. Join us for a wide spectrum of conversations on local stories to global issues.'
       },
       {
         hid: 'og:title',
         property: 'og:title',
-        content: 'TEDxUTsukuba'
+        content: "TEDxUTsukuba | A hub for Tsukuba's ideas"
       },
       {
         hid: 'og:description',
@@ -151,6 +151,12 @@ export default {
         lazy: true,
         // 言語ファイル(.json)のディレクトリを記載
         langDir: 'locales/',
+      }
+    ],
+    [
+      'nuxt-canonical', 
+      {
+        baseUrl: 'https://www.tedxutsukuba.com'
       }
     ],
     '@nuxtjs/axios',
