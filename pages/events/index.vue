@@ -5,7 +5,6 @@
         <h1 class="title is-1 is-spaced">{{ $t('events.title') }}</h1>
         <h1 class="subtitle has-text-grey-light">{{ $t('events.subtitle') }}</h1>
       </div>
-      
       <div v-for="(event, index) in eventList" :key="event.id" class="" id="#content">
         <div :class="`nmp-card-${changeColor(event.date)}`" style="margin-bottom: 1rem;">
           <a :href="`./events/${event.id}`">
@@ -40,7 +39,8 @@ import axios from 'axios';
 export default {
   data() {
     return {
-      eventList: {}
+      eventList: {},
+      dataLoadFinish: false
     }
   },
   head: {
@@ -86,7 +86,7 @@ export default {
       {
         hid: 'og:url',
         property: 'og:url',
-        content: 'https://tedxutsukuba.com/events'
+        content: 'https://www.tedxutsukuba.com/events'
       },
       {
         hid: 'og:image',
@@ -99,7 +99,7 @@ export default {
     isUpcoming(eventDate) {
       // 現在の日付との差分を取得
       const diff = new Date(eventDate).getTime() - new Date().getTime()
-      console.log(diff)
+      // console.log(diff)
       return diff
     },
     changeColor(eventDate) {
@@ -116,7 +116,6 @@ export default {
     axios.get(api_url, {
       crossDomain: true
     }).then(response => this.eventList = response.data);
-  
   // const scene1 = this.$scrollmagic
   //   .scene({
   //     triggerElement: '#trigger',
