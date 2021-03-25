@@ -5,7 +5,12 @@
         <h1 class="subtitle is-4">TEDxUTsukuba 2020</h1>
         <h1 class="title is-1">JIJIMUGE</h1>
       </div>
-      <hr>
+    </section>
+
+    <section>
+      <figure class="has-text-centered">
+        <img src = "~/assets/wallpapers/jijimuge-transparent.png">
+      </figure>
     </section>
     
         <!-- <div class="columns"> 
@@ -19,8 +24,8 @@
           <div class="column is-5 has-text-centered-mobile">
                         
           </div>
-        </div>
-      -->
+        </div> -->
+     
 
     <section class="section" id="card-0">
       <h1 class="title is-0">

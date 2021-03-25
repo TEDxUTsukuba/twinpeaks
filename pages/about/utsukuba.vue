@@ -5,7 +5,6 @@
         <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.title')}}</h1>
         <h1 class="subtitle is-5">{{ $t('about.utsukuba.subtitle')}}</h1>
       </div>
-      <hr>
     </section>
     <section class="section" id="tedxutsukuba">
       <h1 class="title">TEDxUTsukuba</h1>
