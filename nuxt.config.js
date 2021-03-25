@@ -121,6 +121,13 @@ export default {
     [
       '@nuxtjs/google-analytics', { id: 'UA-104320074-1' }
     ],
+    [
+      'nuxt-webfontloader', {
+        google: {
+          families: ['Lato:400,700&text=abcdefghijklmnopqrstuvwxyz0123456789!/-&display:swap']
+        }
+      }
+    ],
     // {
     //   src: '~/plugins/webfontloader.js', 
     //   ssr: false,
@@ -165,14 +172,6 @@ export default {
     ],
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    // [
-    //   'nuxt-webfontloader',
-    //   {
-    //     google: {
-    //       families: ['Noto+Sans+CJK+JP&display=swap:400,700'],
-    //     }
-    //   }
-    // ],
     'nuxt-svg-loader',
     [
       '@nuxtjs/sitemap',
@@ -185,11 +184,6 @@ export default {
       }
     ]
   ],
-  // webfontloader: {
-  //   google: {
-  //     families: ['Noto+Sans+JP']
-  //   }
-  // },
 
   // fontawesome: {
   //   component: 'fa',
