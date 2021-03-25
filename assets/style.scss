@@ -15,6 +15,7 @@
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "palt";
 }
 
 $primary: #FF2B06;
@@ -60,6 +61,12 @@ $card-footer-border-top: 0px !important;
 
 .has-background-itf {
   background-color: #39b0b7 !important;
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #teaser>iframe {
@@ -291,16 +298,23 @@ section#wrapper {
   background-attachment: fixed !important;
   // background-color: #e7eff9;
   background-color: $light;
+  background: linear-gradient(70deg, $light 26%, #C9C6C6 74%);
+  background: -webkit-linear-gradient(70deg, $light 26%, #C9C6C6 74%);
+  background: -moz-linear-gradient(70deg, $light 26%, #C9C6C6 74%);
+  background: -ms-linear-gradient(70deg, $light 26%, #C9C6C6 74%);
+  // background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+  // background-image: linear-gradient(to bottom, #111111 0%, #181818 74%);
   // background-image: linear-gradient(to top, $light 0%, #d1dbe4 74%);
-  font-feature-settings: "palt";
 }
 
 section#wrapper-dark {
   height: 100%;
   background-attachment: fixed !important;
   background-color: $black;
-  // background-image: linear-gradient(to bottom, #111111 0%, #181818 74%);
-  font-feature-settings: "palt";
+  background: linear-gradient(176deg, hsl(0, 0, 12%) 0, hsl(0, 0, 4%) 100%);
+  background-repeat: no-repeat;
+  background-clip: cover;
+  background-attachment: fixed;
 
   .notification {
     background-color: $dark;
