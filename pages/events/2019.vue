@@ -496,10 +496,10 @@ img#top {
   position: absolute;
   background: inherit;
   filter: brightness(75%) contrast(50%) blur(5px);
-  top: -10px;
-  right: -10px;
-  bottom: -10px;
-  left: -10px;
+  top: -20px;
+  right: -20px;
+  bottom: -20px;
+  left: -20px;
   z-index: -1;
 }
 </style>
