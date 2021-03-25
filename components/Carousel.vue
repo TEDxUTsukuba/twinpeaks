@@ -2,7 +2,7 @@
   <div id="carousel-wrapper">
     <b-carousel
       with-carousel-list
-      :autoplay="true"
+      :autoplay="false"
       :indicator="indicator"
       :indicator-inside="false"
       :indicator-style="indicatorStyle"

@@ -3,9 +3,9 @@
     <ul class="slideshow" id="slides-before">
       <li class="slideshow-item" v-for="(talk, index) in talkList" :key="index">
         <div class="card has-background-dark">
-          <div class="card-image">
+          <!-- <div class="card-image">
             <Movie :vId='talk.youtube_id'></Movie>
-          </div>
+          </div> -->
           <div class="card-content">
             <h1 class="title is-4">
               {{ talk.title }}

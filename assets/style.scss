@@ -764,7 +764,7 @@ span.is-red {
 /* content4つをまとめたスライドブロック */
 .slideshow {
   display: flex;
-  -webkit-animation: loop-slide 40s linear 1s both;
+  -webkit-animation: none;
   animation: loop-slide 40s linear 1s both;
   animation-fill-mode: forwards;
 
