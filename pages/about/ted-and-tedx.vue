@@ -95,7 +95,7 @@
     </section>
 
 
-    <section class="hero is-black has-text-centered">
+    <section class="hero has-text-centered">
       <section class="section">
         <h1 class="title is-0 has-text-white">{{ $t('about.ted.watch')}}</h1>
       </section>
