@@ -128,11 +128,6 @@ export default {
         }
       }
     ],
-    // {
-    //   src: '~/plugins/webfontloader.js', 
-    //   ssr: false,
-    //   mode: 'client'
-    // },
     [
       'nuxt-buefy',
       {
@@ -140,24 +135,37 @@ export default {
         materialDesignIcons: true
       }
     ],
-    // 'nuxt-fontawesome',
     'nuxt-user-agent',
     [ 
       'nuxt-i18n', {
-        strategy: 'prefix_and_default',
+        baseUrl: 'https://www.tedxutsukuba.com',
+        // sitemap.xml生成時のディレクトリに影響
+        strategy: 'prefix_except_default',
         locales: [
-          { code: 'ja', iso: 'ja_JP', file: 'ja.json' },
-          { code: 'en', iso: 'en-US', file: 'en.json' },
+          { 
+            code: 'ja', 
+            iso: 'ja_JP', 
+            file: 'ja.json',
+            domain: 'tedxutsukuba.com'
+          },
+          { 
+            code: 'en', 
+            iso: 'en-US', 
+            file: 'en.json',
+            domain: 'en.tedxutsukuba.com'
+          },
         ],
+        differentDomains: true,
         defaultLocale: 'ja',
         vueI18n: {
           fallbackLocale: 'ja'
         },
-        detectBrowserLanguage: {
-          useCookie: false,
-          cookieKey: 'i18n_redirected',
-          onlyOnRoot: true,  // recommended
-        },
+        // detectBrowserLanguage: {
+        //   useCookie: false,
+        //   cookieKey: 'i18n_redirected',
+        //   onlyOnRoot: true,  // recommended
+        // },
+        // seo: true,
         vueI18nLoader: true,
         lazy: true,
         // 言語ファイル(.json)のディレクトリを記載
@@ -173,16 +181,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     'nuxt-svg-loader',
-    [
-      '@nuxtjs/sitemap',
-      { 
-        path: '/sitemap.xml',
-        hostname: 'https://www.tedxutsukuba.com',
-        exclude: [
-          '/explore', '/inspire', '/talks_old', '/loading', '/2019', '/events/how_to_add_an_event'
-        ]
-      }
-    ]
+    '@nuxtjs/sitemap',
   ],
 
   // fontawesome: {
@@ -207,6 +206,21 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+  },
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://www.tedxutsukuba.com',
+    i18n: true,
+    i18n: {
+      locales: ['ja', 'en'],
+      routesNameSeparator: '___'
+    },
+    exclude: [
+      '**/ja/**', '**/private', '**/private/**', '**/inspire', '**/talks_old', '**/event_old', '**/loading'
+    ],
+    // routes(callback) {
+    //   const axios = require('axios')
+    // }
   },
   /*
   ** Build configuration
