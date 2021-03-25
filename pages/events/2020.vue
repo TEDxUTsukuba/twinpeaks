@@ -63,7 +63,7 @@
       </Card>
     </section>
 
-    <section class="hero is-black is-large">
+    <section class="hero is-large">
       <div class="hero-body has-text-centered">
         <Movie id="teaser" :vId='videoId1' :aPlay='autoplay'></Movie>
       </div>

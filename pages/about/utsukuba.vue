@@ -44,7 +44,7 @@
         </section>
       </div>
     </section> -->
-    <section class="hero is-medium is-black">
+    <section class="hero is-medium">
       <div class="hero-body has-text-white has-text-left">
         <div class="container has-text-centered">
           <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.team.title')}}</h1>
@@ -130,7 +130,7 @@
         </div>
       </div>
     </section>
-    <section class="hero is-medium is-black">
+    <section class="hero is-medium">
       <div class="hero-body has-text-white has-text-left">
         <div class="container has-text-centered">
           <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.join.title')}}</h1>
@@ -173,7 +173,7 @@
         </div>
       </div>
     </section>
-    <section class="hero is-medium is-black">
+    <section class="hero is-medium">
       <div class="hero-body has-text-white has-text-left">
         <div class="container has-text-centered">
           <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.contactus.title')}}</h1>
