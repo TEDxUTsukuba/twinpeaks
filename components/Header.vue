@@ -135,7 +135,7 @@ export default {
       console.log(month, date)
       const data = this.celebrationdays.find(item => item.month === month && item.date === date)
       if (data === undefined) {
-        return "A hub for Tsukuba's ideas"
+        return "A Hub for Tsukuba's Ideas"
       } else if (this.$i18n.locale !== 'en') {
         return "Celebrating " + data.title_en
       } else {
