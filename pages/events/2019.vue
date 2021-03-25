@@ -61,25 +61,27 @@
         <h1 class="title is-0" id="concept-title">
           <span class="">{{ $t('2019.concept.title') }}</span>
         </h1>
-        <h1 class="subtitle has-text-white has-text-right">
-          <!-- {{ $t('2019.concept.description') }} -->
-        </h1>
         <figure class="image">
-          <img src="~/assets/2019/concept/cophilaction_silver.png" alt="CoPhilAction" style="width: 80%; max-width: 960px; margin: 5vh auto;">
+          <img src="~/assets/2019/concept/cophilaction_silver.png" alt="CoPhilAction" style="width: 80%; max-width: 720px; margin: 5vh auto;">
         </figure>
-        <div class="nmp-card-dark" id="concept">
-          <article>
-          テクノロジーが進歩し、物質的な豊かさを享受できるようになった現代において、家族や仲間との強い繋がりが個人の幸せに占める割合は、相対的に低下している。
-          地縁や血縁、職場での付き合いが「しがらみ」として遠ざけられるようになる一方で、SNSの普及や非正規雇用の拡大により、うわべだけの人間関係が増加しつつある。
-          <br><br>
-          ムラ社会ニッポン特有の「同調圧力」といった悪弊が徐々に廃れていくとともに、個人主義や競争社会への賛辞が、日夜を問わず世間を賑わせてきたのが現実だ。
-          しかし、テクノロジーのあくなき追求の先に待ち受けていた人工知能の登場は、皮肉にも私たちに「人間とは何か」という問いとの対峙を要請するのであった。
-          <br><br>
-          古代エジプトでピラミッドが建造され、バスティーユ牢獄で市民革命の火蓋が切られたように、文明の進歩の原動力は「人間関係」の中にこそ見いだすことができるはずだ。
-          そして令和という新たな時代を生きる私たちに求められるのは、これまで人間関係を築く上での障壁となってきた文化や思想、価値観の違いを、強みへと変えようとする気概ではないだろうか。
-          <br><br>
-          「共に」を意味する接頭辞に、Phila「愛」とAction「行動」を合わせた CoPhilAction には、互いを認め合う「愛」が「行動」を生み、未来を切り拓くという理念が現れている。
-          多様な人とアイディアが交わる TEDxUTsukuba という大きな社会実験の場に集い、あなたらしい CoPhilAction のカタチを、自由に思い描いてほしい。
+        <div class="is-flex">
+          <article id="concept">
+            <p>
+              　テクノロジーが進歩し、物質的な豊かさを享受できるようになった現代において、家族や仲間との強い繋がりが個人の幸せに占める割合は、相対的に低下している。
+              地縁や血縁、職場での付き合いが「しがらみ」として遠ざけられるようになる一方で、SNSの普及や非正規雇用の拡大により、うわべだけの人間関係が増加しつつある。
+            </p>
+            <p>
+              　ムラ社会ニッポン特有の「同調圧力」といった悪弊が徐々に廃れていくとともに、個人主義や競争社会への賛辞が、日夜を問わず世間を賑わせてきたのが現実だ。
+              しかし、テクノロジーのあくなき追求の先に待ち受けていた人工知能の登場は、皮肉にも私たちに「人間とは何か」という問いとの対峙を要請するのであった。
+            </p>
+            <p>
+              　古代エジプトでピラミッドが建造され、バスティーユ牢獄で市民革命の火蓋が切られたように、文明の進歩の原動力は「人間関係」の中にこそ見いだすことができるはずだ。
+              そして令和という新たな時代を生きる私たちに求められるのは、これまで人間関係を築く上での障壁となってきた文化や思想、価値観の違いを、強みへと変えようとする気概ではないだろうか。
+            </p>
+            <p>
+              　「共に」を意味する接頭辞に、Phila「愛」とAction「行動」を合わせた CoPhilAction には、互いを認め合う「愛」が「行動」を生み、未来を切り拓くという理念が現れている。
+              多様な人とアイディアが交わる TEDxUTsukuba という大きな社会実験の場に集い、あなたらしい CoPhilAction のカタチを、自由に思い描いてほしい。
+            </p>
           </article>
         </div>
       </section>
@@ -501,5 +503,36 @@ img#top {
   bottom: -20px;
   left: -20px;
   z-index: -1;
+}
+#concept {
+  @media screen and (min-width: 960px) {
+    flex-direction : row-reverse;
+    -webkit-writing-mode: vertical-rl; /* 実装済 */
+    -moz-writing-mode: vertical-rl; /* 実装済 */
+    -ms-writing-mode: vertical-rl; /* 実装済 */
+    word-break: break-all;
+    text-orientation: mixed;
+    p {
+      writing-mode: vertical-rl;
+      margin: 0 1vw;
+    }
+    width: 100%;
+    height: 40vh;
+    letter-spacing: 0.5px;
+    line-height: 200%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "游明朝", YuMincho, serif;
+    font-weight: normal;
+  }
+  @media screen and (max-width: 959px) {
+    p {
+      margin: 2vh 0;
+    }
+  }
+  
+  
 }
 </style>

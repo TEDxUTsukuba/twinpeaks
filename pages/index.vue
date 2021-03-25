@@ -38,10 +38,10 @@
       <div class="hero-body">
         <section class="section" id="intro">
           <div class="columns is-mobile is-multiline is-centered is-variable is-0">
-              <div class="column is-5-widescreen is-4-desktop is-6-tablet is-6-mobile">
+              <div class="column is-5-widescreen is-4-desktop is-6-tablet is-10-mobile">
                 <img src="~/assets/logo/motto.png" class="motto" style="padding-right: 50px;">
               </div>
-              <div class="column is-0-fullhd is-0-widescreen is-0-desktop is-6-tablet is-6-mobile"></div>
+              <div class="column is-0-fullhd is-0-widescreen is-0-desktop is-6-tablet is-2-mobile"></div>
               <div class="column is-7-widescreen is-8-desktop is-full-tablet is-full-mobile">
                   <h1 v-if="$i18n.locale == 'ja'" class="title is-2 is-size-4-mobile has-text-weight-light">
                     {{ $t('intro.headline1') }}
