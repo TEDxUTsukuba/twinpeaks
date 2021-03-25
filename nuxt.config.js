@@ -146,25 +146,25 @@ export default {
             code: 'ja', 
             iso: 'ja_JP', 
             file: 'ja.json',
-            domain: 'tedxutsukuba.com'
+            // domain: 'www.tedxutsukuba.com'
           },
           { 
             code: 'en', 
             iso: 'en-US', 
             file: 'en.json',
-            domain: 'en.tedxutsukuba.com'
+            // domain: 'www.en.tedxutsukuba.com'
           },
         ],
-        differentDomains: true,
+        // differentDomains: true,
         defaultLocale: 'ja',
         vueI18n: {
           fallbackLocale: 'ja'
         },
-        // detectBrowserLanguage: {
-        //   useCookie: false,
-        //   cookieKey: 'i18n_redirected',
-        //   onlyOnRoot: true,  // recommended
-        // },
+        detectBrowserLanguage: {
+          useCookie: false,
+          cookieKey: 'i18n_redirected',
+          onlyOnRoot: true,  // recommended
+        },
         // seo: true,
         vueI18nLoader: true,
         lazy: true,
