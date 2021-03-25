@@ -84,11 +84,13 @@ export default {
   border-top: 5px solid #333333;
   // border: 2px solid gray;
   // filter: grayscale(80%);
+  filter: brightness(50%);
 }
 .indicator-item.is-active figure img {
   border-top: 5px solid red;
   // border: 2px solid white;
   // filter: grayscale(0);
+  filter: brightness(100%);
 }
 .carousel .carousel-indicator {
   @media screen and (min-width: 961px) {

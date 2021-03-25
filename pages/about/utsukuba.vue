@@ -265,7 +265,8 @@ export default {
       crossDomain: true
     }).then(response => this.memberList = response.data);
 
-    if (deviceType !== 'Safari') {
+    const browser = this.$ua.browser()
+    if (browser !== 'Safari') {
       const scene1 = this.$scrollmagic
         .scene({
           triggerElement: '#trigger',
@@ -308,7 +309,7 @@ export default {
     } else {
       document.getElementById("tedxutsukuba").style.opacity = 1;
       document.getElementById("gallery").style.opacity = 1;
-      document.getElementById("socialcapital").style.opacity = 1;
+      document.getElementById("gallery").style.opacity = 1;
     }
   }
 }

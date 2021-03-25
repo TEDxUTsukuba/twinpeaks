@@ -4,11 +4,11 @@
       <LogoAnimation id="top-logo" />
     </div> -->
     <div class="top-carousel-wrapper columns is-gapless" style="margin-bottom: 0;">
-      <div class="column is-8-desktop is-12-touch">
+      <div class="column is-12-touch">
         <Carousel id="top-carousel" />
       </div>
-      <div class="column vertical-center has-text-centered" id="top-carousel-wrapper-logo-section">
-        <img src="~/assets/logo/black_transparent_1.png" width="80%" style="max-width: 360px;">
+      <div class="column is-4-desktop is-5-fullhd vertical-center has-text-centered" id="top-carousel-wrapper-logo-section">
+        <img src="~/assets/logo/black_transparent_1.png" width="60%">
         <!-- <LogoAnimation id="top-logo" /> -->
       </div>
     </div>
@@ -33,8 +33,6 @@
     </div> -->
       
     <section class="hero bg-red" id="intro-wrap">
-      <div class="has-text-left" style="margin: 1vh 0 0vh 0;">   
-      </div>
       <div class="hero-body">
         <section class="section" id="intro">
           <div class="columns is-mobile is-multiline is-centered is-variable is-0">
@@ -178,8 +176,8 @@ export default {
   //   return { isAndroid }
   // },
   mounted() {
-    const deviceType = this.$ua.browser()
-    if (deviceType !== 'Safari') {
+    const browser = this.$ua.browser()
+    if (browser !== 'Safari') {
       // const scene1 = this.$scrollmagic
       //   .scene({
       //     triggerElement: '#top-logo',
@@ -272,40 +270,40 @@ export default {
   #top-carousel {
     opacity: 1;
     // transition: fadeIn 2s;
-    max-width: 960px !important;
-    margin: auto;
+    // max-width: 1024px !important;
+    // margin: auto;
   }
   #top-logo {
     width: 100%;
   }
-  @media screen and (min-width: 1024px) {
-    .top-carousel-wrapper {
-      padding: 6vh 0 3vh 0;
-      background: url("~@/assets/wallpapers/ishihiro.jpg") no-repeat center top;
-      background-size: cover;
-      background-attachment: fixed;
-      -webkit-backface-visibility:hidden;
-      backface-visibility:hidden;
-      z-index: 0;
-      overflow: hidden;
-      position: relative;
-      .columns {
-        margin: 0;
-      }
-    }
-    .top-carousel-wrapper:before {
-      content: "";
-      display: block;
-      position: absolute;
-      background: inherit;
-      filter: saturate(125%) contrast(60%) blur(5px);
-      top: -20px;
-      right: -20px;
-      bottom: -20px;
-      left: -20px;
-      z-index: -1;
-    }
-  }
+  // @media screen and (min-width: 1024px) {
+  //   .top-carousel-wrapper {
+  //     padding: 6vh 0 3vh 0;
+  //     background: url("~@/assets/wallpapers/ishihiro.jpg") no-repeat center top;
+  //     background-size: cover;
+  //     background-attachment: fixed;
+  //     -webkit-backface-visibility:hidden;
+  //     backface-visibility:hidden;
+  //     z-index: 0;
+  //     overflow: hidden;
+  //     position: relative;
+  //     .columns {
+  //       margin: 0;
+  //     }
+  //   }
+  //   .top-carousel-wrapper:before {
+  //     content: "";
+  //     display: block;
+  //     position: absolute;
+  //     background: inherit;
+  //     filter: saturate(125%) contrast(60%) blur(5px);
+  //     top: -20px;
+  //     right: -20px;
+  //     bottom: -20px;
+  //     left: -20px;
+  //     z-index: -1;
+  //   }
+  // }
   #top-carousel-wrapper-logo-section {
     @media screen and (max-width: 1023px) {
       display: none;
