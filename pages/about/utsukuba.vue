@@ -309,7 +309,7 @@ export default {
     } else {
       document.getElementById("tedxutsukuba").style.opacity = 1;
       document.getElementById("gallery").style.opacity = 1;
-      document.getElementById("gallery").style.opacity = 1;
+      document.getElementById("socialcapital").style.opacity = 1;
     }
   }
 }
