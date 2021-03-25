@@ -178,60 +178,66 @@ export default {
   //   return { isAndroid }
   // },
   mounted() {
-    const scene1 = this.$scrollmagic
-      .scene({
-        triggerElement: '#top-logo',
-        triggerHook: 0.5,
-        offset: 10,
-        // durationがあるとremove()が有効にならない
-        reverse: false
-      })
-      // SVGのレイヤーにactiveクラスを付与
-      .setClassToggle("#layer1", "active")
-      // アニメーションが終わってもclassを削除しない
-      .reverse(false)
+    const deviceType = this.$ua.browser()
+    if (deviceType !== 'Safari') {
+      const scene1 = this.$scrollmagic
+        .scene({
+          triggerElement: '#top-logo',
+          triggerHook: 0.5,
+          offset: 10,
+          // durationがあるとremove()が有効にならない
+          reverse: false
+        })
+        // SVGのレイヤーにactiveクラスを付与
+        .setClassToggle("#layer1", "active")
+        // アニメーションが終わってもclassを削除しない
+        .reverse(false)
 
-    const scene2 = this.$scrollmagic
-      .scene({
-        triggerElement: '#top-title',
-        triggerHook: 0.5,
-        offset: 0,
-        reverse: false
-      })
-      .setTween('#intro', {
-        css: {
-          opacity: 1
-        }
-      })
-    // const scene4 = this.$scrollmagic
-    //   .scene({
-    //     triggerElement: '#intro',
-    //     triggerHook: 1,
-    //     offset: 0,
-    //     reverse: false
-    //   })
-    //   .setTween('#rocket', {
-    //     css: {
-    //       opacity: 1
-    //     }
-    //   })
+      const scene2 = this.$scrollmagic
+        .scene({
+          triggerElement: '#top-title',
+          triggerHook: 0.5,
+          offset: 0,
+          reverse: false
+        })
+        .setTween('#intro', {
+          css: {
+            opacity: 1
+          }
+        })
+      // const scene4 = this.$scrollmagic
+      //   .scene({
+      //     triggerElement: '#intro',
+      //     triggerHook: 1,
+      //     offset: 0,
+      //     reverse: false
+      //   })
+      //   .setTween('#rocket', {
+      //     css: {
+      //       opacity: 1
+      //     }
+      //   })
 
-    const scene3 = this.$scrollmagic
-      .scene({
-        triggerElement: '#notice-title',
-        triggerHook: 1,
-        offset: 0,
-        reverse: false
-      })
-      .setTween('#notice', {
-        css: {
-          opacity: 1
-        }
-      })
-      this.$scrollmagic.addScene(scene1)
-      this.$scrollmagic.addScene(scene2)
-      this.$scrollmagic.addScene(scene3)
-      // this.$scrollmagic.addScene(scene4)
+      const scene3 = this.$scrollmagic
+        .scene({
+          triggerElement: '#notice-title',
+          triggerHook: 1,
+          offset: 0,
+          reverse: false
+        })
+        .setTween('#notice', {
+          css: {
+            opacity: 1
+          }
+        })
+        this.$scrollmagic.addScene(scene1)
+        this.$scrollmagic.addScene(scene2)
+        this.$scrollmagic.addScene(scene3)
+        // this.$scrollmagic.addScene(scene4)
+    } else {
+      document.getElementById("intro").style.opacity = 1;
+      document.getElementById("notice").style.opacity = 1;
+    }
   }
 }
 </script>
@@ -259,22 +265,6 @@ export default {
   h1.thin {
     font-weight: 100 !important;
   }
-
-  .bounce_box {
-    background-color: #fff;
-    border-radius: 25px;
-    padding: 3rem 6rem;
-  }
-  .text-divider {
-    background-color: #5B08B9;
-    margin: 0 auto;
-    width: 80%;
-    height: 2px;
-  }
-  #rocket {
-    opacity: 1;
-    // animation: SlideIn 3s;
-  }
   #intro, #notice {
     opacity: 0;
     transition: all 0.5s;
@@ -294,6 +284,8 @@ export default {
       background: url("~@/assets/wallpapers/ishihiro.jpg") no-repeat center top;
       background-size: cover;
       background-attachment: fixed;
+      -webkit-backface-visibility:hidden;
+      backface-visibility:hidden;
       z-index: 0;
       overflow: hidden;
       position: relative;
