@@ -1,17 +1,17 @@
 <template>
   <section id="wrapper-dark">
-    <section class="section">
-      <div class="nmp-card has-text-centered-mobile has-text-left">
-        <h1 class="title is-1 is-spaced">{{ $t('talks.title') }}</h1>
-        <h1 class="subtitle has-text-grey-light">{{ $t('talks.subtitle') }}</h1>
-        <br>
-        <span class="tag has-text-weight-bold">{{ $t('button.partialtranslation') }}</span>
-        <a class="text" href="https://docs.google.com/forms/d/e/1FAIpQLSeGADXgQymefKwe_HPvna2hufR9IBRYjPhUDC1gRnehCNU35Q/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer"><small>{{ $t('button.helpustranslate') }}</small></a>
-      </div>
+    <section class="section has-text-centered-mobile">
+      <h1 class="title is-1 is-spaced">{{ $t('talks.title') }}</h1>
+      <h1 class="subtitle has-text-grey-light">{{ $t('talks.subtitle') }}</h1>
+      <br>
+      <span class="tag has-text-weight-bold">{{ $t('button.partialtranslation') }}</span>
+      <a class="text" href="https://docs.google.com/forms/d/e/1FAIpQLSeGADXgQymefKwe_HPvna2hufR9IBRYjPhUDC1gRnehCNU35Q/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer"><small>{{ $t('button.helpustranslate') }}</small></a>
+    </section>
+    <section class="section-wide">
       <div class="columns is-multiline">
         <div
           id="thumbnails"
-          class="column is-one-third-fullhd is-half-widescreen is-half-desktop is-half-tablet"
+          class="column is-one-third-fullhd is-one-third-widescreen is-half-desktop is-half-tablet"
           v-for="(talk, index) in talkList" :key="index"
           style="display: inline-block; vertical-align: top;"
         >

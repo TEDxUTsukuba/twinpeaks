@@ -1,10 +1,8 @@
 <template>
   <section id="wrapper-dark" class="font-awesome">   
-    <section class="section">
-      <div class="nmp-card has-text-centered-mobile has-text-left">
-        <h1 class="subtitle is-4">TEDxUTsukuba 2019</h1>
-        <h1 class="title is-1">CoPhilaction</h1>
-      </div>
+    <section class="section has-text-centered-mobile">
+      <h1 class="subtitle is-4">TEDxUTsukuba 2019</h1>
+      <h1 class="title is-1">CoPhilaction</h1>
     </section>
 
     <section class="hero">
@@ -15,24 +13,24 @@
         <figure class="image">
           <img src="~/assets/2019/concept/cophilaction_silver.png" alt="CoPhilAction" style="width: 80%; max-width: 720px; margin: 5vh auto;">
         </figure>
-        <div class="is-flex">
+        <div>
           <article id="concept">
-            <p class="is-size-7">
+            <span class="is-size-7">
               　テクノロジーが進歩し、物質的な豊かさを享受できるようになった現代において、家族や仲間との強い繋がりが個人の幸せに占める割合は、相対的に低下している。
               地縁や血縁、職場での付き合いが「しがらみ」として遠ざけられるようになる一方で、SNSの普及や非正規雇用の拡大により、うわべだけの人間関係が増加しつつある。
-            </p>
-            <p class="is-size-7">
+            </span>
+            <span class="is-size-7">
               　ムラ社会ニッポン特有の「同調圧力」といった悪弊が徐々に廃れていくとともに、個人主義や競争社会への賛辞が、日夜を問わず世間を賑わせてきたのが現実だ。
               しかし、テクノロジーのあくなき追求の先に待ち受けていた人工知能の登場は、皮肉にも私たちに「人間とは何か」という問いとの対峙を要請するのであった。
-            </p>
-            <p class="is-size-7">
+            </span>
+            <span class="is-size-7">
               　古代エジプトでピラミッドが建造され、バスティーユ牢獄で市民革命の火蓋が切られたように、文明の進歩の原動力は「人間関係」の中にこそ見いだすことができるはずだ。
               そして令和という新たな時代を生きる私たちに求められるのは、これまで人間関係を築く上での障壁となってきた文化や思想、価値観の違いを、強みへと変えようとする気概ではないだろうか。
-            </p>
-            <p class="is-size-7">
+            </span>
+            <span class="is-size-7">
               　「共に」を意味する接頭辞に、Phila「愛」とAction「行動」を合わせた CoPhilAction には、互いを認め合う「愛」が「行動」を生み、未来を切り拓くという理念が現れている。
               多様な人とアイディアが交わる TEDxUTsukuba という大きな社会実験の場に集い、あなたらしい CoPhilAction のカタチを、自由に思い描いてほしい。
-            </p>
+            </span>
           </article>
         </div>
       </section>
@@ -100,7 +98,7 @@
             <div class="column is-7">
               <div class="nmp-card-dark">
                 <div class="header" style="margin-bottom: 0.5rem;">
-                  <span class="tag is-dark"><font-awesome-icon :icon="['far', 'clock']" />12:40 - 13:30</span>
+                  <span class="tag is-dark"><i class="mdi mdi-clock" />12:40 - 13:30</span>
                 </div>
                 <div class="">
                   <h1 class="title is-3">{{ $t('2019.program.welcome.title') }}</h1>
@@ -114,7 +112,7 @@
             <div class="column is-7">
               <div class="nmp-card-dark">
                 <div class="header" style="margin-bottom: 0.5rem;">
-                  <span class="tag is-dark"><font-awesome-icon :icon="['far', 'clock']" />13:30 - 13:50</span>
+                  <span class="tag is-dark"><i class="mdi mdi-clock" />13:30 - 13:50</span>
                 </div>
                 <div class="">
                   <h1 class="title is-3">{{ $t('2019.program.perf1.title') }}</h1>
@@ -128,7 +126,7 @@
             <div class="column is-7">
               <div class="nmp-card-dark">
                 <div class="header" style="margin-bottom: 0.5rem;">
-                  <span class="tag is-dark"><font-awesome-icon :icon="['far', 'clock']" />14:00 - 15:10</span>
+                  <span class="tag is-dark"><i class="mdi mdi-clock" />14:00 - 15:10</span>
                 </div>
                 <div class="">
                   <h1 class="title is-3">{{ $t('2019.program.talk1.title') }}</h1>
@@ -142,7 +140,7 @@
             <div class="column is-7">
               <div class="nmp-card-dark">
                 <div class="header" style="margin-bottom: 0.5rem;">
-                  <span class="tag is-dark"><font-awesome-icon :icon="['far', 'clock']" />15:30 - 16:00</span>
+                  <span class="tag is-dark"><i class="mdi mdi-clock" />15:30 - 16:00</span>
                 </div>
                 <div class="">
                   <h1 class="title is-3">{{ $t('2019.program.workshop.title') }}</h1>
@@ -156,7 +154,7 @@
             <div class="column is-7">
               <div class="nmp-card-dark">
                 <div class="header" style="margin-bottom: 0.5rem;">
-                  <span class="tag is-dark"><font-awesome-icon :icon="['far', 'clock']" />16:30 - 17:10</span>
+                  <span class="tag is-dark"><i class="mdi mdi-clock" />16:30 - 17:10</span>
                 </div>
                 <div class="">
                   <h1 class="title is-3">{{ $t('2019.program.talk2.title') }}</h1>
@@ -170,7 +168,7 @@
             <div class="column is-7">
               <div class="nmp-card-dark">
                 <div class="header" style="margin-bottom: 0.5rem;">
-                  <span class="tag is-dark"><font-awesome-icon :icon="['far', 'clock']" />17:30 - 17:50</span>
+                  <span class="tag is-dark"><i class="mdi mdi-clock" />17:30 - 17:50</span>
                 </div>
                 <div class="">
                   <h1 class="title is-3">{{ $t('2019.program.perf2.title') }}</h1>
@@ -184,7 +182,7 @@
             <div class="column is-7">
               <div class="nmp-card-dark">
                 <div class="header" style="margin-bottom: 0.5rem;">
-                  <span class="tag is-dark"><font-awesome-icon :icon="['far', 'clock']" />18:10 - 20:00</span>
+                  <span class="tag is-dark"><i class="mdi mdi-clock" />18:10 - 20:00</span>
                 </div>
                 <div class="">
                   <h1 class="title is-3">{{ $t('2019.program.afterparty.title') }}</h1>
@@ -505,13 +503,13 @@ img#top {
 }
 #concept {
   @media screen and (min-width: 769px) {
-    flex-direction : row-reverse;
-    -webkit-writing-mode: vertical-rl; /* 実装済 */
+    // -webkit-writing-mode: vertical-rl; /* 実装済 */
     -moz-writing-mode: vertical-rl; /* 実装済 */
     -ms-writing-mode: vertical-rl; /* 実装済 */
+    flex-direction : row-reverse;
     word-break: break-all;
     text-orientation: mixed;
-    p {
+    span {
       writing-mode: vertical-rl;
       margin: 0 1vw;
     }

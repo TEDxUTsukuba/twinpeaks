@@ -68,7 +68,7 @@
     </section>
       
     <!-- <section class="hero">
-      <Movie id="teaser" :vId='videoId3' classname="large" style=""></Movie>
+      <Movie id="teaser" :vId='weAreTEDxUTsukuba' classname="large" style=""></Movie>
     </section> -->
 
     <section id="notice-title" class="section">
@@ -153,9 +153,9 @@ export default {
   },
   data() {
     return {
-      videoId1: 'yJpcvqCC0ww',
-      videoId2: 'q_Es52kl6FQ',
-      videoId3: 'ZbIEuwjpxp0',
+      jijimugeLiveStream: 'yJpcvqCC0ww',
+      teaser: 'q_Es52kl6FQ',
+      weAreTEDxUTsukuba: 'ZbIEuwjpxp0',
       todayDate: Date.now(),
       eventDate: Date(2020, 11, 29, 0, 0, 0),
       isAlertActive: true,

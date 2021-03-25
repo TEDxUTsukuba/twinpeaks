@@ -1,10 +1,8 @@
 <template>
   <section id="wrapper-dark" class="font-awesome">
     <section class="section" id="trigger">
-      <div class="nmp-card">
-        <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.title')}}</h1>
-        <h1 class="subtitle is-5">{{ $t('about.utsukuba.subtitle')}}</h1>
-      </div>
+      <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.title')}}</h1>
+      <h1 class="subtitle is-5">{{ $t('about.utsukuba.subtitle')}}</h1>
     </section>
     <section class="section" id="tedxutsukuba">
       <h1 class="title">TEDxUTsukuba</h1>
@@ -34,7 +32,7 @@
       <article v-html="$t('about.utsukuba.description.5')"></article>
     </section>
     <section class="hero">
-      <Movie id="teaser" :vId='videoId' :aPlay='autoplay'></Movie>
+      <Movie id="teaser" :vId='weAreTEDxUTsukuba' :aPlay='autoplay'></Movie>
     </section>
     <!-- <section class="hero is-medium bg-red">
       <div class="hero-body">
@@ -51,11 +49,11 @@
         </div>
       </div>
     </section>
-    <section class="section">
+    <section class="section-wide">
       <div class="columns is-mobile is-multiline">
         <div
           id="thumbnails"
-          class="column is-3-fullhd is-4-widescreen is-4-desktop is-6-tablet is-12-mobile"
+          class="column is-3-fullhd is-4-widescreen is-4-desktop is-6-tablet is-6-mobile"
           v-for="(member, index) in memberList" :key="member.tedtalk"
           style="display: inline-block; vertical-align: top;"
         >
@@ -220,7 +218,8 @@ export default {
       autoPlay: false,
       postItem: "",
       jobs: jobs,
-      videoId: '7PQWXvgYZ4Y',
+      weAreTEDxUTsukuba: 'ZbIEuwjpxp0',
+      sgcl: '7PQWXvgYZ4Y',
       regexTitle: new RegExp(/https:\/\/www.ted.com.talks\//),
       regexLang: new RegExp(/\?[\w\=]+/)
     }
@@ -266,45 +265,51 @@ export default {
       crossDomain: true
     }).then(response => this.memberList = response.data);
 
-    const scene1 = this.$scrollmagic
-      .scene({
-        triggerElement: '#trigger',
-        triggerHook: 0.75,
-        offset: 0,
-        reverse: false
-      })
-      .setTween('#tedxutsukuba', {
-        css: {
-          opacity: 1
-        }
-      })
-    const scene2 = this.$scrollmagic
-      .scene({
-        triggerElement: '#tedxutsukuba',
-        triggerHook: 0.75,
-        offset: 0,
-        reverse: false
-      })
-      .setTween('#gallery', {
-        css: {
-          opacity: 1
-        }
-      })
-    const scene3 = this.$scrollmagic
-      .scene({
-        triggerElement: '#gallery',
-        triggerHook: 0.75,
-        offset: 0,
-        reverse: false
-      })
-      .setTween('#socialcapital', {
-        css: {
-          opacity: 1
-        }
-      })
-    this.$scrollmagic.addScene(scene1)
-    this.$scrollmagic.addScene(scene2)
-    this.$scrollmagic.addScene(scene3)
+    if (deviceType !== 'Safari') {
+      const scene1 = this.$scrollmagic
+        .scene({
+          triggerElement: '#trigger',
+          triggerHook: 0.75,
+          offset: 0,
+          reverse: false
+        })
+        .setTween('#tedxutsukuba', {
+          css: {
+            opacity: 1
+          }
+        })
+      const scene2 = this.$scrollmagic
+        .scene({
+          triggerElement: '#tedxutsukuba',
+          triggerHook: 0.75,
+          offset: 0,
+          reverse: false
+        })
+        .setTween('#gallery', {
+          css: {
+            opacity: 1
+          }
+        })
+      const scene3 = this.$scrollmagic
+        .scene({
+          triggerElement: '#gallery',
+          triggerHook: 0.75,
+          offset: 0,
+          reverse: false
+        })
+        .setTween('#socialcapital', {
+          css: {
+            opacity: 1
+          }
+        })
+      this.$scrollmagic.addScene(scene1)
+      this.$scrollmagic.addScene(scene2)
+      this.$scrollmagic.addScene(scene3)
+    } else {
+      document.getElementById("tedxutsukuba").style.opacity = 1;
+      document.getElementById("gallery").style.opacity = 1;
+      document.getElementById("socialcapital").style.opacity = 1;
+    }
   }
 }
 </script>

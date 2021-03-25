@@ -1,10 +1,8 @@
 <template>
   <section id="wrapper-dark" class="font-awesome"> 
-    <section class="section">
-      <div class="nmp-card has-text-centered-mobile has-text-left">
-        <h1 class="subtitle is-4">TEDxUTsukuba 2020</h1>
-        <h1 class="title is-1">JIJIMUGE</h1>
-      </div>
+    <section class="section has-text-centered-mobile">
+      <h1 class="subtitle is-4">TEDxUTsukuba 2020</h1>
+      <h1 class="title is-1">JIJIMUGE</h1>
     </section>
 
     <section>
@@ -70,7 +68,7 @@
 
     <section class="hero is-large">
       <div class="hero-body has-text-centered">
-        <Movie id="teaser" :vId='videoId1' :aPlay='autoplay'></Movie>
+        <Movie id="teaser" :vId='jijimugeLiveStream' :aPlay='autoplay'></Movie>
       </div>
     </section>
 
@@ -243,7 +241,7 @@ export default {
       // width: window.innerWidth,
       // height: window.innerHeight,
       isImageModalActive: false,
-      videoId1: 'yJpcvqCC0ww',
+      jijimugeLiveStream: 'yJpcvqCC0ww',
       src_sp1: Image_sp1,
       src_sp2: Image_sp2,
       src_sp3: Image_sp3,

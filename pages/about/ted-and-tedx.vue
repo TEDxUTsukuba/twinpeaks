@@ -1,10 +1,8 @@
 <template>
   <section id="wrapper-dark" class="font-awesome">
     <section class="section">
-      <div class="nmp-card">
-        <h1 class="title is-1 is-spaced">{{ $t('about.tedandtedx.title')}}</h1>
-        <h1 class="subtitle is-5">{{ $t('about.tedandtedx.subtitle')}}</h1>
-      </div>
+      <h1 class="title is-1 is-spaced">{{ $t('about.tedandtedx.title')}}</h1>
+      <h1 class="subtitle is-5">{{ $t('about.tedandtedx.subtitle')}}</h1>
     </section>
     <section class="hero" id="ted">
       <section class="section" id="ted-without-background">

@@ -1,6 +1,6 @@
 <template>
   <section id="wrapper-dark">
-    <section class="section has-text-centered-mobile has-text-left">
+    <section class="section has-text-centered-mobile">
     <!-- <section class="hero is-large">
       <div class="hero-body has-text-white has-text-left">
         <div class="container has-text-centered">
@@ -29,10 +29,8 @@
           </template>
         </b-carousel>
       </div> -->
-        <div class="nmp-card">
-          <h1 class="title is-1 is-spaced">{{ $t('partners.title') }}</h1>
-          <h1 class="subtitle has-text-grey-light">{{ $t('partners.subtitle') }}</h1>
-        </div>
+        <h1 class="title is-1 is-spaced">{{ $t('partners.title') }}</h1>
+        <h1 class="subtitle has-text-grey-light">{{ $t('partners.subtitle') }}</h1>
     </section>
     <section class="section">
         <PartnerList category="take" width_fullhd="4" width_desktop="4" width_tablet="6" width_mobile="12" />
