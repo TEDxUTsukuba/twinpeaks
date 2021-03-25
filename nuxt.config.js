@@ -103,6 +103,10 @@ export default {
     {
       src: '~/plugins/vue-add-to-calendar.js',
       ssr: false
+    },
+    {
+      src: '~/plugins/user-agent-config.js',
+      ssr: false
     }
   ],
   /*
