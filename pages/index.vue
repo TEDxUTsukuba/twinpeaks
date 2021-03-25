@@ -32,7 +32,7 @@
       </section>
     </div> -->
       
-    <section class="hero bg-red">
+    <section class="hero bg-red" id="intro-wrap">
       <div class="has-text-left" style="margin: 1vh 0 0vh 0;">   
       </div>
       <div class="hero-body">
@@ -122,7 +122,7 @@
     </section>
 
 
-    <section class="section">
+    <!-- <section class="section">
       <h1 class="title is-2 has-text-centered">
         <span class="">TEDxUTsukuba This Week</span>
       </h1>
@@ -131,7 +131,7 @@
     <br><br>
     <div class="has-text-centered">
       <nuxt-link :to="localePath('/talks')" class="button is-gradient is-rounded">{{ $t('talks.seeAll') }}</nuxt-link>
-    </div>
+    </div> -->
     <br><br>
   </section>
 </template>
@@ -140,8 +140,8 @@
 import Card from '~/components/Card'
 import Flip from '~/components/Flip'
 import Carousel from '~/components/Carousel'
-import PopularTalks from '~/components/PopularTalks'
-import LogoAnimation from '~/components/LogoAnimation'
+// import PopularTalks from '~/components/PopularTalks'
+// import LogoAnimation from '~/components/LogoAnimation'
 // import Movie from '~/components/Movie'
 // const Card = () => import('~/components/Card')
 // const Flip = () => import('~/components/Flip')
@@ -149,7 +149,7 @@ import LogoAnimation from '~/components/LogoAnimation'
 
 export default {
   components: {
-    Card, Flip, Carousel, PopularTalks, LogoAnimation
+    Card, Flip, Carousel
   },
   data() {
     return {
@@ -180,22 +180,22 @@ export default {
   mounted() {
     const deviceType = this.$ua.browser()
     if (deviceType !== 'Safari') {
-      const scene1 = this.$scrollmagic
-        .scene({
-          triggerElement: '#top-logo',
-          triggerHook: 0.5,
-          offset: 10,
-          // durationがあるとremove()が有効にならない
-          reverse: false
-        })
-        // SVGのレイヤーにactiveクラスを付与
-        .setClassToggle("#layer1", "active")
-        // アニメーションが終わってもclassを削除しない
-        .reverse(false)
+      // const scene1 = this.$scrollmagic
+      //   .scene({
+      //     triggerElement: '#top-logo',
+      //     triggerHook: 0.5,
+      //     offset: 10,
+      //     // durationがあるとremove()が有効にならない
+      //     reverse: false
+      //   })
+      //   // SVGのレイヤーにactiveクラスを付与
+      //   .setClassToggle("#layer1", "active")
+      //   // アニメーションが終わってもclassを削除しない
+      //   .reverse(false)
 
       const scene2 = this.$scrollmagic
         .scene({
-          triggerElement: '#top-title',
+          triggerElement: '#intro-wrap',
           triggerHook: 0.5,
           offset: 0,
           reverse: false
@@ -230,7 +230,7 @@ export default {
             opacity: 1
           }
         })
-        this.$scrollmagic.addScene(scene1)
+        // this.$scrollmagic.addScene(scene1)
         this.$scrollmagic.addScene(scene2)
         this.$scrollmagic.addScene(scene3)
         // this.$scrollmagic.addScene(scene4)
