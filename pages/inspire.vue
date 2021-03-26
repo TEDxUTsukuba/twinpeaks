@@ -1,24 +1,9 @@
 <template>
   <section class="section">
-    <h2 class="title is-3 has-text-grey">
-      "Just start  <b-icon
-        icon="rocket"
-        size="is-large"
-      />"
-    </h2>
-    <h3 class="subtitle is-6 has-text-grey">
-      Author: <a href="https://github.com/anteriovieira">
-        Antério Vieira
-        {{ posts }}
-      </a>
-    </h3>
-    <img src="/carousel/thumbnail/2020jijimuge.png">
-    <img src="/carousel/thumbnail/2019utsukubalive.png">
-    <img src="/carousel/thumbnail/2019cophilaction.jpg">
-    <img src="/carousel/thumbnail/staffwanted.jpg">
     <div>
-      <youtube :video-id="videoId" ref="youtube" @playing="playing"></youtube>
+      {{ browser }}{{ os }}
     </div>
+    <youtube :video-id="videoId" ref="youtube" @playing="playing"></youtube>
   </section>
 </template>
 
@@ -36,6 +21,8 @@ Vue.use(VueYoutube);
 export default {
   data() {
     return {
+      browser: this.$ua.browser(),
+      os: this.$ua.os(),
       videoId: 'lG0Ys-2d4MA',
       posts: [],
     }

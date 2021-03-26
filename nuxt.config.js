@@ -14,8 +14,8 @@ export default {
         hid: 'description', 
         name: 'description', 
         content: '価値あるアイディアを、つくばから。"Ideas worth spreading" というTEDの理念のもとに、筑波大学の学生を中心として独自に運営されているコミュニティです。'
-        // TEDxUTsukuba is an independently organised TEDx community managed by passionate students and alumni at the University of Tsukuba. Join us for a wide spectrum of conversations on local stories to global issues.
       },
+      // TEDxUTsukuba is an independently organised TEDx community managed by passionate students and alumni at the University of Tsukuba. Join us for a wide spectrum of conversations on local stories to global issues.
       {
         hid: 'og:title',
         property: 'og:title',
@@ -127,13 +127,13 @@ export default {
     [
       '@nuxtjs/google-analytics', { id: 'UA-104320074-1' }
     ],
-    [
-      'nuxt-webfontloader', {
-        google: {
-          families: ['Lato:400,700&text=abcdefghijklmnopqrstuvwxyz0123456789!/-&display:swap']
-        }
-      }
-    ],
+    // [
+    //   'nuxt-webfontloader', {
+    //     google: {
+    //       families: ['Lato:400,700&text=abcdefghijklmnopqrstuvwxyz0123456789!/-&display:swap']
+    //     }
+    //   }
+    // ],
     [
       'nuxt-buefy',
       {

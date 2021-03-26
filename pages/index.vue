@@ -3,7 +3,7 @@
     <!-- <div>
       <LogoAnimation id="top-logo" />
     </div> -->
-    <div class="top-carousel-wrapper columns is-gapless" style="margin-bottom: 0;">
+    <div id="top-carousel-wrapper" class="top-carousel-wrapper columns is-gapless" style="margin-bottom: 0;">
       <div class="column is-12-touch">
         <Carousel id="top-carousel" />
       </div>
@@ -32,7 +32,7 @@
       </section>
     </div> -->
       
-    <section class="hero bg-red" id="intro-wrap">
+    <section class="hero bg-red">
       <div class="hero-body">
         <section class="section" id="intro">
           <div class="columns is-mobile is-multiline is-centered is-variable is-0">
@@ -182,7 +182,7 @@ export default {
 
       const scene2 = this.$scrollmagic
         .scene({
-          triggerElement: '#intro-wrap',
+          triggerElement: '#top-carousel-wrapper',
           triggerHook: 0.5,
           offset: 0,
           reverse: false
@@ -192,23 +192,11 @@ export default {
             opacity: 1
           }
         })
-      // const scene4 = this.$scrollmagic
-      //   .scene({
-      //     triggerElement: '#intro',
-      //     triggerHook: 1,
-      //     offset: 0,
-      //     reverse: false
-      //   })
-      //   .setTween('#rocket', {
-      //     css: {
-      //       opacity: 1
-      //     }
-      //   })
 
       const scene3 = this.$scrollmagic
         .scene({
           triggerElement: '#notice-title',
-          triggerHook: 1,
+          triggerHook: 0.5,
           offset: 0,
           reverse: false
         })
@@ -220,7 +208,6 @@ export default {
         // this.$scrollmagic.addScene(scene1)
         this.$scrollmagic.addScene(scene2)
         this.$scrollmagic.addScene(scene3)
-        // this.$scrollmagic.addScene(scene4)
     } else {
       document.getElementById("intro").style.opacity = 1;
       document.getElementById("notice").style.opacity = 1;
@@ -257,7 +244,9 @@ export default {
     transition: all 0.5s;
   }
   #top-carousel {
-    opacity: 1;
+    // opacity: 0;
+    transition: all 1s;
+    // opacity: 0;
     // transition: fadeIn 2s;
     // max-width: 1024px !important;
     // margin: auto;
