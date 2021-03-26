@@ -47,8 +47,8 @@ export default {
       items: [
         {
           title: 'Staff Wanted',
-          image: 'https://www.tedxutsukuba.com/carousel/sns_banner_recruitement.jpg',
-          thumbnail: 'https://www.tedxutsukuba.com/carousel/thumbnail/sns_banner_recruitement.jpg',
+          image: 'https://www.tedxutsukuba.com/carousel/sns_banner_recruitment.jpg',
+          thumbnail: 'https://www.tedxutsukuba.com/carousel/thumbnail/sns_banner_recruitment.jpg',
           link: './about/utsukuba'
         },
         {
