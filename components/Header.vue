@@ -1,5 +1,5 @@
 <template>
-  <b-navbar class="is-fixed-top is-spaced is-black">
+  <b-navbar class="is-fixed-top is-spaced is-black" id="navbar-top">
     <template slot="brand">
       <b-navbar-item tag="router-link" :to="localePath('/')">
         <img

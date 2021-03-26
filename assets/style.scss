@@ -12,8 +12,18 @@
 //   }
 // }
 
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.4s;
+}
+
+.page-enter,
+.page-leave-active {
+  opacity: 0.4;
+}
+
 body {
-  font-family: 'Helvetica Neue', 'Helvetica', BlinkMacSystemFont, -apple-system, 'Lato', 'Open Sans', sans-serif !important;
+  font-family: 'Helvetica Neue', BlinkMacSystemFont, -apple-system, 'BIZ UDPGothic', 'Open Sans', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: "palt";
@@ -313,7 +323,7 @@ section#wrapper-dark {
   height: 100%;
   background-attachment: fixed !important;
   background-color: $black;
-  background: linear-gradient(176deg, hsl(0, 0, 12%) 0, hsl(0, 0, 4%) 100%);
+  background: linear-gradient(165deg, hsl(0, 0, 16%) 0, hsl(0, 0, 6%) 100%);
   background-repeat: no-repeat;
   background-clip: cover;
   background-attachment: fixed;
