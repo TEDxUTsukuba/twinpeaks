@@ -17,7 +17,7 @@
       @click="switchGallery(true)">
       <b-carousel-item v-for="(item, i) in items" :key="i">
         <nuxt-link :to="item.link">
-          <figure class="image">
+          <figure class="image is-16by9">
             <img :src="item.image" :alt="item.title">
           </figure>
         </nuxt-link>
@@ -77,11 +77,13 @@ export default {
 
 
 <style lang="scss">
-
+.indicator-item {
+  width: 25%;
+}
 .indicator-item figure img {
   margin-top: 10px;
   padding-top: 10px;
-  border-top: 5px solid #333333;
+  border-top: 5px solid #666666;
   // border: 2px solid gray;
   // filter: grayscale(80%);
   filter: brightness(50%);
