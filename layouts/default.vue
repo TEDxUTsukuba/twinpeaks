@@ -15,6 +15,19 @@ export default {
   },
   data () {
     return {
+      head() {
+        return {
+          htmlAttrs: {
+            lang: this.$i18n.locale
+          },
+          meta: [
+            {
+              property: 'og:locale',
+              content: this.$i18n.locale
+            }
+          ]
+        };
+      },
       items: [
         {
           title: 'Home',
