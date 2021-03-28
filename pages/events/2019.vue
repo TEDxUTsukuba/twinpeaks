@@ -252,11 +252,18 @@ export default {
             { id:4, title: "私は靴を履かないバーテンダー", name: "Carol Inugai Dixon", url: '/_nuxt/assets/speakers/2019/sp_2019_4.jpg' }
           ],
           topImg: require(`~/assets/speakers/2019/sp_2019_1.jpg`),
-
+    }
+  },
+  head: {
+    title: '2019 CoPhilAction | TEDxUTsukuba',
       meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      // { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
+      { 
+        hid: 'description', 
+        name: 'description', 
+        content: '2019年11月10日(日) TEDxUTsukuba "CoPhilAction" 筑波大学5C棟にて開催。Join us on Nov 10, 2019 for TEDxUTsukuba "CoPhilAction".'
+      },
       { 
         hid: 'twitter:card', 
         name: 'twitter:card', 
@@ -308,7 +315,6 @@ export default {
         content: 'TEDxUTsukuba Official Website' 
       }
     ]
-    }
   },
   methods: {
     getYouTubeUrl(value) {

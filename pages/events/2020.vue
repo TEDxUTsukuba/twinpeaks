@@ -292,14 +292,14 @@ export default {
     }
   },
   head: {
-    title: '2020 JIJIMUGE',
+    title: '2020 JIJIMUGE | TEDxUTsukuba',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { 
         hid: 'description', 
         name: 'description', 
-        content: "2020年11月29日(日) オンライン開催。TEDxUTsukuba's annual conference is going virtual this year. " 
+        content: '2020年11月29日(日) TEDxUTsukuba "JIJIMUGE" オンラインで開催。Join us on Nov 29, 2020 for TEDxUTsukuba "CoPhilAction", our first virtual conference.'
       },
       { 
         hid: 'twitter:card', 

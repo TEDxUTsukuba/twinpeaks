@@ -69,7 +69,16 @@ export default {
     }
   },
   head: {
-    title: 'Partners'
+    title: 'Partners | TEDxUTsukuba',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { 
+        hid: 'description', 
+        name: 'description', 
+        content: '私たちのイベントにご協賛をいただいているパートナーの皆さまをご紹介いたします。Our event is made possible by the continuous support of our partners. We are working together under the shared values and vision.'
+      },
+    ]
   },
   methods: {
     openModal (partner) {

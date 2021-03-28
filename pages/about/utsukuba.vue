@@ -225,7 +225,16 @@ export default {
     }
   },
   head: {
-    title: 'About TEDxUTsukuba'
+    title: 'About TEDxUTsukuba | TEDxUTsukuba',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { 
+        hid: 'description', 
+        name: 'description', 
+        content: 'TEDxUTsukubaは2016年に設立されたTEDxコミュニティ。筑波大学の一般学生団体であり、学生や卒業生を中心として運営されています。これまでに4回のメインカンファレンスを含む数々のTEDxイベントを開催しており、登壇者には筑波大学の教員や学生、卒業生を中心に、多彩なアイディアを持つ方々をお招きしています。'
+      },
+    ]
   },
   methods: {
     openModal (partner) {

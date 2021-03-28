@@ -149,7 +149,16 @@ export default {
     }
   },
   head: {
-    title: 'About TED and TEDx'
+    title: 'About TED and TEDx | TEDxUTsukuba',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { 
+        hid: 'description', 
+        name: 'description', 
+        content: 'TEDカンファレンスおよびTEDxプログラムについてご紹介いたします。Learn more about TED Conference and TEDx Program. '
+      },
+    ]
   },
   mounted(){
     const scene1 = this.$scrollmagic
