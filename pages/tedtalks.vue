@@ -39,19 +39,19 @@
       <div v-for="item in items" :key="item.title">
         <nav class="level">
           <div class="level-left">
-            <div class="level-item is-size-5">
+            <div class="level-item is-size-4">
               <h2 v-if="radio === 'ja'">{{ item.title_ja }}</h2>
               <h2 v-else-if="radio === 'zh-cn'">{{ item.title_cn }}</h2>
               <h2 v-else class="has-text-weight-medium">{{ item.title_en }}</h2>
             </div>
-            <div class="level-item is-size-7">
+            <div class="level-item">
               <p v-if="radio === 'ja'">{{ item.speaker_ja }}</p>
               <p v-else>{{ item.speaker_en }}</p>
             </div>
           </div>
           <div class="level-right">
-            <div class="level-item">
-              <p class="is-size-7">{{ item.conference }}</p>
+            <div class="level-item" v-if="!$ua.isFromSmartphone()">
+              <p>{{ item.conference }}</p>
             </div>
             <div class="level-item">
               <a class="button is-rounded is-white is-outlined" :href="`${item.link}?language=${radio}`" target="_blank" rel="noopener noreferrer">Watch</a>
@@ -139,7 +139,7 @@ export default {
     background-attachment: fixed;
   }
   section.section {
-    font-family: 'Montserrat', 'Hiragino Kaku Gothic Pro', 'Roboto', sans-serif;
+    font-family: 'Montserrat', BlinkMacSystemFont, -apple-system, 'Hiragino Kaku Gothic Pro', 'Roboto', sans-serif;
   }
   .navbar.is-black {
     background-color: #ff0000 !important;
