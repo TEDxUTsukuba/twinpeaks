@@ -39,7 +39,7 @@
       <div v-for="item in items" :key="item.title">
         <nav class="level">
           <div class="level-left">
-            <div class="level-item is-size-4">
+            <div class="level-item is-size-5">
               <h2 v-if="radio === 'ja'">{{ item.title_ja }}</h2>
               <h2 v-else-if="radio === 'zh-cn'">{{ item.title_cn }}</h2>
               <h2 v-else class="has-text-weight-medium">{{ item.title_en }}</h2>
@@ -132,14 +132,16 @@ export default {
 
 <style lang="scss" scoped>
   div#wrap {
-    background-color: #663dff;
-    background-image: linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
+    background-color: #FC466B;
+    background: linear-gradient(319deg, #fc5f7f 0%, #3e0aff 100%);
+    // background-color: #663dff;
+    // background-image: linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
     // background-color: #ff1493;
     // background-image: linear-gradient(319deg, #ff1493 0%, #0000ff 37%, #ff8c00 100%);
     background-attachment: fixed;
   }
   section.section {
-    font-family: 'Montserrat', BlinkMacSystemFont, -apple-system, 'Hiragino Kaku Gothic Pro', 'Roboto', sans-serif;
+    font-family: 'Montserrat', BlinkMacSystemFont, -apple-system, 'Hiragino Kaku Gothic Pro', 'Open Sans', sans-serif;
   }
   .navbar.is-black {
     background-color: #ff0000 !important;
