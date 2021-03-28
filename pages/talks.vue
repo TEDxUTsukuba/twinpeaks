@@ -36,16 +36,24 @@
               </youtube> -->
             </div>
             <div class="card-content">
-              <h1 class="title is-4">
-                {{ talk.title }}
-              </h1>
-              <h1 class="subtitle is-5" v-if="$i18n.locale == 'ja'">
-                {{ talk.speaker_name }}
-              </h1>
-              <h1 class="subtitle is-5" v-if="$i18n.locale == 'en'">
-                {{ talk.speaker_name_alt }}
-              </h1>
-              
+              <div class="media">
+                <div class="media-content">
+                  <h1 class="title is-4">
+                    {{ talk.title }}
+                  </h1>
+                  <h1 class="subtitle is-5" v-if="$i18n.locale == 'ja'">
+                    {{ talk.speaker_name }}
+                  </h1>
+                  <h1 class="subtitle is-5" v-if="$i18n.locale == 'en'">
+                    {{ talk.speaker_name_alt }}
+                  </h1>
+                </div>
+                <div class="media-right">
+                  <span><i class="mdi mdi-volume-high"/>{{ $t("lang_" + talk.language) }}</span>
+                </div>
+              </div>
+              <br>
+              <div class="content">
                 <b-collapse animation="fade" :open="false" position="" aria-id="contentIdForA11y1">
                   <span class="" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1">
                     <p class="is-size-7 has-text-grey-light" v-if="!props.open && $i18n.locale == 'ja'">{{ talk.description_ja | substrBefore(75) }}…</p>
@@ -56,6 +64,7 @@
                     <b-button class="button is-gradient is-rounded is-outlined is-small" :icon-left="!props.open ? 'chevron-down' : 'chevron-up'">{{ !props.open ? $t('button.readmore') : $t('button.readless') }}</b-button>
                   </span>
                 </b-collapse>
+              </div>
             </div>
           </div>
         </div>

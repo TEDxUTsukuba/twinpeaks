@@ -1,4 +1,8 @@
 {
+  "lang_of_locale_file_ja": "日本語",
+  "lang_of_locale_file_en": "Japanese",
+  "lang_ja": "日本語",
+  "lang_en": "英語",
   "header": {
     "events": {
       "parent": "イベント",
