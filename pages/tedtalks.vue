@@ -9,6 +9,7 @@
           Random Watchlist
         </h1>
         <br>
+        <small>表示言語 | Display Language | 显示语言</small>
         <div class="block">
           <b-field position="is-centered">
             <b-radio-button
@@ -30,7 +31,7 @@
               name="name"
               type="is-success"
               native-value="zh-cn">
-              中文
+              简体中文
             </b-radio-button>
           </b-field>
         </div>
@@ -92,7 +93,9 @@ export default {
   },
   data(){
     return {
+      // Default Language Setting
       radio: 'ja',
+      // Talks
       items: [
         {
           title_ja: "失われた民主的議論の技術",
@@ -148,5 +151,6 @@ export default {
   }
   hr {
     height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
   }
 </style>

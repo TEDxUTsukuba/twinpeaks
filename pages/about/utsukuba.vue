@@ -50,10 +50,10 @@
       </div>
     </section>
     <section class="section-wide">
-      <div class="columns is-mobile is-multiline">
+      <div class="columns is-multiline">
         <div
           id="thumbnails"
-          class="column is-3-fullhd is-4-widescreen is-4-desktop is-6-tablet is-6-mobile"
+          class="column is-3-fullhd is-4-widescreen is-4-desktop is-6-tablet"
           v-for="(member, index) in memberList" :key="member.tedtalk"
           style="display: inline-block; vertical-align: top;"
         >
