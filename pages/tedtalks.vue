@@ -1,41 +1,20 @@
 <template>
   <div id="wrap">
-    <section class="section has-text-white">
-      <div class="has-text-centered">
-        <h1 class="title is-1 has-text-centered has-text-white">
-          TED Talks
-        </h1>
-        <h1 class="subtitle is-3 has-text-white">
-          Random Watchlist
-        </h1>
-        <br>
-        <small>表示言語 | Display Language | 显示语言</small>
-        <div class="block">
-          <b-field position="is-centered">
-            <b-radio-button
-              v-model="radio"
-              name="name"
-              type="is-danger"
-              native-value="ja">
-              日本語
-            </b-radio-button>
-            <b-radio-button
-              v-model="radio"
-              name="name"
-              type="is-info"
-              native-value="en">
-              English
-            </b-radio-button>
-            <b-radio-button
-              v-model="radio"
-              name="name"
-              type="is-success"
-              native-value="zh-cn">
-              简体中文
-            </b-radio-button>
-          </b-field>
+    <section class="hero is-fullheight has-text-white">
+      <div class="hero-body has-text-centered">
+        <div class="container">
+          <h1 class="title is-0 has-text-centered has-text-white">
+            TED Talks
+          </h1>
+          <h1 class="subtitle is-3 has-text-white">
+            Random Watchlist
+          </h1>
+          <i class="mdi mdi-chevron-down"  style="font-size: 5rem;"/>
         </div>
       </div>
+    </section>
+
+    <section class="section has-text-light">
       <hr>
       <div v-for="item in items" :key="item.title">
         <nav class="level">
@@ -75,12 +54,58 @@
         </div>
       </div>
     </section>
+
     <footer class="footer has-background-black has-text-centered" style="background-color: rgba(0, 0, 0, 0.1);">
       <nuxt-link to="/">
         <img src="~/assets/logo.png" style="max-width: 320px; width: 60%;">
       </nuxt-link>
       <p>TEDxUTsukuba &copy; All Rights Reserved. </p>
     </footer>
+
+    <nav class="navbar is-fixed-bottom is-black" role="navigation" aria-label="main navigation">
+      <div class="navbar-menu is-active">
+        <div class="navbar-start">
+          <nuxt-link class="navbar-item" to="/">
+            <img
+              src="~/assets/logo.png"
+              alt="Lightweight UI components for Vue.js based on Bulma"
+            >
+          </nuxt-link>
+        </div>
+        <div class="navbar-end">
+          <!-- <div class="navbar-item is-active">
+            <p class="is-size-7 has-text-grey-light mb-6">表示言語 | Display Language | 显示语言</p>
+          </div> -->
+          <div class="navbar-item">
+            <div class="block">
+              <b-field position="is-centered">
+                <b-radio-button
+                  v-model="radio"
+                  name="name"
+                  type="is-danger"
+                  native-value="ja">
+                  日本語
+                </b-radio-button>
+                <b-radio-button
+                  v-model="radio"
+                  name="name"
+                  type="is-info"
+                  native-value="en">
+                  English
+                </b-radio-button>
+                <b-radio-button
+                  v-model="radio"
+                  name="name"
+                  type="is-success"
+                  native-value="zh-cn">
+                  简体中文
+                </b-radio-button>
+              </b-field>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
   </div>
 </template>
 
@@ -146,11 +171,27 @@ export default {
   section.section {
     font-family: 'Montserrat', BlinkMacSystemFont, -apple-system, 'Hiragino Kaku Gothic Pro', 'Open Sans', sans-serif;
   }
-  .navbar.is-black {
-    background-color: #ff0000 !important;
-  }
   hr {
     height: 1px;
     background-color: rgba(255, 255, 255, 0.2);
+  }
+  .navbar-menu {
+    background-color: #0a0a0a;
+  }
+  @media screen and (max-width: 1024px) {
+    .navbar-start {
+      display: none;
+    }
+  }
+  .mdi {
+    animation:1s ease-in 1s 5 alternate forwards running fuwafuwa;
+  }
+  @keyframes fuwafuwa {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }
 </style>
