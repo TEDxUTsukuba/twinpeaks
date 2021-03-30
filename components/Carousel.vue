@@ -2,7 +2,9 @@
   <div id="carousel-wrapper">
     <b-carousel
       with-carousel-list
-      :autoplay="false"
+      :autoplay="autoplay"
+      :animated="animated"
+      :repeat="repeat"
       :indicator="indicator"
       :indicator-inside="false"
       :indicator-style="indicatorStyle"
@@ -12,7 +14,6 @@
       :icon-prev="iconPrev"
       :icon-next="iconNext"
       :icon-size="iconSize"
-      :repeat="true"
       :pause-info-type="pauseInfoType"
       @click="switchGallery(true)">
       <b-carousel-item v-for="(item, i) in items" :key="i">
@@ -36,7 +37,10 @@ export default {
   data() {
     return {
       gallery: false,
-      interval: 5000,
+      autoplay: true,
+      animated: 'slide',
+      repeat: false,
+      interval: 3500,
       indicator: true,
       indicatorStyle: 'is-lines',
       iconPack: 'mdi',

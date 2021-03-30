@@ -2,13 +2,26 @@
   <div id="wrap">
     <section class="hero is-fullheight has-text-white">
       <div class="hero-body has-text-centered">
-        <div class="container">
-          <h1 class="title is-0 has-text-centered has-text-white">
+        <div class="container has-text-centered">
+          <h1 class="title is-1 has-text-white">
             TED Talks
           </h1>
-          <h1 class="subtitle is-3 has-text-white">
+          <h1 class="subtitle is-4 has-text-white has-text-weight-light">
             Random Watchlist
           </h1>
+          <div class="ted-embed-wrap" style="max-width:854px; margin: 5vh auto;">
+            <div style="position:relative;height:0;padding-bottom:56.25%">
+              <iframe
+                :src="`https://embed.ted.com/talks/lang/${radio}/${items[0].link}`" 
+                width="854"
+                height="480"
+                style="position:absolute;left:0;top:0;width:100%;height:100%"
+                frameborder="0"
+                scrolling="no"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
           <i class="mdi mdi-chevron-down"  style="font-size: 5rem;"/>
         </div>
       </div>
@@ -34,24 +47,11 @@
               <p>{{ item.conference }}</p>
             </div>
             <div class="level-item">
-              <a class="button is-rounded is-white is-outlined" :href="`${item.link}?language=${radio}`" target="_blank" rel="noopener noreferrer">Watch</a>
+              <a class="button is-rounded is-white is-outlined" :href="`https://www.ted.com/talks/${item.link}?language=${radio}`" target="_blank" rel="noopener noreferrer">Watch</a>
             </div>
           </div>
         </nav>
         <hr>
-      </div>
-      <div style="max-width:854px; margin: 0 auto;">
-        <div style="position:relative;height:0;padding-bottom:56.25%">
-          <iframe
-            src="https://embed.ted.com/talks/lang/ja/michael_sandel_the_lost_art_of_democratic_debate" 
-            width="854"
-            height="480"
-            style="position:absolute;left:0;top:0;width:100%;height:100%"
-            frameborder="0"
-            scrolling="no"
-            allowfullscreen>
-          </iframe>
-        </div>
       </div>
     </section>
 
@@ -129,7 +129,7 @@ export default {
           speaker_ja: "マイケル・サンデル",
           speaker_en: "Micheal Sandel",
           conference: "TED2010",
-          link: "https://www.ted.com/talks/michael_sandel_the_lost_art_of_democratic_debate",
+          link: "michael_sandel_the_lost_art_of_democratic_debate",
           date_nominated: "2021/03/28"
         },
         {
@@ -139,7 +139,7 @@ export default {
           speaker_ja: "レイチェル・ボッツマン",
           speaker_en: "Racheal Botsman",
           conference: "TEDGlobal 2012",
-          link: "https://www.ted.com/talks/rachel_botsman_the_currency_of_the_new_economy_is_trust",
+          link: "rachel_botsman_the_currency_of_the_new_economy_is_trust",
           date_nominated: "2016/07/20"
         },
         {
@@ -149,7 +149,7 @@ export default {
           speaker_ja: "リンダ・ヒル",
           speaker_en: "Linda Hill",
           conference: "TEDGlobal 2012",
-          link: "https://www.ted.com/talks/linda_hill_how_to_manage_for_collective_creativity",
+          link: "linda_hill_how_to_manage_for_collective_creativity",
           date_nominated: "2016/07/20"
         }
       ]
@@ -169,7 +169,7 @@ export default {
     background-attachment: fixed;
   }
   section.section {
-    font-family: 'Montserrat', BlinkMacSystemFont, -apple-system, 'Hiragino Kaku Gothic Pro', 'Open Sans', sans-serif;
+    font-family: BlinkMacSystemFont, -apple-system, 'Hiragino Kaku Gothic Pro', 'Open Sans', sans-serif;
   }
   hr {
     height: 1px;
@@ -188,10 +188,16 @@ export default {
   }
   @keyframes fuwafuwa {
     0% {
-      opacity: 1;
-    }
-    100% {
       opacity: 0;
     }
+    100% {
+      opacity: 1;
+    }
+  }
+  .ted-embed-wrap {
+    filter: drop-shadow(0px 12px 28px rgba(0,0,0,0.6));
+  }
+  .container {
+    padding: 0 2rem;
   }
 </style>

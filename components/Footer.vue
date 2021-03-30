@@ -30,8 +30,8 @@
 
         <div class="content">
           <b-collapse :open="false" position="is-bottom" aria-id="contentIdForA11y1">
-            <a class="button is-dark is-rounded" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1" style="margin: 2rem auto 0 auto;">
-                <b-icon :icon="!props.open ? 'chevron-down' : 'chevron-up'" class="is-size-4" style="margin-right: 1px;" /></b-icon> 
+            <a class="button is-white is-rounded" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1" style="margin: 2rem auto 0 auto;">
+                <b-icon :icon="!props.open ? 'chevron-down' : 'chevron-up'" style="margin-right: 1px;" /></b-icon> 
                 {{ !props.open ? $t('button.readmore') : $t('button.readless') }}
             </a>
             <br>
