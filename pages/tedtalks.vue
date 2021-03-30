@@ -83,21 +83,24 @@
                   v-model="radio"
                   name="name"
                   type="is-danger"
-                  native-value="ja">
+                  native-value="ja"
+                  >
                   日本語
                 </b-radio-button>
                 <b-radio-button
                   v-model="radio"
                   name="name"
                   type="is-info"
-                  native-value="en">
+                  native-value="en"
+                  >
                   English
                 </b-radio-button>
                 <b-radio-button
                   v-model="radio"
                   name="name"
                   type="is-success"
-                  native-value="zh-cn">
+                  native-value="zh-cn"
+                  >
                   简体中文
                 </b-radio-button>
               </b-field>
@@ -120,6 +123,7 @@ export default {
     return {
       // Default Language Setting
       radio: 'ja',
+      isActive: false,
       // Talks
       items: [
         {
@@ -153,6 +157,11 @@ export default {
           date_nominated: "2016/07/20"
         }
       ]
+    }
+  },
+  methods: {
+    popup_en() {
+      this.$buefy.notification.open('Something happened')
     }
   }
 }
