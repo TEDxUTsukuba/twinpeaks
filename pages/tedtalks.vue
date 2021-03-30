@@ -22,7 +22,8 @@
               </iframe>
             </div>
           </div>
-          <i class="mdi mdi-chevron-down"  style="font-size: 5rem;"/>
+          <i v-if="$ua.isFromSmartphone()" class="mdi mdi-chevron-down" style="font-size: 2rem;"/>
+          <i v-else class="mdi mdi-chevron-down" style="font-size: 5rem;"/>
         </div>
       </div>
     </section>
@@ -207,6 +208,6 @@ export default {
     filter: drop-shadow(0px 12px 28px rgba(0,0,0,0.6));
   }
   .container {
-    padding: 0 2rem;
+    padding: 2rem 2rem;
   }
 </style>
