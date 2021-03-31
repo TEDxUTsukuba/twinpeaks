@@ -31,23 +31,24 @@
 
       <section class="section has-text-light">
         <hr>
-        <div v-for="item in items" :key="item.title">
+        <div v-for="item in tedtalkList" :key="item.title_ja">
           <nav class="level">
             <div class="level-left">
               <div class="level-item is-size-5">
                 <h2 v-if="radio === 'ja'">{{ item.title_ja }}</h2>
-                <h2 v-else-if="radio === 'zh-cn'">{{ item.title_cn }}</h2>
+                <h2 v-else-if="radio === 'zh-cn'">{{ item.title_zh_cn }}</h2>
                 <h2 v-else class="has-text-weight-medium">{{ item.title_en }}</h2>
               </div>
               <div class="level-item">
                 <p v-if="radio === 'ja'">{{ item.speaker_ja }}</p>
+                <p v-else-if="radio === 'zh-cn'">{{ item.speaker_zh_cn }}</p>
                 <p v-else>{{ item.speaker_en }}</p>
               </div>
             </div>
             <div class="level-right">
-              <div class="level-item" v-if="!$ua.isFromSmartphone()">
+              <!-- <div class="level-item" v-if="!$ua.isFromSmartphone()">
                 <p>{{ item.conference }}</p>
-              </div>
+              </div> -->
               <div class="level-item">
                 <a class="button is-rounded is-white is-outlined" :href="`https://www.ted.com/talks/${item.link}?language=${radio}`" target="_blank" rel="noopener noreferrer">Watch</a>
               </div>
@@ -116,6 +117,7 @@
 </template>
 
 <script>
+import tedtalkList from '@/contents/tedtalks.json'
 
 export default {
   layout: 'fullscreen',
@@ -124,6 +126,7 @@ export default {
   },
   data(){
     return {
+      tedtalkList: tedtalkList,
       // Default Language Setting
       radio: 'ja',
       isActive: false,
@@ -132,9 +135,10 @@ export default {
         {
           title_ja: "失われた民主的議論の技術",
           title_en: "The lost art of democratic debate",
-          title_cn: "失落了的民主辩论艺术",
+          title_zh_cn: "失落了的民主辩论艺术",
           speaker_ja: "マイケル・サンデル",
           speaker_en: "Micheal Sandel",
+          speaker_zh_cn: "Micheal Sandel",
           conference: "TED2010",
           link: "michael_sandel_the_lost_art_of_democratic_debate",
           date_nominated: "2021/03/28"
@@ -142,9 +146,10 @@ export default {
         {
           title_ja: "新しい経済の通貨：信頼",
           title_en: "The currency of the new economy is trust",
-          title_cn: "新型经济的货币是信用",
+          title_zh_cn: "新型经济的货币是信用",
           speaker_ja: "レイチェル・ボッツマン",
           speaker_en: "Racheal Botsman",
+          speaker_zh_cn: "Racheal Botsman",
           conference: "TEDGlobal 2012",
           link: "rachel_botsman_the_currency_of_the_new_economy_is_trust",
           date_nominated: "2016/07/20"
@@ -152,9 +157,10 @@ export default {
         {
           title_ja: "集団の創造性をマネジメントする",
           title_en: "How to manage for collective creativity",
-          title_cn: "如何管理集体创造力",
+          title_zh_cn: "如何管理集体创造力",
           speaker_ja: "リンダ・ヒル",
           speaker_en: "Linda Hill",
+          speaker_zh_cn: "Linda Hill",
           conference: "TEDGlobal 2012",
           link: "linda_hill_how_to_manage_for_collective_creativity",
           date_nominated: "2016/07/20"
