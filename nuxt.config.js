@@ -222,7 +222,7 @@ export default {
       routesNameSeparator: '___'
     },
     exclude: [
-      '**/ja/**', '**/private', '**/private/**', '**/inspire', '**/talks_old', '**/event_old', '**/loading'
+      '**/ja/**', '**/private', '**/private/**', '**/inspire', '**/talks_old', '**/event_old', '**/loading', '**/tedtalks'
     ],
     // routes(callback) {
     //   const axios = require('axios')
