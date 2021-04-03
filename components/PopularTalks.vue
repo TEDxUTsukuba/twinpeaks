@@ -1,5 +1,5 @@
 <template>
-  <div class="wrap">
+  <div class="slideshow-wrap">
     <ul class="slideshow" id="slides-before">
       <li class="slideshow-item" v-for="(talk, index) in talkList" :key="index">
         <div class="card has-background-dark">

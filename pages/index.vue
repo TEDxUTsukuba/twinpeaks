@@ -119,15 +119,9 @@
       </div>
     </section>
 
-
-    <!-- <section class="section">
-      <h1 class="title is-2 has-text-centered">
-        <span class="">TEDxUTsukuba This Week</span>
-      </h1>
-    </section>
-    <PopularTalks />
     <br><br>
-    <div class="has-text-centered">
+    <PopularArticles />    
+    <!-- <div class="has-text-centered">
       <nuxt-link :to="localePath('/talks')" class="button is-gradient is-rounded">{{ $t('talks.seeAll') }}</nuxt-link>
     </div> -->
     <br><br>
@@ -138,7 +132,7 @@
 import Card from '~/components/Card'
 import Flip from '~/components/Flip'
 import Carousel from '~/components/Carousel'
-// import PopularTalks from '~/components/PopularTalks'
+import PopularArticles from '~/components/PopularArticles'
 // import LogoAnimation from '~/components/LogoAnimation'
 // import Movie from '~/components/Movie'
 // const Card = () => import('~/components/Card')
@@ -147,7 +141,7 @@ import Carousel from '~/components/Carousel'
 
 export default {
   components: {
-    Card, Flip, Carousel
+    Card, Flip, Carousel, PopularArticles
   },
   data() {
     return {

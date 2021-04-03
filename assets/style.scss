@@ -179,7 +179,11 @@ section.is-large {
     font-size: 1rem !important;
   }
 
-  .is-size-6, p, article, li, a {
+  .is-size-6,
+  p,
+  article,
+  li,
+  a {
     font-size: 0.75rem !important;
   }
 }
@@ -223,7 +227,11 @@ section.is-large {
     font-size: 1.25rem !important;
   }
 
-  .is-size-6, p, article, li, a {
+  .is-size-6,
+  p,
+  article,
+  li,
+  a {
     font-size: 1rem !important;
   }
 
@@ -261,7 +269,11 @@ section.is-large {
     font-size: 1.5rem !important;
   }
 
-  .is-size-6, p, article, li, a {
+  .is-size-6,
+  p,
+  article,
+  li,
+  a {
     font-size: 1.25rem !important;
   }
 
@@ -772,7 +784,7 @@ span.is-red {
 //   background-color: green;
 // }
 
-.wrap {
+.slideshow-wrap {
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
   display: flex;
@@ -786,13 +798,13 @@ span.is-red {
 /* content4つをまとめたスライドブロック */
 .slideshow {
   display: flex;
-  -webkit-animation: none;
-  animation: loop-slide 40s linear 1s both;
+  -webkit-animation: loop-slide 30s linear 1s both;
+  animation: loop-slide 30s linear 1s both;
   animation-fill-mode: forwards;
 
   @media screen and (max-width: 768px) {
-    -webkit-animation: loop-slide 40s linear infinite 1s both;
-    animation: loop-slide 40s linear infinite 1s both;
+    -webkit-animation: loop-slide 40s linear 1s both;
+    animation: loop-slide 40s linear 1s both;
   }
 }
 
