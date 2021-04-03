@@ -27,11 +27,6 @@
           <li><a href="https://www.ted.com/participate/organize-a-local-tedx-event/apply-for-a-tedx-license">ライセンスを申請する</a></li>
           <li><nuxt-link to="/private/how_to_add_an_event">TEDxUTsukubaのイベントページにイベントを追加する</nuxt-link></li>
         </ul>
-        <br>
-        <p>あいうえお</p>
-        <ul>
-          <li><nuxt-link to="/private/how_to_update_team">チームを更新する</nuxt-link></li>
-        </ul>
     </section>
     <section class="section">
       <h2 class="title is-4">お役立ちリンク集 | Useful Links</h2>
