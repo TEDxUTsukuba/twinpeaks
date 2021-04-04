@@ -31,7 +31,7 @@
       <h1 class="title">Social Capital</h1>
       <article v-html="$t('about.utsukuba.description.5')"></article>
     </section>
-    <section class="hero">
+    <section class="section">
       <Movie id="teaser" :vId='weAreTEDxUTsukuba' :aPlay='autoplay'></Movie>
     </section>
     <!-- <section class="hero is-medium bg-red">
@@ -41,12 +41,10 @@
         </section>
       </div>
     </section> -->
-    <section class="hero is-medium">
-      <div class="hero-body has-text-white has-text-left">
-        <div class="container has-text-centered">
-          <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.team.title')}}</h1>
-          <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.utsukuba.team.subtitle')}}</h1>
-        </div>
+    <section class="section">
+      <div class="container has-text-centered">
+        <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.members.title')}}</h1>
+        <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.utsukuba.members.subtitle')}}</h1>
       </div>
     </section>
     <section class="section-wide">
@@ -97,24 +95,24 @@
               <div class="content">
               
                 <p class="midashi is-size-7 has-text-weight-bold has-text-primary">
-                  {{ $t('about.utsukuba.team.from') }}
+                  {{ $t('about.utsukuba.members.from') }}
                   <span class="is-size-7 has-text-weight-normal has-text-light" v-if="$i18n.locale == 'en'">{{ member.home_state_en }}</span>
                   <span class="is-size-7 has-text-weight-normal has-text-light" v-if="$i18n.locale == 'ja'">{{ member.home_state_ja }}</span>
                 </p>
 
                 <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.college_ja">
-                  {{ $t('about.utsukuba.team.college') }}
+                  {{ $t('about.utsukuba.members.college') }}
                   <span class="is-size-7 has-text-weight-normal has-text-light" v-if="$i18n.locale == 'en'">{{ member.college_en }}</span>
                   <span class="is-size-7 has-text-weight-normal has-text-light" v-if="$i18n.locale == 'ja'">{{ member.college_ja }}</span>
                 </p>
 
-                <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.keyword1" style="line-height: 1;">{{ $t('about.utsukuba.team.keywords') }}</p>
+                <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.keyword1" style="line-height: 1;">{{ $t('about.utsukuba.members.keywords') }}</p>
                 <p class="is-size-7 has-text-weight-normal has-text-light">{{ member.keyword1 }}<span v-if="member.keyword2">, </span>{{ member.keyword2 }}<span v-if="member.keyword3">, </span>{{ member.keyword3 }}</p>
                 
-                <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.tedtalk">{{ $t('about.utsukuba.team.favouritetedtalk') }}</p>
+                <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.tedtalk">{{ $t('about.utsukuba.members.favouritetedtalk') }}</p>
                 <a class="is-size-7 has-text-weight-normal has-text-light is-uppercase" v-if="member.tedtalk" :href="getTedLinkUrl(member.tedtalk)" target="_blank" rel="noopener noreferrer">{{ member.tedtalk.replace(regexTitle, '').replace(regexLang, '').replace(/_/g, ' ') }}<externalLink v-if="member.tedtalk" style="width: 0.75rem; margin-left: 0.75rem;" /></a>
                 
-                <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.tedtalk_alt">{{ $t('about.utsukuba.team.favouritetedtalk') }}</p>
+                <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.tedtalk_alt">{{ $t('about.utsukuba.members.favouritetedtalk') }}</p>
                 <a class="is-size-7 has-text-weight-normal has-text-light" v-if="member.tedtalk_alt" :href="member.tedtalk_alt" target="_blank" rel="noopener noreferrer">YouTube<externalLink v-if="member.tedtalk_alt" style="width: 0.75rem; margin-left: 0.75rem;" /></a>
                 
                 <p class="card-item has-text-right">
@@ -127,13 +125,10 @@
         </div>
       </div>
     </section>
-    <section class="hero is-medium">
-      <div class="hero-body has-text-white has-text-left">
-        <div class="container has-text-centered">
-          <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.join.title')}}</h1>
-          <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.utsukuba.join.subtitle')}}</h1>
-          <nuxt-link to="/events" class="button is-rounded is-gradient">新歓イベントを探す</nuxt-link>
-        </div>
+    <section class="section">
+      <div class="container has-text-centered">
+        <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.team.title')}}</h1>
+        <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.utsukuba.team.subtitle')}}</h1>
       </div>
     </section>
     <section class="section">
@@ -147,6 +142,48 @@
       </div>
     </section>
     <section class="section">
+      <div class="columns is-multiline">
+        <div class="column is-6">
+          <figure class="image">
+            <img src="~/assets/team/intro/enja.png" alt="Enja Team">
+          </figure>
+        </div>
+        <div class="column is-6">
+          <figure class="image">
+            <img src="~/assets/team/intro/partner.png" alt="Partner Team">
+          </figure>
+        </div>
+        <div class="column is-6">
+          <figure class="image">
+            <img src="~/assets/team/intro/pr.png" alt="PR Team">
+          </figure>
+        </div>
+        <div class="column is-6">
+          <figure class="image">
+            <img src="~/assets/team/intro/tech.png" alt="Tech Team">
+          </figure>
+        </div>
+        <div class="column is-6">
+          <figure class="image">
+            <img src="~/assets/team/intro/international.png" alt="International Team">
+          </figure>
+        </div>
+        <div class="column is-6">
+          <figure class="image is-16by9">
+            <img src="~/assets/others/IMG_9801.jpg" alt="Members 2019">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container has-text-centered">
+        <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.join.title')}}</h1>
+        <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.utsukuba.join.subtitle')}}</h1>
+        <nuxt-link to="/events" class="button is-rounded is-gradient">新歓イベントを探す</nuxt-link>
+      </div>
+    </section>
+    <!-- <section class="section">
       <div class="columns is-multiline">
         <div class="column is-half-tablet is-one-quarter-desktop">
           <figure class="image is-16by9">
@@ -169,22 +206,30 @@
           </figure>
         </div>
       </div>
-    </section>
-    <section class="hero is-medium">
-      <div class="hero-body has-text-white has-text-left">
-        <div class="container has-text-centered">
-          <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.contactus.title')}}</h1>
-          <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.utsukuba.contactus.subtitle')}}</h1>
+    </section> -->
+    <section class="section">
+      <div class="container has-text-centered">
+        <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.contactus.title')}}</h1>
+        <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.utsukuba.contactus.subtitle')}}</h1>   
+        <div class="columns">
+          <div class="column">
+            <a href="mailto:tedxutsukuba&#64;gmail.com">
+              <div class="nmp-card-red">
+                <i class="mdi mdi-email" style="font-size: 2rem;" /><br>tedxutsukuba&#64;gmail.com
+              </div>
+            </a>
+          </div>
+            <div class="column">
+              <a href="https://twitter.com/tedxutsukuba">
+                <div class="nmp-card-red">
+                  <i class="mdi mdi-twitter" style="font-size: 2rem;" /><br>@tedxutsukuba
+                </div>
+              </a>
+            </div>
         </div>
       </div>
     </section>
-    <section class="section">
-        <div class="container has-text-centered">
-          <div class="nmp-card-dark has-text-weight-bold" style="font-size: 1rem;">
-            <font-awesome-icon :icon="['fas', 'envelope']" style="color: white;" /> tedxutsukuba&#64;gmail.com<br>
-            <font-awesome-icon :icon="['fab', 'twitter']" style="color: white;" /> @tedxutsukuba
-          </div>
-        </div>
+    <br><br>
 
         <!-- <vue-instagram token="accessTokenHere" :count="5" :tags="['hashtag1', 'hashtag2']" mediaType="image">
           <template slot="feeds" slot-scope="props">
@@ -194,7 +239,6 @@
             <div class="fancy-alert"> {{ props.error.error_message }} </div>
           </template>
         </vue-instagram> -->
-    </section>
   </section>
 </template>
 
@@ -213,6 +257,7 @@ export default {
   },
   data() {
     return {
+      isImageModalActive: false,
       memberList: {},
       showContent: false,
       autoPlay: false,
