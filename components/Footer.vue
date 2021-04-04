@@ -95,7 +95,7 @@
               </div>
 
               <div class="sns column is-4-desktop is-5-tablet has-text-right has-text-centered-mobile">
-                <a href="https://www.facebook.com/tedxtsukuba" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.facebook.com/tedxutsukuba" target="_blank" rel="noopener noreferrer">
                   <iconFB alt="Facebook" class="icon" />
                 </a>
                 <a href="https://www.instagram.com/tedxutsukuba" target="_blank" rel="noopener noreferrer">
@@ -104,7 +104,7 @@
                 <a href="https://www.twitter.com/tedxutsukuba" target="_blank" rel="noopener noreferrer">
                   <iconTW alt="Twitter" class="icon" />
                 </a>
-                <a href="https://www.flic.kr/ps/3eCWpZ" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.flickr.com/people/146703506@N03/" target="_blank" rel="noopener noreferrer">
                   <iconFL alt="Flickr" class="icon" />
                 </a>
                 <a href="https://note.com/tedxutsukuba" target="_blank" rel="noopener noreferrer"> 
