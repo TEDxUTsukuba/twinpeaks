@@ -107,7 +107,7 @@
                 <a href="https://www.flic.kr/ps/3eCWpZ" target="_blank" rel="noopener noreferrer">
                   <iconFL alt="Flickr" class="icon" />
                 </a>
-                <a href="https://www.note.com/tedxutsukuba" target="_blank" rel="noopener noreferrer"> 
+                <a href="https://note.com/tedxutsukuba" target="_blank" rel="noopener noreferrer"> 
                   <iconNT alt="note" class="icon" />
                 </a>
               </div>
