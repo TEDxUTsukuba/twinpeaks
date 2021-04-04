@@ -3,7 +3,7 @@
     "id": 1,
     "name_en": "Curation",
     "name_ja": "スピーカー選定",
-    "color": "tsukuba"
+    "color": "itf"
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@
     "id": 4,
     "name_en": "Partnering",
     "name_ja": "渉外",
-    "color": "tsukuba"
+    "color": "itf"
   },
   {
     "id": 5,
@@ -39,7 +39,7 @@
     "id": 7,
     "name_en": "Venue Setup",
     "name_ja": "会場設営",
-    "color": "tsukuba"
+    "color": "grey"
   },
   {
     "id": 8,
