@@ -92,11 +92,8 @@
     </section>
 
 
-    <section class="hero has-text-centered">
-      <section class="section">
-        <h1 class="title is-0 has-text-white">{{ $t('about.ted.watch')}}</h1>
-      </section>
-      <div class="hero-body has-text-centered">
+    <section class="section-wide has-text-centered">
+      <h1 class="title is-0 has-text-white">{{ $t('about.ted.watch')}}</h1>
         <div class="columns is-multiline">
           <div id="ted-embedded-top" class="column" style="position:relative;">
             <iframe class="video" src="https://embed.ted.com/talks/john_maeda_designing_for_simplicity" width="854" height="480" style="position: relative;" frameborder="0" scrolling="no" allowfullscreen></iframe>
@@ -115,7 +112,6 @@
             <p class="subtitle">{{ $t('about.tedx.speaker')}}</p>
             <a class="button is-rounded is-gradient" href="https://www.ted.com/watch/tedx-talks">{{ $t('about.tedx.watchmoretedx')}}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
           </div>
-        </div>
         <!-- <Movie id="teaser" :vId='videoId4' :aPlay='autoplay'></Movie> -->
       </div>
     </section>
@@ -202,8 +198,8 @@ export default {
   }
   iframe.video {
     @media screen and (min-width: 769px) {
-      width: 64vw;
-      height: 36vw !important;
+      width: 48vw !important;
+      height: 27vw !important;
     }
     width: 100vw;
   }
