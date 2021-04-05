@@ -85,21 +85,21 @@ export default {
   width: 25%;
 }
 .indicator-item figure img {
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 5px solid #666666;
+  margin-top: 0.2rem;
+  padding-top: 0.3rem;
+  border-top: 0.3rem solid #666666;
   // border: 2px solid gray;
   // filter: grayscale(80%);
   filter: brightness(50%);
 }
 .indicator-item.is-active figure img {
-  border-top: 5px solid red;
+  border-top: 0.3rem solid red;
   // border: 2px solid white;
   // filter: grayscale(0);
   filter: brightness(100%);
 }
 .carousel .carousel-indicator {
-  @media screen and (min-width: 961px) {
+  @media screen and (min-width: 1216px) {
     padding: 0.5rem 0 !important;
   }
 }

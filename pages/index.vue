@@ -3,11 +3,11 @@
     <!-- <div>
       <LogoAnimation id="top-logo" />
     </div> -->
-    <div id="top-carousel-wrapper" class="top-carousel-wrapper columns is-gapless" style="margin-bottom: 0;">
+    <div id="top-carousel-wrapper" class="top-carousel-wrapper columns is-gapless is-vcentered" style="margin-bottom: 0;">
       <div class="column is-12-touch">
         <Carousel id="top-carousel" />
       </div>
-      <div class="column is-4-desktop is-5-fullhd vertical-center has-text-centered" id="top-carousel-wrapper-logo-section">
+      <div class="column is-4-widescreen is-5-fullhd vertical-center has-text-centered" id="top-carousel-wrapper-logo-section">
         <img src="~/assets/logo/black_transparent_1.png" width="60%">
         <!-- <LogoAnimation id="top-logo" /> -->
       </div>
@@ -32,9 +32,9 @@
       </section>
     </div> -->
       
-    <section class="hero bg-red">
-      <div class="hero-body">
-        <section class="section" id="intro">
+    <section class="hero">
+      <div class="hero-body bg-red" id="intro">
+        <section class="section">
           <div class="columns is-mobile is-multiline is-centered is-variable is-0">
               <div class="column is-5-widescreen is-4-desktop is-6-tablet is-10-mobile">
                 <img src="~/assets/logo/motto.png" class="motto" style="padding-right: 50px;">
@@ -70,52 +70,54 @@
     </section> -->
 
     <section id="notice-title" class="section">
-      <h1 class="title is-2 has-text-centered">
-        <span class="">{{ $t('news.title') }}</span>
-      </h1>
-      <br>
-      <div class="columns is-multiline reverse-row-order" id="notice">
-        <div class="column is-5-tablet">
-          <Flip
-            :title = "$t('notice.left-top.title')"
-            :description = "$t('notice.left-top.description')"
-            :detail = "$t('notice.left-top.detail')"
-            :link = "$t('notice.left-top.link')"
-            imageUrl = "/_nuxt/assets/speakers/2019/sp_2019_1.jpg"
-           />
+      <div id="notice">
+        <h1 class="title is-2 has-text-centered">
+          <span class="">{{ $t('news.title') }}</span>
+        </h1>
+        <br>
+        <div class="columns is-multiline reverse-row-order">
+          <div class="column is-5-tablet">
+            <Flip
+              :title = "$t('notice.left-top.title')"
+              :description = "$t('notice.left-top.description')"
+              :detail = "$t('notice.left-top.detail')"
+              :link = "$t('notice.left-top.link')"
+              imageUrl = "/_nuxt/assets/speakers/2019/sp_2019_1.jpg"
+            />
+          </div>
+          <div class="column is-7-tablet">
+            <Flip
+              :title = "$t('notice.left-bottom.title')"
+              :description = "$t('notice.left-bottom.description')"
+              :detail = "$t('notice.left-bottom.detail')"
+              :link = "$t('notice.left-bottom.link')"
+              imageUrl = ""
+            />
+          </div>
+          <div class="column is-7-tablet">
+            <Flip
+              :title = "$t('notice.right-top.title')"
+              :description = "$t('notice.right-top.description')"
+              :detail = "$t('notice.right-top.detail')"
+              :link = "$t('notice.right-top.link')"
+              imageUrl = ""
+            />
+          </div>
+          <div class="column is-5-tablet">
+            <Flip
+              :title = "$t('notice.right-bottom.title')"
+              :description = "$t('notice.right-bottom.description')"
+              :detail = "$t('notice.right-bottom.detail')"
+              :link = "$t('notice.right-bottom.link')"
+              imageUrl = ""
+            />
+          </div>
         </div>
-        <div class="column is-7-tablet">
-          <Flip
-            :title = "$t('notice.left-bottom.title')"
-            :description = "$t('notice.left-bottom.description')"
-            :detail = "$t('notice.left-bottom.detail')"
-            :link = "$t('notice.left-bottom.link')"
-            imageUrl = ""
-          />
+        <p class="has-text-grey-light has-text-right mb-6">{{ $t('notice.last-modified')}}<time datetime="2021-04-05">2021/4/5</time></p>
+        <br>
+        <div class="has-text-centered">
+          <nuxt-link :to="localePath('/notice')" class="button is-gradient is-rounded">{{ $t('button.archive') }}</nuxt-link>
         </div>
-        <div class="column is-7-tablet">
-          <Flip
-            :title = "$t('notice.right-top.title')"
-            :description = "$t('notice.right-top.description')"
-            :detail = "$t('notice.right-top.detail')"
-            :link = "$t('notice.right-top.link')"
-            imageUrl = ""
-          />
-        </div>
-        <div class="column is-5-tablet">
-          <Flip
-            :title = "$t('notice.right-bottom.title')"
-            :description = "$t('notice.right-bottom.description')"
-            :detail = "$t('notice.right-bottom.detail')"
-            :link = "$t('notice.right-bottom.link')"
-            imageUrl = ""
-          />
-        </div>
-      </div>
-      <p class="has-text-grey-light has-text-right mb-6">{{ $t('notice.last-modified')}}<time datetime="2020-12-22">2020/1/26</time></p>
-      <br>
-      <div class="has-text-centered">
-        <nuxt-link :to="localePath('/notice')" class="button is-gradient is-rounded">{{ $t('button.archive') }}</nuxt-link>
       </div>
     </section>
 
@@ -250,7 +252,6 @@ export default {
     transition: all 0.5s;
   }
   #top-carousel {
-    // opacity: 0;
     transition: all 1s;
     // opacity: 0;
     // transition: fadeIn 2s;
@@ -289,7 +290,7 @@ export default {
   //   }
   // }
   #top-carousel-wrapper-logo-section {
-    @media screen and (max-width: 1023px) {
+    @media screen and (max-width: 1215px) {
       display: none;
     }
   }

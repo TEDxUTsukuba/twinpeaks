@@ -64,6 +64,7 @@ export default {
     word-break: break-all;
     margin-left: 2vw;
     width: 28vw;
+    filter: drop-shadow(0px 8px 18px rgba(0, 0, 0, 0.6));
   }
   @media screen and (max-width: 768px) {
     .slideshow-item {
