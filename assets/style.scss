@@ -41,8 +41,10 @@ $light: #F1F4F7;
 $black: hsl(0, 0%, 4%);
 $dark: hsl(0, 0%, 21%);
 $dark1: #0c0c0c;
-// $dark2: #262626;
-$dark2: #454548;
+$dark2: #262626;
+// $dark2: #454548;
+$light-gradation: linear-gradient(165deg, rgba(223, 234, 247, 1) 11.2%, rgba(244, 248, 252, 1) 91.1%);
+$dark-gradation: linear-gradient(165deg, rgb(158, 25, 25) 8.8%, rgb(41, 38, 38) 95.1%);
 // $dark1: #3f424e;
 // $dark2: #757a92;
 // $dark: #162f5a;
@@ -79,6 +81,14 @@ $card-footer-border-top: 0px !important;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.fullheight-without-header {
+  min-height: calc(100vh - 3.25rem);
+
+  @media screen and (min-width: 1216px) {
+    min-height: calc(100vh - 5.25rem);
+  }
 }
 
 #teaser>iframe {
@@ -329,7 +339,7 @@ section#wrapper-dark {
   height: 100%;
   background-attachment: fixed !important;
   background-color: $black;
-  background: linear-gradient(165deg, hsl(0, 0, 16%) 0, hsl(0, 0, 6%) 100%);
+  background: linear-gradient(165deg, hsl(0, 0, 22%) 0, hsl(0, 0, 4%) 100%);
   background-repeat: no-repeat;
   background-clip: cover;
   background-attachment: fixed;
@@ -433,9 +443,9 @@ br.mobile-br {
 }
 
 .nmp-card {
-  padding: 2rem 2rem;
+  padding: 1.5rem 2rem;
   margin: 0rem;
-  border-radius: 18px;
+  border-radius: 12px;
 
   @media screen and (max-width: 1024px) {
     padding: 1.5rem 1.5rem;
@@ -446,7 +456,7 @@ br.mobile-br {
 .nmp-card-light {
   @extend .nmp-card;
   color: $dark;
-  background: white;
+  background: $light-gradation;
 
   p {
     color: $dark;
@@ -460,6 +470,7 @@ br.mobile-br {
   @extend .nmp-card;
   color: white;
   background: $dark2;
+  filter: drop-shadow(0px 8px 18px rgba(0, 0, 0, 0.6));
 
   // box-shadow:  8px 8px 16px $dark1,
   //             -8px -8px 16px $dark2;
@@ -494,17 +505,18 @@ br.mobile-br {
 // }
 
 .nmp {
-  border-radius: 18px;
+  border-radius: 12px;
   margin-bottom: 4vh !important;
 
   @media screen and (max-width: 1024px) {
     border-radius: 18px;
-    padding: 10px;
+    // padding: 10px;
   }
 }
 
 .nmp-card-image {
   border: 5px solid $red;
+  filter: drop-shadow(0px 8px 18px rgba(0, 0, 0, 0.6));
 
   @media screen and (max-width: 768) {
     // border-radius: 10px;
@@ -516,7 +528,8 @@ br.mobile-br {
 
 .nmp-light {
   @extend .nmp;
-  background: white;
+  background: $light-gradation;
+  filter: drop-shadow(0px 8px 18px rgba(0, 0, 0, 0.6));
   // box-shadow:  8px 8px 16px #cfcfd1,
   //              -8px -8px 16px #ffffff;
 }
@@ -525,6 +538,7 @@ br.mobile-br {
   @extend .nmp;
   color: white;
   background: $dark2;
+  filter: drop-shadow(0px 8px 18px rgba(0, 0, 0, 0.6));
 
   // box-shadow:  8px 8px 16px $dark1,
   //              -8px -8px 16px $dark2;
@@ -549,6 +563,7 @@ br.mobile-br {
   border-radius: 14px;
   border: 0px;
   background: $light;
+  filter: drop-shadow(0px 8px 18px rgba(0, 0, 0, 0.6));
   // box-shadow: inset 3px 3px 6px #cfd2d4,
   //             inset -3px -3px 6px #ffffff;
 }
@@ -799,8 +814,8 @@ span.is-red {
 /* content4つをまとめたスライドブロック */
 .slideshow {
   display: flex;
-  -webkit-animation: loop-slide 30s linear 1s both;
-  animation: loop-slide 30s linear 1s both;
+  -webkit-animation: loop-slide 40s linear 1s both;
+  animation: loop-slide 40s linear 1s both;
   animation-fill-mode: forwards;
 
   @media screen and (max-width: 768px) {

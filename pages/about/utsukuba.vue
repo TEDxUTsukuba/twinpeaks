@@ -11,18 +11,18 @@
     <section class="section">
       <div class="columns" id="gallery">
         <div class="column is-one-third">
-          <figure class="is-4by3">
-            <img src="/sample/sample2.jpg" alt="Audience attending our annual event" style="width: 100%; object-fit: cover;">
+          <figure class="image is-4by3" style="object-fit: cover;">
+            <img src="/sample/sample2.jpg" alt="Audience attending our annual event">
           </figure>
         </div>
         <div class="column is-one-third">
-          <figure class="is-4by3">
-            <img src="/sample/sample3.jpg" alt="TEDxUTsukuba attendees and staffs" style="width: 100%; object-fit: cover;">
+          <figure class="image is-4by3" style="object-fit: cover;">
+            <img src="/sample/sample3.jpg" alt="TEDxUTsukuba attendees and staffs">
           </figure>
         </div>
         <div class="column is-one-third">
-          <figure class="is-4by3">
-            <img src="/sample/sample1.jpg" alt="A speaker standing on the stage" style="width: 100%; object-fit: cover;">
+          <figure class="image is-4by3" style="object-fit: cover;">
+            <img src="/sample/sample1.jpg" alt="A speaker standing on the stage">
           </figure>
         </div>
       </div>
@@ -66,7 +66,7 @@
                 </span> -->
               </p>
             </header>
-            <div class="card-image" v-if="member.imageFileName">
+            <div class="card-image" v-if="member.imageFileName" style="width: 100%;">
               <figure class="image is-3-desktop is-6-tablet is-6-mobileby2" style="overflow: hidden;">
                 <img class="portrait" :src="getJsonImgUrl(member.imageFileName)" :alt="member.given_name_en + member.family_name_en">
               </figure>
@@ -169,7 +169,7 @@
           </figure>
         </div>
         <div class="column is-6">
-          <figure class="image is-16by9">
+          <figure class="image">
             <img src="~/assets/others/IMG_9801.jpg" alt="Members 2019">
           </figure>
         </div>
