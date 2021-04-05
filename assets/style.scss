@@ -338,9 +338,9 @@ section#wrapper {
 section#wrapper-dark {
   height: 100%;
   background-attachment: fixed !important;
-  background-color: $black;
-  background: linear-gradient(165deg, hsl(0, 0, 22%) 0, hsl(0, 0, 4%) 100%);
-  background-repeat: no-repeat;
+  background-color: hsl(0, 0, 12%);
+  // background: linear-gradient(165deg, hsl(0, 0, 22%) 0, hsl(0, 0, 4%) 100%);
+    background-repeat: no-repeat;
   background-clip: cover;
   background-attachment: fixed;
 
