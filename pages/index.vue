@@ -1,9 +1,9 @@
 <template>
-  <section id="wrapper-dark" style="margin: 0; padding: 0;">
+  <section id="wrapper-gradient" style="margin: 0; padding: 0;">
     <!-- <div>
       <LogoAnimation id="top-logo" />
     </div> -->
-    <div id="top-carousel-wrapper" class="top-carousel-wrapper columns is-gapless is-vcentered" style="margin-bottom: 0;">
+    <div id="top-carousel-wrapper" class="top-carousel-wrapper columns is-gapless is-vcentered has-background-dark" style="margin-bottom: 0;">
       <div class="column is-12-touch">
         <Carousel id="top-carousel" />
       </div>
@@ -33,7 +33,7 @@
     </div> -->
       
     <section class="hero">
-      <div class="hero-body bg-red" id="intro">
+      <div class="hero-body" id="intro">
         <section class="section">
           <div class="columns is-mobile is-multiline is-centered is-variable is-0">
               <div class="column is-5-widescreen is-4-desktop is-6-tablet is-10-mobile">
@@ -69,9 +69,13 @@
       <Movie id="teaser" :vId='weAreTEDxUTsukuba' classname="large" style=""></Movie>
     </section> -->
 
+    <section>
+      <PopularArticles /> 
+    </section>
+
     <section id="notice-title" class="section">
       <div id="notice">
-        <h1 class="title is-2 has-text-centered">
+        <h1 class="title is-1 has-text-centered">
           <span class="">{{ $t('news.title') }}</span>
         </h1>
         <br>
@@ -116,13 +120,11 @@
         <p class="has-text-grey-light has-text-right mb-6">{{ $t('notice.last-modified')}}<time datetime="2021-04-05">2021/4/5</time></p>
         <br>
         <div class="has-text-centered">
-          <nuxt-link :to="localePath('/notice')" class="button is-gradient is-rounded">{{ $t('button.archive') }}</nuxt-link>
+          <nuxt-link :to="localePath('/notice')" class="button is-white is-rounded">{{ $t('button.archive') }}</nuxt-link>
         </div>
       </div>
     </section>
 
-    <br><br>
-    <PopularArticles />    
     <!-- <div class="has-text-centered">
       <nuxt-link :to="localePath('/talks')" class="button is-gradient is-rounded">{{ $t('talks.seeAll') }}</nuxt-link>
     </div> -->

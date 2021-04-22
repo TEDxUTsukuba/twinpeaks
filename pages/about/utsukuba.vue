@@ -1,11 +1,12 @@
 <template>
   <section id="wrapper-dark" class="font-awesome">
-    <section class="section" id="trigger">
-      <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.title')}}</h1>
-      <h1 class="subtitle is-5">{{ $t('about.utsukuba.subtitle')}}</h1>
+    <section class="section is-large has-text-centered" id="trigger">
+      <i class="mdi mdi-information has-text-primary is-1" /> 
+      <h1 class="title is-2 is-spaced">{{ $t('about.utsukuba.title')}}</h1>
+      <h1 class="subtitle has-text-grey-light">{{ $t('about.utsukuba.subtitle')}}</h1>
     </section>
     <section class="section" id="tedxutsukuba">
-      <h1 class="title">TEDxUTsukuba</h1>
+      <h1 class="title is-0">TEDxUTsukuba</h1>
       <article v-html="$t('about.utsukuba.description.3')"></article>
     </section>
     <section class="section">
@@ -28,7 +29,7 @@
       </div>
     </section>
     <section class="section" id="socialcapital">
-      <h1 class="title">Social Capital</h1>
+      <h1 class="title is-0">Social Capital</h1>
       <article v-html="$t('about.utsukuba.description.5')"></article>
     </section>
     <section class="section">

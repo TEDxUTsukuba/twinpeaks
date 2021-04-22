@@ -3,14 +3,14 @@
     <ul class="slideshow" id="slides-before">
       <li class="slideshow-item" v-for="(item, index) in items" :key="index">
         <figure class="image is-3by2">
-          <img :src="require(`~/assets/album/${item.src}.jpg`)" style="object-fit: cover;">
+          <img :src="require(`~/assets/album/${item.src}.jpg`)" style="object-fit: cover; border-radius: 12px;">
         </figure>
       </li>
     </ul>
     <ul class="slideshow" id="slides-after">
       <li class="slideshow-item" v-for="(item, index) in items" :key="index">
         <figure class="image is-3by2">
-          <img :src="require(`~/assets/album/${item.src}.jpg`)" style="object-fit: cover;">
+          <img :src="require(`~/assets/album/${item.src}.jpg`)" style="object-fit: cover; border-radius: 12px;">
         </figure>
       </li>
     </ul>
@@ -62,9 +62,11 @@ export default {
   .slideshow-item {
     /* 横スクロール用 */
     word-break: break-all;
-    margin-left: 2vw;
-    width: 28vw;
-    filter: drop-shadow(0px 8px 18px rgba(0, 0, 0, 0.6));
+    margin: 3vh 0 8vh 2vw;
+    width: 26vw;
+    figure {
+      filter: drop-shadow(0px 8px 18px rgba(0, 0, 0, 0.6));
+    }
   }
   @media screen and (max-width: 768px) {
     .slideshow-item {
