@@ -338,9 +338,9 @@ section#wrapper {
 section#wrapper-dark {
   height: 100%;
   background-attachment: fixed !important;
-  background-color: hsl(0, 0, 12%);
-  // background: linear-gradient(165deg, hsl(0, 0, 22%) 0, hsl(0, 0, 4%) 100%);
-    background-repeat: no-repeat;
+  background-color: rgb(161, 144, 144);
+  background: linear-gradient(165deg, hsl(0, 0, 22%) 0, hsl(0, 0, 4%) 100%);
+  background-repeat: no-repeat;
   background-clip: cover;
   background-attachment: fixed;
 
@@ -357,6 +357,13 @@ section#wrapper-dark {
   article {
     color: lightgray;
   }
+}
+
+section#wrapper-gradient {
+  @extend section#wrapper-dark;
+  background-color: #FC466B;
+  background: linear-gradient(319deg, #b31217, #dc2430);
+  // background: linear-gradient(319deg, #fc5f7f 0%, #3e0aff 100%);
 }
 
 section#wrapper-red {
@@ -456,7 +463,8 @@ br.mobile-br {
 .nmp-card-light {
   @extend .nmp-card;
   color: $dark;
-  background: $light-gradation;
+  background: white;
+  filter: drop-shadow(0px 8px 18px rgba(0, 0, 0, 0.6));
 
   p {
     color: $dark;

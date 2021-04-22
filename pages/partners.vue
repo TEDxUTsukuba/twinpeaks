@@ -1,6 +1,6 @@
 <template>
   <section id="wrapper-dark">
-    <section class="section has-text-centered-mobile">
+    <section class="section has-text-centered is-large">
     <!-- <section class="hero is-large">
       <div class="hero-body has-text-white has-text-left">
         <div class="container has-text-centered">
@@ -29,6 +29,7 @@
           </template>
         </b-carousel>
       </div> -->
+        <i class="mdi mdi-handshake has-text-primary is-1" /> 
         <h1 class="title is-1 is-spaced">{{ $t('partners.title') }}</h1>
         <h1 class="subtitle has-text-grey-light">{{ $t('partners.subtitle') }}</h1>
     </section>

@@ -39,7 +39,7 @@
       <h2 class="title has-text-centered has-text-primary">{{ $t('events.other') }}</h2>
       <div v-for="(event, index) in eventList" :key="event.id" class="" id="#content">
         <div :class="`nmp-card-${changeColor(event.date)}`" style="margin-bottom: 1rem;">
-          <a :href="`./${event.id}`">
+          <a :href="`./events/${event.id}`">
             <div class="columns">
               <div class="column is-5">
                 <h1 class="title is-4">{{ event.name }}</h1>
