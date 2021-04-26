@@ -79,7 +79,7 @@
                     {{ member.given_name_en }} {{ member.family_name_en}}
                   </h1>
                   <h1 class="subtitle is-6">
-                    {{ member.role_en }}
+                    {{ member.role }}
                   </h1>
                 </span>
                 <span v-if="$i18n.locale == 'ja'">
@@ -87,7 +87,7 @@
                     {{ member.family_name_ja }}{{ member.given_name_ja }}
                   </h1>
                   <h1 class="subtitle is-6">
-                    {{ member.role_ja }}
+                    {{ member.role }}
                   </h1>
                 </span>
               </div>
