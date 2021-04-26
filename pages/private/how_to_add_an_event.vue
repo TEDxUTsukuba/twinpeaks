@@ -11,6 +11,10 @@
         <nuxt-link to="/events/">イベント一覧ページ</nuxt-link>に個別のイベントページを追加するための簡単なステップを説明します。
       </p>
     </div>
+    <hr v-if="$ua.isFromSmartphone()">
+    <b-notification type="is-danger" :closable="false" has-icon v-if="$ua.isFromSmartphone()">
+      このページはPCやタブレットでの閲覧に最適化されています。This page is optimized for PCs and tablets. 
+    </b-notification>
     <hr>
     <img src="/sample/Screenshot_2021-03-23 Event TEDxUTsukuba.png" style="box-shadow: 0px 10px 20px rgba(0,0,0,0.4);" alt="Event Info Image">
     <hr>

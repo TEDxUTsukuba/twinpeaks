@@ -8,9 +8,13 @@
         How to update team
       </h1>
       <p>
-        <nuxt-link to="/about/utsukuba">チーム紹介のページ</nuxt-link>に個別のイベントページを追加するための簡単なステップを説明します。
+        <nuxt-link to="/about/utsukuba">チーム紹介のページ</nuxt-link>を更新するための簡単なステップを説明します。
       </p>
     </div>
+    <hr v-if="$ua.isFromSmartphone()">
+    <b-notification type="is-danger" :closable="false" has-icon v-if="$ua.isFromSmartphone()">
+      このページはPCやタブレットでの閲覧に最適化されています。This page is optimized for PCs and tablets. 
+    </b-notification>
     <hr>
     <img src="/sample/Screenshot_2021-04-03 TEDxUTsukuba A Hub for Tsukuba's Ideas.png" style="box-shadow: 0px 10px 20px rgba(0,0,0,0.4);" alt="Event Info Image">
     <hr>
@@ -34,8 +38,53 @@
     <div class="notification">
       <h1 class="is-size-5">Add Contents</h1>
       <p>
-        各セルに情報を追加してください。お気に入りのTEDトークは、TED.comにアップロードされている動画に関しては、TED.comのリンクを<code>tedtalk</code>に記入するようにしてください。TED.comには無く、YouTubeにしか掲載されていないトークを載せたい場合は、<code>tedtalk</code>は空欄にして<code>tedtalk_alt</code>に記入してください。
+        下記の凡例を参考に、セルに情報を追加してください。
       </p>
+      <div class="table-container">
+        <table class="table is-size-7">
+          <tr>
+            <td>family_name_{ja/en}</td>
+            <td>苗字 {日本語表記/英語表記}</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>given_name_{ja/en}</td>
+            <td>名前 {日本語表記/英語表記}</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>role</td>
+            <td>役割</td>
+            <td>チーム名でもよいですが、具体的に curator とか書いた方がいいかも。</td>
+          </tr>
+          <tr>
+            <td>college_{ja/en}</td>
+            <td>所属学類または研究群 {日本語表記/英語表記}</td>
+            <td>参考: <a class="is-size-7 has-text-primary" href="https://www.tsukuba.ac.jp/about/outline-je/" target="_blank" rel="noopener noreferrer">組織，職名の日英表記トップ</a></td>
+          </tr>
+          <tr>
+            <td>home_state_{ja/en}</td>
+            <td>出身の都道府県・州など {日本語表記/英語表記}</td>
+            <td>自分が "home" と呼びたい場所を書いてください。</td>
+          </tr>
+          <tr>
+            <td>keyword</td>
+            <td>自分を表す3つのキーワード</td>
+            <td>自分の「好きな物」を書いてしまう人がいますが...そうではない</td>
+          </tr>
+          <tr>
+            <td>tedtalk</td>
+            <td>オススメしたいTED/TEDxトークのリンク</td>
+            <td>(TED.comで公開されている場合)</td>
+          </tr>
+          <tr>
+            <td>tedtalk_alt</td>
+            <td>オススメしたいTED/TEDxトークのリンク</td>
+            <td>(YouTubeにしかない場合)</td>
+          </tr>
+        </table>
+      </div>
+      <p><strong>TED</strong>トークのほとんどはTED.comとYouTubeの両方で公開されています。一方で<strong>TEDx</strong>トークは主にYouTubeで公開されており、ごく一部のトークのみTED.comで公開されています。両方に存在するトークを紹介する場合は、TED.comのリンクを<code>tedtalk</code>に貼り付けて<code>tedtalk_alt</code>は空欄にしてください。YouTubeにしか掲載されていないトークを載せたい場合は、<code>tedtalk</code>を空欄にして<code>tedtalk_alt</code>に記入してください。</p>
     </div> 
     <div class="notification">
       <h1 class="is-size-5">Add Portrait</h1>
@@ -56,15 +105,15 @@
 <script>
 export default {
   head: {
-    title: 'イベントを追加する',
-    description: 'イベント一覧ページに個別のイベントページを追加するための簡単なステップを説明します。',
+    title: 'チームを更新する',
+    description: 'チーム紹介のページを更新するための簡単なステップを説明します。',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { 
         hid: 'og:description', 
         name: 'og:description', 
-        content: "イベント一覧ページに個別のイベントページを追加するための簡単なステップを説明します。" 
+        content: "チーム紹介のページを更新するための簡単なステップを説明します。" 
       },
       { 
         hid: 'twitter:card', 
@@ -84,7 +133,7 @@ export default {
       {
         hid: 'og:title',
         property: 'og:title',
-        content: 'イベントを追加する'
+        content: 'チームを更新する'
       },
       {
         hid: 'og:type',
@@ -94,7 +143,7 @@ export default {
       {
         hid: 'og:url',
         property: 'og:url',
-        content: 'https://www.tedxutsukuba.com/private/how_to_add_an_event'
+        content: 'https://www.tedxutsukuba.com/private/how_to_update_team'
       },
       {
         hid: 'og:image',
