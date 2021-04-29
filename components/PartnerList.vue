@@ -22,7 +22,16 @@
             @click="openModal(partner)">
             {{ $t('button.discover') }}
           </button> -->
-          <a :href="partner.url" class="button is-white is-outlined is-rounded is-small">{{ $t('button.visitwebsite') }}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
+          <!-- <a :href="partner.url" class="button is-white is-outlined is-rounded is-small">{{ $t('button.visitwebsite') }}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a> -->
+          <b-button 
+            @click="countGA(partner.url, partner.name)"
+            :label="$t('button.visitwebsite')"
+            icon-right="open-in-new"
+            iconPack="mdi"
+            type="is-white is-small is-rounded"
+            outlined
+          >
+          </b-button>
           <!-- <modal :val="postItem" v-show="showContent" @close="closeModal" /> -->
           <br><br>
       </div>
@@ -55,6 +64,20 @@ export default {
     getJsonImgUrl(value) {
       // return require(`~/assets/partners/2020/carousel_${value}.jpg`)
       return require(`~/assets/partners/2020/logo/${value}.jpg`)
+    },
+    countGA(url, name) {
+      this.$gtag(
+        'event', 'visitPartnerWebsite', {
+          'event_category': 'link',
+          'event_label': name,
+          'value': '1'
+        }
+      ),
+      this.$buefy.dialog.confirm({
+        title: this.$i18n.t('button.externalwebsite'),
+        message: this.$i18n.t('button.alerttoexternalwebsite') + '<br>' + url,
+        onConfirm: () => window.open(url, '_blank')
+      })
     }
   },
   computed: {
