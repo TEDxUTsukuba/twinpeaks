@@ -125,7 +125,7 @@ export default {
   */
   modules: [
     [
-      '@nuxtjs/google-analytics', { id: 'UA-104320074-1' }
+      '@nuxtjs/google-gtag', { id: 'UA-104320074-1' }
     ],
     // [
     //   'nuxt-webfontloader', {
