@@ -66,17 +66,21 @@ export default {
       return require(`~/assets/partners/2020/logo/${value}.jpg`)
     },
     countGA(url, name) {
-      this.$gtag(
-        'event', 'visitPartnerWebsite', {
-          'event_category': 'link',
-          'event_label': name,
-          'value': '1'
-        }
-      ),
       this.$buefy.dialog.confirm({
         title: this.$i18n.t('button.externalwebsite'),
         message: this.$i18n.t('button.alerttoexternalwebsite') + '<br>' + url,
-        onConfirm: () => window.open(url, '_blank')
+        // onConfirm: () => window.open(url, '_blank')
+        onConfirm: () => {
+          this.$gtag(
+            'event', 'visitPartnerWebsite', {
+              'event_category': 'link',
+              'event_label': name,
+              'value': '1'
+            }
+          ),
+          console.log(url),
+          window.open(url, '_blank')
+        }
       })
     }
   },
