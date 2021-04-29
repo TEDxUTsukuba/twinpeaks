@@ -22,6 +22,16 @@
   opacity: 0.4;
 }
 
+*::selection {
+  background: #ff0000;
+  color: #fff;
+}
+
+*::moz-selction {
+  background-color: #ff0000;
+  color: #fff;
+}
+
 body {
   font-family: 'Helvetica Neue', BlinkMacSystemFont, -apple-system, 'BIZ UDPGothic', 'Open Sans', sans-serif !important;
   -webkit-font-smoothing: antialiased;
