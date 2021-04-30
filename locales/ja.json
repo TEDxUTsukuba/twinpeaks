@@ -29,12 +29,14 @@
     "readless": "閉じる",
     "visitwebsite": "ウェブサイト",
     "externalwebsite": "外部リンク",
-    "alerttoexternalwebsite": "下記のリンクにアクセスします。",
+    "alerttoexternalwebsite": "下記URLのウェブサイトにアクセスします。",
     "archive": "アーカイブを見る",
     "close": "閉じる",
     "partialtranslation": "このページの翻訳はまだ完了していません",
     "helpustranslate": "Help us translate",
-    "backtohome": "トップページに戻る"
+    "backtohome": "トップページに戻る",
+    "upcoming": "近日開催",
+    "ended": "開催終了"
   },
   "top": {
     "message": "言語設定: 日本語"
@@ -176,6 +178,7 @@
     "ted":{
       "title": "TED",
       "subtitle": "TED",
+      "join": "参加する",
       "watch": "観る",
       "watchmoreted": "他のTEDトークを探す",
       "talktitle": "Designing for Simplicity",
