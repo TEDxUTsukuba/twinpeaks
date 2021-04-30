@@ -2,9 +2,10 @@
   <b-navbar class="is-fixed-top is-spaced is-black" id="navbar-top">
     <template slot="brand">
       <b-navbar-item tag="router-link" :to="localePath('/')">
-        <img
+        <img  
+          data-not-lazy
           src="~/assets/logo.png"
-          alt="Lightweight UI components for Vue.js based on Bulma"
+          alt="TEDxUTsukuba Logo"
         >
         <!-- https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-logo.png -->
       </b-navbar-item>
