@@ -71,6 +71,7 @@ export default {
         message: this.$i18n.t('button.alerttoexternalwebsite') + '<br>' + url,
         // onConfirm: () => window.open(url, '_blank')
         onConfirm: () => {
+          // console.log(name)
           this.$gtag(
             'event', 'visitPartnerWebsite', {
               'event_category': 'link',
@@ -78,7 +79,6 @@ export default {
               'value': '1'
             }
           ),
-          console.log(url),
           window.open(url, '_blank')
         }
       })

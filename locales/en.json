@@ -29,12 +29,14 @@
     "readless": "Read less",
     "visitwebsite": "Website",
     "externalwebsite": "External Link",
-    "alerttoexternalwebsite": "You are about to visit",
+    "alerttoexternalwebsite": "You are about to visit this website.",
     "archive": "Archive of Past Updates",
     "close": "Close",
     "partialtranslation": "This page is not fully translated into English. ",
     "helpustranslate": "Help us translate",
-    "backtohome": "Back to Home"
+    "backtohome": "Back to Home",
+    "upcoming": "Upcoming",
+    "ended": "Ended"
   },
   "top": {
     "message": "Language Setting: English"
@@ -47,7 +49,7 @@
   },
   "covid19-info": {
     "title": "Our Response to COVID-19",
-    "description1": "To protect the health and safety of our community, TEDxUTsukuba has been following the guidelines from university officials as well as local authorities. ",
+    "description1": "To protect the health and safety of our community, we are following the guidelines from university officials alongside with local authorities. ",
     "description2": "We continue to prioritize preventing the spread of virus and ensuring the safety of all those involved, and implement additional measures based on the directions of the government and local authorities. Please also check the infection control measures of the University of Tsukuba, Ibaraki Prefecture and Tsukuba City.",
     "event": {
       "title": "Event arrangement",
@@ -175,6 +177,7 @@
     "ted": {
       "title": "TED",
       "subtitle": "",
+      "Join": "Join",
       "watch": "Watch",
       "watchmoreted": "Explore more TED Talks",
       "talktitle": "Designing for Simplicity",
