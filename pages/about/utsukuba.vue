@@ -234,7 +234,7 @@ import axios from 'axios';
 import Modal from '~/components/Modal.vue'
 // import VueInstagram from 'vue-instagram'
 import Movie from '~/components/Movie.vue'
-import jobs from '~/contents/jobs.json'
+import jobs from '~/references/jobs.json'
 import externalLink from '@/assets/svg/external-link-alt-solid.svg'
 
 export default {

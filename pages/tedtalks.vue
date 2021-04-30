@@ -71,7 +71,7 @@
             <nuxt-link class="navbar-item" to="/">
               <img
                 src="~/assets/logo.png"
-                alt="Lightweight UI components for Vue.js based on Bulma"
+                alt="TEDxUTsukuba Logo"
               >
             </nuxt-link>
           </div>
@@ -117,7 +117,7 @@
 </template>
 
 <script>
-import tedtalkList from '@/contents/tedtalks.json'
+import tedtalkList from '@/references/tedtalks.json'
 
 export default {
   layout: 'fullscreen',

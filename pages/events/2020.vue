@@ -7,7 +7,7 @@
 
     <section>
       <figure class="has-text-centered">
-        <img src = "~/assets/wallpapers/jijimuge-transparent.png">
+        <img src = "~/assets/wallpapers/jijimuge-transparent.png" alt="Concept Image">
       </figure>
     </section>
     
@@ -95,7 +95,7 @@
         @click="switchGallery(true)">
         <b-carousel-item v-for="(item, i) in 4" :key="i">
           <a class="image ">
-            <img :src="getImgUrl(i)">
+            <img :src="getImgUrl(i)" :alt="`Concept Statement Page ${i}`">
           </a>
         </b-carousel-item>
         <span @click="switchGallery(false)" class="modal-close is-large"/>
@@ -164,7 +164,7 @@
                   <div class="columns is-multiline is-vcentered">
                     <div class="column has-text-right">
                       <p class="is-size-7 has-text-dark" v-if="$i18n.locale == 'en'">{{ $t('2020.participance.premium.airmeet') }}</p>
-                      <img src="~/assets/partners/2020/logo/AM_Full_Logo/PNG/AM_Logo_Dark_WM.png" width="150px" style="background-color: white; padding: 15px;"> 
+                      <img src="~/assets/partners/2020/logo/AM_Full_Logo/PNG/AM_Logo_Dark_WM.png" width="150px" style="background-color: white; padding: 15px;" alt="Airmeet Logo"> 
                       <p class="is-size-7 has-text-dark" v-if="$i18n.locale == 'ja'">{{ $t('2020.participance.premium.airmeet') }}</p>
                     </div>
                   </div>

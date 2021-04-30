@@ -1,4 +1,4 @@
-import { contentsData } from '~/contents/contentsData.json'
+import { contentsData } from '~/references/contentsData.json'
 
 export const state = () => ({
   talkList: contentsData
