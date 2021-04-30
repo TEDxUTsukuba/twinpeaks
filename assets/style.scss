@@ -193,11 +193,11 @@ section.is-large {
   }
 
   h1.title.is-3 {
-    font-size: 1.25rem !important;
+    font-size: 1.5rem !important;
   }
 
   h1.title.is-4 {
-    font-size: 1rem !important;
+    font-size: 1.25rem !important;
   }
 
   .is-size-6,
@@ -205,13 +205,17 @@ section.is-large {
   article,
   li,
   a {
-    font-size: 0.75rem !important;
+    font-size: 1rem !important;
+  }
+
+  .is-size-7 {
+    font-size: 0.8rem !important;
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1080px) {
   h1.title.is-1 {
-    font-size: 3rem !important;
+    font-size: 4rem !important;
   }
 
   h1.title.is-2 {
@@ -221,7 +225,7 @@ section.is-large {
 
 @media screen and (min-width: 1081px) and (max-width: 1408px) {
   h1.title.is-1 {
-    font-size: 3rem !important;
+    font-size: 4rem !important;
   }
 
   h1.title.is-2 {
@@ -263,7 +267,7 @@ section.is-large {
 
 @media screen and (min-width: 1409px) {
   h1.title.is-1 {
-    font-size: 3.5rem !important;
+    font-size: 5rem !important;
   }
 
   h1.title.is-2 {
@@ -348,8 +352,9 @@ section#wrapper {
 section#wrapper-dark {
   height: 100%;
   background-attachment: fixed !important;
-  background-color: rgb(161, 144, 144);
-  background: linear-gradient(165deg, hsl(0, 0, 22%) 0, hsl(0, 0, 4%) 100%);
+  background-color: hsl(0, 0, 10%);
+  // background-color: rgb(161, 144, 144);
+  // background: linear-gradient(165deg, hsl(0, 0, 22%) 0, hsl(0, 0, 4%) 100%);
   background-repeat: no-repeat;
   background-clip: cover;
   background-attachment: fixed;
@@ -365,7 +370,7 @@ section#wrapper-dark {
 
   p,
   article {
-    color: lightgray;
+    color: #fff;
   }
 }
 
@@ -440,8 +445,8 @@ section.section-wide {
 
 
 .card-content {
-  @media screen and (min-width: 768px) {
-    // padding: 3rem 3rem 3rem 3rem;
+  @media screen and (max-width: 768px) {
+    padding: 1rem !important;
   }
 }
 
@@ -524,7 +529,7 @@ br.mobile-br {
 
 .nmp {
   border-radius: 12px;
-  margin-bottom: 4vh !important;
+  margin-bottom: 2vh !important;
 
   @media screen and (max-width: 1024px) {
     border-radius: 18px;

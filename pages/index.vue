@@ -3,7 +3,7 @@
     <!-- <div>
       <LogoAnimation id="top-logo" />
     </div> -->
-    <div id="top-carousel-wrapper" class="top-carousel-wrapper columns is-gapless is-vcentered has-background-dark" style="margin-bottom: 0;">
+    <div id="top-carousel-wrapper" class="top-carousel-wrapper columns is-gapless is-vcentered has-background-black" style="margin-bottom: 0;">
       <div class="column is-12-touch">
         <Carousel id="top-carousel" />
       </div>
