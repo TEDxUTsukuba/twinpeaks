@@ -157,18 +157,6 @@ export default {
       isAlertActive: true,
     }
   },
-  head: {
-    title: "TEDxUTsukuba | A Hub for Tsukuba's Ideas",
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { 
-        hid: 'description', 
-        name: 'description', 
-        content: '価値あるアイディアを、つくばから。TEDxUTsukubaは "Ideas worth spreading" というTEDの理念のもとに、筑波大学の学生を中心として独自に運営されているコミュニティです。'
-      }
-    ]
-  },
   // asyncData(context) {
   //   const isAndroid = context.$ua.isFromAndroidOs()
   //   console.log('isAndroid', isAndroid)
