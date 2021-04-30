@@ -2,8 +2,10 @@
   <section id="wrapper-dark" class="font-awesome">
     <section class="section is-large has-text-centered" id="trigger">
       <i class="mdi mdi-information has-text-primary is-1" /> 
-      <h1 class="title is-2 is-spaced">{{ $t('about.utsukuba.title')}}</h1>
+      <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.title')}}</h1>
       <h1 class="subtitle has-text-grey-light">{{ $t('about.utsukuba.subtitle')}}</h1>
+      <br>
+      <span class="tag has-text-weight-bold">{{ $t('button.partialtranslation') }}</span>
     </section>
     <section class="section" id="tedxutsukuba">
       <h1 class="title is-0">TEDxUTsukuba</h1>
@@ -43,16 +45,16 @@
       </div>
     </section> -->
     <section class="section">
-      <div class="container has-text-centered">
-        <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.members.title')}}</h1>
+      <div class="container has-text-right has-text-centered-mobile">
+        <h1 class="title is-0 is-spaced">{{ $t('about.utsukuba.members.title')}}</h1>
         <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.utsukuba.members.subtitle')}}</h1>
       </div>
     </section>
     <section class="section-wide">
-      <div class="columns is-multiline">
+      <div class="columns is-mobile is-multiline">
         <div
           id="thumbnails"
-          class="column is-3-fullhd is-4-widescreen is-4-desktop is-6-tablet"
+          class="column is-3-fullhd is-4-widescreen is-4-desktop is-6-tablet is-6-mobile"
           v-for="(member, index) in memberList" :key="member.tedtalk"
           style="display: inline-block; vertical-align: top;"
         >
@@ -78,23 +80,21 @@
                   <h1 class="title is-4">
                     {{ member.given_name_en }} {{ member.family_name_en}}
                   </h1>
-                  <h1 class="subtitle is-6">
+                  <p class="subtitle is-6 has-text-grey-light">
                     {{ member.role }}
-                  </h1>
+                  </p>
                 </span>
                 <span v-if="$i18n.locale == 'ja'">
                   <h1 class="title is-4">
                     {{ member.family_name_ja }}{{ member.given_name_ja }}
                   </h1>
-                  <h1 class="subtitle is-6">
+                  <p class="subtitle is-size-6 has-text-grey-light">
                     {{ member.role }}
-                  </h1>
+                  </p>
                 </span>
               </div>
-                <br>
 
-              <div class="content">
-              
+              <div class="text">
                 <p class="midashi is-size-7 has-text-weight-bold has-text-primary">
                   {{ $t('about.utsukuba.members.from') }}
                   <span class="is-size-7 has-text-weight-normal has-text-light" v-if="$i18n.locale == 'en'">{{ member.home_state_en }}</span>
@@ -110,10 +110,8 @@
                 <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.keyword1" style="line-height: 1;">{{ $t('about.utsukuba.members.keywords') }}</p>
                 <p class="is-size-7 has-text-weight-normal has-text-light">{{ member.keyword1 }}<span v-if="member.keyword2">, </span>{{ member.keyword2 }}<span v-if="member.keyword3">, </span>{{ member.keyword3 }}</p>
                 
-                <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.tedtalk">{{ $t('about.utsukuba.members.favouritetedtalk') }}</p>
-                <a class="is-size-7 has-text-weight-normal has-text-light is-uppercase" v-if="member.tedtalk" :href="getTedLinkUrl(member.tedtalk)" target="_blank" rel="noopener noreferrer">{{ member.tedtalk.replace(regexTitle, '').replace(regexLang, '').replace(/_/g, ' ') }}<externalLink v-if="member.tedtalk" style="width: 0.75rem; margin-left: 0.75rem;" /></a>
-                
-                <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.tedtalk_alt">{{ $t('about.utsukuba.members.favouritetedtalk') }}</p>
+                <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.tedtalk || member.tedtalk_alt">{{ $t('about.utsukuba.members.favouritetedtalk') }}<externalLink v-if="$ua.isFromSmartphone()" style="width: 0.75rem; margin-left: 0.75rem;" /></p>
+                <a class="is-size-7 has-text-weight-normal has-text-light is-uppercase" v-if="member.tedtalk && $ua.isFromSmartphone()" :href="getTedLinkUrl(member.tedtalk)" target="_blank" rel="noopener noreferrer">{{ member.tedtalk.replace(regexTitle, '').replace(regexLang, '').replace(/_/g, ' ') }}<externalLink v-if="member.tedtalk" style="width: 0.75rem; margin-left: 0.75rem;" /></a>
                 <a class="is-size-7 has-text-weight-normal has-text-light" v-if="member.tedtalk_alt" :href="member.tedtalk_alt" target="_blank" rel="noopener noreferrer">YouTube<externalLink v-if="member.tedtalk_alt" style="width: 0.75rem; margin-left: 0.75rem;" /></a>
                 
                 <p class="card-item has-text-right">
@@ -126,23 +124,21 @@
         </div>
       </div>
     </section>
-    <section class="section">
-      <div class="container has-text-centered">
-        <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.team.title')}}</h1>
+    <section class="section" id="team">
+      <div class="container has-text-right">
+        <h1 class="title is-0 is-spaced">{{ $t('about.utsukuba.team.title')}}</h1>
         <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.utsukuba.team.subtitle')}}</h1>
       </div>
     </section>
-    <section class="section">
-      <div class="columns is-mobile is-multiline">
+    <section class="section" id="team-content">
+      <!-- <div class="columns is-mobile is-multiline">
         <div v-for="(job, index) in jobs" :key="job.id" class="column is-3-desktop is-6-tablet is-6-mobile">
           <div :class="`notification has-background-${job.color}`">
             <p class="has-text-weight-bold" v-if="$i18n.locale == 'en'">{{ job.name_en }}</p>
             <p class="has-text-weight-bold" v-if="$i18n.locale == 'ja'">{{ job.name_ja }}</p>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="section">
+      </div> -->
       <div class="columns is-multiline">
         <div class="column is-6">
           <figure class="image">
@@ -169,48 +165,37 @@
             <img src="~/assets/team/intro/international.png" alt="International Team">
           </figure>
         </div>
-        <div class="column is-6">
-          <figure class="image">
-            <img src="~/assets/others/IMG_9801.jpg" alt="Members 2019">
-          </figure>
-        </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container has-text-centered">
-        <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.join.title')}}</h1>
+    <section class="section is-medium">
+      <div class="section has-text-centered">
+        <h1 class="title is-2 is-spaced">{{ $t('about.utsukuba.join.title')}}</h1>
         <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.utsukuba.join.subtitle')}}</h1>
         <nuxt-link to="/events" class="button is-rounded is-gradient">新歓イベントを探す</nuxt-link>
       </div>
-    </section>
-    <!-- <section class="section">
-      <div class="columns is-multiline">
-        <div class="column is-half-tablet is-one-quarter-desktop">
-          <figure class="image is-16by9">
-            <img src="~/assets/others/venue_team_2018.jpg">
-          </figure>
-        </div>
-        <div class="column is-half-tablet is-one-quarter-desktop">
-          <figure class="image is-16by9">
-            <img src="~/assets/others/IMG_9801.jpg">
-          </figure>
-        </div>
-        <div class="column is-half-tablet is-one-quarter-desktop">
-          <figure class="image is-16by9">
-            <img src="~/assets/others/IMG_9800.jpg">
-          </figure>
-        </div>
-        <div class="column is-half-tablet is-one-quarter-desktop">
-          <figure class="image is-16by9">
-            <img src="~/assets/others/tech_team_2018.jpg">
-          </figure>
+      <div class="section">
+        <div class="columns is-multiline">
+          <div class="column is-one-third-desktop">
+            <figure class="image is-16by9">
+              <img src="~/assets/others/venue_team_2018.jpg" alt="venue">
+            </figure>
+          </div>
+          <div class="column is-one-third-desktop">
+            <figure class="image is-16by9">
+              <img src="~/assets/others/IMG_9801.jpg" alt="Members 2019">
+            </figure>
+          </div>
+          <div class="column is-one-third-desktop">
+            <figure class="image is-16by9">
+              <img src="~/assets/others/tech_team_2018.jpg" alt="tech">
+            </figure>
+          </div>
         </div>
       </div>
-    </section> -->
-    <section class="section">
-      <div class="container has-text-centered">
-        <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.contactus.title')}}</h1>
+    
+      <div class="section has-text-centered">
+        <h1 class="title is-2 is-spaced">{{ $t('about.utsukuba.contactus.title')}}</h1>
         <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.utsukuba.contactus.subtitle')}}</h1>   
         <div class="columns">
           <div class="column">
@@ -358,13 +343,27 @@ export default {
             opacity: 1
           }
         })
+      const scene4 = this.$scrollmagic
+        .scene({
+          triggerElement: '#team',
+          triggerHook: 0.75,
+          offset: 0,
+          reverse: false
+        })
+        .setTween('#team-content', {
+          css: {
+            opacity: 1
+          }
+        })
       this.$scrollmagic.addScene(scene1)
       this.$scrollmagic.addScene(scene2)
       this.$scrollmagic.addScene(scene3)
+      this.$scrollmagic.addScene(scene4)
     } else {
       document.getElementById("tedxutsukuba").style.opacity = 1;
       document.getElementById("gallery").style.opacity = 1;
       document.getElementById("socialcapital").style.opacity = 1;
+      document.getElementById("team-content").style.opacity = 1;
     }
   }
 }
@@ -387,7 +386,7 @@ export default {
     color: white;
     word-break: break-all;
   }
-  #tedxutsukuba, #socialcapital {
+  #tedxutsukuba, #socialcapital, #team-content {
     opacity: 0;
     transition: all 0.5s;
   }

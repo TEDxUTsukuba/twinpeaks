@@ -177,7 +177,7 @@
     "ted": {
       "title": "TED",
       "subtitle": "",
-      "Join": "Join",
+      "join": "Join",
       "watch": "Watch",
       "watchmoreted": "Explore more TED Talks",
       "talktitle": "Designing for Simplicity",
