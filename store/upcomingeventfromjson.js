@@ -1,4 +1,4 @@
-import jsonEventList from '~/contents/upcomingEvents.json'
+import jsonEventList from '~/references/upcomingEvents.json'
 
 export const state = () => ({
   // data: jsonEventList

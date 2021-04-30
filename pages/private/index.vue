@@ -80,7 +80,7 @@
    }
   },
   asyncData() {
-    const usefulLinks = require(`~/contents/usefulLinks.json`)
+    const usefulLinks = require(`~/references/usefulLinks.json`)
     return {
       usefulLinks
     }

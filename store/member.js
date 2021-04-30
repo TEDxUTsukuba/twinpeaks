@@ -1,4 +1,4 @@
-import { members2021 } from '~/contents/members2021.json'
+import { members2021 } from '~/references/members2021.json'
 
 export const state = () => ({
   memberList: members2021

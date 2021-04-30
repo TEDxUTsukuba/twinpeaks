@@ -8,7 +8,7 @@
         <Carousel id="top-carousel" />
       </div>
       <div class="column is-4-widescreen is-5-fullhd vertical-center has-text-centered" id="top-carousel-wrapper-logo-section">
-        <img src="~/assets/logo/black_transparent_1.png" width="60%">
+        <img src="~/assets/logo/black_transparent_1.png" width="60%" alt="TEDxUTsukuba Logo">
         <!-- <LogoAnimation id="top-logo" /> -->
       </div>
     </div>
@@ -37,7 +37,7 @@
         <section class="section">
           <div class="columns is-mobile is-multiline is-centered is-variable is-0">
               <div class="column is-5-widescreen is-4-desktop is-6-tablet is-10-mobile">
-                <img src="~/assets/logo/motto.png" class="motto" style="padding-right: 50px;">
+                <img src="~/assets/logo/motto.png" class="motto" style="padding-right: 50px;" alt="Ideas Worth Spreading">
               </div>
               <div class="column is-0-fullhd is-0-widescreen is-0-desktop is-6-tablet is-2-mobile"></div>
               <div class="column is-7-widescreen is-8-desktop is-full-tablet is-full-mobile">
@@ -51,7 +51,7 @@
                     <br class="mobile-br">
                     {{ $t('intro.headline2') }}
                   </h1>
-                    <img id="rocket" src="~/assets/svg/rocket.png" width="100%" style="z-index: 0;">
+                    <img id="rocket" src="~/assets/svg/rocket.png" width="100%" style="z-index: 0;" alt="">
                   <article class="is-size-6 has-text-light">
                     {{ $t('intro.description') }}
                   </article>
