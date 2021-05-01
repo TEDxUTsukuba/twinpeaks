@@ -25,7 +25,7 @@
       </b-carousel-item>
       <template #indicators="props">
         <figure class="image">
-          <img :src="items[props.i].thumbnail" :alt="item.title">
+          <img data-not-lazy :src="items[props.i].thumbnail" :alt="items[props.i].title">
         </figure>
       </template>
     </b-carousel>
@@ -90,7 +90,7 @@ export default {
   border-top: 0.3rem solid #666666;
   // border: 2px solid gray;
   // filter: grayscale(80%);
-  filter: brightness(50%);
+  filter: brightness(75%);
 }
 .indicator-item.is-active figure img {
   border-top: 0.3rem solid red;
