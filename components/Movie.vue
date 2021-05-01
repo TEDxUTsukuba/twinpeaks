@@ -4,7 +4,7 @@
           ref="youtube"
           @playing="playing"
           :video-id="vId"
-          :player-vars="aPlay"
+          :player-vars="playerVars"
         >
         </youtube>
     </div>
@@ -20,7 +20,11 @@ export default {
   data(){
     return {
       isImageModalActive: false,
-      isCardModalActive: false
+      isCardModalActive: false,
+      playerVars: {
+        'cc_load_policy': 1,
+        'cc_lang_pref': 'ja'
+      }
     }
   },
   props: {
