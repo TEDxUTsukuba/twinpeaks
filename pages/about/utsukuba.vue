@@ -1,6 +1,6 @@
 <template>
   <section id="wrapper-dark" class="font-awesome">
-    <section class="section is-large has-text-centered" id="trigger">
+    <section class="section is-medium has-text-centered" id="trigger">
       <i class="mdi mdi-information has-text-primary is-1" /> 
       <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.title')}}</h1>
       <h1 class="subtitle has-text-grey-light">{{ $t('about.utsukuba.subtitle')}}</h1>

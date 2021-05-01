@@ -196,7 +196,8 @@ export default {
         iframes: false,
         defaultImage: '~/assets/wallpapers/defaultimage.png'
       }
-    ]
+    ],
+    '@nuxt/content'
   ],
 
   // fontawesome: {

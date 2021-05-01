@@ -1,6 +1,6 @@
 <template>
   <section id="wrapper-dark">
-    <section class="section has-text-centered is-large">
+    <section class="section has-text-centered is-medium">
       <i class="mdi mdi-youtube has-text-primary is-1" /> 
       <h1 class="title is-1 is-spaced">{{ $t('talks.title') }}</h1>
       <h1 class="subtitle has-text-grey-light">{{ $t('talks.subtitle') }}</h1>
