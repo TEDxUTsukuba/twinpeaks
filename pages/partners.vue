@@ -1,6 +1,6 @@
 <template>
   <section id="wrapper-dark">
-    <section class="section has-text-centered is-large">
+    <section class="section has-text-centered is-medium">
     <!-- <section class="hero is-large">
       <div class="hero-body has-text-white has-text-left">
         <div class="container has-text-centered">

@@ -63,6 +63,7 @@ $dark-gradation: linear-gradient(165deg, rgb(158, 25, 25) 8.8%, rgb(41, 38, 38) 
 $red: #c6251a;
 $red1: $primary;
 $red2: #ff3123;
+$link: hsl(217, 71%, 53%);
 
 $itf: #39b0b7;
 $light: hsl(0, 0%, 90%);
@@ -372,6 +373,16 @@ section#wrapper-dark {
   article {
     color: #fff;
   }
+
+  a {
+    color: $link;
+    &:hover {
+      color: $primary;
+    }
+    &:visited {
+      color: $link;
+    }
+  }
 }
 
 section#wrapper-gradient {
@@ -460,12 +471,15 @@ br.mobile-br {
   @media screen and (max-width: 540px) {
     display: block;
   }
+
   display: none;
 }
+
 br.desktop-br {
   @media screen and (max-width: 540px) {
     display: none;
   }
+
   display: block;
 }
 
