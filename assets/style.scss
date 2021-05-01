@@ -460,8 +460,13 @@ br.mobile-br {
   @media screen and (max-width: 540px) {
     display: block;
   }
-
   display: none;
+}
+br.desktop-br {
+  @media screen and (max-width: 540px) {
+    display: none;
+  }
+  display: block;
 }
 
 .nmp-card {

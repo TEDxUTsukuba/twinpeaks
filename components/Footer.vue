@@ -31,7 +31,7 @@
         <div class="content">
           <b-collapse :open="false" position="is-bottom" aria-id="contentIdForA11y1">
             <a class="button is-white is-rounded" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1" style="margin: 2rem auto 0 auto;">
-                <b-icon :icon="!props.open ? 'chevron-down' : 'chevron-up'" style="margin-right: 1px;" /></b-icon> 
+                <b-icon :icon="!props.open ? 'chevron-down' : 'chevron-up'" style="margin-right: 1px;" />
                 {{ !props.open ? $t('button.readmore') : $t('button.readless') }}
             </a>
             <br>
@@ -64,21 +64,28 @@
       <section class="hero has-background-black">
         <div class="hero-body">
           <section class="section">
-            <div class="columns is-centered is-vcentered">
-              <div class="column is-4-desktop is-6-tablet has-text-centered-mobile">
+            <div class="columns is-vcentered">
+              <div class="column is-4-desktop is-4-tablet has-text-centered-mobile">
                 <nuxt-link :to="localePath('/')">
-                  <figure class="image" style="width: 100%; max-width: 75%;">
+                  <figure class="image" style="width: 100%; max-width: 320px;">
                     <logo />
                   </figure>
                 </nuxt-link>
-                <p class="is-size-7 has-text-grey" style="padding-top: 2rem;">
-                  This independent TEDx event is operated under license from TED.
-                </p>
-                <a class="is-size-7 has-text-grey url" href="https://www.ted.com/about/programs-initiatives/tedx-program">About TEDx program <externalLink style="width: 0.75rem;"/></a>
               </div>
-
-              <div class="column is-8-desktop is-6-tablet has-text-right has-text-centered-mobile">
-                <h1 class="title is-size-5 is-size-5-mobile has-text-light">Spread Globally, Connect Locally.</h1>
+              <div class="column has-text-right">
+                <p class="title is-size-4 has-text-light has-text-centered-mobile has-text-weight-light">Spread Globally, <br class="mobile-br" />Connect Locally.</p>
+              </div>
+            </div>
+            <div class="columns is-centered is-vcentered">
+              <div class="column has-text-centered-mobile">
+                <p class="is-size-7 has-text-grey-light">
+                  This independent TEDx event is operated under license from TED.
+                  <br class="desktop-br" />
+                  <a class="is-size-7 has-text-grey-light url" href="https://www.ted.com/about/programs-initiatives/tedx-program">About TEDx program <externalLink style="width: 0.75rem;"/></a>
+                </p>
+                <a href="https://ja.nuxtjs.org/" target="_blank"><nuxtLogo style="width: 100px; margin-top: 10px;" /></a>
+              </div>
+              <div class="column has-text-right has-text-centered-mobile">
                 <span class="has-text-grey-light">
                   <p class="is-size-7">{{ $t('about.location.address') }}</p>
                   <p class="is-size-7">tedxutsukuba&#64;gmail.com</p>
@@ -86,12 +93,18 @@
                 </span>
               </div>
             </div>
-
+          </section>
+        </div>
+      </section>
+      
+      <section class="hero has-background-primary">
+        <div class="hero-body">
+          <section class="section" style="padding: 1rem 1.5rem;">
             <div class="columns is-centered">
-              <div class="column is-8-desktop is-7-tablet has-text-left has-text-centered-mobile">  
-                <nuxt-link :to="localePath('/notice')" class="has-text-grey url is-size-7">{{ $t('notice.archive.title') }}</nuxt-link> |
-                <nuxt-link :to="localePath('/code-of-conduct')" class="has-text-grey url is-size-7">{{ $t('codeofconduct.title') }}</nuxt-link> |
-                <nuxt-link :to="localePath('/private')" class="has-text-grey url is-size-7">{{ $t('2020.participance.pass.title') }}</nuxt-link>
+              <div class="column is-8-desktop is-7-tablet has-text-left has-text-grey-light has-text-centered-mobile">  
+                <nuxt-link :to="localePath('/notice')" class="has-text-white url is-size-7">{{ $t('notice.archive.title') }}</nuxt-link> |
+                <nuxt-link :to="localePath('/code-of-conduct')" class="has-text-white url is-size-7">{{ $t('codeofconduct.title') }}</nuxt-link> |
+                <nuxt-link :to="localePath('/private')" class="has-text-white url is-size-7">{{ $t('2020.participance.pass.title') }}</nuxt-link>
               </div>
 
               <div class="sns column is-4-desktop is-5-tablet has-text-right has-text-centered-mobile">
@@ -144,10 +157,11 @@ import iconTW from '@/assets/svg/twitter.svg'
 import iconFL from '@/assets/svg/flickr.svg'
 import iconNT from '@/assets/svg/note.svg'
 import externalLink from '@/assets/svg/external-link-alt-solid.svg'
+import nuxtLogo from '@/assets/svg/built-with-nuxt-white.svg'
 
 export default {
   components: {
-    logo, iconIG, iconFB, iconTW, iconFL, iconNT, externalLink
+    logo, iconIG, iconFB, iconTW, iconFL, iconNT, externalLink, nuxtLogo
   },
   methods: {
     getJsonImgUrl(value) {
