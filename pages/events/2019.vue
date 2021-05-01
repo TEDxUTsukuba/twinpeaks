@@ -11,7 +11,7 @@
           <span class="">{{ $t('2019.concept.title') }}</span>
         </h1> -->
         <figure class="image">
-          <img src="~/assets/2019/concept/cophilaction_silver.png" alt="CoPhilAction" style="width: 80%; max-width: 720px; margin: 5vh auto;">
+          <img data-not-lazy src="~/assets/2019/concept/cophilaction_silver.png" alt="CoPhilAction" style="width: 80%; max-width: 720px; margin: 5vh auto;">
         </figure>
         <div>
           <article id="concept">
