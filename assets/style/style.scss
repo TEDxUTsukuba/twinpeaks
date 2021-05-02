@@ -373,16 +373,6 @@ section#wrapper-dark {
   article {
     color: #fff;
   }
-
-  a {
-    color: $link;
-    &:hover {
-      color: $primary;
-    }
-    &:visited {
-      color: $link;
-    }
-  }
 }
 
 section#wrapper-gradient {

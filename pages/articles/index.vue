@@ -2,13 +2,15 @@
   <section id="wrapper-dark">
     <section class="section is-medium has-text-centered">
       <i class="mdi mdi-book-multiple has-text-primary is-1" /> 
-      <h1 class="title is-1 is-spaced">Blog</h1>
-      <h1 class="subtitle has-text-grey-light">Blog List</h1>
+      <h1 class="title is-1 is-spaced">Article</h1>
+      <h1 class="subtitle has-text-grey-light">Article List</h1>
     </section>
     <section class="section">
       <div v-for="article in articles">
+        <hr>
         <nuxt-link :to="article.path">{{ article.title }}</nuxt-link> {{ article.created }}
       </div>
+      <hr>
     </section>
   </section>
 </template>
@@ -26,3 +28,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+hr {
+  height: 1px;
+}
+</style>
