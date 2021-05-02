@@ -93,7 +93,7 @@ export default {
   */
   css: [
     {
-      src: '~/assets/style.scss',
+      src: '~/assets/style/style.scss',
       lang: 'scss'
     }
   ],

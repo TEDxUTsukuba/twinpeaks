@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <section class="hero is-medium">
+    <section class="hero is-halfheight">
       <div class="hero-body">
         <h1 class="title">Slack</h1>
       </div>
