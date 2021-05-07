@@ -140,7 +140,7 @@ export default {
     // }
   },
   mounted(){
-    const api_url = "https://script.google.com/macros/s/AKfycbxo9tPL7S_1mOOKs7NVOu7a8Zx3lWDM0wv_UBTgJVv31VscjN9QLgNSPzb0wri-qNDykQ/exec" + '?id=' + this.$route.params.name;
+    const api_url = "https://script.google.com/macros/s/AKfycbwAAgt2d9FBejQaYon2OB9OASRICfI1GvbgJV1LDaVreOctTuVC37Rzc0CUgqTl5AqawA/exec" + '?id=' + this.$route.params.name;
     axios.get(api_url, {
       crossDomain: true
     }).then(response => this.memberList = response.data[0]);

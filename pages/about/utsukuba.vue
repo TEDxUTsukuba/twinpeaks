@@ -71,7 +71,7 @@
             </header>
             <div class="card-image" v-if="member.imageFileName" style="width: 100%;">
               <figure class="image is-3-desktop is-6-tablet is-6-mobileby2" style="overflow: hidden;">
-                <img class="portrait" :src="getJsonImgUrl(member.imageFileName)" :alt="member.given_name_en + member.family_name_en">
+                <img class="portrait" :src="getJsonImgUrl(member.id)" :alt="member.given_name_en + member.family_name_en">
               </figure>
             </div>
             <div class="card-content">
