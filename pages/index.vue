@@ -239,7 +239,7 @@ export default {
   }
   #intro, #notice {
     opacity: 0;
-    transition: all 0.5s;
+    transition: all 0.25s;
   }
   #top-carousel {
     transition: all 1s;

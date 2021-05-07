@@ -1,9 +1,9 @@
 ---
-title: 誹謗中傷は悪なのか？
-author: Yuki Abe
+title: サンプル
+author: John Doe
 created: 2020/06/02 22:16
 last_modified: 
-tags: [SNS, 誹謗中傷]
+tags: [tag1, tag2]
 thumbnail: https://assets.st-note.com/production/uploads/images/27319793/rectangle_large_type_2_f27c546b9fd2c56b40ae6a976eb407bd.jpeg
 ---
 
