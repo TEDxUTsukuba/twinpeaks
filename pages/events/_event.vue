@@ -117,7 +117,6 @@
 <script>
 import axios from 'axios';
 import Meta from '~/assets/mixins/eventmixin'
-
 export default {
   mixins: [Meta],
   components: {
