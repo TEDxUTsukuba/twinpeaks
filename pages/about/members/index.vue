@@ -1,7 +1,7 @@
 <template>
   <section id="wrapper-dark" class="font-awesome">
     <section class="section-wide">
-      {{ $route.params.name }}
+      {{ $route.query.name }}
       <div class="columns is-mobile is-multiline">
         <div
           id="thumbnails"
@@ -140,7 +140,7 @@ export default {
     // }
   },
   mounted(){
-    const api_url = "https://script.google.com/macros/s/AKfycbwAAgt2d9FBejQaYon2OB9OASRICfI1GvbgJV1LDaVreOctTuVC37Rzc0CUgqTl5AqawA/exec" + '?id=' + this.$route.params.name;
+    const api_url = "https://script.google.com/macros/s/AKfycbwAAgt2d9FBejQaYon2OB9OASRICfI1GvbgJV1LDaVreOctTuVC37Rzc0CUgqTl5AqawA/exec" + '?id=' + this.$route.query.name;
     axios.get(api_url, {
       crossDomain: true
     }).then(response => this.memberList = response.data[0]);
