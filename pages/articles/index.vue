@@ -2,8 +2,8 @@
   <section id="wrapper-dark">
     <section class="section is-medium has-text-centered">
       <i class="mdi mdi-book-multiple has-text-primary is-1" /> 
-      <h1 class="title is-1 is-spaced">Article</h1>
-      <h1 class="subtitle has-text-grey-light">Article List</h1>
+      <h1 class="title is-1 is-spaced">Articles</h1>
+      <h1 class="subtitle has-text-grey-light">Hear the thoughts and ideas from our members. </h1>
     </section>
     <section class="section">
       <div v-for="article in articles">
@@ -32,5 +32,9 @@ export default {
 <style scoped>
 hr {
   height: 1px;
+}
+a {
+  color: #fff;
+  font-weight: bold;
 }
 </style>

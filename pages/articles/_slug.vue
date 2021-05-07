@@ -26,7 +26,7 @@
           <li class="is-active"><nuxt-link :to="`/articles/${$route.params.slug}`" aria-current="page">{{ article.title }}</nuxt-link></li>
         </ul>
       </nav>
-      <hr>
+      <br>
       <div class="content">
         <nuxt-content :document="article" />
       </div>
@@ -58,22 +58,39 @@ export default {
   color: #000;
 }
 .nuxt-content {
-  h1, h2, h3, h4, h5, h6, p, ul, li, strong, em, th, td {
-    color: #ddd;
+  p, ul, li, th, td {
+    color: #ddd !important;
   }
-  blockquote p {
+  h1, h2, h3, h4, h5, h6, strong, em {
+    color: #fff !important;
+  }
+  p {
+    line-height: 2.5rem;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
+  }
+  blockquote p, blockquote strong, blockquote em {
     color: #666 !important;
   }
   span.icon {
-    width: 1em;
-    height: 1em;
-    position: relative;
-    background-color: #7957d5;
-    margin-right: 10px;
-    // transform: rotate(45deg);
-    &:hover {
-      background-color: #fff;
-    }
+    display: none;
+    // width: 1em;
+    // height: 1em;
+    // position: relative;
+    // background-color: #7957d5;
+    // margin-right: 10px;
+    // // transform: rotate(45deg);
+    // &:hover {
+    //   background-color: #fff;
+    // }
+  }
+  table {
+    background-color: #333;
+  }
+  hr {
+    background-color: #333;
   }
 
 }
