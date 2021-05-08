@@ -3,7 +3,7 @@
     <section class="section">
       <!-- {{ $route.params.slug }} -->
       <!-- {{ memberList }} -->
-        <div v-if="member.id == $route.params.slug" class="columns is-multiline is-centered is-variable is-6">
+        <div class="columns is-multiline is-centered is-variable is-6">
           <div v-if="member.isImage == 'TRUE'" class="column is-5-tablet is-4-desktop">
             <div style="max-width: 320px; margin: 0 auto;">
               <figure class="image is-1by1">
@@ -121,7 +121,7 @@ export default {
     }
   },
   created() {
-    console.log("env" + process.env.STEIN_API)
+    // console.log("env: " + process.env.STEIN_API)
   },
   methods: {
     getJsonImgUrl(value) {
