@@ -27,6 +27,8 @@
     "discover": "Discover",
     "readmore": "Read more",
     "readless": "Read less",
+    "seeothers": "See other {0}s",
+    "seeall": "See all",
     "visitwebsite": "Website",
     "externalwebsite": "External Link",
     "alerttoexternalwebsite": "You are about to visit this website.",
