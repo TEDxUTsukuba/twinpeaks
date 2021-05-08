@@ -1,9 +1,14 @@
+require('dotenv').config();
+const { STEIN_API } = process.env;
 
 export default {
   mode: 'universal',
   /*
   ** Headers of the page
   */
+  env: {
+    STEIN_API
+  },
   head: {
     // title: process.env.npm_package_name || '',
     title: "TEDxUTsukuba | A Hub for Tsukuba's Ideas",

@@ -88,11 +88,12 @@
       <strong>TEDとYouTubeの両方で公開されているトークをオススメしたい場合</strong>
       <ul>
         <li>TED.comのURLを<code>tedtalk</code>に貼り付ける</li>
-        <li><code>tedtalk_alt</code>は空欄にする</li>
+        <li><code>tedtalk_alt</code>と<code>tedtalk_alt_meta</code>は空欄にする</li>
       </ul>
       <strong>YouTubeにしか掲載されていないトークをオススメしたい場合</strong>
       <ul>
         <li>YouTubeで、共有ボタン<i class="mdi mdi-share" />から<code>https://youtu.be/</code>で始まるURLを取得し、<code>tedtalk_alt</code>に貼り付ける*</li>
+        <li><code>tedtalk_alt_meta</code>にスピーカーの名前とトークのタイトルを記入する（日本語・英語どちらでもOK）</li>
         <li><code>tedtalk</code>は空欄にする</li>
       </ul>
       * <code>https://www.youtube.com/</code>で始まるURLは使わないようにしてください。

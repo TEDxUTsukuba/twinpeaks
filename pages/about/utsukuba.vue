@@ -55,7 +55,7 @@
         <div
           id="thumbnails"
           class="column is-3-fullhd is-4-widescreen is-4-desktop is-6-tablet is-6-mobile"
-          v-for="(member, index) in memberList" :key="member.tedtalk"
+          v-for="(member, index) in memberList" :key="index"
           style="display: inline-block; vertical-align: top;"
         >
           <nuxt-link :to="member.id">
@@ -114,8 +114,8 @@
                   <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.tedtalk || member.tedtalk_alt">
                     {{ $t('about.utsukuba.members.favouritetedtalk') }}
                   </p>
-                  <a class="is-size-7 has-text-weight-normal has-text-light is-uppercase" v-if="member.tedtalk" :href="getTedLinkUrl(member.tedtalk)" target="_blank" rel="noopener noreferrer">{{ member.tedtalk.replace(regexTitle, '').replace(regexLang, '').replace(/_/g, ' ') }}<externalLink v-if="member.tedtalk" style="width: 0.75rem; margin-left: 0.75rem;" /></a>
-                  <a class="is-size-7 has-text-weight-normal has-text-light" v-if="member.tedtalk_alt" :href="member.tedtalk_alt" target="_blank" rel="noopener noreferrer">YouTube<externalLink v-if="member.tedtalk_alt" style="width: 0.75rem; margin-left: 0.75rem;" /></a>
+                  <p class="has-text-light is-uppercase is-size-7" v-if="member.tedtalk">{{ member.tedtalk.replace(regexTitle, '').replace(regexLang, '').replace(/_/g, ' ') }}</p>
+                  <p class="has-text-light is-size-7" v-if="member.tedtalk_alt_meta">{{ member.tedtalk_alt_meta }}</p>
                   
                   <p class="card-item has-text-right">
                     <a v-if="member.tedaccount" :href="member.tedaccount" target="_blank" rel="noopener noreferrer"><span class="tag is-dark has-text-primary has-text-weight-bold">TED</span></a>
