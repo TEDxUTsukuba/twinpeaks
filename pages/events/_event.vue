@@ -220,7 +220,8 @@ export default {
   },
   mounted() {
     // console.log(this.$route.params.event)
-    const api_url = 'https://script.google.com/macros/s/AKfycbzLxjNxZLZ5izrM5boDp0nM396uyzReduC7nr2axZepkPhXUJwS9sP3_rn3268EOP49bw/exec' + '?id=' + this.$route.params.event;
+    console.log(this.$route.params.event);
+    const api_url = "https://script.google.com/macros/s/AKfycbzEOXQ3-iyyjdQs4FrraL7pRnl0vtUXkK2oVzvVh8qOoCA9-XjsgtBFX6M-tCThZ9tSJg/exec" + '?id=' + this.$route.params.event;
     axios.get(api_url, {
       crossDomain: true
     }).then(response => this.eventData = response.data[0]);
