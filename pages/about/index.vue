@@ -3,7 +3,7 @@
     <section class="section">
       <!-- {{ $route.params.slug }} -->
       <!-- {{ memberList }} -->
-        <div v-if="member.id == $route.params.slug" class="columns is-multiline is-centered is-variable is-6">
+        <div class="columns is-multiline is-centered is-variable is-6">
           <div v-if="member.isImage == 'TRUE'" class="column is-5-tablet is-4-desktop">
             <div style="max-width: 320px; margin: 0 auto;">
               <figure class="image is-1by1">
@@ -21,12 +21,12 @@
             </p>
 
             <div class="text">
-              <p class="midashi is-size-7 has-text-weight-bold has-text-primary">
+              <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.first_main_event">
                 {{ $t('about.utsukuba.members.period') }}
               </p>
               <p class="is-size-7 has-text-weight-normal has-text-light">{{ member.first_main_event }} - <span v-if="member.last_main_event">{{ member.last_main_event }}</span></p>
               
-              <p class="midashi is-size-7 has-text-weight-bold has-text-primary">
+              <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.home_state_en">
                 {{ $t('about.utsukuba.members.from') }}
               </p>
               <p class="is-size-7 has-text-weight-normal has-text-light" v-if="$i18n.locale == 'en'">{{ member.home_state_en }}</p>
@@ -94,12 +94,12 @@ export default {
       regexYouTube: new RegExp(/https:\/\/youtu.be\//),
       regexLang: new RegExp(/\?[\w\=]+/),
       locale: this.$i18n.locale,
-      name: this.$route.params.slug,
+      id: this.$route.query.id,
       meta: {
-        title: this.$route.params.slug.replace(/_/g, ' ').toUpperCase() + '| TEDxUTsukuba',
+        title: this.$route.query.id.replace(/_/g, ' ').toUpperCase() + '| TEDxUTsukuba',
         description: "TEDxUTsukubaは2016年に設立されたTEDxコミュニティ。筑波大学の一般学生団体であり、学生や卒業生を中心として運営されています。これまでに4回のメインカンファレンスを含む数々のTEDxイベントを開催しており、登壇者には筑波大学の教員や学生、卒業生を中心に、多彩なアイディアを持つ方々をお招きしています。",
         type: "website",
-        url: "www.tedxutsukuba.com/about/" + this.$route.params.slug,
+        url: "www.tedxutsukuba.com/about/" + this.$route.query.id,
         image: "https://www.tedxutsukuba.com/twitter_summary.png"
       }
     }
@@ -148,7 +148,7 @@ export default {
     // axios.get(api_url, {
     //   crossDomain: true
     // }).then(response => this.memberList = response.data);
-    store.read('2021', { search: { id: this.$route.params.slug } }).then(data => {
+    store.read('2021', { search: { id: this.$route.query.id } }).then(data => {
       this.member = data[0]
       // console.log(data);
     })
