@@ -99,7 +99,7 @@ export default {
       locale: this.$i18n.locale,
       name: this.$route.params.slug,
       meta: {
-        title: this.$route.params.slug.replace(/_/g, ' ').toUpperCase() + '| TEDxUTsukuba',
+        title: this.$route.params.slug.replace(/_/g, ' ').toUpperCase() + ' | TEDxUTsukuba',
         description: "TEDxUTsukubaは2016年に設立されたTEDxコミュニティ。筑波大学の一般学生団体であり、学生や卒業生を中心として運営されています。これまでに4回のメインカンファレンスを含む数々のTEDxイベントを開催しており、登壇者には筑波大学の教員や学生、卒業生を中心に、多彩なアイディアを持つ方々をお招きしています。",
         type: "website",
         url: "www.tedxutsukuba.com/about/" + this.$route.params.slug,
