@@ -286,7 +286,7 @@ export default {
       'about/kanade_takahashi',
       'about/kazuki_ikegaya',
       'about/yuki_abe',
-      'about/haruki_kinoshita'
+      'about/harry'
     ]
   },
   server: {

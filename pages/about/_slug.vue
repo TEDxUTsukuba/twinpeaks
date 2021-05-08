@@ -3,7 +3,7 @@
     <section class="section hero is-fullheight">
       <!-- {{ $route.params.slug }} -->
       <!-- {{ memberList }} -->
-        <div v-if="member.given_name_en" class="columns is-multiline is-centered is-variable is-6">
+        <div v-if="member.given_name_en" class="columns reverse-row-order is-centered is-variable is-6" style="margin-top: 5vh;">
           <div v-if="member.isImage == 'TRUE'" class="column is-5-tablet is-4-desktop">
             <div style="max-width: 320px; margin: 0 auto;">
               <figure class="image is-1by1">
@@ -11,15 +11,15 @@
               </figure>
             </div>
           </div>
-          <div class="column is-7-tablet is-8-desktop">
-            <h1 class="title is-2 is-spaced has-text-centered-mobile" style="margin-top: 5vh;">
+          <div class="column">
+            <h1 class="title is-1 is-spaced has-text-centered-mobile">
               <span v-if="$i18n.locale == 'en'">{{ member.given_name_en }} {{ member.family_name_en }}</span>
               <span v-if="$i18n.locale == 'ja'">{{ member.family_name_ja }} {{ member.given_name_ja }}</span>
             </h1>
             <p class="subtitle is-size-5 has-text-grey-light has-text-centered-mobile">
               {{ member.role }}
             </p>
-
+            <br>
             <div class="text">
               <p class="midashi is-size-7 has-text-weight-bold has-text-primary">
                 {{ $t('about.utsukuba.members.period') }}
@@ -39,7 +39,11 @@
               <p class="is-size-7 has-text-weight-normal has-text-light" v-if="$i18n.locale == 'ja'">{{ member.college_ja }}</p>
               
               <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.keyword1" style="line-height: 1;">{{ $t('about.utsukuba.members.keywords') }}</p>
-              <p class="is-size-7 has-text-weight-normal has-text-light">{{ member.keyword1 }}<span v-if="member.keyword2">, </span>{{ member.keyword2 }}<span v-if="member.keyword3">, </span>{{ member.keyword3 }}</p>
+              <p style="margin-top: .5rem;">
+                <span v-if="member.keyword1" class="tag is-dark is-medium">{{ member.keyword1 }}</span>
+                <span v-if="member.keyword2" class="tag is-dark is-medium">{{ member.keyword2 }}</span>
+                <span v-if="member.keyword3" class="tag is-dark is-medium">{{ member.keyword3 }}</span>
+              </p>
               
               <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.tedtalk || member.tedtalk_alt">
                 {{ $t('about.utsukuba.members.favouritetedtalk') }}
@@ -51,10 +55,21 @@
               </a>
             </div>
             
-            <div v-if="member.tedtalk" class="ted-embed-wrap" style="max-width:854px; margin: 5vh auto;">
+            <div class="ted-embed-wrap" style="max-width:854px; margin: 5vh auto;">
               <div style="position:relative;height:0;padding-bottom:56.25%">
-                <iframe v-lazy-load
+                <iframe v-if="member.tedtalk" v-lazy-load
                   :src="`https://embed.ted.com/talks/lang/${locale}/${member.tedtalk.replace(regexTED, '')}`" 
+                  width="854"
+                  height="480"
+                  style="position:absolute;left:0;top:0;width:100%;height:100%"
+                  frameborder="0"
+                  scrolling="no"
+                  allowfullscreen>
+                </iframe>
+                <iframe v-if="member.tedtalk_alt" v-lazy-load
+                  :src="`https://youtube.com/embed/${member.tedtalk_alt.replace(regexYouTube, '')}`"
+                  title="YouTube video player"
+                  allow="accelerometer;clipboard-write;gyroscope;picture-in-picture" 
                   width="854"
                   height="480"
                   style="position:absolute;left:0;top:0;width:100%;height:100%"
@@ -64,13 +79,13 @@
                 </iframe>
               </div>
             </div>
-
-            <Movie id="teaser" v-if="member.tedtalk_alt" :vId="member.tedtalk_alt.replace(regexYouTube, '')" style="margin: 5vh auto;" /> 
-
           </div>
         </div>
         <div v-else>
           <p class="has-text-centered has-text-grey is-size-4">Loading...</p>
+        </div>
+        <div class="has-text-centered">
+          <nuxt-link class="button is-medium is-rounded is-gradient" to="./utsukuba#members">{{ $t('button.seeall') }}</nuxt-link>
         </div>
     </section>
    
@@ -193,5 +208,8 @@ export default {
     margin: 0 auto;
     object-fit: cover;
     border-radius: 50%;
+  }
+  .reverse-row-order {
+    flex-direction: row-reverse;
   }
 </style>

@@ -27,6 +27,8 @@
     "discover": "詳しく知る",
     "readmore": "続きを読む",
     "readless": "閉じる",
+    "seeothers": "他の{0}を見る",
+    "seeall": "一覧を見る",
     "visitwebsite": "ウェブサイト",
     "externalwebsite": "外部リンク",
     "alerttoexternalwebsite": "下記URLのウェブサイトにアクセスします。",

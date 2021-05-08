@@ -44,7 +44,7 @@
         </section>
       </div>
     </section> -->
-    <section class="section">
+    <section class="section" id="members">
       <div class="container has-text-right has-text-centered-mobile">
         <h1 class="title is-0 is-spaced">{{ $t('about.utsukuba.members.title')}}</h1>
         <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.utsukuba.members.subtitle')}}</h1>
