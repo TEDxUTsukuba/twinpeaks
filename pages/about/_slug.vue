@@ -1,9 +1,9 @@
 <template>
   <section id="wrapper-dark" class="font-awesome">
-    <section class="section">
+    <section class="section hero is-fullheight">
       <!-- {{ $route.params.slug }} -->
       <!-- {{ memberList }} -->
-        <div class="columns is-multiline is-centered is-variable is-6">
+        <div v-if="member.given_name_en" class="columns is-multiline is-centered is-variable is-6">
           <div v-if="member.isImage == 'TRUE'" class="column is-5-tablet is-4-desktop">
             <div style="max-width: 320px; margin: 0 auto;">
               <figure class="image is-1by1">
@@ -68,6 +68,9 @@
             <Movie id="teaser" v-if="member.tedtalk_alt" :vId="member.tedtalk_alt.replace(regexYouTube, '')" style="margin: 5vh auto;" /> 
 
           </div>
+        </div>
+        <div v-else>
+          <p class="has-text-centered has-text-grey is-size-4">Loading...</p>
         </div>
     </section>
    
