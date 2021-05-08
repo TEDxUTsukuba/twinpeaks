@@ -20,10 +20,15 @@
                 <span v-if="$i18n.locale == 'ja'">{{ member.family_name_ja }} {{ member.given_name_ja }}</span>
               </h1>
               <p class="subtitle is-size-5 has-text-grey-light has-text-centered-mobile">
-                {{ member.role }} ({{ member.first_main_event }} - {{ member.last_main_event }})
+                {{ member.role }}
               </p>
 
               <div class="text">
+                <p class="midashi is-size-7 has-text-weight-bold has-text-primary">
+                  {{ $t('about.utsukuba.members.period') }}
+                </p>
+                <p class="is-size-7 has-text-weight-normal has-text-light">{{ member.first_main_event }} <span v-if="member.last_main_event">- {{ member.last_main_event }}</span></p>
+                
                 <p class="midashi is-size-7 has-text-weight-bold has-text-primary">
                   {{ $t('about.utsukuba.members.from') }}
                 </p>
@@ -85,20 +90,32 @@ export default {
       regexTED: new RegExp(/https:\/\/www.ted.com.talks\//),
       regexYouTube: new RegExp(/https:\/\/youtu.be\//),
       regexLang: new RegExp(/\?[\w\=]+/),
-      locale: this.$i18n.locale
+      locale: this.$i18n.locale,
+      name: this.$route.params.slug,
+      meta: {
+        title: this.$route.params.slug.replace(/_/g, ' ').toUpperCase() + '| TEDxUTsukuba',
+        description: "TEDxUTsukubaは2016年に設立されたTEDxコミュニティ。筑波大学の一般学生団体であり、学生や卒業生を中心として運営されています。これまでに4回のメインカンファレンスを含む数々のTEDxイベントを開催しており、登壇者には筑波大学の教員や学生、卒業生を中心に、多彩なアイディアを持つ方々をお招きしています。",
+        type: "website",
+        url: "www.tedxutsukuba.com/about/" + this.$route.params.slug,
+        image: "https://www.tedxutsukuba.com/twitter_summary.png"
+      }
     }
   },
-  head: {
-    title: 'Member | TEDxUTsukuba',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { 
-        hid: 'description', 
-        name: 'description', 
-        content: 'TEDxUTsukubaは2016年に設立されたTEDxコミュニティ。筑波大学の一般学生団体であり、学生や卒業生を中心として運営されています。これまでに4回のメインカンファレンスを含む数々のTEDxイベントを開催しており、登壇者には筑波大学の教員や学生、卒業生を中心に、多彩なアイディアを持つ方々をお招きしています。'
-      },
-    ]
+  head() {
+    return {
+      title: this.meta.title,
+      meta: [
+        { hid: "description", name: "description", content: this.meta.description},
+        { hid: "og:description", property: "og:description", content: this.meta.description},
+        { hid: "og:title", property: "og:title", content: this.meta.title },
+        { hid: "og:type", property: "og:type", content: this.meta.type },
+        { hid: "og:url", property: "og:url", content: this.meta.url },
+        { hid: "og:image", property: "og:image", content: this.meta.image },
+        { name: "twitter:title", content: this.meta.title },
+        { name: "twitter:card", content: "summary" },
+        { name: "twitter:site", content: "@tedxutsukuba" }
+      ]
+    }
   },
   methods: {
     getJsonImgUrl(value) {
@@ -125,7 +142,6 @@ export default {
     axios.get(api_url, {
       crossDomain: true
     }).then(response => this.memberList = response.data);
-
   }
 }
 </script>
