@@ -268,7 +268,26 @@ export default {
     }
   },
   generate: {
-    fallback: true  // 404を表示
+    fallback: true,  // 404を表示
+    routes: [
+      'articles/knowledge_is_power_but',
+      'articles/is_slander_certainly_bad',
+      'about/takuma_goto',
+      'about/craig_coleman',
+      'about/naoki_kitaoka',
+      'about/masato_kai',
+      'about/coleen_melecio',
+      'about/fukutaro_kawai',
+      'about/shoryu_aoyama',
+      'about/chiho_numata',
+      'about/saaya_kobayashi',
+      'about/shuhei_kinoshita',
+      'about/seika_takahashi',
+      'about/kanade_takahashi',
+      'about/kazuki_ikegaya',
+      'about/yuki_abe',
+      'about/haruki_kinoshita'
+    ]
   },
   server: {
     port: 3000, // デフォルト: 3000
