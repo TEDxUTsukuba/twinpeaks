@@ -122,7 +122,6 @@ import tedtalkList from '@/references/tedtalks.json'
 export default {
   layout: 'fullscreen',
   components: {
-    
   },
   data(){
     return {

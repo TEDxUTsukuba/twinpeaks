@@ -37,9 +37,9 @@
     </section>
     <section class="section">
       <h2 class="title has-text-centered has-text-primary">{{ $t('events.other') }}</h2>
-      <div v-for="(event, index) in eventList" :key="event.id" class="" id="#content">
+      <div v-for="(event, index) in eventList" :key="index" class="" id="#content">
         <div :class="`nmp-card-${changeColor(event.date)}`" style="margin-bottom: 1rem;">
-          <a :href="`./events/${event.id}`">
+          <nuxt-link :to="`./${event.id}`">
             <div class="columns">
               <div class="column is-5">
                 <h1 class="title is-4">{{ event.name }}</h1>
@@ -66,7 +66,7 @@
                 </button>
               </div>
             </div>
-          </a>
+          </nuxt-link>
         </div>
       </div>
     </section>
@@ -152,7 +152,7 @@ export default {
     }
   },
   mounted(){
-    const api_url = "https://script.google.com/macros/s/AKfycbzLxjNxZLZ5izrM5boDp0nM396uyzReduC7nr2axZepkPhXUJwS9sP3_rn3268EOP49bw/exec";
+    const api_url = "https://script.google.com/macros/s/AKfycbzEOXQ3-iyyjdQs4FrraL7pRnl0vtUXkK2oVzvVh8qOoCA9-XjsgtBFX6M-tCThZ9tSJg/exec";
     axios.get(api_url, {
       crossDomain: true
     }).then(response => this.eventList = response.data);

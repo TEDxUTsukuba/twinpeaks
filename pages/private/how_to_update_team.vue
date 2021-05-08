@@ -84,12 +84,24 @@
           </tr>
         </table>
       </div>
-      <p><strong>TED</strong>トークのほとんどはTED.comとYouTubeの両方で公開されています。一方で<strong>TEDx</strong>トークは主にYouTubeで公開されており、ごく一部のトークのみTED.comで公開されています。両方に存在するトークを紹介する場合は、TED.comのリンクを<code>tedtalk</code>に貼り付けて<code>tedtalk_alt</code>は空欄にしてください。YouTubeにしか掲載されていないトークを載せたい場合は、<code>tedtalk</code>を空欄にして<code>tedtalk_alt</code>に記入してください。</p>
+      <p><strong>TED</strong>トークのほとんどはTED.comとYouTubeの両方で公開されています。一方で<strong>TEDx</strong>トークは主にYouTubeで公開されており、ごく一部のトークのみTED.comで公開されています。<br><br>
+      <strong>TEDとYouTubeの両方で公開されているトークをオススメしたい場合</strong>
+      <ul>
+        <li>TED.comのURLを<code>tedtalk</code>に貼り付ける</li>
+        <li><code>tedtalk_alt</code>は空欄にする</li>
+      </ul>
+      <strong>YouTubeにしか掲載されていないトークをオススメしたい場合</strong>
+      <ul>
+        <li>YouTubeで、共有ボタン<i class="mdi mdi-share" />から<code>https://youtu.be/</code>で始まるURLを取得し、<code>tedtalk_alt</code>に貼り付ける*</li>
+        <li><code>tedtalk</code>は空欄にする</li>
+      </ul>
+      * <code>https://www.youtube.com/</code>で始まるURLは使わないようにしてください。
+      </p>
     </div> 
     <div class="notification">
       <h1 class="is-size-5">Add Portrait</h1>
       <p>
-        お手数ですが、画像は下記メールアドレス宛に送付してください。その際に、ファイル名を名前にするなどして、誰が誰だかわかるようにしておいてください。
+        お手数ですが、画像はSlackまたはメールで送付してください。その際に、ファイル名を名前にするなどして、誰が誰だかわかるようにしておいてください。
       </p>
     </div> 
     <p class="">
