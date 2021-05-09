@@ -114,8 +114,8 @@
                   <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.tedtalk || member.tedtalk_alt">
                     {{ $t('about.utsukuba.members.favouritetedtalk') }}
                   </p>
-                  <p class="has-text-light is-uppercase is-size-7" v-if="member.tedtalk">{{ member.tedtalk.replace(regexTitle, '').replace(regexLang, '').replace(/_/g, ' ') }}</p>
-                  <p class="has-text-light is-size-7" v-if="member.tedtalk_alt_meta">{{ member.tedtalk_alt_meta }}</p>
+                  <p class="has-text-light is-size-7" v-if="member.tedtalk">{{ toUpperCamel(member.tedtalk) }}</p>
+                  <p class="has-text-light is-size-7" v-if="member.tedtalk_alt_meta">{{ toUpperCamel(member.tedtalk_alt_meta) }}</p>
                   
                   <p class="card-item has-text-right">
                     <a v-if="member.tedaccount" :href="member.tedaccount" target="_blank" rel="noopener noreferrer"><span class="tag is-dark has-text-primary has-text-weight-bold">TED</span></a>
@@ -254,8 +254,9 @@ export default {
       jobs: jobs,
       weAreTEDxUTsukuba: 'ZbIEuwjpxp0',
       sgcl: '7PQWXvgYZ4Y',
-      regexTitle: new RegExp(/https:\/\/www.ted.com.talks\//),
-      regexLang: new RegExp(/\?[\w\=]+/)
+      regexTED: new RegExp(/https:\/\/www.ted.com.talks\//),
+      regexYouTube: new RegExp(/https:\/\/youtu.be\//),
+      regexLang: new RegExp(/\?[\w\=]+/),
     }
   },
   head: {
@@ -292,6 +293,13 @@ export default {
       } else {
         return value + '?language=en'
       }
+    },
+    toUpperCamel(str) {
+      const sansHttpsLang = str.replace(this.regexTED, '').replace(this.regexLang, '');
+      const upperCameled = sansHttpsLang[0].toUpperCase() + sansHttpsLang.slice(1).replace(/_\w/g, function(v) { return ' ' + v.charAt(1).toUpperCase() + v.slice(2); });
+      // Shouldn T => Shouldn't
+      const formAbbreviation = upperCameled.replace("n T ", "n't ");
+      return formAbbreviation;
     }
   },
   computed: {
