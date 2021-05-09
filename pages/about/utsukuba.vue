@@ -87,7 +87,7 @@
                   </span>
                   <span v-if="$i18n.locale == 'ja'">
                     <h1 class="title is-4">
-                      {{ member.family_name_ja }}{{ member.given_name_ja }}
+                      {{ member.family_name_ja }} {{ member.given_name_ja }}
                     </h1>
                     <p class="subtitle is-size-6 has-text-grey-light">
                       {{ member.role }}
