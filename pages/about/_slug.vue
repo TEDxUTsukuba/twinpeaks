@@ -48,7 +48,7 @@
               <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.tedtalk || member.tedtalk_alt">
                 {{ $t('about.utsukuba.members.favouritetedtalk') }}
               </p>
-              <a class="is-size-7 has-text-weight-normal has-text-light is-uppercase" v-if="member.tedtalk" :href="getTedLinkUrl(member.tedtalk)" target="_blank" rel="noopener noreferrer">{{ member.tedtalk.replace(regexTED, '').replace(regexLang, '').replace(/_/g, ' ') }}<externalLink v-if="member.tedtalk" style="width: 0.75rem; margin-left: 0.75rem;" /></a>
+              <a class="is-size-7 has-text-weight-normal has-text-light" v-if="member.tedtalk" :href="getTedLinkUrl(member.tedtalk)" target="_blank" rel="noopener noreferrer">{{ toUpperCamel(member.tedtalk) }}<externalLink v-if="member.tedtalk" style="width: 0.75rem; margin-left: 0.75rem;" /></a>
               <a class="is-size-7 has-text-weight-normal has-text-light" v-if="member.tedtalk_alt" :href="member.tedtalk_alt" target="_blank" rel="noopener noreferrer">
                 {{ member.tedtalk_alt_meta }}
                 <externalLink style="width: 0.75rem;" />
@@ -114,7 +114,7 @@ export default {
       locale: this.$i18n.locale,
       name: this.$route.params.slug,
       meta: {
-        title: this.$route.params.slug.replace(/_/g, ' ').toUpperCase() + ' | TEDxUTsukuba',
+        title: this.$route.params.slug.charAt(0).toUpperCase() + this.$route.params.slug.slice(1).replace(/_\w/g, function(v) { return ' ' + v.charAt(1).toUpperCase() + v.slice(2); }) + ' | TEDxUTsukuba',
         description: "TEDxUTsukubaは2016年に設立されたTEDxコミュニティ。筑波大学の一般学生団体であり、学生や卒業生を中心として運営されています。これまでに4回のメインカンファレンスを含む数々のTEDxイベントを開催しており、登壇者には筑波大学の教員や学生、卒業生を中心に、多彩なアイディアを持つ方々をお招きしています。",
         type: "website",
         url: "www.tedxutsukuba.com/about/" + this.$route.params.slug,
@@ -152,6 +152,13 @@ export default {
       } else {
         return value + '?language=en'
       }
+    },
+    toUpperCamel(str) {
+      const sansHttpsLang = str.replace(this.regexTED, '').replace(this.regexLang, '');
+      const upperCameled = sansHttpsLang[0].toUpperCase() + sansHttpsLang.slice(1).replace(/_\w/g, function(v) { return ' ' + v.charAt(1).toUpperCase() + v.slice(2); });
+      // Shouldn T => Shouldn't
+      const formAbbreviation = upperCameled.replace("n T ", "n't ");
+      return formAbbreviation;
     }
   },
   computed: {
