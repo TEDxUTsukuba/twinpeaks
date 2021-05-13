@@ -11,25 +11,28 @@
           <div style="margin-left: 1rem;">
             <p class="has-text-weight-bold">{{ article.author }}</p>
             <p>{{ article.created }} <span v-if="article.last_modified" class="is-size-7">(最終更新: {{ article.last_modified }})</span></p>
-            <span v-for="tag in article.tags">
+            <!-- <span v-for="tag in article.tags" :key="tag">
               <span class="tag">{{ tag }}</span>&nbsp;
-            </span>
+            </span> -->
           </div>
         </div>
       </div>
     </section>
     <section class="section">
+      <div class="content" style="margin: 5vh 0 10vh 0;">
+        <nuxt-content :document="article" />
+      </div>
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button button is-medium is-rounded" data-via="tedxutsukuba" data-related="" data-show-count="false"><i class="mdi mdi-twitter" /> Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <div class="notification is-dark" style="margin: 5vh 0;">
+        {{ $t('blog.disclaimer') }}
+      </div>
       <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
           <li><nuxt-link to="/">Home</nuxt-link></li>
-          <li><nuxt-link to="/articles">Article</nuxt-link></li>
-          <li class="is-active"><nuxt-link :to="`/articles/${$route.params.slug}`" aria-current="page">{{ article.title }}</nuxt-link></li>
+          <li><nuxt-link to="/blog">Blog</nuxt-link></li>
+          <li class="is-active"><nuxt-link class="has-text-light" :to="`/articles/${$route.params.slug}`" aria-current="page">{{ article.title }}</nuxt-link></li>
         </ul>
       </nav>
-      <br>
-      <div class="content">
-        <nuxt-content :document="article" />
-      </div>
     </section>
   </section>
 </template>
@@ -37,8 +40,9 @@
 <script>
 export default {
   components: {},
-  async asyncData({ $content, params }) {
-    const article = await $content(`articles/${params.slug}`).fetch();
+  async asyncData({ $content, params, app }) {
+    // const article = await $content(`${app.i18n.locale}/blog/${params.slug}`).fetch();
+    const article = await $content(`blog/${params.slug}`).fetch();
 
     return {
       article
@@ -56,6 +60,7 @@ export default {
   padding: 0.5rem 1rem;
   background-color: #fff;
   color: #000;
+  line-height: 200%;
 }
 .nuxt-content {
   p, ul, li, th, td {
@@ -66,6 +71,9 @@ export default {
   }
   p {
     line-height: 2.5rem;
+  }
+  a {
+    color: hsl(217, 71%, 53%);
   }
   h1, h2, h3, h4, h5, h6 {
     padding-top: 3rem;

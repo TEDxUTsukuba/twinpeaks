@@ -24,7 +24,7 @@
               <p class="midashi has-text-weight-bold has-text-primary">
                 {{ $t('about.utsukuba.members.period') }}
               </p>
-              <p class="has-text-weight-normal has-text-light">{{ member.first_main_event }} - <span v-if="member.last_main_event">{{ member.last_main_event }}</span></p>
+              <p class="has-text-weight-normal has-text-light">{{ member.first_main_event }} <span v-if="member.last_main_event">- {{ member.last_main_event }}</span></p>
               
               <p class="midashi has-text-weight-bold has-text-primary">
                 {{ $t('about.utsukuba.members.from') }}
@@ -85,7 +85,7 @@
             </div>
           </div>
           <div class="column is-12 has-text-centered">
-            <nuxt-link class="button is-medium is-rounded is-gradient" to="./utsukuba#members">{{ $t('button.seeothers', { 0: $t('about.utsukuba.members.title') } ) }}</nuxt-link>
+            <nuxt-link class="button is-medium is-rounded is-gradient" to="./utsukuba#members">{{ $t('button.seeothers', { 0: $t('about.utsukuba.members.title').toLowerCase() } ) }}</nuxt-link>
           </div>
         </div>
         <div v-else>
@@ -175,7 +175,7 @@ export default {
     // }
   },
   mounted(){
-    const api_url = 'https://script.google.com/macros/s/AKfycbyKv8m4oyAmnNgGeXSYA0x-fQxYWt1VvP4u62Q2XkHY7qpUUIkBSsV11TbVBgW8upFtWA/exec?id=' + this.$route.params.slug;
+    const api_url = 'https://script.google.com/macros/s/AKfycbxpjvd9ZpQGthMxvuS7py21Eik4mUXiv-H61RxtFfP6le1ocTfUU8rixqqklfzP3dZu7w/exec?id=' + this.$route.params.slug;
     axios.get(api_url, {
       crossDomain: true
     }).then(response => this.member = response.data[0]);

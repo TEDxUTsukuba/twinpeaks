@@ -33,6 +33,9 @@
       <b-navbar-item class="normal-category" tag="nuxt-link" :to="localePath('/talks')">
         {{ $t('header.talks.item') }}
       </b-navbar-item>
+      <b-navbar-item class="normal-category" tag="nuxt-link" :to="localePath('/blog')">
+        {{ $t('header.blog.item') }}
+      </b-navbar-item>
       <b-navbar-item class="normal-category" tag="nuxt-link" :to="localePath('/partners')">
         {{ $t('header.partners.item') }}
       </b-navbar-item>
@@ -48,7 +51,7 @@
         </b-navbar-item>
       </b-navbar-dropdown>
       <b-navbar-item tag="div">
-        <div class="buttons">
+        <div class="buttons is-right">
           <nuxt-link class="button is-info" v-if="$i18n.locale !== 'en'" :to="switchLocalePath('en')"><i class="mdi mdi-translate" style="margin-right: 0.25rem;" />English</nuxt-link>
           <nuxt-link class="button is-danger" v-if="$i18n.locale !== 'ja'" :to="switchLocalePath('ja')"><i class="mdi mdi-translate" style="margin-right: 0.25rem;" />日本語</nuxt-link>
           <!-- <a class="button is-info" v-if="$i18n.locale !== 'en'" :href="switchLocalePath('en')"><i class="mdi mdi-translate" style="margin-right: 0.25rem;" />English</a>
@@ -138,7 +141,7 @@ export default {
       console.log(month, date)
       const data = this.celebrationdays.find(item => item.month === month && item.date === date)
       if (data === undefined) {
-        return "A Hub for Tsukuba's Ideas"
+        return "Spread Globally, Connect Locally."
       } else if (this.$i18n.locale !== 'en') {
         return "Celebrating " + data.title_en
       } else {
