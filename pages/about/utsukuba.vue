@@ -247,7 +247,7 @@ export default {
     return {
       isImageModalActive: false,
       memberList: {},
-      memberListRemainder: {},
+      // memberListRemainder: {},
       showContent: false,
       showOthers: true,
       postItem: "",
@@ -319,11 +319,12 @@ export default {
       params: { summary: 'true' }, 
       crossDomain: true
     }).then(response => {
-      if (this.$ua.isFromSmartphone()) {
-        this.memberList = response.data;
-      } else {
-        this.memberList = response.data
-      }
+      this.memberList = response.data.filter(el => el.isActive);
+      // if (this.$ua.isFromSmartphone()) {
+      //   this.memberList = response.data;
+      // } else {
+      //   this.memberList = response.data
+      // }
     });
   }
 }
