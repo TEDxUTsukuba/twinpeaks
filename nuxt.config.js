@@ -202,7 +202,9 @@ export default {
         defaultImage: '~/assets/wallpapers/defaultimage.png'
       }
     ],
-    '@nuxt/content'
+    '@nuxt/content',
+    // 参考: https://blog.mktia.com/generate-ogp-image-automatically/
+    '~/modules/imageGenerator.js'
   ],
 
   // fontawesome: {
