@@ -7,35 +7,42 @@
       <br>
       <span class="tag has-text-weight-bold">{{ $t('button.partialtranslation') }}</span>
     </section>
+    
+    <section class="section" id="utsukuba">
+      <h1 class="title is-0" v-html="$t('about.university.title')"></h1>
+      <article v-html="$t('about.university.description')"></article>
+      <p class="has-text-right">
+        <a class="has-text-info" v-if="$i18n.locale == 'en'" href="https://www.tsukuba.ac.jp/en" target="_blank">Official Website <i class="mdi mdi-open-in-new" /></a>
+        <a class="has-text-info" v-if="$i18n.locale == 'ja'" href="https://www.tsukuba.ac.jp/" target="_blank">公式サイト <i class="mdi mdi-open-in-new" /></a>
+        <br>
+        <a class="has-text-info" href="https://youtu.be/j0i71SKzJso" target="_blank">Campus Video (YouTube) <i class="mdi mdi-open-in-new" /></a> 
+      </p>
+    </section>
+
+    <section class="hero">
+      <figure class="image is-3by1">
+        <img src="~/assets/wallpapers/1440px-Fountain,_Univ._of_Tsukuba.jpg" style="object-fit: cover; filter: saturate(150%) brightness(100%) contrast(50%);">
+        &lt;a href=&quot;//commons.wikimedia.org/wiki/User:Miyuki_Meinaka&quot; title=&quot;User:Miyuki Meinaka&quot;&gt;Miyuki Meinaka&lt;/a&gt; - &lt;span class=&quot;int-own-work&quot; lang=&quot;ja&quot;&gt;投稿者自身による作品&lt;/span&gt;, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC 表示-継承 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=74724255">リンク</a>による
+      </figure>
+    </section>
+    
     <section class="section" id="tedxutsukuba">
       <h1 class="title is-0">TEDxUTsukuba</h1>
       <article v-html="$t('about.utsukuba.description.3')"></article>
     </section>
-    <section class="section">
-      <div class="columns" id="gallery">
-        <div class="column is-one-third">
-          <figure class="image is-4by3" style="object-fit: cover;">
-            <img src="/sample/sample2.jpg" alt="Audience attending our annual event">
-          </figure>
-        </div>
-        <div class="column is-one-third">
-          <figure class="image is-4by3" style="object-fit: cover;">
-            <img src="/sample/sample3.jpg" alt="TEDxUTsukuba attendees and staffs">
-          </figure>
-        </div>
-        <div class="column is-one-third">
-          <figure class="image is-4by3" style="object-fit: cover;">
-            <img src="/sample/sample1.jpg" alt="A speaker standing on the stage">
-          </figure>
-        </div>
-      </div>
+
+    <section class="hero">
+      <figure class="image is-3by1">
+        <img src="~/assets/wallpapers/tedxutsukubalive.jpg" style="object-fit: cover; filter: saturate(150%) contrast(50%);">
+      </figure>
     </section>
+
     <section class="section" id="socialcapital">
       <h1 class="title is-0">Social Capital</h1>
       <article v-html="$t('about.utsukuba.description.5')"></article>
     </section>
     <section class="section">
-      <Movie id="teaser" :vId='weAreTEDxUTsukuba' :aPlay='autoplay'></Movie>
+      <Movie id="teaser" :vId='weAreTEDxUTsukuba' aPlay=true></Movie>
     </section>
     <!-- <section class="hero is-medium bg-red">
       <div class="hero-body">
@@ -54,25 +61,19 @@
       <div class="columns is-mobile is-multiline">
         <div
           id="thumbnails"
-          class="column is-3-fullhd is-4-widescreen is-4-desktop is-6-tablet is-6-mobile"
+          class="column is-3-fullhd is-4-widescreen is-4-desktop is-6-tablet is-12-mobile"
           v-for="(member, index) in memberList" :key="index"
           style="display: inline-block; vertical-align: top;"
         >
-          <nuxt-link :to="member.id">
+          <!-- <nuxt-link :to="member.id"> -->
             <div class="nmp-dark">
-              <header class="card-header" v-if="member.imageFileName">
+              <header class="card-header" v-if="member.isImage">
                 <p class="card-header-title">
-                  <!-- <span class="tag is-white">
-                    {{ talk.category_1 }}
-                  </span>
-                  <span class="tag is-white">
-                    {{ talk.category_2 }}
-                  </span> -->
                 </p>
               </header>
               <div class="card-image" style="width: 100%;">
                 <figure class="image is-3-desktop is-6-tablet is-6-mobileby2" style="overflow: hidden;">
-                  <img class="portrait" v-if="member.isImage" :src="getJsonImgUrl(member.id)" :alt="member.given_name_en + member.family_name_en">
+                  <img class="portrait" v-if="member.isImage" :src="getJsonImgUrl(`${member.id}.jpg`)" :alt="member.given_name_en + member.family_name_en">
                 </figure>
               </div>
               <div class="card-content">
@@ -81,7 +82,7 @@
                     <h1 class="title is-4">
                       {{ member.given_name_en }} {{ member.family_name_en}}
                     </h1>
-                    <p class="subtitle is-6 has-text-grey-light">
+                    <p class="subtitle is-6 is-size-7-touch has-text-grey-light">
                       {{ member.role }}
                     </p>
                   </span>
@@ -89,7 +90,7 @@
                     <h1 class="title is-4">
                       {{ member.family_name_ja }} {{ member.given_name_ja }}
                     </h1>
-                    <p class="subtitle is-size-6 has-text-grey-light">
+                    <p class="subtitle is-size-6 is-size-7-touch has-text-grey-light">
                       {{ member.role }}
                     </p>
                   </span>
@@ -107,24 +108,88 @@
                     <span class="is-size-7 has-text-weight-normal has-text-light" v-if="$i18n.locale == 'en'">{{ member.college_en }}</span>
                     <span class="is-size-7 has-text-weight-normal has-text-light" v-if="$i18n.locale == 'ja'">{{ member.college_ja }}</span>
                   </p>
-
-                  <!-- <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.keyword1" style="line-height: 1;">{{ $t('about.utsukuba.members.keywords') }}</p>
-                  <p class="is-size-7 has-text-weight-normal has-text-light">{{ member.keyword1 }}<span v-if="member.keyword2">, </span>{{ member.keyword2 }}<span v-if="member.keyword3">, </span>{{ member.keyword3 }}</p> -->
                   
-                  <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.tedtalk || member.tedtalk_alt">
+                  <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.tedtalk_headline_en || member.tedtalk_headline_ja">
                     {{ $t('about.utsukuba.members.favouritetedtalk') }}
-                  </p>
-                  <p class="has-text-light is-size-7" v-if="member.tedtalk">{{ toUpperCamel(member.tedtalk) }}</p>
-                  <p class="has-text-light is-size-7" v-if="member.tedtalk_alt_meta">{{ toUpperCamel(member.tedtalk_alt_meta) }}</p>
-                  
-                  <p class="card-item has-text-right">
-                    <a v-if="member.tedaccount" :href="member.tedaccount" target="_blank" rel="noopener noreferrer"><span class="tag is-dark has-text-primary has-text-weight-bold">TED</span></a>
+                    <span class="has-text-light has-text-weight-normal is-size-7" v-if="member.tedtalk_headline_en && $i18n.locale == 'en'">{{ toUpperCamel(member.tedtalk_headline_en) }}</span>
+                    <span class="has-text-light has-text-weight-normal is-size-7" v-if="member.tedtalk_headline_ja && $i18n.locale == 'ja'">{{ member.tedtalk_headline_ja }}</span>
                   </p>
                 </div>
               </div>
+              <footer class="card-footer">
+                <nuxt-link :to="member.id" class="card-footer-item is-size-7">{{ $t('button.readmore') }}</nuxt-link>
+              </footer>
             </div>
-          </nuxt-link>
+          <!-- </nuxt-link> -->
         </div>
+      </div>
+      <div v-if="showOthers" class="columns is-mobile is-multiline">
+        <div
+          id="thumbnails"
+          class="column is-3-fullhd is-4-widescreen is-4-desktop is-6-tablet is-12-mobile"
+          v-for="(member, index) in memberListRemainder" :key="index"
+          style="display: inline-block; vertical-align: top;"
+        >
+          <!-- <nuxt-link :to="member.id"> -->
+            <div class="nmp-dark">
+              <header class="card-header" v-if="member.isImage">
+                <p class="card-header-title">
+                </p>
+              </header>
+              <div class="card-image" style="width: 100%;">
+                <figure class="image is-3-desktop is-6-tablet is-6-mobileby2" style="overflow: hidden;">
+                  <img class="portrait" v-if="member.isImage" :src="getJsonImgUrl(member.id)" :alt="member.given_name_en + member.family_name_en">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <span v-if="$i18n.locale == 'en'">
+                    <h1 class="title is-4">
+                      {{ member.given_name_en }} {{ member.family_name_en}}
+                    </h1>
+                    <p class="subtitle is-6 is-size-7-touch has-text-grey-light">
+                      {{ member.role }}
+                    </p>
+                  </span>
+                  <span v-if="$i18n.locale == 'ja'">
+                    <h1 class="title is-4">
+                      {{ member.family_name_ja }} {{ member.given_name_ja }}
+                    </h1>
+                    <p class="subtitle is-size-6 is-size-7-touch has-text-grey-light">
+                      {{ member.role }}
+                    </p>
+                  </span>
+                </div>
+
+                <div class="text">
+                  <p class="midashi is-size-7 has-text-weight-bold has-text-primary">
+                    {{ $t('about.utsukuba.members.from') }}
+                    <span class="is-size-7 has-text-weight-normal has-text-light" v-if="$i18n.locale == 'en'">{{ member.home_state_en }}</span>
+                    <span class="is-size-7 has-text-weight-normal has-text-light" v-if="$i18n.locale == 'ja'">{{ member.home_state_ja }}</span>
+                  </p>
+
+                  <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.college_ja">
+                    {{ $t('about.utsukuba.members.college') }}
+                    <span class="is-size-7 has-text-weight-normal has-text-light" v-if="$i18n.locale == 'en'">{{ member.college_en }}</span>
+                    <span class="is-size-7 has-text-weight-normal has-text-light" v-if="$i18n.locale == 'ja'">{{ member.college_ja }}</span>
+                  </p>
+                  
+                  <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.tedtalk_headline_en || member.tedtalk_headline_ja">
+                    {{ $t('about.utsukuba.members.favouritetedtalk') }}
+                    <span class="has-text-light has-text-weight-normal is-size-7" v-if="member.tedtalk_headline_en && $i18n.locale == 'en'">{{ toUpperCamel(member.tedtalk_headline_en) }}</span>
+                    <span class="has-text-light has-text-weight-normal is-size-7" v-if="member.tedtalk_headline_ja && $i18n.locale == 'ja'">{{ member.tedtalk_headline_ja }}</span>
+                  </p>
+                </div>
+              </div>
+              <footer class="card-footer">
+                <nuxt-link :to="member.id" class="card-footer-item is-size-7">{{ $t('button.readmore') }}</nuxt-link>
+              </footer>
+            </div>
+          <!-- </nuxt-link> -->
+        </div>
+      </div>
+      <div v-if="$ua.isFromSmartphone()" class="has-text-centered">
+        <button class="button is-gradient is-rounded" @click="showOthers=!showOthers">{{ $t('button.seeothers', { 0: $t('about.utsukuba.members.title') }) }}</button>
       </div>
     </section>
     <section class="section" id="team">
@@ -142,32 +207,19 @@
           </div>
         </div>
       </div> -->
-      <div class="columns is-multiline">
-        <div class="column is-6">
-          <figure class="image">
-            <img src="~/assets/team/intro/enja.png" alt="Enja Team">
-          </figure>
-        </div>
-        <div class="column is-6">
-          <figure class="image">
-            <img src="~/assets/team/intro/partner.png" alt="Partner Team">
-          </figure>
-        </div>
-        <div class="column is-6">
-          <figure class="image">
-            <img src="~/assets/team/intro/pr.png" alt="PR Team">
-          </figure>
-        </div>
-        <div class="column is-6">
-          <figure class="image">
-            <img src="~/assets/team/intro/tech.png" alt="Tech Team">
-          </figure>
-        </div>
-        <div class="column is-6">
-          <figure class="image">
-            <img src="~/assets/team/intro/international.png" alt="International Team">
-          </figure>
-        </div>
+      <div class="is-block">
+        <b-carousel :indicator-inside="false" repeat="arrowBoth" indicator-style="is-lines" :autoplay="false">
+          <b-carousel-item v-for="(team, i) in teams" :key="i">
+            <figure class="image is-5by3">
+              <img data-not-lazy :src="getJsonImgUrl(`intro/${team.name.toLowerCase()}.png`)" style="object-fit: cover" />
+            </figure>
+          </b-carousel-item>
+          <template #indicators="props">
+            <span class="tag has-text-weight-bold is-medium is-dark has-text-centered" style="width: 100%;">
+              {{ teams[props.i].name }}
+            </span>
+        </template>
+        </b-carousel>
       </div>
     </section>
 
@@ -200,6 +252,7 @@
       <div class="section has-text-centered">
         <h1 class="title is-2 is-spaced">{{ $t('about.utsukuba.contactus.title')}}</h1>
         <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.utsukuba.contactus.subtitle')}}</h1>   
+        <h1 class="subtitle has-text-grey-light">{{ $t('about.utsukuba.contactus.description')}}</h1>   
         <div class="columns">
           <div class="column">
             <a href="mailto:tedxutsukuba&#64;gmail.com">
@@ -248,8 +301,9 @@ export default {
     return {
       isImageModalActive: false,
       memberList: {},
+      memberListRemainder: {},
       showContent: false,
-      autoPlay: false,
+      showOthers: false,
       postItem: "",
       jobs: jobs,
       weAreTEDxUTsukuba: 'ZbIEuwjpxp0',
@@ -257,6 +311,13 @@ export default {
       regexTED: new RegExp(/https:\/\/www.ted.com.talks\//),
       regexYouTube: new RegExp(/https:\/\/youtu.be\//),
       regexLang: new RegExp(/\?[\w\=]+/),
+      teams: [
+        { name: 'Enja' }, 
+        { name: 'Partner' },
+        { name: 'PR' },
+        { name: 'Tech' },
+        { name: 'International' }
+      ]
     }
   },
   head: {
@@ -279,13 +340,8 @@ export default {
     closeModal () {
       this.showContent = false
     },
-    getImgUrl(value) {
-      // value += 50
-      // return `https://picsum.photos/id/10${value}/1230/500`
-      return this.images[value]
-    },
     getJsonImgUrl(value) {
-      return require(`~/assets/team/${value}.jpg`)
+      return require(`~/assets/team/${value}`)
     },
     getTedLinkUrl(value) {
       if (this.$i18n.locale == 'ja') {
@@ -310,71 +366,21 @@ export default {
     // }
   },
   mounted(){
-    const api_url = "https://script.google.com/macros/s/AKfycbxp6NqJLbjD4pdjqloabrjwRxN_hhXZ9nv1O3cRtdtkraiiZEfeKt9lUgubcCMbw0g17g/exec";
-    axios.get(api_url, {
+    // const api_url = "https://script.google.com/macros/s/AKfycbxp6NqJLbjD4pdjqloabrjwRxN_hhXZ9nv1O3cRtdtkraiiZEfeKt9lUgubcCMbw0g17g/exec";
+    axios({
+      method: 'GET',
+      url: 'https://script.google.com/macros/s/AKfycbyKv8m4oyAmnNgGeXSYA0x-fQxYWt1VvP4u62Q2XkHY7qpUUIkBSsV11TbVBgW8upFtWA/exec',
+      params: { summary: 'true' }, 
       crossDomain: true
-    }).then(response => this.memberList = response.data);
-
-    const browser = this.$ua.browser()
-    if (browser !== 'Safari') {
-      const scene1 = this.$scrollmagic
-        .scene({
-          triggerElement: '#trigger',
-          triggerHook: 0.75,
-          offset: 0,
-          reverse: false
-        })
-        .setTween('#tedxutsukuba', {
-          css: {
-            opacity: 1
-          }
-        })
-      const scene2 = this.$scrollmagic
-        .scene({
-          triggerElement: '#tedxutsukuba',
-          triggerHook: 0.75,
-          offset: 0,
-          reverse: false
-        })
-        .setTween('#gallery', {
-          css: {
-            opacity: 1
-          }
-        })
-      const scene3 = this.$scrollmagic
-        .scene({
-          triggerElement: '#gallery',
-          triggerHook: 0.75,
-          offset: 0,
-          reverse: false
-        })
-        .setTween('#socialcapital', {
-          css: {
-            opacity: 1
-          }
-        })
-      const scene4 = this.$scrollmagic
-        .scene({
-          triggerElement: '#team',
-          triggerHook: 0.75,
-          offset: 0,
-          reverse: false
-        })
-        .setTween('#team-content', {
-          css: {
-            opacity: 1
-          }
-        })
-      this.$scrollmagic.addScene(scene1)
-      this.$scrollmagic.addScene(scene2)
-      this.$scrollmagic.addScene(scene3)
-      this.$scrollmagic.addScene(scene4)
-    } else {
-      document.getElementById("tedxutsukuba").style.opacity = 1;
-      document.getElementById("gallery").style.opacity = 1;
-      document.getElementById("socialcapital").style.opacity = 1;
-      document.getElementById("team-content").style.opacity = 1;
-    }
+    }).then(response => {
+      console.log("hey");
+      if (this.$ua.isFromSmartphone()) {
+        this.memberList = response.data.slice(0, 4);
+        this.memberListRemainder = response.data.slice(4);
+      } else {
+        this.memberList = response.data
+      }
+    });
   }
 }
 </script>
@@ -384,10 +390,12 @@ export default {
     border-radius: 18px !important;
   }
   p.midashi {
-    margin-top: 0.5rem;
     margin-bottom: 0;
     color: #E62B1E;
     font-weight: bold;
+  }
+  div.text {
+    margin-top: .75rem;
   }
   h1.subtitle + p.midashi {
     margin-top: 0;
@@ -396,19 +404,16 @@ export default {
     color: white;
     word-break: break-all;
   }
-  #tedxutsukuba, #socialcapital, #team-content {
-    opacity: 0;
-    transition: all 0.5s;
-  }
-  #gallery {
-    opacity: 0;
-    transition: all 1s;
-  }
   .portrait {
     &:hover {
       transform: translate(0, 30px) scale(1.3);
     }
     transition: 0.2s linear;
     // 親要素に overflow: hidden;
+  }
+  .indicator-item.is-active {
+    .tag {
+      background-color: #c6251a !important;
+    }
   }
 </style>
