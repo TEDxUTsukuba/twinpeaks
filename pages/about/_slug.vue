@@ -3,8 +3,8 @@
     <section class="section hero is-fullheight">
       <!-- {{ $route.params.slug }} -->
       <!-- {{ memberList }} -->
-        <div v-if="member.given_name_en" class="columns reverse-row-order is-centered is-variable is-6" style="margin-top: 5vh;">
-          <div v-if="member.isImage == 'TRUE'" class="column is-5-tablet is-4-desktop">
+        <div v-if="member.given_name_en" class="columns is-multiline reverse-row-order is-centered is-variable is-6" style="margin-top: 5vh;">
+          <div v-if="member.isImage == true" class="column is-5-tablet is-4-desktop">
             <div style="max-width: 320px; margin: 0 auto;">
               <figure class="image is-1by1">
                 <img class="portrait" :src="getJsonImgUrl(member.id)" :alt="member.given_name_en + member.family_name_en">
@@ -21,38 +21,42 @@
             </p>
             <br>
             <div class="text">
-              <p class="midashi is-size-7 has-text-weight-bold has-text-primary">
+              <p class="midashi has-text-weight-bold has-text-primary">
                 {{ $t('about.utsukuba.members.period') }}
               </p>
-              <p class="is-size-7 has-text-weight-normal has-text-light">{{ member.first_main_event }} - <span v-if="member.last_main_event">{{ member.last_main_event }}</span></p>
+              <p class="has-text-weight-normal has-text-light">{{ member.first_main_event }} - <span v-if="member.last_main_event">{{ member.last_main_event }}</span></p>
               
-              <p class="midashi is-size-7 has-text-weight-bold has-text-primary">
+              <p class="midashi has-text-weight-bold has-text-primary">
                 {{ $t('about.utsukuba.members.from') }}
               </p>
-              <p class="is-size-7 has-text-weight-normal has-text-light" v-if="$i18n.locale == 'en'">{{ member.home_state_en }}</p>
-              <p class="is-size-7 has-text-weight-normal has-text-light" v-if="$i18n.locale == 'ja'">{{ member.home_state_ja }}</p>
+              <p class="has-text-weight-normal has-text-light" v-if="$i18n.locale == 'en'">{{ member.home_state_en }}</p>
+              <p class="has-text-weight-normal has-text-light" v-if="$i18n.locale == 'ja'">{{ member.home_state_ja }}</p>
 
-              <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.college_ja">
+              <p class="midashi has-text-weight-bold has-text-primary" v-if="member.college_ja">
                 {{ $t('about.utsukuba.members.college') }}
               </p>
-              <p class="is-size-7 has-text-weight-normal has-text-light" v-if="$i18n.locale == 'en'">{{ member.college_en }}</p>
-              <p class="is-size-7 has-text-weight-normal has-text-light" v-if="$i18n.locale == 'ja'">{{ member.college_ja }}</p>
+              <p class="has-text-weight-normal has-text-light" v-if="$i18n.locale == 'en'">{{ member.college_en }}</p>
+              <p class="has-text-weight-normal has-text-light" v-if="$i18n.locale == 'ja'">{{ member.college_ja }}</p>
               
-              <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.keyword1" style="line-height: 1;">{{ $t('about.utsukuba.members.keywords') }}</p>
+              <p class="midashi has-text-weight-bold has-text-primary" v-if="member.keyword1" style="line-height: 1;">{{ $t('about.utsukuba.members.keywords') }}</p>
               <p style="margin-top: .5rem;">
                 <span v-if="member.keyword1" class="tag is-dark is-medium">{{ member.keyword1 }}</span>
                 <span v-if="member.keyword2" class="tag is-dark is-medium">{{ member.keyword2 }}</span>
                 <span v-if="member.keyword3" class="tag is-dark is-medium">{{ member.keyword3 }}</span>
               </p>
               
-              <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.tedtalk || member.tedtalk_alt">
+              <p class="midashi has-text-weight-bold has-text-primary" v-if="member.message">
+                {{ $t('about.utsukuba.members.message') }}
+              </p>
+              <p class="has-text-weight-normal has-text-light">
+                {{ member.message }}
+              </p>
+
+              <p class="midashi has-text-weight-bold has-text-primary" v-if="member.tedtalk || member.tedtalk_alt">
                 {{ $t('about.utsukuba.members.favouritetedtalk') }}
               </p>
-              <a class="is-size-7 has-text-weight-normal has-text-light" v-if="member.tedtalk" :href="getTedLinkUrl(member.tedtalk)" target="_blank" rel="noopener noreferrer">{{ toUpperCamel(member.tedtalk) }}<externalLink v-if="member.tedtalk" style="width: 0.75rem; margin-left: 0.75rem;" /></a>
-              <a class="is-size-7 has-text-weight-normal has-text-light" v-if="member.tedtalk_alt" :href="member.tedtalk_alt" target="_blank" rel="noopener noreferrer">
-                {{ member.tedtalk_alt_meta }}
-                <externalLink style="width: 0.75rem;" />
-              </a>
+              <p class="has-text-weight-normal has-text-light" v-if="$i18n.locale == 'en'">{{ toUpperCamel(member.tedtalk_headline_en) }}</span>
+              <p class="has-text-weight-normal has-text-light" v-if="$i18n.locale == 'ja'">{{ member.tedtalk_headline_ja }}</p>
             </div>
             
             <div class="ted-embed-wrap" style="max-width:854px; margin: 5vh auto;">
@@ -80,12 +84,14 @@
               </div>
             </div>
           </div>
+          <div class="column is-12 has-text-centered">
+            <nuxt-link class="button is-medium is-rounded is-gradient" to="./utsukuba#members">{{ $t('button.seeothers', { 0: $t('about.utsukuba.members.title') } ) }}</nuxt-link>
+          </div>
         </div>
         <div v-else>
           <p class="has-text-centered has-text-grey is-size-4">Loading...</p>
         </div>
         <div class="has-text-centered">
-          <nuxt-link class="button is-medium is-rounded is-gradient" to="./utsukuba#members">{{ $t('button.seeall') }}</nuxt-link>
         </div>
     </section>
    
@@ -146,7 +152,7 @@ export default {
       // return require(`~/assets/partners/2020/carousel_${value}.jpg`)
       return require(`~/assets/team/${value}.jpg`)
     },
-    getTedLinkUrl(value) {
+    addLangQuery(value) {
       if (this.$i18n.locale == 'ja') {
         return value + '?language=ja'
       } else {
@@ -169,23 +175,15 @@ export default {
     // }
   },
   mounted(){
-    // const api_url = "https://script.google.com/macros/s/AKfycbxp6NqJLbjD4pdjqloabrjwRxN_hhXZ9nv1O3cRtdtkraiiZEfeKt9lUgubcCMbw0g17g/exec"
-    // axios.get(api_url, {
-    //   crossDomain: true
-    // }).then(response => this.memberList = response.data);
-    store.read('2021', { search: { id: this.$route.params.slug } }).then(data => {
-      this.member = data[0]
-      // console.log(data);
-    })
+    const api_url = 'https://script.google.com/macros/s/AKfycbyKv8m4oyAmnNgGeXSYA0x-fQxYWt1VvP4u62Q2XkHY7qpUUIkBSsV11TbVBgW8upFtWA/exec?id=' + this.$route.params.slug;
+    axios.get(api_url, {
+      crossDomain: true
+    }).then(response => this.member = response.data[0]);
+    // store.read('2021', { search: { id: this.$route.params.slug } }).then(data => {
+    //   this.member = data[0]
+    //   // console.log(data);
+    // })
   }
-  // async asyncData() {
-  //   const [ memberList ] = await Promise.all(
-  //     ['2021'].map((itemType) => {
-  //       return store.read(itemType, { search: { id: "harry" } })
-  //     })
-  //   )
-  //   return { memberList }
-  // }
 }
 </script>
 
