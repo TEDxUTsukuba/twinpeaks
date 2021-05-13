@@ -15,15 +15,18 @@
         <a class="has-text-info" v-if="$i18n.locale == 'en'" href="https://www.tsukuba.ac.jp/en" target="_blank">Official Website <i class="mdi mdi-open-in-new" /></a>
         <a class="has-text-info" v-if="$i18n.locale == 'ja'" href="https://www.tsukuba.ac.jp/" target="_blank">公式サイト <i class="mdi mdi-open-in-new" /></a>
         <br>
-        <a class="has-text-info" href="https://youtu.be/j0i71SKzJso" target="_blank">Campus Video (YouTube) <i class="mdi mdi-open-in-new" /></a> 
+        <a class="has-text-info" href="https://youtu.be/PTRhU_RnayM" target="_blank">Graduate School Official Trailer (YouTube) <i class="mdi mdi-open-in-new" /></a> 
       </p>
     </section>
 
     <section class="hero">
-      <figure class="image is-3by1">
+      <figure class="image is-2by1" v-if="$ua.isFromSmartphone()">
         <img src="~/assets/wallpapers/1440px-Fountain,_Univ._of_Tsukuba.jpg" style="object-fit: cover; filter: saturate(150%) brightness(100%) contrast(50%);">
-        &lt;a href=&quot;//commons.wikimedia.org/wiki/User:Miyuki_Meinaka&quot; title=&quot;User:Miyuki Meinaka&quot;&gt;Miyuki Meinaka&lt;/a&gt; - &lt;span class=&quot;int-own-work&quot; lang=&quot;ja&quot;&gt;投稿者自身による作品&lt;/span&gt;, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC 表示-継承 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=74724255">リンク</a>による
       </figure>
+      <figure class="image is-3by1" v-else>
+        <img src="~/assets/wallpapers/1440px-Fountain,_Univ._of_Tsukuba.jpg" style="object-fit: cover; filter: saturate(150%) brightness(100%) contrast(50%);">
+      </figure>
+      <p class="is-size-7 has-text-grey has-text-right"><a class="is-size-7 has-text-grey" href="//commons.wikimedia.org/wiki/User:Miyuki_Meinaka" title="User:Miyuki Meinaka">Miyuki Meinaka</a> - <span class="int-own-work has-text-grey is-size-7" :lang="$i18n.locale">投稿者自身による作品</span>, <a class="is-size-7 has-text-grey" href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC 表示-継承 4.0</a>, <a class="is-size-7 has-text-grey" href="https://commons.wikimedia.org/w/index.php?curid=74724255">リンク</a></p>
     </section>
     
     <section class="section" id="tedxutsukuba">
@@ -32,7 +35,10 @@
     </section>
 
     <section class="hero">
-      <figure class="image is-3by1">
+      <figure class="image is-2by1" v-if="$ua.isFromSmartphone()">
+        <img src="~/assets/wallpapers/tedxutsukubalive.jpg" style="object-fit: cover; filter: saturate(150%) contrast(50%);">
+      </figure>
+      <figure class="image is-3by1" v-else>
         <img src="~/assets/wallpapers/tedxutsukubalive.jpg" style="object-fit: cover; filter: saturate(150%) contrast(50%);">
       </figure>
     </section>
@@ -58,7 +64,7 @@
       </div>
     </section>
     <section class="section-wide">
-      <div class="columns is-mobile is-multiline">
+      <div class="columns is-multiline is-mobile">
         <div
           id="thumbnails"
           class="column is-3-fullhd is-4-widescreen is-4-desktop is-6-tablet is-12-mobile"
@@ -67,52 +73,60 @@
         >
           <!-- <nuxt-link :to="member.id"> -->
             <div class="nmp-dark">
-              <header class="card-header" v-if="member.isImage">
+              <header class="card-header" v-if="member.isImage && !$ua.isFromSmartphone()">
                 <p class="card-header-title">
                 </p>
               </header>
-              <div class="card-image" style="width: 100%;">
-                <figure class="image is-3-desktop is-6-tablet is-6-mobileby2" style="overflow: hidden;">
+              <div class="card-image" v-if="!$ua.isFromSmartphone()" style="width: 100%;">
+                <figure class="image is-3-desktop is-6-tablet is-6-mobile" style="overflow: hidden;">
                   <img class="portrait" v-if="member.isImage" :src="getJsonImgUrl(`${member.id}.jpg`)" :alt="member.given_name_en + member.family_name_en">
                 </figure>
               </div>
               <div class="card-content">
-                <div class="media">
-                  <span v-if="$i18n.locale == 'en'">
-                    <h1 class="title is-4">
-                      {{ member.given_name_en }} {{ member.family_name_en}}
-                    </h1>
-                    <p class="subtitle is-6 is-size-7-touch has-text-grey-light">
-                      {{ member.role }}
-                    </p>
-                  </span>
-                  <span v-if="$i18n.locale == 'ja'">
-                    <h1 class="title is-4">
-                      {{ member.family_name_ja }} {{ member.given_name_ja }}
-                    </h1>
-                    <p class="subtitle is-size-6 is-size-7-touch has-text-grey-light">
-                      {{ member.role }}
-                    </p>
-                  </span>
+                <div class="media is-vcentered">
+                  <div class="media-left" v-if="$ua.isFromSmartphone()">
+                    <figure class="image is-48x48 is-square">
+                      <img v-if="member.isImage" :src="getJsonImgUrl(`${member.id}.jpg`)" :alt="member.given_name_en + member.family_name_en" style="object-fit: cover; border-radius: 50%;">
+                      <img v-else src="~/assets/team/default.png" :alt="member.given_name_en + member.family_name_en" style="object-fit: cover; border-radius: 50%;">
+                    </figure>
+                  </div>
+                  <div class="media-content">
+                    <span v-if="$i18n.locale == 'en'">
+                      <h1 class="title is-4">
+                        {{ member.given_name_en }} {{ member.family_name_en}}
+                      </h1>
+                      <p class="subtitle is-6 is-size-7-touch has-text-grey-light">
+                        {{ member.role }}
+                      </p>
+                    </span>
+                    <span v-if="$i18n.locale == 'ja'">
+                      <h1 class="title is-4">
+                        {{ member.family_name_ja }} {{ member.given_name_ja }}
+                      </h1>
+                      <p class="subtitle is-size-6 is-size-7-touch has-text-light">
+                        {{ member.role }}
+                      </p>
+                    </span>
+                  </div>
                 </div>
 
                 <div class="text">
                   <p class="midashi is-size-7 has-text-weight-bold has-text-primary">
                     {{ $t('about.utsukuba.members.from') }}
-                    <span class="is-size-7 has-text-weight-normal has-text-light" v-if="$i18n.locale == 'en'">{{ member.home_state_en }}</span>
-                    <span class="is-size-7 has-text-weight-normal has-text-light" v-if="$i18n.locale == 'ja'">{{ member.home_state_ja }}</span>
+                    <span class="is-size-7 has-text-weight-normal has-text-grey-light" v-if="$i18n.locale == 'en'">{{ member.home_state_en }}</span>
+                    <span class="is-size-7 has-text-weight-normal has-text-grey-light" v-if="$i18n.locale == 'ja'">{{ member.home_state_ja }}</span>
                   </p>
 
                   <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.college_ja">
                     {{ $t('about.utsukuba.members.college') }}
-                    <span class="is-size-7 has-text-weight-normal has-text-light" v-if="$i18n.locale == 'en'">{{ member.college_en }}</span>
-                    <span class="is-size-7 has-text-weight-normal has-text-light" v-if="$i18n.locale == 'ja'">{{ member.college_ja }}</span>
+                    <span class="is-size-7 has-text-weight-normal has-text-grey-light" v-if="$i18n.locale == 'en'">{{ member.college_en }}</span>
+                    <span class="is-size-7 has-text-weight-normal has-text-grey-light" v-if="$i18n.locale == 'ja'">{{ member.college_ja }}</span>
                   </p>
                   
                   <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.tedtalk_headline_en || member.tedtalk_headline_ja">
                     {{ $t('about.utsukuba.members.favouritetedtalk') }}
-                    <span class="has-text-light has-text-weight-normal is-size-7" v-if="member.tedtalk_headline_en && $i18n.locale == 'en'">{{ toUpperCamel(member.tedtalk_headline_en) }}</span>
-                    <span class="has-text-light has-text-weight-normal is-size-7" v-if="member.tedtalk_headline_ja && $i18n.locale == 'ja'">{{ member.tedtalk_headline_ja }}</span>
+                    <span class="has-text-grey-light has-text-weight-normal is-size-7" v-if="member.tedtalk_headline_en && $i18n.locale == 'en'">{{ member.tedtalk_headline_en.length > 35 ? toUpperCamel(member.tedtalk_headline_en.substr(0, 35)) + '…' : toUpperCamel(member.tedtalk_headline_en) }}</span>
+                    <span class="has-text-grey-light has-text-weight-normal is-size-7" v-if="member.tedtalk_headline_ja && $i18n.locale == 'ja'">{{  member.tedtalk_headline_ja.length > 20 ? member.tedtalk_headline_ja.substr(0, 20) + '…' : member.tedtalk_headline_ja }}</span>
                   </p>
                 </div>
               </div>
@@ -122,74 +136,6 @@
             </div>
           <!-- </nuxt-link> -->
         </div>
-      </div>
-      <div v-if="showOthers" class="columns is-mobile is-multiline">
-        <div
-          id="thumbnails"
-          class="column is-3-fullhd is-4-widescreen is-4-desktop is-6-tablet is-12-mobile"
-          v-for="(member, index) in memberListRemainder" :key="index"
-          style="display: inline-block; vertical-align: top;"
-        >
-          <!-- <nuxt-link :to="member.id"> -->
-            <div class="nmp-dark">
-              <header class="card-header" v-if="member.isImage">
-                <p class="card-header-title">
-                </p>
-              </header>
-              <div class="card-image" style="width: 100%;">
-                <figure class="image is-3-desktop is-6-tablet is-6-mobileby2" style="overflow: hidden;">
-                  <img class="portrait" v-if="member.isImage" :src="getJsonImgUrl(member.id)" :alt="member.given_name_en + member.family_name_en">
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="media">
-                  <span v-if="$i18n.locale == 'en'">
-                    <h1 class="title is-4">
-                      {{ member.given_name_en }} {{ member.family_name_en}}
-                    </h1>
-                    <p class="subtitle is-6 is-size-7-touch has-text-grey-light">
-                      {{ member.role }}
-                    </p>
-                  </span>
-                  <span v-if="$i18n.locale == 'ja'">
-                    <h1 class="title is-4">
-                      {{ member.family_name_ja }} {{ member.given_name_ja }}
-                    </h1>
-                    <p class="subtitle is-size-6 is-size-7-touch has-text-grey-light">
-                      {{ member.role }}
-                    </p>
-                  </span>
-                </div>
-
-                <div class="text">
-                  <p class="midashi is-size-7 has-text-weight-bold has-text-primary">
-                    {{ $t('about.utsukuba.members.from') }}
-                    <span class="is-size-7 has-text-weight-normal has-text-light" v-if="$i18n.locale == 'en'">{{ member.home_state_en }}</span>
-                    <span class="is-size-7 has-text-weight-normal has-text-light" v-if="$i18n.locale == 'ja'">{{ member.home_state_ja }}</span>
-                  </p>
-
-                  <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.college_ja">
-                    {{ $t('about.utsukuba.members.college') }}
-                    <span class="is-size-7 has-text-weight-normal has-text-light" v-if="$i18n.locale == 'en'">{{ member.college_en }}</span>
-                    <span class="is-size-7 has-text-weight-normal has-text-light" v-if="$i18n.locale == 'ja'">{{ member.college_ja }}</span>
-                  </p>
-                  
-                  <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.tedtalk_headline_en || member.tedtalk_headline_ja">
-                    {{ $t('about.utsukuba.members.favouritetedtalk') }}
-                    <span class="has-text-light has-text-weight-normal is-size-7" v-if="member.tedtalk_headline_en && $i18n.locale == 'en'">{{ toUpperCamel(member.tedtalk_headline_en) }}</span>
-                    <span class="has-text-light has-text-weight-normal is-size-7" v-if="member.tedtalk_headline_ja && $i18n.locale == 'ja'">{{ member.tedtalk_headline_ja }}</span>
-                  </p>
-                </div>
-              </div>
-              <footer class="card-footer">
-                <nuxt-link :to="member.id" class="card-footer-item is-size-7">{{ $t('button.readmore') }}</nuxt-link>
-              </footer>
-            </div>
-          <!-- </nuxt-link> -->
-        </div>
-      </div>
-      <div v-if="$ua.isFromSmartphone()" class="has-text-centered">
-        <button class="button is-gradient is-rounded" @click="showOthers=!showOthers">{{ $t('button.seeothers', { 0: $t('about.utsukuba.members.title') }) }}</button>
       </div>
     </section>
     <section class="section" id="team">
@@ -208,7 +154,7 @@
         </div>
       </div> -->
       <div class="is-block">
-        <b-carousel :indicator-inside="false" repeat="arrowBoth" indicator-style="is-lines" :autoplay="false">
+        <b-carousel :indicator-inside="false" repeat="arrowBoth" indicator-style="is-lines" :autoplay="false" animated="fade">
           <b-carousel-item v-for="(team, i) in teams" :key="i">
             <figure class="image is-5by3">
               <img data-not-lazy :src="getJsonImgUrl(`intro/${team.name.toLowerCase()}.png`)" style="object-fit: cover" />
@@ -216,7 +162,7 @@
           </b-carousel-item>
           <template #indicators="props">
             <span class="tag has-text-weight-bold is-medium is-dark has-text-centered" style="width: 100%;">
-              {{ teams[props.i].name }}
+              {{ teams[props.i].displayname }}
             </span>
         </template>
         </b-carousel>
@@ -303,7 +249,7 @@ export default {
       memberList: {},
       memberListRemainder: {},
       showContent: false,
-      showOthers: false,
+      showOthers: true,
       postItem: "",
       jobs: jobs,
       weAreTEDxUTsukuba: 'ZbIEuwjpxp0',
@@ -312,11 +258,11 @@ export default {
       regexYouTube: new RegExp(/https:\/\/youtu.be\//),
       regexLang: new RegExp(/\?[\w\=]+/),
       teams: [
-        { name: 'Enja' }, 
-        { name: 'Partner' },
-        { name: 'PR' },
-        { name: 'Tech' },
-        { name: 'International' }
+        { name: 'Enja', displayname: 'Enja' }, 
+        { name: 'Partner', displayname: 'Partner' },
+        { name: 'PR', displayname: 'PR' },
+        { name: 'Tech', displayname: 'Tech' },
+        { name: 'International', displayname: 'Int\'\l' }
       ]
     }
   },
@@ -369,14 +315,12 @@ export default {
     // const api_url = "https://script.google.com/macros/s/AKfycbxp6NqJLbjD4pdjqloabrjwRxN_hhXZ9nv1O3cRtdtkraiiZEfeKt9lUgubcCMbw0g17g/exec";
     axios({
       method: 'GET',
-      url: 'https://script.google.com/macros/s/AKfycbyKv8m4oyAmnNgGeXSYA0x-fQxYWt1VvP4u62Q2XkHY7qpUUIkBSsV11TbVBgW8upFtWA/exec',
+      url: 'https://script.google.com/macros/s/AKfycbxpjvd9ZpQGthMxvuS7py21Eik4mUXiv-H61RxtFfP6le1ocTfUU8rixqqklfzP3dZu7w/exec',
       params: { summary: 'true' }, 
       crossDomain: true
     }).then(response => {
-      console.log("hey");
       if (this.$ua.isFromSmartphone()) {
-        this.memberList = response.data.slice(0, 4);
-        this.memberListRemainder = response.data.slice(4);
+        this.memberList = response.data;
       } else {
         this.memberList = response.data
       }

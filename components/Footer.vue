@@ -68,7 +68,7 @@
               <div class="column is-4-desktop is-4-tablet has-text-centered-mobile">
                 <nuxt-link :to="localePath('/')">
                   <figure class="image" style="width: 100%; max-width: 320px;">
-                    <logo />
+                    <img src="~/assets/logo/black_transparent_1.png" alt="Logo">
                   </figure>
                 </nuxt-link>
               </div>
@@ -150,7 +150,6 @@
 </template>
 
 <script>
-import logo from '@/assets/logo/u_black.svg'
 import iconIG from '@/assets/svg/instagram.svg'
 import iconFB from '@/assets/svg/facebook.svg'
 import iconTW from '@/assets/svg/twitter.svg'
@@ -161,7 +160,7 @@ import nuxtLogo from '@/assets/svg/built-with-nuxt-white.svg'
 
 export default {
   components: {
-    logo, iconIG, iconFB, iconTW, iconFL, iconNT, externalLink, nuxtLogo
+    iconIG, iconFB, iconTW, iconFL, iconNT, externalLink, nuxtLogo
   },
   methods: {
     getJsonImgUrl(value) {

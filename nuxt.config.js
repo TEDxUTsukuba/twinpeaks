@@ -11,7 +11,7 @@ export default {
   },
   head: {
     // title: process.env.npm_package_name || '',
-    title: "TEDxUTsukuba | A Hub for Tsukuba's Ideas",
+    title: "TEDxUTsukuba | Spread Globally, Connect Locally.",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -23,7 +23,7 @@ export default {
       {
         hid: 'og:title',
         property: 'og:title',
-        content: "TEDxUTsukuba | A Hub for Tsukuba's Ideas"
+        content: "TEDxUTsukuba | Spread Globally, Connect Locally."
       },
       {
         hid: 'og:description',
@@ -199,7 +199,7 @@ export default {
         videos: false,
         audios: false,
         iframes: false,
-        defaultImage: '~/assets/wallpapers/defaultimage.png'
+        defaultImage: '/defaultimage.png'
       }
     ],
     '@nuxt/content',
