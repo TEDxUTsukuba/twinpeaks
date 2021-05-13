@@ -27,7 +27,7 @@
     "discover": "Discover",
     "readmore": "Read more",
     "readless": "Read less",
-    "seeothers": "See other {0}s",
+    "seeothers": "See other {0}",
     "seeall": "See all",
     "visitwebsite": "Website",
     "externalwebsite": "External Link",
@@ -141,6 +141,11 @@
     "location": {
       "address": "1-1-1 Tennodai, Tsukuba, Ibaraki, Japan, 305-8577"
     },
+    "university": {
+      "title": "University of<br>Tsukuba",
+      "subtitle": "",
+      "description": "<span class='em'>University of Tsukuba</span> is one of the top research-intensive universities and the oldest higher educations in Japan. The history dates back to <span class='em'>the Normal School</span>, founded in 1872 and chartered in 1886. With the campus relocation in 1973, Tsukuba has transformed itself into an <span class='em'>interdisciplinary</span>, <span class='em'>transborder</span> and <span class='em'>open</span> university for all. Today, Tsukuba is known as a home for students, a hub for researchers, a field for athletes, and an incubator for entrepreneurs. "
+    },
     "utsukuba": {
       "title": "TEDxUTsukuba",
       "subtitle": "",
@@ -148,7 +153,7 @@
         "1": "About TEDx, x = independently organized event. In the spirit of ideas worth spreading, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark deep discussion and connection. These local, self-organized events are branded TEDx, where x = independently organized TED event. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized. (Subject to certain rules and regulations.)",
         "2": "About TED. TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 30 years ago, TED has grown to support its mission with multiple initiatives. The two annual TED Conferences invite the world's leading thinkers and doers to speak for 18 minutes or less. Many of these talks are then made available, free, at TED.com. TED speakers have included Bill Gates, Jane Goodall, Elizabeth Gilbert, Sir Richard Branson, Nandan Nilekani, Philippe Starck, Ngozi Okonjo-Iweala, Sal Khan and Daniel Kahneman.",
         "3": "<span class='em'>TEDxUTsukuba</span>は2016年に設立されたTEDxコミュニティ。筑波大学の一般学生団体であり、<span class='em'>学生や卒業生</span>を中心として運営されています。これまでに<span class='em'>4回のメインカンファレンス</span>を含む数々のTEDxイベントを開催しており、登壇者には筑波大学の教員や学生、卒業生を中心に、多彩なアイディアを持つ方々をお招きしています。2020年のイベントテーマは<span class='em'>\"JIJIMUGE\"</span>。<span class='em'>複雑な世界を複雑なまま捉える</span>精神を表します。このテーマのように、個性豊かなメンバーそれぞれの良さを活かし、今日も私たちは、価値あるアイディアを発信していきます。通称「陸の孤島」つくばを、世界と繋げる&mdash;。",
-        "4": "pread Globally, Connect Locally."
+        "5": "<span class='em'>Social Capital</span>とは、組織を構成する<span class='em'>一人一人のメンバー</span>が重要であり、互いの信頼が<span class='em'>組織の結束力</span>を高め、大きな目的を達成できるという考え方を意味するフレーズです。<br><br>現代では、一つの分野による社会の発展には限界があり、<span class='em'>学際的領域の研究</span>や、<span class='em'>産学官の連携</span>による問題の解決が叫ばれています。他者の協力なしに解決できる問題は少なく、<span class='em'>結束力を築いた組織や集団の力</span>が必要ということです。私たちは、<span class='em'>Social Capital</span>を理念として掲げています。筑波大学には、様々な学問を学ぶ学生が一つのキャンパスに集まり、3,000人を超える留学生と共に学んでいます。<span class='em'>「開かれた大学」</span>という開学の理念を堅持し、多様性に富んだコミュニティにおいて、私たちは<span class='em'>価値あるアイディア</span>を通して人と人との新しいつながりを生む架け橋となることを目指しています。"
       },
       "members": {
         "title": "Members",
@@ -157,6 +162,7 @@
         "period": "Joined",
         "college": "College",
         "favouritetedtalk": "My favourite TED talk",
+        "message": "Message",
         "keywords": "3 words that describe myself"
       },
       "team": {
@@ -168,9 +174,9 @@
         "subtitle": "Step forward to where the magic happens. Contact us!"
       },
       "contactus": {
-        "title": "Contact us",
-        "subtitle": "Send us an email or a direct message. ",
-        "description": ""
+        "title": "Contact us!",
+        "subtitle": "Available in English and Japanese.",
+        "description": "Send us an email or a message via Twitter, Facebook or Instagram."
       }
     }, 
     "tedandtedx": {
