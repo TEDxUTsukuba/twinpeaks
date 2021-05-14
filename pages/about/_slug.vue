@@ -55,7 +55,7 @@
               <p class="midashi has-text-weight-bold has-text-primary" v-if="member.tedtalk || member.tedtalk_alt">
                 {{ $t('about.utsukuba.members.favouritetedtalk') }}
               </p>
-              <p class="has-text-weight-normal has-text-light" v-if="$i18n.locale == 'en'">{{ toUpperCamel(member.tedtalk_headline_en) }}</span>
+              <p class="has-text-weight-normal has-text-light" v-if="$i18n.locale == 'en'">{{ toUpperCamel(member.tedtalk_headline_en) }}</p>
               <p class="has-text-weight-normal has-text-light" v-if="$i18n.locale == 'ja'">{{ member.tedtalk_headline_ja }}</p>
             </div>
             

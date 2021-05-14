@@ -121,18 +121,20 @@
           TEDxUTsukuba Online Business Card Generator<br><span class="has-text-weight-bold">v0.1.0</span> Public Beta
         </p>
         <p class="has-text-grey" style="margin-bottom: 1rem;"><span class="">Made with &#9829; by <nuxt-link to="./about/harry" class="has-text-weight-bold">Harry</nuxt-link></span></p>
-        <!-- <details>
+        <details>
           <summary class="button is-small">
-            <span class="has-text-weight-bold">v0.1.0</span>&nbsp;Public Beta
+            About This Generator
           </summary>
           <div class="content has-text-left" style="margin: 1rem 2rem;">
+            When was the last time you exchanged business cards in person? This generator allows you to create your digital businness card. Reach out to your partners with this card!<br><br>
             Change Log
             <dl>
               <dt>v0.1.0 (2021/05/14)</dt>
-              <dd>Create input form</dd>
+              <dd>First Release</dd>
+              <dd>Do not fully support mobile devices.</dd>
             </dl>
           </div>
-        </details> -->
+        </details>
       </div>
     </footer>
   </div>
@@ -211,8 +213,8 @@ export default {
       const data = localStorage.getItem('storage') || '[]';
       this.list = JSON.parse(data);
     }
-    if (this.$ua.isFromIos() && this.$ua.browser != 'Safari') this.$buefy.notification.open({ message: "Some browsers are not comparable with this generator. Try using Safari!", type: 'is-warning', position: 'is-bottom-right' })
-    if (this.$ua.isFromAndroid()) this.$buefy.notification.open({ message: "Some browsers are not comparable with this generator.", type: 'is-warning', position: 'is-bottom-right' })
+    if (this.$ua.isFromIos() && this.$ua.browser() != 'Safari') this.$buefy.notification.open({ message: "Some browsers are not comparable with this generator. Try using Safari!", type: 'is-warning', position: 'is-bottom-right' })
+    if (this.$ua.isFromAndroidOs()) this.$buefy.notification.open({ message: "Some browsers are not comparable with this generator.", type: 'is-warning', position: 'is-bottom-right' })
   },
   computed: {
     selectFont() {
@@ -231,6 +233,10 @@ export default {
 </script>
 
 <style scoped>
+  html {
+    overflow-x : hidden;
+    overflow-y : auto;
+  }
   body {
     width: 100vw;
     overflow-x : hidden;
