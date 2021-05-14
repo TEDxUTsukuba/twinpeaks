@@ -211,6 +211,7 @@ export default {
       const data = localStorage.getItem('storage') || '[]';
       this.list = JSON.parse(data);
     }
+    if (this.$ua.isFromIos() && this.$ua.browser != 'Safari') this.$buefy.notification.open({ message: "Some browsers are not comparable with this generator. Use Safari!", type: 'is-warning', position: 'is-bottom-right' })
   },
   computed: {
     selectFont() {
@@ -229,6 +230,11 @@ export default {
 </script>
 
 <style scoped>
+  body {
+    width: 100vw;
+    overflow-x : hidden;
+    overflow-y : auto;
+  }
   h1.is-0 {
     color: #bcc5cd;
     background: linear-gradient(135deg, #3494e6, #ec6ead);
