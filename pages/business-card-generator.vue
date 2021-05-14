@@ -5,7 +5,7 @@
         Type. Save. Share. 
       </h1>
       <h1 class="subtitle is-size-4 has-text-weight-light">
-        Create your own business card online. 
+        Create your own <span class="has-text-weight-bold">digital</span> business card. 
       </h1>
       <div class="columns is-vcentered">
         <div class="column is-7-desktop is-6-tablet notification is-light">
@@ -118,10 +118,10 @@
     <footer class="has-text-centered" style="padding: 1rem;">
       <div class="content has-text-centered">
         <p class="has-text-grey-light">
-          TEDxUTsukuba Online Business Card Generator<br><span class="has-text-weight-bold">v0.1.0</span> Public Beta
+          TEDxUTsukuba Digital Business Card Generator<br><span class="has-text-weight-bold">v0.1.0</span> Public Beta
         </p>
         <p class="has-text-grey" style="margin-bottom: 1rem;"><span class="">Made with &#9829; by <nuxt-link to="./about/harry" class="has-text-weight-bold">Harry</nuxt-link></span></p>
-        <details>
+        <!-- <details>
           <summary class="button is-small">
             About This Generator
           </summary>
@@ -134,7 +134,7 @@
               <dd>Do not fully support mobile devices.</dd>
             </dl>
           </div>
-        </details>
+        </details> -->
       </div>
     </footer>
   </div>
@@ -144,7 +144,7 @@
 export default {
   layout: "headeronly",
   head: {
-    title: "Online Business Card Generator | TEDxUTsukuba",
+    title: "Digital Business Card Generator | TEDxUTsukuba",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -247,6 +247,7 @@ export default {
     background: linear-gradient(135deg, #3494e6, #ec6ead);
     /* background: linear-gradient(45deg, #74ebd5, #acb6e5); */
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   dt {
