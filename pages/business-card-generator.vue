@@ -8,7 +8,7 @@
         Create your own business card online. 
       </h1>
       <div class="columns is-vcentered">
-        <div class="column is-7 notification is-light">
+        <div class="column is-7-desktop is-6-tablet notification is-light">
           <div style="max-width: 400px; margin: 1rem auto 1rem auto;">
             <div v-if="isValid == 'valid'">
               <b-tag
@@ -50,7 +50,7 @@
             </b-field>
           </div>
         </div>
-        <div class="column is-5">
+        <div class="column is-5-desktop is-6-tablet">
           <div id="konvaCanvas" style="margin: auto;">
             <v-stage ref="stage" :config="{
               scale: {x: 0.2, y: 0.2},
@@ -211,7 +211,8 @@ export default {
       const data = localStorage.getItem('storage') || '[]';
       this.list = JSON.parse(data);
     }
-    if (this.$ua.isFromIos() && this.$ua.browser != 'Safari') this.$buefy.notification.open({ message: "Some browsers are not comparable with this generator. Use Safari!", type: 'is-warning', position: 'is-bottom-right' })
+    if (this.$ua.isFromIos() && this.$ua.browser != 'Safari') this.$buefy.notification.open({ message: "Some browsers are not comparable with this generator. Try using Safari!", type: 'is-warning', position: 'is-bottom-right' })
+    if (this.$ua.isFromAndroid()) this.$buefy.notification.open({ message: "Some browsers are not comparable with this generator.", type: 'is-warning', position: 'is-bottom-right' })
   },
   computed: {
     selectFont() {
