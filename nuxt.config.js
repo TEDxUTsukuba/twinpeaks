@@ -117,6 +117,14 @@ export default {
     {
       src: '~/plugins/user-agent-config.js',
       ssr: false
+    },
+    {
+      src: '~/plugins/zipcode.js',
+      ssr: false
+    },
+    { 
+      src: "~/plugins/vue-konva",
+      ssr: false 
     }
   ],
   /*
@@ -204,7 +212,14 @@ export default {
     ],
     '@nuxt/content',
     // 参考: https://blog.mktia.com/generate-ogp-image-automatically/
-    '~/modules/imageGenerator.js'
+    // '~/modules/imageGenerator.js'
+    // [ 
+    //   'nuxt-responsive-loader',
+    //   {
+    //     name: 'img/[hash:7]-[width].[ext]',
+    //     format: 'png'
+    //   }
+    // ]
   ],
 
   // fontawesome: {

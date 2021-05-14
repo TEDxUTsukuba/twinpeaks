@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <nuxt />
+    <nuxt class="nuxt" />
   </div>
 </template>
 
@@ -13,3 +13,12 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+  .nuxt {
+    padding-top: 3.25rem !important;
+    @media screen and (min-width: 1024px) {
+      padding-top: 5.25rem !important;
+    }
+  }
+</style>
