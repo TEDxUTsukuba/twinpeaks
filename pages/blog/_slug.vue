@@ -18,21 +18,33 @@
         </div>
       </div>
     </section>
-    <section class="section">
+    <section :class="{ 'section': true, 'articleSerif': isArticleSerif }">
+      <aside class="is-family-sans-serif has-text-right has-text-grey">
+        <!-- <button @click="isArticleSerif=!isArticleSerif">Change</button> -->
+        <b-field>
+          <b-switch v-model="isArticleSerif">
+            {{ $t('button.displayserif')}}
+          </b-switch>
+        </b-field>
+        <p class="has-text-grey">Note: This article was originally published <a :href="article.original_link" target="_blank">here <i class="mdi mdi-open-in-new" /></a></p>
+      </aside>
       <div class="content" style="margin: 5vh 0 10vh 0;">
+        <!-- <button @click="copySelectedText()">copy</button> -->
         <nuxt-content :document="article" />
       </div>
-      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button button is-medium is-rounded" data-via="tedxutsukuba" data-related="" data-show-count="false"><i class="mdi mdi-twitter" /> Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      <div class="notification is-dark" style="margin: 5vh 0;">
-        {{ $t('blog.disclaimer') }}
-      </div>
-      <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-          <li><nuxt-link to="/">Home</nuxt-link></li>
-          <li><nuxt-link to="/blog">Blog</nuxt-link></li>
-          <li class="is-active"><nuxt-link class="has-text-light" :to="`/articles/${$route.params.slug}`" aria-current="page">{{ article.title }}</nuxt-link></li>
-        </ul>
-      </nav>
+      <footer>
+        <!-- <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button button is-medium is-rounded" data-via="tedxutsukuba" data-related="" data-show-count="false"><i class="mdi mdi-twitter" /> Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+        <div class="notification is-dark" style="margin: 5vh 0;">
+          {{ $t('blog.disclaimer') }}
+        </div>
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+          <ul>
+            <li><nuxt-link to="/">Home</nuxt-link></li>
+            <li><nuxt-link to="/blog">Blog</nuxt-link></li>
+            <li class="is-active"><nuxt-link class="has-text-light" :to="`/articles/${$route.params.slug}`" aria-current="page">{{ article.title }}</nuxt-link></li>
+          </ul>
+        </nav>
+      </footer>
     </section>
   </section>
 </template>
@@ -40,6 +52,12 @@
 <script>
 export default {
   components: {},
+  data() {
+    return {
+      text: 'sasas',
+      isArticleSerif: true
+    }
+  },
   async asyncData({ $content, params, app }) {
     // const article = await $content(`${app.i18n.locale}/blog/${params.slug}`).fetch();
     const article = await $content(`blog/${params.slug}`).fetch();
@@ -47,6 +65,23 @@ export default {
     return {
       article
     };
+  },
+  mounted() {
+    // document.addEventListener('mouseup', event => {
+    //   if (event.target === this.$refs.target || event.target.contains(this.$refs.target))
+    //     console.log(this.text)
+        // this.copySelectedText();
+    // });
+  },
+  methods: {
+    // copySelectedText() {
+    //   console.log(window.getSelection().toString());
+    //   this.$buefy.notification.open({
+    //     message: `copied`,
+    //     position: 'is-top-right',
+    //     duration: 5000,
+    //   })
+    // }
   }
 };
 </script>
@@ -100,6 +135,8 @@ export default {
   hr {
     background-color: #333;
   }
-
+}
+.articleSerif {
+  font-family: 'Hiragino Mincho', '游明朝', 'Times New Roman', Times, serif;
 }
 </style>
