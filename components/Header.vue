@@ -1,13 +1,13 @@
 <template>
-  <b-navbar class="is-fixed-top is-spaced is-black" id="navbar-top">
+  <b-navbar :class="`is-fixed-top is-spaced is-${headerColor}`" id="navbar-top">
     <template slot="brand">
       <b-navbar-item tag="router-link" :to="localePath('/')">
         <img  
           data-not-lazy
-          src="~/assets/logo.png"
+          src="~/assets/logo/u_bgblack_oneline.png"
           alt="TEDxUTsukuba Logo"
         >
-        <!-- https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-logo.png -->
+        <!-- https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-u_bgblack_oneline.png -->
       </b-navbar-item>
     </template>
     <template slot="start">
@@ -15,7 +15,10 @@
         <span class="is-size-7 has-text-grey">{{ isCelebration() }}</span>
       </b-navbar-item>
     </template>
-    <template slot="end">
+    <template slot="end" v-if="headerColor == 'darksilver'">
+      <p><span class="tag has-background-red is-large title has-text-white">Members Only</span></p>
+    </template>
+    <template slot="end" v-else>
       <b-navbar-dropdown collapsible :label="$t('header.events.parent')" class="is-hoverable">
         <b-navbar-item tag="router-link" :to="{ path: localePath('/events/2020') }">
           {{ $t('header.events.2020') }}
@@ -134,6 +137,22 @@ export default {
       ]
     }
   },
+  // props: {
+  //   'headerColor': {
+  //     type: String,
+  //     required: true
+  //   }
+  // },
+  created() {
+    if (this.$route.path.includes('private')) this.headerColor = 'darksilver'
+    else this.headerColor = 'black'
+  },
+  watch: {
+    '$route': function(to, from) {
+      if (to.path.includes('private')) this.headerColor = 'darksilver'
+      else this.headerColor = 'black'
+    }
+  },
   methods: {
     isCelebration() {
       const month = new Date().getMonth()+1
@@ -152,7 +171,6 @@ export default {
 }
 </script>
 
-
 <style lang="scss" scoped>
   .navbar-item, .navbar-link {
     font-weight: bold;
@@ -160,9 +178,9 @@ export default {
     // color: lightgray !important;
   }
   .normal-category:hover {
-    background-color: red !important;
+    background-color: #c6251a !important;
   }
-  a:visited {
-    // color: white;
+  .navbar.is-darksilver {
+    background-color: #90a4ae !important;
   }
 </style>
