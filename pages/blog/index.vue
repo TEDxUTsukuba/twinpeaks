@@ -6,13 +6,13 @@
       <h1 class="subtitle has-text-grey-light">{{ $t('blog.subtitle')}}</h1>
     </section>
     <section class="section">
-      <div v-for="article in articles" :key="article.path">
+      <div v-for="article in articles" :key="article.id">
         <hr>
         <div class="columns">
           <div class="column is-8">
             <!-- <span v-if="article.lang == 'ja'" class="tag is-danger">JA</span>
             <span v-if="article.lang == 'en'" class="tag is-info">EN</span> -->
-            <nuxt-link :to="article.path">
+            <nuxt-link :to="article.path" @click.native="countGA(article.id)">
               {{ article.title }}
             </nuxt-link>
           </div>
@@ -37,6 +37,18 @@ export default {
     return {
       articles
     };
+  },
+  methods: {
+    countGA(id) {
+      console.log(id)
+      this.$gtag(
+        'event', 'readBlogArticle', {
+          'event_category': 'button',
+          'event_label': id,
+          'value': '1'
+        }
+      )
+    }
   }
 }
 </script>
