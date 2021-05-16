@@ -41,7 +41,9 @@
     "helpustranslate": "Help us translate",
     "back": "Back",
     "upcoming": "Upcoming",
-    "ended": "Ended"
+    "ended": "Ended",
+    "displayserif": "Serif Font",
+    "displaysansserif": "Sans-Serif Font"
   },
   "top": {
     "message": "Language Setting: English"
