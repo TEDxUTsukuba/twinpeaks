@@ -1,10 +1,12 @@
 ---
+id: ne95942b92a40_en
 title: Why letting go is always an option
 author: Chiho Numata
 created: 2020/04/26 14:30
 last_modified: 
 lang: en
 tags: [大学生]
+original_link: https://note.com/tedxutsukuba/n/ne95942b92a40
 thumbnail: https://assets.st-note.com/production/uploads/images/23960305/rectangle_large_type_2_ba37ee51c39c3fe788ae1909b698b094.jpg
 ---
 

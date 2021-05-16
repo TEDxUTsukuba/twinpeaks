@@ -1,10 +1,12 @@
 ---
+id: ne95b42430be9
 title: デザインとテクノロジーの融合を追求する第一人者、ジョン・マエダのTEDトーク
 author: Enjaチーム
 created: 2020/04/21 22:21
 last_modified: 
 lang: ja
 tags: [アート, デザイン, テクノロジー]
+original_link: https://note.com/tedxutsukuba/n/ne95b42430be9
 thumbnail: https://assets.st-note.com/production/uploads/images/23567146/rectangle_large_type_2_0c51073f114eac4cc99971a3a7fee58e.jpeg
 ---
 

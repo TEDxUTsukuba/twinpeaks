@@ -1,10 +1,12 @@
 ---
+id: na82669fd8dd0
 title: おうち時間に、TEDトークもいいかもしれない。
 author: Enjaチーム
 created: 2020/05/10 18:26
 last_modified: 
 lang: ja
 tags: [おうち時間を工夫で楽しく]
+original_link: https://note.com/tedxutsukuba/n/na82669fd8dd0
 thumbnail: https://assets.st-note.com/production/uploads/images/25345461/rectangle_large_type_2_470aff9f5e882db06d0bc0806abbdf4a.png
 ---
 
