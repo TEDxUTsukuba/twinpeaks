@@ -14,7 +14,7 @@
 
 .page-enter-active,
 .page-leave-active {
-  transition: opacity 0.4s;
+  transition: opacity 1s;
 }
 
 .page-enter,
@@ -76,8 +76,13 @@ $card-footer-border-top: 0px !important;
 }
 
 .has-background-primary,
-.bg-red {
+.bg-red
+.is-primary {
   background-color: $red !important;
+}
+
+.has-background-red {
+  background-color: #ff0000 !important;
 }
 
 .has-background-tsukuba {
@@ -355,7 +360,7 @@ section#wrapper {
 section#wrapper-dark {
   height: 100%;
   background-attachment: fixed !important;
-  background-color: hsl(0, 0, 10%);
+  background-color: hsl(0, 0, 14%);
   // background-color: rgb(161, 144, 144);
   // background: linear-gradient(165deg, hsl(0, 0, 22%) 0, hsl(0, 0, 4%) 100%);
   background-repeat: no-repeat;

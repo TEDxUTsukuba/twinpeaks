@@ -48,7 +48,7 @@
     <div class="notification">
       <h1 class="is-size-5">コンテンツを追加する / Add Contents</h1>
       <p>
-        まずは上記のスプレッドシートの埋まっている行を見ながらそれっぽく埋めてみてください。そこでわからないことがあったら、下記の凡例を確認してみてください。ただし、オススメしたいTED/TEDxトークのリンクについては若干ややこしいので、この下のセクションで説明しておきます。
+        <strong>上記のスプレッドシートの埋まっている行を見て同じようにやれば、問題なく全項目を埋められると思います！</strong> さらにいくつかのセルにはバリデーションを付けているので、適切でない値を入力するとアラートが出ます。それでもわからないことがあったら、下記の凡例を確認してみてください。ただし、オススメしたいTED/TEDxトークのリンクについては若干ややこしいので、この下のセクションで説明しておきます。
       </p>
     </div>
 
@@ -58,7 +58,7 @@
         <strong>TED</strong>トークのほとんどはTED.comとYouTubeの両方で公開されています。一方で<strong>TEDx</strong>トークは主にYouTubeで公開されており、ごく一部のトークのみTED.comで公開されています。我々の方針としては、できる限りTED.comに誘導して、多くの人にTEDのコンテンツに触れてもらえるようにしようと思います。(YouTubeの方が慣れていて使いやすいという意見もあるかと思いますが、ご理解ください)<br><br>
         <strong class="has-text-success">TEDとYouTubeの両方で公開されているトークをオススメしたい場合</strong>
         <ul>
-          <li>TED.comのURLを<span class="tag is-white">tedtalk</span>に貼り付ける。</li>
+          <li><span class="tag is-white">https://www.ted.com</span>から始まるTED.comのURLを<span class="tag is-white">tedtalk</span>に貼り付ける。</li>
           <li><span class="tag is-white">tedtalk_alt</span>は空欄にする。</li>
         </ul>
         <strong class="has-text-success">YouTubeにしか掲載されていないトークをオススメしたい場合</strong>
@@ -126,7 +126,7 @@
           <tr>
             <td>tedtalk</td>
             <td>オススメしたいTED/TEDxトークのリンク</td>
-            <td>（詳細は上記の注釈を参照）動画がTED.comで公開されている場合、<span class="tag">www.ted.com</span>で始まるURLを貼り付ける。</td>
+            <td>（詳細は上記の注釈を参照）動画がTED.comで公開されている場合、<span class="tag">https://www.ted.com</span>で始まるURLを貼り付ける。</td>
           </tr>
           <tr>
             <td>tedtalk_alt</td>
@@ -152,7 +152,7 @@
             <td>message</td>
             <td>メッセージ</td>
             <td>
-              自由にメッセージを書いてください。私のTEDxストーリー、TEDxUTsukubaに入った理由・TEDxUTsukubaが好きな理由、自分にとってのTEDトークとは？、興味・関心のあること、Fun fact about you, ...etc.<br>
+              皆さんからひとこと、自由に書いてください。私のTEDxストーリー、TEDxUTsukubaに入った理由・TEDxUTsukubaが好きな理由、自分にとってのTEDトークとは？、興味・関心のあること、Fun fact about you, ...etc.<br>
               参考(?)
               <a class="is-size-7 has-text-info" href="https://www.tedxhokkaidou.com/members/" target="_blank">TEDxHokkaidoU</a>
               <a class="is-size-7 has-text-info" href="https://www.tedxmelbourne.com/about#Team" target="_blank">TEDxMelbourne</a>
@@ -169,17 +169,20 @@
         顔写真の掲載はプライバシーに関わるため<strong>任意</strong>としています。ただし、オーガナイザー・共同オーガナイザーは原則として掲載をお願いしています。
       </p>
       <p>
-        掲載してよいという方は、手ブレしていない画像を1枚用意してください。各自で自分の顔写真を用意するのか、みんなで時間と場所を決めて集まって全員分の写真を撮るのかは、代によって方針が異なります。
-      </p>
-      <p>
         画像はPCでは3:2(横長)、モバイルでは1:1(スクエア)で表示されます。縦長の画像でもこのサイズに切り抜かれて表示されます。
       </p>
       <p>
-        画像を追加または更新する際は、Googleドライブの <a class="has-text-info" target="_blank">フォルダ <i class="mdi mdi-open-in-new" /></a>にアップロードしてください。その際に、
+        掲載してよいという方は、手ブレしていない画像を1枚用意して、Googleドライブの <a class="has-text-info" target="_blank">フォルダ <i class="mdi mdi-open-in-new" /></a>にアップロードしてください。各自で自分の顔写真を用意するのか、みんなで時間と場所を決めて集まって全員分の写真を撮るのかは、代によって方針が異なると思いますので、確認してみてください。
+      </p>
+      <p>
+        画像をアップロードする際には、
         <ul>
           <li>ファイル名を自分のIDにするなどして、誰が誰だかわかるようにしておいてください。</li>
           <li>SlackかMessangerで木下宛に「顔写真をアップロードしておいたのでよろしく」的なメッセージをくれると助かります。</li>
         </ul>
+      </p>
+      <p>
+        新しい画像に差し替えたいという場合も、同様の手順を踏んでください。
       </p>
     </div> 
     <div class="notification">
@@ -187,7 +190,7 @@
     </div>
     <p class="">
       <ul>
-        <li>最終更新: 2021/05/17</li>
+        <li>最終更新: 2021/05/18</li>
         <li>執筆者: 木下晴貴</li>
         <li>連絡先: harukikinoshita&#64;outlook.com</li>
       </ul>

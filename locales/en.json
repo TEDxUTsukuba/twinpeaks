@@ -290,7 +290,8 @@
       },
       "pass": {
         "title": "Members Only",
-        "inputpassword": "Type password to enter: "
+        "inputpassword": "Type password to enter.",
+        "success": "Log in successfully."
       }
     },
     "venue": {

@@ -60,7 +60,7 @@
 
       <footer class="footer has-background-black has-text-centered" style="background-color: rgba(0, 0, 0, 0.1);">
         <nuxt-link to="/">
-          <img src="~/assets/logo.png" style="max-width: 320px; width: 60%;">
+          <img src="~/assets/logo/u_bgblack_oneline.png" style="max-width: 320px; width: 60%;">
         </nuxt-link>
         <p>TEDxUTsukuba &copy; All Rights Reserved. </p>
       </footer>
@@ -70,7 +70,7 @@
           <div class="navbar-start">
             <nuxt-link class="navbar-item" to="/">
               <img
-                src="~/assets/logo.png"
+                src="~/assets/logo/u_bgblack_oneline.png"
                 alt="TEDxUTsukuba Logo"
               >
             </nuxt-link>
