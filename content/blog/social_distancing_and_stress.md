@@ -1,10 +1,12 @@
 ---
+id: n0d7b71a86dd8
 title: 社会的距離拡大と人々のストレスーー仮想空間で人類は幸せになれるか？
 author: 北岡直紀
 created: 2020/04/21 22:21
 last_modified: 
 lang: ja
 tags: [新型コロナウイルス]
+original_link: https://note.com/tedxutsukuba/n/n0d7b71a86dd8
 thumbnail: https://assets.st-note.com/production/uploads/images/23567146/rectangle_large_type_2_0c51073f114eac4cc99971a3a7fee58e.jpeg
 ---
 

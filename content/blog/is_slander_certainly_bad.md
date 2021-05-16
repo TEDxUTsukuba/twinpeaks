@@ -1,10 +1,12 @@
 ---
+id: n39eb538a7816
 title: 誹謗中傷は悪なのか？
 author: Yuki Abe
 created: 2020/06/02 22:16
 last_modified: 
 lang: ja
 tags: [SNS, 誹謗中傷]
+original_link: https://note.com/tedxutsukuba/n/n39eb538a7816
 thumbnail: https://assets.st-note.com/production/uploads/images/27319793/rectangle_large_type_2_f27c546b9fd2c56b40ae6a976eb407bd.jpeg
 ---
 
