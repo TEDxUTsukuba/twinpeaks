@@ -287,8 +287,13 @@ export default {
   generate: {
     fallback: true,  // 404を表示
     routes: [
-      'articles/knowledge_is_power_but',
-      'articles/is_slander_certainly_bad',
+      'blog/is_slander_certainly_bad',
+      'blog/knowledge_is_power_but',
+      'blog/johnmaeda',
+      'blog/social_distancing_and_stress',
+      'blog/tedtalk_recommend',
+      'blog/why_letting_go_is_always_an_option_ja',
+      'blog/why_letting_go_is_always_an_option_en',
       'about/takuma_goto',
       'about/craig_coleman',
       'about/naoki_kitaoka',
