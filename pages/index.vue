@@ -8,7 +8,7 @@
         <Carousel id="top-carousel" />
       </div>
       <div class="column is-4-widescreen is-5-fullhd vertical-center has-text-centered" id="top-carousel-wrapper-logo-section">
-        <img data-not-lazy src="~/assets/logo/black_transparent_1.png" width="60%" alt="TEDxUTsukuba Logo">
+        <img data-not-lazy src="~/assets/logo/u_bgblack_oneline.png" width="60%" alt="TEDxUTsukuba Logo">
         <!-- <LogoAnimation id="top-logo" /> -->
       </div>
     </div>

@@ -290,7 +290,8 @@
       },
       "pass": {
         "title": "メンバー限定コンテンツ",
-        "inputpassword": "パスワードを入力"
+        "inputpassword": "パスワードを入力",
+        "success": "ログイン成功"
       }
     },
     "venue": {

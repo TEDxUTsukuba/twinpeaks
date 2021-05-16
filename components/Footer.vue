@@ -68,7 +68,7 @@
               <div class="column is-4-desktop is-4-tablet has-text-centered-mobile">
                 <nuxt-link :to="localePath('/')">
                   <figure class="image" style="width: 100%; max-width: 320px;">
-                    <img src="~/assets/logo/black_transparent_1.png" alt="Logo">
+                    <img src="~/assets/logo/u_bgblack_oneline.png" alt="Logo">
                   </figure>
                 </nuxt-link>
               </div>
