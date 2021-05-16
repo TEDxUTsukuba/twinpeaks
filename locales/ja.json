@@ -144,7 +144,8 @@
   },
   "blog": {
     "subtitle": "TEDxUTsukubaのメンバーの考えやアイデアを発信しています。",
-    "disclaimer": "投稿内容は寄稿者個人の見解であり、必ずしもTEDxUTsukubaを代表するものとは限りません。",
+    "thanks": "最後までお読みいただきありがとうございました。",
+    "disclaimer": "投稿内容は寄稿者個人の見解であり、TEDxUTsukubaを代表するものとは限りません。",
     "writtenby": "寄稿: "
   },
   "about": {

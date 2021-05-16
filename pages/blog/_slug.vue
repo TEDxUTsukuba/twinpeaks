@@ -21,7 +21,7 @@
     <section :class="{ 'section': true, 'articleSerif': isArticleSerif }">
       <aside class="is-family-sans-serif has-text-right has-text-grey">
         <!-- <button @click="isArticleSerif=!isArticleSerif">Change</button> -->
-        <b-field>
+        <b-field v-if="!this.$ua.isFromAndroidOs()">
           <b-switch v-model="isArticleSerif">
             {{ $t('button.displayserif')}}
           </b-switch>
@@ -35,6 +35,8 @@
       <footer>
         <!-- <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button button is-medium is-rounded" data-via="tedxutsukuba" data-related="" data-show-count="false"><i class="mdi mdi-twitter" /> Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
         <div class="notification is-dark" style="margin: 5vh 0;">
+          {{ $t('blog.thanks')}}
+          <br>
           {{ $t('blog.disclaimer') }}
         </div>
         <nav class="breadcrumb" aria-label="breadcrumbs">
