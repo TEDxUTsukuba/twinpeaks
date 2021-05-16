@@ -123,8 +123,12 @@ export default {
       ssr: false
     },
     { 
-      src: "~/plugins/vue-konva",
+      src: '~/plugins/vue-konva',
       ssr: false 
+    },
+    {
+      src: '~/plugins/mavon-editor',
+      ssr: false
     }
   ],
   /*
