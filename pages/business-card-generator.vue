@@ -60,9 +60,6 @@
           </div>
         </div>
         <div class="column is-7-desktop is-12-tablet">
-          <b-tooltip
-            label="Tap 'Save' button to save this image."
-            multilined>
             <div id="konvaCanvas" style="margin: auto;">
               <v-stage ref="stage" :config="{
                 scale: {x: 0.4, y: 0.4},
@@ -120,7 +117,6 @@
                 </v-layer>
               </v-stage>
             </div>
-           </b-tooltip>
           <p class="has-text-grey-light" style="margin: 2rem 0 1rem 0;">Your card will look like this.</p>
           <b-button id="save" @click="save" class="button is-primary has-text-weight-bold" size="is-medium" icon-left="download">
             Save
