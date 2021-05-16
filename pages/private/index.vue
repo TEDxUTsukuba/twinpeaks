@@ -15,18 +15,30 @@
       </div>
     </section> -->
     <section class="section">
-      <h1 class="title">メンバー向けコンテンツ</h1>
-        <p>TEDxUTsukubaのメンバー情報を追加・更新するには</p>
+      <div class="content">
+        <h1 class="title is-2">メンバー向けコンテンツ</h1>
+        <p>デジタル名刺を作成する</p>
         <ul>
-          <li><nuxt-link to="/private/how_to_update_team">チームを更新する</nuxt-link></li>
+          <li><nuxt-link to="/business-card-generator" class="has-text-info">Digital Business Card Generator</nuxt-link></li>
         </ul>
         <br>
-        <p>イベント(新歓, Salon, メインイベントなど)を開催するには</p>
+        <p>ウェブサイトのニュースを追加・更新する</p>
         <ul>
-          <li><a href="https://organize.ted.com/">TED.comにイベント情報を追加する</a></li>
-          <li><a href="https://www.ted.com/participate/organize-a-local-tedx-event/apply-for-a-tedx-license">ライセンスを申請する</a></li>
-          <li><nuxt-link to="/private/how_to_add_an_event">TEDxUTsukubaのイベントページにイベントを追加する</nuxt-link></li>
+          <li><nuxt-link to="/private/how_to_update_news" class="has-text-info">ニュースを更新する (編集中)</nuxt-link></li>
         </ul>
+        <br>
+        <p>TEDxUTsukubaのメンバー情報を追加・更新する</p>
+        <ul>
+          <li><nuxt-link to="/private/how_to_update_team" class="has-text-info">チームを更新する</nuxt-link></li>
+        </ul>
+        <br>
+        <p>イベント(新歓, Salon, メインイベントなど)を開催する</p>
+        <ul>
+          <li><nuxt-link to="/private/how_to_add_an_event" class="has-text-info">TEDxUTsukubaのイベントページにイベントを追加する</nuxt-link></li>
+          <li><a href="https://organize.ted.com/" class="has-text-info">TED.comにイベント情報を追加する <i class="mdi mdi-open-in-new" /></a></li>
+          <li><a href="https://www.ted.com/participate/organize-a-local-tedx-event/apply-for-a-tedx-license" class="has-text-info">ライセンスを申請する <i class="mdi mdi-open-in-new" /></a></li>
+        </ul>
+      </div>
     </section>
     <section class="section">
       <h2 class="title is-4">お役立ちリンク集 | Useful Links</h2>

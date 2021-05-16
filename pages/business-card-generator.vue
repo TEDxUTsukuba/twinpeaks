@@ -190,7 +190,7 @@
             About This Generator
           </summary>
           <div class="content has-text-left" style="margin: 1rem 2rem;">
-            When was the last time you exchanged business cards in person? This generator allows you to create your digital businness card. Reach out to your partners with this card!<br><br>
+            When was the last time you exchanged business cards in person? This generator allows you to create your digital business card. Reach out to your partners with this card!<br><br>
             Change Log
             <dl>
               <dt>v0.1.0 (2021/05/14)</dt>
