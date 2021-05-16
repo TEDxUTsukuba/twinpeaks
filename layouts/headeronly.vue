@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header />
+    <Header :headerColor="headerColor" />
     <nuxt class="nuxt" />
   </div>
 </template>
@@ -10,6 +10,10 @@ import Header from '~/components/Header.vue'
 export default {
   components: {
     Header
+  },
+  created() {
+    if (this.$route.path.includes('private')) this.headerColor = 'darksilver'
+    else this.headerColor = 'black'
   }
 }
 </script>
