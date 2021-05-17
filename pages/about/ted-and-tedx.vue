@@ -132,7 +132,7 @@
 
     <section class="section has-text-centered">
       <h1 class="title is-0 has-text-white">{{ $t('about.ted.join')}}</h1>
-      <h2 class="title is-2">TED Events</h2>"
+      <h2 class="title is-2">TED Events</h2>
       <div class="columns is-multiline">
         <div class="column is-4">
           <img src="https://pi.tedcdn.com/r/pb-assets.tedcdn.com/system/baubles/files/000/009/062/original/TED2022_medallion_grey_%281%29.png?1618259132?w=790">

@@ -157,7 +157,7 @@ export default {
     isCelebration() {
       const month = new Date().getMonth()+1
       const date = new Date().getDate()
-      console.log(month, date)
+      // console.log(month, date)
       const data = this.celebrationdays.find(item => item.month === month && item.date === date)
       if (data === undefined) {
         return "Spread Globally, Connect Locally."
