@@ -26,7 +26,7 @@
             {{ $t('button.displayserif')}}
           </b-switch>
         </b-field>
-        <p class="has-text-grey">Note: This article was originally published <a :href="article.original_link" target="_blank">here <i class="mdi mdi-open-in-new" /></a></p>
+        <p v-if="article.original_link" class="has-text-grey">Note: This article was originally published <a :href="article.original_link" target="_blank">here <i class="mdi mdi-open-in-new" /></a></p>
       </aside>
       <div class="content" style="margin: 5vh 0 10vh 0;">
         <!-- <button @click="copySelectedText()">copy</button> -->

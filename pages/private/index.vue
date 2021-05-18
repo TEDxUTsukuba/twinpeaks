@@ -1,54 +1,64 @@
 <template>
   <div>
-    <section class="hero has-background-white">
+    <section class="hero is-halfheight" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Vancouver_Convention_Centre%2C_Vancouver%2C_Canada_%28Unsplash%29.jpg/1600px-Vancouver_Convention_Centre%2C_Vancouver%2C_Canada_%28Unsplash%29.jpg'); background-size: cover; background-position: center; filter: saturate(200%);">
       <div class="hero-body">
-        <section class="section">
-          <div class="content has-text-centered">
-            <h1 class="title is-1">{{ $t('2020.participance.pass.title') }}</h1>
-            <!-- <p v-if="pass !== 'jijimuge'">
-              <span class="tag is-info is-primary is-medium">{{ $t('2020.participance.pass.inputpassword') }}</span>
-            </p>
-            <p v-else>
-              <span class="tag is-info is-success is-medium">{{ $t('2020.participance.pass.success') }}</span>
-            </p>
-            <input class="input" v-model="pass" placeholder="Type password" style="width: 320px; margin-bottom: 3rem;"> -->
-            <!-- <button v-on:click="toggle_switch()">Toggle Button</button> -->
-            <!-- <div class="has-text-left" v-if="pass == 'jijimuge'"> -->
-            <div class="has-text-left">
-              <p>デジタル名刺を作成する</p>
-              <ul>
-                <li><nuxt-link to="private/business-card-generator" class="has-text-info">Digital Business Card Generator</nuxt-link></li>
-              </ul>
-              <br>
-              <p>ウェブサイトのニュースを追加・更新する</p>
-              <ul>
-                <li><nuxt-link to="private/how_to_update_news" class="has-text-info">ニュースを更新する (編集中)</nuxt-link></li>
-              </ul>
-              <br>
-              <p>メンバー情報を追加・更新する</p>
-              <ul>
-                <li><nuxt-link to="private/how_to_update_team" class="has-text-info">チームを更新する</nuxt-link></li>
-              </ul>
-              <br>
-              <p>イベント（新歓などを含む）の情報を追加・更新する</p>
-              <ul>
-                <li><nuxt-link to="private/how_to_add_an_event" class="has-text-info">TEDxUTsukubaのイベントページにイベントを追加する</nuxt-link></li>
-                <li><a href="https://organize.ted.com/" target="_blank" class="has-text-info">TED.comにイベント情報を追加する <i class="mdi mdi-open-in-new" /></a> <span class="tag is-info">個人のTED Accountでログインが必要 <i class="mdi mdi-login-variant" /></span></li>
-              </ul>
-              <br>
-              <p>ウェブサイトの閲覧回数などを調べる</p>
-              <ul>
-                <li><a href="https://analytics.google.com" target="_blank" class="has-text-info">Google Analytics <i class="mdi mdi-open-in-new" /></a> <span class="tag is-info">tedxutsukuba&#64;gmail.comでログインが必要 <i class="mdi mdi-login-variant" /></span></li>
-              </ul>
-              <br>
-              <p>Flickrにイベントの画像をアップロードする</p>
-              <ul>
-                <li><a href="https://www.flickr.com/" target="_blank" class="has-text-info">Flickr <i class="mdi mdi-open-in-new" /></a> <span class="tag is-info">tedxutsukuba&#64;yahoo.comでログインが必要 <i class="mdi mdi-login-variant" /></span></li>
-              </ul>
-            </div>
-          </div>
-          </section>
+        <div class="container has-text-centered">
+          <h1 class="title is-1 has-text-white"><span style="background-color: #f00; padding: 0.5rem;">{{ $t('2020.participance.pass.title') }}</span></h1>
         </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="content has-text-centered">
+        <!-- <p v-if="pass !== 'jijimuge'">
+          <span class="tag is-info is-primary is-medium">{{ $t('2020.participance.pass.inputpassword') }}</span>
+        </p>
+        <p v-else>
+          <span class="tag is-info is-success is-medium">{{ $t('2020.participance.pass.success') }}</span>
+        </p>
+        <input class="input" v-model="pass" placeholder="Type password" style="width: 320px; margin-bottom: 3rem;"> -->
+        <!-- <button v-on:click="toggle_switch()">Toggle Button</button> -->
+        <!-- <div class="has-text-left" v-if="pass == 'jijimuge'"> -->
+        <div class="has-text-left">
+          <p>デジタル名刺を作成する</p>
+          <ul>
+            <li><nuxt-link to="./business-card-generator" class="has-text-info">Digital Business Card Generator</nuxt-link></li>
+          </ul>
+          <br>
+          <p>ウェブサイトのニュースを追加・更新する</p>
+          <ul>
+            <li><nuxt-link to="./how_to_update_news" class="has-text-info">ニュースを更新する (編集中)</nuxt-link></li>
+            <li><nuxt-link to="./editor" class="has-text-info">Markdownエディタ</nuxt-link></li>
+          </ul>
+          <br>
+          <p>メンバー情報を追加・更新する</p>
+          <ul>
+            <li><nuxt-link to="./how_to_update_team" class="has-text-info">チームを更新する</nuxt-link></li>
+          </ul>
+          <br>
+          <p>イベント（新歓などを含む）の情報を追加・更新する</p>
+          <ul>
+            <li><nuxt-link to="./how_to_add_an_event" class="has-text-info">TEDxUTsukubaのイベントページにイベントを追加する</nuxt-link></li>
+            <li><a href="https://organize.ted.com/" target="_blank" class="has-text-info">TED.comにイベント情報を追加する <i class="mdi mdi-open-in-new" /></a> <span class="tag is-info">個人のTED Accountでログインが必要 <i class="mdi mdi-login-variant" /></span></li>
+          </ul>
+          <br>
+          <p>ウェブサイトの閲覧回数などを調べる</p>
+          <ul>
+            <li><a href="https://analytics.google.com" target="_blank" class="has-text-info">Google Analytics <i class="mdi mdi-open-in-new" /></a> <span class="tag is-info">tedxutsukuba&#64;gmail.comでログインが必要 <i class="mdi mdi-login-variant" /></span></li>
+          </ul>
+          <br>
+          <p>Flickrにイベントの画像をアップロードする</p>
+          <ul>
+            <li><a href="https://www.flickr.com/" target="_blank" class="has-text-info">Flickr <i class="mdi mdi-open-in-new" /></a> <span class="tag is-info">tedxutsukuba&#64;yahoo.comでログインが必要 <i class="mdi mdi-login-variant" /></span></li>
+          </ul>
+        </div>
+        <div class="has-text-left">
+          <p>その他</p>
+          <ul>
+            <li><nuxt-link to="../tedtalks" class="has-text-info">TEDtalks Random Watchlist</nuxt-link></li>
+            <li><nuxt-link to="private/showroom" class="has-text-info">イケてるTEDxイベントを集めてみた</nuxt-link></li>
+          </ul>
+        </div>
+      </div>
     </section>
     <section class="hero has-background-light">
       <div class="hero-body">
