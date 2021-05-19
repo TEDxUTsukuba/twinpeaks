@@ -2,7 +2,7 @@
   <section class="section content">
     <div class="has-text-centered" style="margin-top: 5rem;">
       <h1 class="title is-1">
-        チームを更新する
+        メンバー情報を追加・更新する
       </h1>
       <h1 class="subtitle">
         How to update team
@@ -201,7 +201,7 @@
 <script>
 export default {
   head: {
-    title: 'チームを更新する',
+    title: 'メンバー情報を追加・更新する',
     description: 'チーム紹介のページを更新するための簡単なステップを説明します。',
     meta: [
       { charset: 'utf-8' },
@@ -229,7 +229,7 @@ export default {
       {
         hid: 'og:title',
         property: 'og:title',
-        content: 'チームを更新する'
+        content: 'メンバー情報を追加・更新する'
       },
       {
         hid: 'og:type',
