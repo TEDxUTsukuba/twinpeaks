@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { STEIN_API } = process.env;
+const { STEIN_API, VUE_APP_CMS_DATOCMS_API_TOKEN } = process.env;
 
 export default {
   mode: 'universal',
