@@ -118,10 +118,10 @@ export default {
       src: '~/plugins/user-agent-config.js',
       ssr: false
     },
-    {
-      src: '~/plugins/zipcode.js',
-      ssr: false
-    },
+    // {
+    //   src: '~/plugins/generator.js',
+    //   ssr: false
+    // },
     { 
       src: '~/plugins/vue-konva',
       ssr: false 

@@ -43,7 +43,8 @@
     "upcoming": "近日開催",
     "ended": "開催終了",
     "displayserif": "明朝体で表示",
-    "displaysansserif": "ゴシック体で表示"
+    "displaysansserif": "ゴシック体で表示",
+    "unavailable": "公開停止中"
   },
   "top": {
     "message": "言語設定: 日本語"

@@ -7,7 +7,9 @@
           src="~/assets/logo/u_bgblack_oneline.png"
           alt="TEDxUTsukuba Logo"
         >
-        <!-- https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-u_bgblack_oneline.png -->
+      </b-navbar-item>
+      <b-navbar-item v-if="this.$route.path.includes('private')">
+        <span class="tag has-background-red is-medium has-text-white">Private</span>
       </b-navbar-item>
     </template>
     <template slot="start">
@@ -15,10 +17,7 @@
         <span class="is-size-7 has-text-grey">{{ isCelebration() }}</span>
       </b-navbar-item>
     </template>
-    <template slot="end" v-if="headerColor == 'darksilver'">
-      <p><span class="tag has-background-red is-large title has-text-white">Members Only</span></p>
-    </template>
-    <template slot="end" v-else>
+    <template slot="end" v-if="!this.$route.path.includes('private')">
       <b-navbar-dropdown collapsible :label="$t('header.events.parent')" class="is-hoverable">
         <b-navbar-item tag="router-link" :to="{ path: localePath('/events/2020') }">
           {{ $t('header.events.2020') }}
