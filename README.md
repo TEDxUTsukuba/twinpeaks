@@ -1,4 +1,4 @@
-# teraoka
+# twinpeaks
 
 > Nuxt.js based website for TEDxUTsukuba
 https://www.tedxutsukuba.com
