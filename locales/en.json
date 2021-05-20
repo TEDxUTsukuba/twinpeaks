@@ -43,7 +43,8 @@
     "upcoming": "Upcoming",
     "ended": "Ended",
     "displayserif": "Serif Font",
-    "displaysansserif": "Sans-Serif Font"
+    "displaysansserif": "Sans-Serif Font",
+    "unavailable": "Temporarily Unavailable"
   },
   "top": {
     "message": "Language Setting: English"

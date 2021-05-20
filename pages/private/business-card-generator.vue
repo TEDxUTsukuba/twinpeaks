@@ -236,15 +236,6 @@ export default {
       fontsize: 108,
       padding: 72,
       align: 'left',
-      configCircle: {
-        x: 100,
-        y: 100,
-        radius: 70,
-        fill: "red",
-        stroke: "black",
-        strokeWidth: 4
-      },
-      list: [{ x: 100, y: 100, radius: 50, fill: 'blue' }]
     }
   },
   watch: {
@@ -272,13 +263,15 @@ export default {
       localStorage.setItem(this.inputName.replace(/ /g, "_") + '_from_TEDxUTsukuba', JSON.stringify(stage));
       var link = document.createElement('a');
       link.download = this.inputName.replace(/ /g, "_") + '_from_TEDxUTsukuba';
-      link.href = stage.toDataURL();;
+      link.href = stage.toDataURL({
+        pixelRatio: 1 // or other value you need
+      })
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
     }
   },
-  mounted () {
+  created () {
     const image = new window.Image();
     image.src = "/ogp/bg_meishi.png";
     image.onload = () => {

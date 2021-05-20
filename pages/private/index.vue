@@ -27,14 +27,15 @@
                 <div class="notification is-white" style="box-shadow: rgba(150, 150, 151, 0.2) 0px 7px 20px 0px;">
                   <div class="columns is-vcentered is-mobile">
                     <div class="column is-3-fullhd is-3-widescreen is-3-desktop is-4-tablet is-3-mobile has-text-centered">
-                      <i :class="`mdi mdi-${item.icon}`" aria-hidden="true" style="font-size: 64px; margin: 0; color: #00c0d4;"></i>
+                      <i v-if="$ua.isFromSmartphone()" :class="`mdi mdi-${item.icon}`" aria-hidden="true" style="font-size: 2rem; margin: 0; color: #00c0d4;"></i>
+                      <i v-else :class="`mdi mdi-${item.icon}`" aria-hidden="true" style="font-size: 4rem; margin: 0; color: #00c0d4;"></i>
                     </div>
                     <div class="column">
                       <p v-if="$i18n.locale == 'ja'" class="title is-size-5">{{ item.title_ja }}</p>
                       <p v-else class="title is-size-5">{{ item.title_en }}</p>
                       <p v-if="$i18n.locale == 'ja'" class="subtitle is-size-7">{{ item.title_en }}</p>
                       <p v-else class="subtitle is-size-7">{{ item.title_ja }}
-                      <p style="margin-top: -1rem;"><span v-if="item.isPublished == false" class="tag is-danger has-text-weight-bold">公開停止中 / Temporarily Unavailable</span></p>
+                      <p style="margin-top: -1rem;"><span v-if="item.isPublished == false" class="tag is-danger has-text-weight-bold">{{ $t('button.unavailable') }}</span></p>
                     </div>
                   </div>
                 </div>
