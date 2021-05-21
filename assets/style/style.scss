@@ -402,8 +402,6 @@ section#wrapper-black {
 
 
 section.section {
-  margin: 0vh 16vw !important;
-
   @media screen and (max-width: 639px) {
     margin: 0vh 0vw !important;
     padding: 1.5rem !important;
@@ -415,6 +413,11 @@ section.section {
 
   @media screen and (min-width: 1217px) and (max-width: 1409px) {
     margin: 0vh 8vw !important;
+  }
+
+  @media screen and (min-width: 1410px) {
+    margin: 0 auto !important;
+    width: 1200px;
   }
 }
 
