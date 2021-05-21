@@ -127,7 +127,7 @@
         "title_en": "Edit an update to the news",
         "icon": "file-document-edit",
         "link": "https://www.tedxutsukuba.com/private/how_to_update_news",
-        "isPublished": false
+        "isPublished": true
       },
       {
         "title_ja": "ウェブサイトの閲覧回数などを調べる",
