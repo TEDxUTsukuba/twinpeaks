@@ -41,9 +41,10 @@
         </div>
         <nav class="breadcrumb" aria-label="breadcrumbs">
           <ul>
-            <li><nuxt-link to="/">Home</nuxt-link></li>
-            <li><nuxt-link to="/blog">Blog</nuxt-link></li>
-            <li class="is-active"><nuxt-link class="has-text-light" :to="`/articles/${$route.params.slug}`" aria-current="page">{{ article.title }}</nuxt-link></li>
+            <li><nuxt-link :to="localePath('/')">Home</nuxt-link></li>
+            <li v-if="$i18n.locale == 'ja'"><nuxt-link to='/blog'>Blog</nuxt-link></li>
+            <li v-if="$i18n.locale == 'en'" ><nuxt-link to='/en/blog'>Blog</nuxt-link></li>
+            <li class="is-active"><nuxt-link class="has-text-light" :to="`/blog/${$route.params.slug}`" aria-current="page">{{ article.title }}</nuxt-link></li>
           </ul>
         </nav>
       </footer>

@@ -114,7 +114,7 @@
         </div>
         <br>
         <div class="has-text-centered">
-          <!-- <nuxt-link :to="localePath('/news')" class="button is-white is-rounded">{{ $t('button.archive') }}</nuxt-link> -->
+          <nuxt-link :to="localePath('/news')" class="button is-white is-rounded">{{ $t('button.archive') }}</nuxt-link>
         </div>
       </div>
     </section>
@@ -158,7 +158,7 @@ export default {
     const data = await request({
       query: gql`
         {
-          notices: allNotices(first: "3", locale: ja, orderBy: _updatedAt_DESC)
+          notices: allNotices(first: "3", locale: ja, orderBy: updatedAt_DESC) {
             title
             shortDescription
             updatedAt

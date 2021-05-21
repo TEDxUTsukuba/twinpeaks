@@ -131,7 +131,7 @@
                 </div>
               </div>
               <footer class="card-footer">
-                <nuxt-link :to="member.id" class="card-footer-item is-size-7">{{ $t('button.readmore') }}</nuxt-link>
+                <nuxt-link :to="localePath(`/about/${member.id}`)" class="card-footer-item is-size-7">{{ $t('button.readmore') }}</nuxt-link>
               </footer>
             </div>
           <!-- </nuxt-link> -->
@@ -173,7 +173,7 @@
       <div class="section has-text-centered">
         <h1 class="title is-2 is-spaced">{{ $t('about.utsukuba.join.title')}}</h1>
         <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.utsukuba.join.subtitle')}}</h1>
-        <nuxt-link to="/events" class="button is-rounded is-gradient">新歓イベントを探す</nuxt-link>
+        <nuxt-link :to="localePath('/events')" class="button is-rounded is-gradient">新歓イベントを探す</nuxt-link>
       </div>
       <div class="section">
         <div class="columns is-multiline">
