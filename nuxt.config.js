@@ -2,7 +2,6 @@ require('dotenv').config();
 const { STEIN_API, VUE_APP_CMS_DATOCMS_API_TOKEN } = process.env;
 
 export default {
-  mode: 'universal',
   /*
   ** Headers of the page
   */
@@ -127,7 +126,7 @@ export default {
       ssr: false 
     },
     {
-      src: '~/plugins/mavon-editor',
+      src: '~/plugins/datocms',
       ssr: false
     }
   ],
@@ -258,7 +257,7 @@ export default {
       routesNameSeparator: '___'
     },
     exclude: [
-      '**/ja/**', '**/private', '**/private/**', '**/inspire', '**/talks_old', '**/event_old', '**/loading', '**/tedtalks'
+      '**/ja/**', '**/private', '**/private/**', '**/draft', '**/talks_old', '**/event_old', '**/loading', '**/tedtalks'
     ],
     // routes(callback) {
     //   const axios = require('axios')
