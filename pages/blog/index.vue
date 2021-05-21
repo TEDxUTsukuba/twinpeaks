@@ -1,6 +1,6 @@
 <template>
   <section id="wrapper-dark">
-    <section class="section halfheight has-text-centered">
+    <section class="section is-halfheight has-text-centered">
       <i class="mdi mdi-book-multiple has-text-primary is-1" /> 
       <h1 class="title is-1 is-spaced">{{ $t('header.blog.item' )}}</h1>
       <h1 class="subtitle has-text-grey-light">{{ $t('blog.subtitle')}}</h1>
@@ -12,7 +12,7 @@
           <div class="column is-8">
             <!-- <span v-if="article.lang == 'ja'" class="tag is-danger">JA</span>
             <span v-if="article.lang == 'en'" class="tag is-info">EN</span> -->
-            <nuxt-link :to="article.path" @click.native="countGA(article.id)">
+            <nuxt-link :to="localePath(article.path)" @click.native="countGA(article.id)">
               {{ article.title }}
             </nuxt-link>
           </div>
