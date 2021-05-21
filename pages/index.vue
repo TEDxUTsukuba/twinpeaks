@@ -158,7 +158,7 @@ export default {
     const data = await request({
       query: gql`
         {
-          notices: allNotices(orderBy: updatedAt_DESC) {
+          notices: allNotices(first: "3", locale: ja, orderBy: _updatedAt_DESC)
             title
             shortDescription
             updatedAt
