@@ -92,7 +92,8 @@
     "download": "カレンダーに追加"
   },
   "news": {
-    "title": "最新情報"
+    "title": "お知らせ",
+    "subtitle": "イベント情報をはじめ、大事な情報をお届けします。"
   },
   "social": {
     "title": "公式SNS",
