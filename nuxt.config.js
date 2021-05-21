@@ -1,12 +1,12 @@
 require('dotenv').config();
-const { STEIN_API, VUE_APP_CMS_DATOCMS_API_TOKEN } = process.env;
+const { STEIN_API, NUXT_ENV_DATOCMS_API_TOKEN } = process.env;
 
 export default {
   /*
   ** Headers of the page
   */
   env: {
-    STEIN_API
+    STEIN_API, NUXT_ENV_DATOCMS_API_TOKEN
   },
   head: {
     // title: process.env.npm_package_name || '',
