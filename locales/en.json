@@ -94,37 +94,6 @@
   "news": {
     "title": "News"
   },
-  "notice": {
-    "archive": {
-      "title": "Archive",
-      "subtitle": ""
-    },
-    "left-top": {
-      "title": "To everyone who participated in TEDxUTsukuba before 2018",
-      "description": "Notice on unauthorized access to Peatix",
-      "detail": "",
-      "link": "/notice/2020/11/22"
-    },
-    "left-bottom": {
-      "title": "Thank you for joining our annual event!",
-      "description": "TEDxUTsukuba 2020 \"JIJIMUGE\" was a great success.",
-      "detail": "Watch the archive on YouTube.",
-      "link": "/events/2020"
-    },
-    "right-top": {
-      "title": "Our talk earned 10,000 views",
-      "description": "Watch Reiji Yamada's talk on YouTube",
-      "detail": "Reiji Yamada's talk has reached over 10,000 views on YouTube. (English captions unavailable)",
-      "link": "https://www.youtube.com/watch?v=qvOi1C8qCDM"
-    },
-    "right-bottom": {
-      "title": "Join our team!",
-      "description": "This is where the magic happens. ",
-      "detail": "Contact us for more information!",
-      "link": "https://www.tedxutsukuba.com/about/utsukuba"
-    },
-    "last-modified": "Last Modified: "
-  },
   "social": {
     "title": "Be a Part of Us",
     "description": ""
