@@ -7,7 +7,7 @@ last_modified:
 lang: ja
 tags: [アート, デザイン, テクノロジー]
 original_link: https://note.com/tedxutsukuba/n/ne95b42430be9
-thumbnail: https://assets.st-note.com/production/uploads/images/23567146/rectangle_large_type_2_0c51073f114eac4cc99971a3a7fee58e.jpeg
+thumbnail: https://assets.st-note.com/production/uploads/images/24108737/rectangle_large_type_2_cfdbb57b5cef120b5fdb10242134ff4e.jpg
 ---
 
 こんにちは、note編集部です。
