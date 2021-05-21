@@ -23,12 +23,12 @@
       編集の手順を説明したスライドを作ってみました！<br>
     </div>
     <div id="teaser" style="margin-top: 3vh;">
-      <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTXWOi21MoFS5Ndn-D6zw5M9AXKP17rCyHTUFb0mSOdqw_6AYMEKhRzH1ojV68ij6oeDcbnEEhVIbA6/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTXWOi21MoFS5Ndn-D6zw5M9AXKP17rCyHTUFb0mSOdqw_6AYMEKhRzH1ojV68ij6oeDcbnEEhVIbA6/embed?start=false&loop=false&delayms=3000" frameborder="0" width="800" height="450" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div>
     <hr>
     <div>
       TEDxUTsukubaのウェブサイトを訪れた人の多くが最初に目にするトップページ。最新情報を定期的に発信していくことはとても大事です。「でもTwitterとかFacebookの方がタイムリーに見てもらえるのでは？」短時間にたくさんの人に閲覧・拡散してもらえるのはSNSの強みですよね。それに対してウェブサイトのお知らせは、Twitterのピン留め投稿とかInstagramのストーリーハイライトみたいに、長いスパンで見てもらうことを意図した「アーカイブ」としての意味合いが強いと思います。でもそれだけじゃ会社のプレスリリースみたいで味気ない。やっぱり読んでいて楽しいコンテンツじゃないとね。
-      <a href="https://tedxnagoyau.com/articles/news/interview_with_the_designer_of_the_keyvisual" target="_blank" class="has-text-info">TEDxNagoyaU</a>のNewsが、お知らせとブログのミックスみたいな感じで私はすごい好きです。価値あるアイディアを発信するってこういうことかも！
+      <a href="https://tedxnagoyau.com/articles/news/interview_with_the_designer_of_the_keyvisual" target="_blank" class="has-text-info is-size-7">TEDxNagoyaU</a>のNewsが、お知らせとブログのミックスみたいな感じで私はすごい好きです。価値あるアイディアを発信するってこういうことかも！
     </div>
   </section>
 </template>
