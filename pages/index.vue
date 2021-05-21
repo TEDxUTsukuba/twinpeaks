@@ -79,48 +79,42 @@
           <span class="">{{ $t('news.title') }}</span>
         </h1>
         <br>
-        <div class="columns is-multiline reverse-row-order">
-          <div class="column is-5-tablet">
-            <Flip
-              :title = "$t('notice.left-top.title')"
-              :description = "$t('notice.left-top.description')"
-              :detail = "$t('notice.left-top.detail')"
-              :link = "$t('notice.left-top.link')"
-              imageUrl = "/_nuxt/assets/speakers/2019/sp_2019_1.jpg"
-            />
-          </div>
-          <div class="column is-7-tablet">
-            <Flip
-              :title = "$t('notice.left-bottom.title')"
-              :description = "$t('notice.left-bottom.description')"
-              :detail = "$t('notice.left-bottom.detail')"
-              :link = "$t('notice.left-bottom.link')"
-              imageUrl = ""
-            />
-          </div>
-          <div class="column is-7-tablet">
-            <Flip
-              :title = "$t('notice.right-top.title')"
-              :description = "$t('notice.right-top.description')"
-              :detail = "$t('notice.right-top.detail')"
-              :link = "$t('notice.right-top.link')"
-              imageUrl = ""
-            />
-          </div>
-          <div class="column is-5-tablet">
-            <Flip
-              :title = "$t('notice.right-bottom.title')"
-              :description = "$t('notice.right-bottom.description')"
-              :detail = "$t('notice.right-bottom.detail')"
-              :link = "$t('notice.right-bottom.link')"
-              imageUrl = ""
-            />
+        <div class="columns is-variable is-6 is-multiline is-centered">
+          <div class="column is-4-widescreen is-6-desktop is-6-tablet" v-for="(notice, index) in notices" :key="index">
+            <div class="nmp-dark">
+              <header class="card-header">
+                <p class="card-header-title">
+                  <span class="is-size-7 has-text-grey">{{ formatDate(notice.updatedAt) }}</span>
+                </p>
+              </header>
+              <div class="card-image">
+                <!-- <datocms-image :data="notice.image.responsiveImage" :alt="notice.image.responsiveImage.alt" /> -->
+                <figure class="image is-5by3">
+                  <datocms-image :data="notice.image.responsiveImage" :alt="notice.alt" style="position: initial; object-fit:"/>
+                </figure>
+              </div>
+              <div class="card-content">{{ notice.image.responsiveImage.width}}
+                <h2 class="title is-size-5">{{ notice.title }}</h2>
+                <p class="has-text-grey-light">{{ notice.shortDescription }}</p>
+                <!-- <br>
+                <nav class="level is-mobile">
+                  <div class="level-left">
+                    <p class="level-left">
+                    </p>
+                  </div>
+                  <div class="level-right">
+                    <p class="level-item">
+                      <nuxt-link class="button is-rounded is-gradient" :to="`~/news/`">{{ $t('button.readmore') }}</nuxt-link>
+                    </p>
+                  </div>
+                </nav> -->
+              </div>
+            </div>
           </div>
         </div>
-        <p class="has-text-grey-light has-text-right mb-6">{{ $t('notice.last-modified')}}<time datetime="2021-04-05">2021/4/5</time></p>
         <br>
         <div class="has-text-centered">
-          <nuxt-link :to="localePath('/notice')" class="button is-white is-rounded">{{ $t('button.archive') }}</nuxt-link>
+          <!-- <nuxt-link :to="localePath('/news')" class="button is-white is-rounded">{{ $t('button.archive') }}</nuxt-link> -->
         </div>
       </div>
     </section>
@@ -134,9 +128,12 @@
 
 <script>
 import Card from '~/components/Card'
-import Flip from '~/components/Flip'
 import Carousel from '~/components/Carousel'
 import PopularArticles from '~/components/PopularArticles'
+import { request, gql } from '~/lib/datocms'
+import { Image } from "vue-datocms";
+import format from 'date-fns/format'
+import parseISO from 'date-fns/parseISO'
 // import LogoAnimation from '~/components/LogoAnimation'
 // import Movie from '~/components/Movie'
 // const Card = () => import('~/components/Card')
@@ -145,7 +142,7 @@ import PopularArticles from '~/components/PopularArticles'
 
 export default {
   components: {
-    Card, Flip, Carousel, PopularArticles
+    Card, Carousel, PopularArticles, "datocms-image": Image
   },
   data() {
     return {
@@ -157,11 +154,31 @@ export default {
       isAlertActive: true,
     }
   },
-  // asyncData(context) {
-  //   const isAndroid = context.$ua.isFromAndroidOs()
-  //   console.log('isAndroid', isAndroid)
-  //   return { isAndroid }
-  // },
+  async asyncData({ params }) {
+    const data = await request({
+      query: gql`
+        {
+          notices: allNotices(orderBy: updatedAt_DESC) {
+            title
+            shortDescription
+            updatedAt
+            image {
+              responsiveImage(imgixParams: {fit: crop, crop: top, h: 300, w: 500}) {
+                alt
+                src
+              }
+            }
+          }
+        }
+      `
+    })
+    return { ready: !!data, ...data }
+  },
+  head() {
+    if (!this.ready) {
+      return
+    }
+  },
   mounted() {
     const browser = this.$ua.browser()
     if (browser !== 'Safari') {
@@ -209,6 +226,11 @@ export default {
     } else {
       document.getElementById("intro").style.opacity = 1;
       document.getElementById("notice").style.opacity = 1;
+    }
+  },
+  methods: {
+    formatDate(date) {
+      return format(parseISO(date), 'PPP')
     }
   }
 }
