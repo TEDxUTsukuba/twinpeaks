@@ -36,7 +36,7 @@
 <script>
 export default {
   head: {
-    title: 'お知らせを追加する',
+    title: 'お知らせをを追加する',
     description: 'トップページ・お知らせのページにの最新情報を追加するための簡単なステップを説明します。',
     meta: [
       { charset: 'utf-8' },
@@ -64,7 +64,7 @@ export default {
       {
         hid: 'og:title',
         property: 'og:title',
-        content: 'イベントを追加する'
+        content: 'お知らせを追加する'
       },
       {
         hid: 'og:type',
