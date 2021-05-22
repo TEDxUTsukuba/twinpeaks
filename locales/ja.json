@@ -40,8 +40,6 @@
     "partialtranslation": "このページの翻訳はまだ完了していません",
     "helpustranslate": "Help us translate",
     "back": "戻る",
-    "upcoming": "近日開催",
-    "ended": "開催終了",
     "displayserif": "明朝体で表示",
     "displaysansserif": "ゴシック体で表示",
     "unavailable": "公開停止中"
@@ -357,8 +355,10 @@
   "events": {
     "title": "イベント情報",
     "subtitle": "TEDxUTsukubaが開催するイベントをご紹介いたします。",
-    "upcoming": "今後開催されるイベント",
+    "upcomingevents": "今後開催されるイベント",
     "main": "メインイベント",
-    "other": "イベント"
+    "other": "イベント",
+    "upcoming": "近日開催",
+    "ended": "開催終了"
   }
 }

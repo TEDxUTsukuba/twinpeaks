@@ -193,7 +193,7 @@
             <div class="column is-5 has-text-centered">
               <a data-flickr-embed="false" href="https://www.flickr.com/photos/146703506@N03/49073776248/in/album-72157711800937367/" title="_DSC0139"><img src="https://live.staticflickr.com/65535/49073776248_ea72761d3d_z.jpg" width="500" height="333" alt="_DSC0139"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
             </div>
-            <div class="column is-7 has-text-centered">
+            <div class="column is-12 has-text-centered">
               <a data-flickr-embed="true" href="https://www.flickr.com/photos/146703506@N03/49072659536/in/album-72157711800937367/" title="_DSC0036"><img src="https://live.staticflickr.com/65535/49072659536_03391f6f95_b.jpg" width="1024" height="683" alt="_DSC0036"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
             </div>
           </div>

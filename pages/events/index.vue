@@ -8,30 +8,31 @@
     </section>
     <section class="section">
       <h2 class="title has-text-centered has-text-primary">{{ $t('events.main') }}</h2>
-      <div class="columns is-mobile has-text-centered">
-        <div class="column">
-          <nuxt-link to="/events/2020">
-            <figure class="image">
-              <img src="/carousel/2020jijimuge.png">
-            </figure>
-            <br>
-            <p class="title">TEDxUTsukuba 2020</p>
-            <p class="subtitle">JIJIMUGE</p>
-            <span class="tag is-dark" v-if="$i18n.locale == 'en'">Ended</span>
-            <span class="tag is-dark" v-if="$i18n.locale == 'ja'">開催終了</span>
-          </nuxt-link>
-        </div>
-        <div class="column">
-          <nuxt-link to="/events/2019">
-            <figure class="image">
-              <img src="/carousel/2019cophilaction.png">
-            </figure>
-            <br>
-            <p class="title">TEDxUTsukuba 2019</p>
-            <p class="subtitle">CoPhilAction</p>
-            <span class="tag is-dark" v-if="$i18n.locale == 'en'">Ended</span>
-            <span class="tag is-dark" v-if="$i18n.locale == 'ja'">開催終了</span>
-          </nuxt-link>
+      <div class="columns is-multiline is-mobile">
+        <div
+          id="thumbnails"
+          class="column is-3-widescreen is-half-desktop is-half-tablet is-half-mobile"
+          v-for="(event, index) in mainEventList" :key="index"
+          style="display: inline-block; vertical-align: top;"
+        >
+          <div class="nmp-dark">
+            <header class="card-header">
+              <p class="card-header-title has-text-right">
+                <span v-if="isUpcoming(event.date) < 0" class="is-size-7 has-text-grey">{{ $t('events.ended') }}</span>
+                <span v-else class="is-size-7">{{ $t('events.upcoming') }}</span>
+              </p>
+            </header>
+            <div class="card-image has-background-black-bis">
+              <figure class="image is-16by9">
+                <img v-if="event.imageFilePath" :src="event.imageFilePath" :alt="event.title" style="object-fit: cover;">
+                <img v-else src="/defaultimage.png" alt="TEDxUTsukuba Logo">
+              </figure>
+            </div>
+            <div class="card-content has-text-centered">
+              <p class="title">{{ event.title }}</p>
+              <p class="subtitle">{{ event.theme }}</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -39,7 +40,7 @@
       <h2 class="title has-text-centered has-text-primary">{{ $t('events.other') }}</h2>
       <div v-for="(event, index) in eventList" :key="index" class="" id="#content">
         <div :class="`nmp-card-${changeColor(event.date)}`" style="margin-bottom: 1rem;">
-          <nuxt-link :to="`./${event.id}`">
+          <!-- <nuxt-link :to="`./${event.id}`"> -->
             <div class="columns">
               <div class="column is-5">
                 <h1 class="title is-4">{{ event.name }}</h1>
@@ -54,19 +55,17 @@
               </div>
               <div class="column is-2-tablet has-text-right is-flex" style="justify-content: space-between; flex-direction: column; margin-top: auto;">
                 <p v-if="isUpcoming(event.date) > 0">
-                  <span class="tag is-light" v-if="$i18n.locale == 'en'">Upcoming</span>
-                  <span class="tag is-light" v-if="$i18n.locale == 'ja'">近日開催</span>         
+                  <span class="tag is-light">{{ $t('events.upcoming') }}</span>      
                 </p>
                 <p v-else>
-                  <span class="tag is-dark" v-if="$i18n.locale == 'en'">Ended</span>
-                  <span class="tag is-dark" v-if="$i18n.locale == 'ja'">開催終了</span>
+                  <span class="tag is-dark">{{ $t('events.ended') }}</span>
                 </p>
-                <button class="button is-white is-gradient is-rounded is-small" style="margin-top: 10px;">
+                <!-- <button class="button is-white is-gradient is-rounded is-small" style="margin-top: 10px;">
                   {{ $t('button.readmore') }}
-                </button>
+                </button> -->
               </div>
             </div>
-          </nuxt-link>
+          <!-- </nuxt-link> -->
         </div>
       </div>
     </section>
@@ -80,7 +79,41 @@ export default {
   data() {
     return {
       eventList: {},
-      dataLoadFinish: false
+      dataLoadFinish: false,
+      mainEventList: [
+        {
+          title: 'TEDxUTsukuba 2020',
+          theme: 'JIJIMUGE',
+          imageFilePath: require('~/assets/mainvisual/2020/jijimuge.png'),
+          date: '2020-11-29T12:00:01+09:00'
+        },
+        {
+          title: 'TEDxUTsukuba 2019',
+          theme: 'CoPhilAction',
+          imageFilePath: require('~/assets/mainvisual/2019/cophilaction_emblem.png'),
+          date: '2019-11-10T12:00:01+09:00'
+        },
+        {
+          title: 'TEDxUTsukuba 2017',
+          theme: 'moving',
+          imageFilePath: require('~/assets/mainvisual/2017/moving logo-black透過.png'),
+          date: '2017-11-26T12:00:01+09:00'
+        },
+        {
+          title: 'TEDxUTsukuba 2016',
+          theme: "joyn'",
+          imageFilePath: require('~/assets/mainvisual/2016/joyn_white.png'),
+          date: '2016-11-27T12:00:01+09:00'
+        }
+      ],
+      subEventList: [
+        {
+          title: 'TEDxUTsukubaLive',
+          theme: 'Bigger than us',
+          imageFilePath: require('~/assets/mainvisual/2019Live/tedxutsukubalivewhite.png'),
+          date: '2019-04-18T19:00:01+09:00'
+        }
+      ]
     }
   },
   head: {

@@ -131,19 +131,19 @@
       <div class="columns is-multiline">
         <div class="column is-4">
           <img src="https://pi.tedcdn.com/r/pb-assets.tedcdn.com/system/baubles/files/000/009/062/original/TED2022_medallion_grey_%281%29.png?1618259132?w=790">
-          <p><span class="tag is-info">{{ $t('button.upcoming')}}</span></p><br>
+          <p><span class="tag is-info">{{ $t('events.upcoming')}}</span></p><br>
           <p class="title">TED2022</p>
           <p class="subtitle">April 10-14, 2022<br>Vancouver, BC, Canada</p>
         </div>
         <div class="column is-4">
           <img src="https://pi.tedcdn.com/r/pb-assets.tedcdn.com/system/baubles/files/000/008/650/original/TEDMonterey_TED.com_210x156.png?w=320">
-          <p><span class="tag is-info">{{ $t('button.upcoming')}}</span></p><br>
+          <p><span class="tag is-info">{{ $t('events.upcoming')}}</span></p><br>
           <p class="title">TEDMonterey: The Case for Optimism</p>
           <p class="subtitle">August 1-4, 2021<br>Monterey, CA</p>
         </div>
         <div class="column is-4">
           <img src="https://pi.tedcdn.com/r/pb-assets.tedcdn.com/system/baubles/files/000/007/485/original/T20_Tile_210x156.png?w=320">
-          <p><span class="tag is-dark">{{ $t('button.ended')}}</span></p><br>
+          <p><span class="tag is-dark">{{ $t('events.ended')}}</span></p><br>
           <p class="title">TED2020: Uncharted</p>
           <p class="subtitle">May 18-July 10, 2020<br>Held online via TED's event platform</p>
         </div>      
