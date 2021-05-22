@@ -10,19 +10,15 @@
             <h1 class="subtitle is-4 has-text-white has-text-weight-light">
               Random Watchlist
             </h1>
-            <div class="ted-embed-wrap" style="max-width:854px; margin: 5vh auto;">
-              <div style="position:relative;height:0;padding-bottom:56.25%">
+              <figure class="image is-16by9 ted-embed-wrap">
                 <iframe
+                  class="has-ratio"
                   :src="`https://embed.ted.com/talks/lang/${radio}/${items[0].link}`" 
-                  width="854"
-                  height="480"
-                  style="position:absolute;left:0;top:0;width:100%;height:100%"
                   frameborder="0"
                   scrolling="no"
                   allowfullscreen>
                 </iframe>
-              </div>
-            </div>
+              </figure>
             <i v-if="$ua.isFromSmartphone()" class="mdi mdi-chevron-down" style="font-size: 2rem;"/>
             <i v-else class="mdi mdi-chevron-down" style="font-size: 5rem;"/>
           </div>
@@ -225,6 +221,6 @@ export default {
     filter: drop-shadow(0px 12px 28px rgba(0,0,0,0.6));
   }
   .container {
-    padding: 2rem 2rem;
+    padding: 2rem 4rem;
   }
 </style>

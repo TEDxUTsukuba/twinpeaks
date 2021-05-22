@@ -1,9 +1,8 @@
 <template>
   <section id="wrapper-dark" class="font-awesome">
     <section class="section hero is-fullheight">
-      <!-- {{ $route.params.slug }} -->
-      <!-- {{ memberList }} -->
-        <div v-if="member.given_name_en" class="columns is-multiline reverse-row-order is-centered is-variable is-6" style="margin-top: 5vh;">
+      <div class="divider" />
+        <div v-if="member.given_name_en" class="columns is-multiline reverse-row-order is-centered is-variable is-6">
           <div v-if="member.isImage == true" class="column is-5-tablet is-4-desktop">
             <div style="max-width: 320px; margin: 0 auto;">
               <figure class="image is-1by1">
@@ -58,9 +57,9 @@
               <p class="has-text-weight-normal has-text-light" v-if="$i18n.locale == 'en'">{{ toUpperCamel(member.tedtalk_headline_en) }}</p>
               <p class="has-text-weight-normal has-text-light" v-if="$i18n.locale == 'ja'">{{ member.tedtalk_headline_ja }}</p>
             </div>
-            
-            <div class="ted-embed-wrap" style="max-width:854px; margin: 5vh auto;">
-              <div style="position:relative;height:0;padding-bottom:56.25%">
+            <div class="divider" />
+            <div>
+              <figure class="image is-16by9 ted-embed-wrap">
                 <iframe v-if="member.tedtalk" v-lazy-load
                   :src="`https://embed.ted.com/talks/lang/${locale}/${member.tedtalk.replace(regexTED, '')}`" 
                   width="854"
@@ -81,9 +80,10 @@
                   scrolling="no"
                   allowfullscreen>
                 </iframe>
-              </div>
+              </figure>
             </div>
           </div>
+          <div class="divider" />
           <div class="column is-12 has-text-centered">
             <nuxt-link class="button is-medium is-rounded is-gradient" to="./utsukuba#members">{{ $t('button.seeothers', { 0: $t('about.utsukuba.members.title').toLowerCase() } ) }}</nuxt-link>
           </div>
@@ -189,7 +189,7 @@ export default {
 
 <style lang="scss" scoped>
   p.midashi {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     margin-bottom: 0;
     color: #E62B1E;
     font-weight: bold;
@@ -200,10 +200,6 @@ export default {
   a {
     color: white;
     word-break: break-all;
-  }
-  #tedxutsukuba, #socialcapital, #team-content {
-    opacity: 0;
-    transition: all 0.5s;
   }
   #gallery {
     opacity: 0;
@@ -216,5 +212,8 @@ export default {
   }
   .reverse-row-order {
     flex-direction: row-reverse;
+  }
+  .ted-embed-wrap {
+    filter: drop-shadow(0px 12px 28px rgba(0,0,0,0.6));
   }
 </style>

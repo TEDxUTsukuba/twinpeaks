@@ -1,13 +1,14 @@
 <template>
-    <div class="youtube-frame">
-        <youtube 
-          ref="youtube"
-          @playing="playing"
-          :video-id="vId"
-          :player-vars="playerVars"
-        >
-        </youtube>
-    </div>
+  <figure class="image is-16by9">
+    <youtube 
+      class="has-ratio"
+      ref="youtube"
+      @playing="playing"
+      :video-id="vId"
+      :player-vars="playerVars"
+    >
+    </youtube>
+  </figure>
 </template>
 
 <script>
@@ -60,11 +61,6 @@ p{
   text-align: center;
   margin: 0 auto;
   padding: 0;
-}
-
-iframe {
-  width: 960px;
-  height: 540px;
 }
 
 </style>
