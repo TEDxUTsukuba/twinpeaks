@@ -32,25 +32,10 @@
       Basic Usage
     </h1>
     <div class="notification">
-      <h1 class="is-size-5">Googleシートを開く</h1>
-      <a class="has-text-info" href="https://docs.google.com/spreadsheets/d/1WTm0XrjQ_fYoQgM-BmD0Il6zG4xrogzhz9sAJx-c1y8/edit?usp=sharing" target="_blank" rel="noopener noreferrer">TEDxUTsukuba Members Public Data <i class="mdi mdi-open-in-new" /></a>
-      <p>
-        下記のいずれかのGoogleアカウントで、このGoogleシートにアクセスしてください。編集権限があるのは下記のアカウントと木下のアカウントのみですが、閲覧は誰でもできます。
-      </p>
-      <ul>
-        <li>tedxtsukuba&#64;gmail.com</li>
-        <li>tedxutsukuba&#64;gmail.com</li>
-      </ul>
-      <p>
-        <strong>スプレッドシートの埋まっている行を参考にすれば、ほとんど自力で埋められると思います！</strong> 
-      </p>
-    </div>
-
-    <div class="notification">
       <h1 class="is-size-5">オススメしたいTED/TEDxトークを選んで、リンクを取得する</h1>
       <p>
-        メンバー紹介のセクションを見る人の気持ちになってみましょう。興味の対象は人それぞれですが、オススメのTEDトークは結構な割合で興味を持たれるのでは？と勝手に予想しています。新入生の人はまだあまりトークをみたことがないかもしれませんが、この機会に自分のオススメトークを見つけましょう！後からでも簡単に変更できるので、安心してください。
-        <br>
+        ウェブサイトを見に来る人の興味の対象は人それぞれですが、TEDxUTsukubaのメンバーがオススメするTEDトークって結構興味持って見てもらえるんじゃないかと思っています。新入生の人はまだあまりトークをみたことがないかもしれませんが、この機会に自分のオススメトークを見つけてみましょう！ 後からでも簡単に変更できるので、そんなに気合入れて選ぼうとしなくて大丈夫です笑
+        <br><br>
         さて、<strong>TED</strong>トークは、そのほとんどがTED.comとYouTubeの両方で公開されています。一方で<strong>TEDx</strong>トークは主にYouTubeで公開されており、ごく一部のトークのみTED.comで公開されています。我々の方針としては、できる限りTED.comに誘導して、多くの人にTEDのコンテンツに触れてもらえるようにしようと思います。(YouTubeの方が慣れていて使いやすいという意見もあるかと思いますが...)<br><br>
         <strong class="has-text-success">TEDとYouTubeの両方で公開されているトークをオススメしたい場合</strong>
         <ul>
@@ -62,6 +47,21 @@
           <li>YouTubeで、共有ボタン<i class="mdi mdi-share" />から<span class="tag is-white">https://youtu.be/</span>で始まるURLを取得し、<span class="tag is-white">tedtalk_alt</span>に貼り付ける。なおブラウザのアドレスバーには<span class="tag is-white">https://www.youtube.com/</span>で始まるURLが表示されていると思いますが、こちらは使わないでください。</li>
           <li><span class="tag is-white">tedtalk</span>は空欄にする。</li>
         </ul>
+      </p>
+    </div>
+
+    <div class="notification">
+      <h1 class="is-size-5">Googleシートを開く</h1>
+      <a class="has-text-info" href="https://docs.google.com/spreadsheets/d/1WTm0XrjQ_fYoQgM-BmD0Il6zG4xrogzhz9sAJx-c1y8/edit?usp=sharing" target="_blank" rel="noopener noreferrer">TEDxUTsukuba Members Public Data <i class="mdi mdi-open-in-new" /></a>
+      <p>
+        下記のいずれかのGoogleアカウントで、このGoogleシートにアクセスしてください。編集権限があるのは下記のアカウントと木下のアカウントのみですが、閲覧は誰でもできます。
+      </p>
+      <ul>
+        <li>tedxtsukuba&#64;gmail.com</li>
+        <li>tedxutsukuba&#64;gmail.com</li>
+      </ul>
+      <p>
+        スプレッドシートの埋まっている行を参考にすれば、ほとんど自力で埋められると思います！
       </p>
     </div>
 

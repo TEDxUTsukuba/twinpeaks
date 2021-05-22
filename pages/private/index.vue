@@ -134,7 +134,7 @@
       },
       {
         title_ja: 'メンバー情報を追加・更新する',
-        title_en: '"Edit member information',
+        title_en: 'Edit member information',
         icon: 'account-box-multiple',
         path: '/private/how_to_update_team',
       },
