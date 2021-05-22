@@ -314,6 +314,11 @@ export default {
       'about/harry'
     ]
   },
+  router: {
+    scrollBehavior: function (to, from, savedPosition) {
+      return { x: 0, y: 0 }
+    }
+  },
   server: {
     port: 3000, // デフォルト: 3000
     host: '0.0.0.0' // デフォルト: localhost
