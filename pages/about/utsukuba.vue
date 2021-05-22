@@ -48,7 +48,7 @@
       <article v-html="$t('about.utsukuba.description.5')"></article>
     </section>
     <section class="section">
-      <Movie id="teaser" :vId='weAreTEDxUTsukuba' aPlay=true></Movie>
+      <Movie :vId='weAreTEDxUTsukuba' aPlay=true></Movie>
     </section>
     <!-- <section class="hero is-medium bg-red">
       <div class="hero-body">

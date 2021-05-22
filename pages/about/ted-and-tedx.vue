@@ -95,26 +95,21 @@
 
     <section class="section has-text-centered">
       <h1 class="title is-0 has-text-white">{{ $t('about.ted.watch')}}</h1>
-        <div class="columns is-multiline">
-          <div id="ted-embedded-top" class="column" style="position:relative;">
-            <iframe class="video" src="https://embed.ted.com/talks/john_maeda_designing_for_simplicity" width="854" height="480" style="position: relative;" frameborder="0" scrolling="no" allowfullscreen></iframe>
-            <br><br>
-            <p class="">{{ $t('about.ted.event')}}</p>
-            <p class="title">{{ $t('about.ted.talktitle')}}</p>
-            <p class="subtitle">{{ $t('about.ted.speaker')}}</p>
-            <a class="button is-rounded is-gradient" href="https://www.ted.com/talks">{{ $t('about.ted.watchmoreted')}}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
-          </div>
-          <br>
-          <div id="ted-embed-bottom" class="column" style="position:relative;">
-            <iframe class="video" src="https://embed.ted.com/talks/takaharu_tezuka_the_best_kindergarten_you_ve_ever_seen" width="854" height="480" style="position: relative;" frameborder="0" scrolling="no" allowfullscreen></iframe>
-            <br><br>
-            <p class="">{{ $t('about.tedx.event')}}</p>
-            <p class="title">{{ $t('about.tedx.talktitle')}}</p>
-            <p class="subtitle">{{ $t('about.tedx.speaker')}}</p>
-            <a class="button is-rounded is-gradient" target="_blank" href="https://www.ted.com/watch/tedx-talks">{{ $t('about.tedx.watchmoretedx')}}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
-          </div>
-        <!-- <Movie id="teaser" :vId='videoId4' :aPlay='autoplay'></Movie> -->
-      </div>
+      <figure class="image is-16by9">
+        <iframe class="has-ratio" src="https://embed.ted.com/talks/john_maeda_designing_for_simplicity" frameborder="0" allowfullscreen></iframe>
+      </figure>
+      <p class="">{{ $t('about.ted.event')}}</p>
+      <p class="title">{{ $t('about.ted.talktitle')}}</p>
+      <p class="subtitle">{{ $t('about.ted.speaker')}}</p>
+      <a class="button is-rounded is-gradient" href="https://www.ted.com/talks">{{ $t('about.ted.watchmoreted')}}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
+      <div class="divider" />
+      <figure class="image is-16by9">
+        <iframe class="has-ratio" src="https://embed.ted.com/talks/takaharu_tezuka_the_best_kindergarten_you_ve_ever_seen" frameborder="0" allowfullscreen></iframe>
+      </figure>
+      <p class="">{{ $t('about.tedx.event')}}</p>
+      <p class="title">{{ $t('about.tedx.talktitle')}}</p>
+      <p class="subtitle">{{ $t('about.tedx.speaker')}}</p>
+      <a class="button is-rounded is-gradient" target="_blank" href="https://www.ted.com/watch/tedx-talks">{{ $t('about.tedx.watchmoretedx')}}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
     </section>
 
     <section class="section has-text-centered">
@@ -230,13 +225,6 @@ export default {
     &.apple {
       min-height: 450px !important;
     }
-  }
-  iframe.video {
-    @media screen and (min-width: 769px) {
-      width: 48vw !important;
-      height: 27vw !important;
-    }
-    width: 100vw;
   }
 
   #ted {

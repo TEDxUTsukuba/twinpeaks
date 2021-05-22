@@ -219,8 +219,10 @@
         </section>
       </div>
     </section>
-    <section class="hero is-white">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1957.0340758696698!2d140.10173302442405!3d36.103447991333944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f8.1!3m3!1m2!1s0x0%3A0x1e70d22a5b012e11!2z562R5rOi5aSn5a2mIDVD5qOf77yI5L2T6Iq45qOf77yJ!5e0!3m2!1sja!2sjp!4v1612811039423!5m2!1sja!2sjp" width="100%" height="360" frameborder="0" style="margin: 0 auto; border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>      </div>
+    <section>
+      <figure class="image is-3by1">
+        <iframe class="has-ratio" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1957.0340758696698!2d140.10173302442405!3d36.103447991333944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f8.1!3m3!1m2!1s0x0%3A0x1e70d22a5b012e11!2z562R5rOi5aSn5a2mIDVD5qOf77yI5L2T6Iq45qOf77yJ!5e0!3m2!1sja!2sjp!4v1612811039423!5m2!1sja!2sjp" width="100%" rameborder="0" style="margin: 0 auto; border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </figure>
     </section>
   </section>
 </template>

@@ -23,7 +23,13 @@
                         
           </div>
         </div> -->
-     
+
+  
+      <section class="section">
+        <figure class="is-16by9">
+          <Movie :vId='jijimugeLiveStream' :aPlay='autoplay'></Movie>
+        </figure>
+      </section>   
 
     <section class="section" id="card-0">
       <h1 class="title is-0">
@@ -32,6 +38,7 @@
       <h1 class="subtitle has-text-white has-text-right has-text-centered-mobile">
         {{ $t('2020.speaker.description') }}
       </h1>
+      <div class="divider" />
       <Card id="card-1"
         :title = "$t('2020.speaker.sp1.name')"
         :subtitle = "$t('2020.speaker.sp1.position')"
@@ -64,12 +71,6 @@
         :youtubeId = "getYouTubeUrl($t('2020.speaker.sp4.youtubeId'))"
       >
       </Card>
-    </section>
-
-    <section class="hero is-large">
-      <div class="hero-body has-text-centered">
-        <Movie id="teaser" :vId='jijimugeLiveStream' :aPlay='autoplay'></Movie>
-      </div>
     </section>
 
     <section class="hero has-background-primary">
@@ -218,8 +219,10 @@
         </section>
       </div>
     </section>
-    <section class="hero is-white">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1322.7611665020916!2d140.09744825360198!3d36.10978103487121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x794e4bd21ab2280e!2z562R5rOi5aSn5a2mIOOCqOODs-ODkeODr-ODvOOCueOCv-OCuOOCqg!5e0!3m2!1sja!2sjp!4v1612814392563!5m2!1sja!2sjp" width="100%" height="360" frameborder="0" style="margin: 0 auto; border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <section>
+      <figure class="image is-3by1">
+        <iframe class="has-ratio" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1322.7611665020916!2d140.09744825360198!3d36.10978103487121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x794e4bd21ab2280e!2z562R5rOi5aSn5a2mIOOCqOODs-ODkeODr-ODvOOCueOCv-OCuOOCqg!5e0!3m2!1sja!2sjp!4v1612814392563!5m2!1sja!2sjp" width="100%" frameborder="0" style="margin: 0 auto; border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </figure>
     </section>
   </section>
 </template>
