@@ -1,6 +1,6 @@
 <template>
-  <div class="has-background-light">
-    <section class="hero is-halfheight" style="background-color: rgba(0, 192, 212);">
+  <div class="has-background-white">
+    <section class="hero is-halfheight" style="background-color: rgb(0, 192, 212);">
       <div class="hero-body">
         <div class="container has-text-centered">
           <h1 class="title is-1 has-text-white">
@@ -11,7 +11,7 @@
         </div>
       </div>
     </section>
-    <section class="section has-background-light">
+    <section class="section">
         <!-- <p v-if="pass !== 'jijimuge'">
           <span class="tag is-info is-primary is-medium">{{ $t('2020.participance.pass.inputpassword') }}</span>
         </p>
@@ -23,8 +23,8 @@
         <!-- <div class="has-text-left" v-if="pass == 'jijimuge'"> -->
         <div class="columns is-multiline">
           <div v-for="(item, index) in items" :key="index" class="column is-half">
-              <a :href="item.link" target="_blank">
-                <div class="notification is-white" style="box-shadow: rgba(150, 150, 151, 0.2) 0px 7px 20px 0px;">
+              <nuxt-link v-if="item.path" :to="item.path">
+                <div class="notification is-white" style="box-shadow: rgba(150, 150, 151, 0.4) 0px 7px 20px 0px;">
                   <div class="columns is-vcentered is-mobile">
                     <div class="column is-3-fullhd is-3-widescreen is-3-desktop is-4-tablet is-3-mobile has-text-centered">
                       <i v-if="$ua.isFromSmartphone()" :class="`mdi mdi-${item.icon}`" aria-hidden="true" style="font-size: 2rem; margin: 0; color: #00c0d4;"></i>
@@ -33,6 +33,23 @@
                     <div class="column">
                       <p v-if="$i18n.locale == 'ja'" class="title is-size-5">{{ item.title_ja }}</p>
                       <p v-else class="title is-size-5">{{ item.title_en }}</p>
+                      <p v-if="$i18n.locale == 'ja'" class="subtitle is-size-7">{{ item.title_en }}</p>
+                      <p v-else class="subtitle is-size-7">{{ item.title_ja }}
+                      <p style="margin-top: -1rem;"><span v-if="item.isPublished == false" class="tag is-danger has-text-weight-bold">{{ $t('button.unavailable') }}</span></p>
+                    </div>
+                  </div>
+                </div>
+              </nuxt-link>
+              <a v-if="item.url" :href="item.url" target="_blank">
+                <div class="notification is-white" style="box-shadow: rgba(150, 150, 151, 0.4) 0px 7px 20px 0px;">
+                  <div class="columns is-vcentered is-mobile">
+                    <div class="column is-3-fullhd is-3-widescreen is-3-desktop is-4-tablet is-3-mobile has-text-centered">
+                      <i v-if="$ua.isFromSmartphone()" :class="`mdi mdi-${item.icon}`" aria-hidden="true" style="font-size: 2rem; margin: 0; color: #00c0d4;"></i>
+                      <i v-else :class="`mdi mdi-${item.icon}`" aria-hidden="true" style="font-size: 4rem; margin: 0; color: #00c0d4;"></i>
+                    </div>
+                    <div class="column">
+                      <p v-if="$i18n.locale == 'ja'" class="title is-size-5">{{ item.title_ja }} <i class="mdi mdi-open-in-new" /></p>
+                      <p v-else class="title is-size-5">{{ item.title_en }} <i class="mdi mdi-open-in-new" /></p>
                       <p v-if="$i18n.locale == 'ja'" class="subtitle is-size-7">{{ item.title_en }}</p>
                       <p v-else class="subtitle is-size-7">{{ item.title_ja }}
                       <p style="margin-top: -1rem;"><span v-if="item.isPublished == false" class="tag is-danger has-text-weight-bold">{{ $t('button.unavailable') }}</span></p>
@@ -104,54 +121,47 @@
 
 <script>
  export default {
+  layout: "sidebar",
   data() {
    return {
     pass: '',
     items: [
       {
-        "title_ja": "デジタル名刺を作成する",
-        "title_en": "Create your own digital business card",
-        "icon": "card-account-details",
-        "link": "https://www.tedxutsukuba.com/private/business-card-generator",
-        "isPublished": true
+        title_ja: "デジタル名刺を作成する",
+        title_en: "Create your own digital business card",
+        icon: 'card-account-details',
+        path: '/private/business-card-generator',
       },
       {
-        "title_ja": "メンバー情報を追加・更新する",
-        "title_en": "Edit member information",
-        "icon": "account-box-multiple",
-        "link": "https://www.tedxutsukuba.com/private/how_to_update_team",
-        "isPublished": true
+        title_ja: 'メンバー情報を追加・更新する',
+        title_en: '"Edit member information',
+        icon: 'account-box-multiple',
+        path: '/private/how_to_update_team',
       },
       {
-        "title_ja": "ウェブサイトのお知らせを追加・更新する",
-        "title_en": "Edit an update to the news",
-        "icon": "file-document-edit",
-        "link": "https://www.tedxutsukuba.com/private/how_to_update_news",
-        "isPublished": true
+        title_ja: 'ウェブサイトのお知らせを追加・更新する',
+        title_en: 'Edit an update to the news',
+        icon: 'file-document-edit',
+        path: '/private/how_to_update_news'
       },
       {
-        "title_ja": "ウェブサイトの閲覧回数などを調べる",
-        "title_en": "See website analysis",
-        "icon": "google-analytics",
-        "link": "https://analytics.google.com",
-        "isPublished": true
+        title_ja: 'TEDxUTsukuba.comにイベント情報を追加・更新する',
+        title_en: 'Edit event information on TEDxUTsukuba.com',
+        icon: 'calendar-edit',
+        path: '/private/how_to_add_an_event',
       },
       {
-        "title_ja": "TED.comでイベント情報を編集する",
-        "title_en": "Edit event information on TED.com",
-        "icon": "calendar-edit",
-        "link": "https://organize.ted.com/",
-        "isPublished": true,
-        "eligibility": "ライセンスホルダーのみアクセス可能. TEDアカウントでログインが必要."
+        title_ja: 'TED.comのイベント情報を編集する',
+        title_en: 'Edit event information on TED.com',
+        icon: 'calendar-edit',
+        url: 'https://organize.ted.com/'
       },
       {
-        "title_ja": "TEDxUTsukuba.comにイベント情報を追加・更新する",
-        "title_en": "Edit event information on TEDxUTsukuba.com",
-        "icon": "calendar-edit",
-        "link": "https://www.tedxutsukuba.com/private/how_to_add_an_event",
-        "isPublished": true,
-        "eligibility": "tedxutsukuba@gmail.comでログイン"
-      }
+        title_ja: 'ウェブサイトの閲覧回数などを調べる',
+        title_en: 'See website analysis',
+        icon: 'google-analytics',
+        url: 'https://analytics.google.com'
+      },
     ]
    }
   },
