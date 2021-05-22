@@ -32,30 +32,26 @@
       Basic Usage
     </h1>
     <div class="notification">
-      <h1 class="is-size-5">Googleシートを開く / Open Google Sheets</h1>
+      <h1 class="is-size-5">Googleシートを開く</h1>
       <a class="has-text-info" href="https://docs.google.com/spreadsheets/d/1WTm0XrjQ_fYoQgM-BmD0Il6zG4xrogzhz9sAJx-c1y8/edit?usp=sharing" target="_blank" rel="noopener noreferrer">TEDxUTsukuba Members Public Data <i class="mdi mdi-open-in-new" /></a>
       <p>
-        下記のいずれかのGoogleアカウントで、このGoogleシートにアクセスしてください。
+        下記のいずれかのGoogleアカウントで、このGoogleシートにアクセスしてください。編集権限があるのは下記のアカウントと木下のアカウントのみですが、閲覧は誰でもできます。
       </p>
       <ul>
         <li>tedxtsukuba&#64;gmail.com</li>
         <li>tedxutsukuba&#64;gmail.com</li>
       </ul>
       <p>
-        なお編集権限があるのは下記のアカウントと木下のアカウントのみですが、閲覧は誰でもできます。
-      </p>
-    </div>
-    <div class="notification">
-      <h1 class="is-size-5">コンテンツを追加する / Add Contents</h1>
-      <p>
-        <strong>上記のスプレッドシートの埋まっている行を参考にすれば、問題なく全項目を入力できると思います！</strong> さらにいくつかのセルにはバリデーションを付けているので、適切でない値を入力するとアラートが出ます。それでもわからないことがあったら、下記の凡例を確認してみてください。ただし、オススメしたいTED/TEDxトークのリンクについては若干ややこしいので、この下のセクションで説明しておきます。
+        <strong>スプレッドシートの埋まっている行を参考にすれば、ほとんど自力で埋められると思います！</strong> 
       </p>
     </div>
 
     <div class="notification">
-      <h1 class="is-size-5">オススメしたいTED/TEDxトークのリンクについて</h1>
+      <h1 class="is-size-5">オススメしたいTED/TEDxトークを選んで、リンクを取得する</h1>
       <p>
-        <strong>TED</strong>トークのほとんどはTED.comとYouTubeの両方で公開されています。一方で<strong>TEDx</strong>トークは主にYouTubeで公開されており、ごく一部のトークのみTED.comで公開されています。我々の方針としては、できる限りTED.comに誘導して、多くの人にTEDのコンテンツに触れてもらえるようにしようと思います。(YouTubeの方が慣れていて使いやすいという意見もあるかと思いますが、ご理解ください)<br><br>
+        メンバー紹介のセクションを見る人の気持ちになってみましょう。興味の対象は人それぞれですが、オススメのTEDトークは結構な割合で興味を持たれるのでは？と勝手に予想しています。新入生の人はまだあまりトークをみたことがないかもしれませんが、この機会に自分のオススメトークを見つけましょう！後からでも簡単に変更できるので、安心してください。
+        <br>
+        さて、<strong>TED</strong>トークは、そのほとんどがTED.comとYouTubeの両方で公開されています。一方で<strong>TEDx</strong>トークは主にYouTubeで公開されており、ごく一部のトークのみTED.comで公開されています。我々の方針としては、できる限りTED.comに誘導して、多くの人にTEDのコンテンツに触れてもらえるようにしようと思います。(YouTubeの方が慣れていて使いやすいという意見もあるかと思いますが...)<br><br>
         <strong class="has-text-success">TEDとYouTubeの両方で公開されているトークをオススメしたい場合</strong>
         <ul>
           <li><span class="tag is-white">https://www.ted.com</span>から始まるTED.comのURLを<span class="tag is-white">tedtalk</span>に貼り付ける。</li>
@@ -66,6 +62,35 @@
           <li>YouTubeで、共有ボタン<i class="mdi mdi-share" />から<span class="tag is-white">https://youtu.be/</span>で始まるURLを取得し、<span class="tag is-white">tedtalk_alt</span>に貼り付ける。なおブラウザのアドレスバーには<span class="tag is-white">https://www.youtube.com/</span>で始まるURLが表示されていると思いますが、こちらは使わないでください。</li>
           <li><span class="tag is-white">tedtalk</span>は空欄にする。</li>
         </ul>
+      </p>
+    </div>
+
+    <div class="notification">
+      <h1 class="is-size-5">顔写真を追加する / Add Portrait</h1>
+      <p>
+        顔写真の掲載はプライバシーに関わるため<strong>任意</strong>としています。ただし、オーガナイザー・共同オーガナイザーは原則として掲載をお願いしています。
+      </p>
+      <p>
+        画像はPCでは3:2(横長)、モバイルでは1:1(スクエア)で表示されます。縦長の画像でもこのサイズに切り抜かれて表示されます。
+      </p>
+      <p>
+        掲載してよいという方は、手ブレしていない画像を1枚用意して、Googleドライブ <i class="mdi mdi-google-drive" /> の <a class="has-text-info" target="_blank">フォルダ <i class="mdi mdi-open-in-new" /></a>にアップロードしてください。各自で自分の顔写真を用意するのか、みんなで時間と場所を決めて集まって全員分の写真を撮るのかは、代によって方針が異なると思いますので、確認してみてください。
+      </p>
+      <p>
+        画像をアップロードする際には、
+        <ul>
+          <li>ファイル名を自分のIDにするなどして、誰が誰だかわかるようにしておいてください。</li>
+          <li>SlackかMessangerで木下宛に「顔写真をアップロードしておいたのでよろしく」的なメッセージをくれると助かります。</li>
+        </ul>
+      </p>
+      <p>
+        新しい画像に差し替えたいという場合も、同様の手順を踏んでください。
+      </p>
+    </div> 
+
+    <div class="notification">
+      <p>
+        最後に、掲載項目の詳細な凡例を載せておきます。
       </p>
     </div>
 
@@ -163,28 +188,6 @@
         </table>
       </div>
 
-    <div class="notification">
-      <h1 class="is-size-5">顔写真を追加する / Add Portrait</h1>
-      <p>
-        顔写真の掲載はプライバシーに関わるため<strong>任意</strong>としています。ただし、オーガナイザー・共同オーガナイザーは原則として掲載をお願いしています。
-      </p>
-      <p>
-        画像はPCでは3:2(横長)、モバイルでは1:1(スクエア)で表示されます。縦長の画像でもこのサイズに切り抜かれて表示されます。
-      </p>
-      <p>
-        掲載してよいという方は、手ブレしていない画像を1枚用意して、Googleドライブ <i class="mdi mdi-google-drive" /> の <a class="has-text-info" target="_blank">フォルダ <i class="mdi mdi-open-in-new" /></a>にアップロードしてください。各自で自分の顔写真を用意するのか、みんなで時間と場所を決めて集まって全員分の写真を撮るのかは、代によって方針が異なると思いますので、確認してみてください。
-      </p>
-      <p>
-        画像をアップロードする際には、
-        <ul>
-          <li>ファイル名を自分のIDにするなどして、誰が誰だかわかるようにしておいてください。</li>
-          <li>SlackかMessangerで木下宛に「顔写真をアップロードしておいたのでよろしく」的なメッセージをくれると助かります。</li>
-        </ul>
-      </p>
-      <p>
-        新しい画像に差し替えたいという場合も、同様の手順を踏んでください。
-      </p>
-    </div> 
     <div class="notification">
       <p>ご質問やご不明な点があればお気軽にお問い合わせください。</p>
     </div>
