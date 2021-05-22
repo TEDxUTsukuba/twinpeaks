@@ -104,23 +104,6 @@
       </section>
     </section>
 
-    <!-- <section class="section has-text-centered">
-      <b-collapse :open="false" position="is-bottom" aria-id="contentIdForA11y1">
-        <a class="button is-gradient is-rounded" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1" style="margin: 3rem auto;">
-            <b-icon :icon="!props.open ? 'menu-down' : 'menu-up'"></b-icon>
-            {{ !props.open ? 'Read statement' : 'Close' }}
-        </a>
-        <br><br>
-        <div class="column has-text-left">
-          <article>
-            {{ $t('2020.concept.statement1') }}<br>
-            {{ $t('2020.concept.statement2') }}<br>
-            {{ $t('2020.concept.statement3') }}
-          </article>
-        </div>
-      </b-collapse>
-    </section> -->
-
     <section class="hero">
       <div class="hero-body">
         <section class="section">
@@ -133,13 +116,13 @@
           <br><br>
           <div class="columns">
             <div class="column is-5">
-              <div class="nmp-card-light">
+              <div class="nmp-card-dark">
                 <div class="header" style="margin-bottom: 1rem;">
                   <span class="tag is-medium"><i class="mdi mdi-calendar-clock" /> {{ $t('2020.participance.free.time') }}</span>
                 </div>
                 <div class="">
-                  <h1 class="title is-3 has-text-dark">{{ $t('2020.participance.free.title') }}</h1>
-                  <p class="has-text-dark">{{ $t('2020.participance.free.intro') }}</p>
+                  <h1 class="title is-3">{{ $t('2020.participance.free.title') }}</h1>
+                  <p class="">{{ $t('2020.participance.free.intro') }}</p>
                   <br>
                   <ul>
                     <li><i class="mdi mdi-check-circle" /> {{ $t('2020.participance.free.charge') }}</li>
@@ -149,24 +132,23 @@
               </div>
             </div>
             <div class="column is-7">
-              <div class="nmp-card-light">
+              <div class="nmp-card-dark">
                 <div class="header" style="margin-bottom: 1rem;">
                   <span class="tag is-medium"><i class="mdi mdi-calendar-clock" /> {{ $t('2020.participance.premium.time') }}</span>
                 </div>
                 <div class="">
-                  <h1 class="title is-3 has-text-dark">{{ $t('2020.participance.premium.title') }}</h1>
-                  <p class="has-text-dark">{{ $t('2020.participance.premium.intro') }}</p>
+                  <h1 class="title is-3">{{ $t('2020.participance.premium.title') }}</h1>
+                  <p class="">{{ $t('2020.participance.premium.intro') }}</p>
                   <br>
                   <ul>
                     <li><i class="mdi mdi-check-circle" /> {{ $t('2020.participance.premium.charge') }}</li>
                     <li><i class="mdi mdi-check-circle" /> {{ $t('2020.participance.premium.reservation') }}</li>
                   </ul>
-                  <hr>
                   <div class="columns is-multiline is-vcentered">
                     <div class="column has-text-right">
-                      <p class="is-size-7 has-text-dark" v-if="$i18n.locale == 'en'">{{ $t('2020.participance.premium.airmeet') }}</p>
-                      <img src="~/assets/partners/2020/logo/AM_Full_Logo/PNG/AM_Logo_Dark_WM.png" width="150px" style="background-color: white; padding: 15px;" alt="Airmeet Logo"> 
-                      <p class="is-size-7 has-text-dark" v-if="$i18n.locale == 'ja'">{{ $t('2020.participance.premium.airmeet') }}</p>
+                      <p class="is-size-7" v-if="$i18n.locale == 'en'">{{ $t('2020.participance.premium.airmeet') }}</p>
+                      <img src="~/assets/partners/2020/logo/AM_Full_Logo/PNG/AM_Logo_Light_WM.png" width="150px" style="padding: 15px;" alt="Airmeet Logo"> 
+                      <p class="is-size-7" v-if="$i18n.locale == 'ja'">{{ $t('2020.participance.premium.airmeet') }}</p>
                     </div>
                   </div>
                 </div>
@@ -197,7 +179,7 @@
         </div>
       </div>
       <section class="section has-text-centered">
-        <a class="button is-rounded is-gradient" href="https://flic.kr/s/aHsmSNKeT6">{{ $t('2020.highlight.detail') }}</a>
+        <a class="button is-rounded is-gradient" href="https://flic.kr/s/aHsmSNKeT6">{{ $t('2020.highlight.detail') }} <i class="mdi mdi-open-in-new" /></a>
       </section>
     </section>
     <section class="hero bg-venue" id="venue-title">
