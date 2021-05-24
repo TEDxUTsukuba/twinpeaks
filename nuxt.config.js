@@ -181,11 +181,11 @@ export default {
         vueI18n: {
           fallbackLocale: 'ja'
         },
-        detectBrowserLanguage: {
-          useCookie: false,
-          cookieKey: 'i18n_redirected',
-          onlyOnRoot: true,  // recommended
-        },
+        // detectBrowserLanguage: {
+        //   useCookie: false,
+        //   cookieKey: 'i18n_redirected',
+        //   onlyOnRoot: true,  // recommended
+        // },
         // seo: true,
         vueI18nLoader: true,
         lazy: true,
