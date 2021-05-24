@@ -8,7 +8,7 @@
         <video v-show="isVideoActive" data-not-lazy
         src="~/assets/nograin_short.mp4" 
         autoplay 
-        preload="auto" 
+        muted
         v-on:ended="onEnded"
         width="100%"
         />
