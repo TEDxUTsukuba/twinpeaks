@@ -3,15 +3,30 @@
     <!-- <div>
       <LogoAnimation id="top-logo" />
     </div> -->
-    <div id="top-carousel-wrapper" class="top-carousel-wrapper columns is-gapless is-vcentered has-background-black" style="margin-bottom: 0;">
+    <section class="hero is-black" style="height: calc(100vw*9/16)">
+      <figure class="is-16by9">
+        <video v-show="isVideoActive" data-not-lazy
+        src="~/assets/nograin_short.mp4" 
+        autoplay 
+        preload="auto" 
+        v-on:ended="onEnded"
+        width="100%"
+        />
+        <img v-show="isVideoActive == false" data-not-lazy
+        src="~/assets/u_logo_banner.png"
+        width="100%"
+        />
+      </figure>
+    </section>
+
+    <!-- <div id="top-carousel-wrapper" class="top-carousel-wrapper columns is-gapless is-vcentered has-background-black" style="margin-bottom: 0;">
       <div class="column is-12-touch">
         <Carousel id="top-carousel" />
       </div>
       <div class="column is-4-widescreen is-5-fullhd vertical-center has-text-centered" id="top-carousel-wrapper-logo-section">
         <img data-not-lazy src="~/assets/logo/u_bgblack_oneline.png" width="60%" alt="TEDxUTsukuba Logo">
-        <!-- <LogoAnimation id="top-logo" /> -->
       </div>
-    </div>
+    </div> -->
     <!-- <div class="bg-jijimuge" style="padding-top: 3.25rem;">  
       <div id="top-photoframe" class="top-photoframe">
         <nuxt-link :to="localePath('/events/2020')">
@@ -51,7 +66,7 @@
                     <br class="mobile-br">
                     {{ $t('intro.headline2') }}
                   </h1>
-                    <img id="rocket" src="~/assets/svg/rocket.png" width="100%" style="z-index: 0;" alt="">
+                    <img data-not-lazy id="rocket" src="~/assets/svg/rocket.png" width="100%" style="z-index: 0;" alt="">
                   <article class="is-size-6 has-text-light">
                     {{ $t('intro.description') }}
                   </article>
@@ -128,7 +143,7 @@
 
 <script>
 import Card from '~/components/Card'
-import Carousel from '~/components/Carousel'
+// import Carousel from '~/components/Carousel'
 import PopularArticles from '~/components/PopularArticles'
 import { request, gql } from '~/lib/datocms'
 import { Image } from "vue-datocms";
@@ -142,7 +157,8 @@ import parseISO from 'date-fns/parseISO'
 
 export default {
   components: {
-    Card, Carousel, PopularArticles, "datocms-image": Image
+    Card, PopularArticles, "datocms-image": Image,
+    // Carousel
   },
   data() {
     return {
@@ -152,6 +168,7 @@ export default {
       todayDate: Date.now(),
       eventDate: Date(2020, 11, 29, 0, 0, 0),
       isAlertActive: true,
+      isVideoActive: true
     }
   },
   async asyncData({ params }) {
@@ -195,18 +212,18 @@ export default {
       //   // アニメーションが終わってもclassを削除しない
       //   .reverse(false)
 
-      const scene2 = this.$scrollmagic
-        .scene({
-          triggerElement: '#top-carousel-wrapper',
-          triggerHook: 0.5,
-          offset: 0,
-          reverse: false
-        })
-        .setTween('#intro', {
-          css: {
-            opacity: 1
-          }
-        })
+      // const scene2 = this.$scrollmagic
+      //   .scene({
+      //     triggerElement: '#top-carousel-wrapper',
+      //     triggerHook: 0.5,
+      //     offset: 0,
+      //     reverse: false
+      //   })
+      //   .setTween('#intro', {
+      //     css: {
+      //       opacity: 1
+      //     }
+      //   })
 
       const scene3 = this.$scrollmagic
         .scene({
@@ -221,16 +238,19 @@ export default {
           }
         })
         // this.$scrollmagic.addScene(scene1)
-        this.$scrollmagic.addScene(scene2)
+        // this.$scrollmagic.addScene(scene2)
         this.$scrollmagic.addScene(scene3)
     } else {
-      document.getElementById("intro").style.opacity = 1;
+      // document.getElementById("intro").style.opacity = 1;
       document.getElementById("notice").style.opacity = 1;
     }
   },
   methods: {
     formatDate(date) {
       return format(parseISO(date), 'PPP')
+    },
+    onEnded() {
+      this.isVideoActive = false;
     }
   }
 }
@@ -259,7 +279,7 @@ export default {
   h1.thin {
     font-weight: 100 !important;
   }
-  #intro, #notice {
+  #notice {
     opacity: 0;
     transition: all 0.25s;
   }
