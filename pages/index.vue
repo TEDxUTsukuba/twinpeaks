@@ -3,22 +3,23 @@
     <!-- <div>
       <LogoAnimation id="top-logo" />
     </div> -->
-    <section class="hero is-black" style="height: calc(100vw*9/16)">
-      <figure class="is-16by9">
-        <video v-show="isVideoActive" data-not-lazy
-        src="~/assets/nograin_short.mp4" 
-        autoplay 
-        muted
-        v-on:ended="onEnded"
-        width="100%"
+    <section class="hero is-black" style="">
+      <figure class="image" style="height: calc(100vw*5/12); overflow: hidden;">
+        <video v-show="isVideoActive"
+          src="~/assets/nograin_short.mp4"  
+          autoplay
+          :muted="isMuted"
+          v-on:ended="onEnded"
+          width="100%"
+          style="position: absolute; top:-100%; left:0; right: 0; bottom:-100%; margin: auto;"
         />
         <img v-show="isVideoActive == false" data-not-lazy
-        src="~/assets/u_logo_banner.png"
-        width="100%"
+          src="~/assets/u_logo_banner.png"
+          width="100%"
+          style="position: absolute; top:-100%; left:0; right: 0; bottom:-100%; margin: auto;"
         />
       </figure>
     </section>
-
     <!-- <div id="top-carousel-wrapper" class="top-carousel-wrapper columns is-gapless is-vcentered has-background-black" style="margin-bottom: 0;">
       <div class="column is-12-touch">
         <Carousel id="top-carousel" />
@@ -168,7 +169,8 @@ export default {
       todayDate: Date.now(),
       eventDate: Date(2020, 11, 29, 0, 0, 0),
       isAlertActive: true,
-      isVideoActive: true
+      isVideoActive: true,
+      isMuted: true
     }
   },
   async asyncData({ params }) {
@@ -197,8 +199,15 @@ export default {
     }
   },
   mounted() {
-    const browser = this.$ua.browser()
-    if (browser !== 'Safari') {
+    if (this.$ua.isFromPc() && this.$ua.browser() !== 'Chrome') {
+      this.isMuted = false;
+      this.$buefy.toast.open({
+        message: 'Audio On',
+        position: 'is-top',
+        duration: 7000
+      })
+    }
+    if (this.$ua.browser() !== 'Safari') {
       // const scene1 = this.$scrollmagic
       //   .scene({
       //     triggerElement: '#top-logo',
@@ -239,10 +248,10 @@ export default {
         })
         // this.$scrollmagic.addScene(scene1)
         // this.$scrollmagic.addScene(scene2)
-        this.$scrollmagic.addScene(scene3)
+        // this.$scrollmagic.addScene(scene3)
     } else {
       // document.getElementById("intro").style.opacity = 1;
-      document.getElementById("notice").style.opacity = 1;
+      // document.getElementById("notice").style.opacity = 1;
     }
   },
   methods: {
@@ -280,7 +289,7 @@ export default {
     font-weight: 100 !important;
   }
   #notice {
-    opacity: 0;
+    opacity: 1;
     transition: all 0.25s;
   }
   #top-carousel {
