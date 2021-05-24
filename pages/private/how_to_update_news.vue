@@ -23,7 +23,9 @@
       編集の手順を説明したスライドを作ってみました！<br>
     </div>
     <div id="teaser" style="margin-top: 3vh;">
-      <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTXWOi21MoFS5Ndn-D6zw5M9AXKP17rCyHTUFb0mSOdqw_6AYMEKhRzH1ojV68ij6oeDcbnEEhVIbA6/embed?start=false&loop=false&delayms=3000" frameborder="0" width="800" height="450" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      <figure class="image is-16by9">
+        <iframe class="has-ratio" src="https://docs.google.com/presentation/d/e/2PACX-1vTXWOi21MoFS5Ndn-D6zw5M9AXKP17rCyHTUFb0mSOdqw_6AYMEKhRzH1ojV68ij6oeDcbnEEhVIbA6/embed?start=false&loop=false&delayms=3000" frameborder="0" width="800" height="450" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      </figure>
     </div>
     <hr>
     <div>
