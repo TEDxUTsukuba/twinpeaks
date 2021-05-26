@@ -49,6 +49,7 @@ $light: #F1F4F7;
 // $dark: #131313;
 // $dark: #1c1c1c;
 $black: hsl(0, 0%, 4%);
+$black-bis: hsl(0, 0%, 7%);
 $grey-darker: hsl(0, 0%, 21%);
 $dark1: #0c0c0c;
 $black-ter: hsl(0, 0%, 14%);
@@ -361,7 +362,7 @@ section#wrapper {
 section#wrapper-dark {
   height: 100%;
   background-attachment: fixed !important;
-  background-color: hsl(0, 0, 14%);
+  background-color: $black-ter;
   // background-color: rgb(161, 144, 144);
   // background: linear-gradient(165deg, hsl(0, 0, 22%) 0, hsl(0, 0, 4%) 100%);
   background-repeat: no-repeat;
@@ -395,10 +396,6 @@ section#wrapper-red {
   background-color: $primary;
 }
 
-section#wrapper-black {
-  background-color: #000 !important;
-}
-
 .hero-body {
   margin: 0;
   padding: 0;
@@ -422,19 +419,6 @@ section.section {
   @media screen and (min-width: 1410px) {
     margin: 0 auto !important;
     width: 1200px;
-  }
-}
-
-section.section-narrow {
-  margin: 0vh 20vw !important;
-  padding: 3rem 1.5rem;
-
-  @media screen and (max-width: 540px) {
-    margin: 0vh 0vw !important;
-  }
-
-  @media screen and (min-width: 541px) and (max-width: 1216px) {
-    margin: 0vh 12vw !important;
   }
 }
 
@@ -466,22 +450,6 @@ section.section-wide {
   @media screen and (min-width: 1025px) {
     padding: 20px;
   }
-}
-
-br.mobile-br {
-  @media screen and (max-width: 540px) {
-    display: block;
-  }
-
-  display: none;
-}
-
-br.desktop-br {
-  @media screen and (max-width: 540px) {
-    display: none;
-  }
-
-  display: block;
 }
 
 .nmp-card {
@@ -768,10 +736,6 @@ br.desktop-br {
   padding-top: 10vh;
 }
 
-// .icon {
-//   padding-left: 10px;
-// }
-
 .button {
   &.is-gradient {
     border: none;
@@ -792,8 +756,8 @@ br.desktop-br {
   }
 }
 
-a.text {
-  color: orange;
+a[href*="http"]:not(.navbar-item, .navbar-link, .button, .icon) {
+  color: hsl(217, 71%, 53%);
   text-decoration: underline;
 
   &:hover {
@@ -913,6 +877,13 @@ span.is-red {
 
   to {
     opacity: 1;
+  }
+}
+
+.v-hl-btn-next,
+.v-hl-btn-prev {
+  @media screen and (max-width: 639px) {
+    transform: translateX(0) !important;
   }
 }
 
