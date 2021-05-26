@@ -128,6 +128,10 @@ export default {
     {
       src: '~/plugins/datocms',
       ssr: false
+    },
+    {
+      src: '~/plugins/vue-horizontal',
+      ssr: false
     }
   ],
   /*

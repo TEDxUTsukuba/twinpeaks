@@ -38,10 +38,10 @@
       </div>
       <section id="top-title" class="section has-text-centered has-text-weight-light has-text-light" style="padding-bottom: 20vh;">
         <h1 class="title is-1 is-spaced" style="letter-spacing: -1px;">
-          {{ $t('event.title1') }}<br class="mobile-br">{{ $t('event.title2') }}<br class="mobile-br">{{ $t('event.title3') }}
+          {{ $t('event.title1') }}<br class="is-hidden-tablet">{{ $t('event.title2') }}<br class="is-hidden-tablet">{{ $t('event.title3') }}
         </h1>
         <h1 class="subtitle is-5 has-text-weight-normal has-text-white">
-          {{ $t('event.subtitle1') }}<br class="mobile-br">{{ $t('event.subtitle2') }}
+          {{ $t('event.subtitle1') }}<br class="is-hidden-mobile">{{ $t('event.subtitle2') }}
         </h1>
         <br>
         <nuxt-link :to="localePath('/events/2020')" class="button is-gradient is-rounded">{{ $t('button.discover') }}</nuxt-link>
@@ -59,12 +59,12 @@
               <div class="column is-7-widescreen is-8-desktop is-full-tablet is-full-mobile">
                   <h1 v-if="$i18n.locale == 'ja'" class="title is-2 is-size-4-mobile has-text-weight-light">
                     {{ $t('intro.headline1') }}
-                    <br>
+                    <br class="is-hidden-mobile">
                     {{ $t('intro.headline2') }}
                   </h1>
                   <h1 v-if="$i18n.locale == 'en'" class="title is-2 is-size-4-mobile has-text-weight-light">
                     {{ $t('intro.headline1') }}
-                    <br class="mobile-br">
+                    <br class="is-hidden-mobile">
                     {{ $t('intro.headline2') }}
                   </h1>
                     <img data-not-lazy id="rocket" src="~/assets/svg/rocket.png" width="100%" style="z-index: 0;" alt="">
@@ -94,45 +94,47 @@
         <h1 class="title is-1 has-text-centered">
           <span class="">{{ $t('news.title') }}</span>
         </h1>
-        <br>
-        <div class="columns is-variable is-6 is-multiline is-centered">
-          <div class="column is-4-widescreen is-6-desktop is-6-tablet" v-for="(notice, index) in notices" :key="index">
-            <div class="nmp-dark">
-              <header class="card-header">
-                <p class="card-header-title">
-                  <span class="is-size-7 has-text-grey">{{ formatDate(notice.updatedAt) }}</span>
-                </p>
-              </header>
-              <div class="card-image">
-                <!-- <datocms-image :data="notice.image.responsiveImage" :alt="notice.image.responsiveImage.alt" /> -->
-                <figure class="image is-5by3">
-                  <datocms-image :data="notice.image.responsiveImage" :alt="notice.alt" style="position: initial; object-fit:"/>
-                </figure>
-              </div>
-              <div class="card-content">{{ notice.image.responsiveImage.width}}
-                <h2 class="title is-size-5">{{ notice.title }}</h2>
-                <p class="has-text-grey-light">{{ notice.shortDescription }}</p>
-                <!-- <br>
-                <nav class="level is-mobile">
-                  <div class="level-left">
-                    <p class="level-left">
-                    </p>
-                  </div>
-                  <div class="level-right">
-                    <p class="level-item">
-                      <nuxt-link class="button is-rounded is-gradient" :to="`~/news/`">{{ $t('button.readmore') }}</nuxt-link>
-                    </p>
-                  </div>
-                </nav> -->
-              </div>
+      </div>
+    </section>
+    <section class="section">
+      <div>
+      <vue-horizontal class="columns">
+        <div class="item column is-12-mobile is-6-tablet is-6-desktop" v-for="(notice, index) in notices" :key="index">
+          <div class="nmp-dark" style="margin: 1rem 1.5rem;">
+            <header class="card-header">
+              <p class="card-header-title">
+                <span class="is-size-7 has-text-grey">{{ formatDate(notice.updatedAt) }}</span>
+              </p>
+            </header>
+            <div class="card-image">
+              <!-- <datocms-image :data="notice.image.responsiveImage" :alt="notice.image.responsiveImage.alt" /> -->
+              <figure class="image is-5by3">
+                <datocms-image :data="notice.image.responsiveImage" :alt="notice.alt" style="position: initial; object-fit:"/>
+              </figure>
+            </div>
+            <div class="card-content">{{ notice.image.responsiveImage.width}}
+              <h2 class="title is-size-5">{{ notice.title }}</h2>
+              <p class="has-text-grey-light">{{ notice.shortDescription }}</p>
+              <!-- <br>
+              <nav class="level is-mobile">
+                <div class="level-left">
+                  <p class="level-left">
+                  </p>
+                </div>
+                <div class="level-right">
+                  <p class="level-item">
+                    <nuxt-link class="button is-rounded is-gradient" :to="`~/news/`">{{ $t('button.readmore') }}</nuxt-link>
+                  </p>
+                </div>
+              </nav> -->
             </div>
           </div>
         </div>
-        <br>
-        <div class="has-text-centered">
-          <nuxt-link :to="localePath('/news')" class="button is-white is-rounded">{{ $t('button.archive') }}</nuxt-link>
-        </div>
-      </div>
+      </vue-horizontal>
+    </div>
+    <div class="has-text-centered">
+      <nuxt-link :to="localePath('/news')" class="button is-white is-rounded">{{ $t('button.archive') }}</nuxt-link>
+    </div>
     </section>
 
     <!-- <div class="has-text-centered">
@@ -150,6 +152,7 @@ import { request, gql } from '~/lib/datocms'
 import { Image } from "vue-datocms";
 import format from 'date-fns/format'
 import parseISO from 'date-fns/parseISO'
+import VueHorizontal from 'vue-horizontal'
 // import LogoAnimation from '~/components/LogoAnimation'
 // import Movie from '~/components/Movie'
 // const Card = () => import('~/components/Card')
@@ -158,7 +161,7 @@ import parseISO from 'date-fns/parseISO'
 
 export default {
   components: {
-    Card, PopularArticles, "datocms-image": Image,
+    Card, PopularArticles, "datocms-image": Image, VueHorizontal
     // Carousel
   },
   data() {
@@ -177,7 +180,7 @@ export default {
     const data = await request({
       query: gql`
         {
-          notices: allNotices(first: "3", locale: ja, orderBy: updatedAt_DESC) {
+          notices: allNotices(first: "6", locale: ja, orderBy: updatedAt_DESC) {
             title
             shortDescription
             updatedAt
@@ -203,8 +206,9 @@ export default {
       this.isMuted = false;
       this.$buefy.toast.open({
         message: 'Audio On',
+        type: 'is-light',
         position: 'is-top',
-        duration: 7000
+        duration: 7500
       })
     }
     if (this.$ua.browser() !== 'Safari') {
@@ -302,34 +306,7 @@ export default {
   #top-logo {
     width: 100%;
   }
-  // @media screen and (min-width: 1024px) {
-  //   .top-carousel-wrapper {
-  //     padding: 6vh 0 3vh 0;
-  //     background: url("~@/assets/wallpapers/ishihiro.jpg") no-repeat center top;
-  //     background-size: cover;
-  //     background-attachment: fixed;
-  //     -webkit-backface-visibility:hidden;
-  //     backface-visibility:hidden;
-  //     z-index: 0;
-  //     overflow: hidden;
-  //     position: relative;
-  //     .columns {
-  //       margin: 0;
-  //     }
-  //   }
-  //   .top-carousel-wrapper:before {
-  //     content: "";
-  //     display: block;
-  //     position: absolute;
-  //     background: inherit;
-  //     filter: saturate(125%) contrast(60%) blur(5px);
-  //     top: -20px;
-  //     right: -20px;
-  //     bottom: -20px;
-  //     left: -20px;
-  //     z-index: -1;
-  //   }
-  // }
+
   #top-carousel-wrapper-logo-section {
     @media screen and (max-width: 1215px) {
       display: none;
