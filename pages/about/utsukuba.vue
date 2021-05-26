@@ -21,12 +21,11 @@
 
     <section class="hero">
       <figure class="image is-2by1" v-if="$ua.isFromSmartphone()">
-        <img src="~/assets/wallpapers/1440px-Fountain,_Univ._of_Tsukuba.jpg" style="object-fit: cover; filter: saturate(150%) brightness(100%) contrast(50%);">
+        <img src="~/assets/wallpapers/DSC_3942.jpg" style="object-fit: cover; filter: saturate(150%) brightness(120%);">
       </figure>
       <figure class="image is-3by1" v-else>
-        <img src="~/assets/wallpapers/1440px-Fountain,_Univ._of_Tsukuba.jpg" style="object-fit: cover; filter: saturate(150%) brightness(100%) contrast(50%);">
+        <img src="~/assets/wallpapers/DSC_3942.jpg" style="object-fit: cover; filter: saturate(150%) brightness(120%);">
       </figure>
-      <p class="is-size-7 has-text-grey has-text-right"><a class="is-size-7 has-text-grey" href="//commons.wikimedia.org/wiki/User:Miyuki_Meinaka" title="User:Miyuki Meinaka">Miyuki Meinaka</a> - <span class="int-own-work has-text-grey is-size-7" :lang="$i18n.locale">投稿者自身による作品</span>, <a class="is-size-7 has-text-grey" href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC 表示-継承 4.0</a>, <a class="is-size-7 has-text-grey" href="https://commons.wikimedia.org/w/index.php?curid=74724255">リンク</a></p>
     </section>
     
     <section class="section" id="tedxutsukuba">
@@ -36,10 +35,10 @@
 
     <section class="hero">
       <figure class="image is-2by1" v-if="$ua.isFromSmartphone()">
-        <img src="~/assets/wallpapers/tedxutsukubalive.jpg" style="object-fit: cover; filter: saturate(150%) contrast(50%);">
+        <img src="~/assets/wallpapers/tedxutsukubalive.jpg" style="object-fit: cover; filter: saturate(125%) brightness(110%) contrast(75%);">
       </figure>
       <figure class="image is-3by1" v-else>
-        <img src="~/assets/wallpapers/tedxutsukubalive.jpg" style="object-fit: cover; filter: saturate(150%) contrast(50%);">
+        <img src="~/assets/wallpapers/tedxutsukubalive.jpg" style="object-fit: cover; filter: saturate(125%) brightness(110%) contrast(75%);">
       </figure>
     </section>
 
