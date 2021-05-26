@@ -185,11 +185,12 @@ export default {
         vueI18n: {
           fallbackLocale: 'ja'
         },
-        // detectBrowserLanguage: {
-        //   useCookie: false,
-        //   cookieKey: 'i18n_redirected',
-        //   onlyOnRoot: true,  // recommended
-        // },
+        detectBrowserLanguage: {
+          useCookie: true,
+          cookieKey: 'i18n_redirected',
+        //   alwaysRedirect: false,
+          onlyOnRoot: true,  // recommended
+        },
         // seo: true,
         vueI18nLoader: true,
         lazy: true,
@@ -226,7 +227,8 @@ export default {
     //     name: 'img/[hash:7]-[width].[ext]',
     //     format: 'png'
     //   }
-    // ]
+    // ],
+    'cookie-universal-nuxt',
   ],
 
   // fontawesome: {
