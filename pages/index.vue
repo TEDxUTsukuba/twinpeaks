@@ -4,7 +4,7 @@
       <LogoAnimation id="top-logo" />
     </div> -->
     <section class="hero is-black" style="">
-      <figure class="image" style="height: calc(100vw*9/16); overflow: hidden;">
+      <figure class="image" style="height: calc(100vw*5/12); overflow: hidden;">
         <video v-show="isVideoActive && !this.$cookies.get('isVideoPlayed')"
           src="~/assets/nograin_short.mp4"  
           autoplay
@@ -13,14 +13,14 @@
           width="100%"
           style="position: absolute; top:-100%; left:0; right: 0; bottom:-100%; margin: auto;"
         />
-        <!-- <img v-show="isVideoActive == false || this.$cookies.get('isVideoPlayed')" data-not-lazy
+        <img v-show="isVideoActive == false || this.$cookies.get('isVideoPlayed')" data-not-lazy
           src="~/assets/u_logo_banner.png"
           width="100%"
           style="position: absolute; top:-100%; left:0; right: 0; bottom:-100%; margin: auto;"
-        /> -->
-        <div v-show="isVideoActive == false || this.$cookies.get('isVideoPlayed')" data-not-lazy>
+        />
+        <!-- <div v-show="isVideoActive == false || this.$cookies.get('isVideoPlayed')" data-not-lazy>
           <Carousel id="top-carousel" />
-        </div>
+        </div> -->
       </figure>
     </section>
     <!-- <div id="top-carousel-wrapper" class="top-carousel-wrapper columns is-gapless is-vcentered has-background-black" style="margin-bottom: 0;">
@@ -150,7 +150,7 @@
 
 <script>
 import Card from '~/components/Card'
-import Carousel from '~/components/Carousel'
+// import Carousel from '~/components/Carousel'
 import PopularArticles from '~/components/PopularArticles'
 import { request, gql } from '~/lib/datocms'
 import { Image } from "vue-datocms";
@@ -163,7 +163,7 @@ import $cookies from "cookie-universal-nuxt";
 export default {
   components: {
     Card, PopularArticles, "datocms-image": Image, VueHorizontal,
-    Carousel
+    // Carousel
   },
   data() {
     return {
