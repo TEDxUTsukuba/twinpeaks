@@ -12,10 +12,10 @@
       <h1 class="title is-0" v-html="$t('about.university.title')"></h1>
       <article v-html="$t('about.university.description')"></article>
       <p class="has-text-right">
-        <a class="has-text-info" v-if="$i18n.locale == 'en'" href="https://www.tsukuba.ac.jp/en" target="_blank">Official Website <i class="mdi mdi-open-in-new" /></a>
-        <a class="has-text-info" v-if="$i18n.locale == 'ja'" href="https://www.tsukuba.ac.jp/" target="_blank">公式サイト <i class="mdi mdi-open-in-new" /></a>
+        <a v-if="$i18n.locale == 'en'" href="https://www.tsukuba.ac.jp/en" target="_blank">Official Website <i class="mdi mdi-open-in-new" /></a>
+        <a v-if="$i18n.locale == 'ja'" href="https://www.tsukuba.ac.jp/" target="_blank">公式サイト <i class="mdi mdi-open-in-new" /></a>
         <br>
-        <a class="has-text-info" href="https://youtu.be/PTRhU_RnayM" target="_blank">Graduate School Official Trailer (YouTube) <i class="mdi mdi-open-in-new" /></a> 
+        <a href="https://youtu.be/PTRhU_RnayM" target="_blank">Graduate School Official Trailer (YouTube) <i class="mdi mdi-open-in-new" /></a> 
       </p>
     </section>
 

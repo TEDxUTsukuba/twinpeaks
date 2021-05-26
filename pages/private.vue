@@ -23,7 +23,7 @@
             </nuxt-link>
             <a v-if="item.url"
               :href="item.url"
-              class="is-size-7"
+              class="is-size-7 has-text-dark"
               target="_blank"
             >
               <i :class="`mdi mdi-${item.icon}`" />
