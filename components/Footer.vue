@@ -1,22 +1,19 @@
 <template>
   <section id="wrapper" class="hero font-awesome">
-      <section class="section has-text-centered">
+      <!-- <section class="section has-text-centered">
         <h1 class="heading is-size-5 has-text-centered">
           <span class="has-text-dark">{{ $t('social.title') }}</span>
         </h1>
-        <a class="icon-circle fb" href="https://www.facebook.com/tedxutsukuba/" target="_blank" rel="noopener noreferrer">
-          <!-- <font-awesome-icon :icon="['fab', 'facebook-square']" /> -->
-          <iconFB alt="Facebook" style="width: 2rem;" />
+        <a class="has-text-primary is-size-1 fb" href="https://www.facebook.com/tedxutsukuba/" target="_blank" rel="noopener noreferrer">
+          <i class="mdi mdi-facebook" />
         </a>
-        <a class="icon-circle ig" href="https://www.instagram.com/tedxutsukuba/" target="_blank" rel="noopener noreferrer">
-          <!-- <font-awesome-icon :icon="['fab', 'instagram']" /> -->
-          <iconIG alt="Instagram" style="width: 2rem;" />
+        <a class="has-text-primary is-size-1 ig" href="https://www.instagram.com/tedxutsukuba/" target="_blank" rel="noopener noreferrer">
+          <i class="mdi mdi-instagram" />
         </a>
-        <a class="icon-circle tw" href="https://www.twitter.com/tedxutsukuba/" target="_blank" rel="noopener noreferrer">
-          <!-- <font-awesome-icon :icon="['fab', 'twitter']" /> -->
-          <iconTW alt="Twitter" style="width: 2rem;" />
+        <a class="has-text-primary is-size-1 tw" href="https://www.twitter.com/tedxutsukuba/" target="_blank" rel="noopener noreferrer">
+          <i class="mdi mdi-twitter" />
         </a>
-      </section>
+      </section> -->
         
       <section class="section has-text-centered">
         <h1 class="heading is-size-5">
