@@ -4,8 +4,8 @@
       <LogoAnimation id="top-logo" />
     </div> -->
     <section class="hero is-black" style="">
-      <figure class="image" style="height: calc(100vw*5/12); overflow: hidden;">
-        <video v-show="isVideoActive"
+      <figure class="image" style="height: calc(100vw*9/16); overflow: hidden;">
+        <video v-show="isVideoActive && !this.$cookies.get('isVideoPlayed')"
           src="~/assets/nograin_short.mp4"  
           autoplay
           :muted="isMuted"
@@ -13,11 +13,14 @@
           width="100%"
           style="position: absolute; top:-100%; left:0; right: 0; bottom:-100%; margin: auto;"
         />
-        <img v-show="isVideoActive == false" data-not-lazy
+        <!-- <img v-show="isVideoActive == false || this.$cookies.get('isVideoPlayed')" data-not-lazy
           src="~/assets/u_logo_banner.png"
           width="100%"
           style="position: absolute; top:-100%; left:0; right: 0; bottom:-100%; margin: auto;"
-        />
+        /> -->
+        <div v-show="isVideoActive == false || this.$cookies.get('isVideoPlayed')" data-not-lazy>
+          <Carousel id="top-carousel" />
+        </div>
       </figure>
     </section>
     <!-- <div id="top-carousel-wrapper" class="top-carousel-wrapper columns is-gapless is-vcentered has-background-black" style="margin-bottom: 0;">
@@ -132,6 +135,7 @@
         </div>
       </vue-horizontal>
     </div>
+    <div class="divider" />
     <div class="has-text-centered">
       <nuxt-link :to="localePath('/news')" class="button is-white is-rounded">{{ $t('button.archive') }}</nuxt-link>
     </div>
@@ -146,23 +150,20 @@
 
 <script>
 import Card from '~/components/Card'
-// import Carousel from '~/components/Carousel'
+import Carousel from '~/components/Carousel'
 import PopularArticles from '~/components/PopularArticles'
 import { request, gql } from '~/lib/datocms'
 import { Image } from "vue-datocms";
 import format from 'date-fns/format'
 import parseISO from 'date-fns/parseISO'
 import VueHorizontal from 'vue-horizontal'
+import $cookies from "cookie-universal-nuxt";
 // import LogoAnimation from '~/components/LogoAnimation'
-// import Movie from '~/components/Movie'
-// const Card = () => import('~/components/Card')
-// const Flip = () => import('~/components/Flip')
-// const Movie = () => import('~/components/Movie')
 
 export default {
   components: {
-    Card, PopularArticles, "datocms-image": Image, VueHorizontal
-    // Carousel
+    Card, PopularArticles, "datocms-image": Image, VueHorizontal,
+    Carousel
   },
   data() {
     return {
@@ -202,7 +203,8 @@ export default {
     }
   },
   mounted() {
-    if (this.$ua.isFromPc() && this.$ua.browser() !== 'Chrome') {
+    const isVideoPlayed = this.$cookies.get("isVideoPlayed");
+    if (this.$ua.isFromPc() && this.$ua.browser() !== 'Chrome' && !isVideoPlayed) {
       this.isMuted = false;
       this.$buefy.toast.open({
         message: 'Audio On',
@@ -264,6 +266,9 @@ export default {
     },
     onEnded() {
       this.isVideoActive = false;
+      this.$cookies.set("isVideoPlayed", true, {
+        maxAge: 60 * 60 * 24
+      });
     }
   }
 }
@@ -305,12 +310,6 @@ export default {
   }
   #top-logo {
     width: 100%;
-  }
-
-  #top-carousel-wrapper-logo-section {
-    @media screen and (max-width: 1215px) {
-      display: none;
-    }
   }
   @keyframes fadeIn {
     0% {
