@@ -73,14 +73,14 @@
                 </nuxt-link>
               </div>
               <div class="column has-text-right">
-                <p class="title is-size-4 has-text-light has-text-centered-mobile has-text-weight-light">Spread Globally, <br class="mobile-br" />Connect Locally.</p>
+                <p class="title is-size-4 has-text-light has-text-centered-mobile has-text-weight-light">Spread Globally, <br class="is-hidden-tablet" />Connect Locally.</p>
               </div>
             </div>
             <div class="columns is-centered is-vcentered">
               <div class="column has-text-centered-mobile">
                 <p class="is-size-7 has-text-grey-light">
                   This independent TEDx event is operated under license from TED.
-                  <br class="desktop-br" />
+                  <br class="is-hidden-mobile" />
                   <a class="is-size-7 has-text-grey-light url" href="https://www.ted.com/about/programs-initiatives/tedx-program">About TEDx program <externalLink style="width: 0.75rem;"/></a>
                 </p>
                 <a href="https://ja.nuxtjs.org/" target="_blank"><nuxtLogo style="width: 100px; margin-top: 10px;" /></a>
@@ -89,7 +89,7 @@
                 <span class="has-text-grey-light">
                   <p class="is-size-7">{{ $t('about.location.address') }}</p>
                   <p class="is-size-7">tedxutsukuba&#64;gmail.com</p>
-                  <p class="is-size-7">&copy; TEDxUTsukuba 2020</p>
+                  <p class="is-size-7">&copy; TEDxUTsukuba 2021</p>
                 </span>
               </div>
             </div>
@@ -108,19 +108,19 @@
               </div>
 
               <div class="sns column is-4-desktop is-5-tablet has-text-right has-text-centered-mobile">
-                <a href="https://www.facebook.com/tedxutsukuba" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.facebook.com/tedxutsukuba" class="icon">
                   <iconFB alt="Facebook" class="icon" />
                 </a>
-                <a href="https://www.instagram.com/tedxutsukuba" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/tedxutsukuba" class="icon">
                   <iconIG alt="Instagram" class="icon" />
                 </a>
-                <a href="https://www.twitter.com/tedxutsukuba" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.twitter.com/tedxutsukuba" class="icon">
                   <iconTW alt="Twitter" class="icon" />
                 </a>
-                <a href="https://www.flickr.com/people/146703506@N03/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.flickr.com/people/146703506@N03/" class="icon">
                   <iconFL alt="Flickr" class="icon" />
                 </a>
-                <a href="https://note.com/tedxutsukuba" target="_blank" rel="noopener noreferrer"> 
+                <a href="https://note.com/tedxutsukuba" class="icon"> 
                   <iconNT alt="note" class="icon" />
                 </a>
               </div>
