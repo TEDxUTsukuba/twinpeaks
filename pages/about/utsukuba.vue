@@ -5,7 +5,7 @@
       <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.title')}}</h1>
       <h1 class="subtitle has-text-grey-light">{{ $t('about.utsukuba.subtitle')}}</h1>
       <br>
-      <span class="tag has-text-weight-bold">{{ $t('button.partialtranslation') }}</span>
+      <span v-if="$i18n.locale == 'en'" class="tag has-text-weight-bold">{{ $t('button.partialtranslation') }}</span>
     </section>
     
     <section class="section" id="utsukuba">
