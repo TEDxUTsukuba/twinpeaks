@@ -98,6 +98,7 @@
       <figure class="image is-16by9">
         <iframe class="has-ratio" src="https://embed.ted.com/talks/john_maeda_designing_for_simplicity" frameborder="0" allowfullscreen></iframe>
       </figure>
+      <div class="divider" />
       <p class="">{{ $t('about.ted.event')}}</p>
       <p class="title">{{ $t('about.ted.talktitle')}}</p>
       <p class="subtitle">{{ $t('about.ted.speaker')}}</p>
@@ -106,6 +107,7 @@
       <figure class="image is-16by9">
         <iframe class="has-ratio" src="https://embed.ted.com/talks/takaharu_tezuka_the_best_kindergarten_you_ve_ever_seen" frameborder="0" allowfullscreen></iframe>
       </figure>
+      <div class="divider" />
       <p class="">{{ $t('about.tedx.event')}}</p>
       <p class="title">{{ $t('about.tedx.talktitle')}}</p>
       <p class="subtitle">{{ $t('about.tedx.speaker')}}</p>
@@ -130,27 +132,33 @@
       <h2 class="title is-2">TED Events</h2>
       <div class="columns is-multiline">
         <div class="column is-4">
-          <img src="https://pi.tedcdn.com/r/pb-assets.tedcdn.com/system/baubles/files/000/009/062/original/TED2022_medallion_grey_%281%29.png?1618259132?w=790">
-          <p><span class="tag is-info">{{ $t('events.upcoming')}}</span></p><br>
-          <p class="title">TED2022</p>
-          <p class="subtitle">April 10-14, 2022<br>Vancouver, BC, Canada</p>
+          <div class="nmp-card-dark">
+            <img src="https://pi.tedcdn.com/r/pb-assets.tedcdn.com/system/baubles/files/000/009/062/original/TED2022_medallion_grey_%281%29.png?1618259132?w=790">
+            <p><span class="tag is-info">{{ $t('events.upcoming')}}</span></p><br>
+            <p class="title">TED2022</p>
+            <p class="subtitle">April 10-14, 2022<br>Vancouver, BC, Canada</p>
+          </div>
         </div>
         <div class="column is-4">
-          <img src="https://pi.tedcdn.com/r/pb-assets.tedcdn.com/system/baubles/files/000/008/650/original/TEDMonterey_TED.com_210x156.png?w=320">
-          <p><span class="tag is-info">{{ $t('events.upcoming')}}</span></p><br>
-          <p class="title">TEDMonterey: The Case for Optimism</p>
-          <p class="subtitle">August 1-4, 2021<br>Monterey, CA</p>
+          <div class="nmp-card-dark">
+            <img src="https://pi.tedcdn.com/r/pb-assets.tedcdn.com/system/baubles/files/000/008/650/original/TEDMonterey_TED.com_210x156.png?w=320">
+            <p><span class="tag is-info">{{ $t('events.upcoming')}}</span></p><br>
+            <p class="title">TEDMonterey: The Case for Optimism</p>
+            <p class="subtitle">August 1-4, 2021<br>Monterey, CA</p>
+          </div>
         </div>
         <div class="column is-4">
-          <img src="https://pi.tedcdn.com/r/pb-assets.tedcdn.com/system/baubles/files/000/007/485/original/T20_Tile_210x156.png?w=320">
-          <p><span class="tag is-dark">{{ $t('events.ended')}}</span></p><br>
-          <p class="title">TED2020: Uncharted</p>
-          <p class="subtitle">May 18-July 10, 2020<br>Held online via TED's event platform</p>
+          <div class="nmp-card-dark">
+            <img src="https://pi.tedcdn.com/r/pb-assets.tedcdn.com/system/baubles/files/000/007/485/original/T20_Tile_210x156.png?w=320">
+            <p><span class="tag is-dark">{{ $t('events.ended')}}</span></p><br>
+            <p class="title">TED2020: Uncharted</p>
+            <p class="subtitle">May 18-July 10, 2020<br>Held online via TED's event platform</p>
+          </div>
         </div>      
       </div>
       <br>
       <a class="button is-rounded is-gradient" target="_blank" href="https://www.ted.com/attend/conferences">{{ $t('button.discover')}}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
-      <hr style="margin: 5vh 0;">
+      <div class="divider" />
       <h2 class="title is-2">TEDx Events</h2>
       <p>So many events happening around the world (including virtual events) every day. Check out for more information at TED.com.</p>
       <br>
