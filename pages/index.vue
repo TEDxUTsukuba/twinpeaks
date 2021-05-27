@@ -3,8 +3,8 @@
     <!-- <div>
       <LogoAnimation id="top-logo" />
     </div> -->
-    <section class="hero is-black" style="">
-      <figure class="image" style="height: calc(100vw*5/12); overflow: hidden;">
+    <section :class="this.$ua.isFromSmartphone() ? 'hero is-black fullheight-without-header vertical-center' : 'hero is-black'">
+      <figure class="image" :style="this.$ua.isFromSmartphone() ? 'height: calc(100vw*5/12); width: 100vw; overflow: hidden;' : ''">
         <video v-show="isVideoActive && !this.$cookies.get('isVideoPlayed')"
           src="~/assets/nograin_short.mp4"  
           autoplay
