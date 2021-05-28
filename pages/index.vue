@@ -4,7 +4,7 @@
       <LogoAnimation id="top-logo" />
     </div> -->
     <section :class="this.$ua.isFromSmartphone() ? 'hero is-black fullheight-without-header vertical-center' : 'hero is-black'">
-      <figure class="image" :style="this.$ua.isFromSmartphone() ? 'height: calc(100vw*5/12); width: 100vw; overflow: hidden;' : ''">
+      <figure class="image" :style="this.$ua.isFromSmartphone() ? '' : 'height: calc(100vw*5/12); width: 100vw; overflow: hidden;'">
         <video v-show="isVideoActive && !this.$cookies.get('isVideoPlayed')"
           src="~/assets/nograin_short.mp4"  
           autoplay
@@ -204,14 +204,14 @@ export default {
   },
   mounted() {
     const isVideoPlayed = this.$cookies.get("isVideoPlayed");
-    if (this.$ua.isFromPc() && this.$ua.browser() !== 'Chrome' && !isVideoPlayed) {
-      this.isMuted = false;
-      this.$buefy.toast.open({
-        message: 'Audio On',
-        type: 'is-light',
-        position: 'is-top',
-        duration: 7500
-      })
+    if (!isVideoPlayed && this.$ua.isFromPc() && navigator.userAgent.includes('Mac OS X') && navigator.maxTouchPoints > 0 && this.$ua.browser() !== 'Chrome') {
+        this.isMuted = false;
+        this.$buefy.toast.open({
+          message: 'Audio On',
+          type: 'is-light',
+          position: 'is-top',
+          duration: 7500
+        })
     }
     if (this.$ua.browser() !== 'Safari') {
       // const scene1 = this.$scrollmagic
