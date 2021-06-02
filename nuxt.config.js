@@ -113,10 +113,6 @@ export default {
       src: '~/plugins/vue-add-to-calendar.js',
       ssr: false
     },
-    {
-      src: '~/plugins/user-agent-config.js',
-      ssr: false
-    },
     // {
     //   src: '~/plugins/generator.js',
     //   ssr: false
@@ -171,29 +167,27 @@ export default {
             code: 'ja', 
             iso: 'ja_JP', 
             file: 'ja.json',
-            // domain: 'www.tedxutsukuba.com'
           },
           { 
             code: 'en', 
             iso: 'en-US', 
             file: 'en.json',
-            // domain: 'www.en.tedxutsukuba.com'
           },
         ],
-        // differentDomains: true,
+        differentDomains: false,
         defaultLocale: 'ja',
         vueI18n: {
           fallbackLocale: 'ja'
         },
-        detectBrowserLanguage: {
-          useCookie: true,
-          cookieKey: 'i18n_redirected',
-        //   alwaysRedirect: false,
-          onlyOnRoot: true,  // recommended
-        },
-        // seo: true,
+        // detectBrowserLanguage: {
+        //   useCookie: true,
+        //   cookieKey: 'i18n_redirected',
+        // //   alwaysRedirect: false,
+        //   onlyOnRoot: true,  // recommended
+        // },
+        // // seo: true,
         vueI18nLoader: true,
-        lazy: true,
+        // lazy: true,
         // 言語ファイル(.json)のディレクトリを記載
         langDir: 'locales/',
       }
