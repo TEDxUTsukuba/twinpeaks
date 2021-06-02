@@ -72,20 +72,20 @@
         >
           <!-- <nuxt-link :to="member.id"> -->
             <div class="nmp-dark">
-              <header class="card-header" v-if="member.isImage && !$ua.isFromSmartphone()">
+              <header class="card-header" v-if="member.hasImage && !$ua.isFromSmartphone()">
                 <p class="card-header-title">
                 </p>
               </header>
               <div class="card-image" v-if="!$ua.isFromSmartphone()" style="width: 100%;">
                 <figure class="image is-3-desktop is-6-tablet is-6-mobile" style="overflow: hidden;">
-                  <img class="portrait" v-if="member.isImage" :src="getJsonImgUrl(`${member.id}.jpg`)" :alt="member.given_name_en + member.family_name_en">
+                  <img class="portrait" v-if="member.hasImage" :src="getJsonImgUrl(`${member.id}.jpg`)" :alt="member.given_name_en + member.family_name_en">
                 </figure>
               </div>
               <div class="card-content">
                 <div class="media is-vcentered">
                   <div class="media-left" v-if="$ua.isFromSmartphone()">
                     <figure class="image is-48x48 is-square">
-                      <img v-if="member.isImage" :src="getJsonImgUrl(`${member.id}.jpg`)" :alt="member.given_name_en + member.family_name_en" style="object-fit: cover; border-radius: 50%;">
+                      <img v-if="member.hasImage" :src="getJsonImgUrl(`${member.id}.jpg`)" :alt="member.given_name_en + member.family_name_en" style="object-fit: cover; border-radius: 50%;">
                       <img v-else src="~/assets/team/default.png" :alt="member.given_name_en + member.family_name_en" style="object-fit: cover; border-radius: 50%;">
                     </figure>
                   </div>

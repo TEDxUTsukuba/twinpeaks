@@ -52,23 +52,26 @@
 
     <div class="notification">
       <h1 class="is-size-5">Googleシートを開く</h1>
+      <p>
+        メンバー紹介のデータは、下記のGoogleシートで管理しています。このシートのセルを編集するだけで、ウェブサイトの情報を追加・更新できちゃいます！
+      </p>
       <a class="has-text-info" href="https://docs.google.com/spreadsheets/d/1WTm0XrjQ_fYoQgM-BmD0Il6zG4xrogzhz9sAJx-c1y8/edit?usp=sharing" target="_blank" rel="noopener noreferrer">TEDxUTsukuba Members Public Data <i class="mdi mdi-open-in-new" /></a>
       <p>
-        下記のいずれかのGoogleアカウントで、このGoogleシートにアクセスしてください。編集権限があるのは下記のアカウントと木下のアカウントのみですが、閲覧は誰でもできます。
+        下記のいずれかのGoogleアカウントで、このGoogleシートにアクセスしてください。編集権限があるのは下記のアカウントと木下のアカウントのみですが、閲覧はログイン不要です。
       </p>
       <ul>
         <li>tedxtsukuba&#64;gmail.com</li>
         <li>tedxutsukuba&#64;gmail.com</li>
       </ul>
       <p>
-        スプレッドシートの埋まっている行を参考にすれば、ほとんど自力で埋められると思います！
+        まずはスプレッドシートの埋まっている行を参考にしながら、埋められるセルを埋めてみてください。
       </p>
     </div>
 
     <div class="notification">
-      <h1 class="is-size-5">顔写真を追加する / Add Portrait</h1>
+      <h1 class="is-size-5">顔写真を追加する</h1>
       <p>
-        顔写真の掲載はプライバシーに関わるため<strong>任意</strong>としています。ただし、オーガナイザー・共同オーガナイザーは原則として掲載をお願いしています。
+        顔写真の掲載は特にプライバシーに関わるため<strong>任意</strong>としています。ただし、オーガナイザー・共同オーガナイザーは原則として掲載をお願いしています。
       </p>
       <p>
         画像はPCでは3:2(横長)、モバイルでは1:1(スクエア)で表示されます。縦長の画像でもこのサイズに切り抜かれて表示されます。
@@ -115,7 +118,7 @@
             <td>現役メンバーとして活動している人は<span class="tag">true</span>引退した人(OB/OG)は<span class="tag">false</span>を入力。現役メンバーだけが<nuxt-link class="is-size-7 has-text-info" to="../about/utsukuba#members">メンバー紹介</nuxt-link>に表示されます。</td>
           </tr>
           <tr>
-            <td>isImage</td>
+            <td>hasImage</td>
             <td>顔写真があるかどうか</td>
             <td>顔写真がある人は<span class="tag">true</span>、ない人・表示したくない人は<span class="tag">false</span>を入力。</td>
           <tr>
