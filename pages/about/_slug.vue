@@ -3,7 +3,7 @@
     <section class="section hero is-fullheight">
       <div class="divider" />
         <div v-if="member.given_name_en" class="columns is-multiline reverse-row-order is-centered is-variable is-6">
-          <div v-if="member.isImage == true" class="column is-5-tablet is-4-desktop">
+          <div v-if="member.hasImage == true" class="column is-5-tablet is-4-desktop">
             <div style="max-width: 320px; margin: 0 auto;">
               <figure class="image is-1by1">
                 <img class="portrait" :src="getJsonImgUrl(member.id)" :alt="member.given_name_en + member.family_name_en">

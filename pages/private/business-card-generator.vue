@@ -271,7 +271,7 @@ export default {
       document.body.removeChild(link);
     }
   },
-  created () {
+  mounted () {
     const image = new window.Image();
     image.src = "/ogp/bg_meishi.png";
     image.onload = () => {
