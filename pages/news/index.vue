@@ -23,7 +23,7 @@
             <div class="card-content">{{ notice.image.responsiveImage.width}}
               <h2 class="title is-size-5">{{ notice.title }}</h2>
               <p class="has-text-grey-light">{{ notice.shortDescription }}</p>
-              <!-- <br>
+              <br>
               <nav class="level is-mobile">
                 <div class="level-left">
                   <p class="level-left">
@@ -31,10 +31,10 @@
                 </div>
                 <div class="level-right">
                   <p class="level-item">
-                    <nuxt-link class="button is-rounded is-gradient" :to="`~/news/`">{{ $t('button.readmore') }}</nuxt-link>
+                    <nuxt-link class="button is-rounded is-gradient" :to="localePath(`/news/${notice.id}`)">{{ $t('button.readmore') }}</nuxt-link>
                   </p>
                 </div>
-              </nav> -->
+              </nav>
             </div>
           </div>
         </div>
@@ -54,11 +54,12 @@ export default {
   components: {
     "datocms-image": Image
   },
-  async asyncData({ params }) {
+  async asyncData({ params, i18n }) {
     const data = await request({
       query: gql`
         {
-          notices: allNotices(locale: ja, orderBy: updatedAt_DESC) {
+          notices: allNotices(locale: ${i18n.locale}, orderBy: updatedAt_DESC) {
+            id
             title
             shortDescription
             updatedAt

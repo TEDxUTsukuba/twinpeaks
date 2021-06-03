@@ -93,7 +93,9 @@
   },
   "news": {
     "title": "News & Updates",
-    "subtitle": "Get the latest news & updates."
+    "subtitle": "Get the latest news and updates from TEDxUTsukuba.",
+    "firstPublishedAt": "Published on",
+    "updatedAt": "Updated on"
   },
   "social": {
     "title": "Be a Part of Us",
