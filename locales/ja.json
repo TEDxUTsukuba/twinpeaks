@@ -91,7 +91,9 @@
   },
   "news": {
     "title": "お知らせ",
-    "subtitle": "イベント情報をはじめ、大事な情報をお届けします。"
+    "subtitle": "イベント情報をはじめ、大事な情報をお届けします。",
+    "firstPublishedAt": "公開",
+    "updatedAt": "最終更新"
   },
   "social": {
     "title": "公式SNS",
