@@ -22,7 +22,7 @@
       <section class="section">
         <div class="columns is-multiline is-variable is-6">
           <div class="column is-4-desktop is-12-tablet">
-             <p class="has-text-grey-lighter">
+             <p class="has-text-grey-lighter has-text-centered-mobile">
               <span class="has-text-weight-bold">{{ formatDate(notice._firstPublishedAt) }}</span><br class="is-hidden-mobile">
               <span>{{ $t('news.updatedAt' )}} {{ formatDate(notice.updatedAt) }}</span>
             </p>

@@ -22,8 +22,8 @@
               <span v-if="$i18n.locale == 'en'">{{ item.title_en }}</span>
             </nuxt-link>
             <a v-if="item.url"
+              class="is-size-7 has-text-dark no-decollation"
               :href="item.url"
-              class="is-size-7 has-text-dark"
               target="_blank"
             >
               <i :class="`mdi mdi-${item.icon}`" />
