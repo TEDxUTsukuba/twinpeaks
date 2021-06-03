@@ -207,7 +207,7 @@
             </a>
           </div>
             <div class="column">
-              <a href="https://twitter.com/tedxutsukuba">
+              <a href="www.twitter.com/tedxutsukuba">
                 <div class="nmp-card-red">
                   <i class="mdi mdi-twitter" style="font-size: 2rem;" /><br>@tedxutsukuba
                 </div>
@@ -332,8 +332,8 @@ export default {
 <style lang="scss" scoped>
   h1.is-0 {
     color: #bcc5cd;
-    background: -webkit-linear-gradient(147deg, #e02f88, #771ba8);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(147deg, #e02f88, #771ba8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(47deg, #95afc7, #bd97c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(47deg, #95afc7, #bd97c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     &.has-text-white {

@@ -54,23 +54,23 @@
     <section class="hero">
       <div class="hero-body" id="intro">
         <section class="section">
-          <div class="columns is-mobile is-multiline is-centered is-variable is-0">
-              <div class="column is-5-widescreen is-4-desktop is-6-tablet is-10-mobile">
-                <img data-not-lazy src="~/assets/logo/motto.png" class="motto" style="padding-right: 50px;" alt="Ideas Worth Spreading">
+          <div class="columns is-mobile is-multiline is-variable is-0">
+              <div class="column is-5-widescreen is-4-desktop is-4-tablet is-10-mobile">
+                <img data-not-lazy src="~/assets/logo/motto.png" class="motto" style="padding-right: 50px; max-width: 400px;" alt="Ideas Worth Spreading">
               </div>
-              <div class="column is-0-fullhd is-0-widescreen is-0-desktop is-6-tablet is-2-mobile"></div>
-              <div class="column is-7-widescreen is-8-desktop is-full-tablet is-full-mobile">
-                  <h1 v-if="$i18n.locale == 'ja'" class="title is-2 is-size-4-mobile has-text-weight-light">
-                    {{ $t('intro.headline1') }}
+              <div class="column is-7-widescreen is-8-desktop is-8-tablet is-full-mobile">
+                  <h1 v-if="$i18n.locale == 'ja'" class="title is-2 is-size-4-mobile has-text-weight-bold">
+                    <span v-html="$t('intro.headline1')" />
                     <br class="is-hidden-mobile">
-                    {{ $t('intro.headline2') }}
+                    <span v-html="$t('intro.headline2')" />
                   </h1>
                   <h1 v-if="$i18n.locale == 'en'" class="title is-2 is-size-4-mobile has-text-weight-light">
-                    {{ $t('intro.headline1') }}
+                    <span v-html="$t('intro.headline1')" />
                     <br class="is-hidden-mobile">
-                    {{ $t('intro.headline2') }}
+                    <span v-html="$t('intro.headline2')" />
                   </h1>
-                    <img data-not-lazy id="rocket" src="~/assets/svg/rocket.png" width="100%" style="z-index: 0;" alt="">
+                  <br>
+                  <img data-not-lazy id="rocket" src="~/assets/svg/rocket.png" width="100%" style="z-index: 0;" alt="">
                   <article class="is-size-6 has-text-light">
                     {{ $t('intro.description') }}
                   </article>
@@ -83,10 +83,6 @@
         </section>
       </div>
     </section>
-      
-    <!-- <section class="hero">
-      <Movie id="teaser" :vId='weAreTEDxUTsukuba' classname="large" style=""></Movie>
-    </section> -->
 
     <section>
       <PopularArticles /> 
