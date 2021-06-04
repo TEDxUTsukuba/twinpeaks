@@ -188,20 +188,7 @@ export default {
     axios.get(api_url, {
       crossDomain: true
     }).then(response => this.eventList = response.data);
-  // const scene1 = this.$scrollmagic
-  //   .scene({
-  //     triggerElement: '#trigger',
-  //     triggerHook: 0.75,
-  //     offset: 0,
-  //     reverse: false
-  //   })
-  //   .setTween('#content', {
-  //     css: {
-  //       opacity: 1
-  //     }
-  //   })
-  //   this.$scrollmagic.addScene(scene1)
-   },
+  },
    computed: {
     // 日付が新しい順に並び替え
     sortItems() {
@@ -212,10 +199,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-  /* #content {
-    opacity: 0;
-    transition: all 1s;
-  } */
-</style>

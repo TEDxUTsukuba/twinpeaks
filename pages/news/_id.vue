@@ -29,7 +29,7 @@
             <br>
             <a class="no-decollation has-text-grey" :href="`https://www.facebook.com/sharer/sharer.php?u=https://www.tedxutsukuba.com${this.$route.path}`" target="_blank" rel="nofollow noopener noreferrer" style="margin-right: .5rem;"><i class="mdi mdi-facebook" /> Facebook</a><br class="is-hidden-touch">
             <a class="no-decollation has-text-grey" :href="`http://twitter.com/share?url=www.tedxutsukuba.com${this.$route.path}&text=${notice.title}&via=tedxutsukuba&related=tedxutsukuba`" target="_blank" style="margin-right: .5rem;"><i class="mdi mdi-twitter" /> Twitter</a><br class="is-hidden-touch">
-            <a class="no-decollation has-text-grey" :href="`http://line.me/R/msg/text/?www.tedxutsukuba.com${this.$route.path}`" target="_blank" style="margin-right: .5rem;"><i class="mdi mdi-message" /> Line</a>
+            <!-- <a class="no-decollation has-text-grey" :href="`http://line.me/R/msg/text/?www.tedxutsukuba.com${this.$route.path}`" target="_blank" style="margin-right: .5rem;"><i class="mdi mdi-message" /> Line</a> -->
             <div class="divider" />
           </div>
           <div class="column is-8-desktop is-12-tablet">
