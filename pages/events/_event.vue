@@ -3,11 +3,11 @@
     {{ data }}
     <div class="columns">
       <div class="column wallpaper-wrapper">
-        <img class="wallpaper" v-if="event.thumbnail" :src="event.thumbnail.url" :alt="event.thumbnail.alt">
+        <img v-if="event.thumbnail" :src="event.thumbnail.url" :alt="event.thumbnail.alt">
       </div>
       <aside class="column section is-5" style="display: flex; justify-content: middle; align-items: center;">
         <div class="is-block block">
-          <p class="is-uppercase is-menlo has-text-primary">{{ getDaysTogo(event.startat) }}</p><br>
+          <p class="is-uppercase has-text-primary">{{ getDaysTogo(event.startat) }}</p><br>
           <h1 class="title is-2">{{ event.name }}</h1>
           <div v-if="event.issignuprequired == true">
             <!-- 申込開始日より前 -->
@@ -50,11 +50,11 @@
         <div v-if="event.eventtype === 'virtual'">
           <p class="is-size-5">Virtual Event</p>
           <p>{{ event.webcast }}</p>
-          <a :href="event.webcast_url" target="_blank" rel="noopener noreferrer" class="is-size-6">Join webcast</a>
+          <a :href="event.webcastUrl" target="_blank" rel="noopener noreferrer" class="is-size-6">Join webcast</a>
         </div>
         <div v-else-if="event.eventtype === 'hybrid'">
           <p class="is-size-5">Hybrid Event</p>
-          <a :href="event.webcast_url" target="_blank" rel="noopener noreferrer" class="is-size-6">Join webcast</a><br>
+          <a :href="event.webcastUrl" target="_blank" rel="noopener noreferrer" class="is-size-6">Join webcast</a><br>
           <span class="is-size-6">{{ event.place }}</span><br>
         </div>
         <div v-else>
@@ -77,11 +77,11 @@
       </aside>
       <div class="container content column is-7">
         <hr class="is-hidden-tablet">
-        <article v-html="event.description"></article>
+        <p v-html="event.description"></p>
         <hr>
         <a :href="`https://www.facebook.com/sharer/sharer.php?u=https://www.tedxutsukuba.com${this.$route.path}`" target="_blank" rel="nofollow noopener noreferrer" class="is-size-4 has-text-dark"><i class="mdi mdi-facebook" /></a>
         <a v-if="$i18n.locale == 'ja'" :href="`https://twitter.com/intent/tweet?text=${event.name}に参加しよう！&via=tedxutsukuba&related=tedxutsukuba&url=www.tedxutsukuba.com/events/${event.id}`" target="_blank" rel="noopener noreferrer" class="is-size-4 has-text-dark" data-show-count="false"><i class="mdi mdi-twitter" /></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        <a v-if="$i18n.locale == 'en'" :href="`https://twitter.com/intent/tweet?text=Join ${event.name}&&via=tedxutsukuba&related=tedxutsukubaurl=www.tedxutsukuba.com/events/${event.id}`" target="_blank" rel="noopener noreferrer" class="is-size-4 has-text-dark" data-show-count="false"><i class="mdi mdi-twitter" /></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <a v-if="$i18n.locale == 'en'" :href="`https://twitter.com/intent/tweet?text=Join ${event.name}&&via=tedxutsukuba&related=tedxutsukuba&url=www.tedxutsukuba.com/en/events/${event.id}`" target="_blank" rel="noopener noreferrer" class="is-size-4 has-text-dark" data-show-count="false"><i class="mdi mdi-twitter" /></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         <br><br>
       </div>
     </div>
@@ -89,7 +89,6 @@
 </template>
 
 <script>
-import axios from 'axios';
 import Meta from '~/assets/mixins/eventmixin'
 import { request, gql } from '~/lib/datocms'
 import { Image } from "vue-datocms";
@@ -121,6 +120,7 @@ export default {
           issignuprequired
           signupopenat
           signupcloseat
+          webcastUrl
           isfree
           thumbnail {
             alt
@@ -250,15 +250,6 @@ export default {
       padding-left: 3vw;
       padding-right: 6vw;
     }
-  }
-  .wallpaper {
-    width: 100%;
-    padding: 0;
-    // max-height: 50vh;
-    // object-fit: cover;
-  }
-  .is-menlo {
-    font-family: "Menlo", "Courier", monospace;
   }
   .reverse-row-order {
     flex-direction: row-reverse;
