@@ -108,10 +108,10 @@
             <div class="card-image">
               <!-- <datocms-image :data="notice.image.responsiveImage" :alt="notice.image.responsiveImage.alt" /> -->
               <figure class="image is-5by3">
-                <datocms-image :data="notice.image.responsiveImage" :alt="notice.alt" style="position: initial; object-fit:"/>
+                <img :src="notice.image.url" :alt="notice.image.alt" style="object-fit: cover"/>
               </figure>
             </div>
-            <div class="card-content">{{ notice.image.responsiveImage.width}}
+            <div class="card-content">
               <h2 class="title is-size-5">{{ notice.title }}</h2>
               <p class="has-text-grey-light">{{ notice.shortDescription }}</p>
               <br>
@@ -185,10 +185,8 @@ export default {
             _firstPublishedAt
             updatedAt
             image {
-              responsiveImage(imgixParams: {fit: crop, crop: top, h: 300, w: 500}) {
-                alt
-                src
-              }
+              alt
+              url
             }
           }
         }
@@ -203,15 +201,15 @@ export default {
   },
   mounted() {
     const isVideoPlayed = this.$cookies.get("isVideoPlayed");
-    if (!isVideoPlayed && this.$ua.isFromPc() && navigator.userAgent.includes('Mac OS X') && navigator.maxTouchPoints > 0 && this.$ua.browser() !== 'Chrome') {
-        this.isMuted = false;
-        this.$buefy.toast.open({
-          message: 'Audio On',
-          type: 'is-light',
-          position: 'is-top',
-          duration: 7500
-        })
-    }
+    // if (!isVideoPlayed && this.$ua.isFromPc() && navigator.userAgent.includes('Mac OS X') && navigator.maxTouchPoints > 0 && this.$ua.browser() !== 'Chrome') {
+    //     this.isMuted = false;
+    //     this.$buefy.toast.open({
+    //       message: 'Audio On',
+    //       type: 'is-light',
+    //       position: 'is-top',
+    //       duration: 7500
+    //     })
+    // }
     if (this.$ua.browser() !== 'Safari') {
       // const scene1 = this.$scrollmagic
       //   .scene({
