@@ -102,7 +102,7 @@
                       <h1 class="title is-4">
                         {{ member.family_name_ja }} {{ member.given_name_ja }}
                       </h1>
-                      <p class="subtitle is-size-6 is-size-7-touch has-text-light">
+                      <p class="subtitle is-size-6 is-size-7-touch has-text-grey-light">
                         {{ member.role }}
                       </p>
                     </span>
