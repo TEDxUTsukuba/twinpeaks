@@ -231,8 +231,8 @@
       }
     },
     "concept": {
-      "title": "コンセプト",
-      "description": "イベントのコンセプトは、仏教用語に由来する\"JIJIMUGE\" です。",
+      "title": "テーマ",
+      "description": "イベントのテーマは、仏教用語に由来する\"JIJIMUGE\" です。",
       "headline": "JIJIMUGE",
       "statement1": "今、世の中にある様々な境界線が溶けつつあります。",
       "statement2": "今、世の中にある様々な境界線が溶けつつあります。",
@@ -309,8 +309,8 @@
       }
     },
     "concept": {
-      "title": "コンセプト",
-      "description": "イベントのコンセプトは、\"CoPhilAction\" です。",
+      "title": "テーマ",
+      "description": "イベントのテーマは、\"CoPhilAction\" です。",
       "headline": "CoPhilAction",
       "statement1": "今、世の中にある様々な境界線が溶けつつあります。",
       "statement2": "今、世の中にある様々な境界線が溶けつつあります。",
@@ -324,7 +324,7 @@
       },
       "perf1": {
         "title": "パフォーマンス",
-        "description": "筑波大生・桐書藝団の皆さまによる圧巻の書道パフォーマンス。イベントのコンセプト\"CoPhilAction\"を解釈した素敵なメッセージを綴っていただきました。"
+        "description": "筑波大生・桐書藝団の皆さまによる圧巻の書道パフォーマンス。イベントのテーマ\"CoPhilAction\"を解釈した素敵なメッセージを綴っていただきました。"
       },
       "talk1": {
         "title": "トークセッション 第一部",
@@ -355,7 +355,7 @@
     }
   },
   "events": {
-    "title": "イベント情報",
+    "title": "イベント一覧",
     "subtitle": "TEDxUTsukubaが開催するイベントをご紹介いたします。",
     "upcomingevents": "今後開催されるイベント",
     "main": "メインイベント",

@@ -35,7 +35,7 @@
     "visitwebsite": "Website",
     "externalwebsite": "External Link",
     "alerttoexternalwebsite": "You are about to visit this website.",
-    "archive": "Archive of Past Updates",
+    "archive": "Archive of Past News & Updates",
     "close": "Close",
     "partialtranslation": "This page is not fully translated into English. ",
     "helpustranslate": "Help us translate",
@@ -233,7 +233,7 @@
       }
     },  
     "concept": {
-      "title": "Concept", 
+      "title": "Theme", 
       "description": "Our event concept is \"JIJIMUGE\", which is derived from a Buddhism term.",
       "headline": "JIJIMUGE",
       "statement1": "今、世の中にある様々な境界線が溶けつつあります。",
@@ -311,7 +311,7 @@
       }
     },
     "concept": {
-      "title": "Concept",
+      "title": "Theme",
       "description": "Our event concept is \"CoPhilAction\"",
       "headline": "CoPhilAction"
     },
@@ -323,7 +323,7 @@
       },
       "perf1": {
         "title": "Performace",
-        "description": "筑波大生・桐書藝団の皆さまによる圧巻の書道パフォーマンス。イベントのコンセプト\"CoPhilAction\"を解釈した素敵なメッセージを綴っていただきました。"
+        "description": "筑波大生・桐書藝団の皆さまによる圧巻の書道パフォーマンス。イベントのテーマ\"CoPhilAction\"を解釈した素敵なメッセージを綴っていただきました。"
       },
       "talk1": {
         "title": "Talk Session",
@@ -354,8 +354,8 @@
     }
   },
   "events": {
-    "title": "Events",
-    "subtitle": "Filled with curiocity and excitement, you will discover new ideas, opportunities & so much more!",
+    "title": "Event Listing",
+    "subtitle": "Explore our upcoming events that bring people together to listen, learn and talk.",
     "upcoming": "Upcoming Events",
     "main": "Annual Main Event",
     "other": "Events"

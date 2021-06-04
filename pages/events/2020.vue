@@ -7,7 +7,7 @@
 
     <section>
       <figure class="has-text-centered">
-        <img src = "~/assets/wallpapers/jijimuge-transparent.png" alt="Concept Image">
+        <img src = "~/assets/wallpapers/jijimuge-transparent.png" alt="Theme Image">
       </figure>
     </section>
     
@@ -96,7 +96,7 @@
         @click="switchGallery(true)">
         <b-carousel-item v-for="(item, i) in 4" :key="i">
           <a class="image ">
-            <img :src="getImgUrl(i)" :alt="`Concept Statement Page ${i}`">
+            <img :src="getImgUrl(i)" :alt="`Theme Statement Page ${i}`">
           </a>
         </b-carousel-item>
         <span @click="switchGallery(false)" class="modal-close is-large"/>
@@ -168,12 +168,12 @@
       <div id="highlight" class="columns is-multiline is-mobile is-gapless">
         <div v-for="(item, i) in 15" :key="i" class="column is-4-mobile is-one-fifth-tablet">
             <figure :class="`image is-1by1 colorfilter-base-${i%2}`" :hover="isImageModalActive">
-                <img :src="getHighlightImgUrl(i)" alt="TEDxUTsukuba JIJIMUGE Concept" style="object-fit: cover;" class="colorfilter-image">
+                <img :src="getHighlightImgUrl(i)" alt="TEDxUTsukuba JIJIMUGE Theme" style="object-fit: cover;" class="colorfilter-image">
             </figure>
           <b-modal v-model="isImageModalActive">
             <p>sa</p>
             <p class="image is-4by3">
-              <img :src="getHighlightImgUrl(i)" alt="TEDxUTsukuba JIJIMUGE Concept">
+              <img :src="getHighlightImgUrl(i)" alt="TEDxUTsukuba JIJIMUGE Theme">
             </p>
           </b-modal>
         </div>
