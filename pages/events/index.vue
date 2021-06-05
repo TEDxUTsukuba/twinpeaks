@@ -12,7 +12,7 @@
           <div :class="`nmp-${changeColor(event.date)}`">
             <header class="card-header">
               <p class="card-header-title has-text-grey is-size-7" v-if="isUpcoming(event.startat) > 0">{{ $t('events.upcoming') }}</p>      
-              <p v-else class="card-header-title has-text-grey is-size-7">{{ $t('events.ended') }}</p>
+              <p v-else class="card-header-title has-text-grey-light is-size-7">{{ $t('events.ended') }}</p>
             </header>
             <div class="card-image">
               <figure class="image is-5by3">
@@ -29,7 +29,7 @@
                 </div>
               </div>
               <div class="content block">
-                <div class="block">
+                <div class="block" v-if="isUpcoming(event.startat) > 0">
                   <span v-if="event.issignuprequired">
                     <span v-if="isUpcoming(event.signupopenat) > 0" class="tag is-light">
                       {{ formatDate(event.signupopenat)}} から受付開始
@@ -52,6 +52,17 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+    <div class="divider" />
+    <section class="section">
+      <p>{{ $t('events.othertedx.title') }}</p>
+      <h2 class="title is-2">{{ $t('events.othertedx.copy') }}</h2>
+      <div class="block">
+        <p>{{ $t('events.othertedx.description') }}</p>
+      </div>
+      <div class="block has-text-right">  
+        <a class="button is-rounded is-gradient" target="_blank" :href="`https://www.ted.com/tedx/events?autocomplete_filter=Japan&year=Year&month=Month&commit=Submit`">{{ $t('button.discover')}}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
       </div>
     </section>
 

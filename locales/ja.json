@@ -183,6 +183,11 @@
       "event": "TEDxKyoto",
       "speaker": "手塚貴春",
       "watchmoretedx": "他のTEDxトークを探す"
+    },
+    "membership": {
+      "title": "TED メンバーシップ",
+      "quote": "TEDメンバーになると、明るい未来への第一歩を踏み出すことができ、「知」の力で結ばれたコミュニティの構築に貢献することができます。",
+      "description": "<span class='has-text-weight-bold'>TEDメンバーシップ</span><span class='has-text-grey-lighter'>では、TEDのコミュニティにより深く関わることができます。TEDのスピーカーと交流する機会や会員限定の特別なイベントを楽しむことができます。</span>"
     }
   },
   "partners": {
@@ -358,9 +363,13 @@
     "title": "イベント一覧",
     "subtitle": "TEDxUTsukubaが開催するイベントをご紹介いたします。",
     "upcomingevents": "今後開催されるイベント",
-    "main": "メインイベント",
-    "other": "イベント",
     "upcoming": "近日開催",
-    "ended": "開催終了"
+    "ended": "開催終了",
+    "othertedx": {
+      "title": "TEDxイベント",
+      "copy": "世界170か国に広がるTEDxイベント",
+      "quote": "TEDxイベントに参加することで、新しいアイデアや最新の研究を発見し、さまざまな人々との対話をはじめる機会を得ることができます。",
+      "description": "<span class='has-text-weight-bold'>TEDxイベント</span><span class='has-text-grey-lighter'>は世界各国で開催されており、日本国内では東京・京都・神戸などの諸都市や大学にて開催されています。お近くのTEDxイベント、またはオンラインのイベントにぜひ参加してみてください。</span>"
+    }
   }
 }
