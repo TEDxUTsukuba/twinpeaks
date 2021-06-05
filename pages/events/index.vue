@@ -46,7 +46,7 @@
                   </span>
                 </div>
                 <div class="block has-text-right">
-                  <nuxt-link :to="`./${event.id}`" class="button is-small is-rounded is-gradient">{{ $t('button.discover') }}</nuxt-link>
+                  <nuxt-link :to="`./events/${event.id}`" class="button is-small is-rounded is-gradient">{{ $t('button.discover') }}</nuxt-link>
                 </div>
               </div>
             </div>
