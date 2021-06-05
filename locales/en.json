@@ -185,6 +185,11 @@
       "event": "TEDxKyoto",
       "speaker": "Takaharu Tezuka",
       "watchmoretedx": "Explore more TEDx Talks"
+    },
+    "membership": {
+      "title": "Membership",
+      "quote": "By becoming a TED Member, you’ll be on the frontier of a brighter future, helping us build a community united by the power of knowledge.",
+      "description": "<span class='has-text-weight-bold'>TED Membership</span><span class='has-text-grey-lighter'> has new features of TED as a way to connect more deeply with our most dedicated fans. You'll get access to exclusive monthly members-only events, including special conversations with some of the most brilliant TED speakers.</span>"
     }
   },
   "partners": {
@@ -356,8 +361,13 @@
   "events": {
     "title": "Event Listing",
     "subtitle": "Explore our upcoming events that bring people together to listen, learn and talk.",
-    "upcoming": "Upcoming Events",
-    "main": "Annual Main Event",
-    "other": "Events"
+    "upcoming": "Upcoming",
+    "ended": "Ended",
+    "othertedx": {
+      "title": "TEDx events worldwide",
+      "copy": "It happens anytime, anywhere. ",
+      "quote": "Attending TEDx events brings you opportunities to uncover new ideas and the latest research in your local areas that spark conversations in your communities.",
+      "description": "<span class='has-text-weight-bold has-text-white'>TEDx events</span><span class='has-text-grey-lighter'> are happening in more than 170 countries (including virtual events) every day. Attend a TEDx event near you featuring live speakers and TED Talk videos, sparking conversation and connections.</span>"
+    }
   }
 }

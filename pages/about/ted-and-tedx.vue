@@ -62,7 +62,7 @@
     
     </section>
 
-    <section class="hero bg-red">
+    <section class="hero has-background-primary">
       <section class="section">
         <div class="columns is-mobile is-multiline">
           <div class="column has-text-centered is-12-mobile is-4-tablet">
@@ -127,44 +127,34 @@
       <a class="button is-rounded is-gradient" target="_blank" href="https://www.ted.com/podcasts">{{ $t('about.ted.listenmore')}}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
     </section>
 
-    <section class="section has-text-centered">
+    <section class="section">
       <h1 class="title is-0 has-text-white">{{ $t('about.ted.join')}}</h1>
-      <h2 class="title is-2">TED Events</h2>
       <div class="columns is-multiline">
-        <div class="column is-4">
-          <div class="nmp-card-dark">
-            <img src="https://pi.tedcdn.com/r/pb-assets.tedcdn.com/system/baubles/files/000/009/062/original/TED2022_medallion_grey_%281%29.png?1618259132?w=790">
-            <p><span class="tag is-info">{{ $t('events.upcoming')}}</span></p><br>
-            <p class="title">TED2022</p>
-            <p class="subtitle">April 10-14, 2022<br>Vancouver, BC, Canada</p>
+        <div class="column is-6">
+          <div class="nmp-card-red">
+            <div class="block">
+              <p class="title is-size-4">{{ $t('events.othertedx.quote')}}</p>
+              <p v-html="$t('events.othertedx.description')" />
+            </div>
+            <div class="block has-text-right">
+              <a class="button is-rounded is-white" href="https://www.ted.com/tedx/events?autocomplete_filter=Japan&year=Year&month=Month&commit=Submit" target="_blank">{{ $t('button.discover') }}<i class="mdi mdi-open-in-new" /></a>
+            </div>
           </div>
         </div>
-        <div class="column is-4">
-          <div class="nmp-card-dark">
-            <img src="https://pi.tedcdn.com/r/pb-assets.tedcdn.com/system/baubles/files/000/008/650/original/TEDMonterey_TED.com_210x156.png?w=320">
-            <p><span class="tag is-info">{{ $t('events.upcoming')}}</span></p><br>
-            <p class="title">TEDMonterey: The Case for Optimism</p>
-            <p class="subtitle">August 1-4, 2021<br>Monterey, CA</p>
-          </div>
-        </div>
-        <div class="column is-4">
-          <div class="nmp-card-dark">
-            <img src="https://pi.tedcdn.com/r/pb-assets.tedcdn.com/system/baubles/files/000/007/485/original/T20_Tile_210x156.png?w=320">
-            <p><span class="tag is-dark">{{ $t('events.ended')}}</span></p><br>
-            <p class="title">TED2020: Uncharted</p>
-            <p class="subtitle">May 18-July 10, 2020<br>Held online via TED's event platform</p>
+        <div class="column is-6">
+          <div class="nmp-card-red">
+            <div class="block">
+              <p class="title is-size-4">{{ $t('about.membership.quote')}}</p>
+              <p v-html="$t('about.membership.description')" />
+            </div>
+            <div class="block has-text-right">
+              <a class="button is-rounded is-white" href="https://www.ted.com/membership" target="_blank">{{ $t('button.discover') }}<i class="mdi mdi-open-in-new" /></a>
+            </div>
           </div>
         </div>      
       </div>
       <br>
-      <a class="button is-rounded is-gradient" target="_blank" href="https://www.ted.com/attend/conferences">{{ $t('button.discover')}}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
-      <div class="divider" />
-      <h2 class="title is-2">TEDx Events</h2>
-      <p>So many events happening around the world (including virtual events) every day. Check out for more information at TED.com.</p>
-      <br>
-      <a class="button is-rounded is-gradient" target="_blank" :href="`https://www.ted.com/tedx/events?autocomplete_filter=Japan&year=Year&month=Month&commit=Submit`">{{ $t('button.discover')}}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
     </section>
-
   </section>
 </template>
 
