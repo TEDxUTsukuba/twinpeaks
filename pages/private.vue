@@ -2,7 +2,7 @@
 <!-- Nested Routes
   https://ja.nuxtjs.org/docs/2.x/features/nuxt-components/#the-nuxtchild-component -->
   <section>
-    <div class="columns">
+    <div class="columns is-gapless">
       <aside class="column is-hidden-touch is-2-widescreen is-3-tablet section" style="background-color: #eceff1;">
         <p class="menu-label">
           Menu
