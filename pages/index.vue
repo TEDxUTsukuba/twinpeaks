@@ -13,12 +13,12 @@
           width="100%"
           style="position: absolute; top:-100%; left:0; right: 0; bottom:-100%; margin: auto;"
         />
-        <img v-show="isVideoActive == false || this.$cookies.get('isVideoPlayed')" data-not-lazy
+        <img v-show="isVideoActive == false || this.$cookies.get('isVideoPlayed')"
           src="~/assets/u_logo_banner.png"
           width="100%"
           style="position: absolute; top:-100%; left:0; right: 0; bottom:-100%; margin: auto;"
         />
-        <!-- <div v-show="isVideoActive == false || this.$cookies.get('isVideoPlayed')" data-not-lazy>
+        <!-- <div v-show="isVideoActive == false || this.$cookies.get('isVideoPlayed')">
           <Carousel id="top-carousel" />
         </div> -->
       </figure>
@@ -28,7 +28,7 @@
         <Carousel id="top-carousel" />
       </div>
       <div class="column is-4-widescreen is-5-fullhd vertical-center has-text-centered" id="top-carousel-wrapper-logo-section">
-        <img data-not-lazy src="~/assets/logo/u_bgblack_oneline.png" width="60%" alt="TEDxUTsukuba Logo">
+        <img src="~/assets/logo/u_bgblack_oneline.png" width="60%" alt="TEDxUTsukuba Logo">
       </div>
     </div> -->
     <!-- <div class="bg-jijimuge" style="padding-top: 3.25rem;">  
@@ -56,7 +56,7 @@
         <section class="section">
           <div class="columns is-mobile is-multiline is-variable is-0">
               <div class="column is-5-widescreen is-4-desktop is-4-tablet is-10-mobile">
-                <img data-not-lazy src="~/assets/logo/motto.png" class="motto" style="padding-right: 50px; max-width: 400px;" alt="Ideas Worth Spreading">
+                <img src="~/assets/logo/motto.png" class="motto" style="padding-right: 50px; max-width: 400px;" alt="Ideas Worth Spreading">
               </div>
               <div class="column is-7-widescreen is-8-desktop is-8-tablet is-full-mobile">
                   <h1 v-if="$i18n.locale == 'ja'" class="title is-2 is-size-4-mobile has-text-weight-bold">
@@ -70,7 +70,7 @@
                     <span v-html="$t('intro.headline2')" />
                   </h1>
                   <br>
-                  <img data-not-lazy id="rocket" src="~/assets/svg/rocket.png" width="100%" style="z-index: 0;" alt="">
+                  <img id="rocket" src="~/assets/svg/rocket.png" width="100%" style="z-index: 0;" alt="">
                   <article class="is-size-6 has-text-light">
                     {{ $t('intro.description') }}
                   </article>

@@ -156,7 +156,7 @@
         <b-carousel :indicator-inside="false" :repeat="true" indicator-style="is-lines" :autoplay="false" animated="fade">
           <b-carousel-item v-for="(team, i) in teams" :key="i">
             <figure class="image is-5by3">
-              <img data-not-lazy :src="getJsonImgUrl(`intro/${team.name.toLowerCase()}.png`)" style="object-fit: cover" />
+              <img :src="getJsonImgUrl(`intro/${team.name.toLowerCase()}.png`)" style="object-fit: cover" />
             </figure>
           </b-carousel-item>
           <template #indicators="props">

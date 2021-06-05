@@ -202,16 +202,6 @@ export default {
     '@nuxtjs/pwa',
     'nuxt-svg-loader',
     '@nuxtjs/sitemap',
-    [
-      'nuxt-lazy-load', 
-      {
-        images: true,
-        videos: false,
-        audios: false,
-        iframes: false,
-        defaultImage: '/defaultimage.png'
-      }
-    ],
     '@nuxt/content',
     // 参考: https://blog.mktia.com/generate-ogp-image-automatically/
     // '~/modules/imageGenerator.js'

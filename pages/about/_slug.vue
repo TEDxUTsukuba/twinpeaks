@@ -60,7 +60,7 @@
             <div class="divider" />
             <div>
               <figure class="image is-16by9 ted-embed-wrap">
-                <iframe v-if="member.tedtalk" v-lazy-load
+                <iframe v-if="member.tedtalk"
                   :src="`https://embed.ted.com/talks/lang/${locale}/${member.tedtalk.replace(regexTED, '')}`" 
                   width="854"
                   height="480"
@@ -69,7 +69,7 @@
                   scrolling="no"
                   allowfullscreen>
                 </iframe>
-                <iframe v-if="member.tedtalk_alt" v-lazy-load
+                <iframe v-if="member.tedtalk_alt"
                   :src="`https://youtube.com/embed/${member.tedtalk_alt.replace(regexYouTube, '')}`"
                   title="YouTube video player"
                   allow="accelerometer;clipboard-write;gyroscope;picture-in-picture" 
