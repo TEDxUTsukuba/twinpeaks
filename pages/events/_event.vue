@@ -11,16 +11,24 @@
           <h1 class="title is-2">{{ event.name }}</h1>
           <div v-if="event.issignuprequired == true">
             <!-- 申込開始日より前 -->
-            <!-- <b-tooltip v-if="event.signup_open !== undefined && isBefore(event.signup_open) > 0" :label="`Registration will be open in ${new Date(event.signup_open).toLocaleDateString()}`" position="is-top" type="is-primary" style="width: 100%;">
-              <a class="level-item button is-white is-gradient is-rounded is-fullwidth" disabled>Sign up</a>
+            <!-- <b-tooltip v-if="isBefore(formatDate(event.signupopenat)) < 0" :label="`Registration will be open on ${formatDate(event.signupopenat)}`" position="is-top" type="is-primary" style="width: 100%;">
+              <a class="level-item button is-gradient is-rounded is-fullwidth disabled">Sign up</a>
+            </b-tooltip>
+            <b-tooltip v-else-if="isBefore(event.signupopenat) < 0 && isBefore(event.signupcloseat) < 0" :label="`Registration will be closed on ${formatDate(event.signupcloseat)}.`" position="is-top" type="is-primary" style="width: 100%;">
+              <a :href="event.signupUrl" class="level-item button is-gradient is-rounded is-fullwidth">Sign up</a>
+            </b-tooltip>
+            <b-tooltip v-else :label="`Registration was closed on ${formatDate(event.signupcloseat)}.`" position="is-top" type="is-primary" style="width: 100%;">
+              <a class="level-item button is-gradient is-rounded is-fullwidth disabled">Sign up</a>
             </b-tooltip> -->
           </div>
         </div>
       </aside>
     </div>
-    <hr style="margin: 0.5rem 0 1rem 0;">
+    <!-- <hr style="margin: 0.5rem 0 1rem 0;"> -->
+    <div class="divider" />
     <div class="columns is-variable is-5 reverse-row-order">
       <aside class="container column is-5">
+        <hr class="is-hidden-tablet">
           <span class="is-size-4 has-text-weight-bold">{{ formatDate(event.startat) }}</span><br class="is-hidden-mobile">
           <span class="is-size-5"> {{ formatTime(event.startat) }}</span>
           <span class="is-size-5" v-if="event.endat"> - {{ formatTime(event.endat) }}</span>
@@ -73,10 +81,10 @@
         <p v-else class="is-size-6 mb-6">
           Sign Up Not Required
         </p>
+        <hr class="is-hidden-tablet">
         <div class="divider" />
       </aside>
       <div class="container content column is-7">
-        <hr class="is-hidden-tablet">
         <p v-html="event.description"></p>
         <hr>
         <a :href="`https://www.facebook.com/sharer/sharer.php?u=https://www.tedxutsukuba.com${this.$route.path}`" target="_blank" rel="nofollow noopener noreferrer" class="is-size-4 has-text-dark"><i class="mdi mdi-facebook" /></a>
