@@ -19,13 +19,13 @@
       <b-carousel-item v-for="(item, i) in items" :key="i">
         <nuxt-link :to="item.link">
           <figure class="image is-16by9">
-            <img data-not-lazy :src="item.image" :alt="item.title">
+            <img :src="item.image" :alt="item.title">
           </figure>
         </nuxt-link>
       </b-carousel-item>
       <!-- <template #indicators="props">
         <figure class="image">
-          <img data-not-lazy :src="items[props.i].thumbnail" :alt="items[props.i].title">
+          <img :src="items[props.i].thumbnail" :alt="items[props.i].title">
         </figure>
       </template> -->
     </b-carousel>

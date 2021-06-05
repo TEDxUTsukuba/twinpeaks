@@ -3,7 +3,6 @@
     <template slot="brand">
       <b-navbar-item tag="router-link" :to="localePath('/')">
         <img  
-          data-not-lazy
           src="~/assets/logo/u_bgblack_oneline.png"
           alt="TEDxUTsukuba Logo"
         >
@@ -19,10 +18,10 @@
     </template>
     <template slot="end" v-if="!this.$route.path.includes('private')">
       <b-navbar-dropdown collapsible :label="$t('header.events.parent')" class="is-hoverable">
-        <b-navbar-item tag="router-link" :to="{ path: localePath('/events/2020') }">
+        <b-navbar-item tag="router-link" :to="{ path: localePath('/conferences/2020') }">
           {{ $t('header.events.2020') }}
         </b-navbar-item>
-        <b-navbar-item tag="router-link" :to="{ path: localePath('/events/2019') }">
+        <b-navbar-item tag="router-link" :to="{ path: localePath('/conferences/2019') }">
           {{ $t('header.events.2019') }}
         </b-navbar-item>
         <b-navbar-item tag="router-link" :to="{ path: localePath('/events/') }">
