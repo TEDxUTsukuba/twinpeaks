@@ -1,11 +1,10 @@
 <template>
-  <div :id="id">
-    {{ data }}
+  <div>
     <div class="columns">
       <div class="column wallpaper-wrapper">
         <img v-if="event.thumbnail" :src="event.thumbnail.url" :alt="event.thumbnail.alt">
       </div>
-      <aside class="column section is-5" style="display: flex; justify-content: middle; align-items: center;">
+      <aside class="column is-5" style="display: flex; justify-content: middle; align-items: center;">
         <div class="is-block block">
           <p class="is-uppercase has-text-primary">{{ getDaysTogo(event.startat) }}</p><br>
           <h1 class="title is-2">{{ event.name }}</h1>
@@ -25,7 +24,6 @@
       </aside>
     </div>
     <!-- <hr style="margin: 0.5rem 0 1rem 0;"> -->
-    <div class="divider" />
     <div class="columns is-variable is-5 reverse-row-order">
       <aside class="container column is-5">
         <hr class="is-hidden-tablet">
@@ -58,7 +56,7 @@
         <div v-if="event.eventtype === 'virtual'">
           <p class="is-size-5">Virtual Event</p>
           <p>{{ event.webcast }}</p>
-          <a :href="event.webcastUrl" target="_blank" rel="noopener noreferrer" class="is-size-6">Join webcast</a>
+          <a :href="event.webcastUrl" target="_blank" rel="noopener noreferrer" class="is-size-6 has-text-info">Join webcast <i class="mdi mdi-open-in-new" /></a>
         </div>
         <div v-else-if="event.eventtype === 'hybrid'">
           <p class="is-size-5">Hybrid Event</p>
@@ -74,7 +72,7 @@
           Free
         </p>
         <p v-else class="is-size-6 mb-6">
-          Not Free
+          Paid
         </p>
         <p v-if="event.issignuprequired == true" class="is-size-6 mb-6">
         </p>
@@ -84,7 +82,7 @@
         <hr class="is-hidden-tablet">
         <div class="divider" />
       </aside>
-      <div class="container content column is-7">
+      <div class="content column is-7" style="margin-top: 2vh;">
         <p v-html="event.description"></p>
         <hr>
         <a :href="`https://www.facebook.com/sharer/sharer.php?u=https://www.tedxutsukuba.com${this.$route.path}`" target="_blank" rel="nofollow noopener noreferrer" class="is-size-4 has-text-dark"><i class="mdi mdi-facebook" /></a>
@@ -97,23 +95,25 @@
 </template>
 
 <script>
-import Meta from '~/assets/mixins/eventmixin'
+// import Meta from '~/assets/mixins/eventmixin'
 import { request, gql } from '~/lib/datocms'
-import { Image } from "vue-datocms";
+import { Image, toHead } from "vue-datocms"
 import format from 'date-fns/format'
 import parseISO from 'date-fns/parseISO'
+import VueMeta from 'vue-meta'
 
 export default {
-  mixins: [Meta],
+  // mixins: [Meta],
   components: {
-    "datocms-image": Image
+    VueMeta,
+    "datocms-image": Image, toHead
   },
   data () {
     return {
     }
   },
   async asyncData({ params, i18n }) {
-    // console.log(i18n.locale)
+    console.log(params.event);
     const data = await request({
       query: gql`
       {
@@ -134,18 +134,25 @@ export default {
             alt
             url
           }
+          seo {
+            description
+            title
+            twitterCard
+            image {
+              url
+            }
+          }
         }
       }
     `
     })
     return { ready: !!data, ...data }
   },
-  head: {
-    title: this.$route.params.event | 'TEDxUTsukuba',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    ]
+  metaInfo() {
+    if (!this.data) {
+      return;
+    }
+    return toHead(this.data.event.seo);
   },
   filters: {
     currencydecimal (value) {

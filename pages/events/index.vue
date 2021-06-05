@@ -46,7 +46,7 @@
                   </span>
                 </div>
                 <div class="block has-text-right">
-                  <nuxt-link :to="`./events/${event.id}`" class="button is-small is-rounded is-gradient">{{ $t('button.discover') }}</nuxt-link>
+                  <nuxt-link :to="`./${event.id}`" class="button is-small is-rounded is-gradient">{{ $t('button.discover') }}</nuxt-link>
                 </div>
               </div>
             </div>
@@ -100,7 +100,7 @@ export default {
   components: {
     "datocms-image": Image
   },
-  async asyncData({ params, i18n }) {
+  async asyncData({ i18n }) {
     // console.log(i18n.locale)
     const data = await request({
       query: gql`
