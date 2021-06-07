@@ -30,19 +30,19 @@
           <div class="column has-text-centered is-12-mobile is-4-tablet">
             <div>
               <p class="title is-size-1 has-text-primary"> 3600+</p>
-              <p class="subtitle heading has-text-dark">Talks</p>           
+              <p class="subtitle heading has-text-dark has-text-weight-bold">Talks</p>           
             </div>
           </div>
           <div class="column has-text-centered is-6-mobile is-4-tablet">
             <div>
               <p class="title is-size-1 has-text-primary">116</p>
-              <p class="subtitle heading has-text-dark">Languages</p>
+              <p class="subtitle heading has-text-dark has-text-weight-bold">Languages</p>
             </div>
           </div>
           <div class="column has-text-centered is-6-mobile is-4-tablet">
             <div>
               <p class="title is-size-1 has-text-primary">1.5M</p>
-              <p class="subtitle heading has-text-dark">Views per day</p>
+              <p class="subtitle heading has-text-dark has-text-weight-bold">Views per day</p>
             </div>
           </div>
         </div>
@@ -68,19 +68,19 @@
           <div class="column has-text-centered is-12-mobile is-4-tablet">
             <div>
               <p class="title is-size-1 has-text-light">100,000+ </p>
-              <p class="subtitle heading has-text-dark">Talks</p>
+              <p class="subtitle heading has-text-grey-light has-text-weight-bold">Talks</p>
             </div>
           </div>
           <div class="column has-text-centered is-6-mobile is-4-tablet">
             <div>
               <p class="title is-size-1 has-text-light">170+</p>
-              <p class="subtitle heading has-text-dark">Countries</p>
+              <p class="subtitle heading has-text-grey-light has-text-weight-bold">Countries</p>
             </div>
           </div>
           <div class="column has-text-centered is-6-mobile is-4-tablet">
             <div>
               <p class="title is-size-1 has-text-light"> 3000+</p>
-              <p class="subtitle heading has-text-dark">Events every year</p>           
+              <p class="subtitle heading has-text-grey-light has-text-weight-bold">Events every year</p>           
             </div>
           </div>
           
@@ -121,10 +121,10 @@
           <iframe class="podcast" src="https://open.spotify.com/embed-podcast/show/1VXcH8QHkjRcTCEd88U3ti" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         </div>
         <div class="column is-6-fullhd is-12 has-text-centered">
-          <iframe class="podcast apple" src="https://embed.podcasts.apple.com/us/podcast/ted-talks-daily/id160904630?itsct=podcast_box&amp;itscg=30200&amp;theme=dark" height="450px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *;" style="width: 100%; max-width: 660px; overflow: hidden; border-radius: 10px; background: transparent;"></iframe>
+          <iframe class="podcast apple" src="https://embed.podcasts.apple.com/us/podcast/ted-talks-daily/id160904630?itsct=podcast_box&amp;itscg=30200&amp;theme=light" height="450px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *;" style="width: 100%; max-width: 660px; overflow: hidden; border-radius: 10px; background: transparent;"></iframe>
         </div>
       </div>
-      <a class="button is-rounded is-gradient" target="_blank" href="https://www.ted.com/podcasts">{{ $t('about.ted.listenmore')}}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
+      <a class="button is-rounded is-gradient" target="_blank" href="https://audiocollective.ted.com/">{{ $t('about.ted.listenmore')}}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
     </section>
 
     <section class="section">
