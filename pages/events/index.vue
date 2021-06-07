@@ -59,7 +59,7 @@
       <p>{{ $t('events.othertedx.title') }}</p>
       <h2 class="title is-2">{{ $t('events.othertedx.copy') }}</h2>
       <div class="block">
-        <p>{{ $t('events.othertedx.description') }}</p>
+        <p v-html="$t('events.othertedx.description')" />
       </div>
       <div class="block has-text-right">  
         <a class="button is-rounded is-gradient" target="_blank" :href="`https://www.ted.com/tedx/events?autocomplete_filter=Japan&year=Year&month=Month&commit=Submit`">{{ $t('button.discover')}}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
