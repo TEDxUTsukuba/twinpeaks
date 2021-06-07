@@ -552,7 +552,7 @@ section.section-wide {
 .nmp-dark {
   @extend .nmp;
   color: white;
-  background: $black-ter;
+  background: $grey-darker;
   filter: drop-shadow(0px .25rem .75rem rgba(0, 0, 0, 0.6));
 
   .card-footer {
