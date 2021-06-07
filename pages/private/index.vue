@@ -148,7 +148,7 @@
         title_ja: 'TEDxUTsukuba.comにイベント情報を追加・更新する',
         title_en: 'Edit event information on TEDxUTsukuba.com',
         icon: 'calendar-edit',
-        path: '/private/how_to_add_an_event',
+        path: '/private/manage-event',
       },
       {
         title_ja: 'TED.comのイベント情報を編集する',
