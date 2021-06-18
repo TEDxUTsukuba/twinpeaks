@@ -23,7 +23,7 @@
         </div>
       </figure>
     </section> -->
-    <section style="padding-top: 8vh; padding-bottom: 2vh;" @mouseover="myMouseOver" @mouseleave="myMouseLeave">
+    <section style="padding-top: 8vh; padding-bottom: 2vh;">
       <AnimatedScenery />
     </section>
     <!-- <div id="top-carousel-wrapper" class="top-carousel-wrapper columns is-gapless is-vcentered has-background-black" style="margin-bottom: 0;">
@@ -58,7 +58,7 @@
       <div class="hero-body" id="intro">
         <section class="section">
           <div class="columns is-mobile is-multiline is-variable is-0">
-              <div class="column is-5-widescreen is-4-desktop is-4-tablet is-10-mobile">
+              <div class="column is-5-widescreen is-4-desktop is-4-tablet is-10-mobile" @mouseover="myMouseOver" @mouseleave="myMouseLeave">
                 <img src="~/assets/logo/motto.png" class="motto" style="padding-right: 50px; max-width: 400px;" alt="Ideas Worth Spreading">
               </div>
               <div class="column is-7-widescreen is-8-desktop is-8-tablet is-full-mobile">
