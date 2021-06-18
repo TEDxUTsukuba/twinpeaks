@@ -8,6 +8,9 @@
       <span v-if="$i18n.locale == 'en'" class="tag has-text-weight-bold">{{ $t('button.partialtranslation') }}</span>
     </section>
     
+
+    <!-- University of Tsukuba -->
+
     <section class="section" id="utsukuba">
       <h1 class="title is-0" v-html="$t('about.university.title')"></h1>
       <article v-html="$t('about.university.description')"></article>
@@ -21,13 +24,16 @@
 
     <section class="hero">
       <figure class="image is-2by1" v-if="$ua.isFromSmartphone()">
-        <img src="~/assets/wallpapers/DSC_3942.jpg" style="object-fit: cover; filter: saturate(150%) brightness(120%);">
+        <img src="~/assets/wallpapers/yukinasan.jpg" style="object-fit: cover; object-position: center 8%; filter: contrast(75%) saturate(125%);">
       </figure>
       <figure class="image is-3by1" v-else>
-        <img src="~/assets/wallpapers/DSC_3942.jpg" style="object-fit: cover; filter: saturate(150%) brightness(120%);">
+        <img src="~/assets/wallpapers/yukinasan.jpg" style="object-fit: cover; object-position: center 48%; filter: contrast(75%) saturate(125%);">
       </figure>
     </section>
     
+
+    <!-- TEDxUTsukuba -->
+
     <section class="section" id="tedxutsukuba">
       <h1 class="title is-0">TEDxUTsukuba</h1>
       <article v-html="$t('about.utsukuba.description.3')"></article>
@@ -41,6 +47,9 @@
         <img src="~/assets/wallpapers/tedxutsukubalive.jpg" style="object-fit: cover; filter: saturate(125%) brightness(110%) contrast(75%);">
       </figure>
     </section>
+
+
+    <!-- Social Capital -->
 
     <section class="section" id="socialcapital">
       <h1 class="title is-0">Social Capital</h1>
@@ -62,6 +71,10 @@
         <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.utsukuba.members.subtitle')}}</h1>
       </div>
     </section>
+
+
+    <!-- Members -->
+
     <section class="section-wide">
       <div class="columns is-multiline is-mobile">
         <div
@@ -70,73 +83,75 @@
           v-for="(member, index) in memberList" :key="index"
           style="display: inline-block; vertical-align: top;"
         >
-          <!-- <nuxt-link :to="member.id"> -->
-            <div class="nmp-dark">
-              <header class="card-header" v-if="member.hasImage && !$ua.isFromSmartphone()">
-                <p class="card-header-title">
-                </p>
-              </header>
-              <div class="card-image" v-if="!$ua.isFromSmartphone()" style="width: 100%;">
-                <figure class="image is-3-desktop is-6-tablet is-6-mobile" style="overflow: hidden;">
-                  <img class="portrait" v-if="member.hasImage" :src="getJsonImgUrl(`${member.id}.jpg`)" :alt="member.given_name_en + member.family_name_en">
-                </figure>
-              </div>
-              <div class="card-content">
-                <div class="media is-vcentered">
-                  <div class="media-left" v-if="$ua.isFromSmartphone()">
-                    <figure class="image is-48x48 is-square">
-                      <img v-if="member.hasImage" :src="getJsonImgUrl(`${member.id}.jpg`)" :alt="member.given_name_en + member.family_name_en" style="object-fit: cover; border-radius: 50%;">
-                      <img v-else src="~/assets/team/default.png" :alt="member.given_name_en + member.family_name_en" style="object-fit: cover; border-radius: 50%;">
-                    </figure>
-                  </div>
-                  <div class="media-content">
-                    <span v-if="$i18n.locale == 'en'">
-                      <h1 class="title is-4">
-                        {{ member.given_name_en }} {{ member.family_name_en}}
-                      </h1>
-                      <p class="subtitle is-6 is-size-7-touch has-text-grey-light">
-                        {{ member.role }}
-                      </p>
-                    </span>
-                    <span v-if="$i18n.locale == 'ja'">
-                      <h1 class="title is-4">
-                        {{ member.family_name_ja }} {{ member.given_name_ja }}
-                      </h1>
-                      <p class="subtitle is-size-6 is-size-7-touch has-text-grey-light">
-                        {{ member.role }}
-                      </p>
-                    </span>
-                  </div>
-                </div>
-
-                <div class="text">
-                  <p class="midashi is-size-7 has-text-weight-bold has-text-primary">
-                    {{ $t('about.utsukuba.members.from') }}
-                    <span class="is-size-7 has-text-weight-normal has-text-grey-light" v-if="$i18n.locale == 'en'">{{ member.home_state_en }}</span>
-                    <span class="is-size-7 has-text-weight-normal has-text-grey-light" v-if="$i18n.locale == 'ja'">{{ member.home_state_ja }}</span>
-                  </p>
-
-                  <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.college_ja">
-                    {{ $t('about.utsukuba.members.college') }}
-                    <span class="is-size-7 has-text-weight-normal has-text-grey-light" v-if="$i18n.locale == 'en'">{{ member.college_en }}</span>
-                    <span class="is-size-7 has-text-weight-normal has-text-grey-light" v-if="$i18n.locale == 'ja'">{{ member.college_ja }}</span>
-                  </p>
-                  
-                  <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.tedtalk_headline_en || member.tedtalk_headline_ja">
-                    {{ $t('about.utsukuba.members.favouritetedtalk') }}
-                    <span class="has-text-grey-light has-text-weight-normal is-size-7" v-if="member.tedtalk_headline_en && $i18n.locale == 'en'">{{ member.tedtalk_headline_en.length > 35 ? toUpperCamel(member.tedtalk_headline_en.substr(0, 35)) + '…' : toUpperCamel(member.tedtalk_headline_en) }}</span>
-                    <span class="has-text-grey-light has-text-weight-normal is-size-7" v-if="member.tedtalk_headline_ja && $i18n.locale == 'ja'">{{  member.tedtalk_headline_ja.length > 20 ? member.tedtalk_headline_ja.substr(0, 20) + '…' : member.tedtalk_headline_ja }}</span>
-                  </p>
-                </div>
-              </div>
-              <footer class="card-footer">
-                <nuxt-link :to="localePath(`/about/${member.id}`)" class="card-footer-item is-size-7">{{ $t('button.readmore') }}</nuxt-link>
-              </footer>
+          <div class="nmp-dark">
+            <header class="card-header" v-if="member.hasImage && !$ua.isFromSmartphone()">
+              <p class="card-header-title">
+              </p>
+            </header>
+            <div class="card-image" v-if="!$ua.isFromSmartphone()" style="width: 100%;">
+              <figure class="image is-3-desktop is-6-tablet is-6-mobile" style="overflow: hidden;">
+                <img class="portrait" v-if="member.hasImage" :src="getJsonImgUrl(`${member.id}.jpg`)" :alt="member.given_name_en + member.family_name_en">
+              </figure>
             </div>
-          <!-- </nuxt-link> -->
+            <div class="card-content">
+              <div class="media is-vcentered">
+                <div class="media-left" v-if="$ua.isFromSmartphone()">
+                  <figure class="image is-48x48 is-square">
+                    <img v-if="member.hasImage" :src="getJsonImgUrl(`${member.id}.jpg`)" :alt="member.given_name_en + member.family_name_en" style="object-fit: cover; border-radius: 50%;">
+                    <img v-else src="~/assets/team/default.png" :alt="member.given_name_en + member.family_name_en" style="object-fit: cover; border-radius: 50%;">
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <span v-if="$i18n.locale == 'en'">
+                    <h1 class="title is-4">
+                      {{ member.given_name_en }} {{ member.family_name_en}}
+                    </h1>
+                    <p class="subtitle is-6 is-size-7-touch has-text-grey-light">
+                      {{ member.role }}
+                    </p>
+                  </span>
+                  <span v-if="$i18n.locale == 'ja'">
+                    <h1 class="title is-4">
+                      {{ member.family_name_ja }} {{ member.given_name_ja }}
+                    </h1>
+                    <p class="subtitle is-size-6 is-size-7-touch has-text-grey-light">
+                      {{ member.role }}
+                    </p>
+                  </span>
+                </div>
+              </div>
+
+              <div class="text">
+                <p class="midashi is-size-7 has-text-weight-bold has-text-primary">
+                  {{ $t('about.utsukuba.members.from') }}
+                  <span class="is-size-7 has-text-weight-normal has-text-grey-light" v-if="$i18n.locale == 'en'">{{ member.home_state_en }}</span>
+                  <span class="is-size-7 has-text-weight-normal has-text-grey-light" v-if="$i18n.locale == 'ja'">{{ member.home_state_ja }}</span>
+                </p>
+
+                <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.college_ja">
+                  {{ $t('about.utsukuba.members.college') }}
+                  <span class="is-size-7 has-text-weight-normal has-text-grey-light" v-if="$i18n.locale == 'en'">{{ member.college_en }}</span>
+                  <span class="is-size-7 has-text-weight-normal has-text-grey-light" v-if="$i18n.locale == 'ja'">{{ member.college_ja }}</span>
+                </p>
+                
+                <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.tedtalk_headline_en || member.tedtalk_headline_ja">
+                  {{ $t('about.utsukuba.members.favouritetedtalk') }}
+                  <span class="has-text-grey-light has-text-weight-normal is-size-7" v-if="member.tedtalk_headline_en && $i18n.locale == 'en'">{{ member.tedtalk_headline_en.length > 35 ? toUpperCamel(member.tedtalk_headline_en.substr(0, 35)) + '…' : toUpperCamel(member.tedtalk_headline_en) }}</span>
+                  <span class="has-text-grey-light has-text-weight-normal is-size-7" v-if="member.tedtalk_headline_ja && $i18n.locale == 'ja'">{{  member.tedtalk_headline_ja.length > 20 ? member.tedtalk_headline_ja.substr(0, 20) + '…' : member.tedtalk_headline_ja }}</span>
+                </p>
+              </div>
+            </div>
+            <footer class="card-footer">
+              <nuxt-link :to="localePath(`/about/${member.id}`)" class="card-footer-item is-size-7">{{ $t('button.readmore') }}</nuxt-link>
+            </footer>
+          </div>
         </div>
       </div>
     </section>
+
+
+    <!-- Team -->
+
     <section class="section" id="team">
       <div class="container has-text-right">
         <h1 class="title is-0 is-spaced">{{ $t('about.utsukuba.team.title')}}</h1>
@@ -168,6 +183,9 @@
       </div>
     </section>
 
+
+    <!-- Team Carousel -->
+
     <section class="section is-halfheight">
       <div class="section has-text-centered">
         <h1 class="title is-2 is-spaced">{{ $t('about.utsukuba.join.title')}}</h1>
@@ -193,6 +211,9 @@
           </div>
         </div>
       </div>
+
+
+      <!-- Contact -->
     
       <div class="section has-text-centered">
         <h1 class="title is-2 is-spaced">{{ $t('about.utsukuba.contactus.title')}}</h1>
