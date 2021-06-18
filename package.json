@@ -9,7 +9,8 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "clear-hard-source-cache": "rm -rf node_modules/.cache/hard-source/"
+    "clear-hard-source-cache": "rm -rf node_modules/.cache/hard-source/",
+    "test": "jest"
   },
   "dependencies": {
     "@mdi/font": "^5.8.55",
@@ -18,6 +19,9 @@
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/pwa": "^3.0.0-0",
     "@vue/composition-api": "^1.0.0-rc.9",
+    "@vue/test-utils": "^1.2.0",
+    "babel-jest": "^27.0.2",
+    "babel-preset-env": "^1.7.0",
     "bulma": "^0.8.2",
     "cookie-universal-nuxt": "^2.1.4",
     "date-fns": "^2.21.3",
@@ -25,6 +29,9 @@
     "graphql": "^15.5.0",
     "graphql-request": "^3.4.0",
     "graphql-tag": "^2.12.4",
+    "jest": "^27.0.4",
+    "jsdom": "^16.6.0",
+    "jsdom-global": "^3.0.2",
     "nuxt": "^2.15.0",
     "nuxt-buefy": "^0.3.2",
     "nuxt-canonical": "^1.0.6",
@@ -39,8 +46,10 @@
     "vue-add-to-calendar": "^1.0.7",
     "vue-datocms": "^1.0.1",
     "vue-horizontal": "^0.8.10",
+    "vue-jest": "^3.0.7",
     "vue-meta": "^2.4.0",
     "vue-scrollmagic": "^1.2.0",
+    "vue-template-compiler": "2.6.12",
     "vue-youtube": "^1.4.0",
     "webfontloader": "^1.6.28"
   },
