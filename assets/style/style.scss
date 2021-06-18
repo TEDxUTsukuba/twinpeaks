@@ -390,8 +390,8 @@ section#wrapper-dark {
 
 section#wrapper-gradient {
   @extend section#wrapper-dark;
-  background-color: #FC466B;
-  background: linear-gradient(319deg, #b31217, #dc2430);
+  background-color: $red;
+  // background: linear-gradient(319deg, #b31217, #dc2430);
   // background: linear-gradient(319deg, #fc5f7f 0%, #3e0aff 100%);
 }
 
@@ -409,19 +409,19 @@ section#wrapper-red {
 section.section {
   @media screen and (max-width: 639px) {
     margin: 0vh 0vw !important;
-    padding: 1.5rem !important;
+    padding: 1.5rem;
   }
 
   @media screen and (min-width: 640px) and (max-width: 1216px) {
-    margin: 0vh 4vw !important;
+    margin: 0vh 4vw;
   }
 
   @media screen and (min-width: 1217px) and (max-width: 1409px) {
-    margin: 0vh 8vw !important;
+    margin: 0vh 8vw;
   }
 
   @media screen and (min-width: 1410px) {
-    margin: 0 auto !important;
+    margin: 0 auto;
     width: 1200px;
   }
 }
@@ -828,6 +828,7 @@ span.is-red {
   -webkit-animation: loop-slide 40s linear 1s both;
   animation: loop-slide 40s linear 1s both;
   animation-fill-mode: forwards;
+  animation-delay: 2s;
 
   @media screen and (max-width: 768px) {
     -webkit-animation: loop-slide 40s linear 1s both;

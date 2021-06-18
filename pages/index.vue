@@ -3,9 +3,9 @@
     <!-- <div>
       <LogoAnimation id="top-logo" />
     </div> -->
-    <section :class="this.$ua.isFromSmartphone() ? 'hero is-black fullheight-without-header vertical-center' : 'hero is-black'">
+    <!-- <section :class="this.$ua.isFromSmartphone() ? 'hero is-black fullheight-without-header vertical-center' : 'hero is-black'" v-show="!this.$cookies.get('isVideoPlayed')">
       <figure class="image" :style="this.$ua.isFromSmartphone() ? '' : 'height: calc(100vw*5/12); width: 100vw; overflow: hidden;'">
-        <video v-show="isVideoActive && !this.$cookies.get('isVideoPlayed')"
+        <video v-show="isVideoActive"
           src="~/assets/nograin_short.mp4"  
           autoplay
           :muted="isMuted"
@@ -13,15 +13,18 @@
           width="100%"
           style="position: absolute; top:-100%; left:0; right: 0; bottom:-100%; margin: auto;"
         />
-        <img v-show="isVideoActive == false || this.$cookies.get('isVideoPlayed')"
+        <img v-show="isVideoActive == false"
           src="~/assets/u_logo_banner.png"
           width="100%"
           style="position: absolute; top:-100%; left:0; right: 0; bottom:-100%; margin: auto;"
         />
-        <!-- <div v-show="isVideoActive == false || this.$cookies.get('isVideoPlayed')">
+        <div v-show="isVideoActive == false || this.$cookies.get('isVideoPlayed')">
           <Carousel id="top-carousel" />
-        </div> -->
+        </div>
       </figure>
+    </section> -->
+    <section style="padding-top: 8vh; padding-bottom: 2vh;" @mouseover="myMouseOver" @mouseleave="myMouseLeave">
+      <AnimatedScenery />
     </section>
     <!-- <div id="top-carousel-wrapper" class="top-carousel-wrapper columns is-gapless is-vcentered has-background-black" style="margin-bottom: 0;">
       <div class="column is-12-touch">
@@ -59,12 +62,12 @@
                 <img src="~/assets/logo/motto.png" class="motto" style="padding-right: 50px; max-width: 400px;" alt="Ideas Worth Spreading">
               </div>
               <div class="column is-7-widescreen is-8-desktop is-8-tablet is-full-mobile">
-                  <h1 v-if="$i18n.locale == 'ja'" class="title is-2 is-size-4-mobile has-text-weight-bold">
+                  <h1 v-if="$i18n.locale == 'ja'" class="title is-2 is-size-4-mobile has-text-weight-bold has-text-white">
                     <span v-html="$t('intro.headline1')" />
                     <br class="is-hidden-mobile">
                     <span v-html="$t('intro.headline2')" />
                   </h1>
-                  <h1 v-if="$i18n.locale == 'en'" class="title is-2 is-size-4-mobile has-text-weight-light">
+                  <h1 v-if="$i18n.locale == 'en'" class="title is-2 is-size-4-mobile has-text-weight-light has-text-white">
                     <span v-html="$t('intro.headline1')" />
                     <br class="is-hidden-mobile">
                     <span v-html="$t('intro.headline2')" />
@@ -153,11 +156,12 @@ import format from 'date-fns/format'
 import parseISO from 'date-fns/parseISO'
 import VueHorizontal from 'vue-horizontal'
 import $cookies from "cookie-universal-nuxt";
+import AnimatedScenery from '~/components/AnimatedScenery'
 // import LogoAnimation from '~/components/LogoAnimation'
 
 export default {
   components: {
-    PopularArticles, "datocms-image": Image, VueHorizontal,
+    PopularArticles, "datocms-image": Image, VueHorizontal, AnimatedScenery
     // Carousel
   },
   data() {
@@ -199,73 +203,24 @@ export default {
     }
   },
   mounted() {
-    const isVideoPlayed = this.$cookies.get("isVideoPlayed");
-    // if (!isVideoPlayed && this.$ua.isFromPc() && navigator.userAgent.includes('Mac OS X') && navigator.maxTouchPoints > 0 && this.$ua.browser() !== 'Chrome') {
-    //     this.isMuted = false;
-    //     this.$buefy.toast.open({
-    //       message: 'Audio On',
-    //       type: 'is-light',
-    //       position: 'is-top',
-    //       duration: 7500
-    //     })
-    // }
-    if (this.$ua.browser() !== 'Safari') {
-      // const scene1 = this.$scrollmagic
-      //   .scene({
-      //     triggerElement: '#top-logo',
-      //     triggerHook: 0.5,
-      //     offset: 10,
-      //     // durationがあるとremove()が有効にならない
-      //     reverse: false
-      //   })
-      //   // SVGのレイヤーにactiveクラスを付与
-      //   .setClassToggle("#layer1", "active")
-      //   // アニメーションが終わってもclassを削除しない
-      //   .reverse(false)
-
-      // const scene2 = this.$scrollmagic
-      //   .scene({
-      //     triggerElement: '#top-carousel-wrapper',
-      //     triggerHook: 0.5,
-      //     offset: 0,
-      //     reverse: false
-      //   })
-      //   .setTween('#intro', {
-      //     css: {
-      //       opacity: 1
-      //     }
-      //   })
-
-      const scene3 = this.$scrollmagic
-        .scene({
-          triggerElement: '#notice-title',
-          triggerHook: 0.5,
-          offset: 0,
-          reverse: false
-        })
-        .setTween('#notice', {
-          css: {
-            opacity: 1
-          }
-        })
-        // this.$scrollmagic.addScene(scene1)
-        // this.$scrollmagic.addScene(scene2)
-        // this.$scrollmagic.addScene(scene3)
-    } else {
-      // document.getElementById("intro").style.opacity = 1;
-      // document.getElementById("notice").style.opacity = 1;
-    }
+    // const isVideoPlayed = this.$cookies.get("isVideoPlayed");
   },
   methods: {
     formatDate(date) {
       return format(parseISO(date), 'PPP')
     },
-    onEnded() {
-      this.isVideoActive = false;
-      this.$cookies.set("isVideoPlayed", true, {
-        maxAge: 60 * 60 * 24
-      });
-    }
+    myMouseOver() {
+      document.getElementById("rocket").classList.add("rocket-launch");
+    },
+    myMouseLeave() {
+      document.getElementById("rocket").classList.remove("rocket-launch");
+    },
+    // onEnded() {
+    //   this.isVideoActive = false;
+    //   this.$cookies.set("isVideoPlayed", true, {
+    //     maxAge: 60 * 60 * 24
+    //   });
+    // }
   }
 }
 </script>
@@ -329,8 +284,6 @@ export default {
     width: 100%; max-width: 480px;
     // transform: translate3d(0,0,100px);
   }
-  
-  
 </style>
 
 
