@@ -1,130 +1,119 @@
 <template>
   <section id="wrapper" class="hero font-awesome">
-      <!-- <section class="section has-text-centered">
-        <h1 class="heading is-size-5 has-text-centered">
-          <span class="has-text-dark">{{ $t('social.title') }}</span>
-        </h1>
-        <a class="has-text-primary is-size-1 fb" href="https://www.facebook.com/tedxutsukuba/" target="_blank" rel="noopener noreferrer">
-          <i class="mdi mdi-facebook" />
-        </a>
-        <a class="has-text-primary is-size-1 ig" href="https://www.instagram.com/tedxutsukuba/" target="_blank" rel="noopener noreferrer">
-          <i class="mdi mdi-instagram" />
-        </a>
-        <a class="has-text-primary is-size-1 tw" href="https://www.twitter.com/tedxutsukuba/" target="_blank" rel="noopener noreferrer">
-          <i class="mdi mdi-twitter" />
-        </a>
-      </section> -->
-        
-      <section class="section has-text-centered">
-        <h1 class="heading is-size-5">
-          <span class="has-text-dark">{{ $t('covid19-info.title') }}</span>
-        </h1>
-        <p class="is-size-7">{{ $t('covid19-info.description1')}}</p>
-        
-        <!-- <div>
-          <img src="http://www.tsukuba.ac.jp/en/application/themes/tsukuba/images/logo_footer.png">
-        </div> -->
 
-        <div class="content">
-          <b-collapse :open="false" position="is-bottom" aria-id="contentIdForA11y1">
-            <a class="button is-white is-rounded" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1" style="margin: 2rem auto 0 auto;">
-                <b-icon :icon="!props.open ? 'chevron-down' : 'chevron-up'" style="margin-right: 1px;" />
-                {{ !props.open ? $t('button.readmore') : $t('button.readless') }}
-            </a>
+    <!-- Covid-19 -->
+    <section class="section has-text-centered">
+      <h1 class="heading is-size-5">
+        <span class="has-text-dark">{{ $t('covid19-info.title') }}</span>
+      </h1>
+      <p class="is-size-7">{{ $t('covid19-info.description1')}}</p>
+      <div class="content">
+        <b-collapse :open="false" position="is-bottom" aria-id="contentIdForA11y1">
+          <a class="button is-white is-rounded" slot="trigger" slot-scope="props" aria-controls="contentIdForA11y1" style="margin: 2rem auto 0 auto;">
+              <b-icon :icon="!props.open ? 'chevron-down' : 'chevron-up'" style="margin-right: 1px;" />
+              {{ !props.open ? $t('button.readmore') : $t('button.readless') }}
+          </a>
+          <br>
+          <!-- 折り畳み部分 -->
+          <div class="column has-text-left">
+            <h1 class="title is-4">{{ $t('covid19-info.org.title') }}</h1>
+            <ul>
+              <li>{{ $t('covid19-info.org.s1') }}</li>
+              <li>{{ $t('covid19-info.org.s2') }}</li>
+              <li>{{ $t('covid19-info.org.s3') }}</li>
+              <li>{{ $t('covid19-info.org.s4') }}</li>
+              <li>{{ $t('covid19-info.org.s5') }}</li>
+            </ul>
+            <h1 class="title is-4">{{ $t('covid19-info.event.title') }}</h1>
+            <ul>
+              <li>{{ $t('covid19-info.event.s1') }}</li>
+              <li>{{ $t('covid19-info.event.s2') }}</li>
+              <li>{{ $t('covid19-info.event.s3') }}</li>
+              <li>{{ $t('covid19-info.event.s4') }}</li>
+            </ul>
             <br>
-            <div class="column has-text-left">
-              <h1 class="title is-4">{{ $t('covid19-info.org.title') }}</h1>
-              <ul>
-                <li>{{ $t('covid19-info.org.s1') }}</li>
-                <li>{{ $t('covid19-info.org.s2') }}</li>
-                <li>{{ $t('covid19-info.org.s3') }}</li>
-                <li>{{ $t('covid19-info.org.s4') }}</li>
-                <li>{{ $t('covid19-info.org.s5') }}</li>
-              </ul>
-              <h1 class="title is-4">{{ $t('covid19-info.event.title') }}</h1>
-              <ul>
-                <li>{{ $t('covid19-info.event.s1') }}</li>
-                <li>{{ $t('covid19-info.event.s2') }}</li>
-                <li>{{ $t('covid19-info.event.s3') }}</li>
-                <li>{{ $t('covid19-info.event.s4') }}</li>
-              </ul>
+            <p class="is-size-6">{{ $t('covid19-info.description2') }}</p>
+            <a class="button is-small is-rounded is-outlined" href="http://www.tsukuba.ac.jp/about/antidisaster/covid-19-list.html">{{ $t('covid19-info.link.university') }}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
+            <a class="button is-small is-rounded is-outlined" href="https://www.city.tsukuba.lg.jp/shisei/1010123/index.html">{{ $t('covid19-info.link.city') }}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
+            <a class="button is-small is-rounded is-outlined" href="https://www.pref.ibaraki.jp/shokorodo/chusho/shogyo/2020korona/guideline.html">{{ $t('covid19-info.link.prefecture') }}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
+          </div>
+        </b-collapse>
+      </div>
+    </section>
+
+    <!-- フッター -->
+    <section class="hero has-background-black">
+      <div class="hero-body">
+        <section class="section">
+          <div class="columns is-variable is-6">
+            <!-- 上段左側 -->
+            <div class="column is-6-desktop is-6-tablet has-text-centered-mobile">
+              <nuxt-link :to="localePath('/')">
+                <figure class="image" style="width: 100%; max-width: 320px;">
+                  <img src="~/assets/logo/u_bgblack_oneline.png" alt="Logo">
+                </figure>
+              </nuxt-link>
               <br>
-              <p class="is-size-6">{{ $t('covid19-info.description2') }}</p>
-              <a class="button is-small is-rounded is-outlined" href="http://www.tsukuba.ac.jp/about/antidisaster/covid-19-list.html">{{ $t('covid19-info.link.university') }}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
-              <a class="button is-small is-rounded is-outlined" href="https://www.city.tsukuba.lg.jp/shisei/1010123/index.html">{{ $t('covid19-info.link.city') }}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
-              <a class="button is-small is-rounded is-outlined" href="https://www.pref.ibaraki.jp/shokorodo/chusho/shogyo/2020korona/guideline.html">{{ $t('covid19-info.link.prefecture') }}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
+              <p class="title is-size-4 has-text-light has-text-centered-mobile has-text-weight-light">Spread Globally, <br class="is-hidden-tablet" />Connect Locally.</p>
             </div>
-          </b-collapse>
-        </div>
-      </section>
+            <!-- 上段右側 -->
+            <div class="column has-text-right">
+              <TsukubaScenery />
+            </div>
+          </div>
+          <div class="columns is-centered is-vcentered">
+            <!-- 下段左側 -->
+            <div class="column has-text-centered-mobile">
+              <p class="is-size-7 has-text-grey-light">
+                This independent TEDx event is operated under license from TED.
+                <br class="is-hidden-mobile" />
+                <a class="is-size-7 has-text-grey-light url" href="https://www.ted.com/about/programs-initiatives/tedx-program">About TEDx program <externalLink style="width: 0.75rem;"/></a>
+              </p>
+              <a href="https://ja.nuxtjs.org/" target="_blank"><nuxtLogo style="width: 100px; margin-top: 10px;" /></a>
+            </div>
+            <div class="column has-text-right has-text-centered-mobile">
+              <span class="has-text-grey-light">
+                <p class="is-size-7">{{ $t('about.location.address') }}</p>
+                <p class="is-size-7">tedxutsukuba&#64;gmail.com</p>
+                <p class="is-size-7">&copy; TEDxUTsukuba 2021</p>
+              </span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+    
+    <section class="hero has-background-primary">
+      <div class="hero-body">
+        <section class="section" style="padding: 1rem 1.5rem;">
+          <div class="columns is-centered">
+            <div class="column is-8-desktop is-7-tablet has-text-left has-text-grey-light has-text-centered-mobile">  
+              <nuxt-link :to="localePath('news')" class="has-text-white url is-size-7">{{ $t('news.title') }}</nuxt-link> |
+              <nuxt-link :to="localePath('')" class="has-text-white url is-size-7">{{ $t('codeofconduct.title') }}</nuxt-link> |
+              <nuxt-link :to="localePath('private')" class="has-text-white url is-size-7">{{ $t('2020.participance.pass.title') }}</nuxt-link>
+            </div>
 
-      <section class="hero has-background-black">
-        <div class="hero-body">
-          <section class="section">
-            <div class="columns is-vcentered">
-              <div class="column is-4-desktop is-4-tablet has-text-centered-mobile">
-                <nuxt-link :to="localePath('/')">
-                  <figure class="image" style="width: 100%; max-width: 320px;">
-                    <img src="~/assets/logo/u_bgblack_oneline.png" alt="Logo">
-                  </figure>
-                </nuxt-link>
-              </div>
-              <div class="column has-text-right">
-                <p class="title is-size-4 has-text-light has-text-centered-mobile has-text-weight-light">Spread Globally, <br class="is-hidden-tablet" />Connect Locally.</p>
-              </div>
+            <div class="sns column is-4-desktop is-5-tablet has-text-right has-text-centered-mobile">
+              <a href="https://www.facebook.com/tedxutsukuba" class="icon">
+                <iconFB alt="Facebook" class="icon" />
+              </a>
+              <a href="https://www.instagram.com/tedxutsukuba" class="icon">
+                <iconIG alt="Instagram" class="icon" />
+              </a>
+              <a href="https://www.twitter.com/tedxutsukuba" class="icon">
+                <iconTW alt="Twitter" class="icon" />
+              </a>
+              <a href="https://www.flickr.com/people/146703506@N03/" class="icon">
+                <iconFL alt="Flickr" class="icon" />
+              </a>
+              <a href="https://note.com/tedxutsukuba" class="icon"> 
+                <iconNT alt="note" class="icon" />
+              </a>
             </div>
-            <div class="columns is-centered is-vcentered">
-              <div class="column has-text-centered-mobile">
-                <p class="is-size-7 has-text-grey-light">
-                  This independent TEDx event is operated under license from TED.
-                  <br class="is-hidden-mobile" />
-                  <a class="is-size-7 has-text-grey-light url" href="https://www.ted.com/about/programs-initiatives/tedx-program">About TEDx program <externalLink style="width: 0.75rem;"/></a>
-                </p>
-                <a href="https://ja.nuxtjs.org/" target="_blank"><nuxtLogo style="width: 100px; margin-top: 10px;" /></a>
-              </div>
-              <div class="column has-text-right has-text-centered-mobile">
-                <span class="has-text-grey-light">
-                  <p class="is-size-7">{{ $t('about.location.address') }}</p>
-                  <p class="is-size-7">tedxutsukuba&#64;gmail.com</p>
-                  <p class="is-size-7">&copy; TEDxUTsukuba 2021</p>
-                </span>
-              </div>
-            </div>
-          </section>
-        </div>
-      </section>
-      
-      <section class="hero has-background-primary">
-        <div class="hero-body">
-          <section class="section" style="padding: 1rem 1.5rem;">
-            <div class="columns is-centered">
-              <div class="column is-8-desktop is-7-tablet has-text-left has-text-grey-light has-text-centered-mobile">  
-                <nuxt-link :to="localePath('news')" class="has-text-white url is-size-7">{{ $t('news.title') }}</nuxt-link> |
-                <nuxt-link :to="localePath('')" class="has-text-white url is-size-7">{{ $t('codeofconduct.title') }}</nuxt-link> |
-                <nuxt-link :to="localePath('private')" class="has-text-white url is-size-7">{{ $t('2020.participance.pass.title') }}</nuxt-link>
-              </div>
-
-              <div class="sns column is-4-desktop is-5-tablet has-text-right has-text-centered-mobile">
-                <a href="https://www.facebook.com/tedxutsukuba" class="icon">
-                  <iconFB alt="Facebook" class="icon" />
-                </a>
-                <a href="https://www.instagram.com/tedxutsukuba" class="icon">
-                  <iconIG alt="Instagram" class="icon" />
-                </a>
-                <a href="https://www.twitter.com/tedxutsukuba" class="icon">
-                  <iconTW alt="Twitter" class="icon" />
-                </a>
-                <a href="https://www.flickr.com/people/146703506@N03/" class="icon">
-                  <iconFL alt="Flickr" class="icon" />
-                </a>
-                <a href="https://note.com/tedxutsukuba" class="icon"> 
-                  <iconNT alt="note" class="icon" />
-                </a>
-              </div>
-            </div>
-          </section>
-        </div>
-      </section>
+          </div>
+        </section>
+      </div>
+    </section>
 
     <!-- <div class="wrap">
         <ul class="slideshow">
@@ -154,10 +143,11 @@ import iconFL from '@/assets/svg/flickr.svg'
 import iconNT from '@/assets/svg/note.svg'
 import externalLink from '@/assets/svg/external-link-alt-solid.svg'
 import nuxtLogo from '@/assets/svg/built-with-nuxt-white.svg'
+import TsukubaScenery from '@/assets/svg/tsukuba-scenery.svg'
 
 export default {
   components: {
-    iconIG, iconFB, iconTW, iconFL, iconNT, externalLink, nuxtLogo
+    iconIG, iconFB, iconTW, iconFL, iconNT, externalLink, nuxtLogo, TsukubaScenery
   },
   methods: {
     getJsonImgUrl(value) {

@@ -145,7 +145,6 @@
 </template>
 
 <script>
-import Card from '~/components/Card'
 // import Carousel from '~/components/Carousel'
 import PopularArticles from '~/components/PopularArticles'
 import { request, gql } from '~/lib/datocms'
@@ -158,7 +157,7 @@ import $cookies from "cookie-universal-nuxt";
 
 export default {
   components: {
-    Card, PopularArticles, "datocms-image": Image, VueHorizontal,
+    PopularArticles, "datocms-image": Image, VueHorizontal,
     // Carousel
   },
   data() {
