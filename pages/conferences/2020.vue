@@ -210,7 +210,7 @@
 </template>
 
 <script>
-import Card from '~/components/Card'
+import Card from '~/components/EnjaCard'
 import Movie from '~/components/Movie'
 import Image_sp1 from '~/assets/speakers/2020/speaker-01.png'
 import Image_sp2 from '~/assets/speakers/2020/speaker-02.png'

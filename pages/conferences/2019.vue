@@ -228,7 +228,7 @@
 </template>
 
 <script>
-import Card from '~/components/Card'
+import Card from '~/components/EnjaCard'
 import Movie from '~/components/Movie'
 import Image_sp1 from '~/assets/speakers/2019/sp_2019_1.jpg'
 import Image_sp2 from '~/assets/speakers/2019/sp_2019_2.jpg'
