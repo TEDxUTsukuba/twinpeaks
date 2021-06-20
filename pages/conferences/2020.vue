@@ -456,11 +456,13 @@ export default {
     color: #bcc5cd;
     background: linear-gradient(135deg, #3494e6, #ec6ead);
     /* background: linear-gradient(45deg, #74ebd5, #acb6e5); */
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     &.has-text-white {
       color: white;
       background: linear-gradient(135deg, #E0EAFC, #CFDEF3) !important;
+      background-clip: text;
       -webkit-background-clip: text !important;
       -webkit-text-fill-color: transparent;
     }
