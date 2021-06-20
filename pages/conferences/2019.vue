@@ -455,12 +455,13 @@ h1.is-0 {
   color: #bcc5cd;
   background-color: #eec0c6;
   background-image: linear-gradient(135deg, #b267eb, #fc6f62);
-
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   &.has-text-white {
     color: white;
     background: linear-gradient(135deg, white, white) !important;
+    background-clip: text;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent;
   }
