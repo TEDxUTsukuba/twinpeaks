@@ -67,7 +67,7 @@
         <div class="container has-text-centered">
           <p>Teaser Movie Comes Here</p>
           <figure class="image is-16by9">
-            <iframe class="has-ratio" src="https://www.youtube.com/embed/Y56lpXvXbs0?start=16" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="has-ratio" src="https://www.youtube.com/embed/Y56lpXvXbs0?start=72&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </figure>
         </div>
       </div>
@@ -126,8 +126,8 @@
 
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
-section {
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+section, p, a, span, h1 {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .container {
   @media screen and (max-width: 1024px) {
