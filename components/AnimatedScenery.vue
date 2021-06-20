@@ -24,7 +24,7 @@
       </g>
 
 
-      <line class="line" x1="0" y1="450" x2="1150" y2="447"/>
+      <line class="line" x1="0" y1="447" x2="1150" y2="447"/>
       <g class="train">
         <polygon class="cls-1" points="1098.6,407 1286.3,407 1295.5,426.8 1291.3,439 1098.6,439 	"/>
         <polygon class="cls-1" points="233.5,439 40.9,439 36.7,426.8 45.8,407 233.5,407 	"/>
@@ -165,7 +165,7 @@
   animation-iteration-count: 3;
 }
 .train {
-  animation: 10s slide-train ease-in-out infinite;
+  animation: 12s slide-train ease-in-out infinite;
   animation-fill-mode: forwards;
   animation-iteration-count: 3;
 }
@@ -192,14 +192,17 @@
   0% {
   transform: translateX(-100%);
   }
-  35% {
+  10% {
+  transform: translateX(-100%);
+  }
+  40% {
   transform: translateX(-9%);
   }
-  65% {
+  70% {
   transform: translateX(-9%);
   }
   100% {
-  transform: translateX(-100%);
+  transform: translateX(-80%);
   }
 }
 @keyframes slide-rocket {
