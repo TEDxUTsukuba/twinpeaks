@@ -95,19 +95,19 @@
 
             <div class="sns column is-4-desktop is-5-tablet has-text-right has-text-centered-mobile">
               <a href="https://www.facebook.com/tedxutsukuba" class="icon">
-                <iconFB alt="Facebook" class="icon" />
+                <iconFB alt="Facebook" style="width: 1.5rem" />
               </a>
               <a href="https://www.instagram.com/tedxutsukuba" class="icon">
-                <iconIG alt="Instagram" class="icon" />
+                <iconIG alt="Instagram" style="width: 1.5rem" />
               </a>
               <a href="https://www.twitter.com/tedxutsukuba" class="icon">
-                <iconTW alt="Twitter" class="icon" />
+                <iconTW alt="Twitter" style="width: 1.5rem" />
               </a>
               <a href="https://www.flickr.com/people/146703506@N03/" class="icon">
-                <iconFL alt="Flickr" class="icon" />
+                <iconFL alt="Flickr" style="width: 1.5rem" />
               </a>
               <a href="https://note.com/tedxutsukuba" class="icon"> 
-                <iconNT alt="note" class="icon" />
+                <iconNT alt="note" style="width: 1.5rem" />
               </a>
             </div>
           </div>

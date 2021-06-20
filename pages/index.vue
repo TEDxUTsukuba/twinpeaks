@@ -1,28 +1,5 @@
 <template>
   <section id="wrapper-gradient" style="margin: 0; padding: 0;">
-    <!-- <div>
-      <LogoAnimation id="top-logo" />
-    </div> -->
-    <!-- <section :class="this.$ua.isFromSmartphone() ? 'hero is-black fullheight-without-header vertical-center' : 'hero is-black'" v-show="!this.$cookies.get('isVideoPlayed')">
-      <figure class="image" :style="this.$ua.isFromSmartphone() ? '' : 'height: calc(100vw*5/12); width: 100vw; overflow: hidden;'">
-        <video v-show="isVideoActive"
-          src="~/assets/nograin_short.mp4"  
-          autoplay
-          :muted="isMuted"
-          v-on:ended="onEnded"
-          width="100%"
-          style="position: absolute; top:-100%; left:0; right: 0; bottom:-100%; margin: auto;"
-        />
-        <img v-show="isVideoActive == false"
-          src="~/assets/u_logo_banner.png"
-          width="100%"
-          style="position: absolute; top:-100%; left:0; right: 0; bottom:-100%; margin: auto;"
-        />
-        <div v-show="isVideoActive == false || this.$cookies.get('isVideoPlayed')">
-          <Carousel id="top-carousel" />
-        </div>
-      </figure>
-    </section> -->
     <section style="padding-top: 8vh; padding-bottom: 2vh;">
       <AnimatedScenery />
     </section>
@@ -171,9 +148,7 @@ export default {
       weAreTEDxUTsukuba: 'ZbIEuwjpxp0',
       todayDate: Date.now(),
       eventDate: Date(2020, 11, 29, 0, 0, 0),
-      isAlertActive: true,
-      isVideoActive: true,
-      isMuted: true
+      isAlertActive: true
     }
   },
   async asyncData({ params, i18n }) {
@@ -214,13 +189,7 @@ export default {
     },
     myMouseLeave() {
       document.getElementById("rocket").classList.remove("rocket-launch");
-    },
-    // onEnded() {
-    //   this.isVideoActive = false;
-    //   this.$cookies.set("isVideoPlayed", true, {
-    //     maxAge: 60 * 60 * 24
-    //   });
-    // }
+    }
   }
 }
 </script>
