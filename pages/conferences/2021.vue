@@ -34,11 +34,11 @@
         />
       </figure>
       <p v-show="!isVideoActive" class="has-text-gray">
-        Scroll
+        <i class="mdi mdi-chevron-down has-text-white is-size-1" />
       </p>
     </section>
 
-    <section class="hero is-fullheight" id="first">
+    <section :class="this.$ua.isFromSmartphone() ? 'hero is-halfheight' : 'hero is-fullheight'" id="first">
       <div :class="{fadeIn: visible}">
         <div class="hero-body" v-show="visible">
           <div class="container has-text-centered" v-show="visible">
@@ -51,7 +51,7 @@
       </div>
     </section>
 
-    <section class="hero is-fullheight" id="second">
+    <section :class="this.$ua.isFromSmartphone() ? 'hero is-halfheight' : 'hero is-fullheight'" id="second">
       <div class="hero-body">
         <div class="container has-text-centered">
           <h1 class="title is-0"><span class="neon">Back when <br class="is-hidden-touch">we were <span class="neon-emphasis">kids</span></span></h1>
@@ -73,7 +73,7 @@
       </div>
     </section>
 
-    <section class="hero is-fullheight">
+    <section :class="this.$ua.isFromSmartphone() ? 'hero is-halfheight' : 'hero is-fullheight'">
       <div class="hero-body">
         <div class="container has-text-centered">
           <h1 class="title is-1">
@@ -127,7 +127,7 @@
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
 section, p, a, span, h1 {
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
 }
 .container {
   @media screen and (max-width: 1024px) {
@@ -143,6 +143,7 @@ h1.is-0 {
   white-space: auto;
 }
 .neon {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
   @media screen and (max-width: 720px) {
     -webkit-text-stroke-width: 0.03em;
     filter: drop-shadow(0 0 1rem yellow);
