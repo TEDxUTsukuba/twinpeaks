@@ -31,7 +31,7 @@
       </section>
     </div> -->
       
-    <section class="hero">
+    <section class="hero my-6">
       <div class="hero-body" id="intro">
         <section class="section">
           <div class="columns is-mobile is-multiline is-variable is-0">
@@ -68,59 +68,64 @@
       <PopularArticles /> 
     </section>
 
-    <section id="notice-title" class="section">
-      <div id="notice">
-        <h1 class="title is-1 has-text-centered">
-          <span class="">{{ $t('news.title') }}</span>
-        </h1>
-      </div>
-    </section>
-    <section class="section">
-      <div>
-      <vue-horizontal class="columns">
-        <div class="item column is-12-mobile is-6-tablet is-6-desktop" v-for="(notice, index) in notices" :key="index">
-          <div class="nmp-dark" style="margin: 1rem 1.5rem;">
-            <header class="card-header">
-              <p class="card-header-title">
-                <span class="is-size-7 has-text-grey">{{ formatDate(notice.updatedAt) }}</span>
-              </p>
-            </header>
-            <div class="card-image">
-              <!-- <datocms-image :data="notice.image.responsiveImage" :alt="notice.image.responsiveImage.alt" /> -->
-              <figure class="image is-5by3">
-                <img :src="notice.image.url" :alt="notice.image.alt" style="object-fit: cover"/>
-              </figure>
-            </div>
-            <div class="card-content">
-              <h2 class="title is-size-5">{{ notice.title }}</h2>
-              <p class="has-text-grey-light">{{ notice.shortDescription }}</p>
-              <br>
-              <nav class="level is-mobile">
-                <div class="level-left">
-                  <p class="level-left">
-                  </p>
-                </div>
-                <div class="level-right">
-                  <p class="level-item">
-                    <nuxt-link class="button is-rounded is-gradient" :to="localePath(`/news/${notice.id}`)">{{ $t('button.readmore') }}</nuxt-link>
-                  </p>
-                </div>
-              </nav>
-            </div>
+    <section class="section pt-0">
+      <b-carousel :pause-info="false" :indicator-inside="false" :arrow="false" :indicator="false" animated="fade" interval=5000>
+        <b-carousel-item v-for="(feedback, i) in feedbacks" :key="i">
+          <div class="has-text-centered p-4">
+            <p class="has-text-left"><i class="mdi mdi-format-quote-open is-size-1 has-text-grey-light" /></p>
+            <p class="is-size-3 has-text-weight-bold has-text-centered px-6">{{ feedback.text }}</p>
+            <p class="has-text-right"><i class="mdi mdi-format-quote-close is-size-1 has-text-grey-light" /></p>
+            <p class="has-text-centered has-text-weight-light">{{ feedback.event }}</p>
           </div>
-        </div>
-      </vue-horizontal>
-    </div>
-    <div class="divider" />
-    <div class="has-text-centered">
-      <nuxt-link :to="localePath('/news')" class="button is-white is-rounded">{{ $t('button.archive') }}</nuxt-link>
-    </div>
+        </b-carousel-item>
+      </b-carousel>
+      
     </section>
 
-    <!-- <div class="has-text-centered">
-      <nuxt-link :to="localePath('/talks')" class="button is-gradient is-rounded">{{ $t('talks.seeAll') }}</nuxt-link>
-    </div> -->
-    <br><br>
+
+    <section id="notice" class="hero">
+      <section class="section">
+        <h1 class="title is-2 has-text-centered has-text-dark mt-2 mb-6">
+          {{ $t('news.title') }}
+        </h1>
+        <vue-horizontal class="columns">
+          <div class="item column is-12-mobile is-6-tablet is-6-desktop" v-for="(notice, index) in notices" :key="index">
+            <div class="nmp-light my-4">
+              <header class="card-header">
+                <p class="card-header-title">
+                  <span class="is-size-7 has-text-grey">{{ formatDate(notice.updatedAt) }}</span>
+                </p>
+              </header>
+              <div class="card-image">
+                <!-- <datocms-image :data="notice.image.responsiveImage" :alt="notice.image.responsiveImage.alt" /> -->
+                <figure class="image is-5by3">
+                  <img :src="notice.image.url" :alt="notice.image.alt" style="object-fit: cover"/>
+                </figure>
+              </div>
+              <div class="card-content">
+                <h2 class="title is-size-5 has-text-dark">{{ notice.title }}</h2>
+                <p class="has-text-grey">{{ notice.shortDescription }}</p>
+                <br>
+                <nav class="level is-mobile">
+                  <div class="level-left">
+                    <p class="level-left">
+                    </p>
+                  </div>
+                  <div class="level-right">
+                    <p class="level-item">
+                      <nuxt-link class="button is-rounded is-gradient" :to="localePath(`/news/${notice.id}`)">{{ $t('button.readmore') }}</nuxt-link>
+                    </p>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </vue-horizontal>
+        <div class="has-text-centered pt-4">
+          <nuxt-link :to="localePath('/news')" class="button is-white is-rounded">{{ $t('button.archive') }}</nuxt-link>
+        </div>
+      </section>
+    </section>
   </section>
 </template>
 
@@ -148,7 +153,11 @@ export default {
       weAreTEDxUTsukuba: 'ZbIEuwjpxp0',
       todayDate: Date.now(),
       eventDate: Date(2020, 11, 29, 0, 0, 0),
-      isAlertActive: true
+      isAlertActive: true,
+      feedbacks: [
+        { text: "夢を実行に移すには不安やリスクはつきものですが、第一線で活躍されている皆さんの話を伺って、背中を押されました。", event: 'TEDxUTsukuba 2017 "moving"' },
+        { text: "ふだん外国の方と接する機会が少ないため、異文化の壁や、それを理解する面白さに出会うことができました。", event: 'TEDxUTsukuba 2019 "CoPhilAction"' }
+      ]
     }
   },
   async asyncData({ params, i18n }) {
