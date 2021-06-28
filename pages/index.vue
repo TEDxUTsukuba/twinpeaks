@@ -69,7 +69,7 @@
     </section>
 
     <section class="section pt-0">
-      <b-carousel :pause-info="false" :indicator-inside="false" :arrow="false" :indicator="false" animated="fade" interval=5000>
+      <b-carousel :pause-info="false" :indicator-inside="false" :arrow="false" :indicator="true" animated="fade" interval=5000>
         <b-carousel-item v-for="(feedback, i) in feedbacks" :key="i">
           <div class="has-text-centered p-4">
             <p class="has-text-left"><i class="mdi mdi-format-quote-open is-size-1 has-text-grey-light" /></p>
@@ -156,7 +156,7 @@ export default {
       isAlertActive: true,
       feedbacks: [
         { text: "夢を実行に移すには不安やリスクはつきものですが、第一線で活躍されている皆さんの話を伺って、背中を押されました。", event: 'TEDxUTsukuba 2017 "moving"' },
-        { text: "ふだん外国の方と接する機会が少ないため、異文化の壁や、それを理解する面白さに出会うことができました。", event: 'TEDxUTsukuba 2019 "CoPhilAction"' }
+        { text: "ふだん外国の方と接する機会が少ないため、イベントを通して文化の壁や、異文化を理解する面白さに出会うことができました。", event: 'TEDxUTsukuba 2019 "CoPhilAction"' }
       ]
     }
   },
