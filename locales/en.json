@@ -35,7 +35,7 @@
     "visitwebsite": "Website",
     "externalwebsite": "External Link",
     "alerttoexternalwebsite": "You are about to visit this website.",
-    "archive": "Archive of Past News & Updates",
+    "archive": "Read More News & Updates",
     "close": "Close",
     "partialtranslation": "This page is not fully translated into English. ",
     "helpustranslate": "Help us translate",
@@ -54,6 +54,9 @@
     "headline2": "at the <span class='has-text-weight-bold'>University of Tsukuba</span>.",
     "description": "Managed by passionate volunteers both in and around the campus, TEDxUTsukuba has shed light on relevant topics - from liberal arts to science, local stories to global issues.",
     "button": "Discover"
+  },
+  "voice": {
+    "title": "From our Audiences"
   },
   "covid19-info": {
     "title": "Our Response to COVID-19",

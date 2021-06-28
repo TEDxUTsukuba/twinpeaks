@@ -43,7 +43,7 @@
         <div class="hero-body" v-show="visible">
           <div class="container has-text-centered" v-show="visible">
             <h1 class="title is-0" v-show="visible"><span class="neon">We are living <br class="is-hidden-touch">in a <span class="neon-emphasis">playground</span></span></h1>
-            <p v-show="visible" class="outro-copy is-size-3 is-size-4-mobile has-text-weight-semibold">
+            <p v-show="visible" class="outro-copy is-size-3 is-size-4-mobile has-text-weight-semibold has-text-grey-light">
               Days when we’d fight we’d fight ‘til I would give in yeah, perfect disasters we were reaching, reaching for the rafters and on most of the days we were searching for ways to get up and get out of the town that we were raised yeah, ‘cause we were done I remember we were sleeping in cars we were searching for OZ
             </p>
           </div>
@@ -55,7 +55,7 @@
       <div class="hero-body">
         <div class="container has-text-centered">
           <h1 class="title is-0"><span class="neon">Back when <br class="is-hidden-touch">we were <span class="neon-emphasis">kids</span></span></h1>
-          <p class="outro-copy is-size-3 is-size-4-mobile has-text-weight-semibold">
+          <p class="outro-copy is-size-3 is-size-4-mobile has-text-weight-semibold has-text-grey-light">
             we were burning cigars with the white plastics tips ‘til we saw the sun and we said crazy things like I refuse to look back thinking days were better just because they’re younger days I don’t know what’s ‘round the corner way I feel right now I swear we’ll never change back when we were kids swore we would never die
           </p>
         </div>
@@ -124,10 +124,11 @@
 </template>
 
 
-<style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+<style lang="postcss" scoped>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;800&display=swap');
 section, p, a, span, h1 {
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+  font-feature-settings: "palt";
 }
 .container {
   @media screen and (max-width: 1024px) {
@@ -146,28 +147,24 @@ h1.is-0 {
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
   @media screen and (max-width: 720px) {
     -webkit-text-stroke-width: 0.03em;
-    filter: drop-shadow(0 0 1rem yellow);
+    filter: saturate(2) drop-shadow(0 0 1rem yellow);
   }
   text-transform: uppercase;
   -webkit-text-stroke-width: 0.03em;
   -webkit-text-stroke-color: #ec6800;
-  filter: drop-shadow(0 0 0.5rem yellow);
+  filter: saturate(2) drop-shadow(0 0 1rem yellow);
   color: transparent;
-  letter-spacing: 0.2rem;
-  // color: #bcc5cd;
-  // background: linear-gradient(315deg, #fce043 0%, #fb7ba2 74%);
-  // /* background: linear-gradient(45deg, #74ebd5, #acb6e5); */
-  // background-clip: text;
-  // -webkit-background-clip: text;
-  // -webkit-text-fill-color: transparent;
+  letter-spacing: 0.3rem;
+  animation: text-blink 5s linear infinite;
+  animation-iteration-count: 6;
 }
 .neon-emphasis {
   @media screen and (max-width: 720px) {
     -webkit-text-stroke: 0.03em gold;
   }
   -webkit-text-stroke: 0.03em gold;
-  filter: drop-shadow(0 0 0.5rem #ec6800);
-  animation: text-flash 4s linear infinite;
+  filter: saturate(2) drop-shadow(0 0 1rem #ec6800);
+  animation: text-flash 3s linear infinite;
   animation-iteration-count: 10;
 }
 .neon-blue {
@@ -179,15 +176,21 @@ h1.is-0 {
   20% {opacity: 1;}
   22% {opacity: 0.6;}
   24% {opacity: 1;}
-  26% {opacity: 0.6;}
-  28% {opacity: 1;}
-  80% {opacity: 1;}
-  82% {opacity: 0.6;}
-  84% {opacity: 1;}
+  50% {opacity: 1;}
+  52% {opacity: 0.6;}
+  54% {opacity: 1;}
+  56% {opacity: 0.6;}
+  58% {opacity: 1;}
+  96% {opacity: 1;}
+  98% {opacity: 0.2;}
   100%{opacity: 1;}
 }
+@keyframes text-blink {
+  0% {opacity: 1;}
+  20%{opacity: 0.6;}
+  24%{opacity: 1;}
+}
 p.outro-copy {
-  color: lightgray;
   visibility: hidden;
 }
 p.metal {
