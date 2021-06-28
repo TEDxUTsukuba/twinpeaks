@@ -35,7 +35,7 @@
     "visitwebsite": "ウェブサイト",
     "externalwebsite": "外部リンク",
     "alerttoexternalwebsite": "下記URLのウェブサイトにアクセスします。",
-    "archive": "アーカイブを見る",
+    "archive": "お知らせの一覧を見る",
     "close": "閉じる",
     "partialtranslation": "このページの翻訳はまだ完了していません",
     "helpustranslate": "Help us translate",
@@ -52,6 +52,9 @@
     "headline2": "<strong>つくば</strong>から。",
     "description": "TEDxUTsukubaは、TEDよりライセンスを受け、筑波大学の学生や卒業生などによって独自に運営されています。教養から科学、地域の話題から世界規模の問題に至るまで、様々なトピックスに焦点を当ててきました。",
     "button": "詳しく知る"
+  },
+  "voice": {
+    "title": "参加者の声"
   },
   "covid19-info": {
     "title": "新型コロナウイルスへの対応",
