@@ -146,11 +146,14 @@ h1.is-0 {
 .neon {
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
   @media screen and (max-width: 720px) {
+    text-stroke-width: 0.03em;
     -webkit-text-stroke-width: 0.03em;
     filter: saturate(2) drop-shadow(0 0 1rem yellow);
   }
   text-transform: uppercase;
+  text-stroke-width: 0.03em;
   -webkit-text-stroke-width: 0.03em;
+  text-stroke-color: #ec6800;
   -webkit-text-stroke-color: #ec6800;
   filter: saturate(2) drop-shadow(0 0 1rem yellow);
   color: transparent;
@@ -160,8 +163,10 @@ h1.is-0 {
 }
 .neon-emphasis {
   @media screen and (max-width: 720px) {
+    text-stroke: 0.03em gold;
     -webkit-text-stroke: 0.03em gold;
   }
+  text-stroke: 0.03em gold;
   -webkit-text-stroke: 0.03em gold;
   filter: saturate(2) drop-shadow(0 0 1rem #ec6800);
   animation: text-flash 3s linear infinite;
@@ -169,6 +174,7 @@ h1.is-0 {
 }
 .neon-blue {
   @extend .neon;
+  text-stroke-color: #fff;
   -webkit-text-stroke-color: #fff;
 }
 @keyframes text-flash {
