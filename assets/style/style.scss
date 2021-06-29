@@ -61,14 +61,28 @@ $link: hsl(217, 71%, 53%);
 
 $itf: #39b0b7;
 $light: hsl(0, 0%, 90%);
-$blue-grey-light-4: #cfd8dc;
-$blue-grey-light-5: #eceff1;
+
+$dark-grey-100: #525b6f;
+$dark-grey-200: #4a5164;
+$dark-grey-400: #414858;
+$dark-grey-500: #393f4d;
+$dark-grey-600: #313642;
+$dark-grey-700: #282d36;
+$dark-grey-800: #20232b;
+$dark-grey-900: #181a20;
+
+$light-grey-100: #e7e8ed;
+$light-grey-200: #dbdee5;
+$light-grey-300: #d0d4dc;
+$light-grey-400: #c5c9d4;
+$light-grey-500: #b9bfcc;
+
+// https://www.colorhexa.com/393f4d
 
 $card-footer-border-top: 0px !important;
 
-
 body {
-  background-color: $blue-grey-light-5;
+  background-color: $dark-grey-200;
   font-family: 'Helvetica Neue', BlinkMacSystemFont, -apple-system, 'BIZ UDPGothic', 'Open Sans', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -358,20 +372,20 @@ section#wrapper {
   // background-color: $light;
   background-attachment: fixed !important;
   // background-color: #e7eff9;
-  background-color: $blue-grey-light-5;
+  background-color: $light-grey-100;
   // background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
   // background-image: linear-gradient(to bottom, #111111 0%, #181818 74%);
   // background-image: linear-gradient(to top, $light 0%, #d1dbe4 74%);
 }
 
 section#notice {
-  background-color: $blue-grey-light-5;
+  background-color: $light-grey-100;
 }
 
 section#wrapper-dark {
   height: 100%;
   background-attachment: fixed !important;
-  background-color: $black-ter;
+  background-color: $dark-grey-900;
   // background-color: rgb(161, 144, 144);
   // background: linear-gradient(165deg, hsl(0, 0, 22%) 0, hsl(0, 0, 4%) 100%);
   background-repeat: no-repeat;
@@ -551,7 +565,7 @@ section.section-wide {
 
 .nmp-light {
   @extend .nmp;
-  background: $blue-grey-light-4;
+  background: $light-grey-400;
   // background: $light-gradation;
   // filter: drop-shadow(0px .25rem .75rem rgba(0, 0, 0, 0.6));
   // box-shadow:  8px 8px 16px #cfcfd1,
@@ -561,7 +575,7 @@ section.section-wide {
 .nmp-dark {
   @extend .nmp;
   color: white;
-  background: $grey-darker;
+  background: $dark-grey-800;
   // filter: drop-shadow(0px .25rem .75rem rgba(0, 0, 0, 0.6));
 
   .card-footer {
