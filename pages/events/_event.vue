@@ -226,7 +226,4 @@ export default {
       padding-right: 6vw;
     }
   }
-  .reverse-row-order {
-    flex-direction: row-reverse;
-  }
 </style>
