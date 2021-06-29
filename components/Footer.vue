@@ -44,72 +44,61 @@
     <!-- フッター -->
     <section class="hero has-background-black">
       <div class="hero-body">
-        <section class="section">
+        <section class="section pb-4">
           <div class="columns is-variable is-6">
             <!-- 上段左側 -->
             <div class="column is-6-desktop is-6-tablet has-text-centered-mobile">
               <nuxt-link :to="localePath('/')">
-                <figure class="image" style="width: 100%; max-width: 320px;">
+                <figure class="image" style="width: 65%; min-width: 300px;">
                   <img src="~/assets/logo/u_bgblack_oneline.png" alt="Logo">
                 </figure>
               </nuxt-link>
-              <br>
-              <p class="title is-size-4 has-text-light has-text-centered-mobile has-text-weight-light">Spread Globally, <br class="is-hidden-tablet" />Connect Locally.</p>
+              <p class="mt-5 title is-size-4 is-size-5-mobile has-text-light has-text-centered-mobile has-text-weight-light">Spread Globally, Connect Locally.</p>            
             </div>
             <!-- 上段右側 -->
-            <div class="column has-text-right">
+            <div class="column has-text-right py-4">
               <TsukubaScenery />
             </div>
           </div>
-          <div class="columns is-centered is-vcentered">
+          <div class="columns is-centered is-vcentered reverse-row-order">
             <!-- 下段左側 -->
-            <div class="column has-text-centered-mobile">
-              <p class="is-size-7 has-text-grey-light">
-                This independent TEDx event is operated under license from TED.
-                <br class="is-hidden-mobile" />
-                <a class="is-size-7 has-text-grey-light url" href="https://www.ted.com/about/programs-initiatives/tedx-program">About TEDx program <externalLink style="width: 0.75rem;"/></a>
-              </p>
-              <a href="https://ja.nuxtjs.org/" target="_blank"><nuxtLogo style="width: 100px; margin-top: 10px;" /></a>
+            <div class="column has-text-centered-mobile has-text-right">
+              <a href="https://www.facebook.com/tedxutsukuba" class="has-text-primary mx-2">
+                <iconFB style="width: 1.2rem;" />
+              </a>
+              <a href="https://www.instagram.com/tedxutsukuba" class="has-text-primary mx-2">
+                <iconIG style="width: 1.2rem;" />
+              </a>
+              <a href="https://www.twitter.com/tedxutsukuba" class="has-text-primary mx-2">
+                <iconTW style="width: 1.2rem;" />
+              </a>            
+              <a href="https://www.twitter.com/tedxutsukuba" class="has-text-primary mx-2">
+                <iconFL style="width: 1.2rem;" />
+              </a>            
             </div>
-            <div class="column has-text-right has-text-centered-mobile">
-              <span class="has-text-grey-light">
-                <p class="is-size-7">{{ $t('about.location.address') }}</p>
-                <p class="is-size-7">tedxutsukuba&#64;gmail.com</p>
-                <p class="is-size-7">&copy; TEDxUTsukuba 2021</p>
-              </span>
+            <div class="column has-text-left has-text-grey-light has-text-centered-mobile">
+              <p class="is-size-7">{{ $t('about.location.address') }}</p>
+              <p class="is-size-7">tedxutsukuba&#64;gmail.com</p>
             </div>
           </div>
-        </section>
-      </div>
-    </section>
-    
-    <section class="hero has-background-primary">
-      <div class="hero-body">
-        <section class="section" style="padding: 1rem 1.5rem;">
-          <div class="columns is-centered">
-            <div class="column is-8-desktop is-7-tablet has-text-left has-text-grey-light has-text-centered-mobile">  
+          <hr class="has-background-grey-dark mt-0 mb-4">
+          <div class="columns reverse-row-order">
+            <div class="column is-4 has-text-right-tablet has-text-centered-mobile pb-0">
+              <p class="is-size-7">&copy; TEDxUTsukuba 2021</p>
+            </div>
+            <div class="column is-8 has-text-left-tablet has-text-centered-mobile">
+              <p class="is-size-7  has-text-weight-light">
+                This independent TEDx event is operated under license from TED.
+                <br class="is-hidden-tablet" />
+                <a class="is-size-7 has-text-grey-dark has-text-weight-light url" href="https://www.ted.com/about/programs-initiatives/tedx-program">About TEDx program <externalLink style="width: 0.75rem;"/></a>
+              </p>
+            </div>
+            
+            <!-- <div class="column is-8-desktop is-7-tablet has-text-left has-text-grey-light has-text-centered-mobile">  
               <nuxt-link :to="localePath('news')" class="has-text-white url is-size-7">{{ $t('news.title') }}</nuxt-link> |
               <nuxt-link :to="localePath('')" class="has-text-white url is-size-7">{{ $t('codeofconduct.title') }}</nuxt-link> |
               <nuxt-link :to="localePath('private')" class="has-text-white url is-size-7">{{ $t('2020.participance.pass.title') }}</nuxt-link>
-            </div>
-
-            <div class="sns column is-4-desktop is-5-tablet has-text-right has-text-centered-mobile">
-              <a href="https://www.facebook.com/tedxutsukuba" class="icon">
-                <iconFB alt="Facebook" style="width: 1.5rem" />
-              </a>
-              <a href="https://www.instagram.com/tedxutsukuba" class="icon">
-                <iconIG alt="Instagram" style="width: 1.5rem" />
-              </a>
-              <a href="https://www.twitter.com/tedxutsukuba" class="icon">
-                <iconTW alt="Twitter" style="width: 1.5rem" />
-              </a>
-              <a href="https://www.flickr.com/people/146703506@N03/" class="icon">
-                <iconFL alt="Flickr" style="width: 1.5rem" />
-              </a>
-              <a href="https://note.com/tedxutsukuba" class="icon"> 
-                <iconNT alt="note" style="width: 1.5rem" />
-              </a>
-            </div>
+            </div> -->
           </div>
         </section>
       </div>
@@ -181,15 +170,6 @@ export default {
     @media screen and (max-width: 768px) {
       margin: 0 auto;  
       padding: 0 10vw;
-    }
-  }
-  .sns {
-    a {
-      color: white;
-    }
-    margin-right: 0;
-    .icon {
-      width: 3rem;
     }
   }
   .section + .section {

@@ -452,6 +452,10 @@ section.section-wide {
 }
 
 
+.reverse-row-order {
+  flex-direction: row-reverse;
+}
+
 .card-content {
   @media screen and (max-width: 768px) {
     padding: 1rem !important;
