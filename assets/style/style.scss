@@ -82,7 +82,7 @@ $light-grey-500: #b9bfcc;
 $card-footer-border-top: 0px !important;
 
 body {
-  background-color: $dark-grey-200;
+  background-color: $dark-grey-900;
   font-family: 'Helvetica Neue', BlinkMacSystemFont, -apple-system, 'BIZ UDPGothic', 'Open Sans', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -509,8 +509,8 @@ section.section-wide {
 
 .nmp-card-dark {
   @extend .nmp-card;
+  background-color: $dark-grey-800;
   color: white;
-  background: $black-ter;
   // filter: drop-shadow(0px .25rem .75rem rgba(0, 0, 0, 0.6));
 
   // box-shadow:  8px 8px 16px $dark1,

@@ -1,7 +1,7 @@
 <template>
   <section id="wrapper-dark">
     <section class="section is-halfheight has-text-centered">
-      <i class="mdi mdi-file-document has-text-primary is-1" /> 
+      <i class="mdi mdi-file-document has-text-primary is-size-1" /> 
       <h1 class="title is-1 is-spaced">{{ $t('news.title' )}}</h1>
       <h1 class="subtitle has-text-grey-light">{{ $t('news.subtitle')}}</h1>
     </section>

@@ -1,7 +1,7 @@
 <template>
   <section id="wrapper-dark">
     <section class="section is-halfheight has-text-centered" id="trigger">
-        <i class="mdi mdi-calendar-multiple has-text-primary is-1" /> 
+        <i class="mdi mdi-calendar-multiple has-text-primary is-size-1" /> 
         <h1 class="title is-1 is-spaced">{{ $t('events.title') }}</h1>
         <h1 class="subtitle has-text-grey-light">{{ $t('events.subtitle') }}</h1>
     </section>

@@ -1,7 +1,7 @@
 <template>
   <section id="wrapper-dark" class="font-awesome">
     <section class="section is-halfheight has-text-centered" id="trigger">
-      <i class="mdi mdi-information has-text-primary is-1" /> 
+      <i class="mdi mdi-information has-text-primary is-size-1" /> 
       <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.title')}}</h1>
       <h1 class="subtitle has-text-grey-light">{{ $t('about.utsukuba.subtitle')}}</h1>
       <br>
@@ -353,8 +353,9 @@ export default {
 <style lang="scss" scoped>
   h1.is-0 {
     color: #bcc5cd;
-    background: -webkit-linear-gradient(47deg, #95afc7, #bd97c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(27deg, #95afc7, #bd97c7);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(47deg, #95afc7, #bd97c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     &.has-text-white {

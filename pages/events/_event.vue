@@ -1,13 +1,13 @@
 <template>
-  <div>
-    <div class="columns">
-      <div class="column wallpaper-wrapper">
+  <section id="wrapper-dark" class="has-text-light">
+    <div class="columns is-variable is-6">
+      <div class="column is-12-mobile wallpaper-wrapper">
         <img v-if="event.thumbnail" :src="event.thumbnail.url" :alt="event.thumbnail.alt">
       </div>
-      <aside class="column is-5" style="display: flex; justify-content: middle; align-items: center;">
+      <aside class="column is-5 is-12-mobile pt-6">
         <div class="is-block block">
-          <p class="is-uppercase has-text-primary">{{ getDaysTogo(event.startat) }}</p><br>
-          <h1 class="title is-2">{{ event.name }}</h1>
+          <p class="is-uppercase has-text-primary has-text-centered-mobile">{{ getDaysTogo(event.startat) }}</p><br>
+          <h1 class="title is-2 has-text-white has-text-centered-mobile">{{ event.name }}</h1>
           <div v-if="event.issignuprequired == true">
             <!-- 申込開始日より前 -->
             <!-- <b-tooltip v-if="isBefore(formatDate(event.signupopenat)) < 0" :label="`Registration will be open on ${formatDate(event.signupopenat)}`" position="is-top" type="is-primary" style="width: 100%;">
@@ -24,8 +24,8 @@
       </aside>
     </div>
     <!-- <hr style="margin: 0.5rem 0 1rem 0;"> -->
-    <div class="columns is-variable is-5 reverse-row-order">
-      <aside class="container column is-5">
+    <div class="columns px-0 reverse-row-order">
+      <aside class="column is-5 px-6 py-6">
         <hr class="is-hidden-tablet">
           <span class="is-size-4 has-text-weight-bold">{{ formatDate(event.startat) }}</span><br class="is-hidden-mobile">
           <span class="is-size-5"> {{ formatTime(event.startat) }}</span>
@@ -80,18 +80,17 @@
           Sign Up Not Required
         </p>
         <hr class="is-hidden-tablet">
-        <div class="divider" />
       </aside>
-      <div class="content column is-7" style="margin-top: 2vh;">
-        <p v-html="event.description"></p>
+      <div class="content column is-7 px-6 py-6">
+        <p id="event-description" v-html="event.description"></p>
         <hr>
-        <a :href="`https://www.facebook.com/sharer/sharer.php?u=https://www.tedxutsukuba.com${this.$route.path}`" target="_blank" rel="nofollow noopener noreferrer" class="is-size-4 has-text-dark"><i class="mdi mdi-facebook" /></a>
-        <a v-if="$i18n.locale == 'ja'" :href="`https://twitter.com/intent/tweet?text=${event.name}に参加しよう！&via=tedxutsukuba&related=tedxutsukuba&url=www.tedxutsukuba.com/events/${event.id}`" target="_blank" rel="noopener noreferrer" class="is-size-4 has-text-dark" data-show-count="false"><i class="mdi mdi-twitter" /></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        <a v-if="$i18n.locale == 'en'" :href="`https://twitter.com/intent/tweet?text=Join ${event.name}&&via=tedxutsukuba&related=tedxutsukuba&url=www.tedxutsukuba.com/en/events/${event.id}`" target="_blank" rel="noopener noreferrer" class="is-size-4 has-text-dark" data-show-count="false"><i class="mdi mdi-twitter" /></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <a :href="`https://www.facebook.com/sharer/sharer.php?u=https://www.tedxutsukuba.com${this.$route.path}`" target="_blank" rel="nofollow noopener noreferrer" class="is-size-4 has-text-light"><i class="mdi mdi-facebook" /></a>
+        <a v-if="$i18n.locale == 'ja'" :href="`https://twitter.com/intent/tweet?text=${event.name}に参加しよう！&via=tedxutsukuba&related=tedxutsukuba&url=www.tedxutsukuba.com/events/${event.id}`" target="_blank" rel="noopener noreferrer" class="is-size-4 has-text-light" data-show-count="false"><i class="mdi mdi-twitter" /></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <a v-if="$i18n.locale == 'en'" :href="`https://twitter.com/intent/tweet?text=Join ${event.name}&&via=tedxutsukuba&related=tedxutsukuba&url=www.tedxutsukuba.com/en/events/${event.id}`" target="_blank" rel="noopener noreferrer" class="is-size-4 has-text-light" data-show-count="false"><i class="mdi mdi-twitter" /></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         <br><br>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -204,26 +203,10 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-  .columns {
-    margin: 0 !important;
-  }
-  .column.is-7 {   
-    @media screen and (min-width: 769px) {
-      padding-left: 6vw;
-      padding-right: 3vw;
-    }
-  }
-  .column.wallpaper-wrapper {
-    padding: 0;
-    .wallpaper {
-      padding-left: 0 !important;
-    }
-  }
-  .column.is-5 {
-    @media screen and (min-width: 760px) {
-      padding-left: 3vw;
-      padding-right: 6vw;
+<style lang="scss">
+  #event-description {
+    strong, .has-text-weight-bold {
+      color: #fff !important;
     }
   }
 </style>
