@@ -32,6 +32,7 @@
     "jest": "^27.0.4",
     "jsdom": "^16.6.0",
     "jsdom-global": "^3.0.2",
+    "node-sass": "5.0.0",
     "nuxt": "^2.15.0",
     "nuxt-buefy": "^0.4.8",
     "nuxt-canonical": "^1.0.6",
@@ -58,9 +59,8 @@
     "false": "^0.0.4",
     "fs": "^0.0.1-security",
     "konva": "^7.2.5",
-    "node-sass": "^4.14.1",
     "nuxt-lazy-load": "^1.2.6",
-    "sass-loader": "^8.0.2",
+    "sass-loader": "10.1.1",
     "vue-konva": "^2.1.7"
   }
 }
