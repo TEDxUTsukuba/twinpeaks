@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/forum/",
+      "destination": "https://forum-tedxutsukuba.vercel.app/"
+    },
+    {
       "source": "/forum/:match*",
       "destination": "https://forum-tedxutsukuba.vercel.app/:match*"
     }
