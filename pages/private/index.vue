@@ -1,5 +1,5 @@
 <template>
-  <div class="has-background-white">
+  <div class="has-background-white has-text-dark">
     <section class="hero is-halfheight" style="background-color: rgb(0, 192, 212);">
       <div class="hero-body">
         <div class="container has-text-centered">

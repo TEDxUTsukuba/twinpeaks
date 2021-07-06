@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <section class="hero has-background-white">
+  <div class="has-background-white has-text-dark">
+    <section class="hero">
       <div class="hero-body">
         <section class="section">
           <div class="content has-text-centered">

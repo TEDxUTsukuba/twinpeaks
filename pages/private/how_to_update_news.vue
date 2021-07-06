@@ -1,4 +1,5 @@
 <template>
+<div class="has-background-white has-text-dark">
   <section class="section content">
     <div class="has-text-centered" style="margin-top: 5rem;">
       <h1 class="title is-1">
@@ -33,6 +34,7 @@
       <a href="https://tedxnagoyau.com/articles/news/interview_with_the_designer_of_the_keyvisual" target="_blank" class="has-text-info is-size-7">TEDxNagoyaU</a>のNewsが、お知らせとブログのミックスみたいな感じで私はすごい好きです。価値あるアイディアを発信するってこういうことかも！
     </div>
   </section>
+</div>
 </template>
 
 <script>
