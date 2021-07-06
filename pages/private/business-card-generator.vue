@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="has-background-white has-text-dark">
     <section class="section has-text-centered">
       <h1 class="title is-0 has-text-centered" style="margin-bottom: 0; padding-bottom: 1.5rem;">
         Type. Save. Share. 

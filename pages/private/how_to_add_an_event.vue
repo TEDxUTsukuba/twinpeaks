@@ -1,4 +1,5 @@
 <template>
+  <div class="has-background-white has-text-dark">
   <section class="section content">
     <div class="has-text-centered" style="margin-top: 5rem;">
       <h1 class="title is-1">
@@ -206,6 +207,7 @@
       </ul>
     </p>
   </section>
+  </div>
 </template>
 
 <script>

@@ -4,7 +4,7 @@
   <section>
     <div class="columns is-gapless">
       <aside class="column is-hidden-touch is-2-widescreen is-3-tablet section" style="background-color: #eceff1;">
-        <p class="menu-label">
+        <p class="menu-label p-4">
           Menu
         </p>
         <ul class="menu-list">
@@ -33,9 +33,6 @@
           </li>
         </ul>
         <br>
-        <p class="menu-label">
-          
-        </p>
         <ul class="menu-list">
           <li>
           <nuxt-link :to="localePath('/')"
