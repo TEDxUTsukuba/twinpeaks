@@ -7,6 +7,10 @@
     {
       "source": "/forum/:match*",
       "destination": "https://forum-tedxutsukuba.vercel.app/:match*"
+    },
+    {
+      "source": "/participant/:match*",
+      "destination": "https://forum-tedxutsukuba.vercel.app/participant/:match*"
     }
   ]
 }
