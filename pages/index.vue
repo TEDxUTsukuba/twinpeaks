@@ -1,4 +1,5 @@
 <template>
+  <div>
   <section id="wrapper-gradient" style="margin: 0; padding: 0;">
     <section style="padding-top: 8vh; padding-bottom: 2vh;">
       <AnimatedScenery />
@@ -63,37 +64,19 @@
         </section>
       </div>
     </section>
+  </section>
 
-    <section>
-      <PopularArticles /> 
-    </section>
-
-    <section class="section pt-0">
-      <b-carousel :pause-info="false" :indicator-inside="false" :arrow="false" :indicator="true" animated="fade" interval=5000>
-        <b-carousel-item v-for="(feedback, i) in feedbacks" :key="i">
-          <div class="has-text-centered p-4">
-            <p class="has-text-left"><i class="mdi mdi-format-quote-open is-size-1 has-text-grey-light" /></p>
-            <p class="is-size-3 has-text-weight-bold has-text-centered px-6">{{ feedback.text }}</p>
-            <p class="has-text-right"><i class="mdi mdi-format-quote-close is-size-1 has-text-grey-light" /></p>
-            <p class="has-text-centered has-text-weight-light">{{ feedback.event }}</p>
-          </div>
-        </b-carousel-item>
-      </b-carousel>
-      
-    </section>
-
-
-    <section id="notice" class="hero">
+    <section id="wrapper-dark" class="hero">
       <section class="section">
-        <h1 class="title is-2 has-text-centered has-text-dark mt-2 mb-6">
+        <h1 class="title is-2 has-text-centered has-text-grey-light mt-2 mb-6">
           {{ $t('news.title') }}
         </h1>
         <vue-horizontal class="columns">
           <div class="item column is-12-mobile is-6-tablet is-6-desktop" v-for="(notice, index) in notices" :key="index">
-            <div class="nmp-light my-4">
+            <div class="nmp-dark my-4">
               <header class="card-header">
                 <p class="card-header-title">
-                  <span class="is-size-7 has-text-grey">{{ formatDate(notice.updatedAt) }}</span>
+                  <span class="is-size-7">{{ formatDate(notice.updatedAt) }}</span>
                 </p>
               </header>
               <div class="card-image">
@@ -103,7 +86,7 @@
                 </figure>
               </div>
               <div class="card-content">
-                <h2 class="title is-size-5 has-text-dark">{{ notice.title }}</h2>
+                <h2 class="title is-size-5">{{ notice.title }}</h2>
                 <p class="has-text-grey">{{ notice.shortDescription }}</p>
                 <br>
                 <nav class="level is-mobile">
@@ -121,12 +104,35 @@
             </div>
           </div>
         </vue-horizontal>
-        <div class="has-text-centered pt-4">
+        <div class="has-text-centered py-4">
           <nuxt-link :to="localePath('/news')" class="button is-white is-rounded">{{ $t('button.archive') }}</nuxt-link>
         </div>
       </section>
     </section>
-  </section>
+
+
+    <section class="my-6">
+      <PopularArticles /> 
+    </section>
+
+    <section class="section pt-0">
+      <h1 class="title is-2 has-text-centered has-text-grey-light mt-2 mb-0">
+        {{ $t('voice.title') }}
+      </h1>
+      <b-carousel :pause-info="false" :indicator-inside="false" :arrow="false" :indicator="true" animated="fade" interval=5000>
+        <b-carousel-item v-for="(feedback, i) in feedbacks" :key="i">
+          <div class="has-text-centered p-4">
+            <p class="has-text-left"><i class="mdi mdi-format-quote-open is-size-1 has-text-grey-light" /></p>
+            <p class="is-size-3 has-text-weight-bold has-text-centered has-text-white px-6">{{ feedback.text }}</p>
+            <p class="has-text-right"><i class="mdi mdi-format-quote-close is-size-1 has-text-grey-light" /></p>
+            <p class="has-text-centered has-text-weight-light">{{ feedback.event }}</p>
+          </div>
+        </b-carousel-item>
+      </b-carousel>
+      
+    </section>
+
+  </div>
 </template>
 
 <script>

@@ -1,6 +1,5 @@
 <template>
   <section id="wrapper" class="hero font-awesome">
-
     <!-- Covid-19 -->
     <section class="section has-text-centered">
       <h1 class="heading is-size-5">
@@ -42,7 +41,7 @@
     </section>
 
     <!-- フッター -->
-    <section class="hero has-background-black">
+    <section class="hero has-background-dark">
       <div class="hero-body">
         <section class="section pb-4">
           <div class="columns is-variable is-6">
@@ -63,16 +62,16 @@
           <div class="columns is-centered is-vcentered reverse-row-order">
             <!-- 下段左側 -->
             <div class="column has-text-centered-mobile has-text-right">
-              <a href="https://www.facebook.com/tedxutsukuba" class="has-text-primary mx-2">
+              <a href="https://www.facebook.com/tedxutsukuba" target="_blank" class="has-text-primary mx-2">
                 <iconFB style="width: 1.2rem;" />
               </a>
-              <a href="https://www.instagram.com/tedxutsukuba" class="has-text-primary mx-2">
+              <a href="https://www.instagram.com/tedxutsukuba" target="_blank" class="has-text-primary mx-2">
                 <iconIG style="width: 1.2rem;" />
               </a>
-              <a href="https://www.twitter.com/tedxutsukuba" class="has-text-primary mx-2">
+              <a href="https://www.twitter.com/tedxutsukuba" target="_blank" class="has-text-primary mx-2">
                 <iconTW style="width: 1.2rem;" />
               </a>            
-              <a href="https://www.twitter.com/tedxutsukuba" class="has-text-primary mx-2">
+              <a href="https://www.flickr.com/photos/146703506@N03/albums" target="_blank" class="has-text-primary mx-2">
                 <iconFL style="width: 1.2rem;" />
               </a>            
             </div>
@@ -176,7 +175,3 @@ export default {
     padding-top: 0 !important;
   }
 </style>
-
-
-<!-- What is TEDx?<br>
-In the spirit of ideas worth spreading, TED has created a program called TEDx. TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. Our event is called TEDx[name], where x = independently organized TED event. At our TEDx[name] event, TED Talks video and live speakers will combine to spark deep discussion and connection in a small group. The TED Conference provides general guidance for the TEDx program, but individual TEDx events, including ours, are self-organized. -->
