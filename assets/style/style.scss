@@ -378,10 +378,6 @@ section#wrapper {
   // background-image: linear-gradient(to top, $light 0%, #d1dbe4 74%);
 }
 
-section#notice {
-  background-color: $light-grey-100;
-}
-
 section#wrapper-dark {
   height: 100%;
   background-attachment: fixed !important;
@@ -405,6 +401,10 @@ section#wrapper-dark {
   article {
     color: #fff;
   }
+}
+
+section.has-background-dark {
+  background-color: $dark-grey-900 !important;
 }
 
 section#wrapper-gradient {
@@ -462,6 +462,12 @@ section.section-wide {
 
   @media screen and (min-width: 1217px) and (max-width: 1409px) {
     margin: 0vh 4vw !important;
+  }
+
+  @media screen and (min-width: 1410px) {
+    margin: 0vh auto;
+    padding: 4vh auto;
+    width: 1400px;
   }
 }
 
@@ -565,9 +571,9 @@ section.section-wide {
 
 .nmp-light {
   @extend .nmp;
-  background: $light-grey-400;
+  background: $light-grey-300;
   // background: $light-gradation;
-  // filter: drop-shadow(0px .25rem .75rem rgba(0, 0, 0, 0.6));
+  filter: drop-shadow(0px .25rem .75rem rgba(0, 0, 0, 0.6));
   // box-shadow:  8px 8px 16px #cfcfd1,
   //              -8px -8px 16px #ffffff;
 }
