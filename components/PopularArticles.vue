@@ -64,9 +64,9 @@ export default {
     word-break: break-all;
     margin: 3vh 0 8vh 2vw;
     width: 26vw;
-    figure {
-      filter: drop-shadow(0px 8px 18px rgba(0, 0, 0, 0.6));
-    }
+    // figure {
+    //   filter: drop-shadow(0px 8px 18px rgba(0, 0, 0, 0.6));
+    // }
   }
   @media screen and (max-width: 768px) {
     .slideshow-item {

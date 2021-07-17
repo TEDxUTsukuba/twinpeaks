@@ -1,13 +1,14 @@
 <template>
-  <b-navbar class="is-fixed-top is-spaced is-black" id="navbar-top">
+  <b-navbar :class="`is-fixed-top is-spaced is-${headerColor}`" id="navbar-top">
     <template slot="brand">
       <b-navbar-item tag="router-link" :to="localePath('/')">
         <img  
-          data-not-lazy
-          src="~/assets/logo.png"
+          src="~/assets/logo/u_bgblack_oneline.png"
           alt="TEDxUTsukuba Logo"
         >
-        <!-- https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-logo.png -->
+      </b-navbar-item>
+      <b-navbar-item v-if="this.$route.path.includes('private')">
+        <span class="tag has-background-red is-medium has-text-white">Private</span>
       </b-navbar-item>
     </template>
     <template slot="start">
@@ -15,12 +16,12 @@
         <span class="is-size-7 has-text-grey">{{ isCelebration() }}</span>
       </b-navbar-item>
     </template>
-    <template slot="end">
+    <template slot="end" v-if="!this.$route.path.includes('private')">
       <b-navbar-dropdown collapsible :label="$t('header.events.parent')" class="is-hoverable">
-        <b-navbar-item tag="router-link" :to="{ path: localePath('/events/2020') }">
+        <b-navbar-item tag="router-link" :to="{ path: localePath('/conferences/2020') }">
           {{ $t('header.events.2020') }}
         </b-navbar-item>
-        <b-navbar-item tag="router-link" :to="{ path: localePath('/events/2019') }">
+        <b-navbar-item tag="router-link" :to="{ path: localePath('/conferences/2019') }">
           {{ $t('header.events.2019') }}
         </b-navbar-item>
         <b-navbar-item tag="router-link" :to="{ path: localePath('/events/') }">
@@ -32,6 +33,9 @@
       </b-navbar-item> -->
       <b-navbar-item class="normal-category" tag="nuxt-link" :to="localePath('/talks')">
         {{ $t('header.talks.item') }}
+      </b-navbar-item>
+      <b-navbar-item class="normal-category" tag="nuxt-link" :to="localePath('/blog')">
+        {{ $t('header.blog.item') }}
       </b-navbar-item>
       <b-navbar-item class="normal-category" tag="nuxt-link" :to="localePath('/partners')">
         {{ $t('header.partners.item') }}
@@ -48,7 +52,7 @@
         </b-navbar-item>
       </b-navbar-dropdown>
       <b-navbar-item tag="div">
-        <div class="buttons">
+        <div class="buttons is-right">
           <nuxt-link class="button is-info" v-if="$i18n.locale !== 'en'" :to="switchLocalePath('en')"><i class="mdi mdi-translate" style="margin-right: 0.25rem;" />English</nuxt-link>
           <nuxt-link class="button is-danger" v-if="$i18n.locale !== 'ja'" :to="switchLocalePath('ja')"><i class="mdi mdi-translate" style="margin-right: 0.25rem;" />日本語</nuxt-link>
           <!-- <a class="button is-info" v-if="$i18n.locale !== 'en'" :href="switchLocalePath('en')"><i class="mdi mdi-translate" style="margin-right: 0.25rem;" />English</a>
@@ -131,14 +135,30 @@ export default {
       ]
     }
   },
+  // props: {
+  //   'headerColor': {
+  //     type: String,
+  //     required: true
+  //   }
+  // },
+  created() {
+    if (this.$route.path.includes('private')) this.headerColor = 'darksilver'
+    else this.headerColor = 'black'
+  },
+  watch: {
+    '$route': function(to, from) {
+      if (to.path.includes('private')) this.headerColor = 'darksilver'
+      else this.headerColor = 'black'
+    }
+  },
   methods: {
     isCelebration() {
       const month = new Date().getMonth()+1
       const date = new Date().getDate()
-      console.log(month, date)
+      // console.log(month, date)
       const data = this.celebrationdays.find(item => item.month === month && item.date === date)
       if (data === undefined) {
-        return "A Hub for Tsukuba's Ideas"
+        return "Spread Globally, Connect Locally."
       } else if (this.$i18n.locale !== 'en') {
         return "Celebrating " + data.title_en
       } else {
@@ -149,7 +169,6 @@ export default {
 }
 </script>
 
-
 <style lang="scss" scoped>
   .navbar-item, .navbar-link {
     font-weight: bold;
@@ -157,9 +176,9 @@ export default {
     // color: lightgray !important;
   }
   .normal-category:hover {
-    background-color: red !important;
+    background-color: #c6251a !important;
   }
-  a:visited {
-    // color: white;
+  .navbar.is-darksilver {
+    background-color: #90a4ae !important;
   }
 </style>

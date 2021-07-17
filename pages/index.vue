@@ -1,17 +1,17 @@
 <template>
+  <div>
   <section id="wrapper-gradient" style="margin: 0; padding: 0;">
-    <!-- <div>
-      <LogoAnimation id="top-logo" />
-    </div> -->
-    <div id="top-carousel-wrapper" class="top-carousel-wrapper columns is-gapless is-vcentered has-background-black" style="margin-bottom: 0;">
+    <section style="padding-top: 8vh; padding-bottom: 2vh;">
+      <AnimatedScenery />
+    </section>
+    <!-- <div id="top-carousel-wrapper" class="top-carousel-wrapper columns is-gapless is-vcentered has-background-black" style="margin-bottom: 0;">
       <div class="column is-12-touch">
         <Carousel id="top-carousel" />
       </div>
       <div class="column is-4-widescreen is-5-fullhd vertical-center has-text-centered" id="top-carousel-wrapper-logo-section">
-        <img data-not-lazy src="~/assets/logo/black_transparent_1.png" width="60%" alt="TEDxUTsukuba Logo">
-        <!-- <LogoAnimation id="top-logo" /> -->
+        <img src="~/assets/logo/u_bgblack_oneline.png" width="60%" alt="TEDxUTsukuba Logo">
       </div>
-    </div>
+    </div> -->
     <!-- <div class="bg-jijimuge" style="padding-top: 3.25rem;">  
       <div id="top-photoframe" class="top-photoframe">
         <nuxt-link :to="localePath('/events/2020')">
@@ -22,36 +22,36 @@
       </div>
       <section id="top-title" class="section has-text-centered has-text-weight-light has-text-light" style="padding-bottom: 20vh;">
         <h1 class="title is-1 is-spaced" style="letter-spacing: -1px;">
-          {{ $t('event.title1') }}<br class="mobile-br">{{ $t('event.title2') }}<br class="mobile-br">{{ $t('event.title3') }}
+          {{ $t('event.title1') }}<br class="is-hidden-tablet">{{ $t('event.title2') }}<br class="is-hidden-tablet">{{ $t('event.title3') }}
         </h1>
         <h1 class="subtitle is-5 has-text-weight-normal has-text-white">
-          {{ $t('event.subtitle1') }}<br class="mobile-br">{{ $t('event.subtitle2') }}
+          {{ $t('event.subtitle1') }}<br class="is-hidden-mobile">{{ $t('event.subtitle2') }}
         </h1>
         <br>
         <nuxt-link :to="localePath('/events/2020')" class="button is-gradient is-rounded">{{ $t('button.discover') }}</nuxt-link>
       </section>
     </div> -->
       
-    <section class="hero">
+    <section class="hero my-6">
       <div class="hero-body" id="intro">
         <section class="section">
-          <div class="columns is-mobile is-multiline is-centered is-variable is-0">
-              <div class="column is-5-widescreen is-4-desktop is-6-tablet is-10-mobile">
-                <img data-not-lazy src="~/assets/logo/motto.png" class="motto" style="padding-right: 50px;" alt="Ideas Worth Spreading">
+          <div class="columns is-mobile is-multiline is-variable is-0">
+              <div class="column is-5-widescreen is-4-desktop is-4-tablet is-10-mobile" @mouseover="myMouseOver" @mouseleave="myMouseLeave">
+                <img src="~/assets/logo/motto.png" class="motto" style="padding-right: 50px; max-width: 400px;" alt="Ideas Worth Spreading">
               </div>
-              <div class="column is-0-fullhd is-0-widescreen is-0-desktop is-6-tablet is-2-mobile"></div>
-              <div class="column is-7-widescreen is-8-desktop is-full-tablet is-full-mobile">
-                  <h1 v-if="$i18n.locale == 'ja'" class="title is-2 is-size-4-mobile has-text-weight-light">
-                    {{ $t('intro.headline1') }}
-                    <br>
-                    {{ $t('intro.headline2') }}
+              <div class="column is-7-widescreen is-8-desktop is-8-tablet is-full-mobile">
+                  <h1 v-if="$i18n.locale == 'ja'" class="title is-2 is-size-4-mobile has-text-weight-bold has-text-white">
+                    <span v-html="$t('intro.headline1')" />
+                    <br class="is-hidden-mobile">
+                    <span v-html="$t('intro.headline2')" />
                   </h1>
-                  <h1 v-if="$i18n.locale == 'en'" class="title is-2 is-size-4-mobile has-text-weight-light">
-                    {{ $t('intro.headline1') }}
-                    <br class="mobile-br">
-                    {{ $t('intro.headline2') }}
+                  <h1 v-if="$i18n.locale == 'en'" class="title is-2 is-size-4-mobile has-text-weight-light has-text-white">
+                    <span v-html="$t('intro.headline1')" />
+                    <br class="is-hidden-mobile">
+                    <span v-html="$t('intro.headline2')" />
                   </h1>
-                    <img id="rocket" src="~/assets/svg/rocket.png" width="100%" style="z-index: 0;" alt="">
+                  <br>
+                  <img id="rocket" src="~/assets/svg/rocket.png" width="100%" style="z-index: 0;" alt="">
                   <article class="is-size-6 has-text-light">
                     {{ $t('intro.description') }}
                   </article>
@@ -64,88 +64,93 @@
         </section>
       </div>
     </section>
-      
-    <!-- <section class="hero">
-      <Movie id="teaser" :vId='weAreTEDxUTsukuba' classname="large" style=""></Movie>
-    </section> -->
+  </section>
 
-    <section>
+    <section id="wrapper-dark" class="hero">
+      <section class="section">
+        <h1 class="title is-2 has-text-centered has-text-grey-light mt-2 mb-6">
+          {{ $t('news.title') }}
+        </h1>
+        <vue-horizontal class="columns">
+          <div class="item column is-12-mobile is-6-tablet is-6-desktop" v-for="(notice, index) in notices" :key="index">
+            <div class="nmp-dark my-4">
+              <header class="card-header">
+                <p class="card-header-title">
+                  <span class="is-size-7">{{ formatDate(notice.updatedAt) }}</span>
+                </p>
+              </header>
+              <div class="card-image">
+                <!-- <datocms-image :data="notice.image.responsiveImage" :alt="notice.image.responsiveImage.alt" /> -->
+                <figure class="image is-5by3">
+                  <img :src="notice.image.url" :alt="notice.image.alt" style="object-fit: cover"/>
+                </figure>
+              </div>
+              <div class="card-content">
+                <h2 class="title is-size-5">{{ notice.title }}</h2>
+                <p class="has-text-grey">{{ notice.shortDescription }}</p>
+                <br>
+                <nav class="level is-mobile">
+                  <div class="level-left">
+                    <p class="level-left">
+                    </p>
+                  </div>
+                  <div class="level-right">
+                    <p class="level-item">
+                      <nuxt-link class="button is-rounded is-gradient" :to="localePath(`/news/${notice.id}`)">{{ $t('button.readmore') }}</nuxt-link>
+                    </p>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </vue-horizontal>
+        <div class="has-text-centered py-4">
+          <nuxt-link :to="localePath('/news')" class="button is-white is-rounded">{{ $t('button.archive') }}</nuxt-link>
+        </div>
+      </section>
+    </section>
+
+
+    <section class="my-6">
       <PopularArticles /> 
     </section>
 
-    <section id="notice-title" class="section">
-      <div id="notice">
-        <h1 class="title is-1 has-text-centered">
-          <span class="">{{ $t('news.title') }}</span>
-        </h1>
-        <br>
-        <div class="columns is-multiline reverse-row-order">
-          <div class="column is-5-tablet">
-            <Flip
-              :title = "$t('notice.left-top.title')"
-              :description = "$t('notice.left-top.description')"
-              :detail = "$t('notice.left-top.detail')"
-              :link = "$t('notice.left-top.link')"
-              imageUrl = "/_nuxt/assets/speakers/2019/sp_2019_1.jpg"
-            />
+    <section class="section pt-0">
+      <h1 class="title is-2 has-text-centered has-text-grey-light mt-2 mb-0">
+        {{ $t('voice.title') }}
+      </h1>
+      <b-carousel :pause-info="false" :indicator-inside="false" :arrow="false" :indicator="true" animated="fade" interval=5000>
+        <b-carousel-item v-for="(feedback, i) in feedbacks" :key="i">
+          <div class="has-text-centered p-4">
+            <p class="has-text-left"><i class="mdi mdi-format-quote-open is-size-1 has-text-grey-light" /></p>
+            <p class="is-size-3 has-text-weight-bold has-text-centered has-text-white px-6">{{ feedback.text }}</p>
+            <p class="has-text-right"><i class="mdi mdi-format-quote-close is-size-1 has-text-grey-light" /></p>
+            <p class="has-text-centered has-text-weight-light">{{ feedback.event }}</p>
           </div>
-          <div class="column is-7-tablet">
-            <Flip
-              :title = "$t('notice.left-bottom.title')"
-              :description = "$t('notice.left-bottom.description')"
-              :detail = "$t('notice.left-bottom.detail')"
-              :link = "$t('notice.left-bottom.link')"
-              imageUrl = ""
-            />
-          </div>
-          <div class="column is-7-tablet">
-            <Flip
-              :title = "$t('notice.right-top.title')"
-              :description = "$t('notice.right-top.description')"
-              :detail = "$t('notice.right-top.detail')"
-              :link = "$t('notice.right-top.link')"
-              imageUrl = ""
-            />
-          </div>
-          <div class="column is-5-tablet">
-            <Flip
-              :title = "$t('notice.right-bottom.title')"
-              :description = "$t('notice.right-bottom.description')"
-              :detail = "$t('notice.right-bottom.detail')"
-              :link = "$t('notice.right-bottom.link')"
-              imageUrl = ""
-            />
-          </div>
-        </div>
-        <p class="has-text-grey-light has-text-right mb-6">{{ $t('notice.last-modified')}}<time datetime="2021-04-05">2021/4/5</time></p>
-        <br>
-        <div class="has-text-centered">
-          <nuxt-link :to="localePath('/notice')" class="button is-white is-rounded">{{ $t('button.archive') }}</nuxt-link>
-        </div>
-      </div>
+        </b-carousel-item>
+      </b-carousel>
+      
     </section>
 
-    <!-- <div class="has-text-centered">
-      <nuxt-link :to="localePath('/talks')" class="button is-gradient is-rounded">{{ $t('talks.seeAll') }}</nuxt-link>
-    </div> -->
-    <br><br>
-  </section>
+  </div>
 </template>
 
 <script>
-import Card from '~/components/Card'
-import Flip from '~/components/Flip'
-import Carousel from '~/components/Carousel'
+// import Carousel from '~/components/Carousel'
 import PopularArticles from '~/components/PopularArticles'
+import { request, gql } from '~/lib/datocms'
+import { Image } from "vue-datocms";
+import format from 'date-fns/format'
+import parseISO from 'date-fns/parseISO'
+import VueHorizontal from 'vue-horizontal'
+import $cookies from "cookie-universal-nuxt";
+import AnimatedScenery from '~/components/AnimatedScenery'
 // import LogoAnimation from '~/components/LogoAnimation'
-// import Movie from '~/components/Movie'
-// const Card = () => import('~/components/Card')
-// const Flip = () => import('~/components/Flip')
-// const Movie = () => import('~/components/Movie')
 
 export default {
   components: {
-    Card, Flip, Carousel, PopularArticles
+    PopularArticles, "datocms-image": Image, VueHorizontal, AnimatedScenery
+    // Carousel
   },
   data() {
     return {
@@ -155,60 +160,50 @@ export default {
       todayDate: Date.now(),
       eventDate: Date(2020, 11, 29, 0, 0, 0),
       isAlertActive: true,
+      feedbacks: [
+        { text: "夢を実行に移すには不安やリスクはつきものですが、第一線で活躍されている皆さんの話を伺って、背中を押されました。", event: 'TEDxUTsukuba 2017 "moving"' },
+        { text: "ふだん外国の方と接する機会が少ないため、イベントを通して文化の壁や、異文化を理解する面白さに出会うことができました。", event: 'TEDxUTsukuba 2019 "CoPhilAction"' }
+      ]
     }
   },
-  // asyncData(context) {
-  //   const isAndroid = context.$ua.isFromAndroidOs()
-  //   console.log('isAndroid', isAndroid)
-  //   return { isAndroid }
-  // },
+  async asyncData({ params, i18n }) {
+    // console.log(i18n.locale)
+    const data = await request({
+      query: gql`
+        {
+          notices: allNotices(first: "6", locale: ${i18n.locale}, orderBy: updatedAt_DESC) {
+            id
+            title
+            shortDescription
+            _firstPublishedAt
+            updatedAt
+            image {
+              alt
+              url
+            }
+          }
+        }
+      `
+    })
+    return { ready: !!data, ...data }
+  },
+  head() {
+    if (!this.ready) {
+      return
+    }
+  },
   mounted() {
-    const browser = this.$ua.browser()
-    if (browser !== 'Safari') {
-      // const scene1 = this.$scrollmagic
-      //   .scene({
-      //     triggerElement: '#top-logo',
-      //     triggerHook: 0.5,
-      //     offset: 10,
-      //     // durationがあるとremove()が有効にならない
-      //     reverse: false
-      //   })
-      //   // SVGのレイヤーにactiveクラスを付与
-      //   .setClassToggle("#layer1", "active")
-      //   // アニメーションが終わってもclassを削除しない
-      //   .reverse(false)
-
-      const scene2 = this.$scrollmagic
-        .scene({
-          triggerElement: '#top-carousel-wrapper',
-          triggerHook: 0.5,
-          offset: 0,
-          reverse: false
-        })
-        .setTween('#intro', {
-          css: {
-            opacity: 1
-          }
-        })
-
-      const scene3 = this.$scrollmagic
-        .scene({
-          triggerElement: '#notice-title',
-          triggerHook: 0.5,
-          offset: 0,
-          reverse: false
-        })
-        .setTween('#notice', {
-          css: {
-            opacity: 1
-          }
-        })
-        // this.$scrollmagic.addScene(scene1)
-        this.$scrollmagic.addScene(scene2)
-        this.$scrollmagic.addScene(scene3)
-    } else {
-      document.getElementById("intro").style.opacity = 1;
-      document.getElementById("notice").style.opacity = 1;
+    // const isVideoPlayed = this.$cookies.get("isVideoPlayed");
+  },
+  methods: {
+    formatDate(date) {
+      return format(parseISO(date), 'PPP')
+    },
+    myMouseOver() {
+      document.getElementById("rocket").classList.add("rocket-launch");
+    },
+    myMouseLeave() {
+      document.getElementById("rocket").classList.remove("rocket-launch");
     }
   }
 }
@@ -237,8 +232,8 @@ export default {
   h1.thin {
     font-weight: 100 !important;
   }
-  #intro, #notice {
-    opacity: 0;
+  #notice {
+    opacity: 1;
     transition: all 0.25s;
   }
   #top-carousel {
@@ -250,39 +245,6 @@ export default {
   }
   #top-logo {
     width: 100%;
-  }
-  // @media screen and (min-width: 1024px) {
-  //   .top-carousel-wrapper {
-  //     padding: 6vh 0 3vh 0;
-  //     background: url("~@/assets/wallpapers/ishihiro.jpg") no-repeat center top;
-  //     background-size: cover;
-  //     background-attachment: fixed;
-  //     -webkit-backface-visibility:hidden;
-  //     backface-visibility:hidden;
-  //     z-index: 0;
-  //     overflow: hidden;
-  //     position: relative;
-  //     .columns {
-  //       margin: 0;
-  //     }
-  //   }
-  //   .top-carousel-wrapper:before {
-  //     content: "";
-  //     display: block;
-  //     position: absolute;
-  //     background: inherit;
-  //     filter: saturate(125%) contrast(60%) blur(5px);
-  //     top: -20px;
-  //     right: -20px;
-  //     bottom: -20px;
-  //     left: -20px;
-  //     z-index: -1;
-  //   }
-  // }
-  #top-carousel-wrapper-logo-section {
-    @media screen and (max-width: 1215px) {
-      display: none;
-    }
   }
   @keyframes fadeIn {
     0% {
@@ -306,8 +268,6 @@ export default {
     width: 100%; max-width: 480px;
     // transform: translate3d(0,0,100px);
   }
-  
-  
 </style>
 
 

@@ -14,29 +14,22 @@
 
 .page-enter-active,
 .page-leave-active {
-  transition: opacity 0.4s;
+  // transition: opacity 1s;
 }
 
 .page-enter,
 .page-leave-active {
-  opacity: 0.4;
+  // opacity: 0.4;
 }
 
 *::selection {
-  background: #ff0000;
+  background: #E62B1E;
   color: #fff;
 }
 
 *::moz-selction {
-  background-color: #ff0000;
+  background-color: #E62B1E;
   color: #fff;
-}
-
-body {
-  font-family: 'Helvetica Neue', BlinkMacSystemFont, -apple-system, 'BIZ UDPGothic', 'Open Sans', sans-serif !important;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: "palt";
 }
 
 $primary: #FF2B06;
@@ -49,9 +42,10 @@ $light: #F1F4F7;
 // $dark: #131313;
 // $dark: #1c1c1c;
 $black: hsl(0, 0%, 4%);
-$dark: hsl(0, 0%, 21%);
+$black-bis: hsl(0, 0%, 7%);
+$grey-darker: hsl(0, 0%, 21%);
 $dark1: #0c0c0c;
-$dark2: #262626;
+$black-ter: hsl(0, 0%, 14%);
 // $dark2: #454548;
 $light-gradation: linear-gradient(165deg, rgba(223, 234, 247, 1) 11.2%, rgba(244, 248, 252, 1) 91.1%);
 $dark-gradation: linear-gradient(165deg, rgb(158, 25, 25) 8.8%, rgb(41, 38, 38) 95.1%);
@@ -68,16 +62,44 @@ $link: hsl(217, 71%, 53%);
 $itf: #39b0b7;
 $light: hsl(0, 0%, 90%);
 
+$dark-grey-100: #525b6f;
+$dark-grey-200: #4a5164;
+$dark-grey-400: #414858;
+$dark-grey-500: #393f4d;
+$dark-grey-600: #313642;
+$dark-grey-700: #282d36;
+$dark-grey-800: #20232b;
+$dark-grey-900: #181a20;
+
+$light-grey-100: #e7e8ed;
+$light-grey-200: #dbdee5;
+$light-grey-300: #d0d4dc;
+$light-grey-400: #c5c9d4;
+$light-grey-500: #b9bfcc;
+
+// https://www.colorhexa.com/393f4d
+
 $card-footer-border-top: 0px !important;
 
+body {
+  background-color: $dark-grey-900;
+  font-family: 'Helvetica Neue', BlinkMacSystemFont, -apple-system, 'BIZ UDPGothic', 'Open Sans', sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "palt";
+}
 
 .has-text-primary {
   color: $primary !important;
 }
 
 .has-background-primary,
-.bg-red {
+.bg-red .is-primary {
   background-color: $red !important;
+}
+
+.has-background-red {
+  background-color: #E62B1E !important;
 }
 
 .has-background-tsukuba {
@@ -86,6 +108,10 @@ $card-footer-border-top: 0px !important;
 
 .has-background-itf {
   background-color: #39b0b7 !important;
+}
+
+.is-family-serif {
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
 }
 
 .vertical-center {
@@ -102,53 +128,57 @@ $card-footer-border-top: 0px !important;
   }
 }
 
-#teaser>iframe {
-  @media screen and (max-width: 768px) {
-    width: 480px;
-    height: 270px;
-  }
+// #teaser>iframe {
+//   @media screen and (max-width: 768px) {
+//     width: 480px;
+//     height: 270px;
+//   }
 
-  @media screen and (min-width: 769px) and (max-width: 1080px) {
-    width: 640px;
-    height: 360px;
-  }
+//   @media screen and (min-width: 769px) and (max-width: 1080px) {
+//     width: 640px;
+//     height: 360px;
+//   }
 
-  @media screen and (min-width: 1081px) and (max-width: 1408px) {
-    width: 960px;
-    height: 540px;
-  }
+//   @media screen and (min-width: 1081px) and (max-width: 1408px) {
+//     width: 960px;
+//     height: 540px;
+//   }
 
-  @media screen and (min-width: 1409px) {
-    width: 1280px;
-    height: 720px;
-  }
-}
+//   @media screen and (min-width: 1409px) {
+//     width: 1280px;
+//     height: 720px;
+//   }
+// }
 
-iframe {
-  @media screen and (max-width: 480px) {
-    height: 180px;
-  }
+// iframe {
+//   @media screen and (max-width: 480px) {
+//     height: 180px;
+//   }
 
-  @media screen and (min-width: 481px) and (max-width: 768px) {
-    height: 270px;
-  }
+//   @media screen and (min-width: 481px) and (max-width: 768px) {
+//     height: 270px;
+//   }
 
-  @media screen and (min-width: 769px) and (max-width: 1080px) {
-    height: 180px;
-  }
+//   @media screen and (min-width: 769px) and (max-width: 1080px) {
+//     height: 180px;
+//   }
 
-  @media screen and (min-width: 1081px) and (max-width: 1408px) {
-    height: 270px;
-  }
+//   @media screen and (min-width: 1081px) and (max-width: 1408px) {
+//     height: 270px;
+//   }
 
-  @media screen and (min-width: 1409px) {
-    height: 300px;
-  }
-}
+//   @media screen and (min-width: 1409px) {
+//     height: 300px;
+//   }
+// }
 
 // section.section+section.section {
 //   padding-top: 5vh !important;
 // }
+
+div.divider {
+  height: 5vh;
+}
 
 div#notice>div.column {
   @media screen and (max-width: 768px) {
@@ -312,11 +342,13 @@ h1.is-0 {
   @media screen and (max-width: 768px) {
     text-align: center;
     font-size: 3.5rem !important;
+    letter-spacing: -3px;
   }
 
   @media screen and (min-width: 769px) and (max-width: 1215px) {
     text-align: right;
-    font-size: 6rem !important;
+    font-size: 5rem !important;
+    letter-spacing: -5px;
   }
 
   @media screen and (min-width: 1216px) and (max-width: 1408px) {
@@ -340,11 +372,7 @@ section#wrapper {
   // background-color: $light;
   background-attachment: fixed !important;
   // background-color: #e7eff9;
-  background-color: $light;
-  background: linear-gradient(70deg, $light 26%, #C9C6C6 74%);
-  background: -webkit-linear-gradient(70deg, $light 26%, #C9C6C6 74%);
-  background: -moz-linear-gradient(70deg, $light 26%, #C9C6C6 74%);
-  background: -ms-linear-gradient(70deg, $light 26%, #C9C6C6 74%);
+  background-color: $light-grey-100;
   // background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
   // background-image: linear-gradient(to bottom, #111111 0%, #181818 74%);
   // background-image: linear-gradient(to top, $light 0%, #d1dbe4 74%);
@@ -353,7 +381,7 @@ section#wrapper {
 section#wrapper-dark {
   height: 100%;
   background-attachment: fixed !important;
-  background-color: hsl(0, 0, 10%);
+  background-color: $dark-grey-900;
   // background-color: rgb(161, 144, 144);
   // background: linear-gradient(165deg, hsl(0, 0, 22%) 0, hsl(0, 0, 4%) 100%);
   background-repeat: no-repeat;
@@ -361,7 +389,7 @@ section#wrapper-dark {
   background-attachment: fixed;
 
   .notification {
-    background-color: $dark;
+    background-color: $grey-darker;
     color: white;
   }
 
@@ -375,20 +403,20 @@ section#wrapper-dark {
   }
 }
 
+section.has-background-dark {
+  background-color: $dark-grey-900 !important;
+}
+
 section#wrapper-gradient {
   @extend section#wrapper-dark;
-  background-color: #FC466B;
-  background: linear-gradient(319deg, #b31217, #dc2430);
+  background-color: $red;
+  // background: linear-gradient(319deg, #b31217, #dc2430);
   // background: linear-gradient(319deg, #fc5f7f 0%, #3e0aff 100%);
 }
 
 section#wrapper-red {
   @extend section#wrapper-dark;
   background-color: $primary;
-}
-
-section#wrapper-black {
-  background-color: #000 !important;
 }
 
 .hero-body {
@@ -398,37 +426,30 @@ section#wrapper-black {
 
 
 section.section {
-  margin: 0vh 16vw !important;
-
   @media screen and (max-width: 639px) {
     margin: 0vh 0vw !important;
-    padding: 1.5rem !important;
+    padding: 1.5rem;
   }
 
   @media screen and (min-width: 640px) and (max-width: 1216px) {
-    margin: 0vh 4vw !important;
+    margin: 0vh 4vw;
+    padding: 4vh auto;
   }
 
   @media screen and (min-width: 1217px) and (max-width: 1409px) {
-    margin: 0vh 8vw !important;
-  }
-}
-
-section.section-narrow {
-  margin: 0vh 20vw !important;
-  padding: 3rem 1.5rem;
-
-  @media screen and (max-width: 540px) {
-    margin: 0vh 0vw !important;
+    margin: 0vh 8vw;
+    padding: 4vh auto;
   }
 
-  @media screen and (min-width: 541px) and (max-width: 1216px) {
-    margin: 0vh 12vw !important;
+  @media screen and (min-width: 1410px) {
+    margin: 0vh auto;
+    padding: 4vh auto;
+    width: 1200px;
   }
 }
 
 section.section-wide {
-  margin: 0vh 8vw !important;
+  @extend section.section;
 
   @media screen and (max-width: 639px) {
     margin: 0vh 0vw !important;
@@ -442,8 +463,18 @@ section.section-wide {
   @media screen and (min-width: 1217px) and (max-width: 1409px) {
     margin: 0vh 4vw !important;
   }
+
+  @media screen and (min-width: 1410px) {
+    margin: 0vh auto;
+    padding: 4vh auto;
+    width: 1400px;
+  }
 }
 
+
+.reverse-row-order {
+  flex-direction: row-reverse;
+}
 
 .card-content {
   @media screen and (max-width: 768px) {
@@ -455,22 +486,6 @@ section.section-wide {
   @media screen and (min-width: 1025px) {
     padding: 20px;
   }
-}
-
-br.mobile-br {
-  @media screen and (max-width: 540px) {
-    display: block;
-  }
-
-  display: none;
-}
-
-br.desktop-br {
-  @media screen and (max-width: 540px) {
-    display: none;
-  }
-
-  display: block;
 }
 
 .nmp-card {
@@ -486,12 +501,12 @@ br.desktop-br {
 
 .nmp-card-light {
   @extend .nmp-card;
-  color: $dark;
+  color: $grey-darker;
   background: white;
-  filter: drop-shadow(0px 8px 18px rgba(0, 0, 0, 0.6));
+  // filter: drop-shadow(0px 7px 29px rgba(100, 100, 111, 0.2));
 
   p {
-    color: $dark;
+    color: $grey-darker;
   }
 
   // box-shadow:  10px 10px 20px #cfcfd1,
@@ -500,9 +515,9 @@ br.desktop-br {
 
 .nmp-card-dark {
   @extend .nmp-card;
+  background-color: $dark-grey-800;
   color: white;
-  background: $dark2;
-  filter: drop-shadow(0px 8px 18px rgba(0, 0, 0, 0.6));
+  // filter: drop-shadow(0px .25rem .75rem rgba(0, 0, 0, 0.6));
 
   // box-shadow:  8px 8px 16px $dark1,
   //             -8px -8px 16px $dark2;
@@ -538,7 +553,7 @@ br.desktop-br {
 
 .nmp {
   border-radius: 12px;
-  margin-bottom: 2vh !important;
+  margin-bottom: 1vh !important;
 
   @media screen and (max-width: 1024px) {
     border-radius: 18px;
@@ -548,20 +563,17 @@ br.desktop-br {
 
 .nmp-card-image {
   border: 5px solid $red;
-  filter: drop-shadow(0px 8px 18px rgba(0, 0, 0, 0.6));
-
-  @media screen and (max-width: 768) {
-    // border-radius: 10px;
-  }
+  // filter: drop-shadow(0px .25rem .75rem rgba(0, 0, 0, 0.6));
 
   // border-radius: 32px;
-  border-radius: 50%;
+  border-radius: 50% !important;
 }
 
 .nmp-light {
   @extend .nmp;
-  background: $light-gradation;
-  filter: drop-shadow(0px 8px 18px rgba(0, 0, 0, 0.6));
+  background: $light-grey-300;
+  // background: $light-gradation;
+  filter: drop-shadow(0px .25rem .75rem rgba(0, 0, 0, 0.6));
   // box-shadow:  8px 8px 16px #cfcfd1,
   //              -8px -8px 16px #ffffff;
 }
@@ -569,8 +581,12 @@ br.desktop-br {
 .nmp-dark {
   @extend .nmp;
   color: white;
-  background: $dark2;
-  filter: drop-shadow(0px 8px 18px rgba(0, 0, 0, 0.6));
+  background: $dark-grey-800;
+  // filter: drop-shadow(0px .25rem .75rem rgba(0, 0, 0, 0.6));
+
+  .card-footer {
+    border-top: 1px solid #666;
+  }
 
   // box-shadow:  8px 8px 16px $dark1,
   //              -8px -8px 16px $dark2;
@@ -583,8 +599,7 @@ br.desktop-br {
   @extend .nmp;
   color: white;
   background: $red;
-  box-shadow: 8px 8px 16px $dark1,
-    -8px -8px 16px $dark2;
+  // filter: drop-shadow(0px .25rem .75rem rgba(0, 0, 0, 0.6));
 
   h1 {
     color: white;
@@ -595,7 +610,7 @@ br.desktop-br {
   border-radius: 14px;
   border: 0px;
   background: $light;
-  filter: drop-shadow(0px 8px 18px rgba(0, 0, 0, 0.6));
+  // filter: drop-shadow(0px .25rem .75rem rgba(0, 0, 0, 0.6));
   // box-shadow: inset 3px 3px 6px #cfd2d4,
   //             inset -3px -3px 6px #ffffff;
 }
@@ -672,7 +687,7 @@ br.desktop-br {
   margin: 1rem;
   border-radius: 28px;
   margin-bottom: 4vh !important;
-  background: $dark;
+  background: $grey-darker;
   // box-shadow: inset 8px 8px 16px $dark1,
   //             inset -8px -8px 16px $dark2;
 }
@@ -754,10 +769,6 @@ br.desktop-br {
   padding-top: 10vh;
 }
 
-// .icon {
-//   padding-left: 10px;
-// }
-
 .button {
   &.is-gradient {
     border: none;
@@ -778,20 +789,11 @@ br.desktop-br {
   }
 }
 
-a.text {
-  color: orange;
-  text-decoration: underline;
-
-  &:hover {
-    color: $red;
-  }
-}
-
-a {
- .nmp-dark:hover {
-  filter: drop-shadow(0px 8px 18px rgba(255, 255, 255, 0.3));
- } 
-}
+// a {
+//   .nmp-dark:hover {
+//     filter: drop-shadow(0px 8px 18px rgba(255, 255, 255, 0.3));
+//   }
+// }
 
 article {
   line-height: 185%;
@@ -855,6 +857,7 @@ span.is-red {
   -webkit-animation: loop-slide 40s linear 1s both;
   animation: loop-slide 40s linear 1s both;
   animation-fill-mode: forwards;
+  animation-delay: 2s;
 
   @media screen and (max-width: 768px) {
     -webkit-animation: loop-slide 40s linear 1s both;
@@ -899,6 +902,13 @@ span.is-red {
 
   to {
     opacity: 1;
+  }
+}
+
+.v-hl-btn-next,
+.v-hl-btn-prev {
+  @media screen and (max-width: 639px) {
+    transform: translateX(0) !important;
   }
 }
 

@@ -1,71 +1,43 @@
 <template>
-  <div :id="id">
-    <div class="columns">
-      <div class="column wallpaper-wrapper">
-        <img class="wallpaper" v-if="eventData.thumbnail" :src="`/sample/${eventData.thumbnail}.jpg`">
+  <section id="wrapper-dark" class="has-text-light">
+    <div class="columns is-variable is-6">
+      <div class="column is-12-mobile wallpaper-wrapper">
+        <img v-if="event.thumbnail" :src="event.thumbnail.url" :alt="event.thumbnail.alt">
       </div>
-      <aside class="column container is-5" style="display: flex; justify-content: middle; align-items: center;">
-        <div class="is-block">
-          <p class="is-uppercase is-menlo has-text-primary">{{ getDaysTogo(eventData.date) }}</p><br>
-          <h1 class="title is-3">{{ eventData.name }}</h1>
-          <br>
-          <div v-if="eventData.isSignupRequired == true">
+      <aside class="column is-5 is-12-mobile pt-6">
+        <div class="is-block block">
+          <p class="is-uppercase has-text-primary has-text-centered-mobile">{{ getDaysTogo(event.startat) }}</p><br>
+          <h1 class="title is-2 has-text-white has-text-centered-mobile">{{ event.name }}</h1>
+          <div v-if="event.issignuprequired == true">
             <!-- 申込開始日より前 -->
-            <b-tooltip v-if="eventData.signup_open !== undefined && isBefore(eventData.signup_open) > 0" :label="`Registration will be open in ${new Date(eventData.signup_open).toLocaleDateString()}`" position="is-top" type="is-primary" style="width: 100%;">
-              <a class="level-item button is-white is-gradient is-rounded is-fullwidth" disabled>Sign up</a>
+            <!-- <b-tooltip v-if="isBefore(formatDate(event.signupopenat)) < 0" :label="`Registration will be open on ${formatDate(event.signupopenat)}`" position="is-top" type="is-primary" style="width: 100%;">
+              <a class="level-item button is-gradient is-rounded is-fullwidth disabled">Sign up</a>
             </b-tooltip>
-            <!-- 申込終了日より前 -->
-            <b-tooltip v-else-if="isBefore(eventData.signup_close) > 0" :label="`Registration ends in ${new Date(eventData.signup_close)}`" position="is-top" type="is-primary" style="width: 100%;">
-              <a :href="eventData.signup_url" target="_blank" rel="noopener noreferrer" class="level-item button is-white is-gradient is-rounded is-fullwidth">Sign up</a>
+            <b-tooltip v-else-if="isBefore(event.signupopenat) < 0 && isBefore(event.signupcloseat) < 0" :label="`Registration will be closed on ${formatDate(event.signupcloseat)}.`" position="is-top" type="is-primary" style="width: 100%;">
+              <a :href="event.signupUrl" class="level-item button is-gradient is-rounded is-fullwidth">Sign up</a>
             </b-tooltip>
-            <!-- 申込終了日がなく、開催日より前 -->
-            <b-tooltip v-else-if="eventData.signup_close === undefined && isBefore(eventData.date) > 0" label="Sign up now!" position="is-top" type="is-primary" style="width: 100%;">
-              <a :href="eventData.signup_url" target="_blank" rel="noopener noreferrer" class="level-item button is-white is-gradient is-rounded is-fullwidth">Sign up</a>
-            </b-tooltip>
-            <!-- 申込終了日より後 -->
-            <b-tooltip v-else-if="isBefore(eventData.signup_close) < 0" :label="`Registration closed in ${new Date(eventData.signup_close).toLocaleDateString()}`" position="is-top" type="is-primary" style="width: 100%;">
-              <a class="button is-white is-gradient is-rounded is-fullwidth" disabled>Sign up</a>
-            </b-tooltip>
-            <!-- 申込終了日がなく、開催日より後 -->
-            <b-tooltip v-else label="Registration closed" position="is-top" type="is-primary" style="width: 100%;">
-              <a class="button is-white is-gradient is-rounded is-fullwidth" disabled>Sign up</a>
-            </b-tooltip>
-          </div>
-          <div v-else>
-            <p>No Sign Up Required</p>
+            <b-tooltip v-else :label="`Registration was closed on ${formatDate(event.signupcloseat)}.`" position="is-top" type="is-primary" style="width: 100%;">
+              <a class="level-item button is-gradient is-rounded is-fullwidth disabled">Sign up</a>
+            </b-tooltip> -->
           </div>
         </div>
       </aside>
     </div>
-    <hr style="margin: 0.5rem 0 1rem 0;">
-    <div class="columns is-variable is-5">
-      <div class="container column is-7">
-          <p v-if="$i18n.locale == 'ja'" v-html='eventData.description_ja'></p>
-          <p v-if="$i18n.locale == 'en'" v-html='eventData.description_en'></p>
-          <br>
-          <p v-if="$i18n.locale == 'ja'" v-html='eventData.description_en'></p>
-          <p v-if="$i18n.locale == 'en'" v-html='eventData.description_ja'></p>
-          <div v-if="eventData.external_url"><hr><a :href="eventData.external_url" class="is-size-6">{{ eventData.external_url }}</a></div>
-          <hr>
-          <p>Share With Friends</p>
-          <a v-if="$i18n.locale == 'ja'" :href="`https://twitter.com/intent/tweet?text=${eventData.name}に参加しよう！&url=https://tedxutsukuba.com/events/${eventData.id}`" target="_blank" rel="noopener noreferrer" class="is-size-4 has-text-dark" data-show-count="false"><i class="mdi mdi-twitter" /></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-          <a v-if="$i18n.locale == 'en'" :href="`https://twitter.com/intent/tweet?text=Join ${eventData.name}&url=https://tedxutsukuba.com/events/${eventData.id}`" target="_blank" rel="noopener noreferrer" class="is-size-4 has-text-dark" data-show-count="false"><i class="mdi mdi-twitter" /></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-          <!-- <a href="https://twitter.com/intent/tweet?button_hashtag=TEDxUTsukuba&ref_src=twsrc%5Etfw" class="button is-rounded" data-show-count="false"><i class="mdi mdi-twitter" />Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
-          <!-- <a href="" target="_blank" rel="noopener noreferrer" class="is-size-4 has-text-dark"><i class="mdi mdi-facebook" /></a> -->
-          <!-- <a href="" target="_blank" rel="noopener noreferrer" class="is-size-4 has-text-dark"><i class="mdi mdi-link-variant" /></a> -->
-          <br><br>
-      </div>
-      <aside class="container column is-5">
-        <p class="is-size-5">{{ new Date(eventData.date).toLocaleDateString().replace(regex, '/') }}</p>
-        <p class=""><span v-if="eventData.from">{{ eventData.from }}</span><span v-if="eventData.to"> - {{ eventData.to }}</span></p>
+    <!-- <hr style="margin: 0.5rem 0 1rem 0;"> -->
+    <div class="columns px-0 reverse-row-order">
+      <aside class="column is-5 px-6 py-6">
+        <hr class="is-hidden-tablet">
+          <span class="is-size-4 has-text-weight-bold">{{ formatDate(event.startat) }}</span><br class="is-hidden-mobile">
+          <span class="is-size-5"> {{ formatTime(event.startat) }}</span>
+          <span class="is-size-5" v-if="event.endat"> - {{ formatTime(event.endat) }}</span>
         <!-- <a href="" class="is-size-6">Add to Calendar</a>
         <no-ssr>
           <add-to-calendar
-            :title="eventData.name" 
-            :location="eventData.location || eventData.webcast_url" 
+            :title="event.name" 
+            :location="event.location || event.webcast_url" 
             start=""
             to=""
-            :details="eventData.summary_ja + '<br>' + eventData.summary_en + '<br><br>www.tedxutsukuba.com/events'" 
+            :details="event.summary_ja + '<br>' + event.summary_en + '<br><br>www.tedxutsukuba.com/events'" 
             inline-template>
             <div>
               <google-calendar id="google-calendar">
@@ -81,109 +53,105 @@
           </add-to-calendar>
         </no-ssr> -->
         <hr>
-        <div v-if="eventData.type === 'virtual'">
+        <div v-if="event.eventtype === 'virtual'">
           <p class="is-size-5">Virtual Event</p>
-          <p>{{ eventData.webcast }}</p>
-          <a :href="eventData.webcast_url" target="_blank" rel="noopener noreferrer" class="is-size-6">Join webcast</a>
+          <p>{{ event.webcast }}</p>
+          <a :href="event.webcastUrl" target="_blank" rel="noopener noreferrer" class="is-size-6 has-text-info">Join webcast <i class="mdi mdi-open-in-new" /></a>
         </div>
-        <div v-else-if="eventData.type === 'hybrid'">
+        <div v-else-if="event.eventtype === 'hybrid'">
           <p class="is-size-5">Hybrid Event</p>
-          <p>{{ eventData.webcast }}</p>
-          <a :href="eventData.webcast_url" target="_blank" rel="noopener noreferrer" class="is-size-6">Join webcast</a><br>
-          <span class="is-size-6" v-if="$i18n.locale == 'ja'">{{ eventData.location_ja }}</span><br>
-          <span class="is-size-6" v-if="$i18n.locale == 'en'">{{ eventData.location_en }}</span><br>
-          <a :href="eventData.googlemaps" target="_blank" rel="noopener noreferrer" class="is-size-6">Open in Google Maps</a>
+          <a :href="event.webcastUrl" target="_blank" rel="noopener noreferrer" class="is-size-6">Join webcast</a><br>
+          <span class="is-size-6">{{ event.place }}</span><br>
         </div>
         <div v-else>
           <p class="is-size-5">Location</p>
-          <p v-if="$i18n.locale == 'ja'">{{ eventData.location_ja }}</p>
-          <p v-if="$i18n.locale == 'en'">{{ eventData.location_en }}</p>
-          <a :href="eventData.googlemaps" target="_blank" rel="noopener noreferrer" class="is-size-6">Open in Google Maps</a>
+          <span class="is-size-6">{{ event.place }}</span><br>
         </div>
         <hr>
-        <p v-if="eventData.isFree === false" class="is-size-6 mb-6">
-          Adult: JPY {{ eventData.fee_adult.toLocaleString() }}<br>
-          Student: JPY {{ eventData.fee_student.toLocaleString() }}
-        </p>
-        <p v-else class="is-size-5 mb-6">
+        <p v-if="event.isfree == true" class="is-size-6 mb-6">
           Free
         </p>
-        <br><br>
+        <p v-else class="is-size-6 mb-6">
+          Paid
+        </p>
+        <p v-if="event.issignuprequired == true" class="is-size-6 mb-6">
+        </p>
+        <p v-else class="is-size-6 mb-6">
+          Sign Up Not Required
+        </p>
+        <hr class="is-hidden-tablet">
       </aside>
+      <div class="content column is-7 px-6 py-6">
+        <p id="event-description" v-html="event.description"></p>
+        <hr>
+        <a :href="`https://www.facebook.com/sharer/sharer.php?u=https://www.tedxutsukuba.com${this.$route.path}`" target="_blank" rel="nofollow noopener noreferrer" class="is-size-4 has-text-light"><i class="mdi mdi-facebook" /></a>
+        <a v-if="$i18n.locale == 'ja'" :href="`https://twitter.com/intent/tweet?text=${event.name}に参加しよう！&via=tedxutsukuba&related=tedxutsukuba&url=www.tedxutsukuba.com/events/${event.id}`" target="_blank" rel="noopener noreferrer" class="is-size-4 has-text-light" data-show-count="false"><i class="mdi mdi-twitter" /></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <a v-if="$i18n.locale == 'en'" :href="`https://twitter.com/intent/tweet?text=Join ${event.name}&&via=tedxutsukuba&related=tedxutsukuba&url=www.tedxutsukuba.com/en/events/${event.id}`" target="_blank" rel="noopener noreferrer" class="is-size-4 has-text-light" data-show-count="false"><i class="mdi mdi-twitter" /></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <br><br>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
-import axios from 'axios';
-import Meta from '~/assets/mixins/eventmixin'
+// import Meta from '~/assets/mixins/eventmixin'
+import { request, gql } from '~/lib/datocms'
+import { Image, toHead } from "vue-datocms"
+import format from 'date-fns/format'
+import parseISO from 'date-fns/parseISO'
+import VueMeta from 'vue-meta'
+
 export default {
-  mixins: [Meta],
+  // mixins: [Meta],
   components: {
+    VueMeta,
+    "datocms-image": Image, toHead
   },
   data () {
     return {
-      eventData: {},
-      // eventData: [],
-      // eventData: '',
-      isModalActive: false,
-      id: this.$route.params.event,
-      regex: /-/g,
-      meta: {
-        title: '',
-        description: '',
-        type: '',
-        url: '',
-        image: '',
-      },
     }
   },
-  head: {
-    title: 'Event Detail | TEDxUTsukuba',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { 
-        hid: 'description', 
-        name: 'description', 
-        content: "TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. Our event is called TEDxUTsukuba, where x = independently organized TED event. " 
-      },
-      { 
-        hid: 'twitter:card', 
-        name: 'twitter:card', 
-        content: 'summary' 
-      },
-      { 
-        hid: 'twitter:site', 
-        name: 'twitter:site', 
-        content: '@tedxutsukuba' 
-      },
-      { 
-        hid: 'twitter:creator', 
-        name: 'twitter:creator', 
-        content: '@tedxutsukuba' 
-      },
+  async asyncData({ params, i18n }) {
+    console.log(params.event);
+    const data = await request({
+      query: gql`
       {
-        hid: 'og:title',
-        property: 'og:title',
-        content: 'Event | TEDxUTsukuba'
-      },
-      {
-        hid: 'og:type',
-        property: 'og:type',
-        content: 'website'
-      },
-      {
-        hid: 'og:url',
-        property: 'og:url',
-        content: 'https://tedxutsukuba.com/events'
-      },
-      {
-        hid: 'og:image',
-        property: 'og:image',
-        content: 'https://www.tedxutsukuba.com/u_logo_banner.jpg'
+        event(locale: ${i18n.locale}, filter: {id: {eq: "${params.event}"}}) {
+          id
+          name
+          startat
+          endat
+          eventtype
+          place
+          description(markdown: true)
+          issignuprequired
+          signupopenat
+          signupcloseat
+          webcastUrl
+          isfree
+          thumbnail {
+            alt
+            url
+          }
+          seo {
+            description
+            title
+            twitterCard
+            image {
+              url
+            }
+          }
+        }
       }
-    ]
+    `
+    })
+    return { ready: !!data, ...data }
+  },
+  metaInfo() {
+    if (!this.data) {
+      return;
+    }
+    return toHead(this.data.event.seo);
   },
   filters: {
     currencydecimal (value) {
@@ -194,7 +162,7 @@ export default {
     getDaysTogo(eventDate){
       const diff = new Date(eventDate).getTime() - new Date().getTime();
       if (diff < 8640000) {
-        return '開催終了 | Ended'
+        return this.$i18n.t('events.ended')
       } else {
         return (Math.floor(diff/(1000*60*60*24)) + 1).toString() + ' days to go'
       }
@@ -204,13 +172,19 @@ export default {
       const diff = new Date(eventDate).getTime() - new Date().getTime()
       // console.log(diff)
       return diff
-    }
+    },
+    formatDate(date) {
+      return format(parseISO(date), 'yyyy/MM/dd')
+    },
+    formatTime(date) {
+      return format(parseISO(date), 'HH:mm')
+    },
   //   getData (apiUrl) {
   //     // this.$jsonp(url, dataObj, timeout) で使える。 Vueコンポーネント内だとthisで呼び出せる。
   //     this.$jsonp("https://script.google.com/macros/s/AKfycbzLxjNxZLZ5izrM5boDp0nM396uyzReduC7nr2axZepkPhXUJwS9sP3_rn3268EOP49bw/exec",{ callbackName: "callbackFunction" })
   //     .then(json => {
   //       // Success.
-  //       this.eventData = json
+  //       this.event = json
   //     }).catch(err => {
   //       // Failed.
   //     })
@@ -220,58 +194,19 @@ export default {
   },
   mounted() {
     // console.log(this.$route.params.event)
-    console.log(this.$route.params.event);
-    const api_url = "https://script.google.com/macros/s/AKfycbzEOXQ3-iyyjdQs4FrraL7pRnl0vtUXkK2oVzvVh8qOoCA9-XjsgtBFX6M-tCThZ9tSJg/exec" + '?id=' + this.$route.params.event;
-    axios.get(api_url, {
-      crossDomain: true
-    }).then(response => this.eventData = response.data[0]);
+    // console.log(this.$route.params.event);
+    // const api_url = "https://script.google.com/macros/s/AKfycbzEOXQ3-iyyjdQs4FrraL7pRnl0vtUXkK2oVzvVh8qOoCA9-XjsgtBFX6M-tCThZ9tSJg/exec" + '?id=' + this.$route.params.event;
+    // axios.get(api_url, {
+    //   crossDomain: true
+    // }).then(response => this.event = response.data[0]);
   }
-  // async asyncData({ $axios, params }) {
-  //   try {
-  //     const api_url = `https://script.google.com/macros/s/AKfycbzLxjNxZLZ5izrM5boDp0nM396uyzReduC7nr2axZepkPhXUJwS9sP3_rn3268EOP49bw/exec?id=${params.event}`;
-  //     const res = await $axios.$get(api_url, {
-  //       crossDomain: true
-  //     })
-  //     return {
-  //       eventData: res
-  //     }
-  //   }catch(error) {
-  //     console.log('Error occurred while getting data')
-  //   }
-  // }
 }
 </script>
 
-<style lang="scss" scoped>
-  .columns {
-    margin: 0 !important;
-  }
-  .column.is-7 {   
-    @media screen and (min-width: 769px) {
-      padding-left: 6vw;
-      padding-right: 3vw;
+<style lang="scss">
+  #event-description {
+    strong, .has-text-weight-bold {
+      color: #fff !important;
     }
-  }
-  .column.wallpaper-wrapper {
-    padding: 0;
-    .wallpaper {
-      padding-left: 0 !important;
-    }
-  }
-  .column.is-5 {
-    @media screen and (min-width: 760px) {
-      padding-left: 3vw;
-      padding-right: 6vw;
-    }
-  }
-  .wallpaper {
-    filter: brightness(95%);
-    width: 100%;
-    padding: 0;
-    height: 30vh;
-    object-fit: cover;
-  }
-  .is-menlo {
-    font-family: "Menlo", "Courier", monospace;
   }
 </style>

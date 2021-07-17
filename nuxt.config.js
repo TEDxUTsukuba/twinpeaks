@@ -1,17 +1,16 @@
 require('dotenv').config();
-const { STEIN_API } = process.env;
+const { STEIN_API, NUXT_ENV_DATOCMS_API_TOKEN } = process.env;
 
 export default {
-  mode: 'universal',
   /*
   ** Headers of the page
   */
   env: {
-    STEIN_API
+    STEIN_API, NUXT_ENV_DATOCMS_API_TOKEN
   },
   head: {
     // title: process.env.npm_package_name || '',
-    title: "TEDxUTsukuba | A Hub for Tsukuba's Ideas",
+    title: "TEDxUTsukuba | Spread Globally, Connect Locally.",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -23,7 +22,7 @@ export default {
       {
         hid: 'og:title',
         property: 'og:title',
-        content: "TEDxUTsukuba | A Hub for Tsukuba's Ideas"
+        content: "TEDxUTsukuba | Spread Globally, Connect Locally."
       },
       {
         hid: 'og:description',
@@ -48,7 +47,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://www.tedxutsukuba.com/sns_banner_recruitment.jpg'
+        content: 'https://www.tedxutsukuba.com/skyscraper.png'
       },
       { 
         hid: 'og:site_name', 
@@ -114,8 +113,20 @@ export default {
       src: '~/plugins/vue-add-to-calendar.js',
       ssr: false
     },
+    // {
+    //   src: '~/plugins/generator.js',
+    //   ssr: false
+    // },
+    { 
+      src: '~/plugins/vue-konva',
+      ssr: false 
+    },
     {
-      src: '~/plugins/user-agent-config.js',
+      src: '~/plugins/datocms',
+      ssr: false
+    },
+    {
+      src: '~/plugins/vue-horizontal',
       ssr: false
     }
   ],
@@ -156,28 +167,27 @@ export default {
             code: 'ja', 
             iso: 'ja_JP', 
             file: 'ja.json',
-            // domain: 'www.tedxutsukuba.com'
           },
           { 
             code: 'en', 
             iso: 'en-US', 
             file: 'en.json',
-            // domain: 'www.en.tedxutsukuba.com'
           },
         ],
-        // differentDomains: true,
+        differentDomains: false,
         defaultLocale: 'ja',
         vueI18n: {
           fallbackLocale: 'ja'
         },
-        detectBrowserLanguage: {
-          useCookie: false,
-          cookieKey: 'i18n_redirected',
-          onlyOnRoot: true,  // recommended
-        },
-        // seo: true,
+        // detectBrowserLanguage: {
+        //   useCookie: true,
+        //   cookieKey: 'i18n_redirected',
+        // //   alwaysRedirect: false,
+        //   onlyOnRoot: true,  // recommended
+        // },
+        // // seo: true,
         vueI18nLoader: true,
-        lazy: true,
+        // lazy: true,
         // 言語ファイル(.json)のディレクトリを記載
         langDir: 'locales/',
       }
@@ -192,17 +202,17 @@ export default {
     '@nuxtjs/pwa',
     'nuxt-svg-loader',
     '@nuxtjs/sitemap',
-    [
-      'nuxt-lazy-load', 
-      {
-        images: true,
-        videos: false,
-        audios: false,
-        iframes: false,
-        defaultImage: '~/assets/wallpapers/defaultimage.png'
-      }
-    ],
-    '@nuxt/content'
+    '@nuxt/content',
+    // 参考: https://blog.mktia.com/generate-ogp-image-automatically/
+    // '~/modules/imageGenerator.js'
+    // [ 
+    //   'nuxt-responsive-loader',
+    //   {
+    //     name: 'img/[hash:7]-[width].[ext]',
+    //     format: 'png'
+    //   }
+    // ],
+    'cookie-universal-nuxt',
   ],
 
   // fontawesome: {
@@ -237,7 +247,7 @@ export default {
       routesNameSeparator: '___'
     },
     exclude: [
-      '**/ja/**', '**/private', '**/private/**', '**/inspire', '**/talks_old', '**/event_old', '**/loading', '**/tedtalks'
+      '**/ja/**', '**/private', '**/private/**', '**/draft', '**/talks_old', '**/event_old', '**/loading', '**/tedtalks'
     ],
     // routes(callback) {
     //   const axios = require('axios')
@@ -268,7 +278,36 @@ export default {
     }
   },
   generate: {
-    fallback: true  // 404を表示
+    fallback: true,  // 404を表示
+    routes: [
+      'blog/is_slander_certainly_bad',
+      'blog/knowledge_is_power_but',
+      'blog/johnmaeda',
+      'blog/social_distancing_and_stress',
+      'blog/tedtalk_recommend',
+      'blog/why_letting_go_is_always_an_option_ja',
+      'blog/why_letting_go_is_always_an_option_en',
+      'about/takuma_goto',
+      'about/craig_coleman',
+      'about/naoki_kitaoka',
+      'about/masato_kai',
+      'about/coleen_melecio',
+      'about/fukutaro_kawai',
+      'about/shoryu_aoyama',
+      'about/chiho_numata',
+      'about/saaya_kobayashi',
+      'about/shuhei_kinoshita',
+      'about/seika_takahashi',
+      'about/kanade_takahashi',
+      'about/kazuki_ikegaya',
+      'about/yuki_abe',
+      'about/harry'
+    ]
+  },
+  router: {
+    scrollBehavior: function (to, from, savedPosition) {
+      return { x: 0, y: 0 }
+    }
   },
   server: {
     port: 3000, // デフォルト: 3000

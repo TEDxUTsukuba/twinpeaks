@@ -1,7 +1,7 @@
 <template>
   <section>
     <Header />
-    <nuxt class="nuxt" />
+    <nuxt class="nuxt pb-0" />
     <Footer />
   </section>
 </template>
