@@ -235,7 +235,7 @@ section.is-large {
   p,
   article,
   li,
-  a {
+  a:not(.button) {
     font-size: 1rem !important;
   }
 
@@ -287,7 +287,7 @@ section.is-large {
   p,
   article,
   li,
-  a {
+  a:not(.button) {
     font-size: 1rem !important;
   }
 
@@ -329,7 +329,7 @@ section.is-large {
   p,
   article,
   li,
-  a {
+  a:not(.button) {
     font-size: 1.25rem !important;
   }
 
