@@ -84,13 +84,13 @@
           style="display: inline-block; vertical-align: top;"
         >
           <div class="nmp-dark">
-            <header class="card-header" v-if="member.hasImage && !$ua.isFromSmartphone()">
+            <header class="card-header" v-if="member.showImageOnTop && !$ua.isFromSmartphone()">
               <p class="card-header-title">
               </p>
             </header>
             <div class="card-image" v-if="!$ua.isFromSmartphone()" style="width: 100%;">
-              <figure class="image is-3-desktop is-6-tablet is-6-mobile" style="overflow: hidden;">
-                <img class="portrait" v-if="member.hasImage" :src="getJsonImgUrl(`${member.id}.jpg`)" :alt="member.given_name_en + member.family_name_en">
+              <figure v-if="member.showImageOnTop" class="image is-4by3" style="overflow: hidden;">
+                <img class="portrait" :src="getJsonImgUrl(`${member.id}.jpg`)" :alt="member.given_name_en + member.family_name_en" style="object-fit: cover;">
               </figure>
             </div>
             <div class="card-content">
