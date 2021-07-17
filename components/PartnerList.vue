@@ -23,6 +23,12 @@
             {{ $t('button.discover') }}
           </button> -->
           <!-- <a :href="partner.url" class="button is-white is-outlined is-rounded is-small">{{ $t('button.visitwebsite') }}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a> -->
+          <nuxt-link
+            :to="`/partners/${partner.id}`"
+            class="button is-white is-small is-rounded mb-2"
+          >
+            {{ $t('button.discover') }}
+          </nuxt-link>
           <b-button 
             @click="countGA(partner.url, partner.name)"
             :label="$t('button.visitwebsite')"
@@ -30,9 +36,9 @@
             iconPack="mdi"
             type="is-white is-small is-rounded"
             outlined
+            class="mb-2"
           >
           </b-button>
-          <!-- <modal :val="postItem" v-show="showContent" @close="closeModal" /> -->
           <br><br>
       </div>
     </div>
@@ -42,6 +48,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      isModalActive: false
+    }
+  },
   props: {
     category: {
       type: String,
