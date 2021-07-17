@@ -8,6 +8,9 @@ export const getters = {
   findPartnersByCategory: state => (category) => {
     return Object.values(state.partnerList).filter(a => a.category === category)
   },
+  findPartnerById: state => (id) => {
+    return Object.values(state.partnerList).filter(a => Number(a.id) === id)
+  },
   findPartnersByExceptionCategory: state => (category) => {
     return Object.values(state.partnerList).filter(a => a.category !== category)
   },

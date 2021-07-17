@@ -364,10 +364,6 @@ export default {
       color: white;
     }
   }
-
-  .nmp-dark {
-    // border-radius: 18px !important;
-  }
   p.midashi {
     margin-bottom: 0;
     color: #E62B1E;
