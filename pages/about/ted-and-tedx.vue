@@ -1,7 +1,7 @@
 <template>
   <section id="wrapper-dark" class="font-awesome">
     <section class="section is-halfheight has-text-centered">
-      <i class="mdi mdi-information has-text-primary is-1" /> 
+      <i class="mdi mdi-information has-text-primary is-size-1" /> 
       <h1 class="title is-1 is-spaced">{{ $t('about.tedandtedx.title')}}</h1>
       <h1 class="subtitle has-text-grey-light">{{ $t('about.tedandtedx.subtitle')}}</h1>
     </section>
@@ -30,19 +30,19 @@
           <div class="column has-text-centered is-12-mobile is-4-tablet">
             <div>
               <p class="title is-size-1 has-text-primary"> 3600+</p>
-              <p class="subtitle heading has-text-dark">Talks</p>           
+              <p class="subtitle heading has-text-dark has-text-weight-bold">Talks</p>           
             </div>
           </div>
           <div class="column has-text-centered is-6-mobile is-4-tablet">
             <div>
               <p class="title is-size-1 has-text-primary">116</p>
-              <p class="subtitle heading has-text-dark">Languages</p>
+              <p class="subtitle heading has-text-dark has-text-weight-bold">Languages</p>
             </div>
           </div>
           <div class="column has-text-centered is-6-mobile is-4-tablet">
             <div>
               <p class="title is-size-1 has-text-primary">1.5M</p>
-              <p class="subtitle heading has-text-dark">Views per day</p>
+              <p class="subtitle heading has-text-dark has-text-weight-bold">Views per day</p>
             </div>
           </div>
         </div>
@@ -62,25 +62,25 @@
     
     </section>
 
-    <section class="hero bg-red">
+    <section class="hero has-background-primary">
       <section class="section">
         <div class="columns is-mobile is-multiline">
           <div class="column has-text-centered is-12-mobile is-4-tablet">
             <div>
               <p class="title is-size-1 has-text-light">100,000+ </p>
-              <p class="subtitle heading has-text-dark">Talks</p>
+              <p class="subtitle heading has-text-grey-light has-text-weight-bold">Talks</p>
             </div>
           </div>
           <div class="column has-text-centered is-6-mobile is-4-tablet">
             <div>
               <p class="title is-size-1 has-text-light">170+</p>
-              <p class="subtitle heading has-text-dark">Countries</p>
+              <p class="subtitle heading has-text-grey-light has-text-weight-bold">Countries</p>
             </div>
           </div>
           <div class="column has-text-centered is-6-mobile is-4-tablet">
             <div>
               <p class="title is-size-1 has-text-light"> 3000+</p>
-              <p class="subtitle heading has-text-dark">Events every year</p>           
+              <p class="subtitle heading has-text-grey-light has-text-weight-bold">Events every year</p>           
             </div>
           </div>
           
@@ -95,26 +95,23 @@
 
     <section class="section has-text-centered">
       <h1 class="title is-0 has-text-white">{{ $t('about.ted.watch')}}</h1>
-        <div class="columns is-multiline">
-          <div id="ted-embedded-top" class="column" style="position:relative;">
-            <iframe class="video" src="https://embed.ted.com/talks/john_maeda_designing_for_simplicity" width="854" height="480" style="position: relative;" frameborder="0" scrolling="no" allowfullscreen></iframe>
-            <br><br>
-            <p class="">{{ $t('about.ted.event')}}</p>
-            <p class="title">{{ $t('about.ted.talktitle')}}</p>
-            <p class="subtitle">{{ $t('about.ted.speaker')}}</p>
-            <a class="button is-rounded is-gradient" href="https://www.ted.com/talks">{{ $t('about.ted.watchmoreted')}}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
-          </div>
-          <br>
-          <div id="ted-embed-bottom" class="column" style="position:relative;">
-            <iframe class="video" src="https://embed.ted.com/talks/takaharu_tezuka_the_best_kindergarten_you_ve_ever_seen" width="854" height="480" style="position: relative;" frameborder="0" scrolling="no" allowfullscreen></iframe>
-            <br><br>
-            <p class="">{{ $t('about.tedx.event')}}</p>
-            <p class="title">{{ $t('about.tedx.talktitle')}}</p>
-            <p class="subtitle">{{ $t('about.tedx.speaker')}}</p>
-            <a class="button is-rounded is-gradient" target="_blank" href="https://www.ted.com/watch/tedx-talks">{{ $t('about.tedx.watchmoretedx')}}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
-          </div>
-        <!-- <Movie id="teaser" :vId='videoId4' :aPlay='autoplay'></Movie> -->
-      </div>
+      <figure class="image is-16by9">
+        <iframe class="has-ratio" src="https://embed.ted.com/talks/john_maeda_designing_for_simplicity" frameborder="0" allowfullscreen></iframe>
+      </figure>
+      <div class="divider" />
+      <p class="">{{ $t('about.ted.event')}}</p>
+      <p class="title">{{ $t('about.ted.talktitle')}}</p>
+      <p class="subtitle">{{ $t('about.ted.speaker')}}</p>
+      <a class="button is-rounded is-gradient" href="https://www.ted.com/talks">{{ $t('about.ted.watchmoreted')}}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
+      <div class="divider" />
+      <figure class="image is-16by9">
+        <iframe class="has-ratio" src="https://embed.ted.com/talks/takaharu_tezuka_the_best_kindergarten_you_ve_ever_seen" frameborder="0" allowfullscreen></iframe>
+      </figure>
+      <div class="divider" />
+      <p class="">{{ $t('about.tedx.event')}}</p>
+      <p class="title">{{ $t('about.tedx.talktitle')}}</p>
+      <p class="subtitle">{{ $t('about.tedx.speaker')}}</p>
+      <a class="button is-rounded is-gradient" target="_blank" href="https://www.ted.com/watch/tedx-talks">{{ $t('about.tedx.watchmoretedx')}}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
     </section>
 
     <section class="section has-text-centered">
@@ -124,44 +121,40 @@
           <iframe class="podcast" src="https://open.spotify.com/embed-podcast/show/1VXcH8QHkjRcTCEd88U3ti" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         </div>
         <div class="column is-6-fullhd is-12 has-text-centered">
-          <iframe class="podcast apple" src="https://embed.podcasts.apple.com/us/podcast/ted-talks-daily/id160904630?itsct=podcast_box&amp;itscg=30200&amp;theme=dark" height="450px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *;" style="width: 100%; max-width: 660px; overflow: hidden; border-radius: 10px; background: transparent;"></iframe>
+          <iframe class="podcast apple" src="https://embed.podcasts.apple.com/us/podcast/ted-talks-daily/id160904630?itsct=podcast_box&amp;itscg=30200&amp;theme=light" height="450px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *;" style="width: 100%; max-width: 660px; overflow: hidden; border-radius: 10px; background: transparent;"></iframe>
         </div>
       </div>
-      <a class="button is-rounded is-gradient" target="_blank" href="https://www.ted.com/podcasts">{{ $t('about.ted.listenmore')}}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
+      <a class="button is-rounded is-gradient" target="_blank" href="https://audiocollective.ted.com/">{{ $t('about.ted.listenmore')}}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
     </section>
 
-    <section class="section has-text-centered">
+    <section class="section">
       <h1 class="title is-0 has-text-white">{{ $t('about.ted.join')}}</h1>
-      <h2 class="title is-2">TED Events</h2>"
       <div class="columns is-multiline">
-        <div class="column is-4">
-          <img src="https://pi.tedcdn.com/r/pb-assets.tedcdn.com/system/baubles/files/000/009/062/original/TED2022_medallion_grey_%281%29.png?1618259132?w=790">
-          <p><span class="tag is-info">{{ $t('button.upcoming')}}</span></p><br>
-          <p class="title">TED2022</p>
-          <p class="subtitle">April 10-14, 2022<br>Vancouver, BC, Canada</p>
+        <div class="column is-6">
+          <div class="nmp-card-red">
+            <div class="block">
+              <p class="title is-size-4">{{ $t('events.othertedx.quote')}}</p>
+              <p v-html="$t('events.othertedx.description')" />
+            </div>
+            <div class="block has-text-right">
+              <a class="button is-rounded is-white" href="https://www.ted.com/tedx/events?autocomplete_filter=Japan&year=Year&month=Month&commit=Submit" target="_blank">{{ $t('button.discover') }}<i class="mdi mdi-open-in-new" /></a>
+            </div>
+          </div>
         </div>
-        <div class="column is-4">
-          <img src="https://pi.tedcdn.com/r/pb-assets.tedcdn.com/system/baubles/files/000/008/650/original/TEDMonterey_TED.com_210x156.png?w=320">
-          <p><span class="tag is-info">{{ $t('button.upcoming')}}</span></p><br>
-          <p class="title">TEDMonterey: The Case for Optimism</p>
-          <p class="subtitle">August 1-4, 2021<br>Monterey, CA</p>
-        </div>
-        <div class="column is-4">
-          <img src="https://pi.tedcdn.com/r/pb-assets.tedcdn.com/system/baubles/files/000/007/485/original/T20_Tile_210x156.png?w=320">
-          <p><span class="tag is-dark">{{ $t('button.ended')}}</span></p><br>
-          <p class="title">TED2020: Uncharted</p>
-          <p class="subtitle">May 18-July 10, 2020<br>Held online via TED's event platform</p>
+        <div class="column is-6">
+          <div class="nmp-card-red">
+            <div class="block">
+              <p class="title is-size-4">{{ $t('about.membership.quote')}}</p>
+              <p v-html="$t('about.membership.description')" />
+            </div>
+            <div class="block has-text-right">
+              <a class="button is-rounded is-white" href="https://www.ted.com/membership" target="_blank">{{ $t('button.discover') }}<i class="mdi mdi-open-in-new" /></a>
+            </div>
+          </div>
         </div>      
       </div>
       <br>
-      <a class="button is-rounded is-gradient" target="_blank" href="https://www.ted.com/attend/conferences">{{ $t('button.discover')}}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
-      <hr style="margin: 5vh 0;">
-      <h2 class="title is-2">TEDx Events</h2>
-      <p>So many events happening around the world (including virtual events) every day. Check out for more information at TED.com.</p>
-      <br>
-      <a class="button is-rounded is-gradient" target="_blank" :href="`https://www.ted.com/tedx/events?autocomplete_filter=Japan&year=Year&month=Month&commit=Submit`">{{ $t('button.discover')}}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
     </section>
-
   </section>
 </template>
 
@@ -230,13 +223,6 @@ export default {
     &.apple {
       min-height: 450px !important;
     }
-  }
-  iframe.video {
-    @media screen and (min-width: 769px) {
-      width: 48vw !important;
-      height: 27vw !important;
-    }
-    width: 100vw;
   }
 
   #ted {

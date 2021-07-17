@@ -2,7 +2,7 @@
   <section>
       <div class="columns is-variable is-4 is-multiline is-centered">
         <div class="column is-one-quarter-widescreen is-half-desktop is-half-tablet" v-for="(talk, index) in talkList" :key="index">
-          <div class="nmp-light">
+          <div class="nmp-dark">
             <div class="card-image">
               <figure class="image is-16by9">
                 <img class="nmp-card-image" src="https://bulma.io/images/placeholders/640x360.png">

@@ -14,6 +14,9 @@
     "talks": {
       "item": "Talks"
     },
+    "blog": {
+      "item": "Blog"
+    },
     "partners": {
       "item": "Partners"
     },
@@ -27,25 +30,33 @@
     "discover": "Discover",
     "readmore": "Read more",
     "readless": "Read less",
+    "seeothers": "See other {0}",
+    "seeall": "See all",
     "visitwebsite": "Website",
     "externalwebsite": "External Link",
     "alerttoexternalwebsite": "You are about to visit this website.",
-    "archive": "Archive of Past Updates",
+    "archive": "Read More News & Updates",
     "close": "Close",
     "partialtranslation": "This page is not fully translated into English. ",
     "helpustranslate": "Help us translate",
-    "backtohome": "Back to Home",
+    "back": "Back",
     "upcoming": "Upcoming",
-    "ended": "Ended"
+    "ended": "Ended",
+    "displayserif": "Serif Font",
+    "displaysansserif": "Sans-Serif Font",
+    "unavailable": "Temporarily Unavailable"
   },
   "top": {
     "message": "Language Setting: English"
   },
   "intro": {
-    "headline1": "An independently-organized TEDx community",
-    "headline2": "at the University of Tsukuba.",
+    "headline1": "An <span class='has-text-weight-bold'>independently</span>-organized TEDx community",
+    "headline2": "at the <span class='has-text-weight-bold'>University of Tsukuba</span>.",
     "description": "Managed by passionate volunteers both in and around the campus, TEDxUTsukuba has shed light on relevant topics - from liberal arts to science, local stories to global issues.",
     "button": "Discover"
+  },
+  "voice": {
+    "title": "From our Audiences"
   },
   "covid19-info": {
     "title": "Our Response to COVID-19",
@@ -84,38 +95,10 @@
     "download": "Add to calendar"
   },
   "news": {
-    "title": "News"
-  },
-  "notice": {
-    "archive": {
-      "title": "Archive",
-      "subtitle": ""
-    },
-    "left-top": {
-      "title": "To everyone who participated in TEDxUTsukuba before 2018",
-      "description": "Notice on unauthorized access to Peatix",
-      "detail": "",
-      "link": "/notice/2020/11/22"
-    },
-    "left-bottom": {
-      "title": "Thank you for joining our annual event!",
-      "description": "TEDxUTsukuba 2020 \"JIJIMUGE\" was a great success.",
-      "detail": "Watch the archive on YouTube.",
-      "link": "/events/2020"
-    },
-    "right-top": {
-      "title": "Our talk earned 10,000 views",
-      "description": "Watch Reiji Yamada's talk on YouTube",
-      "detail": "Reiji Yamada's talk has reached over 10,000 views on YouTube. (English captions unavailable)",
-      "link": "https://www.youtube.com/watch?v=qvOi1C8qCDM"
-    },
-    "right-bottom": {
-      "title": "Join our team!",
-      "description": "This is where the magic happens. ",
-      "detail": "Contact us for more information!",
-      "link": "https://www.tedxutsukuba.com/about/utsukuba"
-    },
-    "last-modified": "Last Modified: "
+    "title": "News & Updates",
+    "subtitle": "Get the latest news and updates from TEDxUTsukuba.",
+    "firstPublishedAt": "Published on",
+    "updatedAt": "Updated on"
   },
   "social": {
     "title": "Be a Part of Us",
@@ -123,7 +106,7 @@
   },
   "rcm": {
     "left": {
-      "title": "Spotlight your businness like never before.",
+      "title": "Spotlight your business like never before.",
       "description": "Apply for a partner"
     },
     "center": {
@@ -135,9 +118,20 @@
       "description": "Apply for a speaker"
     }
   },
+  "blog": {
+    "subtitle": "Hear the thoughts and ideas from our members.",
+    "thanks": "Thank you for reading this article to the end.",
+    "disclaimer": "The opinions expressed in this article are those of the authors and do not necessarily reflect the views of TEDxUTsukuba. ",
+    "writtenby": "Written by "
+  },
   "about": {
     "location": {
       "address": "1-1-1 Tennodai, Tsukuba, Ibaraki, Japan, 305-8577"
+    },
+    "university": {
+      "title": "University of<br>Tsukuba",
+      "subtitle": "",
+      "description": "<span class='em'>University of Tsukuba</span> is one of the top research-intensive universities and the oldest higher educations in Japan. The history dates back to <span class='em'>the Normal School</span>, founded in 1872 and chartered in 1886. With the campus relocation in 1973, Tsukuba has transformed itself into an <span class='em'>interdisciplinary</span>, <span class='em'>transborder</span> and <span class='em'>open</span> university for all. Today, Tsukuba is known as a home for students, a hub for researchers, a field for athletes, and an incubator for entrepreneurs. "
     },
     "utsukuba": {
       "title": "TEDxUTsukuba",
@@ -146,7 +140,7 @@
         "1": "About TEDx, x = independently organized event. In the spirit of ideas worth spreading, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark deep discussion and connection. These local, self-organized events are branded TEDx, where x = independently organized TED event. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized. (Subject to certain rules and regulations.)",
         "2": "About TED. TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 30 years ago, TED has grown to support its mission with multiple initiatives. The two annual TED Conferences invite the world's leading thinkers and doers to speak for 18 minutes or less. Many of these talks are then made available, free, at TED.com. TED speakers have included Bill Gates, Jane Goodall, Elizabeth Gilbert, Sir Richard Branson, Nandan Nilekani, Philippe Starck, Ngozi Okonjo-Iweala, Sal Khan and Daniel Kahneman.",
         "3": "<span class='em'>TEDxUTsukuba</span>は2016年に設立されたTEDxコミュニティ。筑波大学の一般学生団体であり、<span class='em'>学生や卒業生</span>を中心として運営されています。これまでに<span class='em'>4回のメインカンファレンス</span>を含む数々のTEDxイベントを開催しており、登壇者には筑波大学の教員や学生、卒業生を中心に、多彩なアイディアを持つ方々をお招きしています。2020年のイベントテーマは<span class='em'>\"JIJIMUGE\"</span>。<span class='em'>複雑な世界を複雑なまま捉える</span>精神を表します。このテーマのように、個性豊かなメンバーそれぞれの良さを活かし、今日も私たちは、価値あるアイディアを発信していきます。通称「陸の孤島」つくばを、世界と繋げる&mdash;。",
-        "4": "pread Globally, Connect Locally."
+        "5": "私たちは、<span class='em'>Social Capital</span>を団体の活動理念として掲げています。<span class='em'>Social Capital</span>とは、組織を構成する<span class='em'>一人一人のメンバー</span>が重要であり、互いの信頼が<span class='em'>組織の結束力</span>を高め、大きな目的を達成できるという考え方を意味するフレーズです。現代では、一つの分野による社会の発展には限界があり、<span class='em'>学際的領域の研究</span>や、<span class='em'>産学官の連携</span>による問題の解決が叫ばれています。他者の協力なしに解決できる問題は少なく、<span class='em'>結束力を築いた組織や集団の力</span>が必要ということです。筑波大学には、様々な学問を学ぶ学生が一つのキャンパスに集まり、3,000人を超える留学生と共に学んでいます。<span class='em'>「開かれた大学」</span>という開学の理念を堅持し、多様性に富んだコミュニティにおいて、私たちは<span class='em'>価値あるアイディア</span>を通して人と人との新しいつながりを生む架け橋となることを目指しています。"
       },
       "members": {
         "title": "Members",
@@ -155,6 +149,7 @@
         "period": "Joined",
         "college": "College",
         "favouritetedtalk": "My favourite TED talk",
+        "message": "Message",
         "keywords": "3 words that describe myself"
       },
       "team": {
@@ -166,9 +161,9 @@
         "subtitle": "Step forward to where the magic happens. Contact us!"
       },
       "contactus": {
-        "title": "Contact us",
-        "subtitle": "Send us an email or a direct message. ",
-        "description": ""
+        "title": "Contact us!",
+        "subtitle": "Available in English and Japanese.",
+        "description": "Send us an email or a message via Twitter, Facebook or Instagram."
       }
     }, 
     "tedandtedx": {
@@ -193,6 +188,11 @@
       "event": "TEDxKyoto",
       "speaker": "Takaharu Tezuka",
       "watchmoretedx": "Explore more TEDx Talks"
+    },
+    "membership": {
+      "title": "Membership",
+      "quote": "By becoming a TED Member, you’ll be on the frontier of a brighter future, helping us build a community united by the power of knowledge.",
+      "description": "<span class='has-text-weight-bold'>TED Membership</span><span class='has-text-grey-lighter'> has new features of TED as a way to connect more deeply with our most dedicated fans. You'll get access to exclusive monthly members-only events, including special conversations with some of the most brilliant TED speakers.</span>"
     }
   },
   "partners": {
@@ -241,7 +241,7 @@
       }
     },  
     "concept": {
-      "title": "Concept", 
+      "title": "Theme", 
       "description": "Our event concept is \"JIJIMUGE\", which is derived from a Buddhism term.",
       "headline": "JIJIMUGE",
       "statement1": "今、世の中にある様々な境界線が溶けつつあります。",
@@ -256,7 +256,7 @@
         "title": "Talk Session",
         "time": "13:00 - 15:10",
         "youtube": "YouTube Live",
-        "intro": "Watch our livestream",
+        "intro": "Watch our livestream on YouTube Live!",
         "charge": "Free of charge",
         "reservation": "No reservation"
       },
@@ -270,14 +270,15 @@
         "airmeet": "Powered by our partner"
       },
       "pass": {
-        "title": "Members Only",
-        "inputpassword": "Type password to enter: "
+        "title": "TEDxUTsukubaHub",
+        "inputpassword": "Type password to enter.",
+        "success": "Log in successfully."
       }
     },
     "venue": {
       "title": "Broadcasting Site",
       "headline": "University of Tsukuba, Empowerment Studio",
-      "description": "Due to the ongoing pandemic crisis, we delivered our annual conference in a virtual setting. Talks were pre-recorded and broadcasted alongside the interactive session at the Empowerment Studio, the world class facility for virtual reality research & development, constructed in 2015. ",
+      "description": "Due to the ongoing health crisis, we delivered our annual conference in a virtual setting. Talks were pre-recorded and broadcasted alongside the interactive session at the Empowerment Studio, the world class facility for virtual reality research & development, constructed in 2015. We deeply appreciate everyone who worked together with us to make this happen. ",
       "access": "From bus stop 6 at the Tsukuba Center, take the bus bound for \"Tsukuba Daigaku Chuo\" or \"the University Loop-line On-campus Bus\" [Tsukuba Daigaku Junkan Bus] (clockwise) to \"Dai-San Area Mae\"."
     }
   },
@@ -318,7 +319,7 @@
       }
     },
     "concept": {
-      "title": "Concept",
+      "title": "Theme",
       "description": "Our event concept is \"CoPhilAction\"",
       "headline": "CoPhilAction"
     },
@@ -330,7 +331,7 @@
       },
       "perf1": {
         "title": "Performace",
-        "description": "筑波大生・桐書藝団の皆さまによる圧巻の書道パフォーマンス。イベントのコンセプト\"CoPhilAction\"を解釈した素敵なメッセージを綴っていただきました。"
+        "description": "筑波大生・桐書藝団の皆さまによる圧巻の書道パフォーマンス。イベントのテーマ\"CoPhilAction\"を解釈した素敵なメッセージを綴っていただきました。"
       },
       "talk1": {
         "title": "Talk Session",
@@ -361,10 +362,15 @@
     }
   },
   "events": {
-    "title": "Our Events",
-    "subtitle": "Filled with curiocity and excitement, you will discover new ideas, opportunities & so much more!",
-    "upcoming": "Upcoming Events",
-    "main": "Annual Main Event",
-    "other": "Events"
+    "title": "Event Listing",
+    "subtitle": "Explore our upcoming events that bring people together to listen, learn and talk.",
+    "upcoming": "Upcoming",
+    "ended": "Ended",
+    "othertedx": {
+      "title": "TEDx events worldwide",
+      "copy": "It happens anytime, anywhere. ",
+      "quote": "Attending TEDx events brings you opportunities to uncover new ideas and the latest research in your local areas that spark conversations in your communities.",
+      "description": "<span class='has-text-weight-bold has-text-white'>TEDx events</span><span class='has-text-grey-lighter'> are happening in more than 170 countries (including virtual events) every day. Attend a TEDx event near you featuring live speakers and TED Talk videos, sparking conversation and connections.</span>"
+    }
   }
 }

@@ -2,7 +2,7 @@ User-Agent: *
 Allow: /
 
 User-agent: twitterbot
-Allow: /private/, /about/utsukuba/index.html
+Allow: /private/, /draft/
 
 user-agent: Googlebot-Image
 Disallow: /about/utsukuba/index.html

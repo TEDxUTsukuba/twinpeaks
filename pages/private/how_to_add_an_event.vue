@@ -1,4 +1,5 @@
 <template>
+  <div class="has-background-white has-text-dark">
   <section class="section content">
     <div class="has-text-centered" style="margin-top: 5rem;">
       <h1 class="title is-1">
@@ -8,7 +9,7 @@
         How to add an event
       </h1>
       <p>
-        <nuxt-link to="/events/">イベント一覧ページ</nuxt-link>に個別のイベントページを追加するための簡単なステップを説明します。
+        <nuxt-link to="/events/" class="has-text-info">イベント一覧ページ</nuxt-link>に個別のイベントページを追加するための簡単なステップを説明します。
       </p>
     </div>
     <hr v-if="$ua.isFromSmartphone()">
@@ -23,7 +24,7 @@
     </h1>
     <div class="notification">
       <h1 class="is-size-5">Open Google Sheets</h1>
-      <a class="has-text-link" href="https://docs.google.com/spreadsheets/d/15Qy3GIbFdEIJk3A-X8Zb0EIz9pixsLY9piTXzCVlhdc/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Website Event Info GAS</a>
+      <a href="https://docs.google.com/spreadsheets/d/15Qy3GIbFdEIJk3A-X8Zb0EIz9pixsLY9piTXzCVlhdc/edit?usp=sharing" target="_blank" rel="noopener noreferrer">TEDxUTsukuba Events Public Data <i class="mdi mdi-open-in-new" /></a>
       <p>
         下記のいずれかのGoogleアカウントで、このGoogleスプレッドシートにアクセスしてください。
       </p>
@@ -107,7 +108,7 @@
           </tr>    
           <tr>
             <td>&lt;a href="https://www.tedxutsukuba.com"&gt;type here&lt;a&gt;</td>
-            <td><a href="https://www.tedxutsukuba.com" class="has-text-link">type here</a></td>
+            <td><a href="https://www.tedxutsukuba.com">type here</a></td>
             <td>リンク</td>
           </tr>
           <tr>
@@ -206,6 +207,7 @@
       </ul>
     </p>
   </section>
+  </div>
 </template>
 
 <script>

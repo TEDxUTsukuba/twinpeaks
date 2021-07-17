@@ -18,24 +18,6 @@
         "url": "https://www.ted.com/participate/organize-a-local-tedx-event/tedx-organizer-guide",
         "filetype": "website"
     },
-    "virtual": {
-        "title": "Virtual Gatherings Guideline",
-        "desc": "オンラインイベントの開催のためのガイドライン。",
-        "url": "https://www.ted.com/participate/organize-a-local-tedx-event/tedx-organizer-guide/audience-experience/virtual-event-experience",
-        "filetype": "website"
-      },
-    "remote-production": {
-        "title": "Remote Production Guide",
-        "desc": "リモートでイベントづくり（主にトーク動画の制作）を行うためのガイダンス。",
-        "url": "https://www.ted.com/participate/organize-a-local-tedx-event/tedx-organizer-guide/video-photography/video/remote-production-guide",
-        "filetype": "website"
-      },
-    "production": {
-        "title": "Production Guide",
-        "desc": "ステージのセッティング、照明、録画、録音、編集などに関するガイドライン。",
-        "url": "https://storage.ted.com/tedx/manuals/TEDxSHOOTINGGUIDELINES.pdf",
-        "filetype": "pdf"
-    },
     "uni": {
         "title": "University Event",
         "desc": "University ライセンスの概要",
@@ -49,7 +31,33 @@
         "filetype": "website"
     }
   },
-  "portal": {
+  "production": {
+    "for-speaker": {
+      "title": "TEDx Speaker Guide",
+      "desc": "Illustrated guide for TEDx speaker candidates.",
+      "url": "https://storage.ted.com/tedx/manuals/IllustratedTEDxSpeakerGuide.pdf",
+      "filetype": "pdf"
+    },
+    "virtual": {
+      "title": "Virtual Gatherings Guideline",
+      "desc": "オンラインイベントの開催のためのガイドライン。",
+      "url": "https://www.ted.com/participate/organize-a-local-tedx-event/tedx-organizer-guide/audience-experience/virtual-event-experience",
+      "filetype": "website"
+    },
+    "remote-production": {
+      "title": "Remote Production Guide",
+      "desc": "リモートでイベントづくり（主にトーク動画の制作）を行うためのガイダンス。",
+      "url": "https://www.ted.com/participate/organize-a-local-tedx-event/tedx-organizer-guide/video-photography/video/remote-production-guide",
+      "filetype": "website"
+    },
+    "production": {
+      "title": "Production Guide",
+      "desc": "ステージのセッティング、照明、録画、録音、編集などに関するガイドライン。",
+      "url": "https://storage.ted.com/tedx/manuals/TEDxSHOOTINGGUIDELINES.pdf",
+      "filetype": "pdf"
+    }
+  },
+  "license": {
     "license-portal": {
         "title": "TEDx Licenses",
         "desc": "ライセンスホルダーはライセンスの有効期限を確認できる。ライセンスの更新(引き継ぎ)もここから申請する。",
@@ -60,12 +68,18 @@
         "title": "Event Manager",
         "desc": "イベントページを編集したりするポータル。イベントのオーガナイジングチームに登録されている人はTEDアカウントでログインできる。イベントページはアーカイブのためにもきちんと情報を掲載しておこう。",
         "url": "https://organize.ted.com/",
-        "filetype": "website"
+        "filetype": "console"
     },
     "media-uploader": {
         "title": "Media Uploader",
         "desc": "このページからトーク動画をTEDに提出する。下書きは保存できるが、一度提出すると変更できないため注意。どうしても変更が必要であれば、該当の動画を削除して再度アップロードする。再生回数などはリセットされてしまうので注意。",
         "url": "https://upload.ted.com/",
+        "filetype": "console"
+    },
+    "transfer": {
+        "title": "ライセンスの引き継ぎについて",
+        "desc": "Universityライセンスは在学生しか申請できないため、代替わりのタイミングでライセンスを「引き継ぐ」必要がある。なお、厳密には「引き継ぐ」のではなく、現在のライセンスを一度失効させて、新たに他の人が申請するという形を取っている。",
+        "url": "https://help.ted.com/hc/en-us/articles/360039157513-I-no-longer-wish-to-organize-an-event-can-I-transfer-my-license-to-someone-else-",
         "filetype": "website"
     }
   },
@@ -80,25 +94,25 @@
         "title": "TEDxHub",
         "desc": "TEDxのオーガナイザーやTEDの担当者の情報共有プラットフォーム。日本の人はあまりいない？",
         "url": "https://tedxhub.ted.com/",
-        "filetype": "website"
+        "filetype": "community"
     },
     "fbgroup-all": {
         "title": "TEDx-ers Japan All",
         "desc": "プライベートグループ",
         "url": "https://www.facebook.com/groups/369403516423425/",
-        "filetype": "website"
+        "filetype": "community"
     },
     "fbgroup-u": {
       "title": "TEDxUTsukuba運営グループ",
       "desc": "Invite-Only",
       "url": "https://www.facebook.com/groups/133750330098849",
-      "filetype": "website"
+      "filetype": "community"
     },
     "fbgroup-x": {
       "title": "TEDxTsukuba運営グループ",
       "desc": "Invite-Only",
       "url": "https://www.facebook.com/groups/1725198087755340",
-      "filetype": "website"
+      "filetype": "community"
     }
   },
   "assets": {
@@ -124,25 +138,19 @@
         "title": "筑波大学広報関連ガイド",
         "desc": "令和元年12月に改訂されて、ロゴなどを使用する際は申請が必要になったらしい。URLは学内アクセス専用。",
         "url": "https://ksp.sec.tsukuba.ac.jp/wp/?page_id=135945#utlogo",
-        "filetype": "url"
+        "filetype": "website"
     },
     "ut-logo-doc": {
         "title": "筑波大学校章・ブランドスローガン視覚表現マニュアル",
         "desc": "",
         "url": "https://drive.google.com/file/d/1W_v7irfRa76PXJvh_NbcsEBHbN_nKvMC/view?usp=sharing",
         "filetype": "pdf"
-    },
-    "for-speaker": {
-      "title": "TEDx Speaker Guide",
-      "desc": "Illustrated guide for TEDx speaker candidates.",
-      "url": "https://storage.ted.com/tedx/manuals/IllustratedTEDxSpeakerGuide.pdf",
-      "filetype": "pdf"
     }
   },
   "tools": {
     "marketplace": {
       "title": "Sponsor Marketplace",
-      "desc": "TEDxオーガナイーザーを対象としたディスカウントを提供しているスポンサーの一覧。SlidoとかShutterstockあたりが有名どころかも。",
+      "desc": "TEDxオーガナイザーを対象としたディスカウントを提供しているスポンサーの一覧。SlidoとかShutterstockあたりが有名どころかも。",
       "url": "https://www.ted.com/participate/organize-a-local-tedx-event/community-resources/tools-how-to-s/sponsor-marketplace",
       "filetype": "website"
     }

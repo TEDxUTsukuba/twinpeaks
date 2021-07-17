@@ -14,6 +14,9 @@
     "talks": {
       "item": "トーク"
     },
+    "blog": {
+      "item": "ブログ"
+    },
     "partners": {
       "item": "パートナー"
     },
@@ -27,25 +30,31 @@
     "discover": "詳しく知る",
     "readmore": "続きを読む",
     "readless": "閉じる",
+    "seeothers": "他の{0}を見る",
+    "seeall": "一覧を見る",
     "visitwebsite": "ウェブサイト",
     "externalwebsite": "外部リンク",
     "alerttoexternalwebsite": "下記URLのウェブサイトにアクセスします。",
-    "archive": "アーカイブを見る",
+    "archive": "お知らせの一覧を見る",
     "close": "閉じる",
     "partialtranslation": "このページの翻訳はまだ完了していません",
     "helpustranslate": "Help us translate",
-    "backtohome": "トップページに戻る",
-    "upcoming": "近日開催",
-    "ended": "開催終了"
+    "back": "戻る",
+    "displayserif": "明朝体で表示",
+    "displaysansserif": "ゴシック体で表示",
+    "unavailable": "公開停止中"
   },
   "top": {
     "message": "言語設定: 日本語"
   },
   "intro": {
     "headline1": "価値あるアイディアを、",
-    "headline2": "つくばから。",
+    "headline2": "<strong>つくば</strong>から。",
     "description": "TEDxUTsukubaは、TEDよりライセンスを受け、筑波大学の学生や卒業生などによって独自に運営されています。教養から科学、地域の話題から世界規模の問題に至るまで、様々なトピックスに焦点を当ててきました。",
     "button": "詳しく知る"
+  },
+  "voice": {
+    "title": "参加者の声"
   },
   "covid19-info": {
     "title": "新型コロナウイルスへの対応",
@@ -84,38 +93,10 @@
     "download": "カレンダーに追加"
   },
   "news": {
-    "title": "最新情報"
-  },
-  "notice": {
-    "archive": {
-      "title": "過去のお知らせ",
-      "subtitle": ""
-    },
-    "left-top": {
-      "title": "2018年以前のTEDxUTsukubaにご参加くださった皆さまへ",
-      "description": "Peatixへの不正アクセス事象に関するご確認をお願いいたします。",
-      "detail": "",
-      "link": "/notice/2020/11/22"
-    },
-    "left-bottom": {
-      "title": "オンラインイベントにご参加いただきありがとうございました。",
-      "description": "TEDxUTsukuba \"JIJIMUGE\" は盛況のうちに終了いたしました。",
-      "detail": "YouTubeにてイベントのアーカイブを公開しています。",
-      "link": "/events/2020"
-    },
-    "right-top": {
-      "title": "「天才になる呪い」が再生回数1万回を突破しました。",
-      "description": "山田玲司さんのトークのYouTubeの再生回数が1万回を超えました。",
-      "detail": "TEDxUTsukuba 2019 \"CoPhilAction\" にご登壇いただいた山田玲司さんのトークが、YouTubeにて再生回数1万回を突破しました。この機会に是非ご視聴ください。",
-      "link": "https://www.youtube.com/watch?v=qvOi1C8qCDM"
-    },
-    "right-bottom": {
-      "title": "新しいメンバーを募集しています。",
-      "description": "誰でもクリエイティブになれる場所、それがTEDxUTsukuba",
-      "detail": "自分の手でイベントを企画・運営してみませんか。まずはお気軽にご連絡ください。",
-      "link": "https://www.tedxutsukuba.com/about/utsukuba"
-    },
-    "last-modified": "最終更新: "
+    "title": "お知らせ",
+    "subtitle": "イベント情報をはじめ、大事な情報をお届けします。",
+    "firstPublishedAt": "公開",
+    "updatedAt": "最終更新"
   },
   "social": {
     "title": "公式SNS",
@@ -135,9 +116,20 @@
       "description": "スピーカーについて"
     }
   },
+  "blog": {
+    "subtitle": "TEDxUTsukubaのメンバーの考えやアイデアを発信しています。",
+    "thanks": "最後までお読みいただきありがとうございました。",
+    "disclaimer": "投稿内容は寄稿者個人の見解であり、TEDxUTsukubaを代表するものとは限りません。",
+    "writtenby": "寄稿: "
+  },
   "about": {
     "location": {
       "address": "〒305-8577 茨城県つくば市天王台1-1-1"
+    },
+    "university": {
+      "title": "筑波大学",
+      "subtitle": "",
+      "description": "<span class='em'>筑波大学</span>は、日本有数の研究型総合大学であり、最も長い歴史を有する高等教育機関の1つです。その歴史は1872年に創立された<span class='em'>師範学校</span>に遡ります。1973年に筑波研究学園都市へ移転するにあたり、<span class='em'>様々な学問領域を横断し、国境を越え、開かれた大学</span>へと変貌を遂げました。今日では、学生や研究者、アスリート、起業家を抱える一大拠点としてその地位を確立しています。"
     },
     "utsukuba": {
       "title": "TEDxUTsukuba",
@@ -146,16 +138,16 @@
         "1": "TEDとはideas worth spreading (価値あるアイデアを広める）の理念のもと、さまざまなスピーカーを呼びトークイベントを開催する団体です。そのトーク内容は科学、技術、経済、歴史、最新の社会問題など多岐に渡ります。",
         "2": "TEDxは、TEDからライセンスを受けて活動している、地域や大学に根付いたコミュニティです。 TEDxUTsukubaもこのうちの一つで、ここつくばの地で日々活動しています。",
         "3": "<span class='em'>TEDxUTsukuba</span>は2016年に設立されたTEDxコミュニティ。筑波大学の一般学生団体であり、<span class='em'>学生や卒業生</span>を中心として運営されています。これまでに<span class='em'>4回のメインカンファレンス</span>を含む数々のTEDxイベントを開催しており、登壇者には筑波大学の教員や学生、卒業生を中心に、多彩なアイディアを持つ方々をお招きしています。2020年のイベントテーマは<span class='em'>\"JIJIMUGE\"</span>。<span class='em'>複雑な世界を複雑なまま捉える</span>精神を表します。このテーマのように、個性豊かなメンバーそれぞれの良さを活かし、今日も私たちは、価値あるアイディアを発信していきます。通称「陸の孤島」つくばを、世界と繋げる&mdash;。",
-        "4": "Spread Globally, Connect Locally.",
-        "5": "<span class='em'>Social Capital</span>とは、組織を構成する<span class='em'>一人一人のメンバー</span>が重要であり、互いの信頼が<span class='em'>組織の結束力</span>を高め、大きな目的を達成できるという考え方を意味するフレーズです。<br><br>現代では、一つの分野による社会の発展には限界があり、<span class='em'>学際的領域の研究</span>や、<span class='em'>産学官の連携</span>による問題の解決が叫ばれています。他者の協力なしに解決できる問題は少なく、<span class='em'>結束力を築いた組織や集団の力</span>が必要ということです。私たちは、<span class='em'>Social Capital</span>を理念として掲げています。筑波大学には、様々な学問を学ぶ学生が一つのキャンパスに集まり、3,000人を超える留学生と共に学んでいます。<span class='em'>「開かれた大学」</span>という開学の理念を堅持し、多様性に富んだコミュニティにおいて、私たちは<span class='em'>価値あるアイディア</span>を通して人と人との新しいつながりを生む架け橋となることを目指しています。"
+        "5": "私たちは、<span class='em'>Social Capital</span>を団体の活動理念として掲げています。<span class='em'>Social Capital</span>とは、組織を構成する<span class='em'>一人一人のメンバー</span>が重要であり、互いの信頼が<span class='em'>組織の結束力</span>を高め、大きな目的を達成できるという考え方を意味するフレーズです。現代では、一つの分野による社会の発展には限界があり、<span class='em'>学際的領域の研究</span>や、<span class='em'>産学官の連携</span>による問題の解決が叫ばれています。他者の協力なしに解決できる問題は少なく、<span class='em'>結束力を築いた組織や集団の力</span>が必要ということです。筑波大学には、様々な学問を学ぶ学生が一つのキャンパスに集まり、3,000人を超える留学生と共に学んでいます。<span class='em'>「開かれた大学」</span>という開学の理念を堅持し、多様性に富んだコミュニティにおいて、私たちは<span class='em'>価値あるアイディア</span>を通して人と人との新しいつながりを生む架け橋となることを目指しています。"
       },
       "members": {
         "title": "メンバー",
-        "subtitle": "イベントの企画と運営を支えている、個性溢れるメンバー(一部)をご紹介いたします。",
+        "subtitle": "イベントの企画と運営を支えている、個性溢れるメンバーの一部をご紹介いたします。",
         "from": "出身",
         "period": "在籍期間",
         "college": "所属",
         "favouritetedtalk": "お気に入りのTEDトーク",
+        "message": "メッセージ",
         "keywords": "自分を表す3つのキーワード"
       },
       "team": {
@@ -168,8 +160,8 @@
       },
       "contactus": {
         "title": "お気軽にお問い合わせください！",
-        "subtitle": "お問い合わせは、メールまたはTwitterのダイレクトメッセージにて承ります。",
-        "description": ""
+        "subtitle": "日本語または英語で対応可能です。",
+        "description": "メールまたはTwitter, Facebook, Instagramのダイレクトメッセージでお気軽にお問い合わせください。"
       }
     },
     "tedandtedx": {
@@ -194,6 +186,11 @@
       "event": "TEDxKyoto",
       "speaker": "手塚貴春",
       "watchmoretedx": "他のTEDxトークを探す"
+    },
+    "membership": {
+      "title": "TED メンバーシップ",
+      "quote": "TEDメンバーになると、明るい未来への第一歩を踏み出すことができ、「知」の力で結ばれたコミュニティの構築に貢献することができます。",
+      "description": "<span class='has-text-weight-bold'>TEDメンバーシップ</span><span class='has-text-grey-lighter'>では、TEDのコミュニティにより深く関わることができます。TEDのスピーカーと交流する機会や会員限定の特別なイベントを楽しむことができます。</span>"
     }
   },
   "partners": {
@@ -242,8 +239,8 @@
       }
     },
     "concept": {
-      "title": "コンセプト",
-      "description": "イベントのコンセプトは、仏教用語に由来する\"JIJIMUGE\" です。",
+      "title": "テーマ",
+      "description": "イベントのテーマは、仏教用語に由来する\"JIJIMUGE\" です。",
       "headline": "JIJIMUGE",
       "statement1": "今、世の中にある様々な境界線が溶けつつあります。",
       "statement2": "今、世の中にある様々な境界線が溶けつつあります。",
@@ -271,14 +268,15 @@
         "airmeet": "による技術協賛を頂いています。"
       },
       "pass": {
-        "title": "メンバー限定コンテンツ",
-        "inputpassword": "パスワードを入力"
+        "title": "TEDxUTsukubaHub",
+        "inputpassword": "パスワードを入力",
+        "success": "ログイン成功"
       }
     },
     "venue": {
       "title": "配信会場",
       "headline": "筑波大学 エンパワースタジオ",
-      "description": "今年は新型コロナウイルスの感染拡大に伴いヴァーチャル形式での開催となりました。映像の事前収録、および配信の拠点として、本学構内に2015年に完成した世界最大規模のVRシステムを有する実験施設「エンパワースタジオ」を利用しました。",
+      "description": "新型コロナウイルスの感染拡大に伴い、TEDxUTsukuba 2020はヴァーチャル形式での開催となりました。映像の事前収録、および配信の拠点として、本学構内に2015年に完成した世界最大規模のVRシステムを有する実験施設「エンパワースタジオ」を利用しました。施設利用にあたりご協力いただいた関係者の皆さまに、この場を借りて感謝申し上げます。",
       "access": "つくば駅で下車。つくばセンター6番乗り場から「筑波大学循環（右回り・左回り）」または「筑波大学中央」行バスを利用。「第3エリア前」で下車。"
     }
   },
@@ -319,8 +317,8 @@
       }
     },
     "concept": {
-      "title": "コンセプト",
-      "description": "イベントのコンセプトは、\"CoPhilAction\" です。",
+      "title": "テーマ",
+      "description": "イベントのテーマは、\"CoPhilAction\" です。",
       "headline": "CoPhilAction",
       "statement1": "今、世の中にある様々な境界線が溶けつつあります。",
       "statement2": "今、世の中にある様々な境界線が溶けつつあります。",
@@ -334,7 +332,7 @@
       },
       "perf1": {
         "title": "パフォーマンス",
-        "description": "筑波大生・桐書藝団の皆さまによる圧巻の書道パフォーマンス。イベントのコンセプト\"CoPhilAction\"を解釈した素敵なメッセージを綴っていただきました。"
+        "description": "筑波大生・桐書藝団の皆さまによる圧巻の書道パフォーマンス。イベントのテーマ\"CoPhilAction\"を解釈した素敵なメッセージを綴っていただきました。"
       },
       "talk1": {
         "title": "トークセッション 第一部",
@@ -365,10 +363,16 @@
     }
   },
   "events": {
-    "title": "イベント情報",
+    "title": "イベント一覧",
     "subtitle": "TEDxUTsukubaが開催するイベントをご紹介いたします。",
-    "upcoming": "今後開催されるイベント",
-    "main": "メインイベント",
-    "other": "イベント"
+    "upcomingevents": "今後開催されるイベント",
+    "upcoming": "近日開催",
+    "ended": "開催終了",
+    "othertedx": {
+      "title": "TEDxイベント",
+      "copy": "世界170か国に広がるTEDxイベント",
+      "quote": "TEDxイベントに参加することで、新しいアイデアや最新の研究を発見し、さまざまな人々との対話をはじめる機会を得ることができます。",
+      "description": "<span class='has-text-weight-bold'>TEDxイベント</span><span class='has-text-grey-lighter'>は世界各国で開催されており、日本国内では東京・京都・神戸などの諸都市や大学にて開催されています。お近くのTEDxイベント、またはオンラインのイベントにぜひ参加してみてください。</span>"
+    }
   }
 }
