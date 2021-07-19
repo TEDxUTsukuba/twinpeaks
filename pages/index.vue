@@ -1,6 +1,6 @@
 <template>
   <div>
-  <section id="wrapper-gradient" style="margin: 0; padding: 0;">
+  <section id="wrapper-dark" class="has-background-primary" style="margin: 0; padding: 0;">
     <section style="padding-top: 8vh; padding-bottom: 2vh;">
       <AnimatedScenery />
     </section>
