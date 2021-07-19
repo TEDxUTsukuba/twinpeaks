@@ -119,7 +119,7 @@
       <h1 class="title is-2 has-text-centered has-text-grey-light mt-2 mb-0">
         {{ $t('voice.title') }}
       </h1>
-      <b-carousel :pause-info="false" :indicator-inside="false" :arrow="false" :indicator="true" animated="fade" interval=5000>
+      <b-carousel :pause-info="false" :indicator-inside="false" :arrow="false" :indicator="true" animated="fade" :interval=5000>
         <b-carousel-item v-for="(feedback, i) in feedbacks" :key="i">
           <div class="has-text-centered p-4">
             <p class="has-text-left"><i class="mdi mdi-format-quote-open is-size-1 has-text-grey-light" /></p>
