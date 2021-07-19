@@ -69,11 +69,11 @@
 
     <!-- Members -->
 
-    <section class="hero" style="background-color: #dbdee5;">
+    <section class="hero has-background-gradient">
       <section class="section" id="members">
         <div class="container has-text-right has-text-centered-mobile">
           <h1 class="title is-0 is-spaced">{{ $t('about.utsukuba.members.title')}}</h1>
-          <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.utsukuba.members.subtitle')}}</h1>
+          <h1 class="subtitle is-5 has-text-white">{{ $t('about.utsukuba.members.subtitle')}}</h1>
         </div>
       </section>
       <section class="section-wide">
@@ -84,7 +84,7 @@
             v-for="(member, index) in memberList" :key="index"
             style="display: inline-block; vertical-align: top;"
           >
-            <div class="nmp-light">
+            <div class="nmp-dark">
               <header class="card-header" v-if="member.showImageOnTop && !$ua.isFromSmartphone()">
                 <p class="card-header-title">
                 </p>
@@ -104,18 +104,18 @@
                   </div>
                   <div class="media-content">
                     <span v-if="$i18n.locale == 'en'">
-                      <h1 class="title is-4 has-text-dark">
+                      <h1 class="title is-4">
                         {{ member.given_name_en }} {{ member.family_name_en}}
                       </h1>
-                      <p class="subtitle is-6 is-size-7-touch has-text-grey">
+                      <p class="subtitle is-6 is-size-7-touch has-text-grey-light">
                         {{ member.role }}
                       </p>
                     </span>
                     <span v-if="$i18n.locale == 'ja'">
-                      <h1 class="title is-4 has-text-dark">
+                      <h1 class="title is-4">
                         {{ member.family_name_ja }} {{ member.given_name_ja }}
                       </h1>
-                      <p class="subtitle is-size-6 is-size-7-touch has-text-grey">
+                      <p class="subtitle is-size-6 is-size-7-touch has-text-grey-light">
                         {{ member.role }}
                       </p>
                     </span>
@@ -125,25 +125,25 @@
                 <div class="text">
                   <p class="midashi is-size-7 has-text-weight-bold has-text-primary">
                     {{ $t('about.utsukuba.members.from') }}
-                    <span class="is-size-7 has-text-weight-normal has-text-grey-dark" v-if="$i18n.locale == 'en'">{{ member.home_state_en }}</span>
-                    <span class="is-size-7 has-text-weight-normal has-text-grey-dark" v-if="$i18n.locale == 'ja'">{{ member.home_state_ja }}</span>
+                    <span class="is-size-7 has-text-weight-normal has-text-grey-light" v-if="$i18n.locale == 'en'">{{ member.home_state_en }}</span>
+                    <span class="is-size-7 has-text-weight-normal has-text-grey-light" v-if="$i18n.locale == 'ja'">{{ member.home_state_ja }}</span>
                   </p>
 
                   <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.college_ja">
                     {{ $t('about.utsukuba.members.college') }}
-                    <span class="is-size-7 has-text-weight-normal has-text-grey-dark" v-if="$i18n.locale == 'en'">{{ member.college_en }}</span>
-                    <span class="is-size-7 has-text-weight-normal has-text-grey-dark" v-if="$i18n.locale == 'ja'">{{ member.college_ja }}</span>
+                    <span class="is-size-7 has-text-weight-normal has-text-grey-light" v-if="$i18n.locale == 'en'">{{ member.college_en }}</span>
+                    <span class="is-size-7 has-text-weight-normal has-text-grey-light" v-if="$i18n.locale == 'ja'">{{ member.college_ja }}</span>
                   </p>
                   
                   <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.tedtalk_headline_en || member.tedtalk_headline_ja">
                     {{ $t('about.utsukuba.members.favouritetedtalk') }}
-                    <span class="has-text-grey-dark has-text-weight-normal is-size-7" v-if="member.tedtalk_headline_en && $i18n.locale == 'en'">{{ member.tedtalk_headline_en.length > 35 ? toUpperCamel(member.tedtalk_headline_en.substr(0, 35)) + '…' : toUpperCamel(member.tedtalk_headline_en) }}</span>
-                    <span class="has-text-grey-dark has-text-weight-normal is-size-7" v-if="member.tedtalk_headline_ja && $i18n.locale == 'ja'">{{  member.tedtalk_headline_ja.length > 20 ? member.tedtalk_headline_ja.substr(0, 20) + '…' : member.tedtalk_headline_ja }}</span>
+                    <span class="has-text-grey-light has-text-weight-normal is-size-7" v-if="member.tedtalk_headline_en && $i18n.locale == 'en'">{{ member.tedtalk_headline_en.length > 35 ? toUpperCamel(member.tedtalk_headline_en.substr(0, 35)) + '…' : toUpperCamel(member.tedtalk_headline_en) }}</span>
+                    <span class="has-text-grey-light has-text-weight-normal is-size-7" v-if="member.tedtalk_headline_ja && $i18n.locale == 'ja'">{{  member.tedtalk_headline_ja.length > 20 ? member.tedtalk_headline_ja.substr(0, 20) + '…' : member.tedtalk_headline_ja }}</span>
                   </p>
                 </div>
               </div>
               <footer class="card-footer">
-                <nuxt-link :to="localePath(`/about/${member.id}`)" class="card-footer-item is-size-7">{{ $t('button.readmore') }}</nuxt-link>
+                <nuxt-link :to="localePath(`/about/${member.id}`)" class="card-footer-item is-size-7 has-text-grey">{{ $t('button.readmore') }}</nuxt-link>
               </footer>
             </div>
           </div>
@@ -353,16 +353,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  h1.is-0 {
+  h1.is-0:not(.has-text-white) {
     color: #bcc5cd;
     background: -webkit-linear-gradient(27deg, #95afc7, #bd97c7);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(47deg, #95afc7, #bd97c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    &.has-text-white {
-      color: white;
-    }
   }
   p.midashi {
     margin-bottom: 0;

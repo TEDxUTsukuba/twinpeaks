@@ -407,9 +407,21 @@ section.has-background-dark {
   background-color: $dark-grey-900 !important;
 }
 
-section#wrapper-gradient {
+section.has-background-gradient {
   @extend section#wrapper-dark;
-  background-color: $red;
+  background-color: #525b6f;
+  opacity: 1;
+  background-image: linear-gradient(135deg, #414858 25%, transparent 25%), linear-gradient(225deg, #414858 25%, transparent 25%), linear-gradient(45deg, #414858 25%, transparent 25%), linear-gradient(315deg, #414858 25%, #313642 25%);
+  background-position: 2rem 0, 2rem 0, 0 0, 0 0;
+  background-size: 4rem 4rem;
+
+  @media screen and (min-width: 769px) {
+    background-position: 4rem 0, 4rem 0, 0 0, 0 0;
+    background-size: 8rem 8rem;
+  }
+
+  background-repeat: repeat;
+  // background-color: $red;
   // background: linear-gradient(319deg, #b31217, #dc2430);
   // background: linear-gradient(319deg, #fc5f7f 0%, #3e0aff 100%);
 }
@@ -426,24 +438,26 @@ section#wrapper-red {
 
 
 section.section {
+  padding: 3rem 1.5rem;
+
   @media screen and (max-width: 639px) {
     margin: 0vh 0vw !important;
-    padding: 1.5rem;
+    // padding: 1.5rem;
   }
 
   @media screen and (min-width: 640px) and (max-width: 1216px) {
     margin: 0vh 4vw;
-    padding: 4vh auto;
+    // padding: 4vh auto !important;
   }
 
   @media screen and (min-width: 1217px) and (max-width: 1409px) {
     margin: 0vh 8vw;
-    padding: 4vh auto;
+    // padding: 4vh auto !important;
   }
 
   @media screen and (min-width: 1410px) {
     margin: 0vh auto;
-    padding: 4vh auto;
+    // padding: 4vh auto !important;
     width: 1200px;
   }
 }
@@ -465,8 +479,8 @@ section.section-wide {
   }
 
   @media screen and (min-width: 1410px) {
-    margin: 0vh auto;
-    padding: 4vh auto;
+    margin: 0vh auto !important;
+    padding: 4vh auto !important;
     width: 1400px;
   }
 }
@@ -573,7 +587,7 @@ section.section-wide {
   @extend .nmp;
   background: $light-grey-300;
   // background: $light-gradation;
-  filter: drop-shadow(0px .25rem .75rem rgba(0, 0, 0, 0.6));
+  // filter: drop-shadow(0px .25rem .75rem rgba(0, 0, 0, 0.6));
   // box-shadow:  8px 8px 16px #cfcfd1,
   //              -8px -8px 16px #ffffff;
 }
