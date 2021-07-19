@@ -23,12 +23,12 @@
             {{ $t('button.discover') }}
           </button> -->
           <!-- <a :href="partner.url" class="button is-white is-outlined is-rounded is-small">{{ $t('button.visitwebsite') }}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a> -->
-          <nuxt-link
+          <!-- <nuxt-link
             :to="`/partners/${partner.id}`"
             class="button is-white is-small is-rounded mb-2"
           >
             {{ $t('button.discover') }}
-          </nuxt-link>
+          </nuxt-link> -->
           <b-button 
             @click="countGA(partner.url, partner.name)"
             :label="$t('button.visitwebsite')"
