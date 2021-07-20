@@ -23,8 +23,8 @@
               <p class="midashi has-text-weight-bold has-text-primary">
                 {{ $t('about.utsukuba.members.period') }}
               </p>
-              <p class="has-text-weight-normal has-text-light">{{ member.first_main_event }} <span v-if="member.last_main_event">- {{ member.last_main_event }}</span></p>
-              <p class="midashi has-text-weight-bold has-text-primary">
+              <p class="has-text-weight-normal has-text-light">{{ member.first_main_event }} -<span v-if="member.last_main_event"> {{ member.last_main_event }}</span></p>
+              <p class="midashi has-text-weight-bold has-text-primary" v-if="member.home_state_ja">
                 {{ $t('about.utsukuba.members.from') }}
               </p>
               <p class="has-text-weight-normal has-text-light" v-if="$i18n.locale == 'en'">{{ member.home_state_en }}</p>
@@ -82,9 +82,8 @@
               </figure>
             </div>
           </div>
-          <div class="divider" />
-          <div class="column is-12 has-text-centered">
-            <nuxt-link class="button is-medium is-rounded is-gradient" to="./utsukuba#members">{{ $t('button.seeothers', { 0: $t('about.utsukuba.members.title').toLowerCase() } ) }}</nuxt-link>
+          <div class="column is-12 has-text-centered mt-6">
+            <nuxt-link class="button is-medium is-rounded is-gradient" to="./utsukuba">{{ $t('button.back', { 0: $t('about.utsukuba.members.title').toLowerCase() } ) }}</nuxt-link>
           </div>
         </div>
         <div v-else>
