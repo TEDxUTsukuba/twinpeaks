@@ -90,7 +90,7 @@
                 </p>
               </header>
               <div class="card-image" v-if="!$ua.isFromSmartphone()" style="width: 100%;">
-                <figure v-if="member.showImageOnTop" class="image is-4by3" style="overflow: hidden;">
+                <figure v-if="member.showImageOnTop" class="image is-3by2" style="overflow: hidden;">
                   <img class="portrait" :src="getJsonImgUrl(`${member.id}.jpg`)" :alt="member.given_name_en + member.family_name_en" style="object-fit: cover;">
                 </figure>
               </div>
@@ -123,7 +123,7 @@
                 </div>
 
                 <div class="text">
-                  <p class="midashi is-size-7 has-text-weight-bold has-text-primary">
+                  <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.home_state_ja">
                     {{ $t('about.utsukuba.members.from') }}
                     <span class="is-size-7 has-text-weight-normal has-text-grey-light" v-if="$i18n.locale == 'en'">{{ member.home_state_en }}</span>
                     <span class="is-size-7 has-text-weight-normal has-text-grey-light" v-if="$i18n.locale == 'ja'">{{ member.home_state_ja }}</span>
