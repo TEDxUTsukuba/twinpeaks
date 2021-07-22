@@ -19,10 +19,40 @@
       <!-- <figure class="image is-5by3" v-if="article.thumbnail">
         <datocms-image :data="article.thumbnail.responsiveImage" :alt="article.thumbnail.alt" style="position: initial; object-fit:"/>
       </figure> -->
-      <article v-html="article.content" />
+      <article id="article" v-html="article.content" />
     </section>
   </section>
 </template>
+
+<style lang="scss">
+article#article {
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 3rem auto 1rem auto;
+    line-height: 1.5;
+  }
+  h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 2rem auto 1rem auto;
+    line-height: 1.5;
+  }
+  img {
+    padding: 3rem 0;
+  }
+  blockquote {
+    font-style: italic;
+    margin: 1rem 0 1rem 2rem;
+    padding-left: 1rem;
+    border-left: 5px solid #bbb;
+  }
+  strong, em {
+    font-weight: bold;
+  }
+}
+
+</style>
 
 
 <script>
