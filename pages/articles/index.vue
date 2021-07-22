@@ -2,27 +2,31 @@
   <section id="wrapper-dark">
     <section class="section is-halfheight has-text-centered">
       <i class="mdi mdi-file-document has-text-primary is-size-1" /> 
-      <h1 class="title is-1 is-spaced">{{ $t('news.title' )}}</h1>
-      <h1 class="subtitle has-text-grey-light">{{ $t('news.subtitle')}}</h1>
+      <h1 class="title is-1 is-spaced">{{ $t('article.title' )}}</h1>
+      <!-- <h1 class="subtitle has-text-grey-light">{{ $t('article.subtitle')}}</h1> -->
     </section>
     <section class="section">
+      <!-- <div class="block">
+          <b-checkbox v-model="selectedCategory" native-value="partner_interview">Partner Interview</b-checkbox>
+          <b-checkbox v-model="selectedCategory" native-value="others">Others</b-checkbox>
+      </div> -->
       <div class="columns is-variable is-6 is-multiline is-centered">
-        <div class="column is-4-widescreen is-6-desktop is-6-tablet" v-for="(notice, index) in notices" :key="index">
+        <div class="column is-4-widescreen is-6-desktop is-6-tablet" v-for="(article, index) in articles" :key="index">
           <div class="nmp-dark">
             <header class="card-header">
               <p class="card-header-title">
-                <span class="is-size-7 has-text-grey">{{ formatDate(notice.updatedAt) }}</span>
+                <span class="is-size-7 has-text-grey">{{ formatDate(article.updatedAt) }}</span>
               </p>
             </header>
             <div class="card-image">
-              <!-- <datocms-image :data="notice.image.responsiveImage" :alt="notice.image.responsiveImage.alt" /> -->
-              <figure class="image is-5by3">
-                <datocms-image :data="notice.image.responsiveImage" :alt="notice.image.alt" style="position: initial; object-fit:"/>
+              <!-- <datocms-image :data="article.image.responsiveImage" :alt="article.image.responsiveImage.alt" /> -->
+              <figure class="image is-5by3" v-if="article.thumbnail">
+                <datocms-image :data="article.thumbnail.responsiveImage" :alt="article.thumbnail.alt" style="position: initial; object-fit:"/>
               </figure>
             </div>
             <div class="card-content">
-              <h2 class="title is-size-5">{{ notice.title }}</h2>
-              <p class="has-text-grey-light">{{ notice.shortDescription }}</p>
+              <h2 class="title is-size-5">{{ article.title }}</h2>
+              <p class="has-text-grey-light">{{ article.summary }}</p>
               <br>
               <nav class="level is-mobile">
                 <div class="level-left">
@@ -31,7 +35,7 @@
                 </div>
                 <div class="level-right">
                   <p class="level-item">
-                    <nuxt-link class="button is-rounded is-gradient" :to="localePath(`/news/${notice.id}`)">{{ $t('button.readmore') }}</nuxt-link>
+                    <nuxt-link class="button is-rounded is-gradient" :to="localePath(`/articles/${article.id}`)">{{ $t('button.readmore') }}</nuxt-link>
                   </p>
                 </div>
               </nav>
@@ -51,6 +55,11 @@ import format from 'date-fns/format'
 import parseISO from 'date-fns/parseISO'
 
 export default {
+  data() {
+    return {
+      selectedCategory: []
+    }
+  },
   components: {
     "datocms-image": Image
   },
@@ -58,12 +67,13 @@ export default {
     const data = await request({
       query: gql`
         {
-          notices: allNotices(locale: ${i18n.locale}, orderBy: updatedAt_DESC) {
+          articles: allArticles(locale: ${i18n.locale}, orderBy: updatedAt_DESC) {
             id
             title
-            shortDescription
+            category
+            summary
             updatedAt
-            image {
+            thumbnail {
               responsiveImage(imgixParams: {fit: crop, crop: top, h: 300, w: 500}) {
                 alt
                 src
@@ -83,6 +93,11 @@ export default {
   methods: {
     formatDate(date) {
       return format(parseISO(date), 'PPP')
+    },
+    sortByCategory() {
+      console.log(this.selectedCategory);
+      this.articles = this.articles.filter(el => this.selectedCategory.includes(el.category))
+      console.log(this.articles);
     }
   }
 }

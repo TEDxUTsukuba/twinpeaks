@@ -124,6 +124,10 @@
     "disclaimer": "The opinions expressed in this article are those of the authors and do not necessarily reflect the views of TEDxUTsukuba. ",
     "writtenby": "Written by "
   },
+  "article": {
+    "title": "Article",
+    "category": "Category"
+  },
   "about": {
     "location": {
       "address": "1-1-1 Tennodai, Tsukuba, Ibaraki, Japan, 305-8577"
