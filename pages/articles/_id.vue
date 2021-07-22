@@ -1,0 +1,71 @@
+<template>
+  <section id="wrapper-dark">
+    <section class="hero is-halfheight has-text-white" :style="`background-position: center; background-image: radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(${article.thumbnail.url})`">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title is-2">
+            <span id="title" class="has-text-dark has-background-white px-2 py-1">
+              {{ article.title }}
+            </span>
+          </h1>
+          <div>
+            <p class="mb-2">{{ formatDate(article._firstPublishedAt) }} <span v-if="article.last_modified" class="is-size-7">(最終更新: {{ formatDate(article.updatedAt) }})</span></p>
+            <span class="tag">{{ article.category.replace(/_/g, " ") }}</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <!-- <figure class="image is-5by3" v-if="article.thumbnail">
+        <datocms-image :data="article.thumbnail.responsiveImage" :alt="article.thumbnail.alt" style="position: initial; object-fit:"/>
+      </figure> -->
+      <article v-html="article.content" />
+    </section>
+  </section>
+</template>
+
+
+<script>
+import { request, gql } from '~/lib/datocms'
+import { Image } from "vue-datocms";
+import format from 'date-fns/format'
+import parseISO from 'date-fns/parseISO'
+
+export default {
+  components: {
+    "datocms-image": Image
+  },
+  async asyncData({ params, i18n }) {
+    // console.log(i18n.locale)
+    const data = await request({
+      query: gql`
+      {
+        article(locale: ${i18n.locale}, filter: {id: {eq: "${params.id}"}}) {
+          thumbnail {
+            url
+            alt
+          }
+          category
+          _firstPublishedAt
+          summary
+          content(markdown: true)
+          title
+          updatedAt
+        }
+      }
+    `
+    })
+    return { ready: !!data, ...data }
+  },
+  head() {
+    if (!this.ready) {
+      return
+    }
+  },
+  methods: {
+    formatDate(date) {
+      return format(parseISO(date), 'PPP')
+    }
+  }
+}
+</script>

@@ -122,6 +122,10 @@
     "disclaimer": "投稿内容は寄稿者個人の見解であり、TEDxUTsukubaを代表するものとは限りません。",
     "writtenby": "寄稿: "
   },
+  "article": {
+    "title": "Article",
+    "category": "Category"
+  },
   "about": {
     "location": {
       "address": "〒305-8577 茨城県つくば市天王台1-1-1"

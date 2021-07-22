@@ -17,10 +17,10 @@
             <div class="card-image">
               <!-- <datocms-image :data="notice.image.responsiveImage" :alt="notice.image.responsiveImage.alt" /> -->
               <figure class="image is-5by3">
-                <datocms-image :data="notice.image.responsiveImage" :alt="notice.alt" style="position: initial; object-fit:"/>
+                <datocms-image :data="notice.image.responsiveImage" :alt="notice.image.alt" style="position: initial; object-fit:"/>
               </figure>
             </div>
-            <div class="card-content">{{ notice.image.responsiveImage.width}}
+            <div class="card-content">
               <h2 class="title is-size-5">{{ notice.title }}</h2>
               <p class="has-text-grey-light">{{ notice.shortDescription }}</p>
               <br>
