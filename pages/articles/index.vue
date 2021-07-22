@@ -19,9 +19,11 @@
               </p>
             </header>
             <div class="card-image">
-              <!-- <datocms-image :data="article.image.responsiveImage" :alt="article.image.responsiveImage.alt" /> -->
               <figure class="image is-5by3" v-if="article.thumbnail">
                 <datocms-image :data="article.thumbnail.responsiveImage" :alt="article.thumbnail.alt" style="position: initial; object-fit:"/>
+              </figure>
+              <figure class="image is-5by3" v-else>
+                <img src="~/assets/u_logo_banner.png" alt="No Image">
               </figure>
             </div>
             <div class="card-content">

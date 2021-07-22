@@ -125,7 +125,7 @@
             <p class="has-text-left"><i class="mdi mdi-format-quote-open is-size-1 has-text-grey-light" /></p>
             <p class="is-size-3 has-text-weight-bold has-text-centered has-text-white px-6">{{ feedback.text }}</p>
             <p class="has-text-right"><i class="mdi mdi-format-quote-close is-size-1 has-text-grey-light" /></p>
-            <p class="has-text-centered has-text-weight-light">{{ feedback.event }}</p>
+            <p class="has-text-centered has-text-weight-light mt-4">{{ feedback.event }}</p>
           </div>
         </b-carousel-item>
       </b-carousel>
