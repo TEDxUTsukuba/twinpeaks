@@ -2,18 +2,27 @@
   <section id="wrapper-dark" class="hero is-fullheight">
     <div class="hero-body has-text-centered">
       <div class="container" style="padding: 0 5vw;">
-        <i class="mdi mdi-emoticon-sad-outline" style="font-size: 8rem; color: white;"/>
-        <h1 class="has-text-weight-light has-text-white is-size-2" v-if="$i18n.locale == 'en'">Page Not Found</h1>
-        <h1 class="has-text-weight-light has-text-white is-size-2" v-if="$i18n.locale == 'ja'">お探しのページは見つかりません。</h1>
+        <h1 class="has-text-weight-light has-text-white is-size-3" v-if="error.statusCode === 404">Page Not Found<br>お探しのページは見つかりません</h1>
+        <h1 class="has-text-weight-light has-text-white is-size-3" v-else>An Error Occured<br>エラーが発生しました</h1>
         <br>
         <p v-if="$i18n.locale == 'en'">
-          We're sorry, we can't find the page you're looking for. It might have been removed, changed names, or is otherwise unavailable. <br>If you typed the URL directly, check your spelling and capitalization. 
+          <span v-if="error.statusCode === 404">
+            We're sorry, we can't find the page you're looking for. It might have been removed, changed names, or is otherwise unavailable. <br>If you typed the URL directly, check your spelling and capitalization. 
+          </span>
+          <span v-else>
+            Please try again or report the problem to tedxutsukuba&#64;gmail.com 
+          </span>
         </p>
         <p v-if="$i18n.locale == 'ja'">
-          ご不便をおかけして申し訳ございません。お探しのページは削除あるいは名前が変更されたか、ご利用いただけない可能性があります。<br>URLを直接入力された場合は、正しく入力されているかを再度ご確認ください。
+          <span v-if="error.statusCode === 404">
+            ご不便をおかけして申し訳ございません。お探しのページは削除あるいは名前が変更されたか、ご利用いただけない可能性があります。<br>URLを直接入力された場合は、正しく入力されているかを再度ご確認ください。
+          </span>
+          <span v-else>
+            再度お試しいただくか、tedxutsukuba&#64;gmail.comまでご連絡ください。 
+          </span>
         </p>
         <br>
-        <button onclick="history.back();" class="button is-rounded is-large is-gradient">{{ $t('button.back')}}</button>
+        <button onclick="history.back();" class="button is-rounded is-gradient">{{ $t('button.back')}}</button>
       </div>
     </div>
     <div class="hero-foot has-text-centered">
