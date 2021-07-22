@@ -1,6 +1,6 @@
 <template>
   <section id="wrapper-dark">
-    <section class="hero is-halfheight has-text-white" :style="`background-position: center; background-image: radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(${article.thumbnail.url})`">
+    <section class="hero is-halfheight has-text-white" :style="`background-size: cover; background-position: center; background-image: radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(${article.thumbnail.url})`">
       <div class="hero-body">
         <div class="container">
           <h1 class="title is-2">
@@ -26,6 +26,9 @@
 
 <style lang="scss">
 article#article {
+  #title {
+    line-height: 1.5;
+  }
   h1 {
     font-size: 2rem;
     font-weight: bold;
@@ -48,6 +51,7 @@ article#article {
     border-left: 5px solid #bbb;
   }
   strong, em {
+    color: #fff;
     font-weight: bold;
   }
 }
