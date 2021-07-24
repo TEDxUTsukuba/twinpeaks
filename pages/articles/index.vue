@@ -69,7 +69,7 @@ export default {
     const data = await request({
       query: gql`
         {
-          articles: allArticles(locale: ${i18n.locale}, orderBy: updatedAt_DESC) {
+          articles: allArticles(locale: ${i18n.locale}, filter: {isPublished: {eq: "true"}}, orderBy: updatedAt_DESC) {
             id
             title
             category
