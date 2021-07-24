@@ -18,7 +18,14 @@
     <section class="section">
       <article id="article" v-html="article.content" />
     </section>
-    <img :src="`https://www.datocms-assets.com/48488/1621396265-ublackonellinebanner.png?txt=${this.article.title}&txt-size=64&txt-color=fff&txt-align=center&txt-pad=48&?txt-font=Helvetica%20Neue,Bold`">
+    <!-- <img :src="`https://www.datocms-assets.com/48488/1621396265-ublackonellinebanner.png?txt=${this.article.title}&txt-size=64&txt-color=fff&txt-align=center&txt-pad=48&?txt-font=Helvetica%20Neue,Bold`"> -->
+  <b-navbar fixed-bottom centered :mobile-burger="false" class="has-background-primary">
+    <template #brand>
+      <b-navbar-item tag="a" :href="`https://www.facebook.com/sharer/sharer.php?u=https://www.tedxutsukuba.com/${article.id}`" target="_blank" rel="nofollow noopener noreferrer"><i class="mdi mdi-facebook is-size-5 has-text-white ml-4" /></b-navbar-item>
+      <b-navbar-item tag="a" v-if="$i18n.locale == 'ja'" :href="`https://twitter.com/intent/tweet?text=${article.title}&via=tedxutsukuba&related=tedxutsukuba&url=www.tedxutsukuba.com/articles/${article.id}`" target="_blank" rel="noopener noreferrer" data-show-count="false"><i class="mdi mdi-twitter is-size-5 has-text-white" /></b-navbar-item><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <b-navbar-item tag="a" v-if="$i18n.locale == 'en'" :href="`https://twitter.com/intent/tweet?text=Join ${article.title}&&via=tedxutsukuba&related=tedxutsukuba&url=www.tedxutsukuba.com/en/articles/${article.id}`" target="_blank" rel="noopener noreferrer" data-show-count="false"><i class="mdi mdi-twitter is-size-5 has-text-white" /></b-navbar-item><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </template>
+  </b-navbar>
   </section>
 </template>
 
@@ -76,6 +83,7 @@ export default {
             url
             alt
           }
+          id
           category
           _firstPublishedAt
           summary
@@ -94,17 +102,12 @@ export default {
     }
     else {
       return {
+        title : this.article.title + '| TEDxUTsukuba',
+        description: this.article.summary,
         meta: [
-          {
-            hid: 'og:description',
-            name: 'og:description',
-            content: 'my website description'
-          },
-          {
-            hid: 'og:title',
-            name: 'og:title',
-            content: this.article.title
-          }
+          { hid: 'og:title', name: 'og:title', content: this.article.title },
+          { hid: 'og:description', name: 'og:description', content: this.article.summary },
+          { hid: 'og:image', name: 'og:image', content: this.article.thumbnail.url }
         ]
       }
     }
