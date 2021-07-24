@@ -17,6 +17,9 @@
     "blog": {
       "item": "Blog"
     },
+    "articles": {
+      "item": "Articles"
+    },
     "partners": {
       "item": "Partners"
     },

@@ -34,8 +34,8 @@
       <b-navbar-item class="normal-category" tag="nuxt-link" :to="localePath('/talks')">
         {{ $t('header.talks.item') }}
       </b-navbar-item>
-      <b-navbar-item class="normal-category" tag="nuxt-link" :to="localePath('/blog')">
-        {{ $t('header.blog.item') }}
+      <b-navbar-item class="normal-category" tag="nuxt-link" :to="localePath('/articles')">
+        {{ $t('header.articles.item') }}
       </b-navbar-item>
       <b-navbar-item class="normal-category" tag="nuxt-link" :to="localePath('/partners')">
         {{ $t('header.partners.item') }}
