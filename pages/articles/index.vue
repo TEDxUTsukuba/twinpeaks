@@ -20,7 +20,7 @@
             </header>
             <div class="card-image">
               <figure class="image is-5by3" v-if="article.thumbnail">
-                <datocms-image :data="article.thumbnail.responsiveImage" :alt="article.thumbnail.alt" style="position: initial; object-fit:"/>
+                <datocms-image :data="article.thumbnail.responsiveImage" :alt="article.thumbnail.alt" style="position: initial;"/>
               </figure>
               <figure class="image is-5by3" v-else>
                 <img src="~/assets/u_logo_banner.png" alt="No Image">
@@ -69,7 +69,7 @@ export default {
     const data = await request({
       query: gql`
         {
-          articles: allArticles(locale: ${i18n.locale}, filter: {isPublished: {eq: "true"}}, orderBy: updatedAt_DESC) {
+          articles: allArticles(locale: ${i18n.locale}, filter: {isPublished: {eq: "false"}}, orderBy: updatedAt_DESC) {
             id
             title
             category

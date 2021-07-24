@@ -16,11 +16,9 @@
       </div>
     </section>
     <section class="section">
-      <!-- <figure class="image is-5by3" v-if="article.thumbnail">
-        <datocms-image :data="article.thumbnail.responsiveImage" :alt="article.thumbnail.alt" style="position: initial; object-fit:"/>
-      </figure> -->
       <article id="article" v-html="article.content" />
     </section>
+    <img :src="`https://www.datocms-assets.com/48488/1621396265-ublackonellinebanner.png?txt=${this.article.title}&txt-size=64&txt-color=fff&txt-align=center&txt-pad=48&?txt-font=Helvetica%20Neue,Bold`">
   </section>
 </template>
 
@@ -70,7 +68,6 @@ export default {
     "datocms-image": Image
   },
   async asyncData({ params, i18n }) {
-    // console.log(i18n.locale)
     const data = await request({
       query: gql`
       {
@@ -93,7 +90,23 @@ export default {
   },
   head() {
     if (!this.ready) {
-      return
+      return 
+    }
+    else {
+      return {
+        meta: [
+          {
+            hid: 'og:description',
+            name: 'og:description',
+            content: 'my website description'
+          },
+          {
+            hid: 'og:title',
+            name: 'og:title',
+            content: this.article.title
+          }
+        ]
+      }
     }
   },
   methods: {
