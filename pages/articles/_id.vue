@@ -98,9 +98,6 @@ export default {
   },
   head() {
     if (!this.ready) {
-      return 
-    }
-    else {
       return {
         title : this.article.title + '| TEDxUTsukuba',
         description: this.article.summary,
@@ -114,7 +111,7 @@ export default {
   },
   methods: {
     formatDate(date) {
-      return format(parseISO(date), 'PPP')
+      return format(parseISO(date), 'yyyy/MM/dd')
     }
   }
 }
