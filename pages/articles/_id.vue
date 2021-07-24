@@ -98,6 +98,9 @@ export default {
   },
   head() {
     if (!this.ready) {
+      return 
+    }
+    // else {
       return {
         title : this.article.title + '| TEDxUTsukuba',
         description: this.article.summary,
@@ -107,11 +110,11 @@ export default {
           { hid: 'og:image', name: 'og:image', content: this.article.thumbnail.url }
         ]
       }
-    }
+    // }
   },
   methods: {
     formatDate(date) {
-      return format(parseISO(date), 'yyyy/MM/dd')
+      return format(parseISO(date), 'PPP')
     }
   }
 }
