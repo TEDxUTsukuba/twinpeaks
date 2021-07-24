@@ -94,7 +94,7 @@ export default {
   },
   methods: {
     formatDate(date) {
-      return format(parseISO(date), 'PPP')
+      return format(parseISO(date), 'yyyy/MM/dd')
     },
     sortByCategory() {
       console.log(this.selectedCategory);

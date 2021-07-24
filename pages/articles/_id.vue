@@ -90,28 +90,40 @@ export default {
   },
   head() {
     if (!this.ready) {
-      return 
-    }
-    else {
       return {
         meta: [
           {
-            hid: 'og:description',
-            name: 'og:description',
-            content: 'my website description'
+            hid: 'title',
+            name: 'title',
+            content: this.data.article.title
           },
           {
-            hid: 'og:title',
+            hid: 'description',
+            name: 'description',
+            content: this.data.article.summary
+          },
+          {
+            hid: 'og:title2',
             name: 'og:title',
             content: this.article.title
-          }
+          },
+          {
+            hid: 'og:description2',
+            name: 'og:description',
+            content: this.article.summary
+          },
+          {
+            hid: 'og:image2',
+            name: 'og:image',
+            content: this.article.thumbnail.url
+          },
         ]
       }
     }
   },
   methods: {
     formatDate(date) {
-      return format(parseISO(date), 'PPP')
+      return format(parseISO(date), 'yyyy/MM/dd')
     }
   }
 }

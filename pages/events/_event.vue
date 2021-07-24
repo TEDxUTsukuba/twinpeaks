@@ -205,7 +205,7 @@ export default {
 
 <style lang="scss">
   #event-description {
-    strong, .has-text-weight-bold {
+    strong, .has-text-weight-bold, h1, h2, h3 {
       color: #fff !important;
     }
   }
