@@ -91,6 +91,18 @@ export default {
     if (!this.ready) {
       return
     }
+    return {
+      title: 'Articles | TEDxUTsukuba',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { 
+          hid: 'description', 
+          name: 'description', 
+          content: 'TEDxUTsukubaでは、イベントを通して教養から科学、地域の話題から世界規模の問題に至るまで、様々なトピックスに焦点を当ててきました。We have shed light on relevant topics - from liberal arts to science, local stories to global issues.'
+        },
+      ]
+    }
   },
   methods: {
     formatDate(date) {
