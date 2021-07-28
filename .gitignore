@@ -91,4 +91,3 @@ sw.*
 
 # dist
 dist/*
-!sitemap.xml
