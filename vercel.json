@@ -3,6 +3,10 @@
     {
       "source": "/forum/:match*",
       "destination": "https://forum.tedxutsukuba.vercel.app/:match*"
+    },
+    {
+      "source": "/sitemap",
+      "destination": "/sitemap.xml"
     }
   ]
 }
