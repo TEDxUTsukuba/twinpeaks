@@ -128,6 +128,10 @@ export default {
     {
       src: '~/plugins/vue-horizontal',
       ssr: false
+    },
+    {
+      src: '~/plugins/vue-countdown',
+      ssr: false
     }
   ],
   /*
