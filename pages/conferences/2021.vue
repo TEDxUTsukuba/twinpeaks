@@ -1,56 +1,5 @@
 <template>
   <section class="has-background-black">
-    <section class="hero fullheight-without-header vertical-center" v-if="this.$ua.isFromSmartphone()">
-      <figure class="image">
-        <video v-show="isVideoActive"
-          src="~/assets/nograin_short.mp4"  
-          autoplay
-          muted
-          v-on:ended="onEnded"
-          width="100%"
-        />
-        <img v-show="!isVideoActive"
-          src="~/assets/u_logo_banner.png"
-          width="100%"
-          style="position: absolute; top:-100%; left:0; right: 0; bottom:-100%; margin: auto;"
-        />
-      </figure>
-    </section>
-    <section class="hero fullheight-without-header vertical-center" v-else>
-      <figure class="image" :style="this.$ua.isFromSmartphone() ? '' : 'height: calc(100vw*5/12); width: 100vw; overflow: hidden;'">
-        <video v-show="isVideoActive"
-          src="~/assets/nograin_short.mp4"  
-          autoplay
-          :muted="isMuted"
-          v-on:ended="onEnded"
-          width="100%"
-          style="position: absolute; top:-100%; left:0; right: 0; bottom:-100%; margin: auto;"
-        />
-        <b-button style="position: absolute; right: 10px; bottom: 10px;" class="is-dark" :icon-left="this.isMuted ? 'volume-off' : 'volume-high'" @click="isMuted = !isMuted"></b-button>
-        <img v-show="!isVideoActive"
-          src="~/assets/u_logo_banner.png"
-          width="100%"
-          style="position: absolute; top:-100%; left:0; right: 0; bottom:-100%; margin: auto;"
-        />
-      </figure>
-      <p v-show="!isVideoActive" class="has-text-gray">
-        <i class="mdi mdi-chevron-down has-text-white is-size-1" />
-      </p>
-    </section>
-
-    <section :class="this.$ua.isFromSmartphone() ? 'hero is-halfheight' : 'hero is-fullheight'" id="first">
-      <div :class="{fadeIn: visible}">
-        <div class="hero-body" v-show="visible">
-          <div class="container has-text-centered" v-show="visible">
-            <h1 class="title is-0" v-show="visible"><span class="neon">We are living <br class="is-hidden-touch">in a <span class="neon-emphasis">playground</span></span></h1>
-            <p v-show="visible" class="outro-copy is-size-3 is-size-4-mobile has-text-weight-semibold has-text-grey-light">
-              Days when we’d fight we’d fight ‘til I would give in yeah, perfect disasters we were reaching, reaching for the rafters and on most of the days we were searching for ways to get up and get out of the town that we were raised yeah, ‘cause we were done I remember we were sleeping in cars we were searching for OZ
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section :class="this.$ua.isFromSmartphone() ? 'hero is-halfheight' : 'hero is-fullheight'" id="second">
       <div class="hero-body">
         <div class="container has-text-centered">
@@ -125,11 +74,6 @@
 
 
 <style lang="postcss" scoped>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;800&display=swap');
-section, p, a, span, h1 {
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
-  font-feature-settings: "palt";
-}
 .container {
   @media screen and (max-width: 1024px) {
     padding: 5vw;
@@ -297,37 +241,10 @@ export default {
       }
     ]
   },
-  mounted () {
-    // const isVideoPlayed = this.$cookies.get("isVideoPlayed");
-    window.addEventListener('scroll', this.onScroll);
-  },
-  destroyed () {
-    window.removeEventListener('scroll', this.onScroll);
-  },
   methods: {
     openModal(){
       this.isCardModal = true;
     },
-    onEnded() {
-      this.isVideoActive = false;
-      this.$cookies.set("isVideoPlayed", true, {
-        maxAge: 60 * 60 * 24
-      });
-    },
-    onScroll () {
-      if (!this.visible) {
-        var target = document.getElementById('first');
-        var top = target.getBoundingClientRect().top;
-        this.visible = top < window.innerHeight - 200;
-      }
-      // console.log(top);
-      // document.getElementById('navbar-top').style.display = "none";
-      var elements = document.getElementsByClassName('outro-copy');
-      var i;
-      for(i=0;i<elements.length;i++){
-        elements[i].style.visibility = "visible";
-      }
-    }
   }
 }
 </script>
