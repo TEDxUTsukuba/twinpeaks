@@ -13,6 +13,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@chenfengyuan/vue-countdown": "^1.1.5",
     "@mdi/font": "^5.8.55",
     "@nuxt/content": "^1.14.0",
     "@nuxtjs/axios": "^5.3.6",
