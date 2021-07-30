@@ -3,59 +3,31 @@
     <section :class="this.$ua.isFromSmartphone() ? 'hero is-info is-fullheight' : 'hero is-info is-fullheight'" id="second" style="overflow-x:">
       <div class="hero-body">
         <div class="container has-text-centered" style="position: relative;">
-          <h1 class="is-0 has-text-centered has-text-weight-semibold mb-5">The World is a<br>Playground.</h1>
-          <!-- <h1 class="is-0 has-text-centered has-text-weight-semibold"><span class="has-background-white has-text-itf px-5">Playground</span></h1> -->
-          <p class="outro-copy is-size-3 is-size-5-mobile has-text-weight-semibold">
-            we were burning cigars with the white plastics tips ‘til we saw the sun and we said crazy things like I refuse to look back thinking days were better just because they’re younger days
-          </p>
-        </div>
-      </div>
-      <PlaygroundSquare class="fadeIn" :width="$ua.isFromSmartphone() ? '50vw': '50vh'" strokecolor="#1EB8CB" style="position: absolute; top: 10vh; right: -10vw;"/>
-      <PlaygroundCircle class="expand" :width="$ua.isFromSmartphone() ? '35vw': '35vh'" fillcolor="#E5C300" style="position: absolute; top: 15vh; left: -5vw;"/>
-      <PlaygroundHexagon class="rotate" :width="$ua.isFromSmartphone() ? '25vw': '25vh'" fillcolor="#f25278" style="position: absolute; top: 70vh; left: 15vw;"/>
-      <BuildBackBetter class="flash" height="70vh" fillcolor="#fff" opacity="0.5" style="position: absolute; top: 110vh; left:5vw; transform:rotate(-30deg);"/>
-    </section>
-
-    <section class="hero is-info is-fullheight">
-      <div class="hero-body">
-        <div class="container">
-          <div class="column is-offset-3-desktop is-9-desktop">
-            <figure class="image is-16by9 box">
-              <iframe class="has-ratio" src="https://www.youtube.com/embed/Y56lpXvXbs0?start=72&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </figure>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="hero is-halfheight is-info has-text-centered">
-      <div class="hero-body">
-        <div class="container">
-          <h2 class="title is-1 mb-6 has-text-grey-light">See you on <br class="is-hidden-tablet"><span class="has-text-white">{{ eventDate.toDateString() }}</span></h2>
+          <h1 class="is-0 has-text-centered has-text-weight-semibold mb-6">The world is a<br>playground.</h1>
           <div class="has-text-centered mx-auto" style="max-width: 840px;">
             <countdown :time="time" :transform="transformSlotProps" v-slot="{ days, hours, minutes, seconds }">
-              <div class="columns is-multiline is-mobile">
-                <div class="column is-3-desktop is-12-mobile has-text-centered">
+              <div class="columns is-multiline is-mobile is-variable is-2">
+                <div class="column is-3 has-text-centered">
                   <div class="box">
-                    <p class="title is-1 has-text-info">{{ days }}</p>
+                    <p class="title is-size-1 is-size-4-mobile has-text-info">{{ days }}</p>
                     <p class="subtitle heading has-text-black">Days</p>
                   </div>
                 </div>
-                <div class="column is-3-desktop has-text-centered">
+                <div class="column is-3 has-text-centered">
                   <div class="box">
-                    <p class="title is-1 has-text-info">{{ hours }}</p>
+                    <p class="title is-size-1 is-size-4-mobile has-text-info">{{ hours }}</p>
                     <p class="subtitle heading has-text-black">hours</p>
                   </div>
                 </div>
-                <div class="column is-3-desktop has-text-centered">
+                <div class="column is-3 has-text-centered">
                   <div class="box">
-                    <p class="title is-1 has-text-info">{{ minutes }}</p>
+                    <p class="title is-size-1 is-size-4-mobile has-text-info">{{ minutes }}</p>
                     <p class="subtitle heading has-text-black">minutes</p>
                   </div>
                 </div>
-                <div class="column is-3-desktop has-text-centered">
+                <div class="column is-3 has-text-centered">
                   <div class="box">
-                    <p class="title is-1 has-text-info">{{ seconds }}</p>
+                    <p class="title is-size-1 is-size-4-mobile has-text-info">{{ seconds }}</p>
                     <p class="subtitle heading has-text-black">seconds</p>
                   </div>
                 </div>
@@ -64,37 +36,101 @@
           </div>
         </div>
       </div>
+      <PlaygroundSquare class="fadeIn" :width="$ua.isFromSmartphone() ? '50vw': '50vh'" strokecolor="#1EB8CB" style="position: absolute; top: 10vh; right: -10vw;"/>
+      <PlaygroundCircle class="expand" :width="$ua.isFromSmartphone() ? '35vw': '35vh'" fillcolor="#E5C300" style="position: absolute; top: 15vh; left: -5vw;"/>
+      <PlaygroundHexagon class="rotate" :width="$ua.isFromSmartphone() ? '25vw': '25vh'" fillcolor="#f25278" style="position: absolute; top: 70vh; left: 15vw;"/>
+      <BuildBackBetter class="flash" height="70vh" fillcolor="#fff" opacity="0.5" style="position: absolute; top: 170vh; left:5vw; transform:rotate(-30deg);"/>
+    </section>
+
+    <section class="hero is-halfheight is-info has-text-centered">
+      <div class="hero-body">
+        <div class="container">
+          <p class="outro-copy is-size-3 is-size-4-mobile has-text-weight-semibold">
+            The world is a playground. You know that when you are a kid, but somewhere along the ways, everyone forgets it.
+            <br>
+            <span class="pt-4 has-text-grey-light is-size-4 is-size-5-mobile">- Yes Man (2008)</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero is-info is-fullheight">
+      <div class="hero-body">
+        <div class="container">
+          <div class="column is-offset-3-desktop is-9-desktop">
+            <figure class="image is-16by9">
+              <iframe class="has-ratio" src="https://www.youtube.com/embed/MAUMzkIe1fg?cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </figure>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="hero is-info is-halfheight has-text-centered">
       <div class="hero-body">
         <div class="container">
-          <h1 class="title is-1 has-text-white">
-            Early Bird Tickets
-            <br>
-            <span class="has-text-primary">On Sale</span>
-          </h1>
+          <h2 class="title is-1 has-text-white has-text-left-desktop mb-6">
+            Save the date.<br>
+            Stay tuned.
+          </h2>
           <br>
-        <button style="padding: 0; border: none; background: none; cursor: pointer;">
-          <p id="share" class="is-size-4 has-text-bold has-text-white mb-4">Buy Now</p>
-        </button>
-        <br>
-        <button @click="isCardModal = true" style="padding: 0; border: none; background: none; cursor: pointer;">
-          <p id="share" class="is-size-4 has-text-bold has-text-white">Share with friends</p>
-        </button>
+          <div class="has-text-left-desktop mb-4">
+            <a 
+              class="button is-white is-rounded mx-1 mb-1"
+              href="https://www.google.com/calendar/render?action=TEMPLATE&text=TEDxUTsukuba2021&dates=20211101/20211102&ctz=Japan&details=TEDxUTsukuba+Annual+Main+Conference&sprop=https://www.tedxutsukuba.com/"
+              target="_blank"
+            >
+              <i class="mdi mdi-google mr-1 has-text-info" />
+              Google Calendar
+            </a>
+            <a
+              class="button is-white is-rounded mx-1 mb-1"
+              href="https://outlook.live.com/owa/?path=/calendar/action/compose&subject=TEDxUTsukuba2021&startdt=2021-11-01&enddt=2021-11-02&allday=true&body=TEDxUTsukuba+Annual+Main+Conference"
+              target="_blank"
+            >
+              <i class="mdi mdi-microsoft-outlook mr-1 has-text-info" />
+              Outlook
+            </a>
+          </div>
+          <div class="has-text-left-desktop">
+            <span class="mr-4">Follow us on</span><br class="is-hidden-tablet">
+            <a class="mx-2" href="https://www.facebook.com/tedxutsukuba" target="_blank">
+              <i class="has-text-white mdi mdi-facebook is-size-2" alt="Facebook" />
+            </a>
+            <a class="mx-2" href="https://www.instagram.com/tedxutsukuba" target="_blank">
+              <i class="has-text-white mdi mdi-instagram is-size-2" alt="Instagram" />
+            </a>
+            <a class="mx-2" href="https://www.twitter.com/tedxutsukuba" target="_blank">
+              <i class="has-text-white mdi mdi-twitter is-size-2" alt="Twitter" />
+            </a>
+          </div>
         </div>
       </div>
       <!-- <Quote class="pb-6" width="50vw" fillcolor="#fff" opacity="0.5" style="transform: rotate(-30deg);" /> -->
     </section>
 
+    <section class="hero is-info is-halfheight has-text-centered has-text-right-desktop">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-1 has-text-white mb-6">
+            Invite your friends.<br>
+            Join us together.
+          </h2>
+        <button @click="isCardModal = true" style="padding: 0; border: none; background: none; cursor: pointer;">
+          <p id="share" class="is-size-4 has-text-bold has-text-white">Share on Social Media</p>
+        </button>
+        </div>
+      </div>
+    </section>
+
 
     <b-modal v-model="isCardModal" class="px-6">
       <div class="card has-text-centered py-6 has-background-primary" style="overflow: hidden;">
-        <a class="mx-4">
-          <i class="has-text-white mdi mdi-twitter" style="font-size: 3em;" alt="Share on Twitter" />
-        </a>
-        <a class="mx-4">
+        <a class="mx-4" href="https://www.facebook.com/sharer/sharer.php?u=https://www.tedxutsukuba.com/conferences/2021">
           <i class="has-text-white mdi mdi-facebook" style="font-size: 3em;" alt="Share on Facebook" />
+        </a>
+        <a class="mx-4" href="https://twitter.com/intent/tweet?text=Stay+tuned+for+TEDxUTsukuba+2021&via=tedxutsukuba&related=tedxutsukuba&url=www.tedxutsukuba.com/conferences/2021">
+          <i class="has-text-white mdi mdi-twitter" style="font-size: 3em;" alt="Share on Twitter" />
         </a>
         <a class="mx-4" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fwww.tedxutsukuba.com%2Fconferences%2F2021">
           <LineIcon style="width: 3rem;" alt="Share on LINE" />
@@ -124,15 +160,21 @@
   padding-top: 0 !important;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 720px) {
+  .columns.is-variable.is-2 {
+    --columnGap: 0.25rem !important;
+  }
+  .is-0 {
+    font-size: 3rem !important;
+  }
   .is-1 {
     font-size: 2.5rem !important;
   }
   .heading {
-    font-size: .75rem !important;
+    font-size: .5rem !important;
   }
   .box {
-    padding: .75rem !important;
+    padding: .5rem !important;
   }
 }
 .is-itf {
