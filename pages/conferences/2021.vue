@@ -39,7 +39,7 @@
       <PlaygroundSquare class="fadeIn" :width="$ua.isFromSmartphone() ? '50vw': '50vh'" strokecolor="#1EB8CB" style="position: absolute; top: 10vh; right: -10vw;"/>
       <PlaygroundCircle class="expand" :width="$ua.isFromSmartphone() ? '35vw': '35vh'" fillcolor="#E5C300" style="position: absolute; top: 15vh; left: -5vw;"/>
       <PlaygroundHexagon class="rotate" :width="$ua.isFromSmartphone() ? '25vw': '25vh'" fillcolor="#f25278" style="position: absolute; top: 70vh; left: 15vw;"/>
-      <BuildBackBetter class="flash" height="70vh" fillcolor="#fff" opacity="0.5" style="position: absolute; top: 170vh; left:5vw; transform:rotate(-30deg);"/>
+      <BuildBackBetter class="flash" height="70vh" fillcolor="#fff" opacity="0.5" style="position: absolute; top: 165vh; left:5vw; transform:rotate(-30deg);"/>
     </section>
 
     <section class="hero is-halfheight is-info has-text-centered">
@@ -50,6 +50,7 @@
             <br>
             <span class="pt-4 has-text-grey-light is-size-4 is-size-5-mobile">- Yes Man (2008)</span>
           </p>
+          <button @click="showStatement = !showStatement" class="mt-6 button is-medium is-white is-rounded">Read Statement</button>
         </div>
       </div>
     </section>
@@ -76,7 +77,7 @@
           <br>
           <div class="has-text-left-desktop mb-4">
             <a 
-              class="button is-white is-rounded mx-1 mb-1"
+              class="button is-white is-rounded mx-1 mb-2"
               href="https://www.google.com/calendar/render?action=TEMPLATE&text=TEDxUTsukuba2021&dates=20211101/20211102&ctz=Japan&details=TEDxUTsukuba+Annual+Main+Conference&sprop=https://www.tedxutsukuba.com/"
               target="_blank"
             >
@@ -84,7 +85,7 @@
               Google Calendar
             </a>
             <a
-              class="button is-white is-rounded mx-1 mb-1"
+              class="button is-white is-rounded mx-1 mb-2"
               href="https://outlook.live.com/owa/?path=/calendar/action/compose&subject=TEDxUTsukuba2021&startdt=2021-11-01&enddt=2021-11-02&allday=true&body=TEDxUTsukuba+Annual+Main+Conference"
               target="_blank"
             >
@@ -123,6 +124,14 @@
       </div>
     </section>
 
+    <section class="hero is-info is-halfheight has-text-centered">
+      <div class="hero-body">
+        <div class="container">
+          This virtual conference is presented by TEDxUTsukuba on our own responsibility. <br>Each and every staff follows enhanced precautions against COVID-19, and acknowledges the risk associated with face-to-face activities. 
+        </div>
+      </div>
+    </section>
+
 
     <b-modal v-model="isCardModal" class="px-6">
       <div class="card has-text-centered py-6 has-background-primary" style="overflow: hidden;">
@@ -139,12 +148,21 @@
         <script type="text/javascript">LineIt.loadButton();</script>
       </div>
     </b-modal>
+
+    <b-modal v-model="showStatement" full-screen>
+      <div class="has-text-centered is-info" style="overflow: hidden; min-height: 100vh; padding-top: 5rem; margin: auto;">
+        <Statement fill="#fff" :width="this.$ua.isFromSmartphone() ? '80vw' : ''" :height="this.$ua.isFromSmartphone() ? '' : '75vh'" />
+        <div class="has-text-centered" style="margin-top: 2vh;">
+          <button @click="showStatement = !showStatement" class="button is-rounded is-outlined is-white">Close</button>
+        </div>
+      </div>
+    </b-modal>
   </section>
 </template>
 
 
 <style lang="scss" scoped>
-  section, p, a, span, h1 {
+  section, p, a, span, h1, button {
     font-family: 'Poppins' !important;
     font-feature-settings: "palt";
   }
@@ -274,10 +292,11 @@ import PlaygroundCircle from '~/components/teaser/Circle.vue'
 import PlaygroundHexagon from '~/components/teaser/Hexagon.vue'
 import BuildBackBetter from '~/components/teaser/BuildBackBetter.vue'
 import Quote from '~/components/teaser/Quote.vue'
+import Statement from '~/components/teaser/Statement.vue'
 
 export default {
   components: {
-    LineIcon, PlaygroundSquare, PlaygroundCircle, PlaygroundHexagon, BuildBackBetter, Quote
+    LineIcon, PlaygroundSquare, PlaygroundCircle, PlaygroundHexagon, BuildBackBetter, Quote, Statement
   },
   data() {
     const now = new Date();
@@ -288,6 +307,7 @@ export default {
       isVideoActive: true,
       isMuted: true,
       isCardModal: false,
+      showStatement: false,
       eventDate: eventDate,
       time: eventDate - now,
     }
