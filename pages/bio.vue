@@ -25,6 +25,9 @@
     background-clip: content-box !important;
     border-radius: 18px;
     height: 15vh;
+    &:hover {
+      i { transform: scale(1.2); }
+    }
   }
   a.social-media-link {
     width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;
@@ -76,12 +79,17 @@ export default {
       {
         hid: 'og:url',
         property: 'og:url',
-        content: 'https://bio.tedxutsukuba.com/'
+        content: 'https://www.tedxutsukuba.com/bio'
       },
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://bio.tedxutsukuba.com/'
+        content: 'https://www.tedxutsukuba.com/u_logo_banner.png'
+      },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: 'https://www.tedxutsukuba.com/twitter_summary.jpg'
       }
     ]
   },
