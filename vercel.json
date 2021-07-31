@@ -5,10 +5,6 @@
       "destination": "https://forum.tedxutsukuba.vercel.app/:match*"
     },
     {
-      "source": "https://bio.tedxutsukuba.com/:match*",
-      "destination": "/bio/:match*"
-    },
-    {
       "source": "/sitemap",
       "destination": "/sitemap.xml"
     }
