@@ -42,7 +42,7 @@ export default {
       {
         hid: 'og:author',
         property: 'og:author',
-        content: 'Haruki Kinoshita and TEDxUTsukuba website team'
+        content: '木下晴貴 | Haruki Kinoshita'
       },
       {
         hid: 'og:image',
