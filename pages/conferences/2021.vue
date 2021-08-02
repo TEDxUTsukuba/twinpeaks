@@ -301,7 +301,7 @@ export default {
   data() {
     const now = new Date();
     // 月は0ベース
-    const eventDate = new Date(2021, 10, 1);
+    const eventDate = new Date(2021, 10, 28);
     return {
       visible: false,
       isVideoActive: true,
