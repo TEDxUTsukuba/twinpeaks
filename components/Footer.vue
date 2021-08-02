@@ -88,6 +88,7 @@
           <div class="columns reverse-row-order">
             <div class="column is-4 has-text-right-tablet has-text-centered-mobile pb-0">
               <p class="is-size-7">&copy; TEDxUTsukuba 2021</p>
+              <p itemprop="author" class="is-hidden">木下晴貴</p>
             </div>
             <div class="column is-8 has-text-left-tablet has-text-centered-mobile">
               <p class="is-size-7  has-text-weight-light">
