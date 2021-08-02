@@ -107,7 +107,8 @@ export default {
         meta: [
           { hid: 'og:title', name: 'og:title', content: this.article.title },
           { hid: 'og:description', name: 'og:description', content: this.article.summary },
-          { hid: 'og:image', name: 'og:image', content: this.article.thumbnail.url }
+          { hid: 'og:image', name: 'og:image', content: `https://og-image-harry.vercel.app/${this.article.title}` }
+          // { hid: 'og:image', name: 'og:image', content: this.article.thumbnail.url }
         ]
       }
     // }
