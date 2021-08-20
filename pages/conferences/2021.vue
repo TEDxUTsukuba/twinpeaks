@@ -33,6 +33,9 @@
                 </div>
               </div>
             </countdown>
+            <p class="mt-4">
+              29th November 2021<br>1:00PM JST
+            </p>
           </div>
         </div>
       </div>
@@ -301,7 +304,7 @@ export default {
   data() {
     const now = new Date();
     // 月は0ベース
-    const eventDate = new Date(2021, 10, 28);
+    const eventDate = new Date(2021, 10, 28, 13);
     return {
       visible: false,
       isVideoActive: true,
