@@ -121,7 +121,7 @@
       </h1>
       <b-carousel :pause-info="false" :indicator-inside="false" :arrow="false" :indicator="true" animated="fade" :interval=5000>
         <b-carousel-item v-for="(feedback, i) in feedbacks" :key="i">
-          <div class="has-text-centered p-4">
+          <div class="has-text-centered py-4">
             <p class="has-text-left"><i class="mdi mdi-format-quote-open is-size-1 has-text-grey-light" /></p>
             <p class="is-size-3 has-text-weight-bold has-text-centered has-text-white px-6">{{ feedback.text }}</p>
             <p class="has-text-right"><i class="mdi mdi-format-quote-close is-size-1 has-text-grey-light" /></p>
