@@ -1,7 +1,7 @@
 <template>
   <div>
-  <section id="wrapper-dark" class="has-background-primary" style="margin: 0; padding: 0;">
-    <section style="padding-top: 8vh; padding-bottom: 2vh;">
+  <section id="wrapper-dark" style="margin: 0; padding: 0;">
+    <section class="has-background-primary" style="padding-top: 8vh; padding-bottom: 2vh;">
       <AnimatedScenery />
     </section>
     <!-- <div id="top-carousel-wrapper" class="top-carousel-wrapper columns is-gapless is-vcentered has-background-black" style="margin-bottom: 0;">
@@ -37,7 +37,7 @@
         <section class="section">
           <div class="columns is-mobile is-multiline is-variable is-0">
               <div class="column is-5-widescreen is-4-desktop is-4-tablet is-10-mobile" @mouseover="myMouseOver" @mouseleave="myMouseLeave">
-                <img src="~/assets/logo/motto.png" class="motto" style="padding-right: 50px; max-width: 400px;" alt="Ideas Worth Spreading">
+                <img src="~/assets/logo/motto.png" class="motto" style="padding-right: 50px; max-width: 360px;" alt="Ideas Worth Spreading">
               </div>
               <div class="column is-7-widescreen is-8-desktop is-8-tablet is-full-mobile">
                   <h1 v-if="$i18n.locale == 'ja'" class="title is-2 is-size-4-mobile has-text-weight-bold has-text-white">
@@ -57,7 +57,7 @@
                   </article>
                   <br>
                   <div class="has-text-right">
-                    <nuxt-link :to="localePath('/about/utsukuba')"><button class="button is-white is-rounded is-outlined">{{ $t('intro.button') }}</button></nuxt-link>
+                    <nuxt-link :to="localePath('/about/utsukuba')"><button class="button is-rounded is-gradient">{{ $t('intro.button') }}</button></nuxt-link>
                   </div>
               </div>
             </div>
@@ -87,7 +87,7 @@
               </div>
               <div class="card-content">
                 <h2 class="title is-size-5">{{ notice.title }}</h2>
-                <p class="has-text-grey">{{ notice.shortDescription }}</p>
+                <p class="has-text-grey-light">{{ notice.shortDescription }}</p>
                 <br>
                 <nav class="level is-mobile">
                   <div class="level-left">
@@ -125,7 +125,7 @@
             <p class="has-text-left"><i class="mdi mdi-format-quote-open is-size-1 has-text-grey-light" /></p>
             <p class="is-size-3 has-text-weight-bold has-text-centered has-text-white px-6">{{ feedback.text }}</p>
             <p class="has-text-right"><i class="mdi mdi-format-quote-close is-size-1 has-text-grey-light" /></p>
-            <p class="has-text-centered has-text-weight-light mt-4">{{ feedback.event }}</p>
+            <p class="has-text-centered mt-4">{{ feedback.event }}</p>
           </div>
         </b-carousel-item>
       </b-carousel>

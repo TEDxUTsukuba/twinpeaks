@@ -150,7 +150,8 @@
   fill: none; stroke:#fff;stroke-miterlimit:10;stroke-width:4px;
 }
 .cls-1{
-  fill:#c6251a; stroke:#fff;stroke-miterlimit:10;stroke-width:4px;
+  /* fill:#c6251a; stroke:#fff;stroke-miterlimit:10;stroke-width:4px; */
+  fill:none; stroke:#fff;stroke-miterlimit:10;stroke-width:4px;
 }
 /* .ridge {
   stroke-dasharray: 2000;
@@ -159,7 +160,8 @@
   animation-delay: 2s;
 } */
 .cloud {
-  fill: #c6251a;
+  fill: #fff;
+  stroke: none;
   animation: 80s slide-cloud linear infinite;
   animation-fill-mode: forwards;
   animation-iteration-count: 3;
