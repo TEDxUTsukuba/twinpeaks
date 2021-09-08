@@ -6,6 +6,7 @@
       <!-- <h1 class="subtitle has-text-grey-light">{{ $t('article.subtitle')}}</h1> -->
     </section>
     <section class="section">
+      <p v-if="!data" class="notification has-text-centered">No contents available</p>
       <!-- <div class="block">
           <b-checkbox v-model="selectedCategory" native-value="partner_interview">Partner Interview</b-checkbox>
           <b-checkbox v-model="selectedCategory" native-value="others">Others</b-checkbox>
