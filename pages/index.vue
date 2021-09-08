@@ -32,12 +32,12 @@
       </section>
     </div> -->
       
-    <section class="hero my-6">
+    <section class="hero my-5">
       <div class="hero-body" id="intro">
         <section class="section">
           <div class="columns is-mobile is-multiline is-variable is-0">
-              <div class="column is-5-widescreen is-4-desktop is-4-tablet is-10-mobile" @mouseover="myMouseOver" @mouseleave="myMouseLeave">
-                <img src="~/assets/logo/motto.png" class="motto" style="padding-right: 50px; max-width: 360px;" alt="Ideas Worth Spreading">
+              <div class="column is-5-widescreen is-4-desktop is-4-tablet is-8-mobile" @mouseover="myMouseOver" @mouseleave="myMouseLeave">
+                <img src="~/assets/logo/motto.png" class="motto" style="padding-right: 50px;" alt="Ideas Worth Spreading">
               </div>
               <div class="column is-7-widescreen is-8-desktop is-8-tablet is-full-mobile">
                   <h1 v-if="$i18n.locale == 'ja'" class="title is-2 is-size-4-mobile has-text-weight-bold has-text-white">
@@ -123,7 +123,7 @@
         <b-carousel-item v-for="(feedback, i) in feedbacks" :key="i">
           <div class="has-text-centered py-4">
             <p class="has-text-left"><i class="mdi mdi-format-quote-open is-size-1 has-text-grey-light" /></p>
-            <p class="is-size-3 has-text-weight-bold has-text-centered has-text-white px-6">{{ feedback.text }}</p>
+            <p class="is-size-3 is-size-5-mobile has-text-weight-bold has-text-centered has-text-white px-6">{{ feedback.text }}</p>
             <p class="has-text-right"><i class="mdi mdi-format-quote-close is-size-1 has-text-grey-light" /></p>
             <p class="has-text-centered mt-4">{{ feedback.event }}</p>
           </div>
