@@ -2,13 +2,10 @@
   <section id="wrapper" class="hero font-awesome">
     <!-- Covid-19 -->
     <section class="section has-text-centered">
-      <p class="heading is-size-3 is-size-4-mobile has-text-weight-bold">
-        Together, we can <br class="is-hidden-tablet">save lives.
-      </p>
-      <hr>
-      <p class="heading is-size-6">
+      <p class="heading is-size-5">
         <span class="has-text-dark">{{ $t('covid19-info.title') }}</span>
       </p>
+      <hr>
       <p>{{ $t('covid19-info.description1')}}</p>
       <div class="content">
         <b-collapse :open="false" position="is-bottom" aria-id="contentIdForA11y1">
