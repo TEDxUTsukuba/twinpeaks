@@ -11,11 +11,11 @@
         <span class="tag has-background-red is-medium has-text-white">Private</span>
       </b-navbar-item>
     </template>
-    <template slot="start">
+    <!-- <template slot="start">
       <b-navbar-item class="is-hidden-mobile">
-        <span class="is-size-7 has-text-grey-light">{{ isCelebration() }}</span>
+        <span class="is-size-7 has-text-grey-light is-family-narrow">{{ isCelebration() }}</span>
       </b-navbar-item>
-    </template>
+    </template> -->
     <template slot="end" v-if="!this.$route.path.includes('private')">
       <b-navbar-dropdown collapsible :label="$t('header.events.parent')" class="is-hoverable">
         <b-navbar-item tag="router-link" :to="{ path: localePath('/conferences/2020') }">
@@ -189,6 +189,10 @@ export default {
     color: #fff !important;
   }
   .navbar-link.is-active {
+    background-color: #E62B1E !important;
+    color: #fff !important;
+  }
+  .navbar-item.nuxt-link-exact-active.nuxt-link-active:hover {
     background-color: #E62B1E !important;
     color: #fff !important;
   }

@@ -11,7 +11,7 @@
           <div class="nmp-dark">
             <header class="card-header">
               <p class="card-header-title">
-                <span class="is-size-7 has-text-grey">{{ formatDate(notice.updatedAt) }}</span>
+                <span class="has-text-grey is-family-narrow">{{ formatDate(notice.updatedAt) }}</span>
               </p>
             </header>
             <div class="card-image">

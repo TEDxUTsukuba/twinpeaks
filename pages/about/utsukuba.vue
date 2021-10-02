@@ -5,7 +5,7 @@
       <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.title')}}</h1>
       <h1 class="subtitle has-text-grey-light">{{ $t('about.utsukuba.subtitle')}}</h1>
       <br>
-      <span v-if="$i18n.locale == 'en'" class="tag has-text-weight-bold">{{ $t('button.partialtranslation') }}</span>
+      <span v-if="$i18n.locale == 'en'" class="tag is-dark has-text-weight-bold">{{ $t('button.partialtranslation') }}</span>
     </section>
     
 
@@ -14,11 +14,11 @@
     <section class="section" id="utsukuba">
       <h1 class="title is-0" v-html="$t('about.university.title')"></h1>
       <article v-html="$t('about.university.description')"></article>
-      <p class="has-text-right">
+      <p class="has-text-right is-family-narrow">
         <a v-if="$i18n.locale == 'en'" href="https://www.tsukuba.ac.jp/en" target="_blank">Official Website <i class="mdi mdi-open-in-new" /></a>
         <a v-if="$i18n.locale == 'ja'" href="https://www.tsukuba.ac.jp/" target="_blank">公式サイト <i class="mdi mdi-open-in-new" /></a>
         <br>
-        <a href="https://youtu.be/PTRhU_RnayM" target="_blank">Graduate School Official Trailer (YouTube) <i class="mdi mdi-open-in-new" /></a> 
+        <a class="is-family-narrow" href="https://youtu.be/PTRhU_RnayM" target="_blank">Graduate School Official Trailer (YouTube) <i class="mdi mdi-open-in-new" /></a> 
       </p>
     </section>
 
@@ -104,41 +104,41 @@
                   </div>
                   <div class="media-content">
                     <span v-if="$i18n.locale == 'en'">
-                      <h1 class="title is-4">
-                        {{ member.given_name_en }} {{ member.family_name_en}}
-                      </h1>
-                      <p class="subtitle is-6 is-size-7-touch has-text-grey-light">
+                      <p class="subtitle is-size-7 has-text-primary is-family-narrow pb-1">
                         {{ member.role }}
                       </p>
+                      <h1 class="title is-4">
+                        {{ member.given_name_en }} {{ member.family_name_en }}
+                      </h1>
                     </span>
                     <span v-if="$i18n.locale == 'ja'">
+                      <p class="subtitle is-size-7 has-text-primary is-family-narrow pb-1">
+                        {{ member.role }}
+                      </p>
                       <h1 class="title is-4">
                         {{ member.family_name_ja }} {{ member.given_name_ja }}
                       </h1>
-                      <p class="subtitle is-size-6 is-size-7-touch has-text-grey-light">
-                        {{ member.role }}
-                      </p>
                     </span>
                   </div>
                 </div>
 
                 <div class="text">
-                  <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.home_state_ja">
+                  <p class="midashi is-size-7 has-text-weight-bold has-text-grey" v-if="member.home_state_ja">
                     {{ $t('about.utsukuba.members.from') }}
                     <span class="is-size-7 has-text-weight-normal has-text-grey-light" v-if="$i18n.locale == 'en'">{{ member.home_state_en }}</span>
                     <span class="is-size-7 has-text-weight-normal has-text-grey-light" v-if="$i18n.locale == 'ja'">{{ member.home_state_ja }}</span>
                   </p>
 
-                  <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.college_ja">
+                  <p class="midashi is-size-7 has-text-weight-bold has-text-grey" v-if="member.college_ja">
                     {{ $t('about.utsukuba.members.college') }}
                     <span class="is-size-7 has-text-weight-normal has-text-grey-light" v-if="$i18n.locale == 'en'">{{ member.college_en }}</span>
                     <span class="is-size-7 has-text-weight-normal has-text-grey-light" v-if="$i18n.locale == 'ja'">{{ member.college_ja }}</span>
                   </p>
                   
-                  <p class="midashi is-size-7 has-text-weight-bold has-text-primary" v-if="member.tedtalk_headline_en || member.tedtalk_headline_ja">
+                  <p class="midashi is-size-7 has-text-weight-bold has-text-grey" v-if="member.tedtalk_headline_en || member.tedtalk_headline_ja">
                     {{ $t('about.utsukuba.members.favouritetedtalk') }}
-                    <span class="has-text-grey-light has-text-weight-normal is-size-7" v-if="member.tedtalk_headline_en && $i18n.locale == 'en'">{{ member.tedtalk_headline_en.length > 35 ? toUpperCamel(member.tedtalk_headline_en.substr(0, 35)) + '…' : toUpperCamel(member.tedtalk_headline_en) }}</span>
-                    <span class="has-text-grey-light has-text-weight-normal is-size-7" v-if="member.tedtalk_headline_ja && $i18n.locale == 'ja'">{{  member.tedtalk_headline_ja.length > 20 ? member.tedtalk_headline_ja.substr(0, 20) + '…' : member.tedtalk_headline_ja }}</span>
+                    <span class="has-text-weight-normal is-size-7 has-text-grey-light" v-if="member.tedtalk_headline_en && $i18n.locale == 'en'">{{ member.tedtalk_headline_en.length > 35 ? toUpperCamel(member.tedtalk_headline_en.substr(0, 35)) + '…' : toUpperCamel(member.tedtalk_headline_en) }}</span>
+                    <span class="has-text-weight-normal is-size-7 has-text-grey-light" v-if="member.tedtalk_headline_ja && $i18n.locale == 'ja'">{{  member.tedtalk_headline_ja.length > 20 ? member.tedtalk_headline_ja.substr(0, 20) + '…' : member.tedtalk_headline_ja }}</span>
                   </p>
                 </div>
               </div>

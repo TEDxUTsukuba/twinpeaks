@@ -30,19 +30,20 @@
           <div class="column has-text-centered is-12-mobile is-4-tablet">
             <div>
               <p class="title is-size-1 has-text-primary"> 3600+</p>
-              <p class="subtitle heading has-text-dark has-text-weight-bold">Talks</p>           
+              <p class="subtitle is-family-narrow has-text-dark has-text-weight-bold">Talks</p>           
+
             </div>
           </div>
           <div class="column has-text-centered is-6-mobile is-4-tablet">
             <div>
               <p class="title is-size-1 has-text-primary">116</p>
-              <p class="subtitle heading has-text-dark has-text-weight-bold">Languages</p>
+              <p class="subtitle is-family-narrow has-text-dark has-text-weight-bold">Languages</p>
             </div>
           </div>
           <div class="column has-text-centered is-6-mobile is-4-tablet">
             <div>
               <p class="title is-size-1 has-text-primary">1.5M</p>
-              <p class="subtitle heading has-text-dark has-text-weight-bold">Views per day</p>
+              <p class="subtitle is-family-narrow has-text-dark has-text-weight-bold">Views per day</p>
             </div>
           </div>
         </div>
@@ -68,19 +69,19 @@
           <div class="column has-text-centered is-12-mobile is-4-tablet">
             <div>
               <p class="title is-size-1 has-text-light">100,000+ </p>
-              <p class="subtitle heading has-text-grey-light has-text-weight-bold">Talks</p>
+              <p class="subtitle is-family-narrow has-text-grey-light has-text-weight-bold">Talks</p>
             </div>
           </div>
           <div class="column has-text-centered is-6-mobile is-4-tablet">
             <div>
               <p class="title is-size-1 has-text-light">170+</p>
-              <p class="subtitle heading has-text-grey-light has-text-weight-bold">Countries</p>
+              <p class="subtitle is-family-narrow has-text-grey-light has-text-weight-bold">Countries</p>
             </div>
           </div>
           <div class="column has-text-centered is-6-mobile is-4-tablet">
             <div>
               <p class="title is-size-1 has-text-light"> 3000+</p>
-              <p class="subtitle heading has-text-grey-light has-text-weight-bold">Events every year</p>           
+              <p class="subtitle is-family-narrow has-text-grey-light has-text-weight-bold">Events every year</p>           
             </div>
           </div>
           
@@ -99,7 +100,7 @@
         <iframe class="has-ratio" src="https://embed.ted.com/talks/john_maeda_designing_for_simplicity" frameborder="0" allowfullscreen></iframe>
       </figure>
       <div class="divider" />
-      <p class="">{{ $t('about.ted.event')}}</p>
+      <p class="is-family-narrow has-text-primary">{{ $t('about.ted.event')}}</p>
       <p class="title">{{ $t('about.ted.talktitle')}}</p>
       <p class="subtitle">{{ $t('about.ted.speaker')}}</p>
       <a class="button is-rounded is-gradient" href="https://www.ted.com/talks">{{ $t('about.ted.watchmoreted')}}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
@@ -108,7 +109,7 @@
         <iframe class="has-ratio" src="https://embed.ted.com/talks/takaharu_tezuka_the_best_kindergarten_you_ve_ever_seen" frameborder="0" allowfullscreen></iframe>
       </figure>
       <div class="divider" />
-      <p class="">{{ $t('about.tedx.event')}}</p>
+      <p class="is-family-narrow has-text-primary">{{ $t('about.tedx.event')}}</p>
       <p class="title">{{ $t('about.tedx.talktitle')}}</p>
       <p class="subtitle">{{ $t('about.tedx.speaker')}}</p>
       <a class="button is-rounded is-gradient" target="_blank" href="https://www.ted.com/watch/tedx-talks">{{ $t('about.tedx.watchmoretedx')}}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
