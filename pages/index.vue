@@ -76,7 +76,7 @@
             <div class="nmp-dark my-4">
               <header class="card-header">
                 <p class="card-header-title">
-                  <span class="is-size-7">{{ formatDate(notice.updatedAt) }}</span>
+                  <span class="has-text-grey is-family-narrow">{{ formatDate(notice.updatedAt) }}</span>
                 </p>
               </header>
               <div class="card-image">
@@ -125,7 +125,7 @@
             <p class="has-text-left"><i class="mdi mdi-format-quote-open is-size-1 has-text-grey-light" /></p>
             <p class="is-size-3 is-size-5-mobile has-text-weight-bold has-text-centered has-text-white px-6">{{ feedback.text }}</p>
             <p class="has-text-right"><i class="mdi mdi-format-quote-close is-size-1 has-text-grey-light" /></p>
-            <p class="has-text-centered mt-4">{{ feedback.event }}</p>
+            <p class="has-text-centered mt-1 mb-4 is-family-narrow has-text-white">{{ feedback.event }}</p>
           </div>
         </b-carousel-item>
       </b-carousel>

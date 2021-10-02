@@ -6,6 +6,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Archivo';
+  font-weight: 600;
+  font-display: block;
+  src: url(~/assets/fonts/ArchivoNarrow-SemiBold.ttf) format("truetype");
+  font-style: normal;
+}
+
 .page-enter-active,
 .page-leave-active {
   // transition: opacity 1s;
@@ -120,6 +128,10 @@ body {
   @media screen and (min-width: 1216px) {
     min-height: calc(100vh - 5.25rem);
   }
+}
+
+.is-family-narrow {
+  font-family: 'Archivo', sans-serif;
 }
 
 // #teaser>iframe {

@@ -9,7 +9,7 @@
     </div>
     <div class="column has-text-centered-mobile">
       <h1 class="title is-1 ja">{{ title }}</h1>
-        <h1 class="subtitle is-size-6 has-text-primary">{{ subtitle }}</h1>
+        <h1 class="subtitle is-size-5 has-text-primary is-family-narrow">{{ subtitle }}</h1>
         <p class="has-text-left" style="text-align: justify;">
           {{ description }}
         </p>

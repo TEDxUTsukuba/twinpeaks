@@ -5,7 +5,7 @@
       <h1 class="title is-1 is-spaced">{{ $t('talks.title') }}</h1>
       <h1 class="subtitle has-text-grey-light">{{ $t('talks.subtitle') }}</h1>
       <br>
-      <span class="tag has-text-weight-bold">{{ $t('button.partialtranslation') }}</span>
+      <span class="tag is-dark has-text-weight-bold">{{ $t('button.partialtranslation') }}</span>
       <!-- <a class="text" href="https://docs.google.com/forms/d/e/1FAIpQLSeGADXgQymefKwe_HPvna2hufR9IBRYjPhUDC1gRnehCNU35Q/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer"><br><small>{{ $t('button.helpustranslate') }}</small></a> -->
     </section>
     <section class="section-wide">
