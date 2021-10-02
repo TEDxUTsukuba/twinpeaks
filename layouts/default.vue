@@ -33,18 +33,6 @@ export default {
           rel: "canonical",
           href: 'https://www.tedxutsukuba.com' + `${this.$route.path}`,
         },
-      ],
-      items: [
-        {
-          title: 'Home',
-          icon: 'home',
-          to: { name: 'index' }
-        },
-        {
-          title: 'Inspire',
-          icon: 'lightbulb',
-          to: { name: 'inspire' }
-        }
       ]
     }
   }
