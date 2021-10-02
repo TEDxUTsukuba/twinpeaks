@@ -1,9 +1,9 @@
 <template>
-  <b-navbar :class="`is-fixed-top is-spaced is-${headerColor}`" id="navbar-top">
+  <b-navbar :class="`is-fixed-top is-spaced is-black is-${headerColor}`" id="navbar-top">
     <template slot="brand">
       <b-navbar-item tag="router-link" :to="localePath('/')">
         <img  
-          src="~/assets/logo/u_bgblack_oneline.png"
+          src="~/assets/logo/u_allwhite_oneline.png"
           alt="TEDxUTsukuba Logo"
         >
       </b-navbar-item>
@@ -12,8 +12,8 @@
       </b-navbar-item>
     </template>
     <template slot="start">
-      <b-navbar-item>
-        <span class="is-size-7 has-text-grey">{{ isCelebration() }}</span>
+      <b-navbar-item class="is-hidden-mobile">
+        <span class="is-size-7 has-text-grey-light">{{ isCelebration() }}</span>
       </b-navbar-item>
     </template>
     <template slot="end" v-if="!this.$route.path.includes('private')">
@@ -53,8 +53,8 @@
       </b-navbar-dropdown>
       <b-navbar-item tag="div">
         <div class="buttons is-right">
-          <nuxt-link class="button is-info" v-if="$i18n.locale !== 'en'" :to="switchLocalePath('en')"><i class="mdi mdi-translate" style="margin-right: 0.25rem;" />English</nuxt-link>
-          <nuxt-link class="button is-danger" v-if="$i18n.locale !== 'ja'" :to="switchLocalePath('ja')"><i class="mdi mdi-translate" style="margin-right: 0.25rem;" />日本語</nuxt-link>
+          <nuxt-link class="button is-info is-light" v-if="$i18n.locale !== 'en'" :to="switchLocalePath('en')"><i class="mdi mdi-translate mr-1" />English</nuxt-link>
+          <nuxt-link class="button is-danger is-light" v-if="$i18n.locale !== 'ja'" :to="switchLocalePath('ja')"><i class="mdi mdi-translate mr-1" />日本語</nuxt-link>
           <!-- <a class="button is-info" v-if="$i18n.locale !== 'en'" :href="switchLocalePath('en')"><i class="mdi mdi-translate" style="margin-right: 0.25rem;" />English</a>
           <a class="button is-danger" v-if="$i18n.locale !== 'ja'" :href="switchLocalePath('ja')"><i class="mdi mdi-translate" style="margin-right: 0.25rem;" />日本語</a> -->
         </div>
@@ -143,12 +143,12 @@ export default {
   // },
   created() {
     if (this.$route.path.includes('private')) this.headerColor = 'darksilver'
-    else this.headerColor = 'black'
+    else this.headerColor = 'red'
   },
   watch: {
     '$route': function(to, from) {
       if (to.path.includes('private')) this.headerColor = 'darksilver'
-      else this.headerColor = 'black'
+      else this.headerColor = 'red'
     }
   },
   methods: {
@@ -169,16 +169,42 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+  .navbar-menu {
+    background-color: #c6251a;
+  }
   .navbar-item, .navbar-link {
     font-weight: bold;
-    // font-size: 125%;
-    // color: lightgray !important;
+    color: #fff;
   }
-  .normal-category:hover {
-    background-color: #c6251a !important;
+  .navbar-link:not(.is-arrowless)::after {
+    border-color: #fff;
+  }
+  .navbar-link:hover {
+    background-color: #E62B1E !important;
+    color: #fff !important;
+  }
+  .navbar-item.normal-category:hover {
+    background-color: #E62B1E !important;
+    color: #fff !important;
+  }
+  .navbar-link.is-active {
+    background-color: #E62B1E !important;
+    color: #fff !important;
   }
   .navbar.is-darksilver {
     background-color: #90a4ae !important;
+  }
+  .navbar.is-red {
+    background-color: #c6251a !important;
+  }
+  .navbar-dropdown {
+    background-color: #c6251a !important;
+    .navbar-item {
+      color: #fff !important;
+      &:hover {
+        background-color: #E62B1E !important;
+      }
+    }
   }
 </style>
