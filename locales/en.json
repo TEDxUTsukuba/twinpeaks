@@ -379,5 +379,9 @@
       "quote": "Attending TEDx events brings you opportunities to uncover new ideas and the latest research in your local areas that spark conversations in your communities.",
       "description": "<span class='has-text-weight-bold has-text-white'>TEDx events</span><span class='has-text-grey-lighter'> are happening in more than 170 countries (including virtual events) every day. Attend a TEDx event near you featuring live speakers and TED Talk videos, sparking conversation and connections.</span>"
     }
+  },
+  "visual_assets": {
+    "title": "Visual Assets",
+    "subtitle": "Learn how to use our logo and assets."
   }
 }
