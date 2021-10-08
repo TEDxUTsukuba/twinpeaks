@@ -28,7 +28,7 @@
       <div class="mb-6 has-text-grey-light columns is-multiline">
         <div class="column is-4 p-6 has-text-centered">
           <bgwhite class="has-background-white p-4" />
-          <p class="is-family-monospace mb-4 is-size-7">u_bgblack_oneline.svg</p>
+          <p class="is-family-monospace mb-4 is-size-7">u_bgwhite_oneline.svg</p>
           <p>背景色が <span class="tag is-dark is-family-monospace is-family-monospace">#ffffff</span>(白) の場合のみご利用ください。<br>Allowed only if background color is <span class="tag is-dark is-family-monospace">#ffffff</span>(white).</p>
         </div>
         <div class="column is-4 p-6 has-text-centered">
@@ -38,7 +38,7 @@
         </div>
         <div class="column is-4 p-6 has-text-centered">
           <allwhite class="has-background-black p-4" />
-          <p class="is-family-monospace mb-4 is-size-7">u_bgblack_oneline.svg</p>
+          <p class="is-family-monospace mb-4 is-size-7">u_allwhite_oneline.svg</p>
           <p>背景色が黒*または <span class="tag is-dark is-family-monospace">#ff0000</span>(赤)の場合のみご利用ください。<br>Allowed only if background color is black* or <span class="tag is-dark is-family-monospace">#ff0000</span>(red).</p>
         </div>
       </div>
