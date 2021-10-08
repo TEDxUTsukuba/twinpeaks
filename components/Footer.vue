@@ -81,17 +81,15 @@
               <p class="is-size-7">tedxutsukuba&#64;gmail.com</p>
             </div>
           </div>
-          <hr class="has-background-grey-dark mt-0 mb-4">
+          <hr class="has-background-grey mt-0 mb-2">
           <div class="columns reverse-row-order">
             <div class="column is-4 has-text-right-tablet has-text-centered-mobile pb-0">
-              <p class="is-size-7">&copy; TEDxUTsukuba 2021</p>
+              <p class="is-size-7 has-text-grey">&copy; TEDxUTsukuba 2021</p>
               <p itemprop="author" class="is-hidden">木下晴貴</p>
             </div>
             <div class="column is-8 has-text-left-tablet has-text-centered-mobile">
-              <p class="is-size-7  has-text-weight-light">
+              <p class="has-text-grey is-size-7">
                 This independent TEDx event is operated under license from TED.
-                <br class="is-hidden-tablet" />
-                <a class="is-size-7 has-text-grey-dark has-text-weight-light url" href="https://www.ted.com/about/programs-initiatives/tedx-program">About TEDx program <externalLink style="width: 0.75rem;"/></a>
               </p>
             </div>
             
