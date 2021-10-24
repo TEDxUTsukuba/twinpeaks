@@ -173,7 +173,7 @@ export default {
     // }
   },
   mounted(){
-    const api_url = 'https://script.google.com/macros/s/AKfycbxpjvd9ZpQGthMxvuS7py21Eik4mUXiv-H61RxtFfP6le1ocTfUU8rixqqklfzP3dZu7w/exec?id=' + this.$route.params.slug;
+    const api_url = 'https://script.google.com/macros/s/AKfycbwNwRYbQJQIahjoNCA5BGFJqmv0gljLvSzF5kTzOh7wZhhLchBr35mBtZ2zXHQB5L7klg/exec?id=' + this.$route.params.slug;
     axios.get(api_url, {
       crossDomain: true
     }).then(response => this.member = response.data[0]);
