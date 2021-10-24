@@ -4,8 +4,6 @@
       <i class="mdi mdi-information has-text-primary is-size-1" /> 
       <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.title')}}</h1>
       <h1 class="subtitle has-text-grey-light">{{ $t('about.utsukuba.subtitle')}}</h1>
-      <br>
-      <span v-if="$i18n.locale == 'en'" class="tag is-dark has-text-weight-bold">{{ $t('button.partialtranslation') }}</span>
     </section>
     
 
@@ -141,10 +139,10 @@
                     <span class="has-text-weight-normal is-size-7 has-text-grey-light" v-if="member.tedtalk_headline_ja && $i18n.locale == 'ja'">{{  member.tedtalk_headline_ja.length > 20 ? member.tedtalk_headline_ja.substr(0, 20) + '…' : member.tedtalk_headline_ja }}</span>
                   </p>
                 </div>
+                <div class="has-text-right mt-4">
+                  <nuxt-link :to="localePath(`/about/${member.id}`)" class="button is-rounded is-small is-gradient">{{ $t('button.readmore') }}</nuxt-link>
+                </div>
               </div>
-              <footer class="card-footer">
-                <nuxt-link :to="localePath(`/about/${member.id}`)" class="card-footer-item is-size-7 has-text-grey">{{ $t('button.readmore') }}</nuxt-link>
-              </footer>
             </div>
           </div>
         </div>
@@ -191,8 +189,10 @@
     <section class="section is-halfheight">
       <div class="section has-text-centered">
         <h1 class="title is-2 is-spaced">{{ $t('about.utsukuba.join.title')}}</h1>
-        <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.utsukuba.join.subtitle')}}</h1>
-        <nuxt-link :to="localePath('/events')" class="button is-rounded is-gradient">新歓イベントを探す</nuxt-link>
+        <h1 class="subtitle is-5 has-text-grey-light mb-6">{{ $t('about.utsukuba.join.subtitle')}}</h1>
+        <p class="has-text-left mb-2">{{ $t('about.utsukuba.join.description')}}</p>
+        <p class="has-text-left">{{ $t('about.utsukuba.join.springshinkan')}}</p>
+        <!-- <nuxt-link :to="localePath('/events')" class="button is-rounded is-gradient">新歓イベントを探す</nuxt-link> -->
       </div>
       <div class="section">
         <div class="columns is-multiline">
@@ -220,8 +220,7 @@
       <div class="section has-text-centered">
         <h1 class="title is-2 is-spaced">{{ $t('about.utsukuba.contactus.title')}}</h1>
         <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.utsukuba.contactus.subtitle')}}</h1>   
-        <h1 class="subtitle has-text-grey-light">{{ $t('about.utsukuba.contactus.description')}}</h1>   
-        <div class="columns">
+        <div class="columns mt-4">
           <div class="column">
             <a href="mailto:tedxutsukuba&#64;gmail.com">
               <div class="nmp-card-red">
@@ -337,7 +336,7 @@ export default {
     // const api_url = "https://script.google.com/macros/s/AKfycbxp6NqJLbjD4pdjqloabrjwRxN_hhXZ9nv1O3cRtdtkraiiZEfeKt9lUgubcCMbw0g17g/exec";
     axios({
       method: 'GET',
-      url: 'https://script.google.com/macros/s/AKfycbxpjvd9ZpQGthMxvuS7py21Eik4mUXiv-H61RxtFfP6le1ocTfUU8rixqqklfzP3dZu7w/exec',
+      url: 'https://script.google.com/macros/s/AKfycbwNwRYbQJQIahjoNCA5BGFJqmv0gljLvSzF5kTzOh7wZhhLchBr35mBtZ2zXHQB5L7klg/exec',
       params: { summary: 'true' }, 
       crossDomain: true
     }).then(response => {
