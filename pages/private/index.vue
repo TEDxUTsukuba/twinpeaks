@@ -12,6 +12,14 @@
       </div>
     </section>
     <section class="section">
+      <b-notification
+        type="is-warning"
+        has-icon
+        role="alert">
+        <b>OBSOLETE</b><br>
+        このページは2021年10月をもって更新を停止します。最新のドキュメントは <a href="https://tedxutsukuba-knowledgebase.herokuapp.com/">KnowledgeBase</a> にてご覧ください。<br>
+        This page will no longer be updated as of October 2021. Visit <a href="https://tedxutsukuba-knowledgebase.herokuapp.com/">KnowledgeBase</a> to read the latest document.
+      </b-notification>
         <!-- <p v-if="pass !== 'jijimuge'">
           <span class="tag is-info is-primary is-medium">{{ $t('2020.participance.pass.inputpassword') }}</span>
         </p>
