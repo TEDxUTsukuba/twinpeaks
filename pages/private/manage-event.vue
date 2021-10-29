@@ -1,6 +1,14 @@
 <template>
 <div class="has-background-white has-text-dark">
   <section class="section content">
+    <b-notification
+      type="is-warning"
+      has-icon
+      role="alert">
+      <b>OBSOLETE</b><br>
+      このページは2021年10月をもって更新を停止します。最新のドキュメントは <a href="https://tedxutsukuba-knowledgebase.herokuapp.com/">KnowledgeBase</a> にてご覧ください。<br>
+      This page will no longer be updated as of October 2021. Visit <a href="https://tedxutsukuba-knowledgebase.herokuapp.com/">KnowledgeBase</a> to read the latest document.
+    </b-notification>
     <div class="has-text-centered" style="margin-top: 5rem;">
       <h1 class="title is-1">
         イベントを追加する
