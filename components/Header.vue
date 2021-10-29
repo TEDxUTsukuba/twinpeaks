@@ -1,5 +1,5 @@
 <template>
-  <b-navbar :class="`is-fixed-top is-spaced is-black is-${headerColor}`" id="navbar-top">
+  <b-navbar class="is-fixed-top is-spaced is-red" id="navbar-top">
     <template slot="brand">
       <b-navbar-item tag="router-link" :to="localePath('/')">
         <img  
@@ -7,15 +7,7 @@
           alt="TEDxUTsukuba Logo"
         >
       </b-navbar-item>
-      <b-navbar-item v-if="this.$route.path.includes('private')">
-        <span class="tag has-background-red is-medium has-text-white">Private</span>
-      </b-navbar-item>
     </template>
-    <!-- <template slot="start">
-      <b-navbar-item class="is-hidden-mobile">
-        <span class="is-size-7 has-text-grey-light is-family-narrow">{{ isCelebration() }}</span>
-      </b-navbar-item>
-    </template> -->
     <template slot="end" v-if="!this.$route.path.includes('private')">
       <b-navbar-dropdown collapsible :label="$t('header.events.parent')" class="is-hoverable">
         <b-navbar-item tag="router-link" :to="{ path: localePath('/conferences/2020') }">
@@ -77,62 +69,7 @@
 export default {
   data(){
     return {
-      celebrationdays: [
-        {
-          "month": 1,
-          "date": 1,
-          "title_en": "New Year",
-          "title_ja": "新年おめでとう！"
-        },
-        {
-          "month": 2,
-          "date": 11,
-          "title_en": "National Foundation Day",
-          "title_ja": "建国記念の日"
-        },
-        {
-          "month": 3,
-          "date": 8,
-          "title_en": "International Women's day",
-          "title_ja": "世界女性の日"
-        },
-        {
-          "month": 3,
-          "date": 21,
-          "title_en": "Elimination of Racial Discrimination Day",
-          "title_ja": "国際人種差別撤廃デー"
-        },
-        {
-          "month": 3,
-          "date": 22,
-          "title_en": "Earth Day",
-          "title_ja": "アースデー(地球の日)"
-        },
-        {
-          "month": 5,
-          "date": 2,
-          "title_en": "International Day for Biological Diversity",
-          "title_ja": "国際生物多様性の日"
-        },
-        {
-          "month": 9,
-          "date": 15,
-          "title_en": "Internatonal Day of Democracy",
-          "title_ja": "国際民主主義デー"
-        },
-        {
-          "month": 10,
-          "date": 10,
-          "title_en": "World Mental Health Day",
-          "title_ja": "世界メンタルヘルスデー"
-        },
-        {
-          "month": 12,
-          "date": 10,
-          "title_en": "Human Rights Day",
-          "title_ja": "世界人権の日"
-        },
-      ]
+    
     }
   },
   // props: {
@@ -152,18 +89,11 @@ export default {
     }
   },
   methods: {
-    isCelebration() {
+    isCountdown() {
       const month = new Date().getMonth()+1
       const date = new Date().getDate()
       // console.log(month, date)
-      const data = this.celebrationdays.find(item => item.month === month && item.date === date)
-      if (data === undefined) {
-        return "Spread Globally, Connect Locally."
-      } else if (this.$i18n.locale !== 'en') {
-        return "Celebrating " + data.title_en
-      } else {
-        return data.title_ja + "を祝おう"
-      }
+      // const eventDate 
     }
   }
 }
