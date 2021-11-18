@@ -374,7 +374,7 @@ h1.is-0 {
   padding-top: 5vh;
 }
 
-section#wrapper {
+section#wrapper, section.wrapper {
   // background-color: $light;
   background-attachment: fixed !important;
   // background-color: #e7eff9;
@@ -384,7 +384,7 @@ section#wrapper {
   // background-image: linear-gradient(to top, $light 0%, #d1dbe4 74%);
 }
 
-section#wrapper-dark {
+section#wrapper-dark, section.wrapper-dark {
   height: 100%;
   background-attachment: fixed !important;
   background-color: $dark-grey-900;

@@ -26,9 +26,9 @@
       <b-navbar-item class="normal-category" tag="nuxt-link" :to="localePath('/talks')">
         {{ $t('header.talks.item') }}
       </b-navbar-item>
-      <b-navbar-item class="normal-category" tag="nuxt-link" :to="localePath('/articles')">
+      <!-- <b-navbar-item class="normal-category" tag="nuxt-link" :to="localePath('/articles')">
         {{ $t('header.articles.item') }}
-      </b-navbar-item>
+      </b-navbar-item> -->
       <b-navbar-item class="normal-category" tag="nuxt-link" :to="localePath('/partners')">
         {{ $t('header.partners.item') }}
       </b-navbar-item>

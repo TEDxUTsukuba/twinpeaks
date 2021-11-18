@@ -1,9 +1,9 @@
 <template>
   <div>
-  <section id="wrapper-dark" style="margin: 0; padding: 0;">
-    <section class="has-background-primary" style="padding-top: 8vh; padding-bottom: 2vh;">
-      <AnimatedScenery />
-    </section>
+  <section id="top" class="wrapper-dark has-background-primary" style="margin: 0; padding: 0;">
+    <!-- <section style="padding-top: 8vh; padding-bottom: 2vh;">
+      
+    </section> -->
     <!-- <div id="top-carousel-wrapper" class="top-carousel-wrapper columns is-gapless is-vcentered has-background-black" style="margin-bottom: 0;">
       <div class="column is-12-touch">
         <Carousel id="top-carousel" />
@@ -32,41 +32,44 @@
       </section>
     </div> -->
       
-    <section class="hero my-5">
-      <div class="hero-body" id="intro">
-        <section class="section">
-          <div class="columns is-mobile is-multiline is-variable is-0">
-              <div class="column is-5-widescreen is-4-desktop is-4-tablet is-8-mobile" @mouseover="myMouseOver" @mouseleave="myMouseLeave">
-                <img src="~/assets/logo/motto.png" class="motto" style="padding-right: 50px;" alt="Ideas Worth Spreading">
+    <section class="hero fullheight-without-header">
+      <div class="hero-body is-flex" id="intro" style="align-items: center;">
+        <div>
+          <AnimatedScenery />
+          <section class="section mt-4">
+            <div class="columns is-mobile is-multiline is-variable is-0">
+                <div class="column is-4-desktop is-4-tablet is-8-mobile" @mouseover="myMouseOver" @mouseleave="myMouseLeave">
+                  <img v-prlx src="~/assets/logo/motto.png" class="motto" style="padding-right: 50px;" alt="Ideas Worth Spreading">
+                </div>
+                <div class="column is-8-desktop is-8-tablet is-full-mobile">
+                    <h1 v-if="$i18n.locale == 'ja'" class="title is-2 is-size-4-mobile has-text-weight-bold has-text-white">
+                      <span v-html="$t('intro.headline1')" />
+                      <br class="is-hidden-mobile">
+                      <span v-html="$t('intro.headline2')" />
+                    </h1>
+                    <h1 v-if="$i18n.locale == 'en'" class="title is-2 is-size-4-mobile has-text-weight-light has-text-white">
+                      <span v-html="$t('intro.headline1')" />
+                      <br class="is-hidden-mobile">
+                      <span v-html="$t('intro.headline2')" />
+                    </h1>
+                    <br>
+                    <img id="rocket" src="~/assets/svg/rocket.png" width="100%" style="z-index: 0;" alt="">
+                    <article class="is-size-6 has-text-light">
+                      {{ $t('intro.description') }}
+                    </article>
+                    <br>
+                    <div class="has-text-right">
+                      <nuxt-link :to="localePath('/about/utsukuba')"><button class="button is-rounded is-white">{{ $t('intro.button') }}</button></nuxt-link>
+                    </div>
+                </div>
               </div>
-              <div class="column is-7-widescreen is-8-desktop is-8-tablet is-full-mobile">
-                  <h1 v-if="$i18n.locale == 'ja'" class="title is-2 is-size-4-mobile has-text-weight-bold has-text-white">
-                    <span v-html="$t('intro.headline1')" />
-                    <br class="is-hidden-mobile">
-                    <span v-html="$t('intro.headline2')" />
-                  </h1>
-                  <h1 v-if="$i18n.locale == 'en'" class="title is-2 is-size-4-mobile has-text-weight-light has-text-white">
-                    <span v-html="$t('intro.headline1')" />
-                    <br class="is-hidden-mobile">
-                    <span v-html="$t('intro.headline2')" />
-                  </h1>
-                  <br>
-                  <img id="rocket" src="~/assets/svg/rocket.png" width="100%" style="z-index: 0;" alt="">
-                  <article class="is-size-6 has-text-light">
-                    {{ $t('intro.description') }}
-                  </article>
-                  <br>
-                  <div class="has-text-right">
-                    <nuxt-link :to="localePath('/about/utsukuba')"><button class="button is-rounded is-gradient">{{ $t('intro.button') }}</button></nuxt-link>
-                  </div>
-              </div>
-            </div>
-        </section>
+          </section>
+        </div>
       </div>
     </section>
   </section>
 
-    <section id="wrapper-dark" class="hero">
+    <section class="wrapper-dark hero">
       <section class="section">
         <h1 class="title is-2 has-text-centered has-text-grey-light mt-2 mb-6">
           {{ $t('news.title') }}
@@ -192,8 +195,19 @@ export default {
       return
     }
   },
-  mounted() {
-    // const isVideoPlayed = this.$cookies.get("isVideoPlayed");
+  mounted(){
+    const scene1 = this.$scrollmagic
+      .scene({
+        triggerElement: '#wrapper-dark',
+        triggerHook: 1,
+        reverse: false
+      })
+      .setTween('#intro', {
+        css: {
+          opacity: 1
+        }
+      })
+    this.$scrollmagic.addScene(scene1)
   },
   methods: {
     formatDate(date) {
@@ -232,10 +246,6 @@ export default {
   h1.thin {
     font-weight: 100 !important;
   }
-  #notice {
-    opacity: 1;
-    transition: all 0.25s;
-  }
   #top-carousel {
     transition: all 1s;
     // opacity: 0;
@@ -267,6 +277,10 @@ export default {
   .motto {
     width: 100%; max-width: 480px;
     // transform: translate3d(0,0,100px);
+  }
+  #intro {
+    opacity: 0;
+    transition: all 1s;
   }
 </style>
 
