@@ -35,8 +35,8 @@
     </section>
     <section class="section">
         <PartnerList category="take" width_fullhd="4" width_desktop="4" width_tablet="6" width_mobile="12" />
-        <PartnerList category="ume" width_fullhd="3" width_desktop="3" width_tablet="4" width_mobile="6" />
-        <PartnerList category="sakura" width_fullhd="2" width_desktop="2" width_tablet="3" width_mobile="6" />
+        <PartnerList category="ume" isLazy="lazy" width_fullhd="3" width_desktop="3" width_tablet="4" width_mobile="6" />
+        <PartnerList category="sakura" isLazy="lazy" width_fullhd="2" width_desktop="2" width_tablet="3" width_mobile="6" />
     </section>
     <section class="section">
       <div class="container has-text-centered">
