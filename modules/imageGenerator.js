@@ -19,7 +19,7 @@ const generateOGP = function (value) {
 
 
   const textSvg = textToSVG.getSVG(ogp_titles[value].replace(/_/g, ' '), svgOptions);
-  sharp('./static/ogp/ogp_bg_wave.png')
+  sharp('./static/img_generator/ogp_bg_wave.png')
     .composite([
       {
         input: Buffer.from(textSvg)

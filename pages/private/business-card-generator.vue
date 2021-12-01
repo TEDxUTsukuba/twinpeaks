@@ -273,7 +273,7 @@ export default {
   },
   mounted () {
     const image = new window.Image();
-    image.src = "/ogp/bg_meishi.png";
+    image.src = "/img_generator/bg_meishi.png";
     image.onload = () => {
       // set image only when it is loaded
       this.bgImage = image;
