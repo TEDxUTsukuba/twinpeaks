@@ -41,58 +41,6 @@ export default {
   components: {
     Logo
   },
-  head: {
-    title: 'TEDxUTsukuba',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { 
-        hid: 'description', 
-        name: 'description', 
-        content: 'TEDxUTsukubaは2016年に設立されたTEDxコミュニティ。筑波大学の一般学生団体であり、学生や卒業生を中心として運営されています。これまでに4回のメインカンファレンスを含む数々のTEDxイベントを開催しており、登壇者には筑波大学の教員や学生、卒業生を中心に、多彩なアイディアを持つ方々をお招きしています。'
-      },
-            { 
-        hid: 'twitter:card', 
-        name: 'twitter:card', 
-        content: 'summary' 
-      },
-      { 
-        hid: 'twitter:site', 
-        name: 'twitter:site', 
-        content: '@tedxutsukuba' 
-      },
-      { 
-        hid: 'twitter:creator', 
-        name: 'twitter:creator', 
-        content: '@tedxutsukuba' 
-      },
-      {
-        hid: 'og:title',
-        property: 'og:title',
-        content: 'TEDxUTsukuba'
-      },
-      {
-        hid: 'og:type',
-        property: 'og:type',
-        content: 'website'
-      },
-      {
-        hid: 'og:url',
-        property: 'og:url',
-        content: 'https://www.tedxutsukuba.com/bio'
-      },
-      {
-        hid: 'og:image',
-        property: 'og:image',
-        content: 'https://www.tedxutsukuba.com/u_logo_banner.png'
-      },
-      {
-        hid: 'twitter:image',
-        name: 'twitter:image',
-        content: 'https://www.tedxutsukuba.com/twitter_summary.jpg'
-      }
-    ]
-  },
   data() {
     return {
       items: [

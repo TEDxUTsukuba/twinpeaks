@@ -1,33 +1,47 @@
 require('dotenv').config();
-const { STEIN_API, NUXT_ENV_DATOCMS_API_TOKEN } = process.env;
+const { STEIN_API, NUXT_ENV_DATOCMS_API_TOKEN, BASE_URL, BASE_OGP } = process.env;
+const BASE_NAME = 'TEDxUTsukuba'
+const BASE_DESC = 'TEDxUTsukubaは "Ideas worth spreading" というTEDの理念のもとに、筑波大学の学生を中心として独自に運営されているコミュニティです。'
+const BASE_DESC_EN = 'TEDxUTsukuba is an independently-organized TEDx community at the University of Tsukuba. '
+const BASE_AUTHOR = '木下晴貴 | Haruki Kinoshita'
+const BASE_SITE_NAME = 'TEDxUTsukuba Official Website'
+const JA ='TEDxUTsukubaは、TEDよりライセンスを受け、筑波大学の学生や卒業生などによって独自に運営されています。教養から科学、地域の話題から世界規模の問題に至るまで、様々なトピックスに焦点を当ててきました。 '
+const EN ='Managed by passionate volunteers both in and around the campus, TEDxUTsukuba has shed light on relevant topics - from liberal arts to science, local stories to global issues. '
 
 export default {
   /*
   ** Headers of the page
   */
   env: {
-    STEIN_API, NUXT_ENV_DATOCMS_API_TOKEN
+    STEIN_API, NUXT_ENV_DATOCMS_API_TOKEN, BASE_NAME, BASE_DESC, BASE_DESC_EN, BASE_URL, BASE_OGP, BASE_AUTHOR, BASE_SITE_NAME
   },
+  ssr: 'true',
+  target: 'static',
+
   head: {
-    // title: process.env.npm_package_name || '',
-    title: "TEDxUTsukuba | Spread Globally, Connect Locally.",
+    title: BASE_NAME + " | Spread Globally, Connect Locally.",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { 
         hid: 'description', 
         name: 'description', 
-        content: '価値あるアイディアを、つくばから。TEDxUTsukubaは "Ideas worth spreading" というTEDの理念のもとに、筑波大学の学生を中心として独自に運営されているコミュニティです。'
+        content: BASE_DESC
+      },
+      {
+        hid: 'author',
+        property: 'author',
+        content: BASE_AUTHOR
       },
       {
         hid: 'og:title',
         property: 'og:title',
-        content: "TEDxUTsukuba | Spread Globally, Connect Locally."
+        content: BASE_NAME + " | Spread Globally, Connect Locally."
       },
       {
         hid: 'og:description',
         property: 'og:description',
-        content: '価値あるアイディアを、つくばから。TEDxUTsukubaは "Ideas worth spreading" というTEDの理念のもとに、筑波大学の学生を中心として独自に運営されているコミュニティです。'
+        content: BASE_DESC
       },
       {
         hid: 'og:type',
@@ -37,22 +51,22 @@ export default {
       {
         hid: 'og:url',
         property: 'og:url',
-        content: 'https://www.tedxutsukuba.com'
+        content: BASE_URL
       },
       {
         hid: 'og:author',
         property: 'og:author',
-        content: '木下晴貴 | Haruki Kinoshita'
+        content: BASE_AUTHOR
       },
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://www.tedxutsukuba.com/skyscraper.png'
+        content: BASE_URL+BASE_OGP+'/skyscraper.png'
       },
       { 
         hid: 'og:site_name', 
         property: 'og:site_name', 
-        content: 'TEDxUTsukuba Official Website' 
+        content: BASE_SITE_NAME 
       },
       {
         hid: 'twitter:card',

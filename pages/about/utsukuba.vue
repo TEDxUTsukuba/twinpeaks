@@ -253,6 +253,8 @@
 
 
 <script>
+import Meta from '~/assets/mixins/meta'
+
 import axios from 'axios';
 import Modal from '~/components/Modal.vue'
 // import VueInstagram from 'vue-instagram'
@@ -261,11 +263,16 @@ import jobs from '~/references/jobs.json'
 import externalLink from '@/assets/svg/external-link-alt-solid.svg'
 
 export default {
+  mixins: [Meta],
   components: {
     Modal, externalLink, Movie
   },
   data() {
     return {
+      locale: this.$i18n.locale,
+      meta: {
+        title: "About TEDxUTsukuba",
+      },
       isImageModalActive: false,
       memberList: {},
       // memberListRemainder: {},
@@ -286,18 +293,6 @@ export default {
         { name: 'International', displayname: 'Int\'\l' }
       ]
     }
-  },
-  head: {
-    title: 'About TEDxUTsukuba | TEDxUTsukuba',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { 
-        hid: 'description', 
-        name: 'description', 
-        content: 'TEDxUTsukubaは2016年に設立されたTEDxコミュニティ。筑波大学の一般学生団体であり、学生や卒業生を中心として運営されています。これまでに4回のメインカンファレンスを含む数々のTEDxイベントを開催しており、登壇者には筑波大学の教員や学生、卒業生を中心に、多彩なアイディアを持つ方々をお招きしています。'
-      },
-    ]
   },
   methods: {
     openModal (partner) {

@@ -27,13 +27,7 @@ export default {
             }
           ]
         };
-      },
-      link: [
-        {
-          rel: "canonical",
-          href: 'https://www.tedxutsukuba.com' + `${this.$route.path}`,
-        },
-      ]
+      }
     }
   }
 }

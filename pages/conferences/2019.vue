@@ -228,6 +228,8 @@
 </template>
 
 <script>
+import Meta from '~/assets/mixins/meta'
+
 import Card from '~/components/EnjaCard'
 import Movie from '~/components/Movie'
 import Image_sp1 from '~/assets/speakers/2019/sp_2019_1.jpg'
@@ -237,11 +239,22 @@ import Image_sp4 from '~/assets/speakers/2019/sp_2019_3-2.jpg'
 import Image_sp5 from '~/assets/speakers/2019/sp_2019_4.jpg'
 
 export default {
+  mixins: [Meta],
   components: {
     Card, Movie
   },
   data(){
     return {
+      locale: this.$i18n.locale,
+      meta: {
+        title: 'TEDxUTsukuba 2019 "CoPhilAction"',
+        description: {
+          en: 'Join us on Nov 10, 2019 for TEDxUTsukuba "CoPhilAction".',
+          ja: '2019年11月10日(日) TEDxUTsukuba "CoPhilAction" 筑波大学5C棟にて開催。'
+        },
+        image: '/sns_banner_2019.png',
+        twitter_card_type: 'summary_large_image'
+      },
       src_sp1: Image_sp1,
       src_sp2: Image_sp2,
       src_sp3: Image_sp3,
@@ -255,68 +268,6 @@ export default {
           ],
           topImg: require(`~/assets/speakers/2019/sp_2019_1.jpg`),
     }
-  },
-  head: {
-    title: '2019 CoPhilAction | TEDxUTsukuba',
-      meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { 
-        hid: 'description', 
-        name: 'description', 
-        content: '2019年11月10日(日) TEDxUTsukuba "CoPhilAction" 筑波大学5C棟にて開催。Join us on Nov 10, 2019 for TEDxUTsukuba "CoPhilAction".'
-      },
-      { 
-        hid: 'twitter:card', 
-        name: 'twitter:card', 
-        content: 'summary_large_image' 
-      },
-      { 
-        hid: 'twitter:site', 
-        name: 'twitter:site', 
-        content: '@tedxutsukuba' 
-      },
-      { 
-        hid: 'twitter:creator', 
-        name: 'twitter:creator', 
-        content: '@tedxutsukuba' 
-      },
-      {
-        hid: 'og:title',
-        property: 'og:title',
-        content: 'TEDxUTsukuba 2019 CoPhilAction'
-      },
-      {
-        hid: 'og:type',
-        property: 'og:type',
-        content: 'website'
-      },
-      {
-        hid: 'og:url',
-        property: 'og:url',
-        content: 'https://tedxutsukuba.com/events/2019'
-      },
-      {
-        hid: 'og:description',
-        property: 'og:description',
-        content: 'Join us for our annual event on Nov. 10, 2019.'
-      },
-      {
-        hid: 'og:author',
-        property: 'og:author',
-        content: '木下晴貴 | Haruki Kinoshita'
-      },
-      {
-        hid: 'og:image',
-        property: 'og:image',
-        content: 'https://www.tedxutsukuba.com/sns_banner_2019.png'
-      },
-      { 
-        hid: 'og:site_name', 
-        name: 'og:site_name', 
-        content: 'TEDxUTsukuba Official Website' 
-      }
-    ]
   },
   methods: {
     getYouTubeUrl(value) {

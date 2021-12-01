@@ -27,18 +27,18 @@
 </template>
 
 <script>
+import Meta from '~/assets/mixins/meta'
+
 export default {
-  head: {
-    title: 'Blog | TEDxUTsukuba',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { 
-        hid: 'description', 
-        name: 'description', 
-        content: 'TEDxUTsukubaでは、イベントを通して教養から科学、地域の話題から世界規模の問題に至るまで、様々なトピックスに焦点を当ててきました。We have shed light on relevant topics - from liberal arts to science, local stories to global issues.'
+  mixins: [Meta],
+  data() {
+    return {
+      locale: this.$i18n.locale,
+      meta: {
+        title: this.$i18n.t('header.blog.item'),
+        description: this.$i18n.t('blog.subtitle'),
       },
-    ]
+    }
   },
   async asyncData({ $content, app }) {
     const articles = await $content(`blog`)
