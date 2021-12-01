@@ -260,7 +260,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://www.tedxutsukuba.com/twitter_summary.png'
+        content: 'https://www.tedxutsukuba.com/ogp/twitter_summary.png'
       }
     ]
   }
