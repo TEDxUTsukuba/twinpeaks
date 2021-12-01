@@ -34,9 +34,9 @@
         <h1 class="subtitle has-text-grey-light">{{ $t('partners.subtitle') }}</h1>
     </section>
     <section class="section">
-        <PartnerList category="take" width_fullhd="4" width_desktop="4" width_tablet="6" width_mobile="12" />
-        <PartnerList category="ume" isLazy="lazy" width_fullhd="3" width_desktop="3" width_tablet="4" width_mobile="6" />
-        <PartnerList category="sakura" isLazy="lazy" width_fullhd="2" width_desktop="2" width_tablet="3" width_mobile="6" />
+        <PartnerList category="take" loadingMethod="eager" width_fullhd="4" width_desktop="4" width_tablet="6" width_mobile="12" />
+        <PartnerList category="ume" loadingMethod="lazy" width_fullhd="3" width_desktop="3" width_tablet="4" width_mobile="6" />
+        <PartnerList category="sakura" loadingMethod="lazy" width_fullhd="2" width_desktop="2" width_tablet="3" width_mobile="6" />
     </section>
     <section class="section">
       <div class="container has-text-centered">
@@ -49,15 +49,24 @@
 </template>
 
 <script>
+import Meta from '~/assets/mixins/meta'
+
 // import Modal from '~/components/Modal.vue'
 import PartnerList from '~/components/PartnerList.vue'
 export default {
+  mixins: [Meta],
   components: {
     // Modal, 
     PartnerList
   },
   data() {
     return {
+      locale: this.$i18n.locale,
+      meta: {
+        title: this.$i18n.t('partners.title'),
+        description: this.$i18n.t('partners.subtitle'),
+        twitter_card_type: 'summary'
+      },
       showContent: false,
       postItem: "",
       iconSize: 'is-large',
@@ -68,18 +77,6 @@ export default {
         // require('~/assets/partners/2020/carousel_4.jpg')
       ]
     }
-  },
-  head: {
-    title: 'Partners | TEDxUTsukuba',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { 
-        hid: 'description', 
-        name: 'description', 
-        content: '私たちのイベントにご協賛をいただいているパートナーの皆さまをご紹介いたします。Our event is made possible by the continuous support of our partners. We are working together under the shared values and vision.'
-      },
-    ]
   },
   methods: {
     openModal (partner) {
