@@ -13,22 +13,39 @@ export default {
   components: {
     Header, Footer
   },
-  data () {
-    return {
-      head() {
-        return {
-          htmlAttrs: {
-            lang: this.$i18n.locale
-          },
-          meta: [
-            {
-              property: 'og:locale',
-              content: this.$i18n.locale
-            }
-          ]
-        };
-      }
+  computed: {
+    currentPath() {
+      return this.$route.path
+    },
+    currentName() {
+      const sans_locale = this.$route.path.replace(/\/en/, '')
+      return sans_locale[1].toUpperCase() + sans_locale.slice(2) + " | " + process.env.BASE_NAME
     }
+  },
+  head() {
+    return {
+      htmlAttrs: {
+        lang: this.$i18n.locale
+      },
+      title: this.currentName,
+      meta: [
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.currentName
+        },
+        {
+          property: 'og:locale',
+          content: this.$i18n.locale
+        }
+      ],
+      link: [
+        {
+          rel: 'canonical',
+          href: `${process.env.BASE_URL}${this.currentPath}`
+        }
+      ]
+    };
   }
 }
 </script>
