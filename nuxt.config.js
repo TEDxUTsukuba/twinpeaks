@@ -1,12 +1,10 @@
 require('dotenv').config();
 const { STEIN_API, NUXT_ENV_DATOCMS_API_TOKEN, BASE_URL, BASE_OGP } = process.env;
 const BASE_NAME = 'TEDxUTsukuba'
-const BASE_DESC = 'TEDxUTsukubaは "Ideas worth spreading" というTEDの理念のもとに、筑波大学の学生を中心として独自に運営されているコミュニティです。'
-const BASE_DESC_EN = 'TEDxUTsukuba is an independently-organized TEDx community at the University of Tsukuba. '
+const BASE_DESC = 'TEDxUTsukubaは "Ideas worth spreading" というTEDの理念のもとに、筑波大学の学生を中心として独自に運営されているコミュニティです。教養から科学、地域の話題から世界規模の問題に至るまで、様々なトピックスに焦点を当ててきました。'
+const BASE_DESC_EN = 'TEDxUTsukuba is an independently-organized TEDx community at the University of Tsukuba. Managed by passionate volunteers both in and around the campus, TEDxUTsukuba has shed light on relevant topics - from liberal arts to science, local stories to global issues. '
 const BASE_AUTHOR = '木下晴貴 | Haruki Kinoshita'
 const BASE_SITE_NAME = 'TEDxUTsukuba Official Website'
-const JA ='TEDxUTsukubaは、TEDよりライセンスを受け、筑波大学の学生や卒業生などによって独自に運営されています。教養から科学、地域の話題から世界規模の問題に至るまで、様々なトピックスに焦点を当ててきました。 '
-const EN ='Managed by passionate volunteers both in and around the campus, TEDxUTsukuba has shed light on relevant topics - from liberal arts to science, local stories to global issues. '
 
 export default {
   /*
