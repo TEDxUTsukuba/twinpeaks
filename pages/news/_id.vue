@@ -45,12 +45,15 @@
 
 
 <script>
+import Meta from '~/assets/mixins/meta'
+
 import { request, gql } from '~/lib/datocms'
 import { Image } from "vue-datocms";
 import format from 'date-fns/format'
 import parseISO from 'date-fns/parseISO'
 
 export default {
+  mixins: [Meta],
   components: {
     "datocms-image": Image
   },
@@ -78,7 +81,7 @@ export default {
   head() {
     if (!this.ready) {
       return
-    }
+    } 
   },
   methods: {
     formatDate(date) {

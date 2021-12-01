@@ -160,30 +160,26 @@
 </template>
 
 <script>
+import Meta from '~/assets/mixins/meta'
+
 import Movie from '~/components/Movie.vue'
 export default {
+  mixins: [Meta],
   components: {
     Movie
   },
   data() {
     return {
+      locale: this.$i18n.locale,
+      meta: {
+        title: this.$i18n.t('about.tedandtedx.title'),
+        description: this.$i18n.t('about.tedandtedx.subtitle'),
+      },
       videoId1: 'd0NHOpeczUU',
       videoId2: 'JSP7GPU3Eic',
       videoId3: '-FOCpMAww28',
       videoId4: 'xHsXfmHaBUo',
     }
-  },
-  head: {
-    title: 'About TED and TEDx | TEDxUTsukuba',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { 
-        hid: 'description', 
-        name: 'description', 
-        content: 'TEDカンファレンスおよびTEDxプログラムについてご紹介いたします。Learn more about TED Conference and TEDx Program. '
-      },
-    ]
   },
   mounted(){
     const scene1 = this.$scrollmagic

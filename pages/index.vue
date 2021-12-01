@@ -33,7 +33,7 @@
     </div> -->
       
     <section class="hero fullheight-without-header">
-      <div class="hero-body is-flex" id="intro" style="align-items: center;">
+      <div class="hero-body is-flex mx-auto" id="intro" style="align-items: center; max-width: 1407px;">
         <div>
           <AnimatedScenery />
           <section class="section mt-4">
@@ -42,25 +42,23 @@
                   <img v-prlx src="~/assets/logo/motto.png" class="motto" style="padding-right: 50px;" alt="Ideas Worth Spreading">
                 </div>
                 <div class="column is-8-desktop is-8-tablet is-full-mobile">
-                    <h1 v-if="$i18n.locale == 'ja'" class="title is-2 is-size-4-mobile has-text-weight-bold has-text-white">
-                      <span v-html="$t('intro.headline1')" />
-                      <br class="is-hidden-mobile">
-                      <span v-html="$t('intro.headline2')" />
-                    </h1>
-                    <h1 v-if="$i18n.locale == 'en'" class="title is-2 is-size-4-mobile has-text-weight-light has-text-white">
-                      <span v-html="$t('intro.headline1')" />
-                      <br class="is-hidden-mobile">
-                      <span v-html="$t('intro.headline2')" />
-                    </h1>
-                    <br>
-                    <img id="rocket" src="~/assets/svg/rocket.png" width="100%" style="z-index: 0;" alt="">
-                    <article class="is-size-6 has-text-light">
-                      {{ $t('intro.description') }}
-                    </article>
-                    <br>
-                    <div class="has-text-right">
-                      <nuxt-link :to="localePath('/about/utsukuba')"><button class="button is-rounded is-white">{{ $t('intro.button') }}</button></nuxt-link>
-                    </div>
+                  <h1 v-if="$i18n.locale == 'ja'" class="title is-size-3-tablet is-size-4-mobile has-text-weight-bold has-text-white">
+                    <span v-html="$t('intro.headline1')" />
+                    <br class="is-hidden-mobile">
+                    <span v-html="$t('intro.headline2')" />
+                  </h1>
+                  <h1 v-if="$i18n.locale == 'en'" class="title is-size-3-tablet is-size-4-mobile has-text-weight-light has-text-white">
+                    <span v-html="$t('intro.headline1')" />
+                    <br class="is-hidden-mobile">
+                    <span v-html="$t('intro.headline2')" />
+                  </h1>
+                  <img id="rocket" src="~/assets/svg/rocket.png" width="100%" style="z-index: 0;" alt="">
+                  <article class="is-size-6">
+                    {{ $t('intro.description') }}
+                  </article>
+                  <div class="has-text-right mt-4">
+                    <nuxt-link :to="localePath('/about/utsukuba')"><button class="button is-rounded is-white">{{ $t('intro.button') }}</button></nuxt-link>
+                  </div>
                 </div>
               </div>
           </section>
@@ -71,7 +69,7 @@
 
     <section class="wrapper-dark hero">
       <section class="section">
-        <h1 class="title is-2 has-text-centered has-text-grey-light mt-2 mb-6">
+        <h1 class="title is-0 has-text-white">
           {{ $t('news.title') }}
         </h1>
         <vue-horizontal class="columns">
@@ -119,7 +117,7 @@
     </section>
 
     <section class="section pt-0">
-      <h1 class="title is-2 has-text-centered has-text-grey-light mt-2 mb-0">
+      <h1 class="title is-0 has-text-white">
         {{ $t('voice.title') }}
       </h1>
       <b-carousel :pause-info="false" :indicator-inside="false" :arrow="false" :indicator="true" animated="fade" :interval=5000>
@@ -198,7 +196,7 @@ export default {
   mounted(){
     const scene1 = this.$scrollmagic
       .scene({
-        triggerElement: '#wrapper-dark',
+        triggerElement: '#top',
         triggerHook: 1,
         reverse: false
       })

@@ -93,32 +93,24 @@
 </style>
 
 <script>
-import Vue from 'vue';
-// import VueYoutube from 'vue-youtube';
+import Meta from '~/assets/mixins/meta'
+
 import Movie from '~/components/Movie';
 
-// Vue.use(VueYoutube);
-
 export default {
+  mixins: [Meta],
   components: {
     Movie
   },
   data() {
     return {
-      videoId1: 'Ot4n4txl4Ko'
+      videoId1: 'Ot4n4txl4Ko',
+      locale: this.$i18n.locale,
+      meta: {
+        title: this.$i18n.t('talks.title'),
+        description: this.$i18n.t('talks.subtitle'),
+      }
     }
-  },
-  head: {
-    title: 'Talks | TEDxUTsukuba',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { 
-        hid: 'description', 
-        name: 'description', 
-        content: 'TEDxUTsukubaでは、イベントを通して教養から科学、地域の話題から世界規模の問題に至るまで、様々なトピックスに焦点を当ててきました。We have shed light on relevant topics - from liberal arts to science, local stories to global issues.'
-      },
-    ]
   },
   filters: {
     substrBefore(text, value) {

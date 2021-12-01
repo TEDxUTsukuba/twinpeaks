@@ -210,6 +210,8 @@
 </template>
 
 <script>
+import Meta from '~/assets/mixins/meta'
+
 import Card from '~/components/EnjaCard'
 import Movie from '~/components/Movie'
 import Image_sp1 from '~/assets/speakers/2020/speaker-01.png'
@@ -218,11 +220,22 @@ import Image_sp3 from '~/assets/speakers/2020/speaker-03.png'
 import Image_sp4 from '~/assets/speakers/2020/speaker-04.png'
 
 export default {
+  mixins: [Meta],
   components: {
     Card, Movie
   },
   data(){
     return {
+      locale: this.$i18n.locale,
+      meta: {
+        title: 'TEDxUTsukuba 2020 "JIJIMUGE"',
+        description: {
+          en: 'Join us on Nov 29, 2020 for TEDxUTsukuba "CoPhilAction", our first virtual conference.',
+          ja: '2020年11月29日(日) TEDxUTsukuba "JIJIMUGE" オンラインで開催。'
+        },
+        image: '/sns_banner_2020.png',
+        twitter_card_type: 'summary_large_image'
+      },
       // width: window.innerWidth,
       // height: window.innerHeight,
       isImageModalActive: false,
@@ -275,68 +288,6 @@ export default {
         }
       ],
     }
-  },
-  head: {
-    title: '2020 JIJIMUGE | TEDxUTsukuba',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { 
-        hid: 'description', 
-        name: 'description', 
-        content: '2020年11月29日(日) TEDxUTsukuba "JIJIMUGE" オンラインで開催。Join us on Nov 29, 2020 for TEDxUTsukuba "CoPhilAction", our first virtual conference.'
-      },
-      { 
-        hid: 'twitter:card', 
-        name: 'twitter:card', 
-        content: 'summary_large_image' 
-      },
-      { 
-        hid: 'twitter:site', 
-        name: 'twitter:site', 
-        content: '@tedxutsukuba' 
-      },
-      { 
-        hid: 'twitter:creator', 
-        name: 'twitter:creator', 
-        content: '@tedxutsukuba' 
-      },
-      {
-        hid: 'og:title',
-        property: 'og:title',
-        content: 'TEDxUTsukuba 2020 JIJIMUGE'
-      },
-      {
-        hid: 'og:type',
-        property: 'og:type',
-        content: 'website'
-      },
-      {
-        hid: 'og:url',
-        property: 'og:url',
-        content: 'https://tedxutsukuba.com/events/2020'
-      },
-      {
-        hid: 'og:description',
-        property: 'og:description',
-        content: "2020年11月29日(日) オンライン開催。TEDxUTsukuba's annual conference is going virtual this year. "
-      },
-      {
-        hid: 'og:author',
-        property: 'og:author',
-        content: 'Haruki Kinoshita and TEDxUTsukuba website team'
-      },
-      {
-        hid: 'og:image',
-        property: 'og:image',
-        content: 'https://www.tedxutsukuba.com/sns_banner_2020.png'
-      },
-      { 
-        hid: 'og:site_name', 
-        name: 'og:site_name', 
-        content: 'TEDxUTsukuba Official Website' 
-      }
-    ]
   },
   methods: {
     getYouTubeUrl(value) {

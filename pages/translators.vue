@@ -35,15 +35,21 @@
 </template>
 
 <script>
+import Meta from '~/assets/mixins/meta'
+
 import Movie from '~/components/Movie'
 
 export default {
+  mixins: [Meta],
   components: {
     Movie
   },
   data(){
     return {
-      videoId: 'QKIka2lDpIc'
+      videoId: 'QKIka2lDpIc',
+      meta: {
+        
+      }
     }
   }
 }

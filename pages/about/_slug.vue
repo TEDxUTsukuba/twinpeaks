@@ -121,8 +121,8 @@ export default {
         title: this.$route.params.slug.charAt(0).toUpperCase() + this.$route.params.slug.slice(1).replace(/_\w/g, function(v) { return ' ' + v.charAt(1).toUpperCase() + v.slice(2); }) + ' | TEDxUTsukuba',
         description: "TEDxUTsukubaは2016年に設立されたTEDxコミュニティ。筑波大学の一般学生団体であり、学生や卒業生を中心として運営されています。これまでに4回のメインカンファレンスを含む数々のTEDxイベントを開催しており、登壇者には筑波大学の教員や学生、卒業生を中心に、多彩なアイディアを持つ方々をお招きしています。",
         type: "website",
-        url: "www.tedxutsukuba.com/about/" + this.$route.query.id,
-        image: "https://www.tedxutsukuba.com/twitter_summary.png"
+        url: "www.tedxutsukuba.com/about/" + this.$route.params.slug,
+        image: "https://www.tedxutsukuba.com/ogp/twitter_summary.png"
       }
     }
   },
@@ -130,14 +130,12 @@ export default {
     return {
       title: this.meta.title,
       meta: [
-        { hid: "description", name: "description", content: this.member.family_name_ja + ' ' + this.member.given_name_ja + ' | ' + this.member.role + ' | ' + this.meta.description },
-        { hid: "og:description", property: "og:description", content: this.member.family_name_ja + ' ' + this.member.given_name_ja + ' | ' + this.member.role + ' | ' + this.meta.description },
         { hid: "og:title", property: "og:title", content: this.meta.title },
         { hid: "og:type", property: "og:type", content: this.meta.type },
         { hid: "og:url", property: "og:url", content: this.meta.url },
         { hid: "og:image", property: "og:image", content: this.meta.image },
         { name: "twitter:title", content: this.meta.title },
-        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:card", content: "summary" },
         { name: "twitter:site", content: "@tedxutsukuba" }
       ]
     }

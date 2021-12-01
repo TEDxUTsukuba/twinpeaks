@@ -45,6 +45,8 @@
 
 
 <script>
+import Meta from '~/assets/mixins/meta'
+
 import { request, gql } from '~/lib/datocms'
 import { Image } from "vue-datocms";
 import format from 'date-fns/format'

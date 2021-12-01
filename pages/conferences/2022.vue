@@ -33,8 +33,8 @@
                 </div>
               </div>
             </countdown>
-            <p class="mt-4">
-              29th November 2021<br>1:00PM JST
+            <p class="mt-6">
+              20th March 2022<br>1:00PM JST
             </p>
           </div>
         </div>
@@ -81,7 +81,7 @@
           <div class="has-text-left-desktop mb-4">
             <a 
               class="button is-white is-rounded mx-1 mb-2"
-              href="https://www.google.com/calendar/render?action=TEMPLATE&text=TEDxUTsukuba2021&dates=20211101/20211102&ctz=Japan&details=TEDxUTsukuba+Annual+Main+Conference&sprop=https://www.tedxutsukuba.com/"
+              href="https://www.google.com/calendar/render?action=TEMPLATE&text=TEDxUTsukuba2022&dates=20221101/20221102&ctz=Japan&details=TEDxUTsukuba+Annual+Main+Conference&sprop=https://www.tedxutsukuba.com/"
               target="_blank"
             >
               <i class="mdi mdi-google mr-1 has-text-info" />
@@ -89,7 +89,7 @@
             </a>
             <a
               class="button is-white is-rounded mx-1 mb-2"
-              href="https://outlook.live.com/owa/?path=/calendar/action/compose&subject=TEDxUTsukuba2021&startdt=2021-11-01&enddt=2021-11-02&allday=true&body=TEDxUTsukuba+Annual+Main+Conference"
+              href="https://outlook.live.com/owa/?path=/calendar/action/compose&subject=TEDxUTsukuba2022&startdt=2022-11-01&enddt=2022-11-02&allday=true&body=TEDxUTsukuba+Annual+Main+Conference"
               target="_blank"
             >
               <i class="mdi mdi-microsoft-outlook mr-1 has-text-info" />
@@ -138,13 +138,13 @@
 
     <b-modal v-model="isCardModal" class="px-6">
       <div class="card has-text-centered py-6 has-background-primary" style="overflow: hidden;">
-        <a class="mx-4" href="https://www.facebook.com/sharer/sharer.php?u=https://www.tedxutsukuba.com/conferences/2021">
+        <a class="mx-4" href="https://www.facebook.com/sharer/sharer.php?u=https://www.tedxutsukuba.com/conferences/2022">
           <i class="has-text-white mdi mdi-facebook" style="font-size: 3em;" alt="Share on Facebook" />
         </a>
-        <a class="mx-4" href="https://twitter.com/intent/tweet?text=Stay+tuned+for+TEDxUTsukuba+2021&via=tedxutsukuba&related=tedxutsukuba&url=www.tedxutsukuba.com/conferences/2021">
+        <a class="mx-4" href="https://twitter.com/intent/tweet?text=Stay+tuned+for+TEDxUTsukuba+2022&via=tedxutsukuba&related=tedxutsukuba&url=www.tedxutsukuba.com/conferences/2022">
           <i class="has-text-white mdi mdi-twitter" style="font-size: 3em;" alt="Share on Twitter" />
         </a>
-        <a class="mx-4" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fwww.tedxutsukuba.com%2Fconferences%2F2021">
+        <a class="mx-4" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fwww.tedxutsukuba.com%2Fconferences%2F2022">
           <LineIcon style="width: 3rem;" alt="Share on LINE" />
         </a>
         <script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
@@ -289,6 +289,8 @@
 </style>
 
 <script>
+import Meta from '~/assets/mixins/meta'
+
 import LineIcon from '@/assets/svg/line-icon.svg'
 import PlaygroundSquare from '~/components/teaser/Square.vue'
 import PlaygroundCircle from '~/components/teaser/Circle.vue'
@@ -298,14 +300,25 @@ import Quote from '~/components/teaser/Quote.vue'
 import Statement from '~/components/teaser/Statement.vue'
 
 export default {
+  mixins: [Meta],
   components: {
     LineIcon, PlaygroundSquare, PlaygroundCircle, PlaygroundHexagon, BuildBackBetter, Quote, Statement
   },
   data() {
     const now = new Date();
     // 月は0ベース
-    const eventDate = new Date(2021, 10, 28, 13);
+    const eventDate = new Date(2022, 2, 20, 13);
     return {
+      locale: this.$i18n.locale,
+      meta: {
+        title: 'TEDxUTsukuba 2022 "The World is a Playground."',
+        description: {
+          en: 'The World is a Playground. Stay tuned for more updates on TEDxUTsukuba 2022.',
+          ja: 'The World is a Playground. TEDxUTsukuba 2022 開催決定。'
+        },
+        image: '/skyscraper.png',
+        twitter_card_type: 'summary_large_image'
+      },
       visible: false,
       isVideoActive: true,
       isMuted: true,
@@ -314,68 +327,6 @@ export default {
       eventDate: eventDate,
       time: eventDate - now,
     }
-  },
-  head: {
-    title: '2021 | TEDxUTsukuba',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { 
-        hid: 'description', 
-        name: 'description', 
-        content: 'TEDxUTsukuba 2021'
-      },
-      { 
-        hid: 'twitter:card', 
-        name: 'twitter:card', 
-        content: 'summary_large_image' 
-      },
-      { 
-        hid: 'twitter:site', 
-        name: 'twitter:site', 
-        content: '@tedxutsukuba' 
-      },
-      { 
-        hid: 'twitter:creator', 
-        name: 'twitter:creator', 
-        content: '@tedxutsukuba' 
-      },
-      {
-        hid: 'og:title',
-        property: 'og:title',
-        content: 'TEDxUTsukuba 2021'
-      },
-      {
-        hid: 'og:type',
-        property: 'og:type',
-        content: 'website'
-      },
-      {
-        hid: 'og:url',
-        property: 'og:url',
-        content: 'https://tedxutsukuba.com/events/2020'
-      },
-      {
-        hid: 'og:description',
-        property: 'og:description',
-        content: "The World is a Playground. Stay tuned for more updates on TEDxUTsukuba 2021."
-      },
-      {
-        hid: 'og:author',
-        property: 'og:author',
-        content: '木下晴貴 | Haruki Kinoshita'
-      },
-      {
-        hid: 'og:image',
-        property: 'og:image',
-        content: 'https://www.tedxutsukuba.com/u_logo_banner.png'
-      },
-      { 
-        hid: 'og:site_name', 
-        name: 'og:site_name', 
-        content: 'TEDxUTsukuba Official Website' 
-      }
-    ]
   },
   methods: {
     formatDate(date) {
