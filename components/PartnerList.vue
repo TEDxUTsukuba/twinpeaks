@@ -4,7 +4,7 @@
     <div :class="`column is-${width_fullhd}-fullhd is-${width_desktop}-desktop is-${width_tablet}-tablet is-${width_mobile}-mobile`" v-for="(partner, index) in partnerList" :key="index"> 
       <div class="has-text-white has-text-centered" style="padding: 0.5rem;">
         <figure class="image is-1by1">
-          <img :loading="isLazy" :src="getJsonImgUrl(partner.id)" :alt="partner.name" style="object-fit: cover;">
+          <img :loading="loadingMethod" :src="getJsonImgUrl(partner.id)" :alt="partner.name" style="object-fit: cover;">
         </figure>
         <br>
         <p class="has-text-weight-bold is-size-5" v-if="category == 'take'">
@@ -58,8 +58,8 @@ export default {
       type: String,
       required: true
     },
-    isLazy: {
-      type: String
+    loadingMethod: {
+      type: String,
       required: false,
       default: "auto"
     }, 
