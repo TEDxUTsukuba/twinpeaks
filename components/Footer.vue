@@ -2,7 +2,7 @@
   <section id="wrapper-dark" class="hero font-awesome">
     <!-- Covid-19 -->
     <section class="section has-text-centered">
-      <div class="notification p-6 has-background-primary">
+      <div class="nmp-card-red">
         <p class="heading is-size-5 has-text-white">
           <i class="mdi mdi-information pr-1" /> {{ $t('covid19-info.title') }}
         </p>
