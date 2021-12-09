@@ -39,7 +39,7 @@
           <section class="section mt-4">
             <div class="columns is-mobile is-multiline is-variable is-0">
                 <div class="column is-4-desktop is-4-tablet is-8-mobile" @mouseover="myMouseOver" @mouseleave="myMouseLeave">
-                  <img v-prlx src="~/assets/logo/motto.png" class="motto" style="padding-right: 50px;" alt="Ideas Worth Spreading">
+                  <img src="~/assets/logo/motto.png" class="motto" style="padding-right: 50px;" alt="Ideas Worth Spreading">
                 </div>
                 <div class="column is-8-desktop is-8-tablet is-full-mobile">
                   <h1 v-if="$i18n.locale == 'ja'" class="title is-size-3-tablet is-size-4-mobile has-text-weight-bold has-text-white">
@@ -187,11 +187,6 @@ export default {
       `
     })
     return { ready: !!data, ...data }
-  },
-  head() {
-    if (!this.ready) {
-      return
-    }
   },
   mounted(){
     const scene1 = this.$scrollmagic

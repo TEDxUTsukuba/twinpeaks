@@ -18,8 +18,11 @@ export default {
       return this.$route.path
     },
     currentName() {
-      const sans_locale = this.$route.path.replace(/\/en/, '')
-      return sans_locale[1].toUpperCase() + sans_locale.slice(2) + " | " + process.env.BASE_NAME
+      if (this.$route.path == '/' || this.$route.path == '/en') return "TEDxUTsukuba | Spread Globally, Connect Locally."
+      else {
+        const sans_locale = this.$i18n.locale == 'en' ? this.$route.path.replace(/\/en/, '') : this.$route.path
+        return sans_locale[1].toUpperCase() + sans_locale.slice(2) + " | " + process.env.BASE_NAME
+      }
     }
   },
   head() {
