@@ -3,6 +3,8 @@
     <section class="section has-text-centered-mobile">
       <h1 class="subtitle is-4 is-family-narrow has-text-primary">TEDxUTsukuba 2019</h1>
       <h1 class="title is-1">CoPhilaction</h1>
+      <p><span class="is-family-narrow">Date</span>: 2019/11/10</p>
+      <p><span class="is-family-narrow">Place</span>: {{ $t('2019.venue.headline') }}</p>
     </section>
 
     <section class="hero">
