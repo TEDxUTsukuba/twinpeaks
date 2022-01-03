@@ -3,6 +3,8 @@
     <section class="section has-text-centered-mobile">
       <h1 class="subtitle is-4 is-family-narrow has-text-primary">TEDxUTsukuba 2020</h1>
       <h1 class="title is-1">JIJIMUGE</h1>
+      <p><span class="is-family-narrow">Date</span>: 2020/11/29</p>
+      <p><span class="is-family-narrow">Place</span>: YouTube Live & Airmeet</p>
     </section>
 
     <section>

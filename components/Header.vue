@@ -11,10 +11,13 @@
     <template slot="end" v-if="!this.$route.path.includes('private')">
       <b-navbar-dropdown collapsible :label="$t('header.events.parent')" class="is-hoverable">
         <b-navbar-item tag="router-link" :to="{ path: localePath('/conferences/2020') }">
-          {{ $t('header.events.2020') }}
+          2020 JIJIMUGE
         </b-navbar-item>
         <b-navbar-item tag="router-link" :to="{ path: localePath('/conferences/2019') }">
-          {{ $t('header.events.2019') }}
+          2019 CoPhilAction
+        </b-navbar-item>
+        <b-navbar-item tag="router-link" :to="{ path: localePath('/conferences/2017') }">
+          2017 moving
         </b-navbar-item>
         <b-navbar-item tag="router-link" :to="{ path: localePath('/events/') }">
           {{ $t('header.events.listing') }}
