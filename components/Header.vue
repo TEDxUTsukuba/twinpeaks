@@ -100,6 +100,9 @@ export default {
 </script>
 
 <style lang="scss">
+  .navbar-burger {
+    color: #fff;
+  }
   .navbar-menu {
     background-color: #c6251a;
   }
