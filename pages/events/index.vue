@@ -100,7 +100,6 @@
 </template>
 
 <script>
-import Meta from '~/assets/mixins/eventmixin'
 import { request, gql } from '~/lib/datocms'
 import { Image } from "vue-datocms";
 import format from 'date-fns/format'
