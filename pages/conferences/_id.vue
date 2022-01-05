@@ -5,26 +5,26 @@
       <h1 class="title is-1">{{ conference.theme }}</h1>
       <p><span class="is-family-narrow">Date</span>: 
         {{ formatDate(conference.date, $i18n.locale) }}
-        {{ formatTime(conference.startTime) }} - {{ formatTime(conference.endTime) }}
+        <span v-if="conference.startTime">{{ formatTime(conference.startTime) }}</span><span v-if="conference.endTime"> - {{ formatTime(conference.endTime) }}</span>
       </p>
       <p><span class="is-family-narrow">Place</span>: {{ conference.location }}</p>
       <a v-if="conference.webcastUrl" class="button is-rounded is-gradient mt-4" :href="conference.webcastUrl" target="_blank"><span v-if="conference.webcastService">{{ conference.webcastService }}で</span>{{ $t('about.ted.watch')}}</a>
     </section>
 
-    <section class="section">
+    <section class="section" v-if="conference.themeArtwork">
       <figure class="image">
         <datocms-image :data="conference.themeArtwork.responsiveImage" :alt="conference.name" style="position: initial;"/>
         <!-- <img :src="conference.themeArtwork.url" :alt="conference.name" style="position: initial;"/> -->
       </figure>
     </section>
     
-    <section class="section" id="card-0"> 
+    <section class="section" id="card-0" v-if="conference.speakers[0]">  
       <h1 class="title is-0">{{ $t('2020.speaker.title') }}</h1>
       <div v-for="(speaker, index) in conference.speakers" :key="index">
         <div class="columns is-multiline is-centered is-vcentered mb-6">
           <div class="card-image column is-12-mobile is-3-tablet is-4-desktop is-3-widescreen is-3-fullhd">
             <div class="image-box">
-              <figure class="image is-1by1">
+              <figure class="image is-1by1" v-if="speaker.portrait">
                 <img class="nmp-card-image" :src="speaker.portrait.url" style="object-fit: cover;" />
                 <!-- <datocms-image :data="speaker.portrait.responsiveImage" /> -->
               </figure>
@@ -47,7 +47,7 @@
       </div>
     </section>
 
-    <section class="hero has-background-primary">
+    <section class="hero has-background-primary" v-if="conference.theme">
       <section class="section">
         <h1 class="title is-0 has-text-white">
           {{ $t('2017.concept.title') }}
@@ -59,7 +59,7 @@
       </section>
     </section>
 
-    <section class="hero">
+    <section class="hero" v-if="conference.timetable">
       <div class="hero-body">
         <section class="section">
           <h1 class="title is-0">{{ $t('2020.participance.title') }}</h1>
@@ -85,7 +85,8 @@
       </div>
     </section>
 
-    <section class="hero bg-venue" id="venue-title" :style="`background: url(${conference.locationImage.url});`">
+    <section class="hero" id="venue-title" v-if="conference.location">
+    <!-- <section class="hero bg-venue" id="venue-title" :style="`background: url(${conference.locationImage.url});`"> -->
       <div class="hero-body">
         <section class="section" id="venue">
           <h1 class="title is-0 has-text-white">
@@ -104,7 +105,7 @@
         </section>
       </div>
     </section>
-    <section>
+    <section v-if="conference.locationGooglemapsEmbed">
       <figure class="image is-3by1">
         <iframe class="has-ratio" :src="conference.locationGooglemapsEmbed" width="100%" rameborder="0" style="margin: 0 auto; border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </figure>
