@@ -1,42 +1,80 @@
 <template>
   <section id="wrapper-dark">
     <section class="section has-text-centered is-halfheight">
-    <!-- <section class="hero is-large">
-      <div class="hero-body has-text-white has-text-left">
-        <div class="container has-text-centered">
-          
-        </div>
-      </div>
-    </section> -->
-      <!-- <div class="top-photoframe">
-        <b-carousel 
-          :autoplay="false" indicator-custom
-          :indicator-inside="false" 
-          :overlay="gallery" 
-          :icon-size="iconSize"
-          :pause-info-type="pauseInfoType"
-          @click="switchGallery(true)">
-          <b-carousel-item v-for="(item, i) in 3" :key="i">
-            <a class="image">
-              <img :src="getImgUrl(i)">
-            </a>
-          </b-carousel-item>
-          <span v-if="gallery" @click="switchGallery(false)" class="modal-close is-large"/>
-          <template slot="indicators" slot-scope="props">
-            <figure class="al image" :draggable="false">
-              <img :draggable="false" :src="getImgUrl(props.i)" :title="props.i">
-            </figure>
-          </template>
-        </b-carousel>
-      </div> -->
-        <i class="mdi mdi-handshake has-text-primary is-size-1" /> 
-        <h1 class="title is-1 is-spaced">{{ $t('partners.title') }}</h1>
-        <h1 class="subtitle has-text-grey-light">{{ $t('partners.subtitle') }}</h1>
+      <i class="mdi mdi-handshake has-text-primary is-size-1" /> 
+      <h1 class="title is-1 is-spaced">{{ $t('partners.title') }}</h1>
+      <h1 class="subtitle has-text-grey-light">{{ $t('partners.subtitle') }}</h1>
     </section>
     <section class="section">
-        <PartnerList category="take" loadingMethod="eager" width_fullhd="4" width_desktop="4" width_tablet="6" width_mobile="12" />
-        <PartnerList category="ume" loadingMethod="lazy" width_fullhd="3" width_desktop="3" width_tablet="4" width_mobile="6" />
-        <PartnerList category="sakura" loadingMethod="lazy" width_fullhd="2" width_desktop="2" width_tablet="3" width_mobile="6" />
+      <!-- Tier 1 -->
+      <div class="columns is-multiline is-mobile">
+        <div class="column is-4-tablet is-6-mobile" v-for="(partner, index) in partners.filter(el => el.tier === '1')" :key="index">
+          <div class="nmp-dark has-text-centered">
+            <figure class="image is-1by1 my-5">
+              <img :src="partner.logo.url" :alt="partner.name">
+            </figure>
+            <div>
+              <p class="has-text-weight-bold is-size-5 mb-2">
+                {{ partner.name }} <span v-if="$i18n.locale == 'ja'">様</span>
+              </p>
+              <a v-if="partner.url" class="button is-rounded is-white is-outlined is-small mb-4" :href="partner.url">
+                {{ $t('button.visitwebsite') }}
+              </a>
+            </div>
+            <div class="is-inline-block has-text-centered mb-2 has-background-primary" v-if="partner.instagram || partner.facebook || partner.twitter">
+              <a v-if="partner.instagram" :href="partner.instagram"><i class="mdi mdi-instagram has-text-white is-size-4" /></a>
+              <a v-if="partner.facebook" :href="partner.facebook"><i class="mdi mdi-facebook has-text-white is-size-4" /></a>
+              <a v-if="partner.twitter" :href="partner.twitter"><i class="mdi mdi-twitter has-text-white is-size-4" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Tier 2 -->
+      <div class="columns is-multiline is-mobile">
+        <div class="column is-3-tablet is-6-mobile" v-for="(partner, index) in partners.filter(el => el.tier === '2')" :key="index">
+          <div class="nmp-dark has-text-centered">
+            <figure class="image is-1by1 my-5">
+              <img :src="partner.logo.url" :alt="partner.name">
+            </figure>
+            <div>
+              <p class="has-text-weight-bold is-size-6 mb-2">
+                {{ partner.name }} <span v-if="$i18n.locale == 'ja'">様</span>
+              </p>
+              <a v-if="partner.url" class="button is-rounded is-white is-outlined is-small mb-4" :href="partner.url">
+                {{ $t('button.visitwebsite') }}
+              </a>
+            </div>
+            <div class="is-inline-block has-text-centered mb-2 has-background-primary" v-if="partner.instagram || partner.facebook || partner.twitter">
+              <a v-if="partner.instagram" :href="partner.instagram"><i class="mdi mdi-instagram has-text-white is-size-4" /></a>
+              <a v-if="partner.facebook" :href="partner.facebook"><i class="mdi mdi-facebook has-text-white is-size-4" /></a>
+              <a v-if="partner.twitter" :href="partner.twitter"><i class="mdi mdi-twitter has-text-white is-size-4" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Tier 3 -->
+      <div class="columns is-multiline is-mobile">
+        <div class="column is-2-tablet is-6-mobile" v-for="(partner, index) in partners.filter(el => el.tier === '3')" :key="index">
+          <div class="nmp-dark has-text-centered">
+            <figure class="image is-1by1 my-5">
+              <img :src="partner.logo.url" :alt="partner.name">
+            </figure>
+            <div>
+              <p class="has-text-weight-bold is-size-6 mb-2">
+                {{ partner.name }} <span v-if="$i18n.locale == 'ja'">様</span>
+              </p>
+              <a v-if="partner.url" class="button is-rounded is-white is-outlined is-small mb-4" :href="partner.url">
+                {{ $t('button.visitwebsite') }}
+              </a>
+            </div>
+            <div class="is-inline-block has-text-centered mb-2 has-background-primary" v-if="partner.instagram || partner.facebook || partner.twitter">
+              <a v-if="partner.instagram" :href="partner.instagram"><i class="mdi mdi-instagram has-text-white is-size-4" /></a>
+              <a v-if="partner.facebook" :href="partner.facebook"><i class="mdi mdi-facebook has-text-white is-size-4" /></a>
+              <a v-if="partner.twitter" :href="partner.twitter"><i class="mdi mdi-twitter has-text-white is-size-4" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="section">
       <div class="container has-text-centered">
@@ -50,14 +88,31 @@
 
 <script>
 import Meta from '~/assets/mixins/meta'
-
-// import Modal from '~/components/Modal.vue'
-import PartnerList from '~/components/PartnerList.vue'
+import { request, gql } from '~/lib/datocms'
 export default {
   mixins: [Meta],
   components: {
-    // Modal, 
-    PartnerList
+  },
+  async asyncData({ params, i18n }) {
+    const data = await request({
+      query: gql`
+        {
+          partners: allPartners(locale: ${i18n.locale}) {
+            id
+            instagram
+            facebook
+            logo {
+              url(imgixParams: {w: "256", h: "256", fit: crop})
+            }
+            twitter
+            tier
+            name
+            url
+          }
+        }
+      `
+    })
+    return { ready: !!data, ...data }
   },
   data() {
     return {
@@ -67,41 +122,8 @@ export default {
         description: this.$i18n.t('partners.subtitle'),
         twitter_card_type: 'summary'
       },
-      showContent: false,
-      postItem: "",
-      iconSize: 'is-large',
-      gallery: false,
-      pauseInfoType: 'is-dark',
-      images: [
-        // require('~/assets/partners/2020/carousel_3.jpg'),
-        // require('~/assets/partners/2020/carousel_4.jpg')
-      ]
     }
-  },
-  methods: {
-    openModal (partner) {
-      this.showContent = true
-      this.postItem = partner
-    },
-    closeModal () {
-      this.showContent = false
-    },
-    switchGallery(value) {
-      this.gallery = value
-      if (value) {
-          return document.documentElement.classList.add('is-clipped')
-      } else {
-          return document.documentElement.classList.remove('is-clipped')
-      }
-    }
-  },
-  // computed: {
-  //   partnerList() {
-  //     return this.$store.getters[
-  //       'partner/findPartnersByCategory'
-  //     ](this.category)
-  //   }
-  // }
+  }
 }
 </script>
 
