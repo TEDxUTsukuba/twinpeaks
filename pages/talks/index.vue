@@ -54,13 +54,6 @@
         </div>
       </div>
     </section>
-    <section class="section">
-      <div class="container has-text-centered">
-        <h1 class="title is-2 is-spaced">パートナー募集中</h1>
-        <h1 class="subtitle is-5 has-text-grey-light">理念に賛同し、イベントを一緒に作り上げていただけるパートナーを募集しています。</h1>
-        <div class="nmp-card-dark">下記連絡先までお問い合わせください。<br>tedxutsukuba&#64;gmail.com</div>
-      </div>
-    </section>
   </section>
 </template>
 
