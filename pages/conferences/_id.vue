@@ -177,6 +177,31 @@ export default {
   head() {
     if (!this.ready) {
       return 
+    } 
+    else {
+      return {
+        htmlAttrs: {
+          lang: this.$i18n.locale
+        },
+        title: this.conference.title,
+        meta: [
+          {
+            hid: 'og:title',
+            property: 'og:title',
+            content: this.conference.title
+          },
+          {
+            property: 'og:locale',
+            content: this.$i18n.locale
+          }
+        ],
+        link: [
+          {
+            rel: 'canonical',
+            href: `${process.env.BASE_URL}${this.currentPath}`
+          }
+        ]
+      }
     }
   },
   methods: {
