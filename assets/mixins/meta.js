@@ -15,17 +15,18 @@ export default {
     // タイトル
     if (this.meta.title) {
       if (this.meta.title[locale]) {
-        const title = `${this.meta.title[locale]} | ${this.BASE_NAME}`
+        // const title = `${this.meta.title[locale]} | ${this.BASE_NAME}`
+        const title = `${this.meta.title[locale]} | TEDxUTsukuba`
         head.title = title
         head.meta.push({ hid: 'og:title', property: 'og:title', content: title })
       } else {
-        const title = `${this.meta.title} | ${this.BASE_NAME}`
+        const title = `${this.meta.title} | TEDxUTsukuba`
         head.title = title
         head.meta.push({ hid: 'og:title', property: 'og:title', content: title })
       }
     } else {
       console.log(this.$route.path)
-      const title = `${this.$route.path[1].toUpperCase() + this.$route.path.slice(2)} | ${this.BASE_NAME}`
+      const title = `${this.$route.path[1].toUpperCase() + this.$route.path.slice(2)} | TEDxUTsukuba`
       head.title = title
       head.meta.push({ hid: 'og:title', property: 'og:title', content: title })
     }

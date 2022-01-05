@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { STEIN_API, NUXT_ENV_DATOCMS_API_TOKEN, BASE_URL, BASE_OGP } = process.env;
+const { NUXT_ENV_DATOCMS_API_TOKEN, BASE_URL, BASE_OGP } = process.env;
 const BASE_NAME = 'TEDxUTsukuba'
 const BASE_DESC = 'TEDxUTsukubaは "Ideas worth spreading" というTEDの理念のもとに、筑波大学の学生を中心として独自に運営されているコミュニティです。教養から科学、地域の話題から世界規模の問題に至るまで、様々なトピックスに焦点を当ててきました。'
 const BASE_DESC_EN = 'TEDxUTsukuba is an independently-organized TEDx community at the University of Tsukuba. Managed by passionate volunteers both in and around the campus, TEDxUTsukuba has shed light on relevant topics - from liberal arts to science, local stories to global issues. '
@@ -11,7 +11,7 @@ export default {
   ** Headers of the page
   */
   env: {
-    STEIN_API, NUXT_ENV_DATOCMS_API_TOKEN, BASE_NAME, BASE_DESC, BASE_DESC_EN, BASE_URL, BASE_OGP, BASE_AUTHOR, BASE_SITE_NAME
+    NUXT_ENV_DATOCMS_API_TOKEN, BASE_NAME, BASE_DESC, BASE_DESC_EN, BASE_URL, BASE_OGP, BASE_AUTHOR, BASE_SITE_NAME
   },
   ssr: 'true',
   target: 'static',
@@ -158,13 +158,6 @@ export default {
     [
       '@nuxtjs/google-gtag', { id: 'UA-104320074-1' }
     ],
-    // [
-    //   'nuxt-webfontloader', {
-    //     google: {
-    //       families: ['Lato:400,700&text=abcdefghijklmnopqrstuvwxyz0123456789!/-&display:swap']
-    //     }
-    //   }
-    // ],
     [
       'nuxt-buefy',
       {
@@ -215,10 +208,8 @@ export default {
       }
     ],
     '@nuxtjs/axios',
-    '@nuxtjs/pwa',
     'nuxt-svg-loader',
     '@nuxtjs/sitemap',
-    '@nuxt/content',
     // 参考: https://blog.mktia.com/generate-ogp-image-automatically/
     // '~/modules/imageGenerator.js'
     // [ 

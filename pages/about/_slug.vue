@@ -99,11 +99,8 @@
 
 <script>
 import axios from 'axios';
-import SteinStore from 'stein-js-client'
 import Movie from '~/components/Movie.vue'
 import externalLink from '@/assets/svg/external-link-alt-solid.svg'
-
-const store = new SteinStore(process.env.STEIN_API)
 
 export default {
   components: {
@@ -139,9 +136,6 @@ export default {
         { name: "twitter:site", content: "@tedxutsukuba" }
       ]
     }
-  },
-  created() {
-    // console.log("env: " + process.env.STEIN_API)
   },
   methods: {
     getJsonImgUrl(value) {
