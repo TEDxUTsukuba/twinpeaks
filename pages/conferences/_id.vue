@@ -1,6 +1,6 @@
 <template>
   <section id="wrapper-dark">
-    <section class="section is-medium has-text-centered">
+    <section class="section has-text-centered-mobile">
       <h1 class="subtitle is-4 is-family-narrow has-text-primary">TEDxUTsukuba{{ conference.name }}</h1>
       <h1 class="title is-1">{{ conference.theme }}</h1>
       <p><span class="is-family-narrow">Date</span>: 
@@ -144,7 +144,7 @@ export default {
               height
             }
           }
-          themeStatement(markdown: true)
+          themeStatement(markdown: false)
           location
           locationDescription
           locationGooglemapsEmbed
