@@ -10,6 +10,9 @@
     </template>
     <template slot="end" v-if="!this.$route.path.includes('private')">
       <b-navbar-dropdown collapsible :label="$t('header.events.parent')" class="is-hoverable">
+        <b-navbar-item tag="router-link" :to="{ path: localePath('/conferences/2022') }">
+          2022
+        </b-navbar-item>
         <b-navbar-item tag="router-link" :to="{ path: localePath('/conferences/2020') }">
           2020 JIJIMUGE
         </b-navbar-item>
@@ -19,9 +22,9 @@
         <b-navbar-item tag="router-link" :to="{ path: localePath('/conferences/2017') }">
           2017 moving
         </b-navbar-item>
-        <b-navbar-item tag="router-link" :to="{ path: localePath('/events/') }">
+        <!-- <b-navbar-item tag="router-link" :to="{ path: localePath('/events/') }">
           {{ $t('header.events.listing') }}
-        </b-navbar-item>
+        </b-navbar-item> -->
       </b-navbar-dropdown>
       <!-- <b-navbar-item class="normal-category" tag="nuxt-link" :to="localePath('/events/2020')">
         {{ $t('header.events.child1') }}
