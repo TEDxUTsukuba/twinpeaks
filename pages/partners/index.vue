@@ -102,7 +102,7 @@ export default {
             instagram
             facebook
             logo {
-              url(imgixParams: {w: "256", h: "256", fit: crop})
+              url(imgixParams: {w: "512", h: "512", fit: crop})
             }
             twitter
             tier
