@@ -10,7 +10,7 @@
       <div class="columns is-multiline is-mobile">
         <div class="column is-4-tablet is-6-mobile" v-for="(partner, index) in partners.filter(el => el.tier === '1')" :key="index">
           <div class="nmp-dark has-text-centered">
-            <figure class="image is-1by1 my-5">
+            <figure class="image is-1by1 my-5" v-if="partner.logo">
               <img :src="partner.logo.url" :alt="partner.name">
             </figure>
             <div>
@@ -33,7 +33,7 @@
       <div class="columns is-multiline is-mobile">
         <div class="column is-3-tablet is-6-mobile" v-for="(partner, index) in partners.filter(el => el.tier === '2')" :key="index">
           <div class="nmp-dark has-text-centered">
-            <figure class="image is-1by1 my-5">
+            <figure class="image is-1by1 my-5" v-if="partner.logo">
               <img :src="partner.logo.url" :alt="partner.name">
             </figure>
             <div>
@@ -56,7 +56,7 @@
       <div class="columns is-multiline is-mobile">
         <div class="column is-2-tablet is-6-mobile" v-for="(partner, index) in partners.filter(el => el.tier === '3')" :key="index">
           <div class="nmp-dark has-text-centered">
-            <figure class="image is-1by1 my-5">
+            <figure class="image is-1by1 my-5" v-if="partner.logo">
               <img :src="partner.logo.url" :alt="partner.name">
             </figure>
             <div>
