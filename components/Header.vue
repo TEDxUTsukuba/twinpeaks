@@ -11,7 +11,7 @@
     <template slot="end" v-if="!this.$route.path.includes('private')">
       <b-navbar-dropdown collapsible :label="$t('header.events.parent')" class="is-hoverable">
         <b-navbar-item tag="router-link" :to="{ path: localePath('/conferences/2022') }">
-          2022
+          2022 The World is a Playground
         </b-navbar-item>
         <b-navbar-item tag="router-link" :to="{ path: localePath('/conferences/2020') }">
           2020 JIJIMUGE
