@@ -113,7 +113,7 @@
 
 
     <section class="my-6">
-      <PopularArticles /> 
+      <!-- <PopularArticles />  -->
     </section>
 
     <section class="section pt-0">
@@ -150,7 +150,8 @@ import AnimatedScenery from '~/components/AnimatedScenery'
 
 export default {
   components: {
-    PopularArticles, "datocms-image": Image, VueHorizontal, AnimatedScenery
+    PopularArticles, 
+    "datocms-image": Image, VueHorizontal, AnimatedScenery
     // Carousel
   },
   data() {

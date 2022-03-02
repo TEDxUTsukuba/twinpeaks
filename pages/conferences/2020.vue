@@ -149,7 +149,7 @@
                   <div class="columns is-multiline is-vcentered">
                     <div class="column has-text-right">
                       <p class="is-size-7" v-if="$i18n.locale == 'en'">{{ $t('2020.participance.premium.airmeet') }}</p>
-                      <img src="~/assets/partners/2020/logo/AM_Full_Logo/PNG/AM_Logo_Light_WM.png" width="150px" style="padding: 15px;" alt="Airmeet Logo"> 
+                      <img src="~/assets/2020/AM_Logo_Light_WM.png" width="150px" style="padding: 15px;" alt="Airmeet Logo"> 
                       <p class="is-size-7" v-if="$i18n.locale == 'ja'">{{ $t('2020.participance.premium.airmeet') }}</p>
                     </div>
                   </div>

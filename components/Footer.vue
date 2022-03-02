@@ -132,26 +132,12 @@ import iconTW from '@/assets/svg/twitter.svg'
 import iconFL from '@/assets/svg/flickr.svg'
 import iconNT from '@/assets/svg/note.svg'
 import externalLink from '@/assets/svg/external-link-alt-solid.svg'
-import nuxtLogo from '@/assets/svg/built-with-nuxt-white.svg'
 import TsukubaScenery from '@/assets/svg/tsukuba-scenery.svg'
 
 export default {
   components: {
-    iconIG, iconFB, iconTW, iconFL, iconNT, externalLink, nuxtLogo, TsukubaScenery
+    iconIG, iconFB, iconTW, iconFL, iconNT, externalLink, TsukubaScenery
   },
-  methods: {
-    getJsonImgUrl(value) {
-      // return require(`~/assets/partners/2020/carousel_${value}.jpg`)
-      return require(`~/assets/partners/2020/logo/${value}.jpg`)
-    }
-  },
-  computed: {
-    partnerList(){
-      return this.$store.getters [
-        'partner/findPartnersByExceptionCategory'
-      ]("sakura")
-    }  
-  }  
 }
 </script>
 

@@ -6,23 +6,16 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Archivo';
-  font-weight: 600;
-  font-display: block;
-  src: url(~/assets/fonts/ArchivoNarrow-SemiBold.ttf) format("truetype");
-  font-style: normal;
-}
 
-.page-enter-active,
-.page-leave-active {
-  // transition: opacity 1s;
-}
+// .page-enter-active,
+// .page-leave-active {
+//   transition: opacity 1s;
+// }
 
-.page-enter,
-.page-leave-active {
-  // opacity: 0.4;
-}
+// .page-enter,
+// .page-leave-active {
+//   opacity: 0.4;
+// }
 
 *::selection {
   background: #E62B1E;

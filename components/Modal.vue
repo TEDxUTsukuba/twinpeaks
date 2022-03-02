@@ -17,12 +17,6 @@
   export default {
     name: 'Modal',
     props: ['val'],
-    methods: {
-      getImgUrl(value) {
-        // return require(`~/assets/partners/2020/posteposposr/${value}.jpg`)
-        return require(`~/assets/partners/2020/poster/onikle.jpg`)
-    },
-    }
   }
 </script>
 
