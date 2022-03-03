@@ -6,6 +6,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Archivo';
+  font-weight: 600;
+  font-display: block;
+  src: url(~/assets/fonts/ArchivoNarrow-SemiBold.ttf) format("truetype");
+  font-style: normal;
+}
+
 
 // .page-enter-active,
 // .page-leave-active {
@@ -367,7 +375,8 @@ h1.is-0 {
   padding-top: 5vh;
 }
 
-section#wrapper, section.wrapper {
+section#wrapper,
+section.wrapper {
   // background-color: $light;
   background-attachment: fixed !important;
   // background-color: #e7eff9;
@@ -377,7 +386,8 @@ section#wrapper, section.wrapper {
   // background-image: linear-gradient(to top, $light 0%, #d1dbe4 74%);
 }
 
-section#wrapper-dark, section.wrapper-dark {
+section#wrapper-dark,
+section.wrapper-dark {
   height: 100%;
   background-attachment: fixed !important;
   background-color: $dark-grey-900;
