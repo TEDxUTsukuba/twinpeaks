@@ -26,7 +26,7 @@ export default {
       }
     } else {
       console.log(this.$route.path)
-      const title = `${this.$route.path[1].replace("conferences/", "").toUpperCase() + this.$route.path.slice(2)} | TEDxUTsukuba`
+      const title = `${this.$route.path[1].toUpperCase() + this.$route.path.slice(2)} | TEDxUTsukuba`
       head.title = title
       head.meta.push({ hid: 'og:title', property: 'og:title', content: title })
     }
