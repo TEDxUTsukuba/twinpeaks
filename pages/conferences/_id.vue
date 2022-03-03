@@ -1,12 +1,13 @@
 <template>
   <section id="wrapper-dark">
     <section class="section has-text-centered-mobile">
-      <h1 class="subtitle is-4 is-family-narrow has-text-primary">TEDxUTsukuba{{ conference.name }}</h1>
+      <h1 class="subtitle is-4 is-family-narrow has-text-primary">TEDxUTsukuba {{ conference.name }}</h1>
       <h1 class="title is-1">{{ conference.theme }}</h1>
       <p v-if="conference.date"><span class="is-family-narrow">Date</span>: 
         {{ formatDate(conference.date, $i18n.locale) }}
         <span v-if="conference.startTime">{{ formatTime(conference.startTime) }}</span><span v-if="conference.endTime"> - {{ formatTime(conference.endTime) }}</span>
       </p>
+      <p v-if="conference.eventDelivery"><span class="is-family-narrow">Event Delivery</span>: {{ conference.eventDelivery }}</p>
       <p v-if="conference.location"><span class="is-family-narrow">Place</span>: {{ conference.location }}</p>
       <a v-if="conference.webcastUrl" class="button is-rounded is-gradient mt-4" :href="conference.webcastUrl" target="_blank"><span v-if="conference.webcastService">{{ conference.webcastService }}で</span>{{ $t('about.ted.watch')}}</a>
     </section>
@@ -53,7 +54,7 @@
           {{ $t('2017.concept.title') }}
         </h1>
         <h1 class="title is-3 has-text-white">
-          "{{ conference.theme }}"
+          {{ conference.theme }}
         </h1>
         <p class="has-text-white has-text-centered-mobile mb-4" v-html="conference.themeStatement" />
       </section>
@@ -136,6 +137,7 @@ export default {
           doorOpeningTime
           startTime
           endTime
+          eventDelivery
           theme
           themeArtwork {
             url
