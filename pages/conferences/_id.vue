@@ -3,11 +3,11 @@
     <section class="section has-text-centered-mobile">
       <h1 class="subtitle is-4 is-family-narrow has-text-primary">TEDxUTsukuba{{ conference.name }}</h1>
       <h1 class="title is-1">{{ conference.theme }}</h1>
-      <p><span class="is-family-narrow">Date</span>: 
+      <p v-if="conference.date"><span class="is-family-narrow">Date</span>: 
         {{ formatDate(conference.date, $i18n.locale) }}
         <span v-if="conference.startTime">{{ formatTime(conference.startTime) }}</span><span v-if="conference.endTime"> - {{ formatTime(conference.endTime) }}</span>
       </p>
-      <p><span class="is-family-narrow">Place</span>: {{ conference.location }}</p>
+      <p v-if="conference.location"><span class="is-family-narrow">Place</span>: {{ conference.location }}</p>
       <a v-if="conference.webcastUrl" class="button is-rounded is-gradient mt-4" :href="conference.webcastUrl" target="_blank"><span v-if="conference.webcastService">{{ conference.webcastService }}で</span>{{ $t('about.ted.watch')}}</a>
     </section>
 
@@ -152,6 +152,7 @@ export default {
           locationImage {
             url
           }
+          socialMediaDescription
           speakers {
             firstName
             middleName
@@ -184,16 +185,22 @@ export default {
         htmlAttrs: {
           lang: this.$i18n.locale
         },
-        title: this.conference.title,
+        title: "TEDxUTsukuba " + this.conference.name,
+        description: this.conference.socialMediaDescription || this.conference.themeStatement,
         meta: [
           {
             hid: 'og:title',
             property: 'og:title',
-            content: this.conference.title
+            content: "TEDxUTsukuba " +  this.conference.name
           },
           {
             property: 'og:locale',
             content: this.$i18n.locale
+          },
+          {
+            hid: 'og:description',
+            property: 'og:description',
+            content: this.conference.socialMediaDescription || this.conference.themeStatement,
           }
         ],
         link: [
