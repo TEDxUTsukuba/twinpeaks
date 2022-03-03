@@ -10,18 +10,10 @@
     </template>
     <template slot="end" v-if="!this.$route.path.includes('private')">
       <b-navbar-dropdown collapsible :label="$t('header.events.parent')" class="is-hoverable">
-        <b-navbar-item tag="router-link" :to="{ path: localePath('/conferences/2022') }">
-          2022 The World is a Playground
+        <b-navbar-item v-for="item in conferences" :key="item.path" tag="router-link" :to="{ path: localePath('/conferences/' + item.path)}">
+          {{ item.name }}
         </b-navbar-item>
-        <b-navbar-item tag="router-link" :to="{ path: localePath('/conferences/2020') }">
-          2020 JIJIMUGE
-        </b-navbar-item>
-        <b-navbar-item tag="router-link" :to="{ path: localePath('/conferences/2019') }">
-          2019 CoPhilAction
-        </b-navbar-item>
-        <b-navbar-item tag="router-link" :to="{ path: localePath('/conferences/2017') }">
-          2017 moving
-        </b-navbar-item>
+        
         <!-- <b-navbar-item tag="router-link" :to="{ path: localePath('/events/') }">
           {{ $t('header.events.listing') }}
         </b-navbar-item> -->
@@ -72,10 +64,29 @@
 </template>
 
 <script>
+import { request, gql } from '~/lib/datocms'
+
 export default {
   data(){
     return {
-    
+      conferences: [
+        {
+          path: '2022',
+          name: '2022 The World is a Playground'
+        },
+        {
+          path: '2020',
+          name: '2020 JIJIMUGE'
+        },
+        {
+          path: '2019',
+          name: '2019 CoPhilAction'
+        },
+        {
+          path: '2017',
+          name: '2017 moving'
+        }
+      ]
     }
   },
   // props: {
@@ -83,6 +94,18 @@ export default {
   //     type: String,
   //     required: true
   //   }
+  // },
+  // async asyncData() {
+  //   const data = await request({
+  //     query: gql`
+  //     {
+  //       conferences: allConferences {
+  //         name
+  //       }
+  //     }`
+  //   })
+  //   console.log(data)
+  //   return { ready: !!data, ...data }
   // },
   created() {
     if (this.$route.path.includes('private')) this.headerColor = 'darksilver'
