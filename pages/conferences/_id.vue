@@ -76,6 +76,7 @@
                 <h1 class="title is-4" v-if="$i18n.locale == 'ja'">{{ item.title_ja }}</h1>
                 <h1 class="title is-4" v-else>{{ item.title_en }}</h1>
                 <p v-if="item.description">{{ item.description }}</p>
+                <a v-if="item.link_url" :href="item.link_url">{{ item.link_text }}</a>
               </div>
               <figure class="image my-5" v-if="item.image">
                 <img :src="item.image" />
