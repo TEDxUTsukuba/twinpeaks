@@ -95,18 +95,6 @@ export default {
   //     required: true
   //   }
   // },
-  // async asyncData() {
-  //   const data = await request({
-  //     query: gql`
-  //     {
-  //       conferences: allConferences {
-  //         name
-  //       }
-  //     }`
-  //   })
-  //   console.log(data)
-  //   return { ready: !!data, ...data }
-  // },
   created() {
     if (this.$route.path.includes('private')) this.headerColor = 'darksilver'
     else this.headerColor = 'red'

@@ -18,6 +18,11 @@
         <!-- <img :src="conference.themeArtwork.url" :alt="conference.name" style="position: initial;"/> -->
       </figure>
     </section>
+
+    <section class="section" v-if="conference.messageFromOrganizer">
+      <p class="has-text-white notes" v-html="conference.messageFromOrganizer" />
+      <p class="mt-3 has-text-right">TEDxUTsukuba {{ conference.name }}<br>Organizer<br>{{ conference.organizer }}</p>
+    </section>
     
     <section class="section" id="card-0" v-if="conference.speakers[0]">  
       <h1 class="title is-0">{{ $t('2020.speaker.title') }}</h1>
@@ -46,6 +51,26 @@
           </div>
         </div>
       </div>
+      <div v-for="(performer, index) in conference.performers" :key="index">
+        <div class="columns is-multiline is-centered is-vcentered mb-6">
+          <div class="card-image column is-12-mobile is-3-tablet is-4-desktop is-3-widescreen is-3-fullhd">
+            <div class="image-box">
+              <figure class="image is-1by1" v-if="performer.portrait">
+                <img class="nmp-card-image" :src="performer.portrait.url" style="object-fit: cover;" />
+                <!-- <datocms-image :data="speaker.portrait.responsiveImage" /> -->
+              </figure>
+            </div>
+          </div>
+          <div class="column has-text-centered-mobile">
+            <h1 class="title is-2 ja">{{ performer.name }}</h1>
+              <h1 class="subtitle is-size-5 has-text-primary is-family-narrow" v-show="performer.jobTitleOrRole">{{ performer.jobTitleOrRole }}</h1>
+              <p class="has-text-left" style="text-align: justify;">
+                {{ performer.description }}
+              </p>
+          </div>
+        </div>
+      </div>
+      <p class="is-size-7 pt-5 notes" v-html="conference.enjaNotes" />
     </section>
 
     <section class="hero has-background-primary" v-if="conference.theme">
@@ -83,6 +108,35 @@
               </figure>
             </div>   
           </div>
+         <p class="is-size-7 pt-5 notes" v-html="conference.timetableNotes" />
+        </section>
+      </div>
+    </section>
+
+    <section class="hero">
+      <div class="hero-body">
+        <section class="section">
+          <h1 class="title is-0">{{ $t('about.ted.join') }}</h1>
+          <div v-if="conference.hasTicket">
+            <h2 class="title">Tickets</h2>
+            <p v-if="conference.isTicketAvailable"><span class="tag is-success">Tickets Now Available!</span></p>
+            <p v-else><span class="tag is-success">Tickets will be available on {{ conference.ticketReleaseDate }}</span></p>
+            <p class="mb-3">
+              Price: {{ conference.ticketPrice }} <span v-if="conference.ticketPriceStudent">(Student: {{ conference.ticketPriceStudent}})</span>
+            </p>
+            <p class="is-size-7 pt-5 notes" v-html="conference.ticketNotes" />
+          </div>
+
+
+          <div v-if="conference.eventDelivery !== 'Onsite'">
+            <h2 class="title">Webcast</h2>
+            <p class="mb-3">This event is broadcasted on <span class="has-text-weight-bold">{{ conference.webcastService }}</span>.</p>
+            <a v-if="conference.webcastUrl" class="button is-gradient is-rounded mb-3" :href="conference.webcastUrl" target="_blank">
+              <i class="mdi mdi-projector-screen is-size-4" />
+              <span style="padding-left: 0.25rem;">{{ $t('about.ted.watch') }}</span>
+            </a>
+            <p class="is-size-7 pt-5 notes" v-html="conference.webcastNotes" />
+          </div>
         </section>
       </div>
     </section>
@@ -104,6 +158,9 @@
           <p class="is-size-7 has-text-white">
             {{ conference.locationAccess }}
           </p>
+          <p>
+            {{ conference.locationNotes }}
+          </p>
         </section>
       </div>
     </section>
@@ -113,6 +170,10 @@
       </figure>
     </section>
 
+
+    <section class="section notes" v-if="conference.additionalNotes">
+      <p class="has-text-white" v-html="conference.additionalNotes" />
+    </section>
 
 
   </section>
@@ -139,6 +200,7 @@ export default {
           startTime
           endTime
           eventDelivery
+          messageFromOrganizer(markdown: true)
           theme
           themeArtwork {
             url
@@ -150,6 +212,7 @@ export default {
           }
           themeStatement(markdown: false)
           location
+          locationAccess
           locationDescription
           locationGooglemapsEmbed
           locationImage {
@@ -170,9 +233,32 @@ export default {
             }
             youtubeId
           }
+          performers {
+            name
+            jobTitleOrRole
+            description
+            portrait {
+              url
+              responsiveImage(imgixParams: {ar: "1:1", fit: crop}) {
+                src
+              }
+            }
+          }
+          hasTicket
+          ticketPrice
+          isTicketAvailable
+          ticketPriceStudent
+          ticketReleaseDate
+          ticketSellingPageUrl
           timetable
           webcastService
           webcastUrl
+          locationNotes(markdown: true)
+          webcastNotes(markdown: true)
+          enjaNotes(markdown: true)
+          ticketNotes(markdown: true)
+          programmeNotes(markdown: true)
+          additionalNotes(markdown: true)
         }
       }
     `
