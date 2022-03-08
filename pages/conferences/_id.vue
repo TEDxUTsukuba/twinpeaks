@@ -39,7 +39,7 @@
                 {{ speaker.description }}
               </p>
               <br>
-              <a class="button is-gradient is-rounded" :href="`https://www.youtube.com/watch?v=${speaker.youtubeId}`" target="_blank">
+              <a v-if="speaker.youtubeId" class="button is-gradient is-rounded" :href="`https://www.youtube.com/watch?v=${speaker.youtubeId}`" target="_blank">
                 <i class="mdi mdi-youtube is-size-4" />
                 <span style="padding-left: 0.25rem;">{{ $t('about.ted.watch') }}</span>
               </a>
