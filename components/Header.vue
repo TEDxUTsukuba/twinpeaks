@@ -4,7 +4,7 @@
       <b-navbar-item tag="router-link" :to="localePath('/')">
         <img  
           src="~/assets/logo/u_allwhite_oneline.png"
-          alt="TEDxUTsukuba Logo"
+          alt="TEDxUTsukuba"
         >
       </b-navbar-item>
     </template>

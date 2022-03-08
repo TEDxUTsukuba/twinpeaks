@@ -9,7 +9,7 @@
         <Carousel id="top-carousel" />
       </div>
       <div class="column is-4-widescreen is-5-fullhd vertical-center has-text-centered" id="top-carousel-wrapper-logo-section">
-        <img src="~/assets/logo/u_bgblack_oneline.png" width="60%" alt="TEDxUTsukuba Logo">
+        <img src="~/assets/logo/u_bgblack_oneline.png" width="60%" alt="TEDxUTsukuba">
       </div>
     </div> -->
     <!-- <div class="bg-jijimuge" style="padding-top: 3.25rem;">  

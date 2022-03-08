@@ -85,7 +85,7 @@
             <div class="card-image has-background-black-bis">
               <figure class="image is-16by9">
                 <img v-if="event.imageFilePath" :src="event.imageFilePath" :alt="event.title" style="object-fit: cover;">
-                <img v-else src="/defaultimage.png" alt="TEDxUTsukuba Logo">
+                <img v-else src="/defaultimage.png" alt="TEDxUTsukuba">
               </figure>
             </div>
             <div class="card-content has-text-centered">

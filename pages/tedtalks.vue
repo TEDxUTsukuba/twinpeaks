@@ -67,7 +67,7 @@
             <nuxt-link class="navbar-item" to="/">
               <img
                 src="~/assets/logo/u_bgblack_oneline.png"
-                alt="TEDxUTsukuba Logo"
+                alt="TEDxUTsukuba"
               >
             </nuxt-link>
           </div>
