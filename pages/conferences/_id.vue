@@ -14,13 +14,13 @@
 
     <section class="section" v-if="conference.themeArtwork">
       <figure class="image">
-        <datocms-image :data="conference.themeArtwork.responsiveImage" :alt="conference.name" style="position: initial;"/>
-        <!-- <img :src="conference.themeArtwork.url" :alt="conference.name" style="position: initial;"/> -->
+        <!-- <datocms-image :data="conference.themeArtwork.responsiveImage" :alt="conference.name" style="position: initial;"/> -->
+        <img :src="conference.themeArtwork.url" :alt="conference.name" style="position: initial; max-width: 640px;" class="mx-auto" />
       </figure>
     </section>
 
     <section class="section" v-if="conference.messageFromOrganizer">
-      <p class="has-text-white notes" v-html="conference.messageFromOrganizer" />
+      <article class="has-text-white notes" v-html="conference.messageFromOrganizer" />
       <p class="mt-3 has-text-right">TEDxUTsukuba {{ conference.name }}<br>Organizer<br>{{ conference.organizer }}</p>
     </section>
     
@@ -70,7 +70,7 @@
           </div>
         </div>
       </div>
-      <p class="is-size-7 pt-5 notes" v-html="conference.enjaNotes" />
+      <article class="is-size-7 pt-5 notes" v-html="conference.enjaNotes" />
     </section>
 
     <section class="hero has-background-primary" v-if="conference.theme">
@@ -81,7 +81,7 @@
         <h1 class="title is-3 has-text-white">
           {{ conference.theme }}
         </h1>
-        <p class="has-text-white has-text-centered-mobile mb-4" v-html="conference.themeStatement" />
+        <article class="has-text-white has-text-centered-mobile mb-4" v-html="conference.themeStatement" />
       </section>
     </section>
 
@@ -89,19 +89,23 @@
       <div class="hero-body">
         <section class="section">
           <h1 class="title is-0">{{ $t('2020.participance.title') }}</h1>
-          <div v-for="(item, index) in conference.timetable" :key="index" style="max-width: 560px;" class="mx-auto">
+          <div v-for="(item, index) in conference.timetable" :key="index" style="max-width: 560px;" class="mx-auto mb-5">
             <div class="nmp-dark p-4">
               <div class="">
-                <span class="tag is-dark"><i class="mdi mdi-clock" />
+                <span class="tag is-white"><i class="mdi mdi-clock" />
                   {{ item.startAt.toString().substr(0, 2) }}:{{ item.startAt.toString().substr(2, 2) }}
                   <span v-if="item.endAt"> - {{ item.endAt.toString().substr(0, 2) }}:{{ item.endAt.toString().substr(2, 2) }}</span>
                 </span>
               </div>
-              <div class="mt-2">
-                <h1 class="title is-4" v-if="$i18n.locale == 'ja'">{{ item.title_ja }}</h1>
-                <h1 class="title is-4" v-else>{{ item.title_en }}</h1>
-                <p v-if="item.description">{{ item.description }}</p>
-                <a v-if="item.link_url" :href="item.link_url">{{ item.link_text }}</a>
+              <div class="mt-3">
+                <p class="title is-size-5" v-if="$i18n.locale == 'ja'">{{ item.title_ja }}</p>
+                <p class="title is-size-5" v-else>{{ item.title_en }}</p>
+                <p v-if="item.description_ja" class="is-size-7">{{ item.description_ja }}</p>
+                <p v-if="item.description_en" class="is-size-7">{{ item.description_en }}</p>
+                <a v-if="item.link_url" :href="item.link_url" class="is-size-7">
+                  <span v-if="$i18n.locale == 'en'">{{ item.link_text_en }}</span>
+                  <span v-else>{{ item.link_text_ja }}</span>
+                </a>
               </div>
               <figure class="image my-5" v-if="item.image">
                 <img :src="item.image" />
@@ -117,25 +121,33 @@
       <div class="hero-body">
         <section class="section">
           <h1 class="title is-0">{{ $t('about.ted.join') }}</h1>
-          <div v-if="conference.hasTicket">
-            <h2 class="title">Tickets</h2>
-            <p v-if="conference.isTicketAvailable"><span class="tag is-success">Tickets Now Available!</span></p>
-            <p v-else><span class="tag is-success">Tickets will be available on {{ conference.ticketReleaseDate }}</span></p>
-            <p class="mb-3">
-              Price: {{ conference.ticketPrice }} <span v-if="conference.ticketPriceStudent">(Student: {{ conference.ticketPriceStudent}})</span>
-            </p>
-            <p class="is-size-7 pt-5 notes" v-html="conference.ticketNotes" />
-          </div>
 
-
-          <div v-if="conference.eventDelivery !== 'Onsite'">
-            <h2 class="title">Webcast</h2>
-            <p class="mb-3">This event is broadcasted on <span class="has-text-weight-bold">{{ conference.webcastService }}</span>.</p>
+          <div v-if="conference.eventDelivery !== 'Onsite'" class="mb-4">
+            <h2 class="title">{{ $t('event.talk') }}</h2>
+            <p class="mb-3">{{ $t('event.webcast_desc', [ conference.webcastService ]) }}</p>
             <a v-if="conference.webcastUrl" class="button is-gradient is-rounded mb-3" :href="conference.webcastUrl" target="_blank">
               <i class="mdi mdi-projector-screen is-size-4" />
               <span style="padding-left: 0.25rem;">{{ $t('about.ted.watch') }}</span>
             </a>
-            <p class="is-size-7 pt-5 notes" v-html="conference.webcastNotes" />
+            <article class="is-size-7 pt-5 notes" v-html="conference.webcastNotes" />
+          </div>
+
+          <div v-if="conference.hasTicket" class="mb-4">
+            <h2 class="title">{{ $t('event.workshop') }}</h2>
+            <p class="mb-3 notes">
+              Price: <strong>JPY {{ conference.ticketPrice }}</strong> <span v-if="conference.ticketPriceStudent">(Student: <strong>{{ conference.ticketPriceStudent}}</strong>)</span>
+            </p>
+            <div v-if="conference.isTicketAvailable">
+              <span class="tag is-info has-text-weight-bold">Tickets Now Available!</span></p>
+              <a v-if="conference.ticketSellingPageUrl" class="button is-gradient is-rounded my-3" :href="conference.ticketSellingPageUrl" target="_blank">
+                <i class="mdi mdi-ticket is-size-4" />
+                <span style="padding-left: 0.25rem;">{{ $t('2020.participance.premium.tiget') }}</span>
+              </a>
+            </div>
+            <div v-else>
+              <span class="tag is-success">Tickets will be available on {{ conference.ticketReleaseDate }}</span>
+            </div>
+            <article class="is-size-7 pt-5 notes" v-html="conference.ticketNotes" />
           </div>
         </section>
       </div>
@@ -172,7 +184,7 @@
 
 
     <section class="section notes" v-if="conference.additionalNotes">
-      <p class="has-text-white" v-html="conference.additionalNotes" />
+      <article class="has-text-white" v-html="conference.additionalNotes" />
     </section>
 
 
@@ -201,6 +213,7 @@ export default {
           endTime
           eventDelivery
           messageFromOrganizer(markdown: true)
+          organizer
           theme
           themeArtwork {
             url

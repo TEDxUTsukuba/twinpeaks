@@ -90,7 +90,12 @@
     "title3": "世界へ。",
     "subtitle1": "4名の登壇者による",
     "subtitle2": "洞察的なアイディアを学ぼう。",
-    "download": "カレンダーに追加"
+    "download": "カレンダーに追加",
+    "webcast": "ライブ配信",
+    "webcast_desc": "このイベントは {0} で視聴できます。",
+    "ticket": "チケット | チケット",
+    "talk": "トークセッション",
+    "workshop": "ワークショップ"
   },
   "news": {
     "title": "お知らせ",
