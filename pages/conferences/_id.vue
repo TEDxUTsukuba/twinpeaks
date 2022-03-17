@@ -112,7 +112,7 @@
               </figure>
             </div>   
           </div>
-         <p class="is-size-7 pt-5 notes" v-html="conference.timetableNotes" />
+         <article class="is-size-7 pt-5 notes" v-html="conference.timetableNotes" />
         </section>
       </div>
     </section>
@@ -138,7 +138,6 @@
               Price: <strong>JPY {{ conference.ticketPrice }}</strong> <span v-if="conference.ticketPriceStudent">(Student: <strong>{{ conference.ticketPriceStudent}}</strong>)</span>
             </p>
             <div v-if="conference.isTicketAvailable">
-              <span class="tag is-info has-text-weight-bold">Tickets Now Available!</span>
               <a v-if="conference.ticketSellingPageUrl" class="button is-gradient is-rounded my-3" :href="conference.ticketSellingPageUrl" target="_blank">
                 <i class="mdi mdi-ticket is-size-4" />
                 <span style="padding-left: 0.25rem;">{{ $t('2020.participance.premium.tiget') }}</span>
