@@ -92,7 +92,12 @@
     "title3": "",
     "subtitle1": "Explore insightful ideas ",
     "subtitle2": "from our speakers this year. ",
-    "download": "Add to calendar"
+    "download": "Add to calendar",
+    "webcast": "Webcast",
+    "webcast_desc": "This event is broadcasted on <strong>{0}</strong>.",
+    "ticket": "Ticket | Tickets",
+    "talk": "Talk Session",
+    "workshop": "Workshop"
   },
   "news": {
     "title": "News & Updates",
