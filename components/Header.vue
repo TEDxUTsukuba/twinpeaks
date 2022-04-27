@@ -1,9 +1,9 @@
 <template>
-  <b-navbar class="is-fixed-top is-spaced is-red" id="navbar-top">
+  <b-navbar class="is-fixed-top is-black is-spaced" id="navbar-top">
     <template slot="brand">
       <b-navbar-item tag="router-link" :to="localePath('/')">
         <img  
-          src="~/assets/logo/u_allwhite_oneline.png"
+          src="~/assets/logo/u_bgblack_oneline.png"
           alt="TEDxUTsukuba"
         >
       </b-navbar-item>
@@ -43,8 +43,8 @@
       </b-navbar-dropdown>
       <b-navbar-item tag="div">
         <div class="buttons is-right">
-          <nuxt-link class="button is-white is-outlined" v-if="$i18n.locale !== 'en'" :to="switchLocalePath('en')"><i class="mdi mdi-translate mr-1" />English</nuxt-link>
-          <nuxt-link class="button is-white is-outlined" v-if="$i18n.locale !== 'ja'" :to="switchLocalePath('ja')"><i class="mdi mdi-translate mr-1" />日本語</nuxt-link>
+          <nuxt-link class="button is-info is-outlined" v-if="$i18n.locale !== 'en'" :to="switchLocalePath('en')"><i class="mdi mdi-translate mr-1" />English</nuxt-link>
+          <nuxt-link class="button is-danger is-outlined" v-if="$i18n.locale !== 'ja'" :to="switchLocalePath('ja')"><i class="mdi mdi-translate mr-1" />日本語</nuxt-link>
           <!-- <a class="button is-info" v-if="$i18n.locale !== 'en'" :href="switchLocalePath('en')"><i class="mdi mdi-translate" style="margin-right: 0.25rem;" />English</a>
           <a class="button is-danger" v-if="$i18n.locale !== 'ja'" :href="switchLocalePath('ja')"><i class="mdi mdi-translate" style="margin-right: 0.25rem;" />日本語</a> -->
         </div>
@@ -117,48 +117,7 @@ export default {
 </script>
 
 <style lang="scss">
-  .navbar-burger {
-    color: #fff;
-  }
-  .navbar-menu {
-    background-color: #c6251a;
-  }
   .navbar-item, .navbar-link {
     font-weight: bold;
-    color: #fff;
-  }
-  .navbar-link:not(.is-arrowless)::after {
-    border-color: #fff;
-  }
-  .navbar-link:hover {
-    background-color: #E62B1E !important;
-    color: #fff !important;
-  }
-  .navbar-item.normal-category:hover {
-    background-color: #E62B1E !important;
-    color: #fff !important;
-  }
-  .navbar-link.is-active {
-    background-color: #E62B1E !important;
-    color: #fff !important;
-  }
-  .navbar-item.nuxt-link-exact-active.nuxt-link-active:hover {
-    background-color: #E62B1E !important;
-    color: #fff !important;
-  }
-  .navbar.is-darksilver {
-    background-color: #90a4ae !important;
-  }
-  .navbar.is-red {
-    background-color: #c6251a !important;
-  }
-  .navbar-dropdown {
-    background-color: #c6251a !important;
-    .navbar-item {
-      color: #fff !important;
-      &:hover {
-        background-color: #E62B1E !important;
-      }
-    }
   }
 </style>
