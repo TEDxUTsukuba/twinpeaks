@@ -1,66 +1,47 @@
 <template>
   <div>
-  <section id="top" class="wrapper-dark has-background-primary" style="margin: 0; padding: 0;">
-    <!-- <section style="padding-top: 8vh; padding-bottom: 2vh;">
+  <section id="top" class="wrapper-dark" style="margin: 0; padding: 0;">
+    <section class="is-hidden-mobile hero fullheight-without-header has-background-black">
+      <!-- <div class="is-fixed has-background-info"> -->
+        <video muted="" autoplay="" playsinline="" loop="" poster="" style="object-fit: cover; filter: saturate(50%);" class="fullheight-without-header">
+          <source src="~/static/nograin_middle_21_9.mp4">
+        </video>
+      <!-- </div> -->
+      <h1 class="text-gradient is-uppercase is-0 has-text-weight-bold has-text-left" style="position: absolute; bottom: 0; left: 3vw; line-height: 0.9;">
+        Ideas<br>Worth<br>Spreading
+      </h1>
+    </section>
+    <section class="is-hidden-tablet has-background-black pb-0">
+      <video muted="" autoplay="" playsinline="" loop="" poster="" style="object-fit: cover; filter: saturate(50%); height: 65vh;">
+        <source src="~/static/nograin_middle_21_9.mp4">
+      </video>
+      <h1 class="text-gradient is-uppercase is-0 has-text-weight-bold has-text-left" style="position: absolute; bottom: 30vh; left: 3vw; line-height: 0.9;">
+        Ideas<br>Worth<br>Spreading
+      </h1>
+    </section>
       
-    </section> -->
-    <!-- <div id="top-carousel-wrapper" class="top-carousel-wrapper columns is-gapless is-vcentered has-background-black" style="margin-bottom: 0;">
-      <div class="column is-12-touch">
-        <Carousel id="top-carousel" />
-      </div>
-      <div class="column is-4-widescreen is-5-fullhd vertical-center has-text-centered" id="top-carousel-wrapper-logo-section">
-        <img src="~/assets/logo/u_bgblack_oneline.png" width="60%" alt="TEDxUTsukuba">
-      </div>
-    </div> -->
-    <!-- <div class="bg-jijimuge" style="padding-top: 3.25rem;">  
-      <div id="top-photoframe" class="top-photoframe">
-        <nuxt-link :to="localePath('/events/2020')">
-        <figure class="is-square">
-          <img src = "~/assets/wallpapers/jijimuge-transparent-circle.png" />
-        </figure>
-        </nuxt-link>
-      </div>
-      <section id="top-title" class="section has-text-centered has-text-weight-light has-text-light" style="padding-bottom: 20vh;">
-        <h1 class="title is-1 is-spaced" style="letter-spacing: -1px;">
-          {{ $t('event.title1') }}<br class="is-hidden-tablet">{{ $t('event.title2') }}<br class="is-hidden-tablet">{{ $t('event.title3') }}
-        </h1>
-        <h1 class="subtitle is-5 has-text-weight-normal has-text-white">
-          {{ $t('event.subtitle1') }}<br class="is-hidden-mobile">{{ $t('event.subtitle2') }}
-        </h1>
-        <br>
-        <nuxt-link :to="localePath('/events/2020')" class="button is-gradient is-rounded">{{ $t('button.discover') }}</nuxt-link>
-      </section>
-    </div> -->
-      
-    <section class="hero fullheight-without-header">
+    <section class="hero has-background-primary">
       <div class="hero-body is-flex mx-auto" id="intro" style="align-items: center; max-width: 1407px;">
         <div>
-          <AnimatedScenery />
           <section class="section mt-4">
-            <div class="columns is-mobile is-multiline is-variable is-0">
-                <div class="column is-4-desktop is-4-tablet is-8-mobile" @mouseover="myMouseOver" @mouseleave="myMouseLeave">
-                  <img src="~/assets/logo/motto.png" class="motto" style="padding-right: 50px;" alt="Ideas Worth Spreading">
-                </div>
-                <div class="column is-8-desktop is-8-tablet is-full-mobile">
-                  <h1 v-if="$i18n.locale == 'ja'" class="title is-size-3-tablet is-size-4-mobile has-text-weight-bold has-text-white">
-                    <span v-html="$t('intro.headline1')" />
-                    <br class="is-hidden-mobile">
-                    <span v-html="$t('intro.headline2')" />
-                  </h1>
-                  <h1 v-if="$i18n.locale == 'en'" class="title is-size-3-tablet is-size-4-mobile has-text-weight-light has-text-white">
-                    <span v-html="$t('intro.headline1')" />
-                    <br class="is-hidden-mobile">
-                    <span v-html="$t('intro.headline2')" />
-                  </h1>
-                  <img id="rocket" src="~/assets/svg/rocket.png" width="100%" style="z-index: 0;" alt="">
-                  <article class="is-size-6">
-                    {{ $t('intro.description') }}
-                  </article>
-                  <div class="has-text-right mt-4">
-                    <nuxt-link :to="localePath('/about/utsukuba')"><button class="button is-rounded is-white">{{ $t('intro.button') }}</button></nuxt-link>
-                  </div>
-                </div>
-              </div>
+            <h1 v-if="$i18n.locale == 'ja'" class="title is-size-2-tablet is-size-3-mobile has-text-weight-bold has-text-white">
+              <span v-html="$t('intro.headline1')" />
+              <br>
+              <span v-html="$t('intro.headline2')" />
+            </h1>
+            <h1 v-if="$i18n.locale == 'en'" class="title is-size-2-tablet is-size-3-mobile has-text-weight-light has-text-white">
+              <span v-html="$t('intro.headline1')" />
+              <br class="is-hidden-mobile">
+              <span v-html="$t('intro.headline2')" />
+            </h1>
+            <img id="rocket" src="~/assets/svg/rocket.png" width="100%" style="z-index: 0;" alt="">
+            <article class="is-size-6">
+              {{ $t('intro.description') }}
+            </article>
+            <div class="has-text-right mt-4">
+              <nuxt-link :to="localePath('/about/utsukuba')"><button class="button is-rounded is-white">{{ $t('intro.button') }}</button></nuxt-link>
+            </div>
+            <AnimatedScenery class="py-6" />
           </section>
         </div>
       </div>
@@ -275,6 +256,22 @@ export default {
   #intro {
     opacity: 0;
     transition: all 1s;
+  }
+  .text-gradient {
+    background: linear-gradient(135deg, #005bbb, #ffd500, #ff0000);
+    background-size: 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animated_text 10s ease-in-out infinite;
+    -moz-animation: animated_text 10s ease-in-out infinite;
+    -webkit-animation: animated_text 10s ease-in-out infinite;
+  }
+
+  @keyframes animated_text {
+    0% { background-position: 0px 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0px 50%; }
   }
 </style>
 
