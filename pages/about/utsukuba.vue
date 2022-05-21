@@ -67,7 +67,7 @@
 
     <!-- Members -->
 
-    <section class="hero has-background-gradient">
+    <section class="hero">
       <section class="section" id="members">
         <div class="container has-text-right has-text-centered-mobile">
           <h1 class="title is-0 is-spaced">{{ $t('about.utsukuba.members.title')}}</h1>
@@ -79,65 +79,54 @@
           <div
             id="thumbnails"
             class="column is-3-fullhd is-4-widescreen is-4-desktop is-6-tablet is-12-mobile"
-            v-for="(member, index) in memberList" :key="index"
+            v-for="(member, index) in members" :key="index"
             style="display: inline-block; vertical-align: top;"
           >
             <div class="nmp-dark">
-              <header class="card-header" v-if="member.showImageOnTop && !$ua.isFromSmartphone()">
+              <header class="card-header" v-if="member.portrait && !$ua.isFromSmartphone()">
                 <p class="card-header-title">
                 </p>
               </header>
-              <div class="card-image" v-if="!$ua.isFromSmartphone()" style="width: 100%;">
-                <figure v-if="member.showImageOnTop" class="image is-3by2" style="overflow: hidden;">
-                  <img class="portrait" :src="getJsonImgUrl(`${member.id}.jpg`)" :alt="member.given_name_en + member.family_name_en" style="object-fit: cover;">
+              <div class="card-image" v-if="member.portrait && !$ua.isFromSmartphone()" style="width: 100%;">
+                <figure class="image is-3by2" style="overflow: hidden;">
+                  <img class="portrait" :src="member.portrait.responsiveImage.src" :alt="member.firstName" style="object-fit: cover;">
                 </figure>
               </div>
               <div class="card-content">
                 <div class="media is-vcentered">
                   <div class="media-left" v-if="$ua.isFromSmartphone()">
                     <figure class="image is-48x48 is-square">
-                      <img v-if="member.hasImage" :src="getJsonImgUrl(`${member.id}.jpg`)" :alt="member.given_name_en + member.family_name_en" style="object-fit: cover; border-radius: 50%;">
-                      <img v-else src="~/assets/team/default.png" :alt="member.given_name_en + member.family_name_en" style="object-fit: cover; border-radius: 50%;">
+                      <img v-if="member.portrait" :src="member.portrait.responsiveImage.src" :alt="member.firstName" style="object-fit: cover; border-radius: 50%;">
+                      <img v-else src="~/assets/team/default.png" :alt="member.firstName" style="object-fit: cover; border-radius: 50%;">
                     </figure>
                   </div>
                   <div class="media-content">
-                    <span v-if="$i18n.locale == 'en'">
-                      <p class="subtitle is-size-7 has-text-primary is-family-narrow pb-1">
-                        {{ member.role }}
-                      </p>
-                      <h1 class="title is-4">
-                        {{ member.given_name_en }} {{ member.family_name_en }}
-                      </h1>
-                    </span>
-                    <span v-if="$i18n.locale == 'ja'">
-                      <p class="subtitle is-size-7 has-text-primary is-family-narrow pb-1">
-                        {{ member.role }}
-                      </p>
-                      <h1 class="title is-4">
-                        {{ member.family_name_ja }} {{ member.given_name_ja }}
-                      </h1>
-                    </span>
+                    <p class="title is-4">
+                      <span v-if="$i18n.locale == 'en'">{{ member.firstName }} {{ member.middleName }} {{ member.lastName }}</span>
+                      <span v-if="$i18n.locale == 'ja'">{{ member.lastName }} {{ member.middleName }} {{ member.firstName }}</span>
+                    </p>
+                    <p class="subtitle is-size-7 has-text-primary is-family-narrow pb-1">
+                      {{ member.jobTitleOrRole }}
+                    </p>
                   </div>
                 </div>
 
                 <div class="text">
-                  <p class="midashi is-size-7 has-text-weight-bold has-text-grey" v-if="member.home_state_ja">
+                  <p class="midashi is-size-7 has-text-weight-bold has-text-grey" v-if="member.homeState">
                     {{ $t('about.utsukuba.members.from') }}
-                    <span class="is-size-7 has-text-weight-normal has-text-grey-light" v-if="$i18n.locale == 'en'">{{ member.home_state_en }}</span>
-                    <span class="is-size-7 has-text-weight-normal has-text-grey-light" v-if="$i18n.locale == 'ja'">{{ member.home_state_ja }}</span>
+                    <span class="is-size-7 has-text-weight-normal has-text-grey-light">{{ member.homeState }}</span>
                   </p>
 
-                  <p class="midashi is-size-7 has-text-weight-bold has-text-grey" v-if="member.college_ja">
+                  <p class="midashi is-size-7 has-text-weight-bold has-text-grey" v-if="member.college">
                     {{ $t('about.utsukuba.members.college') }}
-                    <span class="is-size-7 has-text-weight-normal has-text-grey-light" v-if="$i18n.locale == 'en'">{{ member.college_en }}</span>
-                    <span class="is-size-7 has-text-weight-normal has-text-grey-light" v-if="$i18n.locale == 'ja'">{{ member.college_ja }}</span>
+                    <span class="is-size-7 has-text-weight-normal has-text-grey-light">{{ member.college }}</span>
                   </p>
                   
-                  <p class="midashi is-size-7 has-text-weight-bold has-text-grey" v-if="member.tedtalk_headline_en || member.tedtalk_headline_ja">
+                  <!-- <p class="midashi is-size-7 has-text-weight-bold has-text-grey" v-if="member.tedtalk_headline_en || member.tedtalk_headline_ja">
                     {{ $t('about.utsukuba.members.favouritetedtalk') }}
                     <span class="has-text-weight-normal is-size-7 has-text-grey-light" v-if="member.tedtalk_headline_en && $i18n.locale == 'en'">{{ member.tedtalk_headline_en.length > 35 ? toUpperCamel(member.tedtalk_headline_en.substr(0, 35)) + '…' : toUpperCamel(member.tedtalk_headline_en) }}</span>
                     <span class="has-text-weight-normal is-size-7 has-text-grey-light" v-if="member.tedtalk_headline_ja && $i18n.locale == 'ja'">{{  member.tedtalk_headline_ja.length > 20 ? member.tedtalk_headline_ja.substr(0, 20) + '…' : member.tedtalk_headline_ja }}</span>
-                  </p>
+                  </p> -->
                 </div>
                 <div class="has-text-right mt-4">
                   <nuxt-link :to="localePath(`/about/${member.id}`)" class="button is-rounded is-small is-gradient">{{ $t('button.readmore') }}</nuxt-link>
@@ -255,8 +244,8 @@
 <script>
 import Meta from '~/assets/mixins/meta'
 
-import axios from 'axios';
-import Modal from '~/components/Modal.vue'
+import { request, gql } from '~/lib/datocms'
+
 // import VueInstagram from 'vue-instagram'
 import Movie from '~/components/Movie.vue'
 import jobs from '~/references/jobs.json'
@@ -265,7 +254,7 @@ import externalLink from '@/assets/svg/external-link-alt-solid.svg'
 export default {
   mixins: [Meta],
   components: {
-    Modal, externalLink, Movie
+    externalLink, Movie
   },
   data() {
     return {
@@ -273,9 +262,6 @@ export default {
       meta: {
         title: "About TEDxUTsukuba",
       },
-      isImageModalActive: false,
-      memberList: {},
-      // memberListRemainder: {},
       showContent: false,
       showOthers: true,
       postItem: "",
@@ -294,23 +280,32 @@ export default {
       ]
     }
   },
+  async asyncData({ params, i18n }) {
+    const data = await request({
+      query: gql`
+      {
+        members: allMembers(filter: {isActive: {eq: "true"}}, locale: ${i18n.locale}, orderBy: createdAt_ASC) {
+          id
+          lastName
+          firstName
+          middleName
+          jobTitleOrRole
+          homeState
+          college
+          portrait {
+            responsiveImage(imgixParams: {fm: jpg, w: 320}) {
+              src
+            }
+          }
+        }
+      }
+    `
+    })
+    return { ready: !!data, ...data }
+  },
   methods: {
-    openModal (partner) {
-      this.showContent = true
-      this.postItem = partner
-    },
-    closeModal () {
-      this.showContent = false
-    },
     getJsonImgUrl(value) {
       return require(`~/assets/team/${value}`)
-    },
-    getTedLinkUrl(value) {
-      if (this.$i18n.locale == 'ja') {
-        return value + '?language=ja'
-      } else {
-        return value + '?language=en'
-      }
     },
     toUpperCamel(str) {
       const sansHttpsLang = str.replace(this.regexTED, '').replace(this.regexLang, '');
@@ -320,29 +315,6 @@ export default {
       return formAbbreviation;
     }
   },
-  computed: {
-    // memberList() {
-    //   return this.$store.getters[
-    //     'member/showAllMembers'
-    //   ](this.year)
-    // }
-  },
-  mounted(){
-    // const api_url = "https://script.google.com/macros/s/AKfycbxp6NqJLbjD4pdjqloabrjwRxN_hhXZ9nv1O3cRtdtkraiiZEfeKt9lUgubcCMbw0g17g/exec";
-    axios({
-      method: 'GET',
-      url: 'https://script.google.com/macros/s/AKfycbwNwRYbQJQIahjoNCA5BGFJqmv0gljLvSzF5kTzOh7wZhhLchBr35mBtZ2zXHQB5L7klg/exec',
-      params: { summary: 'true' }, 
-      crossDomain: true
-    }).then(response => {
-      this.memberList = response.data.filter(el => el.isActive);
-      // if (this.$ua.isFromSmartphone()) {
-      //   this.memberList = response.data;
-      // } else {
-      //   this.memberList = response.data
-      // }
-    });
-  }
 }
 </script>
 
