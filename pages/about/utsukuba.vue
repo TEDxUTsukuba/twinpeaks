@@ -332,9 +332,7 @@ export default {
     color: #E62B1E;
     font-weight: bold;
   }
-  div.text {
-    margin-top: .75rem;
-  }
+
   h1.subtitle + p.midashi {
     margin-top: 0;
   }
