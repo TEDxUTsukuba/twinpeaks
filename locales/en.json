@@ -157,8 +157,10 @@
         "from": "From",
         "period": "Joined",
         "college": "College",
+        "noXNoLife": "No X, No Life",
         "favouritetedtalk": "My favourite TED talk",
         "message": "Message",
+        "messageFromYourColleague": "Message from their colleague",
         "keywords": "3 words that describe myself"
       },
       "team": {

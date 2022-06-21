@@ -24,10 +24,15 @@
             </p>
             <p class="has-text-weight-normal has-text-light">{{ member.homeState }}</p>
 
-            <p class="midashi has-text-weight-bold has-text-primary">
+            <p class="midashi has-text-weight-bold has-text-primary" v-if="member.college">
               {{ $t('about.utsukuba.members.college') }}
             </p>
             <p class="has-text-weight-normal has-text-light">{{ member.college }}</p>
+            
+            <p class="midashi has-text-weight-bold has-text-primary" v-if="member.noXNoLife">
+              {{ $t('about.utsukuba.members.noXNoLife') }}
+            </p>
+            <p class="has-text-weight-normal has-text-light">{{ member.noXNoLife }}</p>
             
             <p class="midashi has-text-weight-bold has-text-primary" v-if="member.message">
               {{ $t('about.utsukuba.members.message') }}
@@ -35,6 +40,29 @@
             <p class="has-text-weight-normal has-text-light">
               {{ member.message }}
             </p>
+
+            <p class="midashi has-text-weight-bold has-text-primary" v-if="member.messageFrom">
+              {{ $t('about.utsukuba.members.messageFromYourColleague') }}
+            </p>
+
+            <p class="has-text-weight-normal has-text-light" v-if="member.messageFromYourColleague">
+              {{ member.messageFromYourColleague }}
+            </p> 
+
+            <nuxt-link :to="member.messageFrom.id" v-if="member.messageFrom">
+              <div class="media mt-3 p-3" style="border: 1px solid #444; border-radius: 8px;">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img :src="member.messageFrom.portrait.responsiveImage.src" class="is-rounded">
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <p class="is-size-7 has-text-weight-bold">{{ member.messageFrom.firstName }}</p>
+                  <p class="is-size-7">{{ member.messageFrom.jobTitleOrRole }}</p>
+                </div>
+              </div>
+            </nuxt-link>
+
             <p class="mt-6 midashi has-text-weight-bold has-text-primary" v-if="member.favouriteTedTalk || member.favouriteTedTalkYoutube">
               {{ $t('about.utsukuba.members.favouritetedtalk') }}
             </p>
@@ -105,6 +133,20 @@ export default {
           lastName
           middleName
           message
+          messageFromYourColleague
+          messageFrom {
+            firstName 
+            middleName 
+            lastName
+            id
+            jobTitleOrRole
+            portrait {
+              responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 48, h: 48}) {
+                src
+              }
+            }
+          }
+          noXNoLife
           portrait {
             responsiveImage(imgixParams: {fm: jpg, fit: crop, h: 320}) {
               src

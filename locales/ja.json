@@ -155,8 +155,10 @@
         "from": "出身",
         "period": "在籍期間",
         "college": "所属",
+        "noXNoLife": "No X, No Life",
         "favouritetedtalk": "お気に入りのTEDトーク",
         "message": "メッセージ",
+        "messageFromYourColleague": "メンバーからのメッセージ",
         "keywords": "自分を表す3つのキーワード"
       },
       "team": {
