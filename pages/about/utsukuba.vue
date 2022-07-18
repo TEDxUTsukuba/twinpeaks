@@ -284,7 +284,7 @@ export default {
     const data = await request({
       query: gql`
       {
-        members: allMembers(filter: {isActive: {eq: "true"}}, locale: ${i18n.locale}, orderBy: createdAt_ASC) {
+        members: allMembers(filter: {isActive: {eq: "true"}}, locale: ${i18n.locale}, orderBy: order_ASC) {
           id
           lastName
           firstName
