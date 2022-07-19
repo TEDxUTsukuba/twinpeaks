@@ -311,7 +311,13 @@ export default {
   router: {
     scrollBehavior: function (to, from, savedPosition) {
       return { x: 0, y: 0 }
-    }
+    },
+    extendRoutes(routes, resolve) {
+      routes.push({
+        path: '/conferences/2022',
+        redirect: '/conferences/2021'
+      })
+    },
   },
   server: {
     port: 3000, // デフォルト: 3000
