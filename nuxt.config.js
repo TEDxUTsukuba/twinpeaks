@@ -121,14 +121,6 @@ export default {
       src: '~/plugins/vue-scrollmagic.js',
       ssr: false
     },
-    {
-      src: '~/plugins/vue-add-to-calendar.js',
-      ssr: false
-    },
-    // {
-    //   src: '~/plugins/generator.js',
-    //   ssr: false
-    // },
     { 
       src: '~/plugins/vue-konva',
       ssr: false 
@@ -139,10 +131,6 @@ export default {
     },
     {
       src: '~/plugins/vue-horizontal',
-      ssr: false
-    },
-    {
-      src: '~/plugins/vue-countdown',
       ssr: false
     }
   ],

@@ -1,5 +1,4 @@
 import axios from 'axios';
-import mikan from "mikanjs";
 import sharp from "sharp";
 import TextToSVG from "text-to-svg";
 
