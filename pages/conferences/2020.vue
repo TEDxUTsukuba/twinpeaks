@@ -403,48 +403,31 @@ export default {
       -webkit-text-fill-color: transparent;
     }
   }
-  .bg-jijimuge {
-    /* background-image: linear-gradient( 135deg, #F1CA74 10%, #A64DB6 100%); */
-    background: url("~@/assets/wallpapers/stage-bg4.png");
-    /* background-size: 100%; */
-    background-repeat: no-repeat;
-    background-position: center;
-      @media screen and (max-width: 780px) {
-        background: none;
-        display: nonte;
-  }
-}
-  .is-active .al img {
-    filter: grayscale(0%);
-  }
-  .al img {
-    filter: grayscale(100%);
-  }
 
   #card-1, #card-2, #card-3, #card-4, #highlight, #venue {
     opacity: 0;
     transition: all 0.5s;
   }
   .bg-venue{
-  background: url("~@/assets/2020/venue/IMG_9824.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position:center center;
-  padding: 30px;
-  overflow: hidden;
-  position: relative;
-  z-index: 0;
-}
-.bg-venue:before{
-  content: "";
-  display: block;
-  position: absolute;
-  background: inherit;
-  filter: brightness(75%) contrast(50%) blur(5px);
-  top: -20px;
-  right: -20px;
-  bottom: -20px;
-  left: -20px;
-  z-index: -1;
-}
+    background: url("~@/assets/2020/venue/IMG_9824.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center center;
+    padding: 30px;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+  }
+  .bg-venue:before{
+    content: "";
+    display: block;
+    position: absolute;
+    background: inherit;
+    filter: brightness(75%) contrast(50%) blur(5px);
+    top: -20px;
+    right: -20px;
+    bottom: -20px;
+    left: -20px;
+    z-index: -1;
+  }
 </style>
