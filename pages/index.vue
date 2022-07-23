@@ -92,11 +92,6 @@
       </section>
     </section>
 
-
-    <section class="my-6">
-      <!-- <PopularArticles />  -->
-    </section>
-
     <section class="section pt-0">
       <h1 class="title is-0 has-text-white">
         {{ $t('voice.title') }}
@@ -118,7 +113,6 @@
 </template>
 
 <script>
-import PopularArticles from '~/components/PopularArticles'
 import { request, gql } from '~/lib/datocms'
 import { Image } from "vue-datocms";
 import format from 'date-fns/format'
@@ -130,7 +124,6 @@ import AnimatedScenery from '~/components/AnimatedScenery'
 
 export default {
   components: {
-    PopularArticles, 
     "datocms-image": Image, VueHorizontal, AnimatedScenery
   },
   data() {

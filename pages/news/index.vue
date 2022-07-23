@@ -7,7 +7,7 @@
     </section>
     <section class="section">
       <div class="columns is-variable is-6 is-multiline is-centered">
-        <div class="column is-4-widescreen is-6-desktop is-6-tablet" v-for="(notice, index) in notices" :key="index">
+        <div class="column is-6-tablet" v-for="(notice, index) in notices" :key="index">
           <div class="nmp-dark">
             <header class="card-header">
               <p class="card-header-title">
