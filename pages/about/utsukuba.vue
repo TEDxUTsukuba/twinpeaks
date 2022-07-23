@@ -83,13 +83,14 @@
             style="display: inline-block; vertical-align: top;"
           >
             <div class="nmp-dark">
-              <header class="card-header" v-if="member.portrait && !$ua.isFromSmartphone()">
+              <header class="card-header" v-if="!$ua.isFromSmartphone()">
                 <p class="card-header-title">
                 </p>
               </header>
-              <div class="card-image" v-if="member.portrait && !$ua.isFromSmartphone()" style="width: 100%;">
+              <div class="card-image" v-if="!$ua.isFromSmartphone()" style="width: 100%;">
                 <figure class="image is-3by2" style="overflow: hidden;">
-                  <img class="portrait" :src="member.portrait.responsiveImage.src" :alt="member.firstName" style="object-fit: cover;">
+                  <img v-if="member.portrait" class="portrait" :src="member.portrait.responsiveImage.src" :alt="member.firstName" style="object-fit: cover;">
+                  <img v-else class="portrait" src="~/assets/u_logo_banner.png" :alt="member.firstName" style="object-fit: cover;">
                 </figure>
               </div>
               <div class="card-content">
@@ -242,10 +243,7 @@
 
 <script>
 import Meta from '~/assets/mixins/meta'
-
 import { request, gql } from '~/lib/datocms'
-
-// import VueInstagram from 'vue-instagram'
 import Movie from '~/components/Movie.vue'
 import jobs from '~/references/jobs.json'
 import externalLink from '@/assets/svg/external-link-alt-solid.svg'
