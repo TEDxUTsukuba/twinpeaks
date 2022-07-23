@@ -186,17 +186,17 @@
         <div class="columns is-multiline">
           <div class="column is-one-third-desktop">
             <figure class="image is-16by9">
-              <img src="~/assets/others/venue_team_2018.jpg" alt="venue">
+              <img src="~/assets/daily_scenes/venue_team_2018.jpg" alt="venue">
             </figure>
           </div>
           <div class="column is-one-third-desktop">
             <figure class="image is-16by9">
-              <img src="~/assets/others/IMG_9801.jpg" alt="Members 2019">
+              <img src="~/assets/daily_scenes/IMG_9801.jpg" alt="Members 2019">
             </figure>
           </div>
           <div class="column is-one-third-desktop">
             <figure class="image is-16by9">
-              <img src="~/assets/others/tech_team_2018.jpg" alt="tech">
+              <img src="~/assets/daily_scenes/tech_team_2018.jpg" alt="tech">
             </figure>
           </div>
         </div>
