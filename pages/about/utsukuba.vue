@@ -1,5 +1,5 @@
 <template>
-  <section id="wrapper-dark" class="font-awesome">
+  <section id="wrapper-dark">
     <section class="section is-halfheight has-text-centered" id="trigger">
       <i class="mdi mdi-information has-text-primary is-size-1" /> 
       <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.title')}}</h1>

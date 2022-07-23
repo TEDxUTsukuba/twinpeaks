@@ -12,23 +12,6 @@
       </div>
     </section>
     <section class="section">
-      <b-notification
-        type="is-warning"
-        has-icon
-        role="alert">
-        <b>OBSOLETE</b><br>
-        このページは2021年10月をもって更新を停止します。最新のドキュメントは <a href="https://tedxutsukuba-knowledgebase.herokuapp.com/">KnowledgeBase</a> にてご覧ください。<br>
-        This page will no longer be updated as of October 2021. Visit <a href="https://tedxutsukuba-knowledgebase.herokuapp.com/">KnowledgeBase</a> to read the latest document.
-      </b-notification>
-        <!-- <p v-if="pass !== 'jijimuge'">
-          <span class="tag is-info is-primary is-medium">{{ $t('2020.participance.pass.inputpassword') }}</span>
-        </p>
-        <p v-else>
-          <span class="tag is-info is-success is-medium">{{ $t('2020.participance.pass.success') }}</span>
-        </p>
-        <input class="input" v-model="pass" placeholder="Type password" style="width: 320px; margin-bottom: 3rem;"> -->
-        <!-- <button v-on:click="toggle_switch()">Toggle Button</button> -->
-        <!-- <div class="has-text-left" v-if="pass == 'jijimuge'"> -->
         <div class="columns is-multiline">
           <div v-for="(item, index) in items" :key="index" class="column is-half">
               <nuxt-link v-if="item.path" :to="item.path">
@@ -42,7 +25,7 @@
                       <p v-if="$i18n.locale == 'ja'" class="title is-size-5">{{ item.title_ja }}</p>
                       <p v-else class="title is-size-5">{{ item.title_en }}</p>
                       <p v-if="$i18n.locale == 'ja'" class="subtitle is-size-7">{{ item.title_en }}</p>
-                      <p v-else class="subtitle is-size-7">{{ item.title_ja }}
+                      <p v-else class="subtitle is-size-7">{{ item.title_ja }}</p>
                       <p style="margin-top: -1rem;"><span v-if="item.isPublished == false" class="tag is-danger has-text-weight-bold">{{ $t('button.unavailable') }}</span></p>
                     </div>
                   </div>
@@ -59,21 +42,13 @@
                       <p v-if="$i18n.locale == 'ja'" class="title is-size-5">{{ item.title_ja }} <i class="mdi mdi-open-in-new" /></p>
                       <p v-else class="title is-size-5">{{ item.title_en }} <i class="mdi mdi-open-in-new" /></p>
                       <p v-if="$i18n.locale == 'ja'" class="subtitle is-size-7">{{ item.title_en }}</p>
-                      <p v-else class="subtitle is-size-7">{{ item.title_ja }}
+                      <p v-else class="subtitle is-size-7">{{ item.title_ja }}</p>
                       <p style="margin-top: -1rem;"><span v-if="item.isPublished == false" class="tag is-danger has-text-weight-bold">{{ $t('button.unavailable') }}</span></p>
                     </div>
                   </div>
                 </div>
               </a>
           </div>
-        </div>
-
-        <div class="has-text-left content">
-          <p>その他</p>
-          <ul>
-            <li><nuxt-link to="../tedtalks" class="has-text-info">TEDtalks Random Watchlist</nuxt-link></li>
-            <li><nuxt-link to="/private/showroom" class="has-text-info">イケてるTEDxイベントを集めてみた</nuxt-link></li>
-          </ul>
         </div>
     </section>
     <section class="hero has-background-light">
@@ -144,16 +119,16 @@
         title_ja: 'メンバー情報を追加・更新する',
         title_en: 'Edit member information',
         icon: 'account-box-multiple',
-        path: '/private/how_to_update_team',
+        url: "https://twinpeaks.admin.datocms.com/sign_in",
       },
       {
         title_ja: 'ウェブサイトのお知らせを追加・更新する',
         title_en: 'Edit an update to the news',
         icon: 'file-document-edit',
-        path: '/private/how_to_update_news'
+        url: "https://twinpeaks.admin.datocms.com/sign_in",
       },
       {
-        title_ja: 'TED.comのイベント情報を編集する',
+        title_ja: 'TED.comのイベント情報を編集する (Licensee Only)',
         title_en: 'Edit event information on TED.com',
         icon: 'calendar-edit',
         url: 'https://organize.ted.com/'
@@ -165,11 +140,6 @@
         url: 'https://analytics.google.com'
       },
     ]
-   }
-  },
-  methods: {
-   toggle_switch: function() {
-    this.isActive = !this.isActive
    }
   },
   asyncData() {
@@ -185,21 +155,6 @@
   span.tag is-info {
     color: white;
     font-weight: bold;
-  }
-  span.is-website {
-    background-color: #999999;
-  }
-  span.is-pdf {
-    background-color:#ff6666;
-  }
-  span.is-data {
-    background-color: #6666ff;
-  }
-  span.is-community {
-    background-color: hsl(171, 100%, 41%);
-  }
-  span.is-console {
-    background-color: hsl(141, 53%, 53%);
   }
   h3.title {
     margin-top: 4rem;
