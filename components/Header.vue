@@ -13,14 +13,7 @@
         <b-navbar-item v-for="item in conferences" :key="item.path" tag="router-link" :to="{ path: localePath('/conferences/' + item.path)}">
           {{ item.name }}
         </b-navbar-item>
-        
-        <!-- <b-navbar-item tag="router-link" :to="{ path: localePath('/events/') }">
-          {{ $t('header.events.listing') }}
-        </b-navbar-item> -->
       </b-navbar-dropdown>
-      <!-- <b-navbar-item class="normal-category" tag="nuxt-link" :to="localePath('/events/2020')">
-        {{ $t('header.events.child1') }}
-      </b-navbar-item> -->
       <b-navbar-item class="normal-category" tag="nuxt-link" :to="localePath('/talks')">
         {{ $t('header.talks.item') }}
       </b-navbar-item>
