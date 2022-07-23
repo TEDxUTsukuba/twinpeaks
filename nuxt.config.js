@@ -101,12 +101,6 @@ export default {
     height: '5px'
   },
 
-  loadingIndicator: {
-    name: 'circle',
-    color: 'red',
-    background: 'white'
-  },
-
   /*
   ** Global CSS
   */

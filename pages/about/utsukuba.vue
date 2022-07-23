@@ -1,11 +1,11 @@
 <template>
   <section id="wrapper-dark">
     <section class="section is-halfheight has-text-centered" id="trigger">
-      <i class="mdi mdi-information has-text-primary is-size-1" /> 
+      <i class="mdi mdi-information has-text-primary is-size-1" />
       <h1 class="title is-1 is-spaced">{{ $t('about.utsukuba.title')}}</h1>
       <h1 class="subtitle has-text-grey-light">{{ $t('about.utsukuba.subtitle')}}</h1>
     </section>
-    
+
 
     <!-- University of Tsukuba -->
 
@@ -13,22 +13,27 @@
       <h1 class="title is-0" v-html="$t('about.university.title')"></h1>
       <article v-html="$t('about.university.description')"></article>
       <p class="has-text-right is-family-narrow">
-        <a v-if="$i18n.locale == 'en'" href="https://www.tsukuba.ac.jp/en" target="_blank">Official Website <i class="mdi mdi-open-in-new" /></a>
-        <a v-if="$i18n.locale == 'ja'" href="https://www.tsukuba.ac.jp/" target="_blank">公式サイト <i class="mdi mdi-open-in-new" /></a>
+        <a v-if="$i18n.locale == 'en'" href="https://www.tsukuba.ac.jp/en" target="_blank">Official Website <i
+            class="mdi mdi-open-in-new" /></a>
+        <a v-if="$i18n.locale == 'ja'" href="https://www.tsukuba.ac.jp/" target="_blank">公式サイト <i
+            class="mdi mdi-open-in-new" /></a>
         <br>
-        <a class="is-family-narrow" href="https://youtu.be/PTRhU_RnayM" target="_blank">Graduate School Official Trailer (YouTube) <i class="mdi mdi-open-in-new" /></a> 
+        <a class="is-family-narrow" href="https://youtu.be/PTRhU_RnayM" target="_blank">Graduate School Official Trailer
+          (YouTube) <i class="mdi mdi-open-in-new" /></a>
       </p>
     </section>
 
     <section class="hero">
       <figure class="image is-2by1" v-if="$ua.isFromSmartphone()">
-        <img src="~/assets/wallpapers/yukinasan.jpg" style="object-fit: cover; object-position: center 8%; filter: contrast(75%) saturate(125%);">
+        <img src="~/assets/wallpapers/yukinasan.jpg"
+          style="object-fit: cover; object-position: center 8%; filter: contrast(75%) saturate(125%);">
       </figure>
       <figure class="image is-3by1" v-else>
-        <img src="~/assets/wallpapers/yukinasan.jpg" style="object-fit: cover; object-position: center 48%; filter: contrast(75%) saturate(125%);">
+        <img src="~/assets/wallpapers/yukinasan.jpg"
+          style="object-fit: cover; object-position: center 48%; filter: contrast(75%) saturate(125%);">
       </figure>
     </section>
-    
+
 
     <!-- TEDxUTsukuba -->
 
@@ -39,10 +44,12 @@
 
     <section class="hero">
       <figure class="image is-2by1" v-if="$ua.isFromSmartphone()">
-        <img src="~/assets/wallpapers/tedxutsukubalive.jpg" style="object-fit: cover; filter: saturate(125%) brightness(110%) contrast(75%);">
+        <img src="~/assets/wallpapers/tedxutsukubalive.jpg"
+          style="object-fit: cover; filter: saturate(125%) brightness(110%) contrast(75%);">
       </figure>
       <figure class="image is-3by1" v-else>
-        <img src="~/assets/wallpapers/tedxutsukubalive.jpg" style="object-fit: cover; filter: saturate(125%) brightness(110%) contrast(75%);">
+        <img src="~/assets/wallpapers/tedxutsukubalive.jpg"
+          style="object-fit: cover; filter: saturate(125%) brightness(110%) contrast(75%);">
       </figure>
     </section>
 
@@ -76,12 +83,8 @@
       </section>
       <section class="section-wide">
         <div class="columns is-multiline is-mobile">
-          <div
-            id="thumbnails"
-            class="column is-3-fullhd is-4-widescreen is-4-desktop is-6-tablet is-12-mobile"
-            v-for="(member, index) in members" :key="index"
-            style="display: inline-block; vertical-align: top;"
-          >
+          <div id="thumbnails" class="column is-3-fullhd is-4-widescreen is-4-desktop is-6-tablet is-12-mobile"
+            v-for="(member, index) in members" :key="index" style="display: inline-block; vertical-align: top;">
             <div class="nmp-dark">
               <header class="card-header" v-if="!$ua.isFromSmartphone()">
                 <p class="card-header-title">
@@ -89,22 +92,28 @@
               </header>
               <div class="card-image" v-if="!$ua.isFromSmartphone()" style="width: 100%;">
                 <figure class="image is-3by2" style="overflow: hidden;">
-                  <img v-if="member.portrait" class="portrait" :src="member.portrait.responsiveImage.src" :alt="member.firstName" style="object-fit: cover;">
-                  <img v-else class="portrait" src="~/assets/u_logo_banner.png" :alt="member.firstName" style="object-fit: cover;">
+                  <img v-if="member.portrait" class="portrait" :src="member.portrait.responsiveImage.src"
+                    :alt="member.firstName" style="object-fit: cover;">
+                  <img v-else class="portrait" src="~/assets/u_logo_banner.png" :alt="member.firstName"
+                    style="object-fit: cover;">
                 </figure>
               </div>
               <div class="card-content">
                 <div class="media is-vcentered">
                   <div class="media-left" v-if="$ua.isFromSmartphone()">
                     <figure class="image is-48x48 is-square">
-                      <img v-if="member.portrait" :src="member.portrait.responsiveImage.src" :alt="member.firstName" style="object-fit: cover; border-radius: 50%;">
-                      <img v-else src="~/assets/team/default.png" :alt="member.firstName" style="object-fit: cover; border-radius: 50%;">
+                      <img v-if="member.portrait" :src="member.portrait.responsiveImage.src" :alt="member.firstName"
+                        style="object-fit: cover; border-radius: 50%;">
+                      <img v-else src="~/assets/team/default.png" :alt="member.firstName"
+                        style="object-fit: cover; border-radius: 50%;">
                     </figure>
                   </div>
                   <div class="media-content">
                     <p class="title is-4">
-                      <span v-if="$i18n.locale == 'en'">{{ member.firstName }} {{ member.middleName }} {{ member.lastName }}</span>
-                      <span v-if="$i18n.locale == 'ja'">{{ member.lastName }} {{ member.middleName }} {{ member.firstName }}</span>
+                      <span v-if="$i18n.locale == 'en'">{{ member.firstName }} {{ member.middleName }} {{
+                        member.lastName }}</span>
+                      <span v-if="$i18n.locale == 'ja'">{{ member.lastName }} {{ member.middleName }} {{
+                        member.firstName }}</span>
                     </p>
                     <p class="subtitle is-size-7 has-text-primary is-family-narrow pb-1">
                       {{ member.jobTitleOrRole }}
@@ -122,7 +131,7 @@
                     {{ $t('about.utsukuba.members.college') }}
                     <span class="is-size-7 has-text-weight-normal has-text-grey-light">{{ member.college }}</span>
                   </p>
-                  
+
                   <!-- <p class="midashi is-size-7 has-text-weight-bold has-text-grey" v-if="member.tedtalk_headline_en || member.tedtalk_headline_ja">
                     {{ $t('about.utsukuba.members.favouritetedtalk') }}
                     <span class="has-text-weight-normal is-size-7 has-text-grey-light" v-if="member.tedtalk_headline_en && $i18n.locale == 'en'">{{ member.tedtalk_headline_en.length > 35 ? toUpperCamel(member.tedtalk_headline_en.substr(0, 35)) + '…' : toUpperCamel(member.tedtalk_headline_en) }}</span>
@@ -130,7 +139,8 @@
                   </p> -->
                 </div>
                 <div class="has-text-right mt-4">
-                  <nuxt-link :to="localePath(`/about/${member.id}`)" class="button is-rounded is-small is-gradient">{{ $t('button.readmore') }}</nuxt-link>
+                  <nuxt-link :to="localePath(`/about/${member.id}`)" class="button is-rounded is-small is-gradient">{{
+                    $t('button.readmore') }}</nuxt-link>
                 </div>
               </div>
             </div>
@@ -158,7 +168,8 @@
         </div>
       </div> -->
       <div class="is-block">
-        <b-carousel :indicator-inside="false" :repeat="true" indicator-style="is-lines" :autoplay="false" animated="fade">
+        <b-carousel :indicator-inside="false" :repeat="true" indicator-style="is-lines" :autoplay="false"
+          animated="fade">
           <b-carousel-item v-for="(team, i) in teams" :key="i">
             <figure class="image is-5by3">
               <img :src="getJsonImgUrl(`intro/${team.name.toLowerCase()}.png`)" style="object-fit: cover" />
@@ -168,7 +179,7 @@
             <span class="tag has-text-weight-bold is-medium is-dark has-text-centered" style="width: 100%;">
               {{ teams[props.i].displayname }}
             </span>
-        </template>
+          </template>
         </b-carousel>
       </div>
     </section>
@@ -205,10 +216,10 @@
 
 
       <!-- Contact -->
-    
+
       <div class="section has-text-centered">
         <h1 class="title is-2 is-spaced">{{ $t('about.utsukuba.contactus.title')}}</h1>
-        <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.utsukuba.contactus.subtitle')}}</h1>   
+        <h1 class="subtitle is-5 has-text-grey-light">{{ $t('about.utsukuba.contactus.subtitle')}}</h1>
         <div class="columns mt-4">
           <div class="column">
             <a href="mailto:tedxutsukuba&#64;gmail.com">
@@ -217,26 +228,16 @@
               </div>
             </a>
           </div>
-            <div class="column">
-              <a href="www.twitter.com/tedxutsukuba">
-                <div class="nmp-card-red">
-                  <i class="mdi mdi-twitter" style="font-size: 2rem;" /><br>@tedxutsukuba
-                </div>
-              </a>
-            </div>
+          <div class="column">
+            <a href="https://twitter.com/tedxutsukuba">
+              <div class="nmp-card-red">
+                <i class="mdi mdi-twitter" style="font-size: 2rem;" /><br>@tedxutsukuba
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </section>
-    <br><br>
-
-        <!-- <vue-instagram token="accessTokenHere" :count="5" :tags="['hashtag1', 'hashtag2']" mediaType="image">
-          <template slot="feeds" slot-scope="props">
-            <li class="fancy-list"> {{ props.feed.link }} </li>
-          </template>
-          <template slot="error" slot-scope="props">
-            <div class="fancy-alert"> {{ props.error.error_message }} </div>
-          </template>
-        </vue-instagram> -->
   </section>
 </template>
 
