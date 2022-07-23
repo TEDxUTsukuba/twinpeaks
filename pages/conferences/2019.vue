@@ -1,5 +1,5 @@
 <template>
-  <section id="wrapper-dark" class="font-awesome">   
+  <section id="wrapper-dark">   
     <section class="section has-text-centered-mobile">
       <h1 class="subtitle is-4 is-family-narrow has-text-primary">TEDxUTsukuba 2019</h1>
       <h1 class="title is-1">CoPhilaction</h1>

@@ -1,5 +1,5 @@
 <template>
-  <section id="wrapper-dark" class="font-awesome">
+  <section id="wrapper-dark">
     <section class="section hero is-fullheight">
       <div class="columns is-multiline reverse-row-order is-centered is-variable is-6 mt-5">
         <div v-if="member.portrait" class="column is-5-tablet is-4-desktop mb-4">

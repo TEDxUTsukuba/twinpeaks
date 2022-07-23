@@ -159,6 +159,7 @@ export default {
         materialDesignIcons: true
       }
     ],
+    'nuxt-user-agent',
     [ 
       '@nuxtjs/i18n', {
         baseUrl: DEPLOY_URL,

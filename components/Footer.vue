@@ -1,5 +1,5 @@
 <template>
-  <section id="wrapper-dark" class="hero font-awesome">
+  <section id="wrapper-dark" class="hero">
     <!-- Covid-19 -->
     <section class="section has-text-centered">
       <div class="nmp-card-red">

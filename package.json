@@ -33,6 +33,7 @@
     "nuxt-buefy": "^0.4.8",
     "nuxt-canonical": "^1.0.6",
     "nuxt-svg-loader": "^1.2.0",
+    "nuxt-user-agent": "^1.2.2",
     "text-to-svg": "^3.1.5",
     "vue": "^2.6.12",
     "vue-add-to-calendar": "^1.0.7",
