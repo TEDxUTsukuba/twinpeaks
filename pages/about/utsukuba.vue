@@ -181,7 +181,6 @@
         <h1 class="subtitle is-5 has-text-grey-light mb-6">{{ $t('about.utsukuba.join.subtitle')}}</h1>
         <p class="has-text-left mb-2">{{ $t('about.utsukuba.join.description')}}</p>
         <p class="has-text-left">{{ $t('about.utsukuba.join.springshinkan')}}</p>
-        <!-- <nuxt-link :to="localePath('/events')" class="button is-rounded is-gradient">新歓イベントを探す</nuxt-link> -->
       </div>
       <div class="section">
         <div class="columns is-multiline">

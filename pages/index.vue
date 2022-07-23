@@ -118,7 +118,6 @@
 </template>
 
 <script>
-// import Carousel from '~/components/Carousel'
 import PopularArticles from '~/components/PopularArticles'
 import { request, gql } from '~/lib/datocms'
 import { Image } from "vue-datocms";
@@ -133,7 +132,6 @@ export default {
   components: {
     PopularArticles, 
     "datocms-image": Image, VueHorizontal, AnimatedScenery
-    // Carousel
   },
   data() {
     return {
@@ -220,13 +218,6 @@ export default {
   }
   h1.thin {
     font-weight: 100 !important;
-  }
-  #top-carousel {
-    transition: all 1s;
-    // opacity: 0;
-    // transition: fadeIn 2s;
-    // max-width: 1024px !important;
-    // margin: auto;
   }
   #top-logo {
     width: 100%;
