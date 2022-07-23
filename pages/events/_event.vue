@@ -98,12 +98,10 @@ import { request, gql } from '~/lib/datocms'
 import { Image, toHead } from "vue-datocms"
 import format from 'date-fns/format'
 import parseISO from 'date-fns/parseISO'
-import VueMeta from 'vue-meta'
 
 export default {
   // mixins: [Meta],
   components: {
-    VueMeta,
     "datocms-image": Image, toHead
   },
   data () {

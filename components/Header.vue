@@ -104,14 +104,6 @@ export default {
       if (to.path.includes('private')) this.headerColor = 'darksilver'
       else this.headerColor = 'red'
     }
-  },
-  methods: {
-    isCountdown() {
-      const month = new Date().getMonth()+1
-      const date = new Date().getDate()
-      // console.log(month, date)
-      // const eventDate 
-    }
   }
 }
 </script>
