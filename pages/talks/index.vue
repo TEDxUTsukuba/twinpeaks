@@ -10,13 +10,13 @@
         <div
           id="thumbnails"
           class="column is-one-third-fullhd is-half-widescreen is-half-desktop is-half-tablet"
-          v-for="(talk, index) in talks" :key="index"
+          v-for="(talk, index) in talks.filter(el => !el.eventName.name.match('Live'))" :key="index"
           style="display: inline-block; vertical-align: top;"
         >
           <div class="nmp-dark">
             <header class="card-header">
               <p class="card-header-title has-text-primary is-family-narrow">
-                {{ talk.eventName }}
+                {{ talk.eventName.name }}
               </p>
             </header>
             <div class="card-image">
@@ -71,11 +71,13 @@ export default {
     const data = await request({
       query: gql`
         {
-          talks: allSpeakers(locale: ${i18n.locale}, filter: {eventName: {neq: "Live2019"}}, orderBy: eventName_DESC) {
+          talks: allSpeakers(locale: ${i18n.locale}, orderBy: _createdAt_DESC) {
             firstName
             middleName
             lastName
-            eventName
+            eventName {
+              name
+            }
             talkTitle
             description
             youtubeId
