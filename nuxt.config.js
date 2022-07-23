@@ -5,13 +5,14 @@ const BASE_DESC = 'TEDxUTsukubaは "Ideas worth spreading" というTEDの理念
 const BASE_DESC_EN = 'TEDxUTsukuba is an independently-organized TEDx community at the University of Tsukuba. Managed by passionate volunteers both in and around the campus, TEDxUTsukuba has shed light on relevant topics - from liberal arts to science, local stories to global issues. '
 const BASE_AUTHOR = '木下晴貴 | Haruki Kinoshita'
 const BASE_SITE_NAME = 'TEDxUTsukuba Official Website'
+const DEPLOY_URL = 'https://www.tedxutsukuba.com'
 
 export default {
   /*
   ** Headers of the page
   */
   env: {
-    NUXT_ENV_DATOCMS_API_TOKEN, BASE_NAME, BASE_DESC, BASE_DESC_EN, BASE_URL, BASE_OGP, BASE_AUTHOR, BASE_SITE_NAME
+    NUXT_ENV_DATOCMS_API_TOKEN, BASE_NAME, BASE_DESC, BASE_DESC_EN, BASE_URL, BASE_OGP, BASE_AUTHOR, BASE_SITE_NAME, DEPLOY_URL
   },
   ssr: 'true',
   target: 'static',
@@ -91,6 +92,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+
   /*
   ** Customize the progress-bar color
   */
@@ -104,6 +106,7 @@ export default {
     color: 'red',
     background: 'white'
   },
+
   /*
   ** Global CSS
   */
@@ -113,6 +116,7 @@ export default {
       lang: 'scss'
     }
   ],
+  
   /*
   ** Plugins to load before mounting the App
   */
@@ -134,11 +138,13 @@ export default {
       ssr: false
     }
   ],
+
   /*
   ** Nuxt.js dev-modules
   */
   buildModules: [
   ],
+
   /*
   ** Nuxt.js modules
   */
@@ -153,10 +159,11 @@ export default {
         materialDesignIcons: true
       }
     ],
-    'nuxt-user-agent',
     [ 
-      'nuxt-i18n', {
-        baseUrl: 'https://www.tedxutsukuba.com',
+      '@nuxtjs/i18n', {
+        baseUrl: DEPLOY_URL,
+        langDir: 'locales/',
+        vueI18nLoader: true,
         // sitemap.xml生成時のディレクトリに影響
         strategy: 'prefix_except_default',
         locales: [
@@ -183,50 +190,22 @@ export default {
         //   onlyOnRoot: true,  // recommended
         // },
         // // seo: true,
-        vueI18nLoader: true,
-        // lazy: true,
-        // 言語ファイル(.json)のディレクトリを記載
-        langDir: 'locales/',
       }
     ],
     [
       'nuxt-canonical', 
       {
-        baseUrl: 'https://www.tedxutsukuba.com'
+        baseUrl: DEPLOY_URL
       }
     ],
     '@nuxtjs/axios',
     'nuxt-svg-loader',
     '@nuxtjs/sitemap',
-    // 参考: https://blog.mktia.com/generate-ogp-image-automatically/
-    // '~/modules/imageGenerator.js'
-    // [ 
-    //   'nuxt-responsive-loader',
-    //   {
-    //     name: 'img/[hash:7]-[width].[ext]',
-    //     format: 'png'
-    //   }
-    // ],
     'cookie-universal-nuxt',
   ],
 
-  // fontawesome: {
-  //   component: 'fa',
-  //   imports: [
-  //     {
-  //       set: '@fortawesome/free-brands-svg-icons',
-  //       icons: ['fab']
-  //     },
-  //     {
-  //       set: '@fortawesome/free-solid-svg-icons',
-  //       icons: ['fas']
-  //     },
-  //     {
-  //       set: '@fortawesome/free-regular-svg-icons',
-  //       icons: ['far']
-  //     },
-  //   ]
-  // },
+  // fontawesome: Removed, file size too large
+
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
@@ -235,7 +214,7 @@ export default {
   },
   sitemap: {
     path: '/sitemap.xml',
-    hostname: 'https://www.tedxutsukuba.com',
+    hostname: DEPLOY_URL,
     i18n: true,
     i18n: {
       locales: ['ja', 'en'],
@@ -245,6 +224,7 @@ export default {
       '/ja/**', '/private/**', '**/private/**', '**/draft', '**/talks_old', '**/event_old', '**/loading', '**/tedtalks'
     ],
   },
+
   /*
   ** Build configuration
   */
@@ -269,33 +249,6 @@ export default {
       config.resolve.alias['vue'] = 'vue/dist/vue.common'
     }
   },
-  generate: {
-    fallback: true,  // 404を表示
-    routes: [
-      'blog/is_slander_certainly_bad',
-      'blog/knowledge_is_power_but',
-      'blog/johnmaeda',
-      'blog/social_distancing_and_stress',
-      'blog/tedtalk_recommend',
-      'blog/why_letting_go_is_always_an_option_ja',
-      'blog/why_letting_go_is_always_an_option_en',
-      'about/takuma_goto',
-      'about/craig_coleman',
-      'about/naoki_kitaoka',
-      'about/masato_kai',
-      'about/coleen_melecio',
-      'about/fukutaro_kawai',
-      'about/shoryu_aoyama',
-      'about/chiho_numata',
-      'about/saaya_kobayashi',
-      'about/shuhei_kinoshita',
-      'about/seika_takahashi',
-      'about/kanade_takahashi',
-      'about/kazuki_ikegaya',
-      'about/yuki_abe',
-      'about/harry'
-    ]
-  },
   router: {
     scrollBehavior: function (to, from, savedPosition) {
       return { x: 0, y: 0 }
@@ -308,7 +261,7 @@ export default {
     },
   },
   server: {
-    port: 3000, // デフォルト: 3000
+    port: 3000,
     host: '0.0.0.0' // デフォルト: localhost
   }
 }
