@@ -94,7 +94,8 @@
     "webcast_desc": "This event is broadcasted on <strong>{0}</strong>.",
     "ticket": "Ticket | Tickets",
     "talk": "Talk Session",
-    "workshop": "Workshop"
+    "workshop": "Workshop",
+    "event": "Talk Session, Workshop, After party"
   },
   "news": {
     "title": "News & Updates",
