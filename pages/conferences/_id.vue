@@ -133,7 +133,7 @@
           </div>
 
           <div v-if="conference.hasTicket" class="mb-4">
-            <h2 class="title">{{ $t('event.workshop') }}</h2>
+            <h2 class="title">{{ conference.webcastService ? $t('event.workshop') : $t('event.event') }}</h2>
             <p class="mb-3 notes">
               Price: <strong>JPY {{ conference.ticketPrice }}</strong> <span v-if="conference.ticketPriceStudent">(Student: <strong>{{ conference.ticketPriceStudent}}</strong>)</span>
             </p>
@@ -144,7 +144,7 @@
               </a>
             </div>
             <div v-else>
-              <span class="tag is-success">Tickets will be available on {{ conference.ticketReleaseDate }}</span>
+              <span class="tag is-success">Tickets will be available on {{ formatDate(conference.ticketReleaseDate) }}</span>
             </div>
             <article class="is-size-7 pt-5 notes" v-html="conference.ticketNotes" />
           </div>
