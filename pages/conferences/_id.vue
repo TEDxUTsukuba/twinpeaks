@@ -117,7 +117,7 @@
       </div>
     </section>
 
-    <section class="hero">
+    <section v-if="conference.webcastUrl || conference.hasTicket" class="hero">
       <div class="hero-body">
         <section class="section">
           <h1 class="title is-0">{{ $t('about.ted.join') }}</h1>
