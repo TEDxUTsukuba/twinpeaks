@@ -61,6 +61,10 @@ export default {
     return {
       conferences: [
         {
+          path: '2022',
+          name: '2022 LIKE AND SEEK'
+        },
+        {
           path: '2021',
           name: '2021 The World is a Playground'
         },
