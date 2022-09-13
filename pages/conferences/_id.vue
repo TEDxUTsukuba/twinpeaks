@@ -151,9 +151,7 @@
         </section>
       </div>
     </section>
-
-    <section class="hero" id="venue-title" v-if="conference.location">
-    <!-- <section class="hero bg-venue" id="venue-title" :style="`background: url(${conference.locationImage.url});`"> -->
+    <section class="hero bg-venue" v-if="conference.location" id="venue-title" :style="conference.locationImage ? `background-image: url(${conference.locationImage.url});` : ''">
       <div class="hero-body">
         <section class="section" id="venue">
           <h1 class="title is-0 has-text-white">
