@@ -155,8 +155,8 @@
             <p class="mb-3 notes has-text-weight-bold" v-if="conference.ticketPriceStudent">
               Price: <br>
               <ul>
-                <li>JPY {{ conference.ticketPrice }}</li>
-                <li>Student: {{ conference.ticketPriceStudent}}</li>
+                <li>一般 General: JPY {{ conference.ticketPrice }}</li>
+                <li>学生 Student: JPY {{ conference.ticketPriceStudent}}</li>
               </ul>
             </p>
             <!-- 学生価格がない場合 -->
