@@ -1,5 +1,7 @@
 <template>
   <section id="wrapper-dark">
+
+    <!-- イベント概要 -->
     <section class="section has-text-centered-mobile">
       <h1 class="subtitle is-4 is-family-narrow has-text-primary">TEDxUTsukuba {{ conference.name }}</h1>
       <h1 class="title is-1">{{ conference.theme }}</h1>
@@ -12,6 +14,7 @@
       <a v-if="conference.webcastUrl" class="button is-rounded is-gradient mt-4" :href="conference.webcastUrl" target="_blank"><span v-if="conference.webcastService">{{ conference.webcastService }}で</span>{{ $t('about.ted.watch')}}</a>
     </section>
 
+    <!-- テーマアート -->
     <section class="section" v-if="conference.themeArtwork">
       <figure class="image">
         <!-- <datocms-image :data="conference.themeArtwork.responsiveImage" :alt="conference.name" style="position: initial;"/> -->
@@ -19,11 +22,13 @@
       </figure>
     </section>
 
+    <!-- オーガナイザーの情報とメッセージ -->
     <section class="section" v-if="conference.messageFromOrganizer">
       <article class="has-text-white notes" v-html="conference.messageFromOrganizer" />
       <p class="mt-3 has-text-right">TEDxUTsukuba {{ conference.name }}<br>Organizer<br>{{ conference.organizer }}</p>
     </section>
     
+    <!-- スピーカー情報 -->
     <section class="section" id="card-0" v-if="conference.speakers[0]">  
       <h1 class="title is-0">{{ $t('2020.speaker.title') }}</h1>
       <div v-for="(speaker, index) in conference.speakers" :key="index">
@@ -44,6 +49,9 @@
                 {{ speaker.description }}
               </p>
               <br>
+
+              <!-- トーク動画 -->
+              <!-- TEDxのYouTubeで動画が公開されたらDatoCMSにURLを追加する -->
               <a v-if="speaker.youtubeId" class="button is-gradient is-rounded" :href="`https://www.youtube.com/watch?v=${speaker.youtubeId}`" target="_blank">
                 <i class="mdi mdi-youtube is-size-4" />
                 <span style="padding-left: 0.25rem;">{{ $t('about.ted.watch') }}</span>
@@ -51,6 +59,8 @@
           </div>
         </div>
       </div>
+
+      <!-- パフォーマー情報 -->
       <div v-for="(performer, index) in conference.performers" :key="index">
         <div class="columns is-multiline is-centered is-vcentered mb-6">
           <div class="card-image column is-12-mobile is-3-tablet is-4-desktop is-3-widescreen is-3-fullhd">
@@ -73,6 +83,7 @@
       <article class="is-size-7 pt-5 notes" v-html="conference.enjaNotes" />
     </section>
 
+    <!-- イベントのテーマ -->
     <section class="hero has-background-primary" v-if="conference.theme">
       <section class="section">
         <h1 class="title is-0 has-text-white">
@@ -85,6 +96,7 @@
       </section>
     </section>
 
+    <!-- 当日のタイムテーブル -->
     <section class="hero" v-if="conference.timetable">
       <div class="hero-body">
         <section class="section">
@@ -117,14 +129,18 @@
       </div>
     </section>
 
+    <!-- 参加方法 -->
     <section class="hero">
       <div class="hero-body">
         <section class="section">
           <h1 class="title is-0">{{ $t('about.ted.join') }}</h1>
 
+          <!-- オンサイトイベントを除き、ウェブキャストの情報を表示 -->
           <div v-if="conference.eventDelivery !== 'Onsite'" class="mb-4">
             <h2 class="title">{{ $t('event.talk') }}</h2>
             <p class="mb-3">{{ $t('event.webcast_desc', [ conference.webcastService ]) }}</p>
+
+            <!-- ウェブキャストのリンクが登録されている場合 -->
             <a v-if="conference.webcastUrl" class="button is-gradient is-rounded mb-3" :href="conference.webcastUrl" target="_blank">
               <i class="mdi mdi-projector-screen is-size-4" />
               <span style="padding-left: 0.25rem;">{{ $t('about.ted.watch') }}</span>
@@ -132,26 +148,42 @@
             <article class="is-size-7 pt-5 notes" v-html="conference.webcastNotes" />
           </div>
 
+          <!-- チケット(有料無料問わず)制度の場合 -->
           <div v-if="conference.hasTicket" class="mb-4">
-            <h2 class="title">{{ $t('event.workshop') }}</h2>
-            <p class="mb-3 notes">
-              Price: <strong>JPY {{ conference.ticketPrice }}</strong> <span v-if="conference.ticketPriceStudent">(Student: <strong>{{ conference.ticketPriceStudent}}</strong>)</span>
+            <h2 class="title">{{ $t('event.ticket') }}</h2>
+            <!-- 学生価格と一般価格がそれぞれ存在する場合 -->
+            <p class="mb-3 notes has-text-weight-bold" v-if="conference.ticketPriceStudent">
+              Price: <br>
+              <ul>
+                <li>JPY {{ conference.ticketPrice }}</li>
+                <li>Student: {{ conference.ticketPriceStudent}}</li>
+              </ul>
             </p>
+            <!-- 学生価格がない場合 -->
+            <p v-else class="has-text-weight-bold">
+              Price: JPY {{ conference.ticketPrice }}
+            </p>
+
+            <!-- チケットがAvailableにセットされている場合 -->
             <div v-if="conference.isTicketAvailable">
+              <!-- チケットを入手するサイトが登録されている場合 -->
               <a v-if="conference.ticketSellingPageUrl" class="button is-gradient is-rounded my-3" :href="conference.ticketSellingPageUrl" target="_blank">
                 <i class="mdi mdi-ticket is-size-4" />
                 <span style="padding-left: 0.25rem;">{{ $t('2020.participance.premium.tiget') }}</span>
               </a>
             </div>
+            <!-- チケットがAvailableにセットされていない場合 -->
             <div v-else>
-              <span class="tag is-success">Tickets will be available on {{ conference.ticketReleaseDate }}</span>
+              <span class="tag is-success has-text-weight-bold">Tickets will be available on {{ formatDate(conference.ticketReleaseDate) }}</span>
             </div>
+
             <article class="is-size-7 pt-5 notes" v-html="conference.ticketNotes" />
           </div>
         </section>
       </div>
     </section>
 
+    <!-- 会場 -->
     <section class="hero" id="venue-title" v-if="conference.location">
     <!-- <section class="hero bg-venue" id="venue-title" :style="`background: url(${conference.locationImage.url});`"> -->
       <div class="hero-body">
@@ -169,12 +201,12 @@
           <p class="is-size-7 has-text-white">
             {{ conference.locationAccess }}
           </p>
-          <p>
-            {{ conference.locationNotes }}
-          </p>
+          <p  class="is-size-7 pt-5 notes" v-html="conference.locationNotes" />
         </section>
       </div>
     </section>
+
+    <!-- 会場の地図 -->
     <section v-if="conference.locationGooglemapsEmbed">
       <figure class="image is-3by1">
         <iframe class="has-ratio" :src="conference.locationGooglemapsEmbed" width="100%" rameborder="0" style="margin: 0 auto; border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
@@ -183,7 +215,7 @@
 
 
     <section class="section notes" v-if="conference.additionalNotes">
-      <article class="has-text-white" v-html="conference.additionalNotes" />
+      <article class="has-text-white is-size-7 pt-5 notes" v-html="conference.additionalNotes" />
     </section>
 
 
@@ -222,7 +254,7 @@ export default {
               height
             }
           }
-          themeStatement(markdown: false)
+          themeStatement(markdown: true)
           location
           locationAccess
           locationDescription
