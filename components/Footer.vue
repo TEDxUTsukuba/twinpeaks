@@ -25,13 +25,6 @@
                 <li>{{ $t('covid19-info.org.s4') }}</li>
                 <li>{{ $t('covid19-info.org.s5') }}</li>
               </ul>
-              <h1 class="title is-4">{{ $t('covid19-info.event.title') }}</h1>
-              <ul>
-                <li>{{ $t('covid19-info.event.s1') }}</li>
-                <li>{{ $t('covid19-info.event.s2') }}</li>
-                <li>{{ $t('covid19-info.event.s3') }}</li>
-                <li>{{ $t('covid19-info.event.s4') }}</li>
-              </ul>
               <br>
               <p class="is-size-6">{{ $t('covid19-info.description2') }}</p>
               <a class="button is-small is-rounded is-white" href="http://www.tsukuba.ac.jp/about/antidisaster/covid-19-list.html">{{ $t('covid19-info.link.university') }}<i class="mdi mdi-open-in-new" style="margin-left: 0.25rem;" /></a>
