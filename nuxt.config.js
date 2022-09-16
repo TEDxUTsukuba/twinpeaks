@@ -218,6 +218,24 @@ export default {
     exclude: [
       '/ja/**', '/private/**', '**/private/**', '**/draft', '**/talks_old', '**/event_old', '**/loading', '**/tedtalks'
     ],
+    routes:
+      ['2017', '2021', '2022'].map((year) => { // TODO CMSから取得
+        return ['en', ''].map((lang) => {
+          return {
+            url: `${lang}/conferences/${year}/`,
+            links : [
+              {
+                lang: 'en',
+                url: `en/conferences/${year}/`
+              },
+              {
+                lang: 'ja',
+                url: `conferences/${year}/`
+              }
+            ],
+          }
+        })
+      }).flat()
   },
 
   /*
