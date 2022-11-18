@@ -8,7 +8,7 @@
     <section class="section">
       <!-- Tier 1 -->
       <div class="columns is-multiline is-mobile">
-        <div class="column is-4-tablet is-6-mobile" v-for="(partner, index) in partners.filter(el => el.tier === '1')"
+        <div class="column is-4-tablet is-full-mobile" v-for="(partner, index) in partners.filter(el => el.tier === '1')"
           :key="index">
           <div class="nmp-dark has-text-centered">
             <figure class="image is-1by1 my-5" v-if="partner.logo">
