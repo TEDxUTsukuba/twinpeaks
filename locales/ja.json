@@ -20,7 +20,8 @@
     "aboutus": {
       "parent": "私たちについて",
       "child1": "TED / TEDx",
-      "child2": "TEDxUTsukuba"
+      "child2": "TEDxUTsukuba",
+      "child3": "メンバー"
     }
   },
   "button": {

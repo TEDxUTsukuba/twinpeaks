@@ -192,6 +192,11 @@ export default {
             hid: 'twitter:card', 
             name: 'twitter:card', 
             content: 'summary' 
+          },
+          {
+            hid: 'robots',
+            name: 'robots',
+            content: 'noindex'
           }
         ],
         link: [
