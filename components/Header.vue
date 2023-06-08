@@ -30,6 +30,9 @@
         <b-navbar-item tag="router-link" :to="{ path: localePath('/about/utsukuba') }">
           {{ $t('header.aboutus.child2') }}
         </b-navbar-item>
+        <b-navbar-item tag="router-link" :to="{ path: localePath('/about/member') }">
+          {{ $t('header.aboutus.child3') }}
+        </b-navbar-item>
       </b-navbar-dropdown>
       <b-navbar-item tag="div">
         <div class="buttons is-right">
