@@ -229,7 +229,7 @@ export default {
       "**/event_old",
       "**/loading",
       "**/tedtalks",
-      "**about/**/"
+      "**/member"
     ],
     routes: ["2017", "2021", "2022"]
       .map(year => {
