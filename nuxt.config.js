@@ -1,183 +1,189 @@
-require('dotenv').config();
+require("dotenv").config();
 const { NUXT_ENV_DATOCMS_API_TOKEN, BASE_URL, BASE_OGP } = process.env;
-const BASE_NAME = 'TEDxUTsukuba'
-const BASE_DESC = 'TEDxUTsukubaは "Ideas worth spreading" というTEDの理念のもとに、筑波大学の学生を中心として独自に運営されているコミュニティです。教養から科学、地域の話題から世界規模の問題に至るまで、様々なトピックスに焦点を当ててきました。'
-const BASE_DESC_EN = 'TEDxUTsukuba is an independently-organized TEDx community at the University of Tsukuba. Managed by passionate volunteers both in and around the campus, TEDxUTsukuba has shed light on relevant topics - from liberal arts to science, local stories to global issues. '
-const BASE_AUTHOR = '木下晴貴 | Haruki Kinoshita'
-const BASE_SITE_NAME = 'TEDxUTsukuba Official Website'
-const DEPLOY_URL = 'https://www.tedxutsukuba.com'
+const BASE_NAME = "TEDxUTsukuba";
+const BASE_DESC =
+  'TEDxUTsukubaは "Ideas worth spreading" というTEDの理念のもとに、筑波大学の学生を中心として独自に運営されているコミュニティです。教養から科学、地域の話題から世界規模の問題に至るまで、様々なトピックスに焦点を当ててきました。';
+const BASE_DESC_EN =
+  "TEDxUTsukuba is an independently-organized TEDx community at the University of Tsukuba. Managed by passionate volunteers both in and around the campus, TEDxUTsukuba has shed light on relevant topics - from liberal arts to science, local stories to global issues. ";
+const BASE_AUTHOR = "木下晴貴 | Haruki Kinoshita";
+const BASE_SITE_NAME = "TEDxUTsukuba Official Website";
+const DEPLOY_URL = "https://www.tedxutsukuba.com";
 
 export default {
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   env: {
-    NUXT_ENV_DATOCMS_API_TOKEN, BASE_NAME, BASE_DESC, BASE_DESC_EN, BASE_URL, BASE_OGP, BASE_AUTHOR, BASE_SITE_NAME, DEPLOY_URL
+    NUXT_ENV_DATOCMS_API_TOKEN,
+    BASE_NAME,
+    BASE_DESC,
+    BASE_DESC_EN,
+    BASE_URL,
+    BASE_OGP,
+    BASE_AUTHOR,
+    BASE_SITE_NAME,
+    DEPLOY_URL
   },
-  ssr: 'true',
-  target: 'static',
+  ssr: "true",
+  target: "static",
 
   head: {
     title: BASE_NAME + " | Spread Globally, Connect Locally.",
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { 
-        hid: 'description', 
-        name: 'description', 
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        hid: "description",
+        name: "description",
         content: BASE_DESC
       },
       {
-        hid: 'author',
-        property: 'author',
+        hid: "author",
+        property: "author",
         content: BASE_AUTHOR
       },
       {
-        hid: 'og:title',
-        property: 'og:title',
+        hid: "og:title",
+        property: "og:title",
         content: BASE_NAME + " | Spread Globally, Connect Locally."
       },
       {
-        hid: 'og:description',
-        property: 'og:description',
+        hid: "og:description",
+        property: "og:description",
         content: BASE_DESC
       },
       {
-        hid: 'og:type',
-        property: 'og:type',
-        content: 'website'
+        hid: "og:type",
+        property: "og:type",
+        content: "website"
       },
       {
-        hid: 'og:url',
-        property: 'og:url',
+        hid: "og:url",
+        property: "og:url",
         content: BASE_URL
       },
       {
-        hid: 'og:author',
-        property: 'og:author',
+        hid: "og:author",
+        property: "og:author",
         content: BASE_AUTHOR
       },
       {
-        hid: 'og:image',
-        property: 'og:image',
-        content: BASE_URL+BASE_OGP+'/skyscraper.png'
-      },
-      { 
-        hid: 'og:site_name', 
-        property: 'og:site_name', 
-        content: BASE_SITE_NAME 
+        hid: "og:image",
+        property: "og:image",
+        content: BASE_URL + BASE_OGP + "/skyscraper.png"
       },
       {
-        hid: 'twitter:card',
-        name: 'twitter:card',
-        content: 'summary_large_image'
+        hid: "og:site_name",
+        property: "og:site_name",
+        content: BASE_SITE_NAME
       },
       {
-        hid: 'twitter:site',
-        name: 'twitter:site',
-        content: '@tedxutsukuba'
+        hid: "twitter:card",
+        name: "twitter:card",
+        content: "summary_large_image"
       },
       {
-        hid: 'twitter:creator',
-        name: 'twitter:creator',
-        content: '@tedxutsukuba'
+        hid: "twitter:site",
+        name: "twitter:site",
+        content: "@tedxutsukuba"
       },
       {
-        hid: 'google:notranslate',
-        name: 'google',
-        content: 'notranslate'
+        hid: "twitter:creator",
+        name: "twitter:creator",
+        content: "@tedxutsukuba"
+      },
+      {
+        hid: "google:notranslate",
+        name: "google",
+        content: "notranslate"
       }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
 
   /*
-  ** Customize the progress-bar color
-  */
+   ** Customize the progress-bar color
+   */
   loading: {
-    color: 'red',
-    height: '5px'
+    color: "red",
+    height: "5px"
   },
 
   /*
-  ** Global CSS
-  */
+   ** Global CSS
+   */
   css: [
     {
-      src: '~/assets/style/style.scss',
-      lang: 'scss'
+      src: "~/assets/style/style.scss",
+      lang: "scss"
     }
   ],
-  
+
   /*
-  ** Plugins to load before mounting the App
-  */
+   ** Plugins to load before mounting the App
+   */
   plugins: [
     {
-      src: '~/plugins/vue-scrollmagic.js',
-      ssr: false
-    },
-    { 
-      src: '~/plugins/vue-konva',
-      ssr: false 
-    },
-    {
-      src: '~/plugins/datocms',
+      src: "~/plugins/vue-scrollmagic.js",
       ssr: false
     },
     {
-      src: '~/plugins/vue-horizontal',
+      src: "~/plugins/vue-konva",
+      ssr: false
+    },
+    {
+      src: "~/plugins/datocms",
+      ssr: false
+    },
+    {
+      src: "~/plugins/vue-horizontal",
       ssr: false
     }
   ],
 
   /*
-  ** Nuxt.js dev-modules
-  */
-  buildModules: [
-  ],
+   ** Nuxt.js dev-modules
+   */
+  buildModules: [],
 
   /*
-  ** Nuxt.js modules
-  */
+   ** Nuxt.js modules
+   */
   modules: [
+    ["@nuxtjs/google-gtag", { id: "UA-104320074-1" }],
     [
-      '@nuxtjs/google-gtag', { id: 'UA-104320074-1' }
-    ],
-    [
-      'nuxt-buefy',
+      "nuxt-buefy",
       {
         css: true,
         materialDesignIcons: true
       }
     ],
-    'nuxt-user-agent',
-    [ 
-      '@nuxtjs/i18n', {
+    "nuxt-user-agent",
+    [
+      "@nuxtjs/i18n",
+      {
         baseUrl: DEPLOY_URL,
-        langDir: 'locales/',
+        langDir: "locales/",
         vueI18nLoader: true,
         // sitemap.xml生成時のディレクトリに影響
-        strategy: 'prefix_except_default',
+        strategy: "prefix_except_default",
         locales: [
-          { 
-            code: 'ja', 
-            iso: 'ja_JP', 
-            file: 'ja.json',
+          {
+            code: "ja",
+            iso: "ja_JP",
+            file: "ja.json"
           },
-          { 
-            code: 'en', 
-            iso: 'en-US', 
-            file: 'en.json',
-          },
+          {
+            code: "en",
+            iso: "en-US",
+            file: "en.json"
+          }
         ],
         differentDomains: false,
-        defaultLocale: 'ja',
+        defaultLocale: "ja",
         vueI18n: {
-          fallbackLocale: 'ja'
-        },
+          fallbackLocale: "ja"
+        }
         // detectBrowserLanguage: {
         //   useCookie: true,
         //   cookieKey: 'i18n_redirected',
@@ -188,87 +194,124 @@ export default {
       }
     ],
     [
-      'nuxt-canonical', 
+      "nuxt-canonical",
       {
         baseUrl: DEPLOY_URL
       }
     ],
-    '@nuxtjs/axios',
-    'nuxt-svg-loader',
-    '@nuxtjs/sitemap',
-    'cookie-universal-nuxt',
+    "@nuxtjs/axios",
+    "nuxt-svg-loader",
+    "@nuxtjs/sitemap",
+    "cookie-universal-nuxt"
   ],
 
   // fontawesome: Removed, file size too large
 
   /*
-  ** Axios module configuration
-  ** See https://axios.nuxtjs.org/options
-  */
-  axios: {
-  },
+   ** Axios module configuration
+   ** See https://axios.nuxtjs.org/options
+   */
+  axios: {},
   sitemap: {
-    path: '/sitemap.xml',
+    path: "/sitemap.xml",
     hostname: DEPLOY_URL,
     i18n: true,
     i18n: {
-      locales: ['ja', 'en'],
-      routesNameSeparator: '___'
+      locales: ["ja", "en"],
+      routesNameSeparator: "___"
     },
     exclude: [
-      '/ja/**', '/private/**', '**/private/**', '**/draft', '**/talks_old', '**/event_old', '**/loading', '**/tedtalks'
+      "/ja/**",
+      "/private/**",
+      "**/private/**",
+      "**/draft",
+      "**/talks_old",
+      "**/event_old",
+      "**/loading",
+      "**/tedtalks",
+      "**about/**/"
     ],
-    routes:
-      ['2017', '2021', '2022'].map((year) => { // TODO CMSから取得
-        return ['en', ''].map((lang) => {
+    routes: ["2017", "2021", "2022"]
+      .map(year => {
+        // TODO CMSから取得
+        return ["en", ""].map(lang => {
           return {
             url: `${lang}/conferences/${year}/`,
-            links : [
+            links: [
               {
-                lang: 'en',
+                lang: "en",
                 url: `en/conferences/${year}/`
               },
               {
-                lang: 'ja',
+                lang: "ja",
                 url: `conferences/${year}/`
               }
-            ],
-          }
-        })
-      }).flat()
+            ]
+          };
+        });
+      })
+      .flat()
+      .concat([
+        {
+          url: `en/salon/2023-1/`,
+          links: [
+            {
+              lang: "en",
+              url: `en/salon/2023-1/`
+            },
+            {
+              lang: "ja",
+              url: `salon/2023-1/`
+            }
+          ]
+        },
+        {
+          url: `/salon/2023-1/`,
+          links: [
+            {
+              lang: "en",
+              url: `en/salon/2023-1/`
+            },
+            {
+              lang: "ja",
+              url: `salon/2023-1/`
+            }
+          ]
+        }
+      ])
   },
 
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   build: {
     // HardSourceWebpackPlugin ビルド時間短縮
     // hardSource: true,
     /*
-    ** You can extend webpack config here
-    */
+     ** You can extend webpack config here
+     */
     // Safari 無限リロード対策
     filenames: {
-      app: ({ isDev }) => isDev ? '[name].[hash].js' : '[chunkhash].js',
-      chunk: ({ isDev }) => isDev ? '[name].[hash].js' : '[chunkhash].js'
+      app: ({ isDev }) => (isDev ? "[name].[hash].js" : "[chunkhash].js"),
+      chunk: ({ isDev }) => (isDev ? "[name].[hash].js" : "[chunkhash].js")
     },
-    extend (config, ctx) {
+    extend(config, ctx) {
       // Google Sheets API で最新情報を取得
-      config.node = {
-        fs: 'empty',
-        googleapis: 'empty',
-        child_process: 'empty'
-      },
-      config.resolve.alias['vue'] = 'vue/dist/vue.common'
+      (config.node = {
+        fs: "empty",
+        googleapis: "empty",
+        child_process: "empty"
+      }),
+        (config.resolve.alias["vue"] = "vue/dist/vue.common");
     }
   },
   router: {
-    scrollBehavior: function (to, from, savedPosition) {
-      return { x: 0, y: 0 }
-    },
+    scrollBehavior: function(to, from, savedPosition) {
+      return { x: 0, y: 0 };
+    }
   },
   server: {
     port: 3000,
-    host: '0.0.0.0' // デフォルト: localhost
+    host: "0.0.0.0" // デフォルト: localhost
   }
-}
+};
