@@ -274,8 +274,7 @@ export default {
           additionalNotes(markdown: true)
         }
       }
-    `,
-      preview: true
+    `
     });
     return { ready: !!data, ...data };
   },
