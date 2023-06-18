@@ -150,7 +150,7 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    ["@nuxtjs/google-gtag", { id: "UA-104320074-1" }],
+    ["@nuxtjs/google-gtag", { id: "G-3LMEVG6TMY" }],
     [
       "nuxt-buefy",
       {
