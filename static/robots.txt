@@ -1,5 +1,8 @@
 User-Agent: *
-Allow: /
+Disallow: *about/*
+Disallow *private*
+Allow: *about/utsukuba
+Allow: *about/ted-and-tedx
 
 User-agent: twitterbot
 Allow: /private/, /draft/
