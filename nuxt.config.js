@@ -231,7 +231,7 @@ export default {
       "**/tedtalks",
       "**/member"
     ],
-    routes: ["2017", "2021", "2022"]
+    routes: ["2017", "2021", "2022", "2023"]
       .map(year => {
         // TODO CMSから取得
         return ["en", ""].map(lang => {

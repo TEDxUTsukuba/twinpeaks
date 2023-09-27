@@ -113,6 +113,10 @@ export default {
     return {
       conferences: [
         {
+          path: "2023",
+          name: "2023 MANGEKYO"
+        },
+        {
           path: "2022",
           name: "2022 LIKE AND SEEK"
         },
