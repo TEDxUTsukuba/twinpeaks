@@ -32,6 +32,12 @@
           >{{ conference.webcastService }}で</span
         >{{ $t("about.ted.watch") }}</a
       >
+      <img
+        width="150px"
+        class="portrait"
+        src="~/assets/2023/15150_long.png"
+        style="object-fit: cover;"
+      />
     </section>
 
     <!-- テーマアート -->
