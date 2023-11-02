@@ -16,60 +16,82 @@
         >
           <source src="~/static/nograin_middle_21_9.mp4" />
         </video>
-      <!-- </div> -->
-      <h1 class="text-gradient is-uppercase is-0 has-text-weight-bold has-text-left" style="position: absolute; bottom: 0; left: 3vw; line-height: 0.9;">
-        Ideas<br>Worth<br>Spreading
-      </h1>
-      <div style="position: absolute; bottom: 5vh; right: 3vw; line-height: 0.9;">
-        <nuxt-link to="/conferences/2023">
-          <button style="width: 100%; background-color: #c6231bb6; color: white; font-size: 1.3rem; border: none;" class="button">
-            {{ $t('latest_event') }}
-            <i class="mdi mdi-chevron-right" style="font-size: 1.5rem; padding-left: 10px;"></i>
-          </button>
-        </nuxt-link>
-      </div>
-    </section>
-    <section class="is-hidden-tablet has-background-black pb-0">
-      <video muted="" autoplay="" playsinline="" loop="" poster="" style="object-fit: cover; filter: saturate(50%); height: 65vh;">
-        <source src="~/static/nograin_middle_21_9.mp4">
-      </video>
-      <div style="position: absolute; bottom: 30vh; width: 100%; padding: 0 3vw;">
-        <h1 class="text-gradient is-uppercase is-0 has-text-weight-bold has-text-left" style="line-height: 0.9;">
-          Ideas<br>Worth<br>Spreading
+        <!-- </div> -->
+        <h1
+          class="text-gradient is-uppercase is-0 has-text-weight-bold has-text-left"
+          style="position: absolute; bottom: 0; left: 3vw; line-height: 0.9;"
+        >
+          Ideas<br />Worth<br />Spreading
         </h1>
-        <div>
-          <nuxt-link to="/conferences/2023">
-            <button style="width: 100%; background-color: #C6241B; color: white;" class="button is-rounded">{{ $t('latest_event') }}</button>
-          </nuxt-link>
+      </section>
+      <section class="is-hidden-tablet has-background-black pb-0">
+        <video
+          muted=""
+          autoplay=""
+          playsinline=""
+          loop=""
+          poster=""
+          style="object-fit: cover; filter: saturate(50%); height: 65vh;"
+        >
+          <source src="~/static/nograin_middle_21_9.mp4" />
+        </video>
+        <div
+          style="position: absolute; bottom: 30vh; width: 100%; padding: 0 3vw;"
+        >
+          <h1
+            class="text-gradient is-uppercase is-0 has-text-weight-bold has-text-left"
+            style="line-height: 0.9;"
+          >
+            Ideas<br />Worth<br />Spreading
+          </h1>
         </div>
-      </div>
-    </section>
-      
-    <section class="hero has-background-primary">
-      <div class="hero-body is-flex mx-auto" id="intro" style="align-items: center; max-width: 1407px;">
-        <div>
-          <section class="section mt-4">
-            <h1 v-if="$i18n.locale == 'ja'" class="title is-size-2-tablet is-size-3-mobile has-text-weight-bold has-text-white">
-              <span v-html="$t('intro.headline1')" />
-              <br>
-              <span v-html="$t('intro.headline2')" />
-            </h1>
-            <h1 v-if="$i18n.locale == 'en'" class="title is-size-2-tablet is-size-3-mobile has-text-weight-light has-text-white">
-              <span v-html="$t('intro.headline1')" />
-              <br class="is-hidden-mobile">
-              <span v-html="$t('intro.headline2')" />
-            </h1>
-            <img id="rocket" src="~/assets/svg/rocket.png" width="100%" style="z-index: 0;" alt="">
-            <article class="is-size-6">
-              {{ $t('intro.description') }}
-            </article>
-            <div class="has-text-right mt-4">
-              <nuxt-link :to="localePath('/about/utsukuba')"><button class="button is-rounded is-white">{{ $t('intro.button') }}</button></nuxt-link>
-            </div>
-            <AnimatedScenery class="py-6" />
-          </section>
+      </section>
+
+      <section class="hero has-background-primary">
+        <div
+          class="hero-body is-flex mx-auto"
+          id="intro"
+          style="align-items: center; max-width: 1407px;"
+        >
+          <div>
+            <section class="section mt-4">
+              <h1
+                v-if="$i18n.locale == 'ja'"
+                class="title is-size-2-tablet is-size-3-mobile has-text-weight-bold has-text-white"
+              >
+                <span v-html="$t('intro.headline1')" />
+                <br />
+                <span v-html="$t('intro.headline2')" />
+              </h1>
+              <h1
+                v-if="$i18n.locale == 'en'"
+                class="title is-size-2-tablet is-size-3-mobile has-text-weight-light has-text-white"
+              >
+                <span v-html="$t('intro.headline1')" />
+                <br class="is-hidden-mobile" />
+                <span v-html="$t('intro.headline2')" />
+              </h1>
+              <img
+                id="rocket"
+                src="~/assets/svg/rocket.png"
+                width="100%"
+                style="z-index: 0;"
+                alt=""
+              />
+              <article class="is-size-6">
+                {{ $t("intro.description") }}
+              </article>
+              <div class="has-text-right mt-4">
+                <nuxt-link :to="localePath('/about/utsukuba')"
+                  ><button class="button is-rounded is-white">
+                    {{ $t("intro.button") }}
+                  </button></nuxt-link
+                >
+              </div>
+              <AnimatedScenery class="py-6" />
+            </section>
+          </div>
         </div>
-      </div>
       </section>
     </section>
 
