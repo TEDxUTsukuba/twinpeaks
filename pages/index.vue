@@ -35,12 +35,16 @@
         >
           <source src="~/static/nograin_middle_21_9.mp4" />
         </video>
-        <h1
-          class="text-gradient is-uppercase is-0 has-text-weight-bold has-text-left"
-          style="position: absolute; bottom: 30vh; left: 3vw; line-height: 0.9;"
+        <div
+          style="position: absolute; bottom: 30vh; width: 100%; padding: 0 3vw;"
         >
-          Ideas<br />Worth<br />Spreading
-        </h1>
+          <h1
+            class="text-gradient is-uppercase is-0 has-text-weight-bold has-text-left"
+            style="line-height: 0.9;"
+          >
+            Ideas<br />Worth<br />Spreading
+          </h1>
+        </div>
       </section>
 
       <section class="hero has-background-primary">
