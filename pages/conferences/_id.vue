@@ -278,6 +278,7 @@
                 class="button is-gradient is-rounded my-3"
                 :href="conference.ticketSellingPageUrl"
                 target="_blank"
+                onclick="click_ticket()"
               >
                 <i class="mdi mdi-ticket is-size-4" />
                 <span style="padding-left: 0.25rem;">{{
@@ -490,6 +491,11 @@ export default {
     },
     formatTime(datetime, locale) {
       return format(parseISO(datetime), "HH:mm");
+    },
+    click_ticket() {
+      this.$gtag("event", "click_ticket", {
+        page_path: "/"
+      });
     }
   }
 };
