@@ -45,6 +45,57 @@
           class="mx-auto"
         />
       </figure>
+      <div
+        v-if="conference.hasTicket"
+        class="mb-4"
+        style="text-align: center; margin-top: 30px;"
+      >
+        <div style="color: white;">
+          <p style="font-size: 1.5rem; !important">Price(JPY)</p>
+          <div
+            class="ticket-price"
+            style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 6px;"
+          >
+            <p style="font-size: 2rem; font-weight: bold; margin-bottom: 0;">
+              {{ conference.ticketPrice }}円
+            </p>
+            <p
+              v-if="conference.ticketPriceStudent"
+              style="font-size: 1.5rem; margin-top: 0; color: white;"
+            >
+              (Student:
+              <strong style="color: white;"
+                >{{ conference.ticketPriceStudent }}円</strong
+              >)
+            </p>
+          </div>
+        </div>
+        <!-- チケットがAvailableにセットされている場合 -->
+        <div v-if="conference.isTicketAvailable">
+          <!-- チケットを入手するサイトが登録されている場合 -->
+          <a
+            v-if="conference.ticketSellingPageUrl"
+            style="font-size: 1.3rem;"
+            class="button is-gradient is-rounded my-3"
+            :href="conference.ticketSellingPageUrl"
+            target="_blank"
+          >
+            <i class="mdi mdi-ticket is-size-4" />
+            <span style="padding-left: 0.25rem;">{{
+              $t("2020.participance.premium.tiget")
+            }}</span>
+          </a>
+        </div>
+        <!-- チケットがAvailableにセットされていない場合 -->
+        <div v-else>
+          <span class="tag is-success"
+            >Tickets will be available on
+            {{ formatDate(conference.ticketReleaseDate) }}</span
+          >
+        </div>
+
+        <article class="is-size-7 pt-5 notes" v-html="conference.ticketNotes" />
+      </div>
     </section>
 
     <!-- オーガナイザーの情報とメッセージ -->
@@ -264,7 +315,7 @@
             </p>
 
             <!-- チケットがAvailableにセットされている場合 -->
-            <div v-if="conference.isTicketAvailable" class="is-hidden-touch">
+            <div v-if="conference.isTicketAvailable">
               <!-- チケットを入手するサイトが登録されている場合 -->
               <a
                 v-if="conference.ticketSellingPageUrl"
@@ -349,46 +400,6 @@
         v-html="conference.additionalNotes"
       />
     </section>
-    <div
-      style="padding: 10px;bottom: 10px; right: 10px; position: fixed; botton: 10px"
-    >
-      <!-- チケットを入手するサイトが登録されている場合 -->
-      Share on<br />
-      <a
-        class="no-decollation has-text-grey"
-        :href="
-          `https://www.facebook.com/sharer/sharer.php?u=https://www.tedxutsukuba.com${''}`
-        "
-        target="_blank"
-        rel="nofollow noopener noreferrer"
-        style="margin-right: .5rem;"
-        ><i class="mdi mdi-facebook" /> Facebook</a
-      ><br class="is-hidden-touch" />
-      <a
-        class="no-decollation has-text-grey"
-        :href="
-          `http://twitter.com/share?url=www.tedxutsukuba.com${''}&text=${''}&via=tedxutsukuba&related=tedxutsukuba`
-        "
-        target="_blank"
-        style="margin-right: .5rem;"
-        ><i class="mdi mdi-twitter" /> Twitter</a
-      ><br class="is-hidden-touch" />
-      <div v-if="conference.isTicketAvailable">
-        <!-- チケットを入手するサイトが登録されている場合 -->
-        <a
-          v-if="conference.ticketSellingPageUrl"
-          class="button is-gradient is-rounded my-3"
-          :href="conference.ticketSellingPageUrl"
-          target="_blank"
-          onclick="click_ticket()"
-        >
-          <i class="mdi mdi-ticket is-size-4" />
-          <span style="padding-left: 0.25rem;">{{
-            $t("2020.participance.premium.tiget")
-          }}</span>
-        </a>
-      </div>
-    </div>
   </section>
 </template>
 
