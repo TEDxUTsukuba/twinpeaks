@@ -10,14 +10,29 @@
       <h1 class="text-gradient is-uppercase is-0 has-text-weight-bold has-text-left" style="position: absolute; bottom: 0; left: 3vw; line-height: 0.9;">
         Ideas<br>Worth<br>Spreading
       </h1>
+      <div style="position: absolute; bottom: 5vh; right: 3vw; line-height: 0.9;">
+        <nuxt-link to="/conferences/2023">
+          <button style="width: 100%; background-color: #c6231bb6; color: white; font-size: 1.3rem; border: none;" class="button">
+            {{ $t('latest_event') }}
+            <i class="mdi mdi-chevron-right" style="font-size: 1.5rem; padding-left: 10px;"></i>
+          </button>
+        </nuxt-link>
+      </div>
     </section>
     <section class="is-hidden-tablet has-background-black pb-0">
       <video muted="" autoplay="" playsinline="" loop="" poster="" style="object-fit: cover; filter: saturate(50%); height: 65vh;">
         <source src="~/static/nograin_middle_21_9.mp4">
       </video>
-      <h1 class="text-gradient is-uppercase is-0 has-text-weight-bold has-text-left" style="position: absolute; bottom: 30vh; left: 3vw; line-height: 0.9;">
-        Ideas<br>Worth<br>Spreading
-      </h1>
+      <div style="position: absolute; bottom: 30vh; width: 100%; padding: 0 3vw;">
+        <h1 class="text-gradient is-uppercase is-0 has-text-weight-bold has-text-left" style="line-height: 0.9;">
+          Ideas<br>Worth<br>Spreading
+        </h1>
+        <div>
+          <nuxt-link to="/conferences/2023">
+            <button style="width: 100%; background-color: #C6241B; color: white;" class="button is-rounded">{{ $t('latest_event') }}</button>
+          </nuxt-link>
+        </div>
+      </div>
     </section>
       
     <section class="hero has-background-primary">
