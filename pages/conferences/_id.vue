@@ -16,10 +16,34 @@
 
     <!-- テーマアート -->
     <section class="section" v-if="conference.themeArtwork">
-      <figure class="image">
+      <figure class="image" style="height: 100%;" >
         <!-- <datocms-image :data="conference.themeArtwork.responsiveImage" :alt="conference.name" style="position: initial;"/> -->
-        <img :src="conference.themeArtwork.url" :alt="conference.name" style="position: initial; max-width: 640px;" class="mx-auto" />
+        <img :src="conference.themeArtwork.url" :alt="conference.name" style="position: relative; border-radius: 12px; max-height: 70vh; object-fit: contain;" class="mx-auto" />
       </figure>
+      <div v-if="conference.hasTicket" class="mb-4" style="text-align: center; margin-top: 30px;">
+        <div style="color: white;">
+          <p style="font-size: 1.5rem; !important">Price(JPY)</p>
+          <div class="ticket-price" style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 6px;">
+            <p style="font-size: 2rem; font-weight: bold; margin-bottom: 0;">{{ conference.ticketPrice }}円</p>
+            <p v-if="conference.ticketPriceStudent" style="font-size: 1.5rem; margin-top: 0; color: white;">(Student: <strong style="color: white;">{{ conference.ticketPriceStudent}}円</strong>)</p>
+          </div>
+        </div>
+
+        <!-- チケットがAvailableにセットされている場合 -->
+        <div v-if="conference.isTicketAvailable">
+          <!-- チケットを入手するサイトが登録されている場合 -->
+          <a v-if="conference.ticketSellingPageUrl" style="font-size: 1.3rem;" class="button is-gradient is-rounded my-3" :href="conference.ticketSellingPageUrl" target="_blank">
+            <i class="mdi mdi-ticket is-size-4" />
+            <span style="padding-left: 0.25rem;">{{ $t('2020.participance.premium.tiget') }}</span>
+          </a>
+        </div>
+        <!-- チケットがAvailableにセットされていない場合 -->
+        <div v-else>
+          <span class="tag is-success">Tickets will be available on {{ formatDate(conference.ticketReleaseDate) }}</span>
+        </div>
+
+        <article class="is-size-7 pt-5 notes" v-html="conference.ticketNotes" />
+      </div>
     </section>
 
     <!-- オーガナイザーの情報とメッセージ -->
