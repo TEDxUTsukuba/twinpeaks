@@ -27,6 +27,7 @@
   "button": {
     "discover": "詳しく知る",
     "readmore": "続きを読む",
+    "details": "詳細を表示",
     "readless": "閉じる",
     "seeothers": "他の{0}を見る",
     "seeall": "一覧を見る",
@@ -43,7 +44,8 @@
     "unavailable": "公開停止中"
   },
   "top": {
-    "message": "言語設定: 日本語"
+    "message": "言語設定: 日本語",
+    "nextEvent": "次回のイベント"
   },
   "intro": {
     "headline1": "価値あるアイディアを、",
@@ -179,7 +181,7 @@
       "title": "TED / TEDx",
       "subtitle": "TEDおよび世界に広がるTEDxコミュニティをご紹介いたします。"
     },
-    "ted":{
+    "ted": {
       "title": "TED",
       "subtitle": "TED",
       "join": "参加する",

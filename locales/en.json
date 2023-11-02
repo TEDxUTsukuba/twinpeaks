@@ -27,6 +27,7 @@
   "button": {
     "discover": "Discover",
     "readmore": "Read more",
+    "details": "More Details",
     "readless": "Read less",
     "seeothers": "See other {0}",
     "seeall": "See all",
@@ -45,7 +46,8 @@
     "unavailable": "Temporarily Unavailable"
   },
   "top": {
-    "message": "Language Setting: English"
+    "message": "Language Setting: English",
+    "nextEvent": "Next event"
   },
   "intro": {
     "headline1": "An <span class='has-text-weight-bold'>independently</span>-organized TEDx community",
@@ -172,7 +174,7 @@
         "title": "Contact us",
         "subtitle": "Available in English and Japanese."
       }
-    }, 
+    },
     "tedandtedx": {
       "title": "TED / TEDx",
       "subtitle": "Inrtoducing TED and TEDx community around the world."
@@ -185,7 +187,7 @@
       "watchmoreted": "Explore more TED Talks",
       "talktitle": "Designing for Simplicity",
       "event": "TED2007",
-      "speaker": "John Maeda", 
+      "speaker": "John Maeda",
       "listen": "Listen",
       "listenmore": "Explore more Podcasts"
     },
@@ -220,7 +222,7 @@
     },
     "speaker": {
       "title": "Speakers",
-      "description": "We invite four speakers with brilliant ideas. ", 
+      "description": "We invite four speakers with brilliant ideas. ",
       "share": "Share this speaker",
       "sp1": {
         "name": "Takeharu Mikami",
@@ -230,13 +232,13 @@
       },
       "sp2": {
         "name": "SeungHee Lee",
-        "position": "Kansei Design advocate", 
+        "position": "Kansei Design advocate",
         "description": "Associate Professor at the University of Tsukuba in pursuit of compassionate design. Disseminating “Kansei” to the world through interdisciplinary research that focuses on human sensitivity. Surprising interests include martial arts and competitive dancing.",
         "youtubeId": "_wQOizEKNZI"
       },
       "sp3": {
         "name": "Seita Emori",
-        "position": "Environmental scientist", 
+        "position": "Environmental scientist",
         "description": "Climate change expert and deputy director of the Center for Global Environmental Research at the National Institute for Environmental Studies. Thinking daily about how to communicate with others to help solve the problem of climate change. He loves Pokémon!",
         "youtubeId": "zTsK24H7SjM"
       },
@@ -246,9 +248,9 @@
         "description": "Japanese-Paraguayan \"Sansei\", came to Japan to study at University of Tsukuba. While in school, she was able to communicate the charm of Paraguay, mainly in Tsukuba, and at the same time, worked hard to support Nikkei communities across the country. \"By keep learning new idea, my world expand.\"",
         "youtubeId": "_RmCJnzWfOg"
       }
-    },  
+    },
     "concept": {
-      "title": "Theme", 
+      "title": "Theme",
       "description": "Our event concept is \"JIJIMUGE\", which is derived from a Buddhism term.",
       "headline": "JIJIMUGE",
       "statement1": "今、世の中にある様々な境界線が溶けつつあります。",
@@ -310,7 +312,7 @@
         "name": "Leonid Dimaano",
         "position": "Exchange Student to the University of Tsukuba",
         "description": "生物資源学類4年生でフィリピンからの留学生のLeonid Dimaanoさん。環境問題に関心を持っている彼は、先進国である日本の環境問題に対する意識の低さに驚いた。そこでechoという団体を立ち上げ環境に優しい大学を目指して日々活動している。 ",
-        "youtubeId": "qrryy1H1zOU"        
+        "youtubeId": "qrryy1H1zOU"
       },
       "sp4": {
         "name": "Annet Nakkazi",
