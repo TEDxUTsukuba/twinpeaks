@@ -328,7 +328,7 @@
                 class="button is-gradient is-rounded my-3"
                 :href="conference.ticketSellingPageUrl"
                 target="_blank"
-                onclick="click_ticket()"
+                v-on:click="click_ticket()"
               >
                 <i class="mdi mdi-ticket is-size-4" />
                 <span style="padding-left: 0.25rem;">{{

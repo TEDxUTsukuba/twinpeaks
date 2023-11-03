@@ -220,7 +220,7 @@
                   v-if="allConferences[0].ticketSellingPageUrl"
                   class="button is-gradient is-rounded my-3"
                   :href="allConferences[0].ticketSellingPageUrl"
-                  onclick="click_ticket()"
+                  v-on:click="click_ticket()"
                   target="_blank"
                 >
                   <i class="mdi mdi-ticket is-size-4" />
@@ -385,7 +385,7 @@ export default {
     myMouseLeave() {
       document.getElementById("rocket").classList.remove("rocket-launch");
     },
-    click_ticket() {
+    click_ticket: function() {
       this.$gtag("event", "click_ticket", {
         page_path: "/"
       });
