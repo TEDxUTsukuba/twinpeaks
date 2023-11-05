@@ -479,6 +479,11 @@ export default {
           this.conference.themeStatement,
         meta: [
           {
+            hid: "description",
+            name: "description",
+            content: this.conference.socialMediaDescription
+          },
+          {
             hid: "og:title",
             property: "og:title",
             content: "TEDxUTsukuba " + this.conference.name
