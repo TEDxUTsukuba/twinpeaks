@@ -506,10 +506,12 @@ export default {
           lang: this.$i18n.locale
         },
         title: "TEDxUTsukuba " + this.conference.name,
-        description:
-          this.conference.socialMediaDescription ||
-          this.conference.themeStatement,
         meta: [
+          {
+            hid: "description",
+            name: "description",
+            content: this.conference.socialMediaDescription
+          },
           {
             hid: "og:title",
             property: "og:title",
