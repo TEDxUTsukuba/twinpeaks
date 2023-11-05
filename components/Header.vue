@@ -114,7 +114,7 @@ export default {
       conferences: [
         {
           path: "2023",
-          name: "2023 MANGEKYO"
+          name: "2023 万華鏡"
         },
         {
           path: "2022",
