@@ -84,6 +84,7 @@
             style="font-size: 1.3rem;"
             class="button is-gradient is-rounded my-3"
             :href="conference.ticketSellingPageUrl"
+            v-on:click="click_ticket()"
             target="_blank"
           >
             <i class="mdi mdi-ticket is-size-4" />
