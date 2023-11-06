@@ -361,6 +361,7 @@ export default {
     });
     return { ready: !!data && !!conferene_data, ...data, ...conferene_data };
   },
+  /*
   mounted() {
     const scene1 = this.$scrollmagic
       .scene({
@@ -374,7 +375,7 @@ export default {
         }
       });
     this.$scrollmagic.addScene(scene1);
-  },
+  },*/
   methods: {
     formatDate(date) {
       return format(parseISO(date), "PPP");
