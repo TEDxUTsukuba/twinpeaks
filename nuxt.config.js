@@ -286,6 +286,7 @@ export default {
    */
   build: {
     analyze: true,
+    extractCSS: true,
     // HardSourceWebpackPlugin ビルド時間短縮
     // hardSource: true,
     /*
@@ -310,6 +311,23 @@ export default {
         cacheGroups: {
           styles: {
             name: "styles",
+            test: /\.css$/,
+            chunks: "all",
+            enforce: true,
+            minSize: 10000,
+            maxSize: 500000
+          },
+          pages: {
+            name: "pages",
+            test: /pages/,
+            chunks: "all",
+            enforce: false,
+            minSize: 10000,
+            maxSize: 100000
+          },
+          vendor: {
+            test: /node_modules/,
+            name: "vendor",
             chunks: "all",
             enforce: true,
             minSize: 10000,
