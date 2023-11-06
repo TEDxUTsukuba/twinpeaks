@@ -417,6 +417,7 @@ export default {
 
     return { ...conference_data };
   },
+  /*
   mounted() {
     const scene1 = this.$scrollmagic
       .scene({
@@ -444,7 +445,7 @@ export default {
       });
     this.$scrollmagic.addScene(scene1);
     this.$scrollmagic.addScene(scene2);
-  },
+  },*/
   methods: {
     click_ticket: function() {
       this.$gtag("event", "click_ticket", {

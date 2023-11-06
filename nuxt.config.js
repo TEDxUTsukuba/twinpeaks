@@ -123,10 +123,11 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
+    /*
     {
       src: "~/plugins/vue-scrollmagic.js",
       ssr: false
-    },
+    },*/
     {
       src: "~/plugins/vue-konva",
       ssr: false
