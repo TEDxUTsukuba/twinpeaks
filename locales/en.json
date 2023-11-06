@@ -47,7 +47,8 @@
   },
   "top": {
     "message": "Language Setting: English",
-    "nextEvent": "Next event"
+    "nextEvent": "Next event",
+    "nextTedxutsukubaEvent": "Next TEDxUTsukuba"
   },
   "intro": {
     "headline1": "An <span class='has-text-weight-bold'>independently</span>-organized TEDx community",

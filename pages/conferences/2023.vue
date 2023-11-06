@@ -547,7 +547,7 @@ export default {
     },
     click_ticket() {
       this.$gtag("event", "click_ticket", {
-        page_path: "/"
+        page_path: "conf/2023"
       });
     }
   }

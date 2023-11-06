@@ -45,7 +45,8 @@
   },
   "top": {
     "message": "言語設定: 日本語",
-    "nextEvent": "次回のイベント"
+    "nextEvent": "次回のイベント",
+    "nextTedxutsukubaEvent": "TEDxUTsukuba 次回のイベント"
   },
   "intro": {
     "headline1": "価値あるアイディアを、",
