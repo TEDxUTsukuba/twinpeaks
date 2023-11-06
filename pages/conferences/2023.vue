@@ -35,7 +35,7 @@
       <img
         width="150px"
         class="portrait"
-        src="~/assets/2023/15150_long.png"
+        src="~/assets/2023/15150.webp"
         style="object-fit: cover;"
       />
     </section>
