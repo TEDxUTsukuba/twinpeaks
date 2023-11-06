@@ -49,6 +49,7 @@
     "konva": "^7.2.5",
     "nuxt-lazy-load": "^1.2.6",
     "sass-loader": "10.1.1",
-    "vue-konva": "^2.1.7"
+    "vue-konva": "^2.1.7",
+    "webpack-bundle-analyzer": "^4.9.1"
   }
 }

@@ -285,6 +285,7 @@ export default {
    ** Build configuration
    */
   build: {
+    analyze: true,
     // HardSourceWebpackPlugin ビルド時間短縮
     // hardSource: true,
     /*
@@ -303,6 +304,19 @@ export default {
         child_process: "empty"
       }),
         (config.resolve.alias["vue"] = "vue/dist/vue.common");
+    },
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          styles: {
+            name: "styles",
+            chunks: "all",
+            enforce: true,
+            minSize: 10000,
+            maxSize: 500000
+          }
+        }
+      }
     }
   },
   router: {
