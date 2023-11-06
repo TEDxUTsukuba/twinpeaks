@@ -309,29 +309,22 @@ export default {
     optimization: {
       splitChunks: {
         cacheGroups: {
-          styles: {
-            name: "styles",
-            test: /\.css$/,
-            chunks: "all",
-            enforce: true,
-            minSize: 10000,
-            maxSize: 500000
-          },
           pages: {
             name: "pages",
             test: /pages/,
             chunks: "all",
             enforce: false,
             minSize: 10000,
-            maxSize: 100000
+            maxSize: 50000
           },
           vendor: {
             test: /node_modules/,
             name: "vendor",
             chunks: "all",
-            enforce: true,
+            enforce: false,
+            reuseExistingChunk: true,
             minSize: 10000,
-            maxSize: 500000
+            maxSize: 100000
           }
         }
       }
