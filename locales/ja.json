@@ -1,4 +1,9 @@
 {
+  "commons": {
+    "performer": "パフォーマー",
+    "speaker": "スピーカー",
+    "enja": "登壇者"
+  },
   "lang_of_locale_file_ja": "日本語",
   "lang_of_locale_file_en": "Japanese",
   "lang_ja": "日本語",

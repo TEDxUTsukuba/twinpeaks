@@ -120,7 +120,8 @@
 
     <!-- スピーカー情報 -->
     <section class="section" id="card-0" v-if="conference.speakers[0]">
-      <h1 class="title is-0">{{ $t("2020.speaker.title") }}</h1>
+      <h1 class="title is-0">{{ $t("commons.enja") }}</h1>
+      <h2 class="title is-0">{{ $t("commons.speaker") }}</h2>
       <div v-for="(speaker, index) in conference.speakers" :key="index">
         <div class="columns is-multiline is-centered is-vcentered mb-6">
           <div
@@ -129,6 +130,7 @@
             <div class="image-box">
               <figure class="image is-1by1" v-if="speaker.portrait">
                 <img
+                  loading="lazy"
                   class="nmp-card-image"
                   :src="speaker.portrait.url"
                   style="object-fit: cover;"
@@ -173,7 +175,7 @@
           </div>
         </div>
       </div>
-
+      <h2 class="title is-0">{{ $t("commons.performer") }}</h2>
       <!-- パフォーマー情報 -->
       <div v-for="(performer, index) in conference.performers" :key="index">
         <div class="columns is-multiline is-centered is-vcentered mb-6">
@@ -183,6 +185,7 @@
             <div class="image-box">
               <figure class="image is-1by1" v-if="performer.portrait">
                 <img
+                  loading="lazy"
                   class="nmp-card-image"
                   :src="performer.portrait.url"
                   style="object-fit: cover;"
