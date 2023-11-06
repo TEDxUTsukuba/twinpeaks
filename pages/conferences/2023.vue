@@ -389,6 +389,7 @@
     <section v-if="conference.locationGooglemapsEmbed">
       <figure class="image is-3by1">
         <iframe
+          loading="lazy"
           class="has-ratio"
           :src="conference.locationGooglemapsEmbed"
           width="100%"
