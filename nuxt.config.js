@@ -310,11 +310,21 @@ export default {
     optimization: {
       splitChunks: {
         cacheGroups: {
+          stylesheet: {
+            name: "stylesheet",
+            test: /\.css$/,
+            chunks: "all",
+            enforce: false,
+            reuseExistingChunk: true,
+            minSize: 10000,
+            maxSize: 20000
+          },
           pages: {
             name: "pages",
             test: /pages/,
             chunks: "all",
             enforce: false,
+            reuseExistingChunk: true,
             minSize: 10000,
             maxSize: 50000
           },
