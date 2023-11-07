@@ -444,7 +444,7 @@ h1.thin {
   // transform: translate3d(0,0,100px);
 }
 #intro {
-  opacity: 0;
+  opacity: 1;
   transition: all 1s;
 }
 .text-gradient {
