@@ -472,7 +472,7 @@ iframe.podcast {
 }
 #ted-without-background,
 #tedx-without-background {
-  opacity: 0;
+  opacity: 1;
   transition: all 0.5s;
 }
 #tedx {

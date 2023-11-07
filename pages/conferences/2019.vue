@@ -619,7 +619,7 @@ h1.is-0 {
 #concept,
 #program,
 #venue {
-  opacity: 0;
+  opacity: 1;
   transition: all 0.5s;
 }
 .itemContainer {
