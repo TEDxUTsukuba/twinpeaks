@@ -84,7 +84,7 @@
             style="font-size: 1.3rem;"
             class="button is-gradient is-rounded my-3"
             :href="conference.ticketSellingPageUrl"
-            v-on:click="click_ticket()"
+            v-on:click="click_ticket('event_top_ticket_button')"
             target="_blank"
           >
             <i class="mdi mdi-ticket is-size-4" />
@@ -332,7 +332,7 @@
                 class="button is-gradient is-rounded my-3"
                 :href="conference.ticketSellingPageUrl"
                 target="_blank"
-                v-on:click="click_ticket()"
+                v-on:click="click_ticket('event_bottom_ticket_button')"
               >
                 <i class="mdi mdi-ticket is-size-4" />
                 <span style="padding-left: 0.25rem;">{{
@@ -549,9 +549,9 @@ export default {
     formatTime(datetime, locale) {
       return format(parseISO(datetime), "HH:mm");
     },
-    click_ticket() {
+    click_ticket(b_loc = "unknown") {
       this.$gtag("event", "click_ticket", {
-        page_path: "conf/2023"
+        button_location: b_loc
       });
     }
   }
