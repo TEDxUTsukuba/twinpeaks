@@ -335,7 +335,7 @@ export default {
             enforce: false,
             reuseExistingChunk: true,
             minSize: 10000,
-            maxSize: 100000
+            maxSize: 50000
           }
         }
       }
