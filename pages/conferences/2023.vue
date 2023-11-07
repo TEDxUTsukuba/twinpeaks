@@ -102,6 +102,10 @@
         </div>
 
         <article class="is-size-7 pt-5 notes" v-html="conference.ticketNotes" />
+
+        <section class="section">
+          <p style="white-space: pre-line;">{{ $t("2023.message") }}</p>
+        </section>
       </div>
     </section>
 
