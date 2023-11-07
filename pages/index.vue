@@ -388,7 +388,7 @@ export default {
     },
     click_ticket: function() {
       this.$gtag("event", "click_ticket", {
-        page_path: "/"
+        button_loc: "top_page"
       });
     }
   }
