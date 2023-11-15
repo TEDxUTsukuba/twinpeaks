@@ -195,7 +195,7 @@ export default {
     const data = await request({
       query: gql`
         {
-          partners: allPartners(locale: ${i18n.locale}, filter: {currentlyPartnering: {eq: "true"}}) {
+          partners: allPartners(first: 30, locale: ${i18n.locale}, filter: {currentlyPartnering: {eq: "true"}}) {
             id
             instagram
             facebook
