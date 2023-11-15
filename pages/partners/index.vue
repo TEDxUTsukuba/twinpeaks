@@ -221,6 +221,16 @@ export default {
         twitter_card_type: "summary"
       }
     };
+  },
+  mounted: function() {
+    const clone  = [...this.partners]
+    this.partners = clone.reduce((_,cur,idx) => {
+    let rand = Math.floor(Math.random() * (idx + 1));
+    clone[idx] = clone[rand]
+    clone[rand] = cur;
+    return clone
+  })
+
   }
 };
 </script>
