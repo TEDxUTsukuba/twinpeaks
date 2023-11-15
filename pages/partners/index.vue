@@ -65,7 +65,7 @@
       <!-- Tier 2 -->
       <div class="columns is-multiline is-mobile">
         <div
-          class="column is-3-tablet is-6-mobile"
+          class="column is-3-tablet is-9-mobile"
           v-for="(partner, index) in partners.filter(el => el.tier === '2')"
           :key="index"
         >
