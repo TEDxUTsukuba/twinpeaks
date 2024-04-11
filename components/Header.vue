@@ -46,6 +46,13 @@
       >
         {{ $t("header.partners.item") }}
       </b-navbar-item>
+      <b-navbar-item
+        class="normal-category"
+        tag="nuxt-link"
+        :to="localePath('/blog')"
+      >
+        {{ $t("header.blog.item") }}
+      </b-navbar-item>
       <!-- <b-navbar-item class="normal-category" tag="nuxt-link" :to="localePath('/about/utsukuba')">
         {{ $t('header.aboutus.child2') }}
       </b-navbar-item> -->

@@ -129,9 +129,11 @@
     }
   },
   "blog": {
+    "title": "ブログ",
     "subtitle": "TEDxUTsukubaのメンバーの考えやアイデアを発信しています。",
     "thanks": "最後までお読みいただきありがとうございました。",
     "disclaimer": "投稿内容は寄稿者個人の見解であり、TEDxUTsukubaを代表するものとは限りません。",
+    "seeAll": "すべての記事を見る",
     "writtenby": "寄稿: "
   },
   "article": {
