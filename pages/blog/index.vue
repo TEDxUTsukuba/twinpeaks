@@ -9,7 +9,7 @@
     </section>
     <section class="section">
       <div class="columns is-multiline is-mobile">
-      <div class="column is-6-tablet is-full-mobile" v-for="(blog, index) in blogs" :key="index">
+      <div class="column is-6-tablet is-full-mobile h-full" v-for="(blog, index) in blogs" :key="index">
         <div class="nmp-dark my-4">
         <header class="card-header">
           <p class="card-header-title">
@@ -30,7 +30,9 @@
         </div>
         <div class="card-content">
           <h2 class="title is-size-5">{{ blog.title }}</h2>
-          <p class="has-text-grey-light">{{ blog.description }}</p>
+          <p class="content">
+            {{ blog.description }}
+          </p>
           <br />
           <nav class="level is-mobile">
           <div class="level-left">
@@ -64,6 +66,14 @@ export default {
           image: "/blog/23_partner_keyplayers_interview/003.jpg",
           path: "/blog/23_partner_keyplayers_interview",
         },
+        {
+          title: "Skyland Ventures 木下様 インタビュー",
+          date: "2024/04/08",
+          description: "2023年TEDxUTsukubaイベント「万華鏡」にて協賛していただいたSkyland Venturesの代表を務める木下様にお話を伺いました。",
+          image: "/blog/23_partner_skylandventures_interview/002.jpg",
+          path: "/blog/23_partner_skylandventures_interview",
+        },
+        
       ],
     };
   },
