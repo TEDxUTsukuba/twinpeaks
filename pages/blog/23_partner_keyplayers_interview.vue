@@ -90,6 +90,24 @@
   
   <script>
   export default {
+    head() {
+      return {
+        title: "株式会社キープレイヤーズ 高野様 インタビュー",
+        meta: [
+          {
+            hid: "description",
+            name: "description",
+            content: "2023年TEDxUTsukubaイベント「万華鏡」にて協賛していただいた株式会社キープレイヤーズの代表を務める高野様にお話を伺いました。",
+          },
+          // ogp画像
+          {
+            hid: "og:image",
+            property: "og:image",
+            content: "https://www.tedxutsukuba.com/blog/23_partner_keyplayers_interview/003.jpg",
+          },
+        ],
+      };
+    },
   }
   </script>
   
