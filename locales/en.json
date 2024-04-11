@@ -131,9 +131,11 @@
     }
   },
   "blog": {
+    "title": "Blog",
     "subtitle": "Hear the thoughts and ideas from our members.",
     "thanks": "Thank you for reading this article to the end.",
     "disclaimer": "The opinions expressed in this article are those of the authors and do not necessarily reflect the views of TEDxUTsukuba. ",
+    "seeAll": "See All Articles",
     "writtenby": "Written by "
   },
   "about": {

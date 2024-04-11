@@ -1,67 +1,72 @@
 <template>
   <section id="wrapper-dark">
-    <section class="section is-halfheight has-text-centered">
-      <i class="mdi mdi-book-multiple has-text-primary is-size-1" /> 
-      <h1 class="title is-1 is-spaced">{{ $t('header.blog.item' )}}</h1>
-      <h1 class="subtitle has-text-grey-light">{{ $t('blog.subtitle')}}</h1>
+    <section class="section has-text-centered is-halfheight">
+      <i class="mdi mdi-newspaper has-text-primary is-size-1" />
+      <h1 class="title is-1 is-spaced">{{ $t("blog.title") }}</h1>
+      <h1 class="subtitle has-text-grey-light">
+        {{ $t("blog.subtitle") }}
+      </h1>
     </section>
     <section class="section">
-      <div v-for="article in articles" :key="article.id">
-        <hr>
-        <div class="columns">
-          <div class="column is-8">
-            <!-- <span v-if="article.lang == 'ja'" class="tag is-danger">JA</span>
-            <span v-if="article.lang == 'en'" class="tag is-info">EN</span> -->
-            <nuxt-link :to="localePath(article.path)" @click.native="countGA(article.id)">
-              {{ article.title }}
-            </nuxt-link>
+      <div class="columns is-multiline is-mobile">
+      <div class="column is-6-tablet is-full-mobile" v-for="(blog, index) in blogs" :key="index">
+        <div class="nmp-dark my-4">
+        <header class="card-header">
+          <p class="card-header-title">
+          <span class="has-text-grey is-family-narrow">
+            {{ blog.date }}
+          </span>
+          </p>
+        </header>
+        <div class="card-image">
+          <figure class="image is-5by3">
+          <img
+            :src="blog.image"
+            alt="dummy"
+            loading="lazy"
+            style="object-fit: cover; object-position: center; width: 100%; height: 100%;"
+          />
+          </figure>
+        </div>
+        <div class="card-content">
+          <h2 class="title is-size-5">{{ blog.title }}</h2>
+          <p class="has-text-grey-light">{{ blog.description }}</p>
+          <br />
+          <nav class="level is-mobile">
+          <div class="level-left">
+            <p class="level-left"></p>
           </div>
-          <div class="column has-text-right">
-            <span class="has-text-grey-light">{{ article.author }}, {{ article.created }}</span>
+          <div class="level-right">
+            <p class="level-item">
+            <nuxt-link :to="localePath(blog.path)">{{
+              $t("button.readmore")
+            }}</nuxt-link>
+            </p>
           </div>
+          </nav>
+        </div>
         </div>
       </div>
-      <hr>
+      </div>
     </section>
   </section>
 </template>
 
 <script>
-import Meta from '~/assets/mixins/meta'
-
 export default {
-  mixins: [Meta],
   data() {
     return {
-      locale: this.$i18n.locale,
-      meta: {
-        title: this.$i18n.t('header.blog.item'),
-        description: this.$i18n.t('blog.subtitle'),
-      },
-    }
-  },
-  async asyncData({ $content, app }) {
-    const articles = await $content(`blog`)
-      // .limit(10)
-      .sortBy('created', 'desc')
-      .fetch();
-
-    return {
-      articles
+      blogs: [
+        {
+          title: "株式会社キープレイヤーズ 高野様 インタビュー",
+          date: "2024/04/08",
+          description: "2023年TEDxUTsukubaイベント「万華鏡」にて協賛していただいた株式会社キープレイヤーズの代表を務める高野様にお話を伺いました。",
+          image: "/blog/23_partner_keyplayers_interview/003.jpg",
+          path: "/blog/23_partner_keyplayers_interview",
+        },
+      ],
     };
   },
-  methods: {
-    countGA(id) {
-      console.log(id)
-      this.$gtag(
-        'event', 'readBlogArticle', {
-          'event_category': 'button',
-          'event_label': id,
-          'value': '1'
-        }
-      )
-    }
-  }
 }
 </script>
 
