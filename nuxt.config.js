@@ -278,6 +278,32 @@ export default {
               url: `salon/2023-1/`
             }
           ]
+        },
+        {
+          url: `en/salon/2024-1/`,
+          links: [
+            {
+              lang: "en",
+              url: `en/salon/2024-1/`
+            },
+            {
+              lang: "ja",
+              url: `salon/2024-1/`
+            }
+          ]
+        },
+        {
+          url: `/salon/2024-1/`,
+          links: [
+            {
+              lang: "en",
+              url: `en/salon/2024-1/`
+            },
+            {
+              lang: "ja",
+              url: `salon/2024-1/`
+            }
+          ]
         }
       ])
   },
