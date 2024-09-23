@@ -60,6 +60,13 @@ export default {
     return {
       blogs: [
         {
+          title: "株式会社TOKIUM 西本様 インタビュー",
+          date: "2024/09/23",
+          description: "2023年TEDxUTsukubaイベント「万華鏡」にて協賛していただいた株式会社TOKIUMの西本様にお話を伺いました。",
+          image: "/blog/23_partner_tokium_interview/002.jpg",
+          path: "/blog/23_partner_tokium_interview",
+        },
+        {
           title: "株式会社キープレイヤーズ 高野様 インタビュー",
           date: "2024/04/08",
           description: "2023年TEDxUTsukubaイベント「万華鏡」にて協賛していただいた株式会社キープレイヤーズの代表を務める高野様にお話を伺いました。",
@@ -73,7 +80,6 @@ export default {
           image: "/blog/23_partner_skylandventures_interview/002.jpg",
           path: "/blog/23_partner_skylandventures_interview",
         },
-        
       ],
     };
   },
