@@ -325,18 +325,9 @@
             <!-- チケットがAvailableにセットされている場合 -->
             <div v-if="conference.isTicketAvailable">
               <!-- チケットを入手するサイトが登録されている場合 -->
-              <a
-                v-if="conference.ticketSellingPageUrl"
-                class="button is-gradient is-rounded my-3"
-                :href="conference.ticketSellingPageUrl"
-                target="_blank"
-                v-on:click="click_ticket('event_bottom_ticket_button')"
-              >
-                <i class="mdi mdi-ticket is-size-4" />
-                <span style="padding-left: 0.25rem;">{{
-                  $t("2020.participance.premium.tiget")
-                }}</span>
-              </a>
+               <div style="display: block;">
+                <iframe frameborder="0" width="100%" height="400px" src="https://peatix.com/event/4174352/share/widget?z=1&c=dark&t=1&a=1" style="background: #171A20; vertical-align:bottom;"></iframe>
+               </div>
             </div>
             <!-- チケットがAvailableにセットされていない場合 -->
             <div v-else>
