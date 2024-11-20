@@ -531,28 +531,6 @@ export default {
             property: "og:url",
             content: `${process.env.BASE_URL}${this.currentPath}`
           },
-          {
-            hid: "twitter:card",
-            name: "twitter:card",
-            content: "summary_large_image"
-          },
-          {
-            hid: "twitter:title",
-            name: "twitter:title",
-            content: "TEDxUTsukuba " + this.conference.name
-          },
-          {
-            hid: "twitter:description",
-            name: "twitter:description",
-            content:
-              this.conference.socialMediaDescription ||
-              this.conference.themeStatement
-          },
-          {
-            hid: "twitter:image",
-            name: "twitter:image",
-            content: this.conference.themeArtwork.url
-          }
         ],
         link: [
           {
