@@ -36,13 +36,13 @@
 
     <!-- テーマアート -->
     <section class="section" v-if="conference.themeArtwork">
-      <figure class="image">
-        <!-- <datocms-image :data="conference.themeArtwork.responsiveImage" :alt="conference.name" style="position: initial;"/> -->
+      <figure class="image" data-v-a76e5356="">
         <img
-          :src="conference.themeArtwork.url"
-          :alt="conference.name"
-          style="position: initial; max-width: 640px;"
+          src="/tmp/2024/th01.webp"
+          alt="2024"
           class="mx-auto"
+          style="position:initial;max-width:640px"
+          data-v-a76e5356=""
         />
       </figure>
       <div
@@ -51,7 +51,7 @@
         style="text-align: center; margin-top: 30px;"
       >
         <div style="color: white;">
-          <p style="font-size: 1.5rem; !important">Price(JPY)</p>
+          <p style="font-size: 1.5rem;">Price(JPY)</p>
           <div
             class="ticket-price"
             style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 6px;"
@@ -120,88 +120,298 @@
     <section class="section" id="card-0" v-if="conference.speakers[0]">
       <h1 class="title is-0">{{ $t("commons.enja") }}</h1>
       <h2 class="title is-0">{{ $t("commons.speaker") }}</h2>
-      <div v-for="(speaker, index) in conference.speakers" :key="index">
-        <div class="columns is-multiline is-centered is-vcentered mb-6">
+      <div data-v-a76e5356="">
+        <div
+          class="columns is-multiline is-centered is-vcentered mb-6"
+          data-v-a76e5356=""
+        >
           <div
             class="card-image column is-12-mobile is-3-tablet is-4-desktop is-3-widescreen is-3-fullhd"
+            data-v-a76e5356=""
           >
-            <div class="image-box">
-              <figure class="image is-1by1" v-if="speaker.portrait">
+            <div class="image-box" data-v-a76e5356="">
+              <figure class="image is-1by1" data-v-a76e5356="">
                 <img
                   loading="lazy"
+                  src="/tmp/2024/sp01.webp"
                   class="nmp-card-image"
-                  :src="speaker.portrait.url"
-                  style="object-fit: cover;"
+                  style="object-fit:cover"
+                  data-v-a76e5356=""
                 />
-                <!-- <datocms-image :data="speaker.portrait.responsiveImage" /> -->
               </figure>
             </div>
           </div>
-          <div class="column has-text-centered-mobile">
-            <h1 class="title is-2 ja" v-if="$i18n.locale == 'en'">
-              {{ speaker.firstName }} {{ speaker.middleName }}
-              {{ speaker.lastName }}
-            </h1>
-            <h1 class="title is-2 ja" v-else>
-              {{ speaker.lastName }} {{ speaker.middleName }}
-              {{ speaker.firstName }}
+          <div class="column has-text-centered-mobile" data-v-a76e5356="">
+            <h1 class="title is-2 ja" data-v-a76e5356="">
+              宮田 昌輝
             </h1>
             <h1
               class="subtitle is-size-5 has-text-primary is-family-narrow"
-              v-show="speaker.jobTitleOrRole"
+              data-v-a76e5356=""
             >
-              {{ speaker.jobTitleOrRole }}
+              セブンセンスマーケティング株式会社代表取締役
             </h1>
-            <p class="has-text-left" style="text-align: justify;">
-              {{ speaker.description }}
-            </p>
-            <br />
-
-            <!-- トーク動画 -->
-            <!-- TEDxのYouTubeで動画が公開されたらDatoCMSにURLを追加する -->
-            <a
-              v-if="speaker.youtubeId"
-              class="button is-gradient is-rounded"
-              :href="`https://www.youtube.com/watch?v=${speaker.youtubeId}`"
-              target="_blank"
+            <p
+              class="has-text-left"
+              style="text-align:justify"
+              data-v-a76e5356=""
             >
-              <i class="mdi mdi-youtube is-size-4" />
-              <span style="padding-left: 0.25rem;">{{
-                $t("about.ted.watch")
-              }}</span>
-            </a>
+              セブンセンスマーケティング株式会社で、PC業務のみえる化サービス「みえるクラウド®ログ」の販売を行っている。筑波大学在学時から合計4社を起業。現在は若者チャレンジファンドしずおかを立ち上げるなど若者の挑戦の後押しする活動も行っている。
+            </p>
+            <br data-v-a76e5356="" />
+          </div>
+        </div>
+      </div>
+      <div data-v-a76e5356="">
+        <div
+          class="columns is-multiline is-centered is-vcentered mb-6"
+          data-v-a76e5356=""
+        >
+          <div
+            class="card-image column is-12-mobile is-3-tablet is-4-desktop is-3-widescreen is-3-fullhd"
+            data-v-a76e5356=""
+          >
+            <div class="image-box" data-v-a76e5356="">
+              <figure class="image is-1by1" data-v-a76e5356="">
+                <img
+                  loading="lazy"
+                  src="/tmp/2024/sp02.webp"
+                  class="nmp-card-image"
+                  style="object-fit:cover"
+                  data-v-a76e5356=""
+                />
+              </figure>
+            </div>
+          </div>
+          <div class="column has-text-centered-mobile" data-v-a76e5356="">
+            <h1 class="title is-2 ja" data-v-a76e5356="">
+              川節 拓実
+            </h1>
+            <h1
+              class="subtitle is-size-5 has-text-primary is-family-narrow"
+              data-v-a76e5356=""
+            >
+              一般社団法人次世代ロボットエンジニア支援機構 代表理事
+            </h1>
+            <p
+              class="has-text-left"
+              style="text-align:justify"
+              data-v-a76e5356=""
+            >
+              学生時代よりロボットに深い関心を持ち、当時弱小であったロボコンチームを強豪へと再建した。現在はソフトロボティクスの分野で研究に従事するとともに、これまでの経験を活かし、次世代ロボットエンジニアの育成支援に注力している。
+            </p>
+            <br data-v-a76e5356="" />
+          </div>
+        </div>
+      </div>
+      <div data-v-a76e5356="">
+        <div
+          class="columns is-multiline is-centered is-vcentered mb-6"
+          data-v-a76e5356=""
+        >
+          <div
+            class="card-image column is-12-mobile is-3-tablet is-4-desktop is-3-widescreen is-3-fullhd"
+            data-v-a76e5356=""
+          >
+            <div class="image-box" data-v-a76e5356="">
+              <figure class="image is-1by1" data-v-a76e5356="">
+                <img
+                  loading="lazy"
+                  src="/tmp/2024/sp03.webp"
+                  class="nmp-card-image"
+                  style="object-fit:cover"
+                  data-v-a76e5356=""
+                />
+              </figure>
+            </div>
+          </div>
+          <div class="column has-text-centered-mobile" data-v-a76e5356="">
+            <h1 class="title is-2 ja" data-v-a76e5356="">
+              タスタンベコワ クアニシ
+            </h1>
+            <h1
+              class="subtitle is-size-5 has-text-primary is-family-narrow"
+              data-v-a76e5356=""
+            >
+              筑波大学人間系准教授
+            </h1>
+            <p
+              class="has-text-left"
+              style="text-align:justify"
+              data-v-a76e5356=""
+            >
+              カザフスタン出身。筑波大学人間系の准教授。専門は比較・国際教育学であり、主な研究テーマは旧ソ連圏の言語教育改革。またNPO団体"Foundation
+              for Education
+              Development"のメンバーとして、カザフスタンで社会的に不利な立場にある子供を支援している。
+            </p>
+            <br data-v-a76e5356="" />
+          </div>
+        </div>
+      </div>
+      <div data-v-a76e5356="">
+        <div
+          class="columns is-multiline is-centered is-vcentered mb-6"
+          data-v-a76e5356=""
+        >
+          <div
+            class="card-image column is-12-mobile is-3-tablet is-4-desktop is-3-widescreen is-3-fullhd"
+            data-v-a76e5356=""
+          >
+            <div class="image-box" data-v-a76e5356="">
+              <figure class="image is-1by1" data-v-a76e5356="">
+                <img
+                  loading="lazy"
+                  src="/tmp/2024/sp04.webp"
+                  class="nmp-card-image"
+                  style="object-fit:cover"
+                  data-v-a76e5356=""
+                />
+              </figure>
+            </div>
+          </div>
+          <div class="column has-text-centered-mobile" data-v-a76e5356="">
+            <h1 class="title is-2 ja" data-v-a76e5356="">
+              ラムダ 技術部
+            </h1>
+            <h1
+              class="subtitle is-size-5 has-text-primary is-family-narrow"
+              data-v-a76e5356=""
+            >
+              YouTuber/ソフトウェアエンジニア
+            </h1>
+            <p
+              class="has-text-left"
+              style="text-align:justify"
+              data-v-a76e5356=""
+            >
+              エンジニア、YouTuberとして活動しており、プログラミングをはじめとした技術系の動画を投稿している。その内容は真面目なものに限らず、理系科目に興味を持つきっかけを多くの人々に提供している。
+            </p>
+            <br data-v-a76e5356="" />
+          </div>
+        </div>
+      </div>
+      <div data-v-a76e5356="">
+        <div
+          class="columns is-multiline is-centered is-vcentered mb-6"
+          data-v-a76e5356=""
+        >
+          <div
+            class="card-image column is-12-mobile is-3-tablet is-4-desktop is-3-widescreen is-3-fullhd"
+            data-v-a76e5356=""
+          >
+            <div class="image-box" data-v-a76e5356="">
+              <figure class="image is-1by1" data-v-a76e5356="">
+                <img
+                  loading="lazy"
+                  src="/tmp/2024/sp05.webp"
+                  class="nmp-card-image"
+                  style="object-fit:cover"
+                  data-v-a76e5356=""
+                />
+              </figure>
+            </div>
+          </div>
+          <div class="column has-text-centered-mobile" data-v-a76e5356="">
+            <h1 class="title is-2 ja" data-v-a76e5356="">
+              岡本 伊久男
+            </h1>
+            <h1
+              class="subtitle is-size-5 has-text-primary is-family-narrow"
+              data-v-a76e5356=""
+            >
+              トレンダーズ株式会社 エグゼクティブ・アドバイザー
+            </h1>
+            <p
+              class="has-text-left"
+              style="text-align:justify"
+              data-v-a76e5356=""
+            >
+              2社のベンチャー企業を上場させた実績を持つ経営者。1993年に筑波大学人文学類を卒業。大学生時代は自由気ままに過ごし、1留した後5年で卒業。これまでの波乱に満ちた人生から繰り広げられるスピーチが終わる頃には、きっとあなたは将来の目標の捉え方が大きく変わることになる。
+            </p>
+            <br data-v-a76e5356="" />
+          </div>
+        </div>
+      </div>
+      <div data-v-a76e5356="">
+        <div
+          class="columns is-multiline is-centered is-vcentered mb-6"
+          data-v-a76e5356=""
+        >
+          <div
+            class="card-image column is-12-mobile is-3-tablet is-4-desktop is-3-widescreen is-3-fullhd"
+            data-v-a76e5356=""
+          >
+            <div class="image-box" data-v-a76e5356="">
+              <figure class="image is-1by1" data-v-a76e5356="">
+                <img
+                  loading="lazy"
+                  src="/tmp/2024/sp06.webp"
+                  class="nmp-card-image"
+                  style="object-fit:cover"
+                  data-v-a76e5356=""
+                />
+              </figure>
+            </div>
+          </div>
+          <div class="column has-text-centered-mobile" data-v-a76e5356="">
+            <h1 class="title is-2 ja" data-v-a76e5356="">
+              前野 隆司
+            </h1>
+            <h1
+              class="subtitle is-size-5 has-text-primary is-family-narrow"
+              data-v-a76e5356=""
+            >
+              慶應義塾大学・武蔵野大学教授
+            </h1>
+            <p
+              class="has-text-left"
+              style="text-align:justify"
+              data-v-a76e5356=""
+            >
+              東京工業大学で博士号を取得。現在は慶應義塾大学SDM研究科の教授と武蔵野大学ウェルビーイング学部の学部長・教授を兼任している。人間の主に心理的な部分を専門にしており、現在は日本のウェルビーイング学の第一人者として、幸福などについて研究している。
+            </p>
+            <br data-v-a76e5356="" />
           </div>
         </div>
       </div>
       <h2 class="title is-0">{{ $t("commons.performer") }}</h2>
       <!-- パフォーマー情報 -->
-      <div v-for="(performer, index) in conference.performers" :key="index">
-        <div class="columns is-multiline is-centered is-vcentered mb-6">
+      <div data-v-a76e5356="">
+        <div
+          class="columns is-multiline is-centered is-vcentered mb-6"
+          data-v-a76e5356=""
+        >
           <div
             class="card-image column is-12-mobile is-3-tablet is-4-desktop is-3-widescreen is-3-fullhd"
+            data-v-a76e5356=""
           >
-            <div class="image-box">
-              <figure class="image is-1by1" v-if="performer.portrait">
+            <div class="image-box" data-v-a76e5356="">
+              <figure class="image is-1by1" data-v-a76e5356="">
                 <img
                   loading="lazy"
+                  src="/tmp/2024/pe01.webp"
                   class="nmp-card-image"
-                  :src="performer.portrait.url"
-                  style="object-fit: cover;"
+                  style="object-fit:cover"
+                  data-v-a76e5356=""
                 />
-                <!-- <datocms-image :data="speaker.portrait.responsiveImage" /> -->
               </figure>
             </div>
           </div>
-          <div class="column has-text-centered-mobile">
-            <h1 class="title is-2 ja">{{ performer.name }}</h1>
+          <div class="column has-text-centered-mobile" data-v-a76e5356="">
+            <h1 class="title is-2 ja" data-v-a76e5356="">
+              Kpopコピーダンスサークル고구마
+            </h1>
             <h1
               class="subtitle is-size-5 has-text-primary is-family-narrow"
-              v-show="performer.jobTitleOrRole"
+              style="display:none"
+              data-v-a76e5356=""
+            ></h1>
+            <p
+              class="has-text-left"
+              style="text-align:justify"
+              data-v-a76e5356=""
             >
-              {{ performer.jobTitleOrRole }}
-            </h1>
-            <p class="has-text-left" style="text-align: justify;">
-              {{ performer.description }}
+              筑波大学所属のKpopコピーダンスサークル『고구마(コグマ)』。衣装や表情など細部まで再現された完成度の高いパフォーマンスを強みとする。学内外の様々なイベントに出演しており、今年度の学園祭で最優秀賞を受賞。Panoramaではパフォーマーとして出演し、会場の雰囲気を最高潮へと引き上げる。
             </p>
           </div>
         </div>
@@ -325,9 +535,15 @@
             <!-- チケットがAvailableにセットされている場合 -->
             <div v-if="conference.isTicketAvailable">
               <!-- チケットを入手するサイトが登録されている場合 -->
-               <div style="display: block;">
-                <iframe frameborder="0" width="100%" height="400px" src="https://peatix.com/event/4174352/share/widget?z=1&c=dark&t=1&a=1" style="background: #171A20; vertical-align:bottom;"></iframe>
-               </div>
+              <div style="display: block;">
+                <iframe
+                  frameborder="0"
+                  width="100%"
+                  height="400px"
+                  src="https://peatix.com/event/4174352/share/widget?z=1&c=dark&t=1&a=1"
+                  style="background: #171A20; vertical-align:bottom;"
+                ></iframe>
+              </div>
             </div>
             <!-- チケットがAvailableにセットされていない場合 -->
             <div v-else>
@@ -530,7 +746,7 @@ export default {
             hid: "og:url",
             property: "og:url",
             content: `${process.env.BASE_URL}${this.currentPath}`
-          },
+          }
         ],
         link: [
           {
