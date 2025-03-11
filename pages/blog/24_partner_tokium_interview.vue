@@ -2,7 +2,7 @@
     <section id="wrapper-dark">
         <section class="section has-text-centered is-halfheight">
             <i class="mdi mdi-newspaper has-text-primary is-size-1" />
-            <h1 class="title is-2 is-spaced">株式会社TOKIUM 西本様 インタビュー</h1>
+            <h1 class="title is-2 is-spaced">株式会社TOKIUM 大澤様 インタビュー</h1>
             <p class="subtitle has-text-grey-light">
                 2024年TEDxUTsukubaイベント「Panorama」にて協賛していただいた株式会社TOKIUMでインターンをされている大澤様にお話を伺いました。
             </p>
