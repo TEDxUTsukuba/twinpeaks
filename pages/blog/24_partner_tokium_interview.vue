@@ -59,7 +59,7 @@
                 <p>筑波大学 情報学群 情報メディア創成学類 4年 大澤 怜二 様</p>
                 <p>インタビュアー: TEDxUTsukuba 西田</p>
                 <p>記事編集・作成: TEDxUTsukuba 西田・今井</p>
-                <p>株式会社TOKIUMつくば拠点（ウェブサイト）:</p>
+                <p>株式会社TOKIUMつくば拠点（<a href="https://plastic-caravan-2b9.notion.site/tokium-tsukuba-office" target="_blank" rel="noopener noreferrer">ウェブサイト</a>):</p>
                 <p>茨城県つくば市春日3丁目1-12 KMビル 2階</p>
                 <p><a href="https://maps.app.goo.gl/SZ5p48YH7FY1DGXi9">https://maps.app.goo.gl/SZ5p48YH7FY1DGXi9</a></p>
             </article>
