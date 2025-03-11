@@ -60,6 +60,13 @@ export default {
     return {
       blogs: [
         {
+          title: "株式会社TOKIUM 大澤様 インタビュー",
+          date: "2025/02/14",
+          description: "2024年TEDxUTsukubaイベント「Panorama」にて協賛していただいた株式会社TOKIUMでインターンをされている大澤様にお話を伺いました。",
+          image: "/blog/24_partner_tokium_interview/001.jpg",
+          path: "/blog/24_partner_tokium_interview",
+        },
+        {
           title: "株式会社TOKIUM 西本様 インタビュー",
           date: "2024/09/23",
           description: "2023年TEDxUTsukubaイベント「万華鏡」にて協賛していただいた株式会社TOKIUMの西本様にお話を伺いました。",
