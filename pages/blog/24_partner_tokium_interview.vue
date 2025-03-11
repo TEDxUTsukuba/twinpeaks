@@ -95,7 +95,7 @@ export default {
         {
           hid: "og:image",
           property: "og:image",
-          content: "https://tedxutsukuba.com/blog/23_partner_skylandventures_interview/002.jpg",
+          content: "https://tedxutsukuba.com/blog/24_partner_tokium_interview/001.jpg",
         },
         {
           hid: "twitter:title",
@@ -111,7 +111,7 @@ export default {
         {
           hid: "twitter:image",
           name: "twitter:image",
-          content: "https://tedxutsukuba.com/blog/23_partner_skylandventures_interview/002.jpg",
+          content: "https://tedxutsukuba.com/blog/24_partner_tokium_interview/001.jpg",
         },
       ],
     }
