@@ -21,7 +21,7 @@
           class="text-gradient is-uppercase is-0 has-text-weight-bold has-text-left"
           style="position: absolute; bottom: 0; left: 3vw; line-height: 0.9;"
         >
-          Ideas<br />Worth<br />Spreading
+          Ideas<br />Change<br />Everything
         </h1>
       </section>
       <section class="is-hidden-tablet has-background-black pb-0">
