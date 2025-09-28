@@ -126,6 +126,10 @@ export default {
     return {
       conferences: [
         {
+          path: "2025",
+          name: "2025 始発"
+        },
+        {
           path: "2024",
           name: "2024 Panorama"
         },
