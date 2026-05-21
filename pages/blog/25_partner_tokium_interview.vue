@@ -4,7 +4,7 @@
             <i class="mdi mdi-newspaper has-text-primary is-size-1" />
             <h1 class="title is-2 is-spaced">株式会社TOKIUM 瀬戸様 インタビュー</h1>
             <p class="subtitle has-text-grey-light">
-                TEDxUTsukuba 2025 "始発"にて協賛していただいた株式会社TOKIUMの瀬戸様にお話を伺いました。
+                TEDxUTsukuba2025 "始発"にて協賛していただいた株式会社TOKIUMの瀬戸様にお話を伺いました。
             </p>
             <img src="/blog/25_partner_tokium_interview/001.jpg" style="width: 100%; margin: 1rem 0;">
         </section>
@@ -137,7 +137,7 @@ a {
 }
 
 .article h2 {
-  margin-top: 1.5rem;
+  margin-top: 4rem;
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
