@@ -129,8 +129,8 @@ a {
 }
 
 .article h2 {
-  margin-top: 1.5rem;
-  font-size: 4rem; /* Increase the font size for more prominence */
+  margin-top: 4rem;
+  font-size: 2rem; /* Increase the font size for more prominence */
   font-weight: bold;
   margin-bottom: 1rem;
   color: #fff; /* Set the color to white for visibility in dark mode */
