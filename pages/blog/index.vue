@@ -60,30 +60,37 @@ export default {
     return {
       blogs: [
         {
+          title: "株式会社TOKIUM 瀬戸様 インタビュー",
+          date: "2026/03/7",
+          description: "TEDxUTsukuba2025 \"始発\"にて協賛していただいた株式会社TOKIUMの瀬戸様にお話を伺いました。",
+          image: "/blog/25_partner_tokium_interview/001.jpg",
+          path: "/blog/25_partner_tokium_interview",
+        },
+        {
           title: "株式会社TOKIUM 大澤様 インタビュー",
           date: "2025/03/11",
-          description: "2024年TEDxUTsukubaイベント「Panorama」にて協賛していただいた株式会社TOKIUMでインターンをされている大澤様にお話を伺いました。",
+          description: "TEDxUTsukuba2024 \"Panorama\"にて協賛していただいた株式会社TOKIUMでインターンをされている大澤様にお話を伺いました。",
           image: "/blog/24_partner_tokium_interview/001.jpg",
           path: "/blog/24_partner_tokium_interview",
         },
         {
           title: "株式会社TOKIUM 西本様 インタビュー",
           date: "2024/09/23",
-          description: "2023年TEDxUTsukubaイベント「万華鏡」にて協賛していただいた株式会社TOKIUMの西本様にお話を伺いました。",
+          description: "TEDxUTsukuba2023 \"万華鏡\"にて協賛していただいた株式会社TOKIUMの西本様にお話を伺いました。",
           image: "/blog/23_partner_tokium_interview/002.jpg",
           path: "/blog/23_partner_tokium_interview",
         },
         {
           title: "株式会社キープレイヤーズ 高野様 インタビュー",
           date: "2024/04/08",
-          description: "2023年TEDxUTsukubaイベント「万華鏡」にて協賛していただいた株式会社キープレイヤーズの代表を務める高野様にお話を伺いました。",
+          description: "TEDxUTsukuba2023 \"万華鏡\"にて協賛していただいた株式会社キープレイヤーズの代表を務める高野様にお話を伺いました。",
           image: "/blog/23_partner_keyplayers_interview/003.jpg",
           path: "/blog/23_partner_keyplayers_interview",
         },
         {
           title: "Skyland Ventures 木下様 インタビュー",
           date: "2024/04/08",
-          description: "2023年TEDxUTsukubaイベント「万華鏡」にて協賛していただいたSkyland Venturesの代表を務める木下様にお話を伺いました。",
+          description: "TEDxUTsukuba2023 \"万華鏡\"にて協賛していただいたSkyland Venturesの代表を務める木下様にお話を伺いました。",
           image: "/blog/23_partner_skylandventures_interview/002.jpg",
           path: "/blog/23_partner_skylandventures_interview",
         },
