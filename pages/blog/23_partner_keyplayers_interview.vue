@@ -4,7 +4,7 @@
             <i class="mdi mdi-newspaper has-text-primary is-size-1" />
             <h1 class="title is-2 is-spaced">株式会社キープレイヤーズ 高野様 インタビュー</h1>
             <p class="subtitle has-text-grey-light">
-                2023年TEDxUTsukubaイベント「万華鏡」にて協賛していただいた株式会社キープレイヤーズの代表を務める高野様にお話を伺いました。
+                TEDxUTsukuba 2023 "万華鏡"にて協賛していただいた株式会社キープレイヤーズの代表を務める高野様にお話を伺いました。
             </p>
             <img src="/blog/23_partner_keyplayers_interview/003.jpg" alt="株式会社キープレイヤーズ 代表取締役 高野秀敏様" style="width: 100%; margin: 1rem 0;">
         </section>
@@ -97,7 +97,7 @@
           {
             hid: "description",
             name: "description",
-            content: "2023年TEDxUTsukubaイベント「万華鏡」にて協賛していただいた株式会社キープレイヤーズの代表を務める高野様にお話を伺いました。",
+            content: "TEDxUTsukuba 2023 \"万華鏡\"にて協賛していただいた株式会社キープレイヤーズの代表を務める高野様にお話を伺いました。",
           },
           {
             hid: "og:title",
@@ -107,7 +107,7 @@
           {
             hid: "og:description",
             property: "og:description",
-            content: "2023年TEDxUTsukubaイベント「万華鏡」にて協賛していただいた株式会社キープレイヤーズの代表を務める高野様にお話を伺いました。",
+            content: "TEDxUTsukuba 2023 \"万華鏡\"にて協賛していただいた株式会社キープレイヤーズの代表を務める高野様にお話を伺いました。",
           },
           // ogp画像
           {
@@ -123,7 +123,7 @@
           {
             hid: "twitter:description",
             name: "twitter:description",
-            content: "2023年TEDxUTsukubaイベント「万華鏡」にて協賛していただいた株式会社キープレイヤーズの代表を務める高野様にお話を伺いました。",
+            content: "TEDxUTsukuba 2023 \"万華鏡\"にて協賛していただいた株式会社キープレイヤーズの代表を務める高野様にお話を伺いました。",
           },
           {
             hid: "twitter:image",
@@ -146,7 +146,7 @@
   }
 
 .article h2 {
-    margin-top: 1.5rem;
+    margin-top: 4rem;
     font-size: 2rem; /* Increase the font size for more prominence */
     font-weight: bold;
     margin-bottom: 1rem;
