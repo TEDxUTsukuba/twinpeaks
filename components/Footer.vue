@@ -37,7 +37,7 @@
             </div>
             <div class="column has-text-left has-text-grey-light has-text-centered-mobile">
               <p class="is-size-7">{{ $t('about.location.address') }}</p>
-              <p class="is-size-7">contact&#64;tedxutsukuba.com</p>
+              <p class="is-size-7">info&#64;tedxutsukuba.com</p>
             </div>
           </div>
           <hr class="has-background-grey mt-0 mb-2">
@@ -79,7 +79,6 @@
         </ul>
     </div> -->
 
-  </section>
 </template>
 
 <script>
