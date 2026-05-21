@@ -4,7 +4,7 @@
             <i class="mdi mdi-newspaper has-text-primary is-size-1" />
             <h1 class="title is-2 is-spaced">株式会社TOKIUM 西本様 インタビュー</h1>
             <p class="subtitle has-text-grey-light">
-                2023年TEDxUTsukubaイベント「万華鏡」にて協賛していただいた株式会社TOKIUMの西本様にお話を伺いました。
+                TEDxUTsukuba 2023 "万華鏡"にて協賛していただいた株式会社TOKIUMの西本様にお話を伺いました。
             </p>
             <img src="/blog/23_partner_tokium_interview/002.jpg" alt="株式会社TOKIUMの方とTEDxUTsukubaメンバーの集合写真" style="width: 100%; margin: 1rem 0;">
         </section>
@@ -94,7 +94,7 @@ export default {
           hid: "description",
           name: "description",
           content:
-            "2023年TEDxUTsukubaイベント「万華鏡」にて協賛していただいたスカイランドベンチャーズ株式会社の代表を務める木下様にお話を伺いました。",
+            "TEDxUTsukuba 2023 \"万華鏡\"にて協賛していただいたスカイランドベンチャーズ株式会社の代表を務める木下様にお話を伺いました。",
         },
         {
           hid: "og:title",
@@ -105,7 +105,7 @@ export default {
           hid: "og:description",
           property: "og:description",
           content:
-            "2023年TEDxUTsukubaイベント「万華鏡」にて協賛していただいたスカイランドベンチャーズ株式会社の代表を務める木下様にお話を伺いました。",
+            "TEDxUTsukuba 2023 \"万華鏡\"にて協賛していただいたスカイランドベンチャーズ株式会社の代表を務める木下様にお話を伺いました。",
         },
         {
           hid: "og:image",
@@ -121,7 +121,7 @@ export default {
           hid: "twitter:description",
           name: "twitter:description",
           content:
-            "2023年TEDxUTsukubaイベント「万華鏡」にて協賛していただいたスカイランドベンチャーズ株式会社の代表を務める木下様にお話を伺いました。",
+            "TEDxUTsukuba 2023 \"万華鏡\"にて協賛していただいたスカイランドベンチャーズ株式会社の代表を務める木下様にお話を伺いました。",
         },
         {
           hid: "twitter:image",
@@ -144,7 +144,7 @@ a {
 }
 
 .article h2 {
-  margin-top: 1.5rem;
+  margin-top: 4rem;
   font-size: 2rem; /* Increase the font size for more prominence */
   font-weight: bold;
   margin-bottom: 1rem;
