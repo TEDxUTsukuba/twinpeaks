@@ -69,7 +69,7 @@
                 <h2>プロフィール</h2>
                 <p>株式会社TOKIUM 採用戦略部 新卒採用課 瀬戸 温人 様</p>
                 <p>インタビュアー・記事作成: TEDxUTsukuba 久保</p>
-                <p>株式会社TOKIUM: <a href="https://www.tokium.jp/" target="_blank" rel="noopener noreferrer">TOKIUM（トキウム）| 経理AIエージェント</a></p>
+                <p>株式会社TOKIUM: <a href="https://corp.tokium.jp/">ウェブサイト</a></p>
             </article>
         </section>
     </section>
