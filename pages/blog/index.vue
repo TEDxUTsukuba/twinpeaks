@@ -60,6 +60,13 @@ export default {
     return {
       blogs: [
         {
+          title: "株式会社サイエンスアーツ\n平岡社長・高見様 インタビュー",
+          date: "2026/03/24",
+          description: "TEDxUTsukuba 2025 \"始発\"にて協賛していただいた株式会社サイエンスアーツの平岡社長と高見様にお話を伺いました。",
+          image: "/blog/25_partner_sciencearts_interview/001.jpg",
+          path: "/blog/25_partner_sciencearts_interview",
+        },
+        {
           title: "株式会社TOKIUM 瀬戸様 インタビュー",
           date: "2026/03/07",
           description: "TEDxUTsukuba 2025 \"始発\"にて協賛していただいた株式会社TOKIUMの瀬戸様にお話を伺いました。",
@@ -107,5 +114,25 @@ hr {
 a {
   color: #fff;
   font-weight: bold;
+}
+
+.column.h-full {
+  display: flex;
+}
+.column.h-full > .nmp-dark {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.card-content nav.level {
+  margin-top: auto;
+}
+.card-content h2.title {
+  white-space: pre-line;
 }
 </style>
