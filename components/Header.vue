@@ -37,6 +37,12 @@
         >
           2024 Evolve, don't Revolve
         </b-navbar-item>
+        <b-navbar-item
+          tag="router-link"
+          :to="{ path: localePath('/salon/2026') }"
+        >
+          2026 Library
+        </b-navbar-item>
       </b-navbar-dropdown>
       <b-navbar-item
         class="normal-category"
