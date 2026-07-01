@@ -78,12 +78,12 @@
                 <p><strong>高見さん</strong>: 2つありまして、1つ目は鬼ごっこの企画です。昨年(2025年)6月と今年(2026年)2月の計2回、約9つのTEDx団体を対象に、ワークショップとBuddycomを使った鬼ごっこイベントを実施しました。この企画ではPM(プロジェクトマネージャー)として、イベント設計から集客まで幅広く担当させていただきました。イベント設計自体が非常に好きで、準備段階からやりがいを感じていましたが、当日、皆さんが盛り上がっているのを見た時は、大きな充実感がありました。</p>
 
                 <img src="/blog/25_partner_sciencearts_interview/008.jpg" alt="Buddycom鬼ごっこ" style="width: 100%; margin: 1rem 0; margin-bottom: 0.25rem;">
-                <p style="margin-top: 0;">note：<a href="https://note.com/science_arts/n/n4d4236474325">リンク</a></p>
+                <p style="margin-top: 0;">note：<a href="https://note.com/science_arts/n/n4d4236474325">https://note.com/science_arts/n/n4d4236474325</a></p>
 
                 <p><strong>高見さん</strong>: 2つ目は、TENOHASI様への事例取材です。TENOHASI様は、池袋周辺を拠点に、毎回500人程度が集まる炊き出し活動などを行うNPO法人です。炊き出しボランティアに実際に参加し、Buddycomをお使いいただいている現場を取材しました。Buddycomが社会で役立つ現場を肌で感じたことは、非常に貴重な経験になりました。</p>
 
                 <img src="/blog/25_partner_sciencearts_interview/009.jpg" alt="TENOHASI様への事例取材" style="width: 100%; margin: 1rem 0; margin-bottom: 0.25rem;">
-                <p style="margin-top: 0;">プレリリース：<a href="https://buddycom.net/news/20260114-tenohasi/">リンク</a></p>
+                <p style="margin-top: 0;">プレリリース：<a href="https://buddycom.net/news/20260114-tenohasi/">https://buddycom.net/news/20260114-tenohasi/</a></p>
 
                 <h2>インターンとしての魅力</h2>
 
