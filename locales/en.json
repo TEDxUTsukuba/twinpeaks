@@ -20,7 +20,7 @@
       "item": "Blog"
     },
     "partners": {
-      "item": "Partners"
+      "parent": "Partners"
     },
     "aboutus": {
       "parent": "About",
@@ -215,7 +215,15 @@
   "partners": {
     "title": "Partners",
     "subtitle": "Our event is made possible through generous support from our partners. We are working together under the shared values and vision. ",
-    "seeAll": "See All Partners"
+    "seeAll": "See All Partners",
+    "conference": {
+      "title": "Conference Partners",
+      "subtitle": "Our conference is made possible through generous support from our partners. We are working together under the shared values and vision. "
+    },
+    "salon": {
+      "title": "Salon Partners",
+      "subtitle": "Our salon is made possible through generous support from our partners. We are working together under the shared values and vision. "
+    }
   },
   "talks": {
     "title": "Talks",
