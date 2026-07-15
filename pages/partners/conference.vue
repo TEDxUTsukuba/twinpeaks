@@ -15,7 +15,7 @@
           理念に賛同し、イベントを一緒に作り上げていただけるパートナーを募集しています。
         </h1>
         <div class="nmp-card-dark">
-          下記連絡先までお問い合わせください。<br />contact&#64;tedxutsukuba.com
+          下記連絡先までお問い合わせください。<br />info&#64;tedxutsukuba.com
         </div>
       </div>
     </section>
