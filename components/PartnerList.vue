@@ -6,7 +6,7 @@
       :key="tier.value"
     >
       <div
-        :class="['column', tier.columnClass]"
+        :class="['column', 'h-full', tier.columnClass]"
         v-for="partner in partnersOf(tier.value)"
         :key="partner.id"
       >
@@ -15,7 +15,14 @@
             <img :src="partner.logo.url" :alt="partner.name" />
           </figure>
           <div>
-            <p :class="['has-text-weight-bold', 'mb-2', tier.nameClass]">
+            <p
+              :class="[
+                'partner-name',
+                'has-text-weight-bold',
+                'mb-2',
+                tier.nameClass
+              ]"
+            >
               {{ partner.name }} <span v-if="$i18n.locale == 'ja'">様</span>
             </p>
             <a
@@ -125,4 +132,17 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss" scoped>
+.column.h-full {
+  display: flex;
+}
+.column.h-full > .nmp-dark {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+// 「CommentScreen」のような改行機会のない長い英字社名がカード幅を超えるため
+.partner-name {
+  overflow-wrap: anywhere;
+}
+</style>
