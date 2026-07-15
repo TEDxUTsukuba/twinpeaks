@@ -51,13 +51,30 @@
       >
         {{ $t("header.talks.item") }}
       </b-navbar-item>
-      <b-navbar-item
-        class="normal-category"
-        tag="nuxt-link"
-        :to="localePath('/partners')"
+      <b-navbar-dropdown
+        collapsible
+        :label="$t('header.partners.parent')"
+        class="is-hoverable"
       >
-        {{ $t("header.partners.item") }}
-      </b-navbar-item>
+        <b-navbar-item tag="div">
+          <h2>Conference</h2>
+        </b-navbar-item>
+        <b-navbar-item
+          tag="router-link"
+          :to="{ path: localePath('/partners/conference') }"
+        >
+          2025 始発
+        </b-navbar-item>
+        <b-navbar-item tag="div">
+          <h2>Salon</h2>
+        </b-navbar-item>
+        <b-navbar-item
+          tag="router-link"
+          :to="{ path: localePath('/partners/salon') }"
+        >
+          2026 Library
+        </b-navbar-item>
+      </b-navbar-dropdown>
       <b-navbar-item
         class="normal-category"
         tag="nuxt-link"
