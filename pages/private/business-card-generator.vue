@@ -286,7 +286,7 @@ export default {
       aspect: "Business Card",
       inputName: "",
       inputPosition: "",
-      inputEmail: "contact@tedxutsukuba.com",
+      inputEmail: "info@tedxutsukuba.com",
       insertEmail: true,
       fieldMessage: "",
       fieldType: "",
