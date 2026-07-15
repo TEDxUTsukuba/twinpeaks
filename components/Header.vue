@@ -56,17 +56,23 @@
         :label="$t('header.partners.parent')"
         class="is-hoverable"
       >
+        <b-navbar-item tag="div">
+          <h2>Conference</h2>
+        </b-navbar-item>
         <b-navbar-item
           tag="router-link"
           :to="{ path: localePath('/partners/conference') }"
         >
-          Conference
+          2025 始発
+        </b-navbar-item>
+        <b-navbar-item tag="div">
+          <h2>Salon</h2>
         </b-navbar-item>
         <b-navbar-item
           tag="router-link"
           :to="{ path: localePath('/partners/salon') }"
         >
-          Salon
+          2026 Library
         </b-navbar-item>
       </b-navbar-dropdown>
       <b-navbar-item
