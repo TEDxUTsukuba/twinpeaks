@@ -1,5 +1,5 @@
 require("dotenv").config();
-const { NUXT_ENV_DATOCMS_API_TOKEN, BASE_URL, BASE_OGP } = process.env;
+const { DATOCMS_API_TOKEN, BASE_URL, BASE_OGP } = process.env;
 const BASE_NAME = "TEDxUTsukuba";
 const BASE_DESC =
   'TEDxUTsukubaは "Ideas worth spreading" というTEDの理念のもとに、筑波大学の学生を中心として独自に運営されているコミュニティです。教養から科学、地域の話題から世界規模の問題に至るまで、様々なトピックスに焦点を当ててきました。';
