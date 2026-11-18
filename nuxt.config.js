@@ -1,5 +1,5 @@
 require("dotenv").config();
-const { NUXT_ENV_DATOCMS_API_TOKEN, BASE_URL, BASE_OGP } = process.env;
+const { BASE_URL, BASE_OGP } = process.env;
 const BASE_NAME = "TEDxUTsukuba";
 const BASE_DESC =
   'TEDxUTsukubaは "Ideas worth spreading" というTEDの理念のもとに、筑波大学の学生を中心として独自に運営されているコミュニティです。教養から科学、地域の話題から世界規模の問題に至るまで、様々なトピックスに焦点を当ててきました。';
@@ -14,7 +14,11 @@ export default {
    ** Headers of the page
    */
   env: {
-    NUXT_ENV_DATOCMS_API_TOKEN,
+    // NOTE: DATOCMS_API_TOKEN is intentionally NOT exposed here.
+    // Nuxt inlines every `env` entry (and every NUXT_ENV_* variable) into the
+    // client bundle, which previously shipped the DatoCMS token to every
+    // visitor. The token is only needed server-side at `nuxt generate` time,
+    // so lib/datocms.js reads it directly from process.env.DATOCMS_API_TOKEN.
     BASE_NAME,
     BASE_DESC,
     BASE_DESC_EN,

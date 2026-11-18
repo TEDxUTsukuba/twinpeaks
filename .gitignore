@@ -92,3 +92,16 @@ sw.*
 # dist
 dist/*
 .vercel
+
+# Service account / secret keys (never commit credentials)
+*-*.json.key
+*service-account*.json
+*-serviceaccount*.json
+*tedxutsukuba-*.json
+*.pem
+*.p12
+*.key
+credentials*.json
+secrets*.json
+.env.*
+!.env.example
